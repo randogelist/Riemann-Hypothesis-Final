@@ -1,0 +1,6 @@
+v0.1.5 RootTest FIX1: three compiler diagnostic fixes only.
+1. Added Real.norm_eq_abs to complex-series norm equality.
+2. Removed redundant ring after a closing field_simp in hleft.
+3. Removed redundant ring after a closing field_simp in hright.
+All inherited SOLOBOLO and KQ-GP-BKQR endpoints are byte-identical.
+New proof not compiled in this environment; run on native Lean 4.33.0.

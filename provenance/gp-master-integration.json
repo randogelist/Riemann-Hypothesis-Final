@@ -1,0 +1,331 @@
+{
+  "package": "RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5",
+  "source_root": "inspected_gp/RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5/RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5",
+  "active_topological_modules": [
+    "RHFinal/GP/Master/Model",
+    "RHFinal/GP/Master/Derivations",
+    "RHFinal/GP/MasterEndpoints",
+    "RHFinal/GP/MasterAudit"
+  ],
+  "active_modules": [
+    {
+      "module": "RHFinal/GP/Master/Model",
+      "path": "RHFinal/GP/Master/Model.lean",
+      "sha256": "9a772606209c1e08e8343c2ffff715d0331f54172670e17ed4066588fb0844b4",
+      "status": "adapted_source_native_compile_pending",
+      "sources": [
+        {
+          "path": "Literature/Zhang2023.lean",
+          "sha256": "ef49e69d06211efb52b78b33ca632d056fbb139e378169a14bba81a67f387838"
+        },
+        {
+          "path": "Master/MasterObject.lean",
+          "sha256": "a3e0f1a88a534e034c7c11515d860f1a29dd88f0b79f93e86d8e091f0016260a"
+        }
+      ],
+      "changes": [
+        "namespace remapped to RHFinal.GP.Master",
+        "boundary sequence is explicit parameter; original opaque xi objects and RH proxy omitted",
+        "research literature axioms and RH handover excluded",
+        "original infinite model laws remain explicit assumptions; never finite witness input"
+      ]
+    },
+    {
+      "module": "RHFinal/GP/Master/Derivations",
+      "path": "RHFinal/GP/Master/Derivations.lean",
+      "sha256": "eb23a40adcdb70200519644b4ab1b2bad52b4f9ee1a753c452fec36c34ff1087",
+      "status": "adapted_source_native_compile_pending",
+      "sources": [
+        {
+          "path": "Derivations/Master/ZeroMode.lean",
+          "sha256": "c49248a5ee463284dd2ca1f60942858f3aa8d1436545a24da1e4e7d8b8b5dc44"
+        },
+        {
+          "path": "Derivations/Master/ShiftLadder.lean",
+          "sha256": "fab681cac319b6b068d6878a78085c5b116b724bfc2d1885e1eedf87e7f5f0bd"
+        },
+        {
+          "path": "Derivations/Master/LocalQGamma.lean",
+          "sha256": "75b86216a5081290dcba9ad596d012087e7f992e759b6486cb19a2fc5cf8be74"
+        },
+        {
+          "path": "Derivations/Master/MomentBoundary.lean",
+          "sha256": "45535c2595ee2d6b1219603d4cf4a798c062e61f1e30981684848f23f563dbf2"
+        },
+        {
+          "path": "Derivations/Master/PascalHopf.lean",
+          "sha256": "ce73256c2bafc9d1891dc00556b426e2517d4d54e5e6edc5f7b95e07262ac0f5"
+        },
+        {
+          "path": "Derivations/Master/EnergyHausdorff.lean",
+          "sha256": "76f43a415f83139ea7f7f01eba87bd929f0da8cb0deea7eeb2e2911cfeca96cd"
+        }
+      ],
+      "changes": [
+        "namespace remapped to RHFinal.GP.Master",
+        "boundary sequence is explicit parameter; original opaque xi objects and RH proxy omitted",
+        "research literature axioms and RH handover excluded",
+        "original infinite model laws remain explicit assumptions; never finite witness input"
+      ]
+    },
+    {
+      "module": "RHFinal/GP/MasterEndpoints",
+      "path": "RHFinal/GP/MasterEndpoints.lean",
+      "sha256": "6dadd7b9b136717cfe21e1d65fe45f2bfa61e49299814f73b349db4ba2f91391",
+      "status": "adapted_source_native_compile_pending",
+      "sources": [
+        {
+          "path": "Derivations/Master/HausdorffPositivity.lean",
+          "sha256": "65d2f14ef073091edbe0a38d8851c734c5798b97f1ed3ee1312a92c6a91e997d"
+        },
+        {
+          "path": "Frontier/OurFrontier.lean",
+          "sha256": "d7e9920bda23bc69ed6a2dd38a54242fb9b2d4544b922173f37240546035a817"
+        }
+      ],
+      "changes": [
+        "namespace remapped to RHFinal.GP.Master",
+        "boundary sequence is explicit parameter; original opaque xi objects and RH proxy omitted",
+        "research literature axioms and RH handover excluded",
+        "original infinite model laws remain explicit assumptions; never finite witness input"
+      ]
+    },
+    {
+      "module": "RHFinal/GP/MasterAudit",
+      "path": "RHFinal/GP/MasterAudit.lean",
+      "sha256": "a304cb5a323cbf73b82d3726d6f3878c4578f088b0f3b42dad865527c104b791",
+      "status": "adapted_source_native_compile_pending",
+      "sources": [
+        {
+          "path": "Main.lean",
+          "sha256": "e1928933fdddce3d6ed65611566a8dc89f5ac887ecd46da5730efd696c3a1bfc"
+        }
+      ],
+      "changes": [
+        "namespace remapped to RHFinal.GP.Master",
+        "boundary sequence is explicit parameter; original opaque xi objects and RH proxy omitted",
+        "research literature axioms and RH handover excluded",
+        "original infinite model laws remain explicit assumptions; never finite witness input"
+      ]
+    }
+  ],
+  "archived_modules": [
+    {
+      "original": "inspected_gp/RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5/RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5/Derivations/BKQR/BKQRContraction.lean",
+      "destination": "research/upstream/gp-master-v050/Derivations/BKQR/BKQRContraction.lean",
+      "sha256": "149a5208b767c45b2dc36d1f241c5aa763f376265aa1e78a386e21911e60e74a",
+      "byte_identical": true
+    },
+    {
+      "original": "inspected_gp/RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5/RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5/Derivations/BKQR/BKQRGram.lean",
+      "destination": "research/upstream/gp-master-v050/Derivations/BKQR/BKQRGram.lean",
+      "sha256": "4d8a811a66b20596e94292c9adf9e8a537442dbfb31ca97b144271e6a3080855",
+      "byte_identical": true
+    },
+    {
+      "original": "inspected_gp/RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5/RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5/Derivations/BKQR/BKQRHelpers.lean",
+      "destination": "research/upstream/gp-master-v050/Derivations/BKQR/BKQRHelpers.lean",
+      "sha256": "b86a9037c51d7ed4c90aa962d38f166d18fe03c6e92cd06a414eb99d330d4a6d",
+      "byte_identical": true
+    },
+    {
+      "original": "inspected_gp/RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5/RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5/Derivations/GP/GPContourGauge.lean",
+      "destination": "research/upstream/gp-master-v050/Derivations/GP/GPContourGauge.lean",
+      "sha256": "d48a992065f9e9dfcd54fda769fc9f26ef938b5e853a98f5d3a746b1d58f688c",
+      "byte_identical": true
+    },
+    {
+      "original": "inspected_gp/RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5/RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5/Derivations/GP/GPIdentities.lean",
+      "destination": "research/upstream/gp-master-v050/Derivations/GP/GPIdentities.lean",
+      "sha256": "94535608b14bbce9b5fb7710210aa079366661faf434beb5b4dfb44b2a0f0a9f",
+      "byte_identical": true
+    },
+    {
+      "original": "inspected_gp/RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5/RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5/Derivations/GP/GPJet.lean",
+      "destination": "research/upstream/gp-master-v050/Derivations/GP/GPJet.lean",
+      "sha256": "71d852e042ec1ed3315fc63e722c1a6537919096a087fb66295ab6e57034adde",
+      "byte_identical": true
+    },
+    {
+      "original": "inspected_gp/RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5/RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5/Derivations/GP/GPShiftLadder.lean",
+      "destination": "research/upstream/gp-master-v050/Derivations/GP/GPShiftLadder.lean",
+      "sha256": "0cbf37901dbf404a98282e6bac9557db5af9ba9195d42fedd50adea1fcc1b129",
+      "byte_identical": true
+    },
+    {
+      "original": "inspected_gp/RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5/RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5/Derivations/Hopf/BinaryIsometry.lean",
+      "destination": "research/upstream/gp-master-v050/Derivations/Hopf/BinaryIsometry.lean",
+      "sha256": "b86a9037c51d7ed4c90aa962d38f166d18fe03c6e92cd06a414eb99d330d4a6d",
+      "byte_identical": true
+    },
+    {
+      "original": "inspected_gp/RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5/RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5/Derivations/Hopf/HopfPassivity.lean",
+      "destination": "research/upstream/gp-master-v050/Derivations/Hopf/HopfPassivity.lean",
+      "sha256": "b86a9037c51d7ed4c90aa962d38f166d18fe03c6e92cd06a414eb99d330d4a6d",
+      "byte_identical": true
+    },
+    {
+      "original": "inspected_gp/RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5/RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5/Derivations/Hopf/PascalHopf.lean",
+      "destination": "research/upstream/gp-master-v050/Derivations/Hopf/PascalHopf.lean",
+      "sha256": "b86a9037c51d7ed4c90aa962d38f166d18fe03c6e92cd06a414eb99d330d4a6d",
+      "byte_identical": true
+    },
+    {
+      "original": "inspected_gp/RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5/RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5/Derivations/LiteratureFrontierDerivation.lean",
+      "destination": "research/upstream/gp-master-v050/Derivations/LiteratureFrontierDerivation.lean",
+      "sha256": "777dd5446dcb48e8599e98249410a117c005833846352e5ca916225bb18f904a",
+      "byte_identical": true
+    },
+    {
+      "original": "inspected_gp/RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5/RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5/Derivations/Master/AnchorHandover.lean",
+      "destination": "research/upstream/gp-master-v050/Derivations/Master/AnchorHandover.lean",
+      "sha256": "6609e899cae65dde9f84ac417e3f7ba27cae5e1ea34b192cfe686953023c8af2",
+      "byte_identical": true
+    },
+    {
+      "original": "inspected_gp/RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5/RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5/Derivations/Master/EnergyHausdorff.lean",
+      "destination": "research/upstream/gp-master-v050/Derivations/Master/EnergyHausdorff.lean",
+      "sha256": "76f43a415f83139ea7f7f01eba87bd929f0da8cb0deea7eeb2e2911cfeca96cd",
+      "byte_identical": true
+    },
+    {
+      "original": "inspected_gp/RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5/RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5/Derivations/Master/HausdorffPositivity.lean",
+      "destination": "research/upstream/gp-master-v050/Derivations/Master/HausdorffPositivity.lean",
+      "sha256": "65d2f14ef073091edbe0a38d8851c734c5798b97f1ed3ee1312a92c6a91e997d",
+      "byte_identical": true
+    },
+    {
+      "original": "inspected_gp/RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5/RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5/Derivations/Master/LocalQGamma.lean",
+      "destination": "research/upstream/gp-master-v050/Derivations/Master/LocalQGamma.lean",
+      "sha256": "75b86216a5081290dcba9ad596d012087e7f992e759b6486cb19a2fc5cf8be74",
+      "byte_identical": true
+    },
+    {
+      "original": "inspected_gp/RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5/RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5/Derivations/Master/MomentBoundary.lean",
+      "destination": "research/upstream/gp-master-v050/Derivations/Master/MomentBoundary.lean",
+      "sha256": "45535c2595ee2d6b1219603d4cf4a798c062e61f1e30981684848f23f563dbf2",
+      "byte_identical": true
+    },
+    {
+      "original": "inspected_gp/RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5/RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5/Derivations/Master/PascalHopf.lean",
+      "destination": "research/upstream/gp-master-v050/Derivations/Master/PascalHopf.lean",
+      "sha256": "ce73256c2bafc9d1891dc00556b426e2517d4d54e5e6edc5f7b95e07262ac0f5",
+      "byte_identical": true
+    },
+    {
+      "original": "inspected_gp/RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5/RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5/Derivations/Master/ShiftLadder.lean",
+      "destination": "research/upstream/gp-master-v050/Derivations/Master/ShiftLadder.lean",
+      "sha256": "fab681cac319b6b068d6878a78085c5b116b724bfc2d1885e1eedf87e7f5f0bd",
+      "byte_identical": true
+    },
+    {
+      "original": "inspected_gp/RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5/RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5/Derivations/Master/ZeroMode.lean",
+      "destination": "research/upstream/gp-master-v050/Derivations/Master/ZeroMode.lean",
+      "sha256": "c49248a5ee463284dd2ca1f60942858f3aa8d1436545a24da1e4e7d8b8b5dc44",
+      "byte_identical": true
+    },
+    {
+      "original": "inspected_gp/RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5/RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5/Derivations/OurFrontierDerivation.lean",
+      "destination": "research/upstream/gp-master-v050/Derivations/OurFrontierDerivation.lean",
+      "sha256": "a79e514748042f5b7559c0cc5e7dd27715e04d2fb1bf7842be3e54d7d13343a4",
+      "byte_identical": true
+    },
+    {
+      "original": "inspected_gp/RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5/RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5/Frontier/LiteratureFrontier.lean",
+      "destination": "research/upstream/gp-master-v050/Frontier/LiteratureFrontier.lean",
+      "sha256": "f2d034deab0036f7f1baa405ab7fe02e89bea3c632751171b3e5777043e10763",
+      "byte_identical": true
+    },
+    {
+      "original": "inspected_gp/RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5/RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5/Frontier/OurFrontier.lean",
+      "destination": "research/upstream/gp-master-v050/Frontier/OurFrontier.lean",
+      "sha256": "d7e9920bda23bc69ed6a2dd38a54242fb9b2d4544b922173f37240546035a817",
+      "byte_identical": true
+    },
+    {
+      "original": "inspected_gp/RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5/RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5/Literature/Agler1985.lean",
+      "destination": "research/upstream/gp-master-v050/Literature/Agler1985.lean",
+      "sha256": "974ea3230e8316c7b34c962a132973fab2a4555267aa16603adfe57d6da758c9",
+      "byte_identical": true
+    },
+    {
+      "original": "inspected_gp/RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5/RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5/Literature/BergerGellarWallen.lean",
+      "destination": "research/upstream/gp-master-v050/Literature/BergerGellarWallen.lean",
+      "sha256": "5dd2785a9e40078fedf1879f5eb1d39f75d5341cfe7becd17735453402846d58",
+      "byte_identical": true
+    },
+    {
+      "original": "inspected_gp/RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5/RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5/Literature/Sokal2020.lean",
+      "destination": "research/upstream/gp-master-v050/Literature/Sokal2020.lean",
+      "sha256": "d7e0411ca0b95f82777c66e280cb03c5112ca3320ee998b996e4b6a767e5fddf",
+      "byte_identical": true
+    },
+    {
+      "original": "inspected_gp/RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5/RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5/Literature/Zhang2023.lean",
+      "destination": "research/upstream/gp-master-v050/Literature/Zhang2023.lean",
+      "sha256": "ef49e69d06211efb52b78b33ca632d056fbb139e378169a14bba81a67f387838",
+      "byte_identical": true
+    },
+    {
+      "original": "inspected_gp/RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5/RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5/Main.lean",
+      "destination": "research/upstream/gp-master-v050/Main.lean",
+      "sha256": "e1928933fdddce3d6ed65611566a8dc89f5ac887ecd46da5730efd696c3a1bfc",
+      "byte_identical": true
+    },
+    {
+      "original": "inspected_gp/RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5/RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5/Master/MasterIdentities.lean",
+      "destination": "research/upstream/gp-master-v050/Master/MasterIdentities.lean",
+      "sha256": "730d8fcd4ceceb0b3a39baaffd02969e7cc5a5c06304bcb5ed2b352874f4fc09",
+      "byte_identical": true
+    },
+    {
+      "original": "inspected_gp/RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5/RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5/Master/MasterObject.lean",
+      "destination": "research/upstream/gp-master-v050/Master/MasterObject.lean",
+      "sha256": "a3e0f1a88a534e034c7c11515d860f1a29dd88f0b79f93e86d8e091f0016260a",
+      "byte_identical": true
+    }
+  ],
+  "native_compilation": "NOT_RUN",
+  "source_inspection": "completed; no proof tier assigned",
+  "original_custom_rh": "opaque RHGPBKQR.RiemannHypothesis : Prop, not Mathlib RH",
+  "original_opaque_objects": [
+    "ReducedXiLogJetOf",
+    "ZhangCenteredXiCoeff",
+    "ZhangScaleNormalize"
+  ],
+  "original_axioms": [
+    {
+      "file": "Literature/Zhang2023.lean",
+      "name": "RHGPBKQR.Literature.Zhang2023.RH_IFF_HAUSDORFF_ANCHOR"
+    },
+    {
+      "file": "Literature/Sokal2020.lean",
+      "name": "RHGPBKQR.Literature.Sokal2020.HAUSDORFF_IFF_WALL_ANCHOR"
+    },
+    {
+      "file": "Literature/BergerGellarWallen.lean",
+      "name": "RHGPBKQR.Literature.BergerGellarWallen.HAUSDORFF_IFF_WEIGHTED_SHIFT_SUBNORMAL_ANCHOR"
+    },
+    {
+      "file": "Literature/Agler1985.lean",
+      "name": "RHGPBKQR.Literature.Agler1985.COMPLETE_HYPERCONTRACTIVE_IFF_SUBNORMAL_ANCHOR"
+    }
+  ],
+  "gaps": [
+    "Original MASTER_TO_RH depends on a research axiom and a custom opaque RH proposition.",
+    "Canonical GP-to-Zhang equality in original is definitional aliasing of opaque sequences, not an analytic actual-xi derivation.",
+    "MasterModel contains infinite mode/energy functions and universal isometry/boundary laws; it is not finite raw witness data.",
+    "The extracted model retains integer coefficients and natural-valued energies; actual real/complex analytic binding is not provided.",
+    "Actual GP realization, all-order boundary calibration, finite certificate derivation, native RH transfer and completeness remain open."
+  ],
+  "derived_model_results": [
+    "zero mode and mode-shift projections",
+    "finite qGamma prefix successor and monotonicity",
+    "binary-isometry to Pascal-Hopf split",
+    "left and right energy contractions",
+    "energy equals all signed Hausdorff differences by induction",
+    "conditional Hausdorff positivity and nonnegative differences"
+  ],
+  "audit_count": 12,
+  "collisions": "none; active path is RHFinal/GP/Master*; KQ original paths untouched"
+}

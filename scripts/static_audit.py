@@ -75,10 +75,11 @@ def lean_code(text: str) -> str:
     return ''.join(out)
 
 
-def read_plan(name: str, expected: int) -> list[str]:
+def read_plan(name: str, expected: int | None = None) -> list[str]:
     plan = [s.strip() for s in (ROOT / name).read_text().splitlines()
             if s.strip() and not s.lstrip().startswith('#')]
-    require(len(plan) == expected, f'{name}: expected {expected} modules, got {len(plan)}')
+    if expected is not None:
+        require(len(plan) == expected, f'{name}: expected {expected} modules, got {len(plan)}')
     require(len(set(plan)) == len(plan), f'{name}: duplicate modules')
     # Windows is case-insensitive; receipt keys use dots in place of separators.
     keys = [m.replace('/', '.').casefold() for m in plan]
@@ -212,13 +213,21 @@ def regression() -> dict[str, object]:
 
 def main() -> int:
     core = read_plan('build-modules.txt', 6)
-    full = read_plan('build-modules-full.txt', 20)
+    full = read_plan('build-modules-full.txt')
     require(full[:len(core)] == core, 'Full plan does not preserve the core prefix')
+    source_inventory = {
+        p.relative_to(ROOT).with_suffix('').as_posix()
+        for p in ROOT.rglob('*.lean')
+        if p.relative_to(ROOT).parts[0] not in {'research', 'scripts', '.git', '.rh-cache'}
+    }
+    require(set(full) == source_inventory,
+            'Full plan differs from active Lean source inventory: ' +
+            str(sorted(set(full) ^ source_inventory)))
     CHECKS['plan_module_counts'] = {'core': len(core), 'full': len(full)}
     reports, new_theorems = set(), []
     for module in full:
         code = lean_code((ROOT / (module + '.lean')).read_text())
-        for forbidden in [r'\bsorry\b', r'\badmit\b', r'\baxiom\s', r'\bnative_decide\b',
+        for forbidden in [r'\bsorry\b', r'\badmit\b', r'\baxiom\s', r'\bunsafe\b', r'\bnative_decide\b',
                           r'\bLean\.(?:ofReduceBool|trustCompiler)\b']:
             require(not re.search(forbidden, code), f'{module}: forbidden proof token {forbidden}')
         printed = re.findall(r'#print\s+axioms\s+([\w.]+)', code)
@@ -242,7 +251,8 @@ def main() -> int:
     checked_inputs, unavailable_inputs = 0, []
     for entry in inputs:
         require(bool(re.fullmatch(r'[0-9a-f]{64}', entry['sha256'])), 'Malformed input digest')
-        matches = [ROOT.parent / folder / entry['file'] for folder in ['project_sources', 'solobolo_sources']]
+        matches = [ROOT.parent / folder / entry['file'] for folder in
+                   ['project_sources', 'solobolo_sources', 'gp_sources/Riemann-Hypothesis-Final']]
         present = next((p for p in matches if p.is_file()), None)
         if present:
             require(digest(present) == entry['sha256'], f'Input hash mismatch: {entry["file"]}')

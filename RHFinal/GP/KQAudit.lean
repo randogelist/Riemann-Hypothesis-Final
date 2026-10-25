@@ -1,0 +1,35 @@
+import RHFinal.GP.KQEndpoints
+
+/-!
+Selected substantive KQ / GP / BKQR / SOLOBOLO axiom targets.
+Printing these dependencies is not an assertion that their hypotheses have
+been constructed, nor a native compilation receipt for this source package.
+-/
+
+#print axioms RHFinal.GP.actualXi_eq_kqXi
+#print axioms RHFinal.GP.actualTheta_eq_kqSlitTheta
+#print axioms RHFinal.GP.actualTheta_analyticAt_positive
+#print axioms NativeSolobolo.MATHLIB_XI_DIFFERENTIABLE
+#print axioms NativeSolobolo.MATHLIB_CENTERED_XI_EVEN
+#print axioms NativeSolobolo.MATHLIB_SLIT_THETA_ANALYTIC_ON_NHD
+#print axioms NativeSoloboloNegativity.XI_R_ANALYTIC_ON_REGULAR_ANCHORS
+#print axioms NativeSoloboloNegativity.WIDDER_DIRECT_SCALED_STEP
+#print axioms NativeSoloboloNegativity.XI_WIDDER_DIRECT_EQ_RECURSIVE_ON_REGULAR_ANCHORS
+#print axioms NativeSoloboloNegativity.XI_QUARTER_ANCHOR_REGULAR
+#print axioms NativeSoloboloNegativity.CAYLEY_TRACE_POWER_NONNEG
+#print axioms NativeSoloboloNegativity.MERSENNE_XI_CAYLEY_TRACE_AND_CHANNEL_ANALYSIS_IMPLY_RH
+#print axioms NativeSolobolo.Derivations.GP.FREE_ENERGY_CURVATURE_IMPLIES_BASE_MOMENT_EQUALITY
+#print axioms NativeSolobolo.Derivations.GP.FREE_ENERGY_CURVATURE_IMPLIES_COMMON_MOMENTS
+#print axioms NativeSolobolo.Derivations.GP.COMMON_MOMENTS_IMPLIES_TRANSFER_MATCH
+#print axioms KQGPBKQRHilbert.common_moments_calibrated_actual_square
+#print axioms KQGPBKQRHilbert.AllDepth.finite_cayley_hausdorff_nonneg
+#print axioms KQGPBKQRHilbert.AllDepth.subexp_complex_disk_series_summable
+#print axioms KQGPBKQRHilbert.AllDepth.finite_cayley_coefficient_closed_all_depth
+#print axioms KQGPBKQRHilbert.AllDepth.polynomial_rodrigues_convolution_all_depth
+#print axioms KQGPBKQRHilbert.AllDepth.actual_xi_widder_direct_finite_leibniz
+#print axioms KQGPBKQRHilbert.AllDepth.actualXiRealRodriguesCompatibility_proven
+#print axioms KQGPBKQRHilbert.AllDepth.actual_xi_all_depth_finite_cayley_coefficients
+#print axioms KQGPBKQRHilbert.AllDepth.gp_bkqr_calibration_implies_all_depth_nonnegative
+#print axioms KQGPBKQRHilbert.AllDepth.actual_observable_subexp_implies_Mathlib_RH
+#print axioms RHFinal.GP.actualWidder_direct_eq_recursive
+#print axioms RHFinal.GP.actualWidder_finite_cayley_coefficient

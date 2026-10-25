@@ -1,0 +1,212 @@
+import AllDepth.CayleyPolynomialGerm
+import KQGPBKQRHilbert
+
+-- Existing compiled input-endpoint theorems remain available.
+#check KQGPBKQRHilbert.Input.direct_eq_recursive
+#check KQGPBKQRHilbert.Input.recursive_eq_central
+#check KQGPBKQRHilbert.Input.finite_trace_nonnegative
+#check KQGPBKQRHilbert.Input.xi_trace_conditional_RH
+#check KQGPBKQRHilbert.GPToXiDirectCalibration
+#check KQGPBKQRHilbert.common_moments_calibrated_actual_square
+
+-- No dyadic/Mersenne exponent in the new target!
+#check KQGPBKQRHilbert.AllDepth.ActualXiSubexponential
+#check KQGPBKQRHilbert.AllDepth.CanonicalPoleGrowth
+#check KQGPBKQRHilbert.AllDepth.ActualXiZeroCoverage
+#check KQGPBKQRHilbert.AllDepth.subexponential_excludes_offline_zero
+#check KQGPBKQRHilbert.AllDepth.actual_subexponential_and_pole_growth_imply_RH
+#check KQGPBKQRHilbert.AllDepth.finite_cayley_hausdorff_formula
+#check KQGPBKQRHilbert.AllDepth.finite_cayley_hausdorff_nonneg
+#check KQGPBKQRHilbert.AllDepth.finite_cayley_le_mass
+#check KQGPBKQRHilbert.AllDepth.finite_cayley_subexponential
+#check KQGPBKQRHilbert.AllDepth.ActualThetaSubexpRegularity
+#check KQGPBKQRHilbert.AllDepth.actual_observable_subexp_implies_Mathlib_RH
+#check KQGPBKQRHilbert.AllDepth.all_depth_nonnegative_and_channel_imply_RH
+#check KQGPBKQRHilbert.AllDepth.gp_bkqr_calibration_implies_all_depth_nonnegative
+
+-- Kernel assumption audits. These are CONDITIONAL theorem statements;
+-- the printed axiom list does not discharge their explicit hypotheses.
+#print axioms KQGPBKQRHilbert.AllDepth.subexponential_excludes_offline_zero
+#print axioms KQGPBKQRHilbert.AllDepth.actual_subexponential_and_pole_growth_imply_RH
+#print axioms KQGPBKQRHilbert.AllDepth.finite_cayley_hausdorff_nonneg
+#print axioms KQGPBKQRHilbert.AllDepth.actual_observable_subexp_implies_Mathlib_RH
+#print axioms KQGPBKQRHilbert.AllDepth.all_depth_nonnegative_and_channel_imply_RH
+#print axioms KQGPBKQRHilbert.AllDepth.gp_bkqr_calibration_implies_all_depth_nonnegative
+
+-- New all-depth root-test and strict superunit-channel growth results.
+#check KQGPBKQRHilbert.AllDepth.subexp_radial_absolute_summable
+#check KQGPBKQRHilbert.AllDepth.actual_xi_radial_absolute_summable
+#check KQGPBKQRHilbert.AllDepth.subexp_complex_disk_series_summable
+#check KQGPBKQRHilbert.AllDepth.actual_xi_complex_disk_series_summable
+#check KQGPBKQRHilbert.AllDepth.superunit_lower_bound_forces_growth
+#check KQGPBKQRHilbert.AllDepth.OffLineChannelDomination
+#check KQGPBKQRHilbert.AllDepth.domination_implies_canonical_pole_growth
+#check KQGPBKQRHilbert.AllDepth.subexp_and_domination_imply_centered_RH
+#print axioms KQGPBKQRHilbert.AllDepth.subexp_radial_absolute_summable
+#print axioms KQGPBKQRHilbert.AllDepth.superunit_lower_bound_forces_growth
+#print axioms KQGPBKQRHilbert.AllDepth.domination_implies_canonical_pole_growth
+
+
+-- v0.1.6: exact finite Cayley Taylor remainder and positive residue.
+#check KQGPBKQRHilbert.AllDepth.cayleyPartial_denominator
+#check KQGPBKQRHilbert.AllDepth.cayley_geometric_remainder
+#check KQGPBKQRHilbert.AllDepth.cayleyPartial_at_reciprocal
+#check KQGPBKQRHilbert.AllDepth.positive_pole_cannot_be_cross_multiplied
+#check KQGPBKQRHilbert.AllDepth.xiTaylor_abs_summable_at_offline_radius
+#check KQGPBKQRHilbert.AllDepth.ActualXiTaylorGerm
+#check KQGPBKQRHilbert.AllDepth.ActualXiPoleCrossing
+#check KQGPBKQRHilbert.AllDepth.subexp_and_positive_pole_crossing_imply_centered_RH
+#check KQGPBKQRHilbert.AllDepth.subexp_and_positive_pole_crossing_imply_Mathlib_RH
+#print axioms KQGPBKQRHilbert.AllDepth.cayleyPartial_denominator
+#print axioms KQGPBKQRHilbert.AllDepth.cayley_geometric_remainder
+#print axioms KQGPBKQRHilbert.AllDepth.positive_pole_cannot_be_cross_multiplied
+#print axioms KQGPBKQRHilbert.AllDepth.subexp_and_positive_pole_crossing_imply_Mathlib_RH
+
+
+-- v0.1.7: root-free all-depth Cayley symmetric Taylor recurrence.
+#check KQGPBKQRHilbert.AllDepth.symmetricPowerPair_identity
+#check KQGPBKQRHilbert.AllDepth.cayley_shifted_pair_sum
+#check KQGPBKQRHilbert.AllDepth.cayley_shifted_pair_product
+#check KQGPBKQRHilbert.AllDepth.shifted_cayley_power_difference
+#check KQGPBKQRHilbert.AllDepth.finite_shifted_cayley_jet_identity
+
+-- Actual Mathlib theta interface. B1 germ remains an unproved predicate.
+#check KQGPBKQRHilbert.AllDepth.actualMathlibXiCayleyEval
+#check KQGPBKQRHilbert.AllDepth.actualMathlibXiCayleyEval_eq_model
+#check KQGPBKQRHilbert.AllDepth.actualMathlibXi_analyticAt_positive
+#check KQGPBKQRHilbert.AllDepth.ActualMathlibXiTaylorGermOnRegularAnchors
+#check KQGPBKQRHilbert.AllDepth.actualMathlibXiTaylorGerm_to_original
+
+#print axioms KQGPBKQRHilbert.AllDepth.symmetricPowerPair_identity
+#print axioms KQGPBKQRHilbert.AllDepth.shifted_cayley_power_difference
+#print axioms KQGPBKQRHilbert.AllDepth.finite_shifted_cayley_jet_identity
+#print axioms KQGPBKQRHilbert.AllDepth.actualMathlibXiCayleyEval_eq_model
+#print axioms KQGPBKQRHilbert.AllDepth.actualMathlibXiTaylorGerm_to_original
+
+
+-- v0.1.8: all-depth radius-polynomial realization; exact finite-jet r=0 limit.
+#check KQGPBKQRHilbert.AllDepth.cayleyPolynomialPair_eval
+#check KQGPBKQRHilbert.AllDepth.cayleyDividedPowerPolynomial_eval
+#check KQGPBKQRHilbert.AllDepth.finiteCayleyJetPolynomial_eval
+#check KQGPBKQRHilbert.AllDepth.finiteCayleyJetPolynomial_power_expansion
+#check KQGPBKQRHilbert.AllDepth.finiteCayleyJetPolynomial_coeff_zero
+#check KQGPBKQRHilbert.AllDepth.finiteShiftedCayleyJet_at_zero
+#check KQGPBKQRHilbert.AllDepth.finiteCayleyBase_matches_xi_of_coefficient
+#print axioms KQGPBKQRHilbert.AllDepth.cayleyDividedPowerPolynomial_eval
+#print axioms KQGPBKQRHilbert.AllDepth.finiteCayleyJetPolynomial_eval
+#print axioms KQGPBKQRHilbert.AllDepth.finiteCayleyJetPolynomial_coeff_zero
+#print axioms KQGPBKQRHilbert.AllDepth.finiteShiftedCayleyJet_at_zero
+#print axioms KQGPBKQRHilbert.AllDepth.finiteCayleyBase_matches_xi_of_coefficient
+
+-- v0.1.9: genuine arbitrary-depth FINITE Cayley coefficients.
+#check KQGPBKQRHilbert.AllDepth.finite_cayley_coefficient_exact
+#check KQGPBKQRHilbert.AllDepth.canonicalCayleyCoefficient
+#check KQGPBKQRHilbert.AllDepth.canonical_cayley_coefficient_zero
+#check KQGPBKQRHilbert.AllDepth.zeroth_cayley_coefficient_matches_canonical
+#check KQGPBKQRHilbert.AllDepth.complex_finite_cayley_jet_differentiable
+#check KQGPBKQRHilbert.AllDepth.complex_finite_cayley_jet_real
+#check KQGPBKQRHilbert.AllDepth.finite_cayley_coefficients_congr
+#print axioms KQGPBKQRHilbert.AllDepth.finite_cayley_coefficient_exact
+#print axioms KQGPBKQRHilbert.AllDepth.complex_finite_cayley_jet_differentiable
+#print axioms KQGPBKQRHilbert.AllDepth.finite_cayley_coefficients_congr
+
+-- v0.1.10: stabilization at ALL depths; no 2^k subsequence.
+#check KQGPBKQRHilbert.AllDepth.cayley_divided_power_polynomial_rec
+#check KQGPBKQRHilbert.AllDepth.cayley_divided_power_coeff_rec
+#check KQGPBKQRHilbert.AllDepth.cayley_divided_power_coeff_vanishes_above_twice
+#check KQGPBKQRHilbert.AllDepth.finite_cayley_coefficient_stable_of_le
+#check KQGPBKQRHilbert.AllDepth.stableCayleyCoefficient
+#check KQGPBKQRHilbert.AllDepth.stable_cayley_coefficient_eq_finite
+#check KQGPBKQRHilbert.AllDepth.stable_cayley_coefficient_zero
+#check KQGPBKQRHilbert.AllDepth.stable_cayley_zero_eq_canonical
+#print axioms KQGPBKQRHilbert.AllDepth.cayley_divided_power_coeff_vanishes_above_twice
+#print axioms KQGPBKQRHilbert.AllDepth.finite_cayley_coefficient_stable_of_le
+#print axioms KQGPBKQRHilbert.AllDepth.stable_cayley_zero_eq_canonical
+
+-- v0.1.11: all-depth Pascal recurrence, finite algebra only.
+#check KQGPBKQRHilbert.AllDepth.cayleyBinomialTriangle
+#check KQGPBKQRHilbert.AllDepth.cayley_binomial_triangle_top
+#check KQGPBKQRHilbert.AllDepth.cayley_binomial_triangle_pascal
+#check KQGPBKQRHilbert.AllDepth.cayley_polynomial_diagonal_rec
+#check KQGPBKQRHilbert.AllDepth.CayleyTopDiagonal
+#check KQGPBKQRHilbert.AllDepth.cayley_polynomial_binomial_of_top
+#print axioms KQGPBKQRHilbert.AllDepth.cayley_binomial_triangle_pascal
+#print axioms KQGPBKQRHilbert.AllDepth.cayley_polynomial_diagonal_of_top
+
+-- v0.1.12: unconditional removal of the Cayley top-diagonal frontier.
+#check KQGPBKQRHilbert.AllDepth.cayley_poly_base_zero
+#check KQGPBKQRHilbert.AllDepth.cayley_poly_base_one
+#check KQGPBKQRHilbert.AllDepth.cayley_top_and_upper_support
+#check KQGPBKQRHilbert.AllDepth.cayley_top_diagonal_unconditional
+#check KQGPBKQRHilbert.AllDepth.cayley_coeff_above_diagonal_zero
+#check KQGPBKQRHilbert.AllDepth.cayley_polynomial_binomial_unconditional
+#print axioms KQGPBKQRHilbert.AllDepth.cayley_top_diagonal_unconditional
+#print axioms KQGPBKQRHilbert.AllDepth.cayley_polynomial_binomial_unconditional
+
+-- v0.1.13: unconditional finite all-depth closed binomial coefficient identity.
+#check KQGPBKQRHilbert.AllDepth.stable_cayley_coefficient_eq_canonical_closed
+#check KQGPBKQRHilbert.AllDepth.finite_cayley_coefficient_closed_all_depth
+#check KQGPBKQRHilbert.AllDepth.finite_cayley_coefficient_closed_minimal
+#check KQGPBKQRHilbert.AllDepth.canonical_cayley_coefficients_congr_initial
+#print axioms KQGPBKQRHilbert.AllDepth.stable_cayley_coefficient_eq_canonical_closed
+#print axioms KQGPBKQRHilbert.AllDepth.finite_cayley_coefficient_closed_all_depth
+#print axioms KQGPBKQRHilbert.AllDepth.canonical_cayley_coefficients_congr_initial
+
+-- v0.1.14: polynomial Hasse / Rodrigues normalization, not actual-xi B1.
+#check KQGPBKQRHilbert.AllDepth.polynomial_taylor_input_hasse
+#check KQGPBKQRHilbert.AllDepth.polynomial_taylor_input_eval_shift
+#check KQGPBKQRHilbert.AllDepth.polynomial_taylor_input_one
+#check KQGPBKQRHilbert.AllDepth.polynomial_rodrigues_hasse
+#check KQGPBKQRHilbert.AllDepth.polynomial_rodrigues_shifted_product
+#check KQGPBKQRHilbert.AllDepth.polynomial_rodrigues_zero
+#check KQGPBKQRHilbert.AllDepth.polynomial_cayley_rodrigues_zero
+#check KQGPBKQRHilbert.AllDepth.PolynomialRodriguesConvolution
+#print axioms KQGPBKQRHilbert.AllDepth.polynomial_rodrigues_hasse
+#print axioms KQGPBKQRHilbert.AllDepth.polynomial_cayley_rodrigues_zero
+
+
+-- v0.1.15: all-depth polynomial Rodrigues convolution, no assumed witness.
+#check KQGPBKQRHilbert.AllDepth.polynomial_rodrigues_convolution_all_depth
+#check KQGPBKQRHilbert.AllDepth.polynomialRodriguesConvolution_proven
+#check KQGPBKQRHilbert.AllDepth.finite_cayley_jet_eq_polynomial_rodrigues
+#print axioms KQGPBKQRHilbert.AllDepth.polynomial_rodrigues_convolution_all_depth
+#print axioms KQGPBKQRHilbert.AllDepth.finite_cayley_jet_eq_polynomial_rodrigues
+
+-- v0.1.16: unconditional finite Taylor-jet interpolation at every depth.
+#check KQGPBKQRHilbert.AllDepth.localTaylorInterpolant
+#check KQGPBKQRHilbert.AllDepth.local_taylor_interpolant_shift
+#check KQGPBKQRHilbert.AllDepth.local_taylor_interpolant_coeff
+#check KQGPBKQRHilbert.AllDepth.local_taylor_interpolant_coeff_zero
+#check KQGPBKQRHilbert.AllDepth.canonical_cayley_eq_local_polynomial_rodrigues
+#check KQGPBKQRHilbert.AllDepth.finite_cayley_eq_local_polynomial_rodrigues
+#check KQGPBKQRHilbert.AllDepth.actualXiRealTaylorInput
+#check KQGPBKQRHilbert.AllDepth.actual_xi_finite_polynomial_interpolant
+#check KQGPBKQRHilbert.AllDepth.actual_xi_finite_interpolant_rodrigues
+#check KQGPBKQRHilbert.AllDepth.ActualXiRealRodriguesCompatibility
+#check KQGPBKQRHilbert.AllDepth.real_rodrigues_compatibility_implies_actual_widder_coefficients
+#print axioms KQGPBKQRHilbert.AllDepth.canonical_cayley_eq_local_polynomial_rodrigues
+#print axioms KQGPBKQRHilbert.AllDepth.actual_xi_finite_polynomial_interpolant
+#print axioms KQGPBKQRHilbert.AllDepth.real_rodrigues_compatibility_implies_actual_widder_coefficients
+
+-- v0.1.17: exact real high-derivative Leibniz decomposition for the literal xiR.
+#check KQGPBKQRHilbert.AllDepth.real_power_leibniz_finite
+#check KQGPBKQRHilbert.AllDepth.actual_xi_real_weighted_log_derivative_analytic_at
+#check KQGPBKQRHilbert.AllDepth.actual_xi_raw_rodrigues_leibniz
+#check KQGPBKQRHilbert.AllDepth.actual_xi_widder_direct_finite_leibniz
+#print axioms KQGPBKQRHilbert.AllDepth.actual_xi_raw_rodrigues_leibniz
+#print axioms KQGPBKQRHilbert.AllDepth.actual_xi_widder_direct_finite_leibniz
+
+-- v0.1.18: integer-factorial normalization and all-depth actual real Cayley jets.
+#check KQGPBKQRHilbert.AllDepth.choose_desc_factorial_cross
+#check KQGPBKQRHilbert.AllDepth.choose_desc_factorial_real_div
+#check KQGPBKQRHilbert.AllDepth.reflected_binomial_derivative_sum
+#check KQGPBKQRHilbert.AllDepth.normalized_real_leibniz_sum
+#check KQGPBKQRHilbert.AllDepth.widder_rodrigues_scale
+#check KQGPBKQRHilbert.AllDepth.actual_xi_real_rodrigues_normalized
+#check KQGPBKQRHilbert.AllDepth.actual_xi_canonical_cayley_coefficients
+#check KQGPBKQRHilbert.AllDepth.actualXiRealRodriguesCompatibility_proven
+#check KQGPBKQRHilbert.AllDepth.actual_xi_all_depth_finite_cayley_coefficients
+#print axioms KQGPBKQRHilbert.AllDepth.choose_desc_factorial_cross
+#print axioms KQGPBKQRHilbert.AllDepth.actual_xi_real_rodrigues_normalized
+#print axioms KQGPBKQRHilbert.AllDepth.actualXiRealRodriguesCompatibility_proven
+#print axioms KQGPBKQRHilbert.AllDepth.actual_xi_all_depth_finite_cayley_coefficients

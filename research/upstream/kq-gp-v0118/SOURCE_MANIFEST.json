@@ -1,0 +1,164 @@
+[
+  {
+    "source": "RH_NATIVE_SOLOBOLO_MERGER05_EXPLICIT_CAYLEY_TRACE_v0_23_0 (1).zip",
+    "source_path": "Derivations/Negativity/TunedChannelAlgebra.lean",
+    "target_path": "Derivations/Negativity/TunedChannelAlgebra.lean",
+    "sha256": "381a9524bb198d20e85e54a3ed16af9a0ad920d193326ab580c1ac0883a40ba8"
+  },
+  {
+    "source": "RH_NATIVE_SOLOBOLO_MERGER05_EXPLICIT_CAYLEY_TRACE_v0_23_0 (1).zip",
+    "source_path": "Derivations/Negativity/UniformGap.lean",
+    "target_path": "Derivations/Negativity/UniformGap.lean",
+    "sha256": "87918fb6d13a20235f384bc84bcd83b2cb9cc9046e3b70c47eddb5ac3b4e0f47"
+  },
+  {
+    "source": "RH_NATIVE_SOLOBOLO_MERGER05_EXPLICIT_CAYLEY_TRACE_v0_23_0 (1).zip",
+    "source_path": "Derivations/Negativity/GeometricDominance.lean",
+    "target_path": "Derivations/Negativity/GeometricDominance.lean",
+    "sha256": "f4dff1fe459add23b48334b0509a37c2b6deafd27fc6efefb416f7611e6959bf"
+  },
+  {
+    "source": "RH_NATIVE_SOLOBOLO_MERGER05_EXPLICIT_CAYLEY_TRACE_v0_23_0 (1).zip",
+    "source_path": "Derivations/Negativity/UniformChannelBounds.lean",
+    "target_path": "Derivations/Negativity/UniformChannelBounds.lean",
+    "sha256": "8d1e28d6cad2af5936b02088a825f27b3c2132af1c02d4eb2cb833824c8ac2f5"
+  },
+  {
+    "source": "RH_NATIVE_SOLOBOLO_MERGER05_EXPLICIT_CAYLEY_TRACE_v0_23_0 (1).zip",
+    "source_path": "Derivations/Hausdorff/CentralCell.lean",
+    "target_path": "Derivations/Hausdorff/CentralCell.lean",
+    "sha256": "91bb598827ce6b7c221dc86ac4c65f7d95ba999f338a1bcd4a360382a3d73562"
+  },
+  {
+    "source": "RH_NATIVE_SOLOBOLO_MERGER05_EXPLICIT_CAYLEY_TRACE_v0_23_0 (1).zip",
+    "source_path": "Derivations/Geometry/CayleyChannelKernel.lean",
+    "target_path": "Derivations/Geometry/CayleyChannelKernel.lean",
+    "sha256": "a97b45c83c05ad0d295dd2346f5472971c0ad9dc6133b3d3ed26c5974b7f617a"
+  },
+  {
+    "source": "RH_NATIVE_SOLOBOLO_MERGER05_EXPLICIT_CAYLEY_TRACE_v0_23_0 (1).zip",
+    "source_path": "Derivations/Widder/LocalCalculus.lean",
+    "target_path": "Derivations/Widder/LocalCalculus.lean",
+    "sha256": "625a4e7cf922dc542da89bf217605e8afc88004552355ba0af8ede4e7c998dd4"
+  },
+  {
+    "source": "RH_NATIVE_SOLOBOLO_MERGER05_EXPLICIT_CAYLEY_TRACE_v0_23_0 (1).zip",
+    "source_path": "Derivations/Widder/DirectTower.lean",
+    "target_path": "Derivations/Widder/DirectTower.lean",
+    "sha256": "a12470f41c429566629b9d17845f1f4b56c8450b51473b384257b4a646e32378"
+  },
+  {
+    "source": "RH_NATIVE_SOLOBOLO_MERGER05_EXPLICIT_CAYLEY_TRACE_v0_23_0 (1).zip",
+    "source_path": "Main.lean",
+    "target_path": "UPSTREAM/Main_v0_23_0.lean",
+    "sha256": "323663bc5a690c03400cde565fa378917aa88109953513b39f68fa2cc2600685"
+  },
+  {
+    "source": "RH_NATIVE_SOLOBOLO_MERGER05_EXPLICIT_CAYLEY_TRACE_v0_23_0 (1).zip",
+    "source_path": "Core/Observable.lean",
+    "target_path": "Core/Observable.lean",
+    "sha256": "3d5ac15448a67cb6d94ed6bd0624fe29ed7efb1385af092bdf6c245510384377"
+  },
+  {
+    "source": "RH_NATIVE_SOLOBOLO_MERGER05_EXPLICIT_CAYLEY_TRACE_v0_23_0 (1).zip",
+    "source_path": "Core/EntireXiWidder.lean",
+    "target_path": "Core/EntireXiWidder.lean",
+    "sha256": "06014f7ffe8d7c9909085e4fc6b6b8d29ba6d8d581e9a1c127546459b46e524a"
+  },
+  {
+    "source": "RH_NATIVE_SOLOBOLO_MERGER05_EXPLICIT_CAYLEY_TRACE_v0_23_0 (1).zip",
+    "source_path": "Core/ActualThetaCayley.lean",
+    "target_path": "Core/ActualThetaCayley.lean",
+    "sha256": "703ea9f4d122a58af8500a03710129d4728135edef59a78ab30d4507df20dff0"
+  },
+  {
+    "source": "RH_NATIVE_SOLOBOLO_MERGER05_EXPLICIT_CAYLEY_TRACE_v0_23_0 (1).zip",
+    "source_path": "Core/MathlibXiSlitTheta.lean",
+    "target_path": "Core/MathlibXiSlitTheta.lean",
+    "sha256": "1b343e5f600a7d0091d80391ea470c71a45a6ebd7a3c54267fad8a9f44e8e39e"
+  },
+  {
+    "source": "RH_NATIVE_SOLOBOLO_MERGER05_EXPLICIT_CAYLEY_TRACE_v0_23_0 (1).zip",
+    "source_path": "Bridge/MersenneCentralCriterion.lean",
+    "target_path": "Bridge/MersenneCentralCriterion.lean",
+    "sha256": "f16080c6a92a13c6b15f894dc9979728ed447dbbb85d9b11fc71e71e2960fc83"
+  },
+  {
+    "source": "RH_NATIVE_SOLOBOLO_MERGER05_EXPLICIT_CAYLEY_TRACE_v0_23_0 (1).zip",
+    "source_path": "Bridge/XiWidderIdentification.lean",
+    "target_path": "Bridge/XiWidderIdentification.lean",
+    "sha256": "e63e9ea4da8f1b12ef977343dfeb985433d2d024e9b202595f45cabc529c6f29"
+  },
+  {
+    "source": "RH_NATIVE_SOLOBOLO_MERGER05_EXPLICIT_CAYLEY_TRACE_v0_23_0 (1).zip",
+    "source_path": "Bridge/XiChannelNegativity.lean",
+    "target_path": "Bridge/XiChannelNegativity.lean",
+    "sha256": "dbf531a684069ba2f98008c427046f250b09c471b1ed8b22d880cb79d8cb58a1"
+  },
+  {
+    "source": "RH_NATIVE_SOLOBOLO_MERGER05_EXPLICIT_CAYLEY_TRACE_v0_23_0 (1).zip",
+    "source_path": "Bridge/ExplicitMersenneReadout.lean",
+    "target_path": "Bridge/ExplicitMersenneReadout.lean",
+    "sha256": "0a208571ed56566a5bbffc54d26334c976379d1884ea9bc5adf1f36d013ce297"
+  },
+  {
+    "source": "RH_NATIVE_SOLOBOLO_LEAN_v0_18_3_EXPLICIT_ANALYTIC_COMP_ARGS (1).zip",
+    "source_path": "Derivations/BKQR/ScalarProduct.lean",
+    "target_path": "Derivations/BKQR/ScalarProduct.lean",
+    "sha256": "0c04160d298d82d397df7b3a8147c4097950808bed5fb5fd11c666353ce2d2f4"
+  },
+  {
+    "source": "RH_NATIVE_SOLOBOLO_LEAN_v0_18_3_EXPLICIT_ANALYTIC_COMP_ARGS (1).zip",
+    "source_path": "Frontier/OurFrontier.lean",
+    "target_path": "Frontier/OurFrontier.lean",
+    "sha256": "f61c487207f52e36fbbae8fd65ee6ea5ef43842ca630b3b645d03109948f69fd"
+  },
+  {
+    "source": "RH_NATIVE_SOLOBOLO_LEAN_v0_18_3_EXPLICIT_ANALYTIC_COMP_ARGS (1).zip",
+    "source_path": "Frontier/FreeEnergyFrontier.lean",
+    "target_path": "Frontier/FreeEnergyFrontier.lean",
+    "sha256": "4a62fe30d6aeeea42deb619f553c79c12535bc497c5121b8f97a0a70403a78fc"
+  },
+  {
+    "source": "RH_NATIVE_SOLOBOLO_LEAN_v0_18_3_EXPLICIT_ANALYTIC_COMP_ARGS (1).zip",
+    "source_path": "Derivations/GP/FreeEnergyCurvature.lean",
+    "target_path": "Derivations/GP/FreeEnergyCurvature.lean",
+    "sha256": "5430dd4451898d239e3b82aca562c0032f016c15890f92626af671c4f1e7cb5c"
+  },
+  {
+    "source": "RH_NATIVE_SOLOBOLO_LEAN_v0_18_3_EXPLICIT_ANALYTIC_COMP_ARGS (1).zip",
+    "source_path": "Derivations/GP/CayleyObservable.lean",
+    "target_path": "Derivations/GP/CayleyObservable.lean",
+    "sha256": "1fb86e2431cc70041139e0c6f802fe9d33d085a22cf1c1dbe7e468a26e5c2c1d"
+  },
+  {
+    "source": "RH_NATIVE_SOLOBOLO_LEAN_v0_18_3_EXPLICIT_ANALYTIC_COMP_ARGS (1).zip",
+    "source_path": "Derivations/GP/WidderRecursion.lean",
+    "target_path": "Derivations/GP/WidderRecursion.lean",
+    "sha256": "8be20a6e485712531751137dee217bfdeb37f1af05a620316d2b3e084aedf983"
+  },
+  {
+    "source": "RH_NATIVE_SOLOBOLO_LEAN_v0_18_3_EXPLICIT_ANALYTIC_COMP_ARGS (1).zip",
+    "source_path": "Derivations/Geometry/CayleyRadius.lean",
+    "target_path": "Derivations/Geometry/CayleyRadius.lean",
+    "sha256": "83f7fb60c08d6bb6c64024d433d827271e40fdeabf6e7d03e540ad7ef5885ab5"
+  },
+  {
+    "source": "RH_NATIVE_SOLOBOLO_LEAN_v0_18_3_EXPLICIT_ANALYTIC_COMP_ARGS (1).zip",
+    "source_path": "Derivations/Geometry/ActualCayleyObservable.lean",
+    "target_path": "Derivations/Geometry/ActualCayleyObservable.lean",
+    "sha256": "7547d5d4b41bc6cd6e74e75653488bee1d92c34e9275a6097219a288ccfbd733"
+  },
+  {
+    "source": "RH_NATIVE_SOLOBOLO_LEAN_v0_18_3_EXPLICIT_ANALYTIC_COMP_ARGS (1).zip",
+    "source_path": "Derivations/Geometry/LocalLaurent.lean",
+    "target_path": "Derivations/Geometry/LocalLaurent.lean",
+    "sha256": "e0b6f933b79c833f4b79a1ff1661d0d6a8ede86cc927aecd350e3acd87c9e55d"
+  },
+  {
+    "source": "RH_NATIVE_SOLOBOLO_LEAN_v0_18_3_EXPLICIT_ANALYTIC_COMP_ARGS (1).zip",
+    "source_path": "Derivations/Geometry/InteriorPole.lean",
+    "target_path": "Derivations/Geometry/InteriorPole.lean",
+    "sha256": "2b9ccd9ba10f7f6af50692a4deaa3766e6dcb9316caa2a9ce91a1c2df4a82f47"
+  }
+]

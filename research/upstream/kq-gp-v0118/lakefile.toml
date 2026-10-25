@@ -1,0 +1,13 @@
+name = "KQGPBKQRHilbertSoloboloAllDepth"
+version = "0.1.4"
+defaultTargets = ["KQGPBKQRHilbert"]
+
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4.git"
+rev = "v4.33.0"
+
+[[lean_lib]]
+name = "KQGPBKQRHilbert"
+roots = ["Core", "Derivations", "Frontier", "Bridge", "KQGPBKQRHilbert", "AllDepth"]
+globs = ["Core.+", "Derivations.+", "Frontier.+", "Bridge.+", "KQGPBKQRHilbert.*", "AllDepth.+"]

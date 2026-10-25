@@ -2,8 +2,8 @@
 
 The user created the public repository
 [`randogelist/Riemann-Hypothesis-Final`](https://github.com/randogelist/Riemann-Hypothesis-Final).
-Its default branch is `main`. This source snapshot is the prepared initial
-research project; native Lean compilation and the actual-ξ finite-input
+Its default branch is `main`. The source includes the SOLOBOLO finite search
+and the extensive GP construction; native Lean compilation and the actual-ξ finite-input
 reduction remain pending/open. No credential is stored in the source tree.
 
 ## Clone
@@ -15,7 +15,7 @@ git clone https://github.com/randogelist/Riemann-Hypothesis-Final.git
 cd Riemann-Hypothesis-Final
 ```
 
-After the initial source upload is present, use the single `run.cmd` as
+Use the single `run.cmd` as
 specified in [BUILD.md](BUILD.md). A Git commit or upload is not a native
 compilation or axiom-audit receipt.
 

@@ -1,0 +1,9 @@
+import AllDepth.CayleyPolynomialGerm
+
+-- Checks the actual imported module, independent of the umbrella cache.
+#check KQGPBKQRHilbert.AllDepth.cayleyDividedPowerPolynomial_eval
+#check KQGPBKQRHilbert.AllDepth.finiteCayleyJetPolynomial_eval
+#check KQGPBKQRHilbert.AllDepth.finiteCayleyJetPolynomial_power_expansion
+#check KQGPBKQRHilbert.AllDepth.finiteCayleyJetPolynomial_coeff_zero
+#check KQGPBKQRHilbert.AllDepth.finiteShiftedCayleyJet_at_zero
+#check KQGPBKQRHilbert.AllDepth.finiteCayleyBase_matches_xi_of_coefficient

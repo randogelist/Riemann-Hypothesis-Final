@@ -16,7 +16,7 @@ run.cmd search
 
 `search` uses the same core cache and import environment. It runs `RHFinal/Search.lean` only after all core modules and axiom audits succeed. The receipt and search output state `SEARCH_SCOPE=LOCAL_SYMBOLIC_SOS_DIAGNOSTIC`; a local candidate is not an accepted RH witness. The search log is `.rh-cache\core\logs\search.log`. The current bound and problem are fixed explicitly in `RHFinal/Search.lean`.
 
-The default `core` plan uses the installed Lean standard library. The `full` plan additionally requires an existing Mathlib checkout and its precompiled dependency cache:
+The default `core` plan uses the installed Lean standard library. The `full` plan also includes the integrated GP source graph and requires an existing Mathlib checkout and its precompiled dependency cache:
 
 ```bat
 set "RH_MATHLIB_ROOT=C:\path\to\mathlib4"
@@ -37,6 +37,28 @@ The Mathlib checkout must declare `leanprover/lean4:v4.33.0` in `lean-toolchain`
 The default compiler is `%USERPROFILE%\.elan\toolchains\leanprover--lean4---v4.33.0\bin\lean.exe`. Override it with `RH_LEAN_EXE` if needed; the established `LEAN_EXE` variable is the second-priority override. The runner never invokes Lake, Python, PowerShell, WSL or a download command. `certutil.exe` is required for SHA-256. The build helper is interpreted directly by the pinned Lean executable.
 
 `build-modules.txt` and `build-modules-full.txt` contain topologically ordered project module paths, one per line, with forward slashes and no `.lean` extension. Names must use letters, digits, underscores and `/`. Lines beginning with `#` are comments. Every plan must include a module whose name ends in `Audit`; each such module must print at least one actual axiom report using `#print axioms`.
+
+## GP source integration
+
+`run.cmd full` builds the active modules listed in `build-modules-full.txt`,
+including the literal Mellin–Hilbert objects, native ξ compatibility, recovered
+KQ/GP/BKQR/SOLOBOLO construction, GP7 weight-seven modules and the generic
+master energy extraction. The full plan currently contains 89 modules; the
+manifest is the authoritative module inventory and order. The corresponding `RHFinal/GP/*Audit.lean` modules print the selected
+endpoint axiom dependencies. Their compilation, when successful, certifies
+only their actual statements and visible hypotheses.
+
+The historical master files with an opaque custom RH and literature axioms,
+the analytic bridge note and the H3 PDE patch remain under
+`research/upstream/`; they are not imported by this build. See
+[GP_CONSTRUCTION.md](GP_CONSTRUCTION.md) for the mathematical boundary.
+
+This integration keeps `v0_1_0_construction` and is identified by Git revision.
+Unchanged modules may retain a valid native receipt; new or changed modules
+and dependent modules are checked through the existing fingerprint rules.
+No historical pass is imported merely because a source file was preserved.
+The `core`/`search` scope remains the local symbolic SOS diagnostic, not the
+actual-ξ witness search promised by the still-open full reduction.
 
 ## PASS-ONCE and LEAN_ANCHORINGS
 

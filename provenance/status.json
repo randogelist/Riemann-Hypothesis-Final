@@ -20,5 +20,16 @@
   "proof_tier": null,
   "github_creation": "USER_CREATED",
   "repository_url": "https://github.com/randogelist/Riemann-Hypothesis-Final",
-  "repository_visibility": "public"
+  "repository_visibility": "public",
+  "gp_integration": {
+    "active_imported_modules": 56,
+    "kq_modules": 48,
+    "gp7_modules": 8,
+    "master_originals": "ARCHIVE_ONLY_CONTAINS_AXIOMS_AND_OPAQUE_RH",
+    "master_active": "GENERIC_ENERGY_INDUCTION_WITH_EXPLICIT_MODEL_LAWS",
+    "literal_mellin_hilbert": "DEFINITIONS_AND_POINTWISE_HEAT_ALGEBRA",
+    "mellin_native_xi_factorization": "OPEN",
+    "native_lean_build": "NOT_RUN",
+    "full_plan_modules": 89
+  }
 }

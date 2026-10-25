@@ -178,5 +178,40 @@
     "sha256": "248680deb3e250ea2aecddd6701ce400f74cfa1dc8c70e86f93956d53a693e6f",
     "bytes": 41454,
     "role": "recovered SOLOBOLO source; no native PASS imported"
+  },
+  {
+    "file": "GRAND_CONDITIONAL_MERGE_v0_5_1_H3_PDE_PATCH.zip",
+    "sha256": "4533e66539eb1763ae026d28f68e2c367b029de038e1082a94346ceacb76a2df",
+    "bytes": 3995,
+    "library_file_id": "libfile_14b7a2be5e9481918b5f2a770f3b2aca",
+    "role": "recovered GP source; native receipts not admitted"
+  },
+  {
+    "file": "KQ_GP_BKQR_HILBERT_SOLOBOLO_ENDPOINTS_v0_1_3_FASTCORE_FIX1.zip",
+    "sha256": "6bbdd9b791e504e928ba5602b077bd2a8beb6b42fa8b4a203f645ca0906a034d",
+    "bytes": 61128,
+    "library_file_id": "libfile_b95ec6b574f081919bae3fd7037c6e40",
+    "role": "recovered GP source; native receipts not admitted"
+  },
+  {
+    "file": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE.zip",
+    "sha256": "3a7ba0e7d7de3fd0344b866c13800299603d07f78b525b3be69348e4ae688080",
+    "bytes": 136340,
+    "library_file_id": "libfile_84ce17830c208191ae912cad8306e5dc",
+    "role": "recovered GP source; native receipts not admitted"
+  },
+  {
+    "file": "KQ_GP_BKQR_Hilbert_Theta_Cayley_Analytic_Bridge.md",
+    "sha256": "fce9f9f8617a43001ec79a338ff6c669f58714e81e0620365cb91c778fb19a88",
+    "bytes": 8905,
+    "library_file_id": "libfile_74340526297c8191990f8a73acc933c0",
+    "role": "recovered GP source; native receipts not admitted"
+  },
+  {
+    "file": "RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5.zip",
+    "sha256": "16b72e693b4f0270792f0201abbd0c20ef0ead720dbcc031c322f8a81d782350",
+    "bytes": 20924,
+    "library_file_id": "libfile_0a16d9d190fc8191bd42942d8d4578d7",
+    "role": "recovered GP source; native receipts not admitted"
   }
 ]

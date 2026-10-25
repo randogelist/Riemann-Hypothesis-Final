@@ -1,0 +1,36 @@
+[
+  {
+    "path": "RHFinal/GP/Literal.lean",
+    "sha256": "8e751ef9c39c08fd223f8bbf1b3be69471138bb283fe5431a2f574b696bcac2f",
+    "source_kind": "NEW_OR_ADAPTED_INTEGRATION",
+    "sources": [
+      "research/upstream/gp-analytic-note/KQ_GP_BKQR_Hilbert_Theta_Cayley_Analytic_Bridge.md"
+    ],
+    "native_compilation": "NOT_RUN"
+  },
+  {
+    "path": "RHFinal/GP/LiteralAudit.lean",
+    "sha256": "fcf802ed9f55ec1175219af89cf3ee0f698abd1c9598e956c353bc6f4bd46ee9",
+    "source_kind": "NEW_OR_ADAPTED_INTEGRATION",
+    "sources": [],
+    "native_compilation": "NOT_RUN"
+  },
+  {
+    "path": "RHFinal/GP/NativeBinding.lean",
+    "sha256": "9965a9f0fd0d477aef52596abf1f538aa57b7a407be6565b29886680867f2889",
+    "source_kind": "NEW_OR_ADAPTED_INTEGRATION",
+    "sources": [
+      "research/upstream/gp-h3-pde-v051/GrandConditionalMerge/H3KernelPDE.lean",
+      "Core/MathlibXiSlitTheta.lean",
+      "RHFinal/Actual/Successor.lean"
+    ],
+    "native_compilation": "NOT_RUN"
+  },
+  {
+    "path": "RHFinal/GP/NativeBindingAudit.lean",
+    "sha256": "d9289ec67befbf857cdafe0f395327d61a4d099fec5566f23f0998c2a8e5504b",
+    "source_kind": "NEW_OR_ADAPTED_INTEGRATION",
+    "sources": [],
+    "native_compilation": "NOT_RUN"
+  }
+]

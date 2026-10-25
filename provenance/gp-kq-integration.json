@@ -1,0 +1,580 @@
+{
+  "source_package": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE",
+  "baseline_package": "KQ_GP_BKQR_HILBERT_SOLOBOLO_ENDPOINTS_v0_1_3_FASTCORE_FIX1",
+  "active_files": [
+    {
+      "path": "Core/Observable.lean",
+      "source_relative_path": "Core/Observable.lean",
+      "source_package": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE",
+      "sha256": "3d5ac15448a67cb6d94ed6bd0624fe29ed7efb1385af092bdf6c245510384377",
+      "byte_identical": true,
+      "status": "SOURCE_ONLY_NATIVE_RECHECK_REQUIRED"
+    },
+    {
+      "path": "Core/ActualThetaCayley.lean",
+      "source_relative_path": "Core/ActualThetaCayley.lean",
+      "source_package": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE",
+      "sha256": "703ea9f4d122a58af8500a03710129d4728135edef59a78ab30d4507df20dff0",
+      "byte_identical": true,
+      "status": "SOURCE_ONLY_NATIVE_RECHECK_REQUIRED"
+    },
+    {
+      "path": "Core/MathlibXiSlitTheta.lean",
+      "source_relative_path": "Core/MathlibXiSlitTheta.lean",
+      "source_package": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE",
+      "sha256": "1b343e5f600a7d0091d80391ea470c71a45a6ebd7a3c54267fad8a9f44e8e39e",
+      "byte_identical": true,
+      "status": "SOURCE_ONLY_NATIVE_RECHECK_REQUIRED"
+    },
+    {
+      "path": "Core/EntireXiWidder.lean",
+      "source_relative_path": "Core/EntireXiWidder.lean",
+      "source_package": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE",
+      "sha256": "06014f7ffe8d7c9909085e4fc6b6b8d29ba6d8d581e9a1c127546459b46e524a",
+      "byte_identical": true,
+      "status": "SOURCE_ONLY_NATIVE_RECHECK_REQUIRED"
+    },
+    {
+      "path": "Derivations/Geometry/CayleyChannelKernel.lean",
+      "source_relative_path": "Derivations/Geometry/CayleyChannelKernel.lean",
+      "source_package": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE",
+      "sha256": "a97b45c83c05ad0d295dd2346f5472971c0ad9dc6133b3d3ed26c5974b7f617a",
+      "byte_identical": true,
+      "status": "SOURCE_ONLY_NATIVE_RECHECK_REQUIRED"
+    },
+    {
+      "path": "Derivations/Negativity/UniformChannelBounds.lean",
+      "source_relative_path": "Derivations/Negativity/UniformChannelBounds.lean",
+      "source_package": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE",
+      "sha256": "8d1e28d6cad2af5936b02088a825f27b3c2132af1c02d4eb2cb833824c8ac2f5",
+      "byte_identical": true,
+      "status": "SOURCE_ONLY_NATIVE_RECHECK_REQUIRED"
+    },
+    {
+      "path": "Derivations/Negativity/GeometricDominance.lean",
+      "source_relative_path": "Derivations/Negativity/GeometricDominance.lean",
+      "source_package": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE",
+      "sha256": "f4dff1fe459add23b48334b0509a37c2b6deafd27fc6efefb416f7611e6959bf",
+      "byte_identical": true,
+      "status": "SOURCE_ONLY_NATIVE_RECHECK_REQUIRED"
+    },
+    {
+      "path": "Derivations/Negativity/UniformGap.lean",
+      "source_relative_path": "Derivations/Negativity/UniformGap.lean",
+      "source_package": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE",
+      "sha256": "87918fb6d13a20235f384bc84bcd83b2cb9cc9046e3b70c47eddb5ac3b4e0f47",
+      "byte_identical": true,
+      "status": "SOURCE_ONLY_NATIVE_RECHECK_REQUIRED"
+    },
+    {
+      "path": "Derivations/Negativity/TunedChannelAlgebra.lean",
+      "source_relative_path": "Derivations/Negativity/TunedChannelAlgebra.lean",
+      "source_package": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE",
+      "sha256": "381a9524bb198d20e85e54a3ed16af9a0ad920d193326ab580c1ac0883a40ba8",
+      "byte_identical": true,
+      "status": "SOURCE_ONLY_NATIVE_RECHECK_REQUIRED"
+    },
+    {
+      "path": "Bridge/XiChannelNegativity.lean",
+      "source_relative_path": "Bridge/XiChannelNegativity.lean",
+      "source_package": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE",
+      "sha256": "dbf531a684069ba2f98008c427046f250b09c471b1ed8b22d880cb79d8cb58a1",
+      "byte_identical": true,
+      "status": "SOURCE_ONLY_NATIVE_RECHECK_REQUIRED"
+    },
+    {
+      "path": "Derivations/Widder/LocalCalculus.lean",
+      "source_relative_path": "Derivations/Widder/LocalCalculus.lean",
+      "source_package": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE",
+      "sha256": "625a4e7cf922dc542da89bf217605e8afc88004552355ba0af8ede4e7c998dd4",
+      "byte_identical": true,
+      "status": "SOURCE_ONLY_NATIVE_RECHECK_REQUIRED"
+    },
+    {
+      "path": "Derivations/Widder/DirectTower.lean",
+      "source_relative_path": "Derivations/Widder/DirectTower.lean",
+      "source_package": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE",
+      "sha256": "a12470f41c429566629b9d17845f1f4b56c8450b51473b384257b4a646e32378",
+      "byte_identical": true,
+      "status": "SOURCE_ONLY_NATIVE_RECHECK_REQUIRED"
+    },
+    {
+      "path": "Bridge/XiWidderIdentification.lean",
+      "source_relative_path": "Bridge/XiWidderIdentification.lean",
+      "source_package": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE",
+      "sha256": "e63e9ea4da8f1b12ef977343dfeb985433d2d024e9b202595f45cabc529c6f29",
+      "byte_identical": true,
+      "status": "SOURCE_ONLY_NATIVE_RECHECK_REQUIRED"
+    },
+    {
+      "path": "Derivations/Hausdorff/CentralCell.lean",
+      "source_relative_path": "Derivations/Hausdorff/CentralCell.lean",
+      "source_package": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE",
+      "sha256": "91bb598827ce6b7c221dc86ac4c65f7d95ba999f338a1bcd4a360382a3d73562",
+      "byte_identical": true,
+      "status": "SOURCE_ONLY_NATIVE_RECHECK_REQUIRED"
+    },
+    {
+      "path": "Bridge/MersenneCentralCriterion.lean",
+      "source_relative_path": "Bridge/MersenneCentralCriterion.lean",
+      "source_package": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE",
+      "sha256": "f16080c6a92a13c6b15f894dc9979728ed447dbbb85d9b11fc71e71e2960fc83",
+      "byte_identical": true,
+      "status": "SOURCE_ONLY_NATIVE_RECHECK_REQUIRED"
+    },
+    {
+      "path": "Bridge/ExplicitMersenneReadout.lean",
+      "source_relative_path": "Bridge/ExplicitMersenneReadout.lean",
+      "source_package": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE",
+      "sha256": "0a208571ed56566a5bbffc54d26334c976379d1884ea9bc5adf1f36d013ce297",
+      "byte_identical": true,
+      "status": "SOURCE_ONLY_NATIVE_RECHECK_REQUIRED"
+    },
+    {
+      "path": "Derivations/BKQR/ScalarProduct.lean",
+      "source_relative_path": "Derivations/BKQR/ScalarProduct.lean",
+      "source_package": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE",
+      "sha256": "0c04160d298d82d397df7b3a8147c4097950808bed5fb5fd11c666353ce2d2f4",
+      "byte_identical": true,
+      "status": "SOURCE_ONLY_NATIVE_RECHECK_REQUIRED"
+    },
+    {
+      "path": "Frontier/OurFrontier.lean",
+      "source_relative_path": "Frontier/OurFrontier.lean",
+      "source_package": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE",
+      "sha256": "f61c487207f52e36fbbae8fd65ee6ea5ef43842ca630b3b645d03109948f69fd",
+      "byte_identical": true,
+      "status": "SOURCE_ONLY_NATIVE_RECHECK_REQUIRED"
+    },
+    {
+      "path": "Frontier/FreeEnergyFrontier.lean",
+      "source_relative_path": "Frontier/FreeEnergyFrontier.lean",
+      "source_package": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE",
+      "sha256": "4a62fe30d6aeeea42deb619f553c79c12535bc497c5121b8f97a0a70403a78fc",
+      "byte_identical": true,
+      "status": "SOURCE_ONLY_NATIVE_RECHECK_REQUIRED"
+    },
+    {
+      "path": "Derivations/GP/FreeEnergyCurvature.lean",
+      "source_relative_path": "Derivations/GP/FreeEnergyCurvature.lean",
+      "source_package": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE",
+      "sha256": "5430dd4451898d239e3b82aca562c0032f016c15890f92626af671c4f1e7cb5c",
+      "byte_identical": true,
+      "status": "SOURCE_ONLY_NATIVE_RECHECK_REQUIRED"
+    },
+    {
+      "path": "Derivations/GP/CayleyObservable.lean",
+      "source_relative_path": "Derivations/GP/CayleyObservable.lean",
+      "source_package": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE",
+      "sha256": "1fb86e2431cc70041139e0c6f802fe9d33d085a22cf1c1dbe7e468a26e5c2c1d",
+      "byte_identical": true,
+      "status": "SOURCE_ONLY_NATIVE_RECHECK_REQUIRED"
+    },
+    {
+      "path": "Derivations/GP/WidderRecursion.lean",
+      "source_relative_path": "Derivations/GP/WidderRecursion.lean",
+      "source_package": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE",
+      "sha256": "8be20a6e485712531751137dee217bfdeb37f1af05a620316d2b3e084aedf983",
+      "byte_identical": true,
+      "status": "SOURCE_ONLY_NATIVE_RECHECK_REQUIRED"
+    },
+    {
+      "path": "KQGPBKQRHilbert/InputEndpoints.lean",
+      "source_relative_path": "KQGPBKQRHilbert/InputEndpoints.lean",
+      "source_package": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE",
+      "sha256": "e5eaeb6942ecc001de91bdcd65b450320d0ab1cccfcfc653b22b08265dc2bdb6",
+      "byte_identical": true,
+      "status": "SOURCE_ONLY_NATIVE_RECHECK_REQUIRED"
+    },
+    {
+      "path": "KQGPBKQRHilbert/TargetInterfaces.lean",
+      "source_relative_path": "KQGPBKQRHilbert/TargetInterfaces.lean",
+      "source_package": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE",
+      "sha256": "f1f0751d5093799a858a61bc49d0d3f8f4087cf05223e7153c87e09430ff0694",
+      "byte_identical": true,
+      "status": "SOURCE_ONLY_NATIVE_RECHECK_REQUIRED"
+    },
+    {
+      "path": "KQGPBKQRHilbert/Continuation.lean",
+      "source_relative_path": "KQGPBKQRHilbert/Continuation.lean",
+      "source_package": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE",
+      "sha256": "f3d0f3c882ba25fb114f6b744e21025edc6d81c680c72275cd711e00c73aaea6",
+      "byte_identical": true,
+      "status": "SOURCE_ONLY_NATIVE_RECHECK_REQUIRED"
+    },
+    {
+      "path": "Derivations/Geometry/CayleyRadius.lean",
+      "source_relative_path": "Derivations/Geometry/CayleyRadius.lean",
+      "source_package": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE",
+      "sha256": "83f7fb60c08d6bb6c64024d433d827271e40fdeabf6e7d03e540ad7ef5885ab5",
+      "byte_identical": true,
+      "status": "SOURCE_ONLY_NATIVE_RECHECK_REQUIRED"
+    },
+    {
+      "path": "Derivations/Geometry/ActualCayleyObservable.lean",
+      "source_relative_path": "Derivations/Geometry/ActualCayleyObservable.lean",
+      "source_package": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE",
+      "sha256": "7547d5d4b41bc6cd6e74e75653488bee1d92c34e9275a6097219a288ccfbd733",
+      "byte_identical": true,
+      "status": "SOURCE_ONLY_NATIVE_RECHECK_REQUIRED"
+    },
+    {
+      "path": "Derivations/Geometry/LocalLaurent.lean",
+      "source_relative_path": "Derivations/Geometry/LocalLaurent.lean",
+      "source_package": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE",
+      "sha256": "e0b6f933b79c833f4b79a1ff1661d0d6a8ede86cc927aecd350e3acd87c9e55d",
+      "byte_identical": true,
+      "status": "SOURCE_ONLY_NATIVE_RECHECK_REQUIRED"
+    },
+    {
+      "path": "Derivations/Geometry/InteriorPole.lean",
+      "source_relative_path": "Derivations/Geometry/InteriorPole.lean",
+      "source_package": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE",
+      "sha256": "2b9ccd9ba10f7f6af50692a4deaa3766e6dcb9316caa2a9ce91a1c2df4a82f47",
+      "byte_identical": true,
+      "status": "SOURCE_ONLY_NATIVE_RECHECK_REQUIRED"
+    },
+    {
+      "path": "AllDepth/SubexpEnvelope.lean",
+      "source_relative_path": "AllDepth/SubexpEnvelope.lean",
+      "source_package": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE",
+      "sha256": "669b27ad7df9b20ee0ae88a0cd0ec7374a5227ba1651d24e9380df8cc592aa29",
+      "byte_identical": true,
+      "status": "SOURCE_ONLY_NATIVE_RECHECK_REQUIRED"
+    },
+    {
+      "path": "AllDepth/FiniteHausdorff.lean",
+      "source_relative_path": "AllDepth/FiniteHausdorff.lean",
+      "source_package": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE",
+      "sha256": "9ae154bcb5c109031d4a742f483ed825e730ce5b41757ae4cf50e4406aef505c",
+      "byte_identical": true,
+      "status": "SOURCE_ONLY_NATIVE_RECHECK_REQUIRED"
+    },
+    {
+      "path": "AllDepth/ActualPoleClosure.lean",
+      "source_relative_path": "AllDepth/ActualPoleClosure.lean",
+      "source_package": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE",
+      "sha256": "251295d8b8e22252f664448e9cf68b6b06423d2ba2868dce735ecc1c02b86bf4",
+      "byte_identical": true,
+      "status": "SOURCE_ONLY_NATIVE_RECHECK_REQUIRED"
+    },
+    {
+      "path": "AllDepth/PowerSeriesRootTest.lean",
+      "source_relative_path": "AllDepth/PowerSeriesRootTest.lean",
+      "source_package": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE",
+      "sha256": "0ea456cfb8f5f2b73e39e6596eb85d06524a1f23e33c6b4df1d1da085c55210c",
+      "byte_identical": true,
+      "status": "SOURCE_ONLY_NATIVE_RECHECK_REQUIRED"
+    },
+    {
+      "path": "AllDepth/CayleyTaylorAndPole.lean",
+      "source_relative_path": "AllDepth/CayleyTaylorAndPole.lean",
+      "source_package": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE",
+      "sha256": "610abecabf164077238e8556d7c57c1c6c4fd0f5174d022f45beafe4410b579d",
+      "byte_identical": true,
+      "status": "SOURCE_ONLY_NATIVE_RECHECK_REQUIRED"
+    },
+    {
+      "path": "AllDepth/SymmetricCayleyGerm.lean",
+      "source_relative_path": "AllDepth/SymmetricCayleyGerm.lean",
+      "source_package": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE",
+      "sha256": "f8afc16168029ae26f2703c512721a09a9c51f0a65939447d5ba6c11944d62e9",
+      "byte_identical": true,
+      "status": "SOURCE_ONLY_NATIVE_RECHECK_REQUIRED"
+    },
+    {
+      "path": "AllDepth/ActualMathlibThetaInterface.lean",
+      "source_relative_path": "AllDepth/ActualMathlibThetaInterface.lean",
+      "source_package": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE",
+      "sha256": "82c418b63c02319a0b6dbbfbeed67efd633b57752a51ce70f691ee868f21b898",
+      "byte_identical": true,
+      "status": "SOURCE_ONLY_NATIVE_RECHECK_REQUIRED"
+    },
+    {
+      "path": "AllDepth/CayleyPolynomialGerm.lean",
+      "source_relative_path": "AllDepth/CayleyPolynomialGerm.lean",
+      "source_package": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE",
+      "sha256": "65e5b8abcbf4c829b91ba49a1401486989ac7598172f0d08a98869c2dc449716",
+      "byte_identical": true,
+      "status": "SOURCE_ONLY_NATIVE_RECHECK_REQUIRED"
+    },
+    {
+      "path": "AllDepth/CayleyCoefficientAtlas.lean",
+      "source_relative_path": "AllDepth/CayleyCoefficientAtlas.lean",
+      "source_package": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE",
+      "sha256": "62288ab4258c37aac8cac01f57fe679633ab6ecb29680e72e1ab648ff71f0216",
+      "byte_identical": true,
+      "status": "SOURCE_ONLY_NATIVE_RECHECK_REQUIRED"
+    },
+    {
+      "path": "AllDepth/CayleyStableCoefficients.lean",
+      "source_relative_path": "AllDepth/CayleyStableCoefficients.lean",
+      "source_package": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE",
+      "sha256": "aaa661ca2285c6e2a07952a4808a65ca8a31594e5d51f9954c3a1fee1fb4e45e",
+      "byte_identical": true,
+      "status": "SOURCE_ONLY_NATIVE_RECHECK_REQUIRED"
+    },
+    {
+      "path": "AllDepth/CayleyBinomialTriangle.lean",
+      "source_relative_path": "AllDepth/CayleyBinomialTriangle.lean",
+      "source_package": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE",
+      "sha256": "2f042ce208e54af24788d7c6eb4563755bafe2383cfc0a9942f4e9c58327759d",
+      "byte_identical": true,
+      "status": "SOURCE_ONLY_NATIVE_RECHECK_REQUIRED"
+    },
+    {
+      "path": "AllDepth/CayleyTopDiagonal.lean",
+      "source_relative_path": "AllDepth/CayleyTopDiagonal.lean",
+      "source_package": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE",
+      "sha256": "964d1a13a2c71d1e21e278cf401e8490da35cf552883b08fad9b442f47ca3c12",
+      "byte_identical": true,
+      "status": "SOURCE_ONLY_NATIVE_RECHECK_REQUIRED"
+    },
+    {
+      "path": "AllDepth/CayleyFiniteClosedFormula.lean",
+      "source_relative_path": "AllDepth/CayleyFiniteClosedFormula.lean",
+      "source_package": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE",
+      "sha256": "f6cafba83ac440187fcd2d44d25344346dfafbcdf7858c3dff885b6f0a843d02",
+      "byte_identical": true,
+      "status": "SOURCE_ONLY_NATIVE_RECHECK_REQUIRED"
+    },
+    {
+      "path": "AllDepth/CayleyPolynomialRodrigues.lean",
+      "source_relative_path": "AllDepth/CayleyPolynomialRodrigues.lean",
+      "source_package": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE",
+      "sha256": "82bc25722494eed3e790d253137f21af3b3c3ea3eee54ca6b8960b7e811760b5",
+      "byte_identical": true,
+      "status": "SOURCE_ONLY_NATIVE_RECHECK_REQUIRED"
+    },
+    {
+      "path": "AllDepth/CayleyRodriguesConvolution.lean",
+      "source_relative_path": "AllDepth/CayleyRodriguesConvolution.lean",
+      "source_package": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE",
+      "sha256": "46addd1530eb0bc2d5ec48d13aff1312fb5fb88dcc1620fca5c7999837233aaf",
+      "byte_identical": true,
+      "status": "SOURCE_ONLY_NATIVE_RECHECK_REQUIRED"
+    },
+    {
+      "path": "AllDepth/CayleyJetInterpolation.lean",
+      "source_relative_path": "AllDepth/CayleyJetInterpolation.lean",
+      "source_package": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE",
+      "sha256": "1d46efd3bd2f94872f8dc7e34970be2de16f2e2913696794e59d3f1a74bfed2c",
+      "byte_identical": true,
+      "status": "SOURCE_ONLY_NATIVE_RECHECK_REQUIRED"
+    },
+    {
+      "path": "AllDepth/ActualXiRealLeibniz.lean",
+      "source_relative_path": "AllDepth/ActualXiRealLeibniz.lean",
+      "source_package": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE",
+      "sha256": "e785432ab3709a0ea5118670049a9499716bf3abe4e099edacf74ca88b98f229",
+      "byte_identical": true,
+      "status": "SOURCE_ONLY_NATIVE_RECHECK_REQUIRED"
+    },
+    {
+      "path": "AllDepth/ActualXiRealRodriguesNormalization.lean",
+      "source_relative_path": "AllDepth/ActualXiRealRodriguesNormalization.lean",
+      "source_package": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE",
+      "sha256": "3782502e39ac668bc6aa73d23edb9e7e38150ab6e4544de8f1921888005d5178",
+      "byte_identical": true,
+      "status": "SOURCE_ONLY_NATIVE_RECHECK_REQUIRED"
+    },
+    {
+      "path": "KQGPBKQRHilbert.lean",
+      "source_relative_path": "KQGPBKQRHilbert.lean",
+      "source_package": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE",
+      "sha256": "fbc1e5e927501b507f558cbcd61c1b2bd6cf093281b8eba71ac9bae8a1d29344",
+      "byte_identical": true,
+      "status": "SOURCE_ONLY_NATIVE_RECHECK_REQUIRED"
+    },
+    {
+      "path": "RHFinal/GP/KQEndpoints.lean",
+      "source_relative_path": null,
+      "source_package": "NEW_INTEGRATION_WRAPPER",
+      "sha256": "7dbab23bb5cfc9d7d76f08aab72d81664511be5285436ff787fe36b77b600ddb",
+      "byte_identical": false,
+      "status": "SOURCE_ONLY_NATIVE_RECHECK_REQUIRED"
+    },
+    {
+      "path": "RHFinal/GP/KQAudit.lean",
+      "source_relative_path": null,
+      "source_package": "NEW_INTEGRATION_WRAPPER",
+      "sha256": "0075a2058626ff730e402e0a29548c01dce5c430a25929e4bbd62d346261536d",
+      "byte_identical": false,
+      "status": "SOURCE_ONLY_NATIVE_RECHECK_REQUIRED"
+    }
+  ],
+  "topological_modules": [
+    "Core/Observable",
+    "Core/ActualThetaCayley",
+    "Core/MathlibXiSlitTheta",
+    "Core/EntireXiWidder",
+    "Derivations/Geometry/CayleyChannelKernel",
+    "Derivations/Negativity/UniformChannelBounds",
+    "Derivations/Negativity/GeometricDominance",
+    "Derivations/Negativity/UniformGap",
+    "Derivations/Negativity/TunedChannelAlgebra",
+    "Bridge/XiChannelNegativity",
+    "Derivations/Widder/LocalCalculus",
+    "Derivations/Widder/DirectTower",
+    "Bridge/XiWidderIdentification",
+    "Derivations/Hausdorff/CentralCell",
+    "Bridge/MersenneCentralCriterion",
+    "Bridge/ExplicitMersenneReadout",
+    "Derivations/BKQR/ScalarProduct",
+    "Frontier/OurFrontier",
+    "Frontier/FreeEnergyFrontier",
+    "Derivations/GP/FreeEnergyCurvature",
+    "Derivations/GP/CayleyObservable",
+    "Derivations/GP/WidderRecursion",
+    "KQGPBKQRHilbert/InputEndpoints",
+    "KQGPBKQRHilbert/TargetInterfaces",
+    "KQGPBKQRHilbert/Continuation",
+    "Derivations/Geometry/CayleyRadius",
+    "Derivations/Geometry/ActualCayleyObservable",
+    "Derivations/Geometry/LocalLaurent",
+    "Derivations/Geometry/InteriorPole",
+    "AllDepth/SubexpEnvelope",
+    "AllDepth/FiniteHausdorff",
+    "AllDepth/ActualPoleClosure",
+    "AllDepth/PowerSeriesRootTest",
+    "AllDepth/CayleyTaylorAndPole",
+    "AllDepth/SymmetricCayleyGerm",
+    "AllDepth/ActualMathlibThetaInterface",
+    "AllDepth/CayleyPolynomialGerm",
+    "AllDepth/CayleyCoefficientAtlas",
+    "AllDepth/CayleyStableCoefficients",
+    "AllDepth/CayleyBinomialTriangle",
+    "AllDepth/CayleyTopDiagonal",
+    "AllDepth/CayleyFiniteClosedFormula",
+    "AllDepth/CayleyPolynomialRodrigues",
+    "AllDepth/CayleyRodriguesConvolution",
+    "AllDepth/CayleyJetInterpolation",
+    "AllDepth/ActualXiRealLeibniz",
+    "AllDepth/ActualXiRealRodriguesNormalization",
+    "KQGPBKQRHilbert",
+    "RHFinal/GP/KQEndpoints",
+    "RHFinal/GP/KQAudit"
+  ],
+  "import_graph_errors": [],
+  "baseline_comparison": {
+    "same": [
+      "Core/Observable.lean",
+      "Core/ActualThetaCayley.lean",
+      "Core/MathlibXiSlitTheta.lean",
+      "Core/EntireXiWidder.lean",
+      "Derivations/Geometry/CayleyChannelKernel.lean",
+      "Derivations/Negativity/UniformChannelBounds.lean",
+      "Derivations/Negativity/GeometricDominance.lean",
+      "Derivations/Negativity/UniformGap.lean",
+      "Derivations/Negativity/TunedChannelAlgebra.lean",
+      "Bridge/XiChannelNegativity.lean",
+      "Derivations/Widder/LocalCalculus.lean",
+      "Derivations/Widder/DirectTower.lean",
+      "Bridge/XiWidderIdentification.lean",
+      "Derivations/Hausdorff/CentralCell.lean",
+      "Bridge/MersenneCentralCriterion.lean",
+      "Bridge/ExplicitMersenneReadout.lean",
+      "Derivations/BKQR/ScalarProduct.lean",
+      "Frontier/OurFrontier.lean",
+      "Frontier/FreeEnergyFrontier.lean",
+      "Derivations/GP/FreeEnergyCurvature.lean",
+      "Derivations/GP/CayleyObservable.lean",
+      "Derivations/GP/WidderRecursion.lean"
+    ],
+    "changed": [
+      "KQGPBKQRHilbert/InputEndpoints.lean",
+      "KQGPBKQRHilbert/TargetInterfaces.lean",
+      "KQGPBKQRHilbert/Continuation.lean",
+      "KQGPBKQRHilbert.lean"
+    ]
+  },
+  "selected_endpoints": [
+    "RHFinal.GP.actualXi_eq_kqXi",
+    "RHFinal.GP.actualTheta_eq_kqSlitTheta",
+    "RHFinal.GP.actualTheta_analyticAt_positive",
+    "NativeSolobolo.MATHLIB_XI_DIFFERENTIABLE",
+    "NativeSolobolo.MATHLIB_CENTERED_XI_EVEN",
+    "NativeSolobolo.MATHLIB_SLIT_THETA_ANALYTIC_ON_NHD",
+    "NativeSoloboloNegativity.XI_R_ANALYTIC_ON_REGULAR_ANCHORS",
+    "NativeSoloboloNegativity.WIDDER_DIRECT_SCALED_STEP",
+    "NativeSoloboloNegativity.XI_WIDDER_DIRECT_EQ_RECURSIVE_ON_REGULAR_ANCHORS",
+    "NativeSoloboloNegativity.XI_QUARTER_ANCHOR_REGULAR",
+    "NativeSoloboloNegativity.CAYLEY_TRACE_POWER_NONNEG",
+    "NativeSoloboloNegativity.MERSENNE_XI_CAYLEY_TRACE_AND_CHANNEL_ANALYSIS_IMPLY_RH",
+    "NativeSolobolo.Derivations.GP.FREE_ENERGY_CURVATURE_IMPLIES_BASE_MOMENT_EQUALITY",
+    "NativeSolobolo.Derivations.GP.FREE_ENERGY_CURVATURE_IMPLIES_COMMON_MOMENTS",
+    "NativeSolobolo.Derivations.GP.COMMON_MOMENTS_IMPLIES_TRANSFER_MATCH",
+    "KQGPBKQRHilbert.common_moments_calibrated_actual_square",
+    "KQGPBKQRHilbert.AllDepth.finite_cayley_hausdorff_nonneg",
+    "KQGPBKQRHilbert.AllDepth.subexp_complex_disk_series_summable",
+    "KQGPBKQRHilbert.AllDepth.finite_cayley_coefficient_closed_all_depth",
+    "KQGPBKQRHilbert.AllDepth.polynomial_rodrigues_convolution_all_depth",
+    "KQGPBKQRHilbert.AllDepth.actual_xi_widder_direct_finite_leibniz",
+    "KQGPBKQRHilbert.AllDepth.actualXiRealRodriguesCompatibility_proven",
+    "KQGPBKQRHilbert.AllDepth.actual_xi_all_depth_finite_cayley_coefficients",
+    "KQGPBKQRHilbert.AllDepth.gp_bkqr_calibration_implies_all_depth_nonnegative",
+    "KQGPBKQRHilbert.AllDepth.actual_observable_subexp_implies_Mathlib_RH",
+    "RHFinal.GP.actualWidder_direct_eq_recursive",
+    "RHFinal.GP.actualWidder_finite_cayley_coefficient"
+  ],
+  "analytic_gaps": [
+    {
+      "id": "KQ_GP_REALIZATION",
+      "obligation": "Construct the actual GP model, common decoder and BKQR realization; existing reconstruction and norm-square fields are semantic assumptions, not executable finite data."
+    },
+    {
+      "id": "KQ_FUNCTIONAL_BASE",
+      "obligation": "Derive equal base curvature/functions for the actual realization on an open domain from one concrete finite checker. Free-energy curvature equality is explicitly supplied in the existing interface."
+    },
+    {
+      "id": "KQ_XI_CALIBRATION",
+      "obligation": "Derive GPToXiDirectCalibration for actual xi from the finite certificate, uniformly at all relevant anchors and orders."
+    },
+    {
+      "id": "KQ_POSITIVE_ANCHOR_REGULARITY",
+      "obligation": "Positive-anchor analytic theta is present; AllPositiveXiRegular still requires nonvanishing of the real slice. Quarter-anchor regularity has an explicit source proof."
+    },
+    {
+      "id": "KQ_COMPLEX_GERM",
+      "obligation": "Prove ActualMathlibXiTaylorGermOnRegularAnchors. The recovered real finite-jet Rodrigues compatibility does not by itself establish the complex infinite Taylor germ."
+    },
+    {
+      "id": "KQ_POLE_CHANNEL",
+      "obligation": "Prove ActualOffLineChannelAnalysis or the actual pole continuation/growth bridge, including actual zero coverage and noncancellation."
+    },
+    {
+      "id": "KQ_GLOBAL_CONTROL",
+      "obligation": "Prove ActualXiSubexponential independently, or CofinalMersenneXiCayleyTraceConvergence for a fixed actual-calibrated generator."
+    },
+    {
+      "id": "KQ_FINITE_COMPLETENESS",
+      "obligation": "For finite-witness iff RH, prove native RH constructs an accepted finite code for the same checker. No such checker or completeness construction is provided here."
+    }
+  ],
+  "compile_status": "NOT_RUN",
+  "historical_status": "Upstream prose reports native PASS for v0.1.3 baseline and later 44-module baseline; no matching signed/fingerprinted native receipts admitted here.",
+  "trust_boundaries": [
+    "FiniteCayleyDefectSystem has dimension/eigenvalue functions and universal nonnegativity/contractivity proof fields: it is not a finite raw-data witness.",
+    "GPBKQRFreeEnergyWitness contains functions, reconstruction and curvature equality proofs: it is a semantic research interface, not terminating-checker admission.",
+    "ScalarProductGeometry.nonnegative is an arbitrary predicate; the actual positivity endpoint correctly requires explicit ordinary-real norm-square nonnegativity.",
+    "The free-energy common-moment induction uses definitionally generated Widder towers; actual direct-to-recursive identification is proved separately on xiRegularAnchors in the inherited source.",
+    "Historical tier markers embedded in upstream comments are preserved bytes, not current verification receipts."
+  ],
+  "new_source_binding": {
+    "actual_xi": "RHFinal.GP.actualXi_eq_kqXi",
+    "actual_theta": "RHFinal.GP.actualTheta_eq_kqSlitTheta",
+    "analytic_transfer": "RHFinal.GP.actualTheta_analyticAt_positive"
+  },
+  "excluded_source_roots": [
+    "Main.lean",
+    "FIX4_POLYNOMIAL_EXPORT_CHECK.lean",
+    "UPSTREAM/Main_v0_23_0.lean"
+  ],
+  "static_checks": {
+    "copied_source_sha256": "48/48 byte identical",
+    "import_graph": "all selected local imports resolved in supplied order",
+    "prohibited_active_tokens": "none after nested-comment/string removal",
+    "native_compilation": "NOT_RUN",
+    "axiom_audit": "TARGETS_PREPARED_NOT_EXECUTED"
+  }
+}

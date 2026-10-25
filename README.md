@@ -29,6 +29,8 @@ are open obligations; the diagram states the target route.
 | `RHFinal/Search.lean` | Terminating bounded local search; no RH admission |
 | `FiniteWitness/` | Ten unchanged SOLOBOLO finite-spectrum and trace modules |
 | `RHFinal/Actual/` | Actual ξ/native RH definitions, differential successor and open inputs |
+| `RHFinal/GP/` | Literal Mellin–Hilbert objects, native ξ binding, KQ/GP/BKQR endpoints, GP7 and generic master extraction |
+| `docs/GP_CONSTRUCTION.md` | GP layers, exact normalizations, source scope and remaining finite-input obligations |
 | `docs/FRONTIER.md` | Ordered analytic and finite-reduction work plan |
 | `docs/SOURCE_AUDIT.md`, `docs/SOLOBOLO_AUDIT.md` | Source scope and unresolved assumptions |
 | `provenance/` | SHA-256 input inventory and unchanged-import manifests |
@@ -43,7 +45,8 @@ and does not invoke Python, PowerShell, WSL or Lake setup.
 run.cmd core
 ```
 
-To include the Mathlib-dependent SOLOBOLO sources and actual-data interfaces:
+To include the Mathlib-dependent SOLOBOLO sources, integrated GP construction
+and actual-data interfaces:
 
 ```cmd
 set "RH_MATHLIB_ROOT=C:\path\to\cached\mathlib"
@@ -65,6 +68,16 @@ run.cmd search
 Follow [core details](docs/CORE.md) for its limited template and exact scope.
 An accepted local diagnostic is never labelled an RH witness.
 
+## GP integration
+
+The recovered KQ/GP/BKQR construction is included with actual ξ calculus and
+Widder/Cayley interfaces, together with the literal Mellin–Hilbert definitions,
+the separate GP7 weight-seven module family, and the generic master energy
+induction. [GP construction details](docs/GP_CONSTRUCTION.md) distinguish these
+normalizations and their remaining hypotheses. No imported model or finite
+local diagnostic is claimed to be an actual-ξ witness. This integration is
+tracked by Git revision; `v0_1_0_construction` remains unchanged.
+
 ## Proof discipline
 
 Witnesses contain finite raw data. Global analytic hypotheses remain named,
@@ -82,6 +95,6 @@ Source imports retain provenance. No license grant has been added.
 
 The user-created public repository is
 [`randogelist/Riemann-Hypothesis-Final`](https://github.com/randogelist/Riemann-Hypothesis-Final).
-These are the prepared initial research sources. See
+These research sources include the GP integration. See
 [clone and update instructions](docs/PUBLISH.md); repository publication does
 not certify a native Lean build.

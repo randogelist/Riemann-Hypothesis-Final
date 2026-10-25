@@ -758,5 +758,575 @@
     "path": "research/upstream/five-induction-v030/validation/PREVIOUS_BUILD_STATUS.json",
     "sha256": "0abfa8af2ef3573f8825bcbd262089e80d6024785f4be1f75964392ccab1d9af",
     "upstream": "16-RH_FIVE_INDUCTION_LEAN_v0_3_0-1-"
+  },
+  {
+    "path": "research/upstream/kq-gp-v0118/ACTUAL_THETA_GERM_FRONTIER.md",
+    "sha256": "2bf60a22ca4c96934d200ec7bb063765adf52d7afe61eea0d01b67856180035f",
+    "upstream": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE"
+  },
+  {
+    "path": "research/upstream/kq-gp-v0118/ALL_DEPTH_PROOF_FRONTIER.md",
+    "sha256": "e25edbfe1f47c93041a641e9ba2e3caed30c27808c41d1c6a2eb4d8d3277b025",
+    "upstream": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE"
+  },
+  {
+    "path": "research/upstream/kq-gp-v0118/AllDepth/ActualMathlibThetaInterface.lean",
+    "sha256": "82c418b63c02319a0b6dbbfbeed67efd633b57752a51ce70f691ee868f21b898",
+    "upstream": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE"
+  },
+  {
+    "path": "research/upstream/kq-gp-v0118/AllDepth/ActualPoleClosure.lean",
+    "sha256": "251295d8b8e22252f664448e9cf68b6b06423d2ba2868dce735ecc1c02b86bf4",
+    "upstream": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE"
+  },
+  {
+    "path": "research/upstream/kq-gp-v0118/AllDepth/ActualXiRealLeibniz.lean",
+    "sha256": "e785432ab3709a0ea5118670049a9499716bf3abe4e099edacf74ca88b98f229",
+    "upstream": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE"
+  },
+  {
+    "path": "research/upstream/kq-gp-v0118/AllDepth/ActualXiRealRodriguesNormalization.lean",
+    "sha256": "3782502e39ac668bc6aa73d23edb9e7e38150ab6e4544de8f1921888005d5178",
+    "upstream": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE"
+  },
+  {
+    "path": "research/upstream/kq-gp-v0118/AllDepth/CayleyBinomialTriangle.lean",
+    "sha256": "2f042ce208e54af24788d7c6eb4563755bafe2383cfc0a9942f4e9c58327759d",
+    "upstream": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE"
+  },
+  {
+    "path": "research/upstream/kq-gp-v0118/AllDepth/CayleyCoefficientAtlas.lean",
+    "sha256": "62288ab4258c37aac8cac01f57fe679633ab6ecb29680e72e1ab648ff71f0216",
+    "upstream": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE"
+  },
+  {
+    "path": "research/upstream/kq-gp-v0118/AllDepth/CayleyFiniteClosedFormula.lean",
+    "sha256": "f6cafba83ac440187fcd2d44d25344346dfafbcdf7858c3dff885b6f0a843d02",
+    "upstream": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE"
+  },
+  {
+    "path": "research/upstream/kq-gp-v0118/AllDepth/CayleyJetInterpolation.lean",
+    "sha256": "1d46efd3bd2f94872f8dc7e34970be2de16f2e2913696794e59d3f1a74bfed2c",
+    "upstream": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE"
+  },
+  {
+    "path": "research/upstream/kq-gp-v0118/AllDepth/CayleyPolynomialGerm.lean",
+    "sha256": "65e5b8abcbf4c829b91ba49a1401486989ac7598172f0d08a98869c2dc449716",
+    "upstream": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE"
+  },
+  {
+    "path": "research/upstream/kq-gp-v0118/AllDepth/CayleyPolynomialRodrigues.lean",
+    "sha256": "82bc25722494eed3e790d253137f21af3b3c3ea3eee54ca6b8960b7e811760b5",
+    "upstream": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE"
+  },
+  {
+    "path": "research/upstream/kq-gp-v0118/AllDepth/CayleyRodriguesConvolution.lean",
+    "sha256": "46addd1530eb0bc2d5ec48d13aff1312fb5fb88dcc1620fca5c7999837233aaf",
+    "upstream": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE"
+  },
+  {
+    "path": "research/upstream/kq-gp-v0118/AllDepth/CayleyStableCoefficients.lean",
+    "sha256": "aaa661ca2285c6e2a07952a4808a65ca8a31594e5d51f9954c3a1fee1fb4e45e",
+    "upstream": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE"
+  },
+  {
+    "path": "research/upstream/kq-gp-v0118/AllDepth/CayleyTaylorAndPole.lean",
+    "sha256": "610abecabf164077238e8556d7c57c1c6c4fd0f5174d022f45beafe4410b579d",
+    "upstream": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE"
+  },
+  {
+    "path": "research/upstream/kq-gp-v0118/AllDepth/CayleyTopDiagonal.lean",
+    "sha256": "964d1a13a2c71d1e21e278cf401e8490da35cf552883b08fad9b442f47ca3c12",
+    "upstream": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE"
+  },
+  {
+    "path": "research/upstream/kq-gp-v0118/AllDepth/FiniteHausdorff.lean",
+    "sha256": "9ae154bcb5c109031d4a742f483ed825e730ce5b41757ae4cf50e4406aef505c",
+    "upstream": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE"
+  },
+  {
+    "path": "research/upstream/kq-gp-v0118/AllDepth/PowerSeriesRootTest.lean",
+    "sha256": "0ea456cfb8f5f2b73e39e6596eb85d06524a1f23e33c6b4df1d1da085c55210c",
+    "upstream": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE"
+  },
+  {
+    "path": "research/upstream/kq-gp-v0118/AllDepth/SubexpEnvelope.lean",
+    "sha256": "669b27ad7df9b20ee0ae88a0cd0ec7374a5227ba1651d24e9380df8cc592aa29",
+    "upstream": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE"
+  },
+  {
+    "path": "research/upstream/kq-gp-v0118/AllDepth/SymmetricCayleyGerm.lean",
+    "sha256": "f8afc16168029ae26f2703c512721a09a9c51f0a65939447d5ba6c11944d62e9",
+    "upstream": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE"
+  },
+  {
+    "path": "research/upstream/kq-gp-v0118/BINOMIAL_TRIANGLE_FRONTIER.md",
+    "sha256": "ff3b649e01b528995706f51e5ed12a657907046d33146ae03e2d75d672ae31c0",
+    "upstream": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE"
+  },
+  {
+    "path": "research/upstream/kq-gp-v0118/BUILD_ORDER.txt",
+    "sha256": "bbc20ae2eb9ec2f3880cb18f55feec3ee3b356740e500c4555901052b5565e2a",
+    "upstream": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE"
+  },
+  {
+    "path": "research/upstream/kq-gp-v0118/BUILD_ORDER_FIX2_NOTES.md",
+    "sha256": "14f3eec4f1c0a55d19517415dd96ba3b521495d57ba87bb086da104bb125a517",
+    "upstream": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE"
+  },
+  {
+    "path": "research/upstream/kq-gp-v0118/Bridge/ExplicitMersenneReadout.lean",
+    "sha256": "0a208571ed56566a5bbffc54d26334c976379d1884ea9bc5adf1f36d013ce297",
+    "upstream": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE"
+  },
+  {
+    "path": "research/upstream/kq-gp-v0118/Bridge/MersenneCentralCriterion.lean",
+    "sha256": "f16080c6a92a13c6b15f894dc9979728ed447dbbb85d9b11fc71e71e2960fc83",
+    "upstream": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE"
+  },
+  {
+    "path": "research/upstream/kq-gp-v0118/Bridge/XiChannelNegativity.lean",
+    "sha256": "dbf531a684069ba2f98008c427046f250b09c471b1ed8b22d880cb79d8cb58a1",
+    "upstream": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE"
+  },
+  {
+    "path": "research/upstream/kq-gp-v0118/Bridge/XiWidderIdentification.lean",
+    "sha256": "e63e9ea4da8f1b12ef977343dfeb985433d2d024e9b202595f45cabc529c6f29",
+    "upstream": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE"
+  },
+  {
+    "path": "research/upstream/kq-gp-v0118/CAYLEY_POLYNOMIAL_GERM_FRONTIER.md",
+    "sha256": "6b4c883448ca931a91230a45e78aeeace7c01a1cb73b3b59f349ecf47d1b65c9",
+    "upstream": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE"
+  },
+  {
+    "path": "research/upstream/kq-gp-v0118/CLOSED_FORMULA_FRONTIER.md",
+    "sha256": "9f2795ab699993c5ce8be8138668170915b6cdb0d569b242098922b54301eef1",
+    "upstream": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE"
+  },
+  {
+    "path": "research/upstream/kq-gp-v0118/COEFFICIENT_ATLAS_PROOF_FRONTIER.md",
+    "sha256": "b3ad19061a437dc7af4d6fc4aa289d4e112e7c246e9abb6663abd4052b7daa3d",
+    "upstream": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE"
+  },
+  {
+    "path": "research/upstream/kq-gp-v0118/Core/ActualThetaCayley.lean",
+    "sha256": "703ea9f4d122a58af8500a03710129d4728135edef59a78ab30d4507df20dff0",
+    "upstream": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE"
+  },
+  {
+    "path": "research/upstream/kq-gp-v0118/Core/EntireXiWidder.lean",
+    "sha256": "06014f7ffe8d7c9909085e4fc6b6b8d29ba6d8d581e9a1c127546459b46e524a",
+    "upstream": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE"
+  },
+  {
+    "path": "research/upstream/kq-gp-v0118/Core/MathlibXiSlitTheta.lean",
+    "sha256": "1b343e5f600a7d0091d80391ea470c71a45a6ebd7a3c54267fad8a9f44e8e39e",
+    "upstream": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE"
+  },
+  {
+    "path": "research/upstream/kq-gp-v0118/Core/Observable.lean",
+    "sha256": "3d5ac15448a67cb6d94ed6bd0624fe29ed7efb1385af092bdf6c245510384377",
+    "upstream": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE"
+  },
+  {
+    "path": "research/upstream/kq-gp-v0118/Derivations/BKQR/ScalarProduct.lean",
+    "sha256": "0c04160d298d82d397df7b3a8147c4097950808bed5fb5fd11c666353ce2d2f4",
+    "upstream": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE"
+  },
+  {
+    "path": "research/upstream/kq-gp-v0118/Derivations/GP/CayleyObservable.lean",
+    "sha256": "1fb86e2431cc70041139e0c6f802fe9d33d085a22cf1c1dbe7e468a26e5c2c1d",
+    "upstream": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE"
+  },
+  {
+    "path": "research/upstream/kq-gp-v0118/Derivations/GP/FreeEnergyCurvature.lean",
+    "sha256": "5430dd4451898d239e3b82aca562c0032f016c15890f92626af671c4f1e7cb5c",
+    "upstream": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE"
+  },
+  {
+    "path": "research/upstream/kq-gp-v0118/Derivations/GP/WidderRecursion.lean",
+    "sha256": "8be20a6e485712531751137dee217bfdeb37f1af05a620316d2b3e084aedf983",
+    "upstream": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE"
+  },
+  {
+    "path": "research/upstream/kq-gp-v0118/Derivations/Geometry/ActualCayleyObservable.lean",
+    "sha256": "7547d5d4b41bc6cd6e74e75653488bee1d92c34e9275a6097219a288ccfbd733",
+    "upstream": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE"
+  },
+  {
+    "path": "research/upstream/kq-gp-v0118/Derivations/Geometry/CayleyChannelKernel.lean",
+    "sha256": "a97b45c83c05ad0d295dd2346f5472971c0ad9dc6133b3d3ed26c5974b7f617a",
+    "upstream": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE"
+  },
+  {
+    "path": "research/upstream/kq-gp-v0118/Derivations/Geometry/CayleyRadius.lean",
+    "sha256": "83f7fb60c08d6bb6c64024d433d827271e40fdeabf6e7d03e540ad7ef5885ab5",
+    "upstream": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE"
+  },
+  {
+    "path": "research/upstream/kq-gp-v0118/Derivations/Geometry/InteriorPole.lean",
+    "sha256": "2b9ccd9ba10f7f6af50692a4deaa3766e6dcb9316caa2a9ce91a1c2df4a82f47",
+    "upstream": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE"
+  },
+  {
+    "path": "research/upstream/kq-gp-v0118/Derivations/Geometry/LocalLaurent.lean",
+    "sha256": "e0b6f933b79c833f4b79a1ff1661d0d6a8ede86cc927aecd350e3acd87c9e55d",
+    "upstream": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE"
+  },
+  {
+    "path": "research/upstream/kq-gp-v0118/Derivations/Hausdorff/CentralCell.lean",
+    "sha256": "91bb598827ce6b7c221dc86ac4c65f7d95ba999f338a1bcd4a360382a3d73562",
+    "upstream": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE"
+  },
+  {
+    "path": "research/upstream/kq-gp-v0118/Derivations/Negativity/GeometricDominance.lean",
+    "sha256": "f4dff1fe459add23b48334b0509a37c2b6deafd27fc6efefb416f7611e6959bf",
+    "upstream": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE"
+  },
+  {
+    "path": "research/upstream/kq-gp-v0118/Derivations/Negativity/TunedChannelAlgebra.lean",
+    "sha256": "381a9524bb198d20e85e54a3ed16af9a0ad920d193326ab580c1ac0883a40ba8",
+    "upstream": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE"
+  },
+  {
+    "path": "research/upstream/kq-gp-v0118/Derivations/Negativity/UniformChannelBounds.lean",
+    "sha256": "8d1e28d6cad2af5936b02088a825f27b3c2132af1c02d4eb2cb833824c8ac2f5",
+    "upstream": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE"
+  },
+  {
+    "path": "research/upstream/kq-gp-v0118/Derivations/Negativity/UniformGap.lean",
+    "sha256": "87918fb6d13a20235f384bc84bcd83b2cb9cc9046e3b70c47eddb5ac3b4e0f47",
+    "upstream": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE"
+  },
+  {
+    "path": "research/upstream/kq-gp-v0118/Derivations/Widder/DirectTower.lean",
+    "sha256": "a12470f41c429566629b9d17845f1f4b56c8450b51473b384257b4a646e32378",
+    "upstream": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE"
+  },
+  {
+    "path": "research/upstream/kq-gp-v0118/Derivations/Widder/LocalCalculus.lean",
+    "sha256": "625a4e7cf922dc542da89bf217605e8afc88004552355ba0af8ede4e7c998dd4",
+    "upstream": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE"
+  },
+  {
+    "path": "research/upstream/kq-gp-v0118/FIX1_NOTES.md",
+    "sha256": "c7372b1b0a05f4085e8162c8f46cb00d2e0d3f7bfe1f77c58a4e19f471e7439a",
+    "upstream": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE"
+  },
+  {
+    "path": "research/upstream/kq-gp-v0118/FIX4_NOTES.md",
+    "sha256": "1e2efb6aae1109b2893a6fe674a84eba84d4477bd8f31179aad8c2fcbb4490f3",
+    "upstream": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE"
+  },
+  {
+    "path": "research/upstream/kq-gp-v0118/FIX4_POLYNOMIAL_EXPORT_CHECK.lean",
+    "sha256": "ddff42e8700fff9d1bbecb45e4326c49e6871597760acb230c33d2254b6459f4",
+    "upstream": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE"
+  },
+  {
+    "path": "research/upstream/kq-gp-v0118/Frontier/FreeEnergyFrontier.lean",
+    "sha256": "4a62fe30d6aeeea42deb619f553c79c12535bc497c5121b8f97a0a70403a78fc",
+    "upstream": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE"
+  },
+  {
+    "path": "research/upstream/kq-gp-v0118/Frontier/OurFrontier.lean",
+    "sha256": "f61c487207f52e36fbbae8fd65ee6ea5ef43842ca630b3b645d03109948f69fd",
+    "upstream": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE"
+  },
+  {
+    "path": "research/upstream/kq-gp-v0118/IMPORT_FIX1_NOTES.md",
+    "sha256": "79b34e9bb7e7646b282624db7dc5f73f81fa836373fb82972dfb76e744487f01",
+    "upstream": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE"
+  },
+  {
+    "path": "research/upstream/kq-gp-v0118/JET_INTERPOLATION_FRONTIER.md",
+    "sha256": "4bc32b8f2af82073a3ea2eaf08f27ab6dd458379dbe2b7fc1fd01b0ed12ce8cf",
+    "upstream": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE"
+  },
+  {
+    "path": "research/upstream/kq-gp-v0118/KQGPBKQRHilbert/Continuation.lean",
+    "sha256": "f3d0f3c882ba25fb114f6b744e21025edc6d81c680c72275cd711e00c73aaea6",
+    "upstream": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE"
+  },
+  {
+    "path": "research/upstream/kq-gp-v0118/KQGPBKQRHilbert/InputEndpoints.lean",
+    "sha256": "e5eaeb6942ecc001de91bdcd65b450320d0ab1cccfcfc653b22b08265dc2bdb6",
+    "upstream": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE"
+  },
+  {
+    "path": "research/upstream/kq-gp-v0118/KQGPBKQRHilbert/TargetInterfaces.lean",
+    "sha256": "f1f0751d5093799a858a61bc49d0d3f8f4087cf05223e7153c87e09430ff0694",
+    "upstream": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE"
+  },
+  {
+    "path": "research/upstream/kq-gp-v0118/KQGPBKQRHilbert.lean",
+    "sha256": "fbc1e5e927501b507f558cbcd61c1b2bd6cf093281b8eba71ac9bae8a1d29344",
+    "upstream": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE"
+  },
+  {
+    "path": "research/upstream/kq-gp-v0118/Main.lean",
+    "sha256": "4a07d224e9aeb4927309ae019f91344aaa44ec3bcdedccd780538c120f9877ea",
+    "upstream": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE"
+  },
+  {
+    "path": "research/upstream/kq-gp-v0118/POLYNOMIAL_GERM_FIX1_NOTES.md",
+    "sha256": "811ebc5e57ea8ee98dcce0fe46fa7825c35f820cc866eaa967357b1508200735",
+    "upstream": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE"
+  },
+  {
+    "path": "research/upstream/kq-gp-v0118/README.md",
+    "sha256": "65485478fd30617b9f57031fc564c9b56a706df0c1203f8015921aa8501817a6",
+    "upstream": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE"
+  },
+  {
+    "path": "research/upstream/kq-gp-v0118/README_v0_1_14.md",
+    "sha256": "409ffc694b25a8fe73d454d9964818528894fa3ef93d096b1b3bad65724e6c81",
+    "upstream": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE"
+  },
+  {
+    "path": "research/upstream/kq-gp-v0118/REAL_DERIV_FIX3_NOTES.md",
+    "sha256": "912e29d877e7cdc2d36867aa2215b1daf355860df3cff52e82134436008fcb6a",
+    "upstream": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE"
+  },
+  {
+    "path": "research/upstream/kq-gp-v0118/REAL_LEIBNIZ_FRONTIER.md",
+    "sha256": "7bb20de8c776f5b464ad1abec779c79e9730c6e4ea1e8dd8c11a34afeb7ba2d9",
+    "upstream": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE"
+  },
+  {
+    "path": "research/upstream/kq-gp-v0118/REAL_RODRIGUES_NORMALIZATION_FRONTIER.md",
+    "sha256": "3334a612b18e90cf4a8a20e8e08b37f7f55ba4a31e64c2a0a1d306798731f763",
+    "upstream": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE"
+  },
+  {
+    "path": "research/upstream/kq-gp-v0118/RODRIGUES_CONVOLUTION_FIX1_NOTES.md",
+    "sha256": "9d4d90b7960c3ce633731067725cd5587ecf4e1672f892a1a05dc07c9dfa6f4d",
+    "upstream": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE"
+  },
+  {
+    "path": "research/upstream/kq-gp-v0118/RODRIGUES_CONVOLUTION_FRONTIER.md",
+    "sha256": "bf28b994a9d52cab0966461e5e24c90098e85c0a66351f14b0ac294efc899601",
+    "upstream": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE"
+  },
+  {
+    "path": "research/upstream/kq-gp-v0118/RODRIGUES_PROOF_FRONTIER.md",
+    "sha256": "30e8912f95433ea25c03899dcdcdd10b022b9bfe66569788bafc9889ae1a802d",
+    "upstream": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE"
+  },
+  {
+    "path": "research/upstream/kq-gp-v0118/ROOTTEST_FIX1_NOTES.txt",
+    "sha256": "316584a9e90647150ac1d22b2c682dfc6ea031bb65f87e784be664b23159c5e8",
+    "upstream": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE"
+  },
+  {
+    "path": "research/upstream/kq-gp-v0118/ROOTTEST_PROOF_FRONTIER.md",
+    "sha256": "e585e636239b53487a2af82ca42b15fe2619a9abf8da3e0b0434dd9f33f7b51d",
+    "upstream": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE"
+  },
+  {
+    "path": "research/upstream/kq-gp-v0118/SOURCE_MANIFEST.json",
+    "sha256": "e996c6f3797912626ac15bfae62b3372727f6525b726ee64b875752c41d89d0d",
+    "upstream": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE"
+  },
+  {
+    "path": "research/upstream/kq-gp-v0118/STABLE_COEFFICIENTS_PROOF_FRONTIER.md",
+    "sha256": "e40c8eebc3fc9c9b31860128100a4f0a65ce5ab219528175914285daf2f84f68",
+    "upstream": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE"
+  },
+  {
+    "path": "research/upstream/kq-gp-v0118/TAYLOR_POLE_PROOF_FRONTIER.md",
+    "sha256": "05303d02af3ee2c8a7e7dfb698e40d9dde2505038f49e74407045ebf9fa79440",
+    "upstream": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE"
+  },
+  {
+    "path": "research/upstream/kq-gp-v0118/TOP_DIAGONAL_PROOF_FRONTIER.md",
+    "sha256": "027fda45850aaa08f855004ffd510d7b1df3270cea3ca822c193e24c413b1293",
+    "upstream": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE"
+  },
+  {
+    "path": "research/upstream/kq-gp-v0118/UPSTREAM/Main_v0_23_0.lean",
+    "sha256": "323663bc5a690c03400cde565fa378917aa88109953513b39f68fa2cc2600685",
+    "upstream": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE"
+  },
+  {
+    "path": "research/upstream/kq-gp-v0118/UPSTREAM_SHA256SUMS.txt",
+    "sha256": "be16b2b35e26cca175e90fa4ea5c7bd3029139c846e2994c65ccf4ba8088a220",
+    "upstream": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE"
+  },
+  {
+    "path": "research/upstream/kq-gp-v0118/lakefile.toml",
+    "sha256": "c7c9acc2e3294976172a48e5e5409f8a2b594e0d743f94a4f2d839f45b33dd5b",
+    "upstream": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE"
+  },
+  {
+    "path": "research/upstream/kq-gp-v0118/lean-toolchain",
+    "sha256": "302cd63c54178885b89e669f33b38f12f4dd7ae7e5cac537b3203e3768d8fb2b",
+    "upstream": "KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION_v0_1_18_FASTCORE"
+  },
+  {
+    "path": "research/upstream/gp-master-v050/Derivations/BKQR/BKQRContraction.lean",
+    "sha256": "149a5208b767c45b2dc36d1f241c5aa763f376265aa1e78a386e21911e60e74a",
+    "upstream": "RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5"
+  },
+  {
+    "path": "research/upstream/gp-master-v050/Derivations/BKQR/BKQRGram.lean",
+    "sha256": "4d8a811a66b20596e94292c9adf9e8a537442dbfb31ca97b144271e6a3080855",
+    "upstream": "RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5"
+  },
+  {
+    "path": "research/upstream/gp-master-v050/Derivations/BKQR/BKQRHelpers.lean",
+    "sha256": "b86a9037c51d7ed4c90aa962d38f166d18fe03c6e92cd06a414eb99d330d4a6d",
+    "upstream": "RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5"
+  },
+  {
+    "path": "research/upstream/gp-master-v050/Derivations/GP/GPContourGauge.lean",
+    "sha256": "d48a992065f9e9dfcd54fda769fc9f26ef938b5e853a98f5d3a746b1d58f688c",
+    "upstream": "RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5"
+  },
+  {
+    "path": "research/upstream/gp-master-v050/Derivations/GP/GPIdentities.lean",
+    "sha256": "94535608b14bbce9b5fb7710210aa079366661faf434beb5b4dfb44b2a0f0a9f",
+    "upstream": "RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5"
+  },
+  {
+    "path": "research/upstream/gp-master-v050/Derivations/GP/GPJet.lean",
+    "sha256": "71d852e042ec1ed3315fc63e722c1a6537919096a087fb66295ab6e57034adde",
+    "upstream": "RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5"
+  },
+  {
+    "path": "research/upstream/gp-master-v050/Derivations/GP/GPShiftLadder.lean",
+    "sha256": "0cbf37901dbf404a98282e6bac9557db5af9ba9195d42fedd50adea1fcc1b129",
+    "upstream": "RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5"
+  },
+  {
+    "path": "research/upstream/gp-master-v050/Derivations/Hopf/BinaryIsometry.lean",
+    "sha256": "b86a9037c51d7ed4c90aa962d38f166d18fe03c6e92cd06a414eb99d330d4a6d",
+    "upstream": "RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5"
+  },
+  {
+    "path": "research/upstream/gp-master-v050/Derivations/Hopf/HopfPassivity.lean",
+    "sha256": "b86a9037c51d7ed4c90aa962d38f166d18fe03c6e92cd06a414eb99d330d4a6d",
+    "upstream": "RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5"
+  },
+  {
+    "path": "research/upstream/gp-master-v050/Derivations/Hopf/PascalHopf.lean",
+    "sha256": "b86a9037c51d7ed4c90aa962d38f166d18fe03c6e92cd06a414eb99d330d4a6d",
+    "upstream": "RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5"
+  },
+  {
+    "path": "research/upstream/gp-master-v050/Derivations/LiteratureFrontierDerivation.lean",
+    "sha256": "777dd5446dcb48e8599e98249410a117c005833846352e5ca916225bb18f904a",
+    "upstream": "RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5"
+  },
+  {
+    "path": "research/upstream/gp-master-v050/Derivations/Master/AnchorHandover.lean",
+    "sha256": "6609e899cae65dde9f84ac417e3f7ba27cae5e1ea34b192cfe686953023c8af2",
+    "upstream": "RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5"
+  },
+  {
+    "path": "research/upstream/gp-master-v050/Derivations/Master/EnergyHausdorff.lean",
+    "sha256": "76f43a415f83139ea7f7f01eba87bd929f0da8cb0deea7eeb2e2911cfeca96cd",
+    "upstream": "RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5"
+  },
+  {
+    "path": "research/upstream/gp-master-v050/Derivations/Master/HausdorffPositivity.lean",
+    "sha256": "65d2f14ef073091edbe0a38d8851c734c5798b97f1ed3ee1312a92c6a91e997d",
+    "upstream": "RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5"
+  },
+  {
+    "path": "research/upstream/gp-master-v050/Derivations/Master/LocalQGamma.lean",
+    "sha256": "75b86216a5081290dcba9ad596d012087e7f992e759b6486cb19a2fc5cf8be74",
+    "upstream": "RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5"
+  },
+  {
+    "path": "research/upstream/gp-master-v050/Derivations/Master/MomentBoundary.lean",
+    "sha256": "45535c2595ee2d6b1219603d4cf4a798c062e61f1e30981684848f23f563dbf2",
+    "upstream": "RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5"
+  },
+  {
+    "path": "research/upstream/gp-master-v050/Derivations/Master/PascalHopf.lean",
+    "sha256": "ce73256c2bafc9d1891dc00556b426e2517d4d54e5e6edc5f7b95e07262ac0f5",
+    "upstream": "RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5"
+  },
+  {
+    "path": "research/upstream/gp-master-v050/Derivations/Master/ShiftLadder.lean",
+    "sha256": "fab681cac319b6b068d6878a78085c5b116b724bfc2d1885e1eedf87e7f5f0bd",
+    "upstream": "RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5"
+  },
+  {
+    "path": "research/upstream/gp-master-v050/Derivations/Master/ZeroMode.lean",
+    "sha256": "c49248a5ee463284dd2ca1f60942858f3aa8d1436545a24da1e4e7d8b8b5dc44",
+    "upstream": "RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5"
+  },
+  {
+    "path": "research/upstream/gp-master-v050/Derivations/OurFrontierDerivation.lean",
+    "sha256": "a79e514748042f5b7559c0cc5e7dd27715e04d2fb1bf7842be3e54d7d13343a4",
+    "upstream": "RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5"
+  },
+  {
+    "path": "research/upstream/gp-master-v050/Frontier/LiteratureFrontier.lean",
+    "sha256": "f2d034deab0036f7f1baa405ab7fe02e89bea3c632751171b3e5777043e10763",
+    "upstream": "RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5"
+  },
+  {
+    "path": "research/upstream/gp-master-v050/Frontier/OurFrontier.lean",
+    "sha256": "d7e9920bda23bc69ed6a2dd38a54242fb9b2d4544b922173f37240546035a817",
+    "upstream": "RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5"
+  },
+  {
+    "path": "research/upstream/gp-master-v050/Literature/Agler1985.lean",
+    "sha256": "974ea3230e8316c7b34c962a132973fab2a4555267aa16603adfe57d6da758c9",
+    "upstream": "RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5"
+  },
+  {
+    "path": "research/upstream/gp-master-v050/Literature/BergerGellarWallen.lean",
+    "sha256": "5dd2785a9e40078fedf1879f5eb1d39f75d5341cfe7becd17735453402846d58",
+    "upstream": "RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5"
+  },
+  {
+    "path": "research/upstream/gp-master-v050/Literature/Sokal2020.lean",
+    "sha256": "d7e0411ca0b95f82777c66e280cb03c5112ca3320ee998b996e4b6a767e5fddf",
+    "upstream": "RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5"
+  },
+  {
+    "path": "research/upstream/gp-master-v050/Literature/Zhang2023.lean",
+    "sha256": "ef49e69d06211efb52b78b33ca632d056fbb139e378169a14bba81a67f387838",
+    "upstream": "RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5"
+  },
+  {
+    "path": "research/upstream/gp-master-v050/Main.lean",
+    "sha256": "e1928933fdddce3d6ed65611566a8dc89f5ac887ecd46da5730efd696c3a1bfc",
+    "upstream": "RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5"
+  },
+  {
+    "path": "research/upstream/gp-master-v050/Master/MasterIdentities.lean",
+    "sha256": "730d8fcd4ceceb0b3a39baaffd02969e7cc5a5c06304bcb5ed2b352874f4fc09",
+    "upstream": "RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5"
+  },
+  {
+    "path": "research/upstream/gp-master-v050/Master/MasterObject.lean",
+    "sha256": "a3e0f1a88a534e034c7c11515d860f1a29dd88f0b79f93e86d8e091f0016260a",
+    "upstream": "RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5"
+  },
+  {
+    "path": "research/upstream/gp-h3-pde-v051/GrandConditionalMerge/H3KernelPDE.lean",
+    "sha256": "028588e17fb8d28a8378d87dbec4a5de1a1aa7c9f19079f9c998b1797afb77e8",
+    "upstream": "GRAND_CONDITIONAL_MERGE_v0_5_1_H3_PDE_PATCH"
+  },
+  {
+    "path": "research/upstream/gp-h3-pde-v051/GrandH3PDEMain.lean",
+    "sha256": "e334d9c0abed2c03f517f432096405620f8569d06d3ab3521a4c95c6c8ee699a",
+    "upstream": "GRAND_CONDITIONAL_MERGE_v0_5_1_H3_PDE_PATCH"
+  },
+  {
+    "path": "research/upstream/gp-h3-pde-v051/PDE_STATUS.md",
+    "sha256": "0a8e99957664dd32b6389f0fe36ff36a663510d07fbe059a160188c02fd6b6bc",
+    "upstream": "GRAND_CONDITIONAL_MERGE_v0_5_1_H3_PDE_PATCH"
+  },
+  {
+    "path": "research/upstream/gp-analytic-note/KQ_GP_BKQR_Hilbert_Theta_Cayley_Analytic_Bridge.md",
+    "sha256": "fce9f9f8617a43001ec79a338ff6c669f58714e81e0620365cb91c778fb19a88",
+    "upstream": "KQ_GP_BKQR_Hilbert_Theta_Cayley_Analytic_Bridge.md"
   }
 ]

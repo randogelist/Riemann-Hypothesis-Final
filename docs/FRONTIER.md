@@ -15,8 +15,11 @@ run, no complete RH witness exists here, and no proof tier is assigned.
 
 1. **Literal source.** Use `WitnessSolobolo.actualXi` and `actualTheta`, formed
    from Mathlib's `completedRiemannZeta₀`. Prove regularity, square-descent and
-   real/complex compatibility in the required domains. Totalized division and
-   `Complex.sqrt` definitions are not proofs of these facts.
+   real/complex compatibility in the required domains. The recovered KQ source
+   provides native ξ/slit-plane Θ calculus, and `KQEndpoints` transfers Θ
+   analyticity at positive anchors to the literal definitions. Nonvanishing
+   and the needed derivative/limit compatibility remain separate. Totalized division and `Complex.sqrt`
+   definitions alone do not establish those remaining facts.
 2. **Derived successor.** For `R = Θ′/Θ`, use
    `dₙ(a) = (-1)ⁿ aⁿ⁺¹ R⁽ⁿ⁾(a)/n!`. Product differentiation gives
    `dₙ₊₁ = dₙ - a dₙ′/(n+1)` under the stated differentiability hypotheses.
@@ -45,6 +48,11 @@ run, no complete RH witness exists here, and no proof tier is assigned.
   equality. `RHFinal/Search.lean` performs bounded local candidate search.
 - `RHFinal/Actual/`: literal native RH target, source-derived differential
   successor with explicit regularity premises, and named open analytic inputs.
+- `RHFinal/GP/`: the literal continuous Mellin–Hilbert definitions, imported
+  KQ/GP/BKQR actual ξ calculus and finite real Widder/Cayley identities, GP7
+  weight-seven identities, and generic master energy/Pascal induction.
+  [GP_CONSTRUCTION.md](GP_CONSTRUCTION.md) records the different normalizations
+  and exact import boundary. All integration sources await native verification.
 
 Local SOS acceptance is useful algebraic evidence. It does not certify the
 unbounded actual ξ residual or discharge any open analytic input below.
@@ -55,6 +63,9 @@ unbounded actual ξ residual or discharge any open analytic input below.
 |---|---|---|
 | S01 | Actual Θ regularity/nonvanishing on the chosen anchor domain | Native Lean proof and exact axiom audit |
 | S02 | Actual and GP derivative successors from their literal definitions | Both proof chains; no successor assumed as a certificate field |
+| G01 | Literal GP density, Mellin integral, logarithmic moments and completion gauge | Integral/derivative laws, nonvanishing and removable-value proofs |
+| G02 | Actual Hilbert vectors and heat/resolvent operators | L² membership, operator domains and calibration to the same ξ |
+| G03 | Finite real coefficients identify the regularized complex Cayley germ | Real/complex compatibility, convergence and the corrected r=0 extension |
 | B01 | Finite certificates imply a universal actual residual estimate | A concrete executable checker and proved actual-data soundness |
 | B02 | Residual contraction/limit implies functional BASE | Uniform/cofinal limit, normalization and uniqueness proofs |
 | T01 | BASE gives every actual moment the positive GP representation | Induction, domain closure and all regularity premises discharged |
@@ -71,7 +82,16 @@ them. A finite prefix cannot stand in for them.
 The remembered identity involving `4D² log Θ` is a central-moment BASE; the
 direct-jet recurrence begins with `a Θ′/Θ`. These are distinct normalizations.
 Their relation and any change of moment tower must be proved explicitly before
-connecting the remembered central BASE to the direct-jet successor.
+connecting the remembered central BASE to the direct-jet successor. Equality
+of the central bases also needs a normalization value to determine equality
+of the direct bases.
+
+The recovered GP source provides conditional curvature-to-common-moment and
+calibration-to-positivity transfer theorems. Their infinite functional
+hypotheses still belong to B01/B02 and T01; naming a structure a “witness”
+does not reduce them to finite data. The generic master model similarly
+assumes its all-order energy boundary. The original opaque RH/literature-axiom
+master endpoint is archival only.
 
 ## Rejected shortcuts
 
