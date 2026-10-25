@@ -1,0 +1,1417 @@
+{
+  "audit_kind": "STATIC_ONLY_NOT_LEAN",
+  "status": "PASS",
+  "native_compilation": "NOT_RUN",
+  "native_axiom_audit": "NOT_RUN",
+  "runner_execution": "NOT_RUN",
+  "rh_proved": false,
+  "finite_witness_iff_rh": "OPEN",
+  "scope": "Publication integration into full plan only; exact original analytic sources, new condition endpoints/audits, static imports/token scan. No kernel or external-cache verification.",
+  "plan_module_counts": {
+    "core": 6,
+    "full": 109,
+    "prior_full": 89,
+    "new_full": 20
+  },
+  "prior_full_prefix_unchanged": true,
+  "protected_build_files": {
+    "run.cmd": {
+      "baseline_sha256": "eb35470ce952bfc6dbb2ea4d47edca32169f0c4e6d5708722bf7cf0d760da8f5",
+      "current_sha256": "eb35470ce952bfc6dbb2ea4d47edca32169f0c4e6d5708722bf7cf0d760da8f5",
+      "unchanged": true
+    },
+    "scripts/cache/Build.lean": {
+      "baseline_sha256": "8a67626f44614eaf3a686da39588f3ce553c83595185bc48ada92e9c67128c58",
+      "current_sha256": "8a67626f44614eaf3a686da39588f3ce553c83595185bc48ada92e9c67128c58",
+      "unchanged": true
+    },
+    "build-modules.txt": {
+      "baseline_sha256": "9d4f71369634cf139160e9d83d62d65566174e86b1aad70f269d3de346276f49",
+      "current_sha256": "9d4f71369634cf139160e9d83d62d65566174e86b1aad70f269d3de346276f49",
+      "unchanged": true
+    },
+    "lean-toolchain": {
+      "baseline_sha256": "302cd63c54178885b89e669f33b38f12f4dd7ae7e5cac537b3203e3768d8fb2b",
+      "current_sha256": "302cd63c54178885b89e669f33b38f12f4dd7ae7e5cac537b3203e3768d8fb2b",
+      "unchanged": true
+    }
+  },
+  "original_analytic_sources": [
+    {
+      "path": "FiveInduction/ActualXi.lean",
+      "sha256": "4046240fce376b4f81b20db36dffcb1cfbad0a3819184c953beb9200976d20e3",
+      "expected_sha256": "4046240fce376b4f81b20db36dffcb1cfbad0a3819184c953beb9200976d20e3",
+      "exact_original_match": true,
+      "full_only": true
+    },
+    {
+      "path": "FiveInduction/CayleyBridge.lean",
+      "sha256": "7f8e2dcaf147bf124ca20f8b5b07118e3cea5daaa53c7ae8b2a2e62c6b39d3dd",
+      "expected_sha256": "7f8e2dcaf147bf124ca20f8b5b07118e3cea5daaa53c7ae8b2a2e62c6b39d3dd",
+      "exact_original_match": true,
+      "full_only": true
+    },
+    {
+      "path": "FiveInduction/HardyActual.lean",
+      "sha256": "2370ad37e95ba384dd4ac363a6e2246057446037f592d4cb0a99262cc8361c03",
+      "expected_sha256": "2370ad37e95ba384dd4ac363a6e2246057446037f592d4cb0a99262cc8361c03",
+      "exact_original_match": true,
+      "full_only": true
+    },
+    {
+      "path": "SoloAdmission/AnalyticInverse.lean",
+      "sha256": "153fb74cd3c7a940c7b5f2d21daaf45fe94e2369845abd0106c50f464745ef97",
+      "expected_sha256": "153fb74cd3c7a940c7b5f2d21daaf45fe94e2369845abd0106c50f464745ef97",
+      "exact_original_match": true,
+      "full_only": true
+    },
+    {
+      "path": "AWPIRH/XiCore.lean",
+      "sha256": "6bda1a14b59a508811b9f9a8bff400ed824d86f366b2ddeecd728571be7fd9db",
+      "expected_sha256": "6bda1a14b59a508811b9f9a8bff400ed824d86f366b2ddeecd728571be7fd9db",
+      "exact_original_match": true,
+      "full_only": true
+    },
+    {
+      "path": "AWPIRH/ThetaEntire.lean",
+      "sha256": "cb1f0838f2d90a1ba30e696afd05337e721ee7cc7e021a30ec28cdf2f810533b",
+      "expected_sha256": "cb1f0838f2d90a1ba30e696afd05337e721ee7cc7e021a30ec28cdf2f810533b",
+      "exact_original_match": true,
+      "full_only": true
+    },
+    {
+      "path": "AngularMaster/ZeroGeometry.lean",
+      "sha256": "a2a155d8584f3682c4a48f4b8f0c9fdd1473c25ed4934c448f5015a4647361df",
+      "expected_sha256": "a2a155d8584f3682c4a48f4b8f0c9fdd1473c25ed4934c448f5015a4647361df",
+      "exact_original_match": true,
+      "full_only": true
+    },
+    {
+      "path": "AWPIRH/AnalyticODE.lean",
+      "sha256": "625e10dd0e75ae6808560b9f7caff29fa6e43940c84dcaf9c6e22a6b9f3c9f8c",
+      "expected_sha256": "625e10dd0e75ae6808560b9f7caff29fa6e43940c84dcaf9c6e22a6b9f3c9f8c",
+      "exact_original_match": true,
+      "full_only": true
+    },
+    {
+      "path": "SoloboloAdmission/NativeODE.lean",
+      "sha256": "554667603de88d116d8455b3db517ea6258ff91acf4c4a557a3da3be298f254e",
+      "expected_sha256": "554667603de88d116d8455b3db517ea6258ff91acf4c4a557a3da3be298f254e",
+      "exact_original_match": true,
+      "full_only": true
+    },
+    {
+      "path": "SoloboloAdmission/RationalCheck.lean",
+      "sha256": "a322bbc75df9a04118e2be6707ba3e4c76af44340bce74d19a9c06ca7f2cf659",
+      "expected_sha256": "a322bbc75df9a04118e2be6707ba3e4c76af44340bce74d19a9c06ca7f2cf659",
+      "exact_original_match": true,
+      "full_only": true
+    },
+    {
+      "path": "SoloboloAdmission/CayleyKernel.lean",
+      "sha256": "ddd8858ffa36302be7d56871c7b7b12ac10a6f176cea7de481ad5fce24fa7b97",
+      "expected_sha256": "ddd8858ffa36302be7d56871c7b7b12ac10a6f176cea7de481ad5fce24fa7b97",
+      "exact_original_match": true,
+      "full_only": true
+    },
+    {
+      "path": "SoloboloAdmission/RationalPackets.lean",
+      "sha256": "4d1e91259c15916f3ab0564f2a35ccfe268791b1e1a9c48421ab61ad3922216e",
+      "expected_sha256": "4d1e91259c15916f3ab0564f2a35ccfe268791b1e1a9c48421ab61ad3922216e",
+      "exact_original_match": true,
+      "full_only": true
+    },
+    {
+      "path": "SoloboloAdmission/FiniteProgram.lean",
+      "sha256": "599ff9c4a8358d54645be9079c4fad7781cedc225086af2363414c619730f041",
+      "expected_sha256": "599ff9c4a8358d54645be9079c4fad7781cedc225086af2363414c619730f041",
+      "exact_original_match": true,
+      "full_only": true
+    },
+    {
+      "path": "SoloboloAdmission/ResidualBudget.lean",
+      "sha256": "7078a8299f0fc8d8fba6e53213654560630bc15d054da34b2421b7ce4e95bc27",
+      "expected_sha256": "7078a8299f0fc8d8fba6e53213654560630bc15d054da34b2421b7ce4e95bc27",
+      "exact_original_match": true,
+      "full_only": true
+    },
+    {
+      "path": "SoloboloAdmission/ResidualLimits.lean",
+      "sha256": "5868845b9c31b8023a8e74f6e0a5ebd56a5eef2c942a030819d896032b8ac458",
+      "expected_sha256": "5868845b9c31b8023a8e74f6e0a5ebd56a5eef2c942a030819d896032b8ac458",
+      "exact_original_match": true,
+      "full_only": true
+    }
+  ],
+  "typed_native_RH_iff_audits": [
+    {
+      "audit_module": "ReciprocalAudit",
+      "declaration": "SoloAdmission.ANALYTIC_ADMISSION_IFF_RH",
+      "expected_type": "SoloAdmission.AnalyticReciprocalAdmission ↔ _root_.RiemannHypothesis",
+      "typed_check_present": true,
+      "executed": false
+    },
+    {
+      "audit_module": "AnalyticPublicationAudit",
+      "declaration": "SoloboloAdmission.slitODEAdmission_iff_RH",
+      "expected_type": "SoloboloAdmission.SlitODEAdmission ↔ _root_.RiemannHypothesis",
+      "typed_check_present": true,
+      "executed": false
+    }
+  ],
+  "new_audits": [
+    {
+      "module": "ReciprocalAudit",
+      "sha256": "6f4b71b1ef792df0ee962cd6988d8dfa636661284c76c6af8f4aefebb7603ded",
+      "axiom_print_targets": [
+        "SoloAdmission.ANALYTIC_ADMISSION_IFF_RH",
+        "SoloAdmission.ANALYTIC_ADMISSION_IMPLIES_RH",
+        "SoloAdmission.RH_IMPLIES_ANALYTIC_ADMISSION",
+        "SoloAdmission.ACTUAL_GP_CALIBRATION_IMP_RH",
+        "FiveInduction.HardyActual.J_NONZERO_IFF_RH",
+        "FiveInduction.HardyActual.differentiableAt_J",
+        "FiveInduction.HardyActual.J_zero",
+        "FiveInduction.HardyActual.J_eq_zeta",
+        "FiveInduction.CayleyBridge.RH_OF_CAYLEY_NONZERO",
+        "FiveInduction.CayleyBridge.xi_one_sub",
+        "FiveInduction.ActualXi.xi_zero_of_nontrivial_zeta_zero"
+      ],
+      "axiom_print_command_count": 11,
+      "executed": false
+    },
+    {
+      "module": "AnalyticPublicationAudit",
+      "sha256": "3c7ebec233dee2525d2e65b10430c55b72f19521062571236a8796fb4a7bc033",
+      "axiom_print_targets": [
+        "AWPIRH.xi",
+        "AWPIRH.centeredXi",
+        "AWPIRH.NontrivialZero",
+        "AWPIRH.xi_differentiable",
+        "AWPIRH.xi_reflection",
+        "AWPIRH.centeredXi_differentiable",
+        "AWPIRH.centeredXi_even",
+        "AWPIRH.nontrivialZero_ne_zero",
+        "AWPIRH.gammaR_ne_zero_of_nontrivialZero",
+        "AWPIRH.completedZeta_zero_of_nontrivialZero",
+        "AWPIRH.xi_eq_completed",
+        "AWPIRH.xi_zero_of_nontrivialZero",
+        "AWPIRH.xi_ne_zero_of_one_le_re",
+        "AWPIRH.theta",
+        "AWPIRH.complex_sqrt_sq",
+        "AWPIRH.theta_square",
+        "AWPIRH.theta_one",
+        "AWPIRH.theta_one_ne_zero",
+        "AWPIRH.theta_zero_of_nontrivialZero",
+        "AWPIRH.sqrt_differentiableAt_one",
+        "AWPIRH.sqrt_continuousAt_zero",
+        "AWPIRH.normalizedSqrt",
+        "AWPIRH.normalizedSqrt_sq",
+        "AWPIRH.normalizedSqrt_differentiableAt",
+        "AWPIRH.theta_eq_normalizedSqrt",
+        "AWPIRH.theta_differentiableAt_of_ne_zero",
+        "AWPIRH.theta_continuousAt_zero",
+        "AWPIRH.theta_analyticAt_zero",
+        "AWPIRH.theta_differentiable",
+        "AWPIRH.theta_analyticAt",
+        "AWPIRH.theta_entire",
+        "AWPIRH.theta_continuous",
+        "AngularMaster.XiZerosCritical",
+        "AngularMaster.ThetaZerosNonpositive",
+        "AngularMaster.xi_zero_mem_critical_strip",
+        "AngularMaster.nontrivialZero_of_xi_zero",
+        "AngularMaster.xi_zero_iff_nontrivialZero",
+        "AngularMaster.xi_zero_conj",
+        "AngularMaster.theta_zero_conj",
+        "AngularMaster.native_RH_iff_xi_zeros_critical",
+        "AngularMaster.square_nonpositive_iff_re_zero",
+        "AngularMaster.xi_zeros_critical_iff_theta_zeros_nonpositive",
+        "AngularMaster.native_RH_iff_theta_zeros_nonpositive",
+        "AWPIRH.analytic_ode_nonvanishing",
+        "AWPIRH.analytic_local_ode_nonvanishing",
+        "SoloboloAdmission.SlitODEAdmission",
+        "SoloboloAdmission.entire_local_ode_nonvanishing",
+        "SoloboloAdmission.slitODE_of_rh",
+        "SoloboloAdmission.rh_of_slitODE",
+        "SoloboloAdmission.slitODEAdmission_iff_RH"
+      ],
+      "axiom_print_command_count": 50,
+      "executed": false
+    },
+    {
+      "module": "AnalyticEndpointAudit",
+      "sha256": "4c134680715ee8cc49f8e5a39451bc41890a4b3c73f2819289306f12f39997aa",
+      "axiom_print_targets": [
+        "SoloboloAdmission.FiniteProgram.actualResidual",
+        "SoloboloAdmission.ActualUniformResidualCondition",
+        "FiveInduction.ActualXi.Xi_nontrivial",
+        "FiveInduction.ActualXi.critical_shift_re",
+        "FiveInduction.ActualXi.differentiable_Xi",
+        "FiveInduction.ActualXi.differentiable_xi",
+        "FiveInduction.ActualXi.rh_of_nonreal_nonzero",
+        "FiveInduction.ActualXi.rh_of_real_zeros",
+        "FiveInduction.ActualXi.xi_eq_completed",
+        "FiveInduction.ActualXi.xi_one",
+        "FiveInduction.ActualXi.xi_zero",
+        "FiveInduction.CayleyBridge.F_zero",
+        "FiveInduction.CayleyBridge.analyticOnNhd_F",
+        "FiveInduction.CayleyBridge.cayley_inverse_identity",
+        "FiveInduction.CayleyBridge.cayley_inverse_mem_disk",
+        "FiveInduction.CayleyBridge.differentiableAt_F",
+        "FiveInduction.CayleyBridge.differentiableOn_F",
+        "FiveInduction.CayleyBridge.mem_unitDisk",
+        "FiveInduction.CayleyBridge.one_sub_ne_zero",
+        "FiveInduction.CayleyBridge.xi_nonzero_right_of_cayley",
+        "FiveInduction.CayleyBridge.zero_mem_unitDisk",
+        "FiveInduction.HardyActual.J_NONZERO_OF_RH",
+        "FiveInduction.HardyActual.J_eq_regularized",
+        "FiveInduction.HardyActual.RH_OF_J_NONZERO",
+        "FiveInduction.HardyActual.analyticOnNhd_J",
+        "FiveInduction.HardyActual.cayley_re_gt_half",
+        "FiveInduction.HardyActual.coeff_one",
+        "FiveInduction.HardyActual.coeff_zero",
+        "FiveInduction.HardyActual.differentiableOn_J",
+        "FiveInduction.HardyActual.hasDerivAt_J_zero",
+        "FiveInduction.HardyActual.hasSum_coeff",
+        "SoloboloAdmission.FiniteProgram.coefficient_analytic",
+        "SoloboloAdmission.FiniteProgram.emit_check",
+        "SoloboloAdmission.FiniteProgram.emit_valid",
+        "SoloboloAdmission.FiniteProgram.modelMoment_nonneg",
+        "SoloboloAdmission.FiniteProgram.modelMoment_succ_le",
+        "SoloboloAdmission.FiniteProgram.nativeRH_of_uniformResidual",
+        "SoloboloAdmission.FiniteProgram.smoke_sound",
+        "SoloboloAdmission.FiniteProgram.smoke_true",
+        "SoloboloAdmission.FiniteProgram.theta_nonvanishing_of_uniformResidual",
+        "SoloboloAdmission.RationalPacket.all_model_depths_monotone",
+        "SoloboloAdmission.RationalPacket.all_model_depths_nonnegative",
+        "SoloboloAdmission.RationalPacket.check_sound",
+        "SoloboloAdmission.RealSpectrum.moment_nonneg",
+        "SoloboloAdmission.RealSpectrum.moment_succ_le",
+        "SoloboloAdmission.ResidualBudget.upper",
+        "SoloboloAdmission.ResidualLimit.actual_ode",
+        "SoloboloAdmission.baseKernel_nonneg",
+        "SoloboloAdmission.cayleyQ_le_one",
+        "SoloboloAdmission.cayleyQ_nonneg",
+        "SoloboloAdmission.denominator_pos",
+        "SoloboloAdmission.entire_nonvanishing_of_locallyUniform_residual",
+        "SoloboloAdmission.exists_finiteProgram_uniformResidual_implies_RH",
+        "SoloboloAdmission.kernel_nonneg",
+        "SoloboloAdmission.kernel_succ",
+        "SoloboloAdmission.kernel_succ_le",
+        "SoloboloAdmission.locallyUniform_zero_iteratedDeriv",
+        "SoloboloAdmission.rationalNode_denominator_ne_zero",
+        "SoloboloAdmission.rationalODECoefficient_analytic"
+      ],
+      "axiom_print_command_count": 59,
+      "executed": false
+    }
+  ],
+  "new_endpoint_typed_audits": [
+    {
+      "module": "AnalyticEndpointAudit",
+      "typed_root_RH_check_count": 2,
+      "source": "import SoloboloAdmission.FiniteProgramEndpoint\nimport SoloAdmission.AnalyticInverse\n\n/-!\nAdditional exact endpoint and dependency targets for the recovered analytic\nclosures and raw finite-program residual route. SOURCE_ONLY: native Lean\ncompilation and actual axiom-report execution are NOT_RUN.\n\nThe two typed RH implications retain the external actual residual condition.\nThe definitional iff below expands it completely, without a coefficient-limit\nor gluing premise. It does not construct a program satisfying that condition\nor turn locally uniform convergence into finite Boolean acceptance.\n-/\n\n#check (SoloboloAdmission.FiniteProgram.nativeRH_of_uniformResidual :\n  ∀ G : SoloboloAdmission.FiniteProgram,\n    SoloboloAdmission.ActualUniformResidualCondition G → _root_.RiemannHypothesis)\n\n#check (SoloboloAdmission.exists_finiteProgram_uniformResidual_implies_RH :\n  (∃ G : SoloboloAdmission.FiniteProgram,\n    SoloboloAdmission.ActualUniformResidualCondition G) → _root_.RiemannHypothesis)\n\n#check (fun G : SoloboloAdmission.FiniteProgram =>\n  (Iff.rfl : SoloboloAdmission.ActualUniformResidualCondition G ↔\n    TendstoLocallyUniformlyOn\n      (fun (n : ℕ) (z : ℂ) =>\n        deriv AWPIRH.theta z +\n          SoloboloAdmission.rationalODECoefficient (G.emit n) z * AWPIRH.theta z)\n      (fun _ : ℂ => 0) Filter.atTop Complex.slitPlane))\n\n#print SoloboloAdmission.FiniteProgram\n#print SoloboloAdmission.ActualUniformResidualCondition\n#print axioms SoloboloAdmission.FiniteProgram.actualResidual\n#print axioms SoloboloAdmission.ActualUniformResidualCondition\n\n#print axioms FiveInduction.ActualXi.Xi_nontrivial\n#print axioms FiveInduction.ActualXi.critical_shift_re\n#print axioms FiveInduction.ActualXi.differentiable_Xi\n#print axioms FiveInduction.ActualXi.differentiable_xi\n#print axioms FiveInduction.ActualXi.rh_of_nonreal_nonzero\n#print axioms FiveInduction.ActualXi.rh_of_real_zeros\n#print axioms FiveInduction.ActualXi.xi_eq_completed\n#print axioms FiveInduction.ActualXi.xi_one\n#print axioms FiveInduction.ActualXi.xi_zero\n#print axioms FiveInduction.CayleyBridge.F_zero\n#print axioms FiveInduction.CayleyBridge.analyticOnNhd_F\n#print axioms FiveInduction.CayleyBridge.cayley_inverse_identity\n#print axioms FiveInduction.CayleyBridge.cayley_inverse_mem_disk\n#print axioms FiveInduction.CayleyBridge.differentiableAt_F\n#print axioms FiveInduction.CayleyBridge.differentiableOn_F\n#print axioms FiveInduction.CayleyBridge.mem_unitDisk\n#print axioms FiveInduction.CayleyBridge.one_sub_ne_zero\n#print axioms FiveInduction.CayleyBridge.xi_nonzero_right_of_cayley\n#print axioms FiveInduction.CayleyBridge.zero_mem_unitDisk\n#print axioms FiveInduction.HardyActual.J_NONZERO_OF_RH\n#print axioms FiveInduction.HardyActual.J_eq_regularized\n#print axioms FiveInduction.HardyActual.RH_OF_J_NONZERO\n#print axioms FiveInduction.HardyActual.analyticOnNhd_J\n#print axioms FiveInduction.HardyActual.cayley_re_gt_half\n#print axioms FiveInduction.HardyActual.coeff_one\n#print axioms FiveInduction.HardyActual.coeff_zero\n#print axioms FiveInduction.HardyActual.differentiableOn_J\n#print axioms FiveInduction.HardyActual.hasDerivAt_J_zero\n#print axioms FiveInduction.HardyActual.hasSum_coeff\n#print axioms SoloboloAdmission.FiniteProgram.coefficient_analytic\n#print axioms SoloboloAdmission.FiniteProgram.emit_check\n#print axioms SoloboloAdmission.FiniteProgram.emit_valid\n#print axioms SoloboloAdmission.FiniteProgram.modelMoment_nonneg\n#print axioms SoloboloAdmission.FiniteProgram.modelMoment_succ_le\n#print axioms SoloboloAdmission.FiniteProgram.nativeRH_of_uniformResidual\n#print axioms SoloboloAdmission.FiniteProgram.smoke_sound\n#print axioms SoloboloAdmission.FiniteProgram.smoke_true\n#print axioms SoloboloAdmission.FiniteProgram.theta_nonvanishing_of_uniformResidual\n#print axioms SoloboloAdmission.RationalPacket.all_model_depths_monotone\n#print axioms SoloboloAdmission.RationalPacket.all_model_depths_nonnegative\n#print axioms SoloboloAdmission.RationalPacket.check_sound\n#print axioms SoloboloAdmission.RealSpectrum.moment_nonneg\n#print axioms SoloboloAdmission.RealSpectrum.moment_succ_le\n#print axioms SoloboloAdmission.ResidualBudget.upper\n#print axioms SoloboloAdmission.ResidualLimit.actual_ode\n#print axioms SoloboloAdmission.baseKernel_nonneg\n#print axioms SoloboloAdmission.cayleyQ_le_one\n#print axioms SoloboloAdmission.cayleyQ_nonneg\n#print axioms SoloboloAdmission.denominator_pos\n#print axioms SoloboloAdmission.entire_nonvanishing_of_locallyUniform_residual\n#print axioms SoloboloAdmission.exists_finiteProgram_uniformResidual_implies_RH\n#print axioms SoloboloAdmission.kernel_nonneg\n#print axioms SoloboloAdmission.kernel_succ\n#print axioms SoloboloAdmission.kernel_succ_le\n#print axioms SoloboloAdmission.locallyUniform_zero_iteratedDeriv\n#print axioms SoloboloAdmission.rationalNode_denominator_ne_zero\n#print axioms SoloboloAdmission.rationalODECoefficient_analytic\n",
+      "executed": false
+    }
+  ],
+  "new_axiom_print_command_count": 120,
+  "forbidden_active_code_tokens": [],
+  "external_imports": [
+    "Mathlib",
+    "Mathlib.Algebra.BigOperators.NatAntidiagonal",
+    "Mathlib.Algebra.Polynomial.OfFn",
+    "Mathlib.Algebra.Polynomial.Taylor",
+    "Mathlib.Analysis.Calculus.IteratedDeriv.Lemmas",
+    "Mathlib.Analysis.Complex.CauchyIntegral",
+    "Mathlib.Analysis.Complex.LocallyUniformLimit",
+    "Mathlib.Analysis.Complex.RemovableSingularity",
+    "Mathlib.Analysis.Complex.SqrtDeriv",
+    "Mathlib.Analysis.Complex.TaylorSeries",
+    "Mathlib.Analysis.SpecialFunctions.Gamma.Deligne",
+    "Mathlib.Data.Nat.Choose.Basic",
+    "Mathlib.Data.Nat.Factorial.Basic",
+    "Mathlib.NumberTheory.Harmonic.EulerMascheroni",
+    "Mathlib.NumberTheory.Harmonic.ZetaAsymp",
+    "Mathlib.NumberTheory.LSeries.Nonvanishing",
+    "Mathlib.NumberTheory.LSeries.RiemannZeta",
+    "Mathlib.Tactic",
+    "Mathlib.Tactic.FieldSimp",
+    "Mathlib.Tactic.FunProp",
+    "Mathlib.Tactic.Linarith",
+    "Mathlib.Tactic.NormNum",
+    "Mathlib.Tactic.Ring",
+    "Std"
+  ],
+  "active_modules": [
+    {
+      "module": "RHFinal/Core/Polynomial",
+      "sha256": "45d891b0ac7bd3652c5bacac04994d9778c6df0fc5636c0b98082a4fbd6e2acc",
+      "imports": [
+        "Std"
+      ],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "RHFinal/Core/LocalWitness",
+      "sha256": "acf099245de653085a65bb4e35a8bff5757e04573e9007bc32dd062f6d5e8667",
+      "imports": [
+        "RHFinal.Core.Polynomial"
+      ],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "RHFinal/Core/Induction",
+      "sha256": "7ecc5fd1750a1a9fb8310a1f05bb75a8788802db6279ee261ed836de378ff522",
+      "imports": [
+        "Std"
+      ],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "RHFinal/Core/BoundedSearch",
+      "sha256": "1f5d08bfc132e091c506616d25ce860de0d43c19b1a335e376600c50a3df87da",
+      "imports": [
+        "RHFinal.Core.LocalWitness"
+      ],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "RHFinal/Search",
+      "sha256": "9d0c40585b30125d34ddd4e41ef4d0237985f1bed654d6b7e47950e7c3d15c86",
+      "imports": [
+        "RHFinal.Core.BoundedSearch"
+      ],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "RHFinal/Audit",
+      "sha256": "d72f3aed3249364336906632ed99fa5a6d33f431c13780f3c1d59f6e5e73f203",
+      "imports": [
+        "RHFinal.Core.BoundedSearch",
+        "RHFinal.Core.Induction"
+      ],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 15
+    },
+    {
+      "module": "FiniteWitness/NativeXi",
+      "sha256": "9c24dbaf286b679af1f6a44688b4b0a5a81b0f3464f9eef51f9927d45b0f4997",
+      "imports": [
+        "Mathlib"
+      ],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "FiniteWitness/GPMoments",
+      "sha256": "625bcbed3a7c22ee748b844a6d498159a4edb2c28ba39e2bcfffcb0c90e826ad",
+      "imports": [
+        "FiniteWitness.NativeXi"
+      ],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "FiniteWitness/FiniteSpectrum",
+      "sha256": "0e122288deb076b29280ceb5ca66ab49b0e83b9aaf083a2f601a378e34f5b22c",
+      "imports": [
+        "FiniteWitness.GPMoments"
+      ],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "FiniteWitness/TraceInduction",
+      "sha256": "45e6bb6e95da3d101cc129608a0c71f73c51432613d352ca79cd4add9233ee74",
+      "imports": [
+        "FiniteWitness.FiniteSpectrum"
+      ],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "FiniteWitness/FiniteLayers",
+      "sha256": "cd9454f0a0f70e6e72ac2e2badc40b1d8c5a40009d01f6456a60f5a4ba627e13",
+      "imports": [
+        "FiniteWitness.TraceInduction"
+      ],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "FiniteWitness/FiniteDebit",
+      "sha256": "fe43b319789332751f1261154dc5fa9556dde4a7932cc80ce06c817994aee3c9",
+      "imports": [
+        "FiniteWitness.FiniteLayers"
+      ],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "FiniteWitness/PositiveSyntax",
+      "sha256": "249586c89273b036b013a59fb0448aa282c91a5dc50cf21f5118c8ac2896e867",
+      "imports": [
+        "FiniteWitness.FiniteDebit"
+      ],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "FiniteWitness/TelescopicSpectrum",
+      "sha256": "f7f58da87765ab90fbbdaac546d4f4bd443bcaaff9a2f3e1b3d10ff6921938f7",
+      "imports": [
+        "FiniteWitness.PositiveSyntax"
+      ],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "FiniteWitness/GramFactor",
+      "sha256": "fc4a256207529d520d3100e336259188df583001248ae1e805cfdd7828e942d9",
+      "imports": [
+        "FiniteWitness.TelescopicSpectrum"
+      ],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "FiniteWitness/UniversalRecurrence",
+      "sha256": "628e1731b41eb7bb440c97d8e12a4ffe5dbf533ce900e39ed6cd603345773c85",
+      "imports": [
+        "FiniteWitness.GramFactor"
+      ],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "RHFinal/Actual/NativeRH",
+      "sha256": "d24dd5882e0aa5ed6b572ac9ef2a79928aff4df1850e2346b53a31b81be62dc6",
+      "imports": [
+        "FiniteWitness.NativeXi"
+      ],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "RHFinal/Actual/Successor",
+      "sha256": "517a06365e6dcfd5e0f948fb98598c483a88bc2d4e3daaf69ba2351f9d945f97",
+      "imports": [
+        "FiniteWitness.NativeXi"
+      ],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "RHFinal/Actual/Frontier",
+      "sha256": "63e353cfaadc753359a507d2661c4b38279f6dc1be587225d18849449f753db8",
+      "imports": [
+        "RHFinal.Actual.NativeRH",
+        "RHFinal.Actual.Successor",
+        "RHFinal.Core.LocalWitness"
+      ],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "RHFinal/Actual/Audit",
+      "sha256": "20040297157d9e7a0d46d5806f6e2828234e948a9ab266e303fc976f535cb9ac",
+      "imports": [
+        "FiniteWitness.UniversalRecurrence",
+        "RHFinal.Actual.Frontier"
+      ],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 12
+    },
+    {
+      "module": "Core/Observable",
+      "sha256": "3d5ac15448a67cb6d94ed6bd0624fe29ed7efb1385af092bdf6c245510384377",
+      "imports": [
+        "Mathlib"
+      ],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "Core/ActualThetaCayley",
+      "sha256": "703ea9f4d122a58af8500a03710129d4728135edef59a78ab30d4507df20dff0",
+      "imports": [
+        "Core.Observable"
+      ],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "Core/MathlibXiSlitTheta",
+      "sha256": "1b343e5f600a7d0091d80391ea470c71a45a6ebd7a3c54267fad8a9f44e8e39e",
+      "imports": [
+        "Core.ActualThetaCayley",
+        "Mathlib.NumberTheory.LSeries.RiemannZeta",
+        "Mathlib.Analysis.Complex.SqrtDeriv"
+      ],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "Core/EntireXiWidder",
+      "sha256": "06014f7ffe8d7c9909085e4fc6b6b8d29ba6d8d581e9a1c127546459b46e524a",
+      "imports": [
+        "Core.MathlibXiSlitTheta",
+        "Mathlib"
+      ],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "Derivations/Geometry/CayleyChannelKernel",
+      "sha256": "a97b45c83c05ad0d295dd2346f5472971c0ad9dc6133b3d3ed26c5974b7f617a",
+      "imports": [
+        "Core.ActualThetaCayley"
+      ],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "Derivations/Negativity/UniformChannelBounds",
+      "sha256": "8d1e28d6cad2af5936b02088a825f27b3c2132af1c02d4eb2cb833824c8ac2f5",
+      "imports": [
+        "Derivations.Geometry.CayleyChannelKernel",
+        "Mathlib"
+      ],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "Derivations/Negativity/GeometricDominance",
+      "sha256": "f4dff1fe459add23b48334b0509a37c2b6deafd27fc6efefb416f7611e6959bf",
+      "imports": [
+        "Mathlib"
+      ],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "Derivations/Negativity/UniformGap",
+      "sha256": "87918fb6d13a20235f384bc84bcd83b2cb9cc9046e3b70c47eddb5ac3b4e0f47",
+      "imports": [
+        "Mathlib"
+      ],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "Derivations/Negativity/TunedChannelAlgebra",
+      "sha256": "381a9524bb198d20e85e54a3ed16af9a0ad920d193326ab580c1ac0883a40ba8",
+      "imports": [
+        "Derivations.Negativity.UniformChannelBounds",
+        "Mathlib"
+      ],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "Bridge/XiChannelNegativity",
+      "sha256": "dbf531a684069ba2f98008c427046f250b09c471b1ed8b22d880cb79d8cb58a1",
+      "imports": [
+        "Core.EntireXiWidder",
+        "Derivations.Negativity.UniformChannelBounds",
+        "Derivations.Negativity.GeometricDominance",
+        "Derivations.Negativity.UniformGap",
+        "Derivations.Negativity.TunedChannelAlgebra"
+      ],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "Derivations/Widder/LocalCalculus",
+      "sha256": "625a4e7cf922dc542da89bf217605e8afc88004552355ba0af8ede4e7c998dd4",
+      "imports": [
+        "Core.EntireXiWidder",
+        "Mathlib"
+      ],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "Derivations/Widder/DirectTower",
+      "sha256": "a12470f41c429566629b9d17845f1f4b56c8450b51473b384257b4a646e32378",
+      "imports": [
+        "Derivations.Widder.LocalCalculus"
+      ],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "Bridge/XiWidderIdentification",
+      "sha256": "e63e9ea4da8f1b12ef977343dfeb985433d2d024e9b202595f45cabc529c6f29",
+      "imports": [
+        "Derivations.Widder.DirectTower",
+        "Bridge.XiChannelNegativity"
+      ],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "Derivations/Hausdorff/CentralCell",
+      "sha256": "91bb598827ce6b7c221dc86ac4c65f7d95ba999f338a1bcd4a360382a3d73562",
+      "imports": [
+        "Derivations.Widder.DirectTower",
+        "Mathlib"
+      ],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "Bridge/MersenneCentralCriterion",
+      "sha256": "f16080c6a92a13c6b15f894dc9979728ed447dbbb85d9b11fc71e71e2960fc83",
+      "imports": [
+        "Bridge.XiWidderIdentification",
+        "Derivations.Hausdorff.CentralCell",
+        "Mathlib"
+      ],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "Bridge/ExplicitMersenneReadout",
+      "sha256": "0a208571ed56566a5bbffc54d26334c976379d1884ea9bc5adf1f36d013ce297",
+      "imports": [
+        "Bridge.MersenneCentralCriterion",
+        "Mathlib"
+      ],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "Derivations/BKQR/ScalarProduct",
+      "sha256": "0c04160d298d82d397df7b3a8147c4097950808bed5fb5fd11c666353ce2d2f4",
+      "imports": [],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "Frontier/OurFrontier",
+      "sha256": "f61c487207f52e36fbbae8fd65ee6ea5ef43842ca630b3b645d03109948f69fd",
+      "imports": [
+        "Core.Observable",
+        "Derivations.BKQR.ScalarProduct"
+      ],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "Frontier/FreeEnergyFrontier",
+      "sha256": "4a62fe30d6aeeea42deb619f553c79c12535bc497c5121b8f97a0a70403a78fc",
+      "imports": [
+        "Derivations.BKQR.ScalarProduct",
+        "Frontier.OurFrontier"
+      ],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "Derivations/GP/FreeEnergyCurvature",
+      "sha256": "5430dd4451898d239e3b82aca562c0032f016c15890f92626af671c4f1e7cb5c",
+      "imports": [
+        "Frontier.FreeEnergyFrontier"
+      ],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "Derivations/GP/CayleyObservable",
+      "sha256": "1fb86e2431cc70041139e0c6f802fe9d33d085a22cf1c1dbe7e468a26e5c2c1d",
+      "imports": [
+        "Frontier.OurFrontier"
+      ],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "Derivations/GP/WidderRecursion",
+      "sha256": "8be20a6e485712531751137dee217bfdeb37f1af05a620316d2b3e084aedf983",
+      "imports": [
+        "Derivations.GP.FreeEnergyCurvature",
+        "Derivations.GP.CayleyObservable"
+      ],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "KQGPBKQRHilbert/InputEndpoints",
+      "sha256": "e5eaeb6942ecc001de91bdcd65b450320d0ab1cccfcfc653b22b08265dc2bdb6",
+      "imports": [
+        "Bridge.ExplicitMersenneReadout",
+        "Derivations.Geometry.CayleyChannelKernel",
+        "Derivations.GP.WidderRecursion"
+      ],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "KQGPBKQRHilbert/TargetInterfaces",
+      "sha256": "f1f0751d5093799a858a61bc49d0d3f8f4087cf05223e7153c87e09430ff0694",
+      "imports": [
+        "KQGPBKQRHilbert.InputEndpoints"
+      ],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "KQGPBKQRHilbert/Continuation",
+      "sha256": "f3d0f3c882ba25fb114f6b744e21025edc6d81c680c72275cd711e00c73aaea6",
+      "imports": [
+        "KQGPBKQRHilbert.TargetInterfaces"
+      ],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "Derivations/Geometry/CayleyRadius",
+      "sha256": "83f7fb60c08d6bb6c64024d433d827271e40fdeabf6e7d03e540ad7ef5885ab5",
+      "imports": [
+        "Core.Observable"
+      ],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "Derivations/Geometry/ActualCayleyObservable",
+      "sha256": "7547d5d4b41bc6cd6e74e75653488bee1d92c34e9275a6097219a288ccfbd733",
+      "imports": [
+        "Core.ActualThetaCayley",
+        "Derivations.Geometry.CayleyRadius"
+      ],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "Derivations/Geometry/LocalLaurent",
+      "sha256": "e0b6f933b79c833f4b79a1ff1661d0d6a8ede86cc927aecd350e3acd87c9e55d",
+      "imports": [
+        "Derivations.Geometry.CayleyRadius"
+      ],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "Derivations/Geometry/InteriorPole",
+      "sha256": "2b9ccd9ba10f7f6af50692a4deaa3766e6dcb9316caa2a9ce91a1c2df4a82f47",
+      "imports": [
+        "Derivations.Geometry.LocalLaurent",
+        "Derivations.Geometry.ActualCayleyObservable"
+      ],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "AllDepth/SubexpEnvelope",
+      "sha256": "669b27ad7df9b20ee0ae88a0cd0ec7374a5227ba1651d24e9380df8cc592aa29",
+      "imports": [
+        "Bridge.XiWidderIdentification",
+        "Derivations.Geometry.CayleyRadius"
+      ],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "AllDepth/FiniteHausdorff",
+      "sha256": "9ae154bcb5c109031d4a742f483ed825e730ce5b41757ae4cf50e4406aef505c",
+      "imports": [
+        "AllDepth.SubexpEnvelope"
+      ],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "AllDepth/ActualPoleClosure",
+      "sha256": "251295d8b8e22252f664448e9cf68b6b06423d2ba2868dce735ecc1c02b86bf4",
+      "imports": [
+        "AllDepth.FiniteHausdorff",
+        "Derivations.Geometry.InteriorPole",
+        "KQGPBKQRHilbert.TargetInterfaces"
+      ],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "AllDepth/PowerSeriesRootTest",
+      "sha256": "0ea456cfb8f5f2b73e39e6596eb85d06524a1f23e33c6b4df1d1da085c55210c",
+      "imports": [
+        "AllDepth.ActualPoleClosure"
+      ],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "AllDepth/CayleyTaylorAndPole",
+      "sha256": "610abecabf164077238e8556d7c57c1c6c4fd0f5174d022f45beafe4410b579d",
+      "imports": [
+        "AllDepth.PowerSeriesRootTest"
+      ],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "AllDepth/SymmetricCayleyGerm",
+      "sha256": "f8afc16168029ae26f2703c512721a09a9c51f0a65939447d5ba6c11944d62e9",
+      "imports": [
+        "AllDepth.CayleyTaylorAndPole"
+      ],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "AllDepth/ActualMathlibThetaInterface",
+      "sha256": "82c418b63c02319a0b6dbbfbeed67efd633b57752a51ce70f691ee868f21b898",
+      "imports": [
+        "AllDepth.SymmetricCayleyGerm",
+        "Core.MathlibXiSlitTheta"
+      ],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "AllDepth/CayleyPolynomialGerm",
+      "sha256": "65e5b8abcbf4c829b91ba49a1401486989ac7598172f0d08a98869c2dc449716",
+      "imports": [
+        "AllDepth.ActualMathlibThetaInterface"
+      ],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "AllDepth/CayleyCoefficientAtlas",
+      "sha256": "62288ab4258c37aac8cac01f57fe679633ab6ecb29680e72e1ab648ff71f0216",
+      "imports": [
+        "AllDepth.CayleyPolynomialGerm"
+      ],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "AllDepth/CayleyStableCoefficients",
+      "sha256": "aaa661ca2285c6e2a07952a4808a65ca8a31594e5d51f9954c3a1fee1fb4e45e",
+      "imports": [
+        "AllDepth.CayleyCoefficientAtlas"
+      ],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "AllDepth/CayleyBinomialTriangle",
+      "sha256": "2f042ce208e54af24788d7c6eb4563755bafe2383cfc0a9942f4e9c58327759d",
+      "imports": [
+        "AllDepth.CayleyStableCoefficients"
+      ],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "AllDepth/CayleyTopDiagonal",
+      "sha256": "964d1a13a2c71d1e21e278cf401e8490da35cf552883b08fad9b442f47ca3c12",
+      "imports": [
+        "AllDepth.CayleyBinomialTriangle"
+      ],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "AllDepth/CayleyFiniteClosedFormula",
+      "sha256": "f6cafba83ac440187fcd2d44d25344346dfafbcdf7858c3dff885b6f0a843d02",
+      "imports": [
+        "AllDepth.CayleyTopDiagonal"
+      ],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "AllDepth/CayleyPolynomialRodrigues",
+      "sha256": "82bc25722494eed3e790d253137f21af3b3c3ea3eee54ca6b8960b7e811760b5",
+      "imports": [
+        "AllDepth.CayleyFiniteClosedFormula",
+        "Mathlib.Algebra.Polynomial.Taylor"
+      ],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "AllDepth/CayleyRodriguesConvolution",
+      "sha256": "46addd1530eb0bc2d5ec48d13aff1312fb5fb88dcc1620fca5c7999837233aaf",
+      "imports": [
+        "AllDepth.CayleyPolynomialRodrigues",
+        "Mathlib.Algebra.BigOperators.NatAntidiagonal"
+      ],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "AllDepth/CayleyJetInterpolation",
+      "sha256": "1d46efd3bd2f94872f8dc7e34970be2de16f2e2913696794e59d3f1a74bfed2c",
+      "imports": [
+        "AllDepth.CayleyRodriguesConvolution",
+        "Bridge.XiWidderIdentification",
+        "Mathlib.Algebra.Polynomial.OfFn"
+      ],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "AllDepth/ActualXiRealLeibniz",
+      "sha256": "e785432ab3709a0ea5118670049a9499716bf3abe4e099edacf74ca88b98f229",
+      "imports": [
+        "AllDepth.CayleyJetInterpolation",
+        "Derivations.Widder.LocalCalculus",
+        "Mathlib.Analysis.Calculus.IteratedDeriv.Lemmas"
+      ],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "AllDepth/ActualXiRealRodriguesNormalization",
+      "sha256": "3782502e39ac668bc6aa73d23edb9e7e38150ab6e4544de8f1921888005d5178",
+      "imports": [
+        "AllDepth.ActualXiRealLeibniz",
+        "Mathlib.Data.Nat.Choose.Basic",
+        "Mathlib.Data.Nat.Factorial.Basic"
+      ],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "KQGPBKQRHilbert",
+      "sha256": "fbc1e5e927501b507f558cbcd61c1b2bd6cf093281b8eba71ac9bae8a1d29344",
+      "imports": [
+        "KQGPBKQRHilbert.Continuation",
+        "AllDepth.ActualPoleClosure",
+        "AllDepth.PowerSeriesRootTest",
+        "AllDepth.CayleyTaylorAndPole",
+        "AllDepth.ActualMathlibThetaInterface",
+        "AllDepth.CayleyPolynomialGerm",
+        "AllDepth.CayleyCoefficientAtlas",
+        "AllDepth.CayleyStableCoefficients",
+        "AllDepth.CayleyBinomialTriangle",
+        "AllDepth.CayleyTopDiagonal",
+        "AllDepth.CayleyFiniteClosedFormula",
+        "AllDepth.CayleyPolynomialRodrigues",
+        "AllDepth.CayleyRodriguesConvolution",
+        "AllDepth.CayleyJetInterpolation",
+        "AllDepth.ActualXiRealLeibniz",
+        "AllDepth.ActualXiRealRodriguesNormalization"
+      ],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "RHFinal/GP/KQEndpoints",
+      "sha256": "7dbab23bb5cfc9d7d76f08aab72d81664511be5285436ff787fe36b77b600ddb",
+      "imports": [
+        "KQGPBKQRHilbert",
+        "FiniteWitness.NativeXi"
+      ],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "RHFinal/GP/KQAudit",
+      "sha256": "0075a2058626ff730e402e0a29548c01dce5c430a25929e4bbd62d346261536d",
+      "imports": [
+        "RHFinal.GP.KQEndpoints"
+      ],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 27
+    },
+    {
+      "module": "GP7/CoreAlgebra",
+      "sha256": "4818d17decea05ffdf496ff83515836b993e9339205185a6dfe1a44c6c41c638",
+      "imports": [
+        "Mathlib"
+      ],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "GP7/RationalPolynomial",
+      "sha256": "e1b2e5395261be65718f48237132d2066661c62734b10f7d4ed992d1021a873a",
+      "imports": [
+        "Mathlib"
+      ],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "GP7/AnalyticObjects",
+      "sha256": "ed82e253ae222946e4badcb36cff897334975a899a6011b30a01a069a64696ea",
+      "imports": [
+        "Mathlib",
+        "GP7.CoreAlgebra",
+        "GP7.RationalPolynomial"
+      ],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 14
+    },
+    {
+      "module": "GP7/PolynomialLaplace",
+      "sha256": "992f8ccc9652b5b1343d6307e978f2ba0496e1c7e53c7ed9ee6baf29a3fce0ba",
+      "imports": [
+        "GP7.AnalyticObjects"
+      ],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "GP7/PolynomialLaplaceBridge",
+      "sha256": "d19c4b0d2c82325b413933b2568d0e1ea9c042c7b46e33d53372d18c4fb7bf6b",
+      "imports": [
+        "GP7.PolynomialLaplace"
+      ],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "GP7/ExpDefectBridge",
+      "sha256": "0d9140c921f33261d899db84c0191f37c02119ba6d4cbf9ca274815206f6f008",
+      "imports": [
+        "GP7.PolynomialLaplaceBridge"
+      ],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "GP7/FiniteDyadic",
+      "sha256": "fb5a1b25ad3806a8eb9e75c3a4ada85e7b1021baee7ab06a6a859ff19aca339b",
+      "imports": [
+        "Mathlib"
+      ],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "GP7/ScalarRankOne",
+      "sha256": "b4d04e9c10ad348ab7e31e83092f1301646d716f14c86b0bf53095c59dc580e8",
+      "imports": [
+        "Mathlib"
+      ],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "RHFinal/GP/GP7Endpoints",
+      "sha256": "a2c180fec992dc47b358093bebd235f660d795bcc20d9e0fad79813d99b98585",
+      "imports": [
+        "GP7.ExpDefectBridge",
+        "GP7.FiniteDyadic",
+        "GP7.ScalarRankOne"
+      ],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "RHFinal/GP/GP7Audit",
+      "sha256": "db0472278efa97ed2611c9fd3cfb42c8d5a06cd0595841cca0b12cc69d6a6d54",
+      "imports": [
+        "RHFinal.GP.GP7Endpoints"
+      ],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 20
+    },
+    {
+      "module": "RHFinal/GP/Master/Model",
+      "sha256": "9a772606209c1e08e8343c2ffff715d0331f54172670e17ed4066588fb0844b4",
+      "imports": [
+        "Std"
+      ],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "RHFinal/GP/Master/Derivations",
+      "sha256": "eb23a40adcdb70200519644b4ab1b2bad52b4f9ee1a753c452fec36c34ff1087",
+      "imports": [
+        "RHFinal.GP.Master.Model"
+      ],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "RHFinal/GP/MasterEndpoints",
+      "sha256": "6dadd7b9b136717cfe21e1d65fe45f2bfa61e49299814f73b349db4ba2f91391",
+      "imports": [
+        "RHFinal.GP.Master.Derivations"
+      ],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "RHFinal/GP/MasterAudit",
+      "sha256": "a304cb5a323cbf73b82d3726d6f3878c4578f088b0f3b42dad865527c104b791",
+      "imports": [
+        "RHFinal.GP.MasterEndpoints"
+      ],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 12
+    },
+    {
+      "module": "RHFinal/GP/Literal",
+      "sha256": "8e751ef9c39c08fd223f8bbf1b3be69471138bb283fe5431a2f574b696bcac2f",
+      "imports": [
+        "FiniteWitness.NativeXi"
+      ],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "RHFinal/GP/LiteralAudit",
+      "sha256": "fcf802ed9f55ec1175219af89cf3ee0f698abd1c9598e956c353bc6f4bd46ee9",
+      "imports": [
+        "RHFinal.GP.Literal"
+      ],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 4
+    },
+    {
+      "module": "RHFinal/GP/NativeBinding",
+      "sha256": "9965a9f0fd0d477aef52596abf1f538aa57b7a407be6565b29886680867f2889",
+      "imports": [
+        "RHFinal.GP.KQEndpoints",
+        "RHFinal.Actual.Successor"
+      ],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "RHFinal/GP/NativeBindingAudit",
+      "sha256": "d9289ec67befbf857cdafe0f395327d61a4d099fec5566f23f0998c2a8e5504b",
+      "imports": [
+        "RHFinal.GP.NativeBinding"
+      ],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 2
+    },
+    {
+      "module": "RHFinal/GP",
+      "sha256": "a3d04c933f21aa6f85b6e7bbc4e79001e225d066bd3e81fae81437ac56c9edb0",
+      "imports": [
+        "RHFinal.GP.KQEndpoints",
+        "RHFinal.GP.GP7Endpoints",
+        "RHFinal.GP.MasterEndpoints",
+        "RHFinal.GP.Literal",
+        "RHFinal.GP.NativeBinding"
+      ],
+      "new_in_full_plan": false,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "FiveInduction/ActualXi",
+      "sha256": "4046240fce376b4f81b20db36dffcb1cfbad0a3819184c953beb9200976d20e3",
+      "imports": [
+        "Mathlib.NumberTheory.LSeries.RiemannZeta",
+        "Mathlib.Analysis.SpecialFunctions.Gamma.Deligne",
+        "Mathlib.Tactic"
+      ],
+      "new_in_full_plan": true,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "FiveInduction/CayleyBridge",
+      "sha256": "7f8e2dcaf147bf124ca20f8b5b07118e3cea5daaa53c7ae8b2a2e62c6b39d3dd",
+      "imports": [
+        "FiveInduction.ActualXi",
+        "Mathlib.Analysis.Complex.CauchyIntegral"
+      ],
+      "new_in_full_plan": true,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "FiveInduction/HardyActual",
+      "sha256": "2370ad37e95ba384dd4ac363a6e2246057446037f592d4cb0a99262cc8361c03",
+      "imports": [
+        "FiveInduction.CayleyBridge",
+        "Mathlib.Analysis.Complex.TaylorSeries",
+        "Mathlib.NumberTheory.Harmonic.EulerMascheroni",
+        "Mathlib.NumberTheory.Harmonic.ZetaAsymp"
+      ],
+      "new_in_full_plan": true,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "SoloAdmission/AnalyticInverse",
+      "sha256": "153fb74cd3c7a940c7b5f2d21daaf45fe94e2369845abd0106c50f464745ef97",
+      "imports": [
+        "FiveInduction.HardyActual"
+      ],
+      "new_in_full_plan": true,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "ReciprocalAudit",
+      "sha256": "6f4b71b1ef792df0ee962cd6988d8dfa636661284c76c6af8f4aefebb7603ded",
+      "imports": [
+        "SoloAdmission.AnalyticInverse"
+      ],
+      "new_in_full_plan": true,
+      "axiom_print_commands": 11
+    },
+    {
+      "module": "AWPIRH/XiCore",
+      "sha256": "6bda1a14b59a508811b9f9a8bff400ed824d86f366b2ddeecd728571be7fd9db",
+      "imports": [
+        "Mathlib.NumberTheory.LSeries.Nonvanishing",
+        "Mathlib.Analysis.Complex.SqrtDeriv",
+        "Mathlib.Analysis.Complex.RemovableSingularity",
+        "Mathlib.Tactic.FunProp",
+        "Mathlib.Tactic.FieldSimp",
+        "Mathlib.Tactic.NormNum",
+        "Mathlib.Tactic.Ring",
+        "Mathlib.Tactic.Linarith"
+      ],
+      "new_in_full_plan": true,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "AWPIRH/ThetaEntire",
+      "sha256": "cb1f0838f2d90a1ba30e696afd05337e721ee7cc7e021a30ec28cdf2f810533b",
+      "imports": [
+        "AWPIRH.XiCore"
+      ],
+      "new_in_full_plan": true,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "AngularMaster/ZeroGeometry",
+      "sha256": "a2a155d8584f3682c4a48f4b8f0c9fdd1473c25ed4934c448f5015a4647361df",
+      "imports": [
+        "AWPIRH.ThetaEntire"
+      ],
+      "new_in_full_plan": true,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "AWPIRH/AnalyticODE",
+      "sha256": "625e10dd0e75ae6808560b9f7caff29fa6e43940c84dcaf9c6e22a6b9f3c9f8c",
+      "imports": [
+        "Mathlib"
+      ],
+      "new_in_full_plan": true,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "SoloboloAdmission/NativeODE",
+      "sha256": "554667603de88d116d8455b3db517ea6258ff91acf4c4a557a3da3be298f254e",
+      "imports": [
+        "AngularMaster.ZeroGeometry",
+        "AWPIRH.AnalyticODE",
+        "Mathlib"
+      ],
+      "new_in_full_plan": true,
+      "axiom_print_commands": 1
+    },
+    {
+      "module": "AnalyticPublicationAudit",
+      "sha256": "3c7ebec233dee2525d2e65b10430c55b72f19521062571236a8796fb4a7bc033",
+      "imports": [
+        "SoloboloAdmission.NativeODE"
+      ],
+      "new_in_full_plan": true,
+      "axiom_print_commands": 50
+    },
+    {
+      "module": "SoloboloAdmission/RationalCheck",
+      "sha256": "a322bbc75df9a04118e2be6707ba3e4c76af44340bce74d19a9c06ca7f2cf659",
+      "imports": [
+        "Mathlib"
+      ],
+      "new_in_full_plan": true,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "SoloboloAdmission/CayleyKernel",
+      "sha256": "ddd8858ffa36302be7d56871c7b7b12ac10a6f176cea7de481ad5fce24fa7b97",
+      "imports": [
+        "Mathlib"
+      ],
+      "new_in_full_plan": true,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "SoloboloAdmission/RationalPackets",
+      "sha256": "4d1e91259c15916f3ab0564f2a35ccfe268791b1e1a9c48421ab61ad3922216e",
+      "imports": [
+        "SoloboloAdmission.RationalCheck",
+        "SoloboloAdmission.CayleyKernel"
+      ],
+      "new_in_full_plan": true,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "SoloboloAdmission/FiniteProgram",
+      "sha256": "599ff9c4a8358d54645be9079c4fad7781cedc225086af2363414c619730f041",
+      "imports": [
+        "SoloboloAdmission.RationalPackets"
+      ],
+      "new_in_full_plan": true,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "SoloboloAdmission/ResidualBudget",
+      "sha256": "7078a8299f0fc8d8fba6e53213654560630bc15d054da34b2421b7ce4e95bc27",
+      "imports": [
+        "Mathlib"
+      ],
+      "new_in_full_plan": true,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "SoloboloAdmission/ResidualLimits",
+      "sha256": "5868845b9c31b8023a8e74f6e0a5ebd56a5eef2c942a030819d896032b8ac458",
+      "imports": [
+        "SoloboloAdmission.RationalPackets",
+        "SoloboloAdmission.ResidualBudget"
+      ],
+      "new_in_full_plan": true,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "SoloboloAdmission/ResidualNonvanishing",
+      "sha256": "87f35fc6911d828436a8d599c6ecd55730ad49a702f5010eb814f5d5af992295",
+      "imports": [
+        "SoloboloAdmission.NativeODE",
+        "Mathlib.Analysis.Complex.LocallyUniformLimit",
+        "Mathlib.Analysis.Calculus.IteratedDeriv.Lemmas"
+      ],
+      "new_in_full_plan": true,
+      "axiom_print_commands": 1
+    },
+    {
+      "module": "SoloboloAdmission/FiniteProgramEndpoint",
+      "sha256": "9b8825a351da89f5ea8228becb54fdd0f73059a7a34fb07e8f349b474deb219d",
+      "imports": [
+        "SoloboloAdmission.FiniteProgram",
+        "SoloboloAdmission.ResidualLimits",
+        "SoloboloAdmission.ResidualNonvanishing",
+        "SoloboloAdmission.NativeODE"
+      ],
+      "new_in_full_plan": true,
+      "axiom_print_commands": 0
+    },
+    {
+      "module": "AnalyticEndpointAudit",
+      "sha256": "4c134680715ee8cc49f8e5a39451bc41890a4b3c73f2819289306f12f39997aa",
+      "imports": [
+        "SoloboloAdmission.FiniteProgramEndpoint",
+        "SoloAdmission.AnalyticInverse"
+      ],
+      "new_in_full_plan": true,
+      "axiom_print_commands": 59
+    }
+  ],
+  "issues": [],
+  "limitations": [
+    "Static PASS does not establish Lean parsing, elaboration, kernel checking or executed axiom whitelist results.",
+    "Exact copies of historical sources retain their original comments; no historical native pass is converted to current admission.",
+    "The analytic conditions quantify functions or convergence; this audit does not construct them or reduce them to finite raw witness acceptance."
+  ]
+}

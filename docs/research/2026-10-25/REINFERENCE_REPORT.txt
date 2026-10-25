@@ -1,0 +1,1596 @@
+RIEMANN-HYPOTHESIS-FINAL: THREE-PASS RECOVERY AND REINFERENCE
+25 October 2026
+
+ASSESSMENT
+
+Yes. The current repository is a partial consolidation of a substantially larger research collection. We recovered additional actual-function proofs, analytic constructions, finite algebra, checker interfaces, and paper derivations. Some strong results were already preserved in the equivalence catalogue or active full build and should not be counted as newly recovered. Other important source files and their dependency chains are absent from the published repository.
+
+The broader recovery did not supply a completed finite Boolean checker whose accepted raw witness is equivalent to native Mathlib RH. It did not supply a proof of the generalized Cayley lift, or an unconditional RH-to-Dirichlet-GRH implication. Those are conclusions about the sources recovered and inspected here, not a claim that every historical conversation or file has been exhausted.
+
+No Lean compiler, Lake build, native runner, or new kernel axiom audit was executed for this review. Historical native logs are distinguished from current source inspection throughout. No repository source or remote branch was changed during this assessment.
+
+HOW THE THREE PASSES WERE CONDUCTED
+
+Pass 1 — Recover and compare. We recursively indexed the large RH review bundle, deduplicated source bodies by SHA-256, recovered earlier reinference reports and later candidate packages, and compared with git-tracked files in both repositories. A final search across the RH, IRRATIONALITY and root file areas recovered additional SOLOBOLO and STURMION finite-witness families missing from the original bundle.
+
+Pass 2 — Follow the mathematical claims. The strongest endpoints were traced back to actual definitions, all theorem hypotheses, model parameters, induction assumptions, infinite convergence conditions and proof fields. Package names such as “closure”, “native”, “finite witness” and “A-tier” were not treated as proof evidence.
+
+Pass 3 — Cross-check and combine. Independent reviewers checked the strongest actual-data claims, the repository's active-versus-archival distinction, the real/complex normalizations, and whether the RI01, GP, native-coordinate and SOLOBOLO results instantiate one another. The written finite-grid and inverse-smoothing arguments were independently checked with their quantifiers retained. Apparent additions that were duplicates, old failed versions, arbitrary-predicate axioms or conditional reformulations were separated out.
+
+RECOVERED SCOPE
+
+The broad bundle has 1,026 nested ZIP occurrences representing 755 distinct ZIP hashes. Recursive text indexing gives 1,794 distinct Lean source bodies. The 52 additionally materialized ZIPs contain 484 distinct Lean bodies, of which 292 are new to that bundle: 2,086 distinct Lean bodies across these two inventories. Ten recovered text reports supplement the sources. These are source/version counts, not independent theorem counts or a claim that every proof received line-by-line review.
+
+For the original bundle, 208 of the 1,794 Lean hashes occur in tracked files across the two repositories: 73 in the audited build plans and 135 as reference-only sources. The other 1,586 hashes are absent from both repositories. Many are superseded versions, helpers, tests or other branches, so this number must not be advertised as 1,586 lost mathematical results. The add-on inventory is reported separately in the appendices.
+
+Across the combined 2,086-body inventory, the corresponding exact-byte counts are 83 active in a build plan/import closure, 226 tracked reference-only, and 1,777 absent. “Active” includes the RH full build plan, not only its smaller default core plan.
+
+The RH catalogue's 51 primary entries are all preserved by exact hash, in 33 primary source bodies. Those primary bodies are archival. For one coherent angular closure supporting 16 catalogue entries, only 13 of its 118 module hashes are published; 105 dependency modules are absent. The catalogue preserves statements and evidence, not a complete combined build.
+
+Both remote main heads were checked during this review:
+  Riemann-Hypothesis-Final:
+  https://github.com/randogelist/Riemann-Hypothesis-Final/tree/f580017cd12146afd126271387981f96e1a526d4
+  Generalized-Dirichlet-L-Function-Hypothesis:
+  https://github.com/randogelist/Generalized-Dirichlet-L-Function-Hypothesis/tree/6dfb76dfce269c165f17194e67878acb0a523167
+
+Some specialist appendices also record local checkout commit identifiers. Those local histories are separate from the API publication histories above. Publication comparisons use tracked source bytes and all matching paths; ignored extraction copies do not count.
+
+WHAT WE HAD BEYOND THE MAIN REPOSITORY NARRATIVE
+
+1. Actual SOLOBOLO induction and local-pole analysis.
+
+Already retained in the full build: the actual direct Widder formula equals the recursive tower on positive regular anchors, with an unconditional all-order equality at anchor 1/4. The actual Mersenne trace endpoint is also retained. It would be wrong to describe this part as only a manufactured recurrence.
+
+Missing source includes the actual local-pole construction: a literal off-line zeta zero produces an interior simple Cayley pole. This substantially sharpens the forward route. The remaining implication from that pole to eventual negative actual-Widder coefficients is still explicit. Additional missing branches contain real-zeta sign reductions, downward positivity assembly, weak-energy-to-mode convergence, interior mode-root geometry, Wall/Jacobi square decompositions and formal Stieltjes stripping.
+
+2. Actual native Mellin and coefficient-coordinate bridges.
+
+D152 derives the density Mellin identity M(s)=Gamma(s)(s-1)zeta(s) for Re(s)>1 and the actual completed-xi anchor germ. D154 identifies the actual native coefficients with the complex Rodrigues expression at every order. Their source bodies are missing from tracked files. Historical focused native logs support these particular results.
+
+D153's actual energy/tower identification is already archived. Its endpoint still requires both a growth estimate and the actual product-log coefficient identity. The latter has a written symmetric-power/Cauchy derivation, but the inspected Lean sources do not supply the corresponding all-order theorem.
+
+D152 uses a different Mellin transform from the two-variable literal GP measure in the current repository. Its theorem is useful input for that measure, but is not automatically the current Literal.MellinEvaluation theorem.
+
+3. RI01 local analytic convergence and real/complex calibration.
+
+The recovered sources derive actual theta Taylor convergence, uniform convergence of finite determinants on a small disk, and a holomorphic determinant germ. They also identify the real SOLOBOLO logarithmic derivative with the complex theta logarithmic derivative at regular positive anchors. These are substantial missing actual-data results.
+
+They do not construct the finite positive contraction spectra required by SOLOBOLO. Local determinant convergence and convergence of nonnegative trace powers are different statements. A small holomorphic germ also does not give the required global slit-plane or unit-disk continuation.
+
+4. Actual RR binding, rather than only a generic defect model.
+
+D156 already constructs the actual zero-occurrence data, proves summability and nonnegativity of its defect C, and proves C=0 iff native RH. It retains multiplicity through repeated zero occurrences; no simplicity assumption is introduced. This is already preserved in catalogue E23/E24 and an archival source body, with historical native audit evidence.
+
+The binding itself should not remain on a generic “missing” list. What remains is C<=0, or an equivalent all-height bound on the full defect. The available bound controls C-prefix(T); it cannot discard the nonnegative prefix. An RR Hilbert norm representation also does not identify that space with the independently defined GP/H_a space.
+
+5. Constructive GP/Hilbert models and exact payment algebra.
+
+The GNS branch constructs a binary Hilbert-space isometry and positive complementary operators from an all-depth positive-semidefinite kernel lift. A finite atomic branch derives positivity directly from finite features. The exact-ledger branch derives finite telescoping, Gram absorption and reserve-floor estimates. These are reusable constructions missing from the tracked repository.
+
+Their actual inputs remain visible: kernel positivity and anchor calibration in the GNS branch; the analytic debit law, actual readout, reserve-loss payment and strict initial margin in the ledger branch. Neither construction supplies the actual xi calibration merely by being named GP or BKQR.
+
+6. AWPI source chains and later written reductions.
+
+A coherent 23-module direct paired-Phi branch derives native zeta binding on the shifted half-plane, nonvanishing, exact finite residuals and tail decay. Twenty of its module hashes are missing from tracked files even though its terminal criterion is archived.
+
+The recovered Round 5–7 and candidate notes contain additional paper-level mathematics: finite rational-anchor grids at each depth, a normalized inverse-smoothing/logistic-kernel tower, signed polynomial approximants, negative-mass reductions and explicit mode-energy decompositions. The checked finite-grid criterion still has the form “for every K, some later stage k passes all its finite anchor tests.” It is not one finite certificate, and the actual analytic signs are not automatically decidable rational arithmetic.
+
+The direction of positivity matters: the positive convolution kernels propagate positivity downward in depth. The upward differential successor does not preserve positivity merely because the base is positive.
+
+THE LATER FINITE-WITNESS PACKAGES
+
+The final cross-project search recovered SOLOBOLO v1.0.2 and STURMION v0.13.3 as well as earlier admission variants. These add real finite-data formats, same-spectrum finite algebra, induction interfaces, checker design constraints and counterexamples to invalid finite-to-infinite inferences.
+
+In SOLOBOLO v1.0.2 the Boolean checker remains a parameter. FINITE_WITNESS_IFF_NATIVE_RH explicitly assumes checker soundness, checker completeness, and the relevant actual analytic/product/geometry bridges. The alternate induction route still needs the actual row and pole inputs.
+
+In STURMION v0.13.3 the witness code really is List Nat, but the checker is also a parameter. finiteAccepted_iff_nativeRH retains hProduct, hExplosion, hSound and hComplete. Its stronger rule-checker interface separates finite code from the universal rule semantics and actual-xi realization. This is an improved specification of the task, not a supplied terminating RH checker.
+
+Another SOLOBOLO branch supplies a source-level actual slit-ODE equivalence and a rational-resolvent residual implication. Its FiniteProofWitness includes universal analytic calibration, holomorphy and convergence in proof fields. The finite program component must not obscure those infinite inputs. The detailed addendum distinguishes this actual analytic equivalence from an executable finite-witness iff.
+
+The supplemental search also recovers two explicit actual-RH criterion formulations absent from the current 51-entry catalogue:
+  - SlitODEAdmission iff native RH: the actual theta function satisfies a homogeneous first-order ODE with a holomorphic coefficient on the entire slit plane.
+  - ANALYTIC_ADMISSION_IFF_RH: a holomorphic reciprocal of the actual regularized Cayley J exists on the whole unit disk.
+These are additional analytic formulations related to the catalogue's existing zero-free and Cayley criteria, not a claim of independent mechanisms or mathematical priority. Their source bodies were recovered; their assembled Lean dependency graphs were not compiled in this review.
+
+Static review also found likely elaboration blockers in STURMION v0.13.3, including a pair projection applied to a single inequality and a frontier identifier under the wrong namespace. Its v0.13.0–v0.13.3 mathematical source bodies are unchanged while runner packaging changes. These findings further prevent treating the latest filename as a verified Lean checkpoint; the appendix records the exact locations.
+
+No inspected package constructs an accepted raw RH witness while deriving all of those semantic and analytic inputs. The October 22 Irrationality handoff likewise records successful finite rational packet tests while explicitly separating them from native witness admission and global irrationality/RH claims.
+
+RH AND DIRICHLET GRH
+
+The recovered GRH source genuinely provides the primitive/all-character reduction, completed-pair Cayley formulations, and GRH implies actual Mathlib RH. Its reverse transfer remains conditional:
+
+  Lift := RH -> generalized completed-pair Cayley totality
+  Lift iff (RH -> Dirichlet GRH)
+  hLift -> (RH iff Dirichlet GRH).
+
+No source proof of Lift was recovered. A useful reinference collapses the four completed-L nonvanishing factors to one universally quantified first-factor family using character inversion and the primitive functional equation. That removes duplicated obligations; the remaining family condition is still equivalent to RH -> GRH. This composition was reviewed mathematically but not added or compiled as a new Lean theorem.
+
+WHAT SHOULD BE CARRIED FORWARD
+
+First preserve coherent missing import closures, with their original hashes and exact normalizations, rather than isolated theorem statements. Highest-value candidates are the angular/native closures, actual local-pole binding, D152/D154 and the RI01 real/complex analytic chain. Keep the later SOLOBOLO/STURMION checker interfaces alongside the finite raw arithmetic implementations as specifications whose remaining inputs are explicit.
+
+The most concrete next analytic formalization is the actual product-log coefficient identity, using the recovered local germ, real/complex calibration and Rodrigues coordinates. It is supported by an explicit written derivation. Completing that identity would still leave the actual energy or positivity estimate and the finite checker reduction to prove.
+
+The accurate assessment is therefore: we had considerably more construction, more actual-data calibration and more precise reductions than the active repository captures. The recovered extra material sharpens the frontier, but does not establish unconditional RH, RH-to-GRH transfer, or the requested finite-witness closure.
+
+EVIDENCE AND LIMITS
+
+Historical focused native logs were read for selected native bridges, including successful Lean exits, source-snapshot comparisons and axiom-policy reports. They reused cached prerequisites; they are not a fresh full-dependency replay under the current repository. Other packages have source fixes, static checks, failed runs or declarations of intended audits only. Those categories remain separate.
+
+The broad archive's collector states snapshots are not guaranteed atomic. One large non-Lean index was omitted by the text extraction filter, and the bundle's RAR was not opened in this recovery. Discovery counts do not establish mathematical novelty. Literature classification and priority claims were not researched anew in this review.
+
+Some omitted legacy literature interfaces quantify over arbitrary propositions and arbitrary positivity predicates; one such axiom can be specialized to False and a constantly True predicate. They must not be promoted as actual native RH equivalences. Their presence in an archive does not implicate the clean active source graph.
+
+The following appendices contain exact theorem signatures, source hashes, retained-versus-missing classifications, historical evidence and independent cross-checks. Where an early appendix records only the 1,794-body bundle scan, the later finite-witness addenda cover the additional 292 source bodies.
+
+APPENDIX DIRECTORY
+1. Inventory and historical evidence
+2. SOLOBOLO actual-data source review
+3. Later SOLOBOLO finite-witness families
+4. STURMION finite-code and induction review
+5. GP, RR, Hilbert and native analytic bridges
+6. RH equivalences and missing dependency closures
+7. AWPI and independent paper-argument review
+8. RH-to-GRH premise tracing
+9. Independent actual-pole and normalization check
+10. Independent RI01/SOLOBOLO composition check
+11. Independent GRH carrier and first-factor check
+
+The following sections preserve the specialist reviews. Relative file paths identify the recovered working corpus; hashes and archive/member names identify the original sources. Their mathematical status remains source review unless a particular historical native receipt is explicitly discussed.
+
+
+APPENDIX 1: INVENTORY AND HISTORICAL EVIDENCE
+Review file: inventory-review.md
+SHA-256: 39c4ff086cc626851c2ba8809bf6d2b78454e6eb6d02c57ea3da6fce67a39a94
+
+# Recovered source inventory and historical evidence
+
+The supplied material contains substantially more source than the two repositories currently activate. This inventory establishes file coverage and historical evidence; it does not establish new mathematical implications or a fresh Lean build. Package versions, byte-distinct files, and theorem counts are different quantities.
+
+## Scope and exact coverage
+
+The review bundle `equivalence_sources/Riemann-Hypothesis-Final/RH_REVIEW_BUNDLE_18679_14231_11714.zip` has SHA-256 `b233c8d7468c3c484a6a90d318ba09d4e9a9586e744a980aa13bbcdf8301ed81`. The collector explicitly says `SNAPSHOT_ATOMICITY=NOT_GUARANTEED`, `MODE=SOURCE_AND_LOG_COLLECTION_ONLY`, and `PROJECT_EXECUTION=NONE`. Source files and logs found together can therefore have different ages.
+
+The recovery reads safe text from snapshots and nested ZIPs, excluding binaries, build-cache objects, collection copy logs, and non-Lean text above 4 MB. The bundle's one RAR remains unopened. UTF-8 source bytes are preserved exactly. Other text encodings receive a searchable UTF-8 copy, with both original-byte and corpus hashes recorded. The hash corpus deliberately retains old versions rather than merging them into an invented checkpoint.
+
+| Scope | Lean occurrences | Distinct Lean byte hashes | Text occurrences |
+|---|---:|---:|---:|
+| Broad review bundle | 27,025 | 1,794 | 51,581 |
+| 52 separately materialized Library ZIPs and 10 reports | 1,412 | 484 | 1,906 |
+| Union | — | 2,086 | — |
+
+The recent material contributes 292 Lean hashes beyond the bundle. The 23 `RH_NATIVE_CANDIDATES` releases contribute no new Lean hashes beyond it; the newly retrieved SOLOBOLO/STURMION families supply the added hashes. The recent set also contains `RH_NEEDED_SOURCES`, whose text records what was being sought rather than supplying an additional Lean closure.
+
+Repository comparisons use **`git ls-files` only**, map each hash to **every** tracked path, and follow imports from tracked build-module plans to distinguish active modules from archived references. Ignored local copies are excluded. This correction changed the RH file count from a misleading 540 filesystem files to 412 tracked Lean files; the unique hash count happened to remain 346 because the ignored copies duplicated tracked bytes.
+
+| Corpus | Active in a build plan/import closure | Tracked references only | Absent from both tracked repositories |
+|---|---:|---:|---:|
+| Broad bundle | 73 | 135 | 1,586 |
+| Recent material | 23 | 108 | 353 |
+| Union | 83 | 226 | 1,777 |
+
+These are exact-byte classifications, not semantic equivalence judgments. A rewritten theorem can be present with different bytes; an old obsolete version can be absent without any capability loss. Family counts overlap because packages carry shared dependencies.
+
+Comparison checkpoints were local tracked HEADs `69ad4d6a66c5826d77013c33afeb40b7a1a90639` (RH; 412 Lean files, 346 hashes, 89 active paths) and `b9fadffe5f4430dc39c27813b69f1c704404626f` (GRH; 27 Lean files, 27 hashes, 26 active paths). Both had no tracked modifications at inventory time. These identifiers are provenance for the local comparison, not a claim about remote GitHub HEADs.
+
+## Families requiring substantive review
+
+The largest uncovered source families include native Mellin/candidate bridges, angular master and cutoff chains, QQRH finite-radius anchors, Taylor/Stirling/small-o constructions, AWPI literal/sieved/dyadic constructions, signed-Bernstein and pointwise SOLOBOLO variants, and the newly recovered finite-witness/STURMION packages. The family inventory gives exact per-family overlap without treating these branches as proofs of RH.
+
+Several mature GP/Rodrigues pieces already are active: the `KQ_GP_BKQR_HILBERT_SOLOBOLO_REAL_RODRIGUES_NORMALIZATION` family has 51 hashes, of which 48 are active and three are tracked references. Direct-versus-recursive and explicit Mersenne-trace results must not be reported as omitted merely because an archive also contains them. `inventory-repo-coverage.json` retains both active and reference paths for such matches.
+
+Use the mathematical reviews alongside these counts: `grh-review.md`, `awpi-paper-review.md`, and the SOLOBOLO, GP, and equivalence reviews distinguish genuinely additional bridges from restatements and unresolved analytic inputs.
+
+## Historical native evidence
+
+The expanded scanner includes `LEAN_EXIT`, `LEAN_INVOCATION`, `AUDIT_POLICY_PASS`, and printed-axiom records, not only generic PASS text. It locates 1,089 candidate occurrences: 1,017 runtime-log occurrences representing 920 distinct log hashes, plus 24 distinct historical status-record hashes. Candidate counts include partial runs, failures, duplicates, and metadata; they are not successful-build counts.
+
+Within those logs, 31 distinct files have build-PASS markers, 28 print an explicit native Windows Lean compiler version, and 748 distinct prepare logs report `LEAN_EXIT=0` followed by a successful source-file comparison. All 748 link to included run-local Lean source copies, covering 157 distinct source hashes. Thirty such occurrences also have adjacent passing audit-policy output. This is meaningful historical source-linked evidence. It does not certify a complete dependency/toolchain hash closure, and it is not a fresh replay.
+
+For example, the focused `D156` checkpoint contains the actual six-declaration `NativeRRBinding`/`NativeRRPrefix` axiom audit, a successful prepare log, the run-local source copy, and matching expected/actual audit receipts. The bundle occurrence IDs are 7852 for the audit and 7853 for its prepare log; all linked hashes and paths are in `inventory-source-anchors.json`. This evidence supports the scope of those particular historical declarations, not an unconditional RH theorem.
+
+Conversely, the angular FIX1 snapshot contains a native build-PASS log alongside older status metadata saying compilation was not run for FIX1 and a previous revision failed. That is a concrete reason to preserve log/source distinctions and the collector's non-atomicity caveat.
+
+No fresh native compiler execution was performed. No complete source/dependency/toolchain hash-bound replay was verified. The recent 52 ZIPs contain no runtime-log candidates under the same scan; their source/status notices are not substituted for execution receipts.
+
+## Reproducible indexes
+
+- `inventory-files.json`, `inventory-archives.json`, `inventory-families.json`, `inventory-skipped.json`: bundle occurrences, archive chains, hashes, family coverage, exclusions.
+- `inventory-summary.json`, `inventory-repo-coverage.json`: tracked-repository scope and every matching repository path.
+- `inventory-recent-files.json`, `inventory-recent-archives.json`, `inventory-recent-summary.json`, `inventory-recent-repo-coverage.json`: separately materialized additions, without changing bundle-only counts.
+- `inventory-native-receipts.json`, `inventory-source-anchors.json`, `inventory-evidence-summary.json`: candidate logs and source-copy linkage, with explicit limits on evidence strength.
+- `inventory-build.py`, `inventory-recent.py`, `inventory-evidence.py`: read-only reconstruction scripts; none executes Lean or modifies a repository.
+
+
+APPENDIX 2: SOLOBOLO ACTUAL-DATA SOURCE REVIEW
+Review file: solobolo-review.md
+SHA-256: ba153a991d8e7758016e66ca6f4a2e27cae69968ed9fa4063ab827f444f79cb4
+
+# SOLOBOLO reinference, source assessment — 2026-10-25
+
+**Verdict:** the broader project contained substantial additional local-pole, signed-Bernstein/mode, Wall/Jacobi, formal Stieltjes, and regularized downward-positivity work. Several source files are missing from the current repository. The strong MERGER05 direct/recursive Widder and Mersenne trace results, however, are already in its active build. None of the inspected branches supplies the requested terminating finite checker with both actual-RH soundness and completeness, or a derivation of its complete induction input.
+
+This is a source audit. No Lean compiler was run. The terms “derived” and “proof” below describe displayed Lean source terms, not a new native validation result. The inventory identifies hashes and archive occurrences; version labels and historical `STATUS` claims are not native receipts.
+
+## Three inspection passes
+
+1. Recovered five specifically remembered later packages and seven related continuant/mode packages from `RH_REVIEW_BUNDLE_18679_14231_11714.zip`; inspected their actual definitions and endpoints rather than package names. Recovery is in `reinference/solobolo_sources/`.
+2. Followed the strongest endpoints backward to the actual xi normalization, regularity, infinite quantifiers, and open analytic predicates. Searched the complete deduplicated bundle's 1,794 unique Lean sources for later discharge of `ActualLocalPoleForcesDirectNegativity`, `ActualModeBranchObstruction`, `CofinalMersenneXiCayleyTraceConvergence`, and `RealZetaNegativeUnitInterval`.
+3. Compared source hashes and declaration names against the current repository, separating already-active results, archived endpoints with missing dependencies, and genuinely absent source bodies. This prevented incorrectly counting MERGER05 as lost work.
+
+`solobolo-coverage.json` records the selected package comparisons against **only `git ls-files` tracked Lean sources**. Its `matching_tracked_repo_sources` lists every tracked matching path; `matching_repo_source` is a compatibility field containing one such path, not an active-build designation. A separate declaration/build inspection supplies the active classification here. Repeating the selected-package comparisons with this tracked-only restriction left their counts unchanged.
+
+## Already retained: actual Widder induction is stronger than a generic recurrence wrapper
+
+The entire MERGER05 v0.23.0 snapshot has 17 Lean files and all 17 have identical copies in the repository. In particular:
+
+- `Bridge/XiWidderIdentification.lean:106`: `XI_WIDDER_DIRECT_EQ_RECURSIVE_ON_REGULAR_ANCHORS` identifies independently defined actual direct derivatives with the recursive Widder tower at every order, on `a > 0` with `xiRealSlice (sqrt a) ≠ 0`.
+- The same file:121 and :131 derives regularity at `a = 1/4` from the exact entire-xi normalization and proves all-order direct/recursive equality there without an external nonvanishing premise.
+- `Bridge/ExplicitMersenneReadout.lean:98`: `MERSENNE_XI_CAYLEY_TRACE_AND_CHANNEL_ANALYSIS_IMPLY_RH` concludes native Mathlib RH from actual-xi cofinal trace convergence and actual off-line channel analysis. Its direct-xi version needs no separate all-positive-anchor regularity premise.
+- These are active source files, selected in `RHFinal/GP/KQAudit.lean`, and the direct/recursive theorem is exposed by `RHFinal/GP/KQEndpoints.lean:38`.
+
+Thus it would be incorrect to report that the current repository only knows a formally manufactured tower. It already contains a source derivation of the actual direct-to-recursive transition on the explicit regular locus. What it does not derive is a finite certificate's actual GP/trace convergence and off-line channel input.
+
+The source comment in `Core/EntireXiWidder.lean` describing direct/recursive equality as “remaining” is superseded by the imported `XiWidderIdentification` proof. Treat the complete import chain, rather than stale lower-file prose, as evidence.
+
+## Additional work genuinely absent or incompletely preserved
+
+| Branch | Concrete source result | Exact remaining condition / limitation | Current-repository coverage |
+|---|---|---|---|
+| MERGER04 actual local pole v0.4.1 FIX1 | `Migration/ActualLocalPoleBinding.lean:66,91`: one literal off-line nontrivial zeta zero yields an actual interior simple Cayley pole; hence failure of native RH yields that pole certificate. `Merger02/ActualPoleLocation.lean` derives the expanding inverse radius, and `Merger02/LocalPole.lean:141` derives the principal part from finite analytic zero order. | `ActualLocalPoleForcesDirectNegativity` remains an argument. A local pole is not by itself a proved eventual-negative actual-Widder coefficient theorem. | 16/28 snapshot Lean hashes retained. The top conditional `USForwardLocalPole07.lean` is archived, but `ActualLocalPoleBinding.lean` is absent. |
+| MERGER04 real-zeta sign/downward v0.6.0 | `Analysis/RealZetaSignReduction.lean:49,78` reduces positive-axis xi nonvanishing to real `ζ(s)<0` on `(0,1)`. `Migration/RegularizedEulerAssembly.lean:19` derives smoothness/recurrence control internally from nonvanishing and endpoint limits; downward positivity follows. | `RealZetaNegativeUnitInterval` and `RegularizedWidderEndpointLimits` are explicit inputs. The former is a classical sign theorem, but no proof of that leaf occurs in this branch. | 0/13 snapshot Lean hashes retained. |
+| Signed Bernstein MERGER03 mode radius | `Derivations/WeakModeRadius.lean:55,80`: weak-energy boundedness gives absolute convergence of the Legendre-mode power series throughout the unit disc, including the actual-xi specialization. | `ActualWeakEnergyBound` remains an input. | 7/45 mainline snapshot Lean hashes retained; `WeakModeRadius.lean` absent. |
+| MERGER03 mode-branch geometry overlay | `Derivations/ModeBranchGeometry.lean:132,152`: a right-half-plane xi zero yields its canonical interior Cayley root, satisfying the displayed channel quadratic. | `Derivations/ModeRadiusClosure.lean:35` still needs both `ActualWeakEnergyBound` and `ActualModeBranchObstruction` to imply native RH. The analytic nonsummability obstruction is not proved by the geometry. | Both new overlay Lean files absent. |
+| Continuant/Wall/Jacobi branch | `Bridge/WallJacobiContraction.lean:78,100` gives explicit finite square decompositions for `I−J` and `I+J`; :121,135 derives their nonnegativity for a Wall parameter chain in `[0,1]`. | For actual Widder coefficients, placement of all Wall parameters in `[0,1]` uses `ActualWidderKQFiniteCellCertificate` plus positive continuant denominators. This is not a supplied finite-code certificate. | `WallJacobiContraction.lean` absent. Latest uniform-depth v0.19 snapshot has 4/37 hashes retained. |
+| Formal Stieltjes stripping | `Bridge/StieltjesStripping.lean:45,130,157` derives exact one-step and all-depth formal S-fraction reconstruction for the stripping-defined lambda. | Initial constant coefficient is 1; all stripping first coefficients must be nonzero. This does not establish positivity, analytic convergence, or all-depth equality with determinant-defined Wall lambda. Only depth-one equality with that lambda is shown at :191. | `StieltjesStripping.lean` absent. |
+| GP u=1 completion bridge | `Bridge/GPUOneCompletion.lean:56`: completion of the literal canonical AWPI u=1 GP slice equals the actual xi normalization at every shifted nontrivial zero `ρ+1`, with prefactor/gamma nonvanishing discharged there. | A normalization identity at these shifted points; not an all-anchor GP Hilbert isometry or a proof of actual moment contractivity. This branch's xi normalization is the raw doubled `s(s−1)Λ(s)`, so normalization/migration must remain explicit. | `GPUOneCompletion.lean` absent. |
+
+These are additional reusable constructions, not merely newly named RH-equivalence aliases. The package counts are file-coverage counts and overlap heavily; they must not be added and advertised as independent results.
+
+The older continuant/Wall family defines `actualXi s = s*(s−1)*completedRiemannZeta s` with totalized pole values. It must not be silently identified globally with the repaired entire xi: the endpoint value at `s=1` (positive anchor `a=1/4`) is different. The local-pole and regularization branches explicitly address that migration. Generic square/formal-series lemmas remain reusable, but transporting the older actual moment predicates requires the displayed migration theorems.
+
+## Exact forward frontier improvement in the local-pole branch
+
+The old global forward route required constructing channel peak data containing a finite dominant cluster, a countable complement, a summable envelope, phase tuning, and exact moment reconstruction. The later local-pole route source derives the actual zero selection and local meromorphic pole factorization, then records:
+
+```lean
+def ActualLocalPoleForcesDirectNegativity : Prop :=
+  ∀ P : ActualXiInteriorSimplePole,
+    ∃ K : ℕ, ∀ n : ℕ, K ≤ n →
+      ∃ a : ℝ, a ∈ xiRegularAnchors ∧ xiWidderDirect a n < 0
+
+theorem FROZEN_US_IMPLIES_RH_FROM_LOCAL_POLE
+    (hlocal : ActualLocalPoleForcesDirectNegativity)
+    (hUS : NativeSoloboloContinuant.ActualCofinalUniformDepthPositive) :
+    _root_.RiemannHypothesis
+```
+
+That is a meaningful reduction: the final interface no longer demands a global zero enumeration or a summable global channel envelope. It still assumes the actual local pole-to-negative-coefficient theorem. Every occurrence found later in master/angular packages keeps this predicate as an argument; no discharge was located in the full bundle.
+
+The existing equivalence catalog's source text already mentions the conditional local-pole endpoint. The additional recovery is its missing upstream actual-data derivation and clearer location in the frontier, not a newly discovered unconditional RH theorem.
+
+## What “finite” does and does not mean in these sources
+
+The retained MERGER05 structure `FiniteCayleyDefectSystem` has
+
+```lean
+dim : ℕ → ℕ
+eigenvalue : (M : ℕ) → ℝ → Fin (dim M) → ℝ
+nonnegative : ∀ M a i, 0 ≤ eigenvalue M a i
+contractive : ∀ M a i, eigenvalue M a i ≤ 1
+```
+
+Its readout at each `M,a,k` is a finite sum. The system itself contains functions and universal proof fields; it is not a finite rational AST with a terminating Boolean checker. Its convergence input is
+
+```lean
+∀ K : ℕ, ∃ k : ℕ, K ≤ k ∧
+  ∀ a : ℝ, 0 < a →
+    Tendsto (fun M => cayleyTracePower S k M a) atTop
+      (𝓝 (xiWidderMoment a (2^k - 1)))
+```
+
+The finite trace's sign is derived, but this actual-data limit is still assumed. No theorem found derives that limit from one finite certificate.
+
+Likewise `ActualWidderKQFiniteCellCertificate` fixes the actual Wall sequence, which is useful progress, but stores `finiteSquare : Nat → ℝ → Nat → ℝ` and a universal finite-cell identity for every positive real anchor, positive depth, and cutoff. It is not the requested finite executable witness.
+
+The old `US_IFF_MATHLIB_RH_05` carries three explicit analytic arguments: downward positivity, Stieltjes slit exclusion, and `RH →` all-depth Widder positivity. Its name cannot be read as an unconditional equivalence. The repaired downward branch reduces part of one argument to explicit standard-analysis leaves, but does not complete the other two.
+
+## Receipt and search limits
+
+Selected snapshots contain source declarations, `#print axioms` commands, source-dump “logs”, `AUTHOR_CHECKS` static checks, and historical notices such as `CENTRAL_CELL_NATIVE_PASS_FROM_USER=YES`. These do not supply a fresh source-hash-bound compiler receipt for the new recovery. No selected source was compiled here. Historical user messages with native output, if independently recovered by the parent audit, can support narrower historical validation claims.
+
+The complete deduplicated bundle search found no theorem discharging the four named frontier predicates. That is evidence about the recovered bundle, not proof that no stronger result ever existed elsewhere. The bundle has no `STURM`-named snapshot/archive, and no `FINITE_WITNESS`-named snapshot/archive; the three separately recovered finite-witness packages remain separate evidence already audited in repository `docs/SOLOBOLO_AUDIT.md`.
+
+## Recovery priority
+
+1. Preserve the missing actual local-pole import chain and real-zeta/downward branch with original hashes and normalization notes. This gives the clearest improvement over the current repository's incomplete archival endpoint.
+2. Preserve the signed-Bernstein mode-radius and geometry chain, then Wall/Jacobi/Stieltjes and GP completion modules as distinct historical branches. Common module names collide; do not simply combine their roots in the default build.
+3. Retain MERGER05 as already active and improve any summary that understates its actual direct/recursive identification. Continue to mark finite witness input reduction, exact actual convergence, channel/local-pole negativity, and completeness as separate open obligations.
+
+## Representative source hashes
+
+| File | SHA-256 |
+|---|---|
+| `Migration/ActualLocalPoleBinding.lean` | `a9f4f52786f89cbf9c9cc2b298f410529bbce556695f1c44b824a9ecf818f382` |
+| `Bridge/USForwardLocalPole07.lean` | `98547e3a34358759159c74f4977716543700aa69ba4638c0104b4b6a3bef9b4b` |
+| `Analysis/RealZetaSignReduction.lean` | `fac858df9397aefa0b5e690f4648f6dc8ec7218ff4d930ce264d60349f908739` |
+| `Migration/RegularizedEulerAssembly.lean` | `e4faeb08f9fdf0650eb32e04c7941ac6d2c42e05c4f9563ec171128325044f4f` |
+| `Derivations/WeakModeRadius.lean` | `1c464567180dca64312693a04def3bc7509e7c5d166adc6d84567990f83ff284` |
+| `Derivations/ModeBranchGeometry.lean` | `f12c037890a878d37870379b4558705c22a07359f5529b658db024deffdb35a6` |
+| `Bridge/WallJacobiContraction.lean` | `c31a6abfe1f5c7a3f2c35c8db6de5e94ca4518fbfeff2a3e1550554fe7f53553` |
+| `Bridge/StieltjesStripping.lean` | `64ae41c76714251e4f33073dc64bea1eb712d37ec91185074f4f8a5850790deb` |
+| `Bridge/GPUOneCompletion.lean` | `fb05e56f35ea4c05762fd8959ce48aee46bbe7c99fadfd2eb78bb3ffb6fcf53c` |
+| retained `Bridge/XiWidderIdentification.lean` | `e63e9ea4da8f1b12ef977343dfeb985433d2d024e9b202595f45cabc529c6f29` |
+| retained `Bridge/ExplicitMersenneReadout.lean` | `0a208571ed56566a5bbffc54d26334c976379d1884ea9bc5adf1f36d013ce297` |
+
+
+APPENDIX 3: LATER SOLOBOLO FINITE-WITNESS FAMILIES
+Review file: new-solobolo-finite-review.md
+SHA-256: 6b5928d1b72f60210d22936678f3178e4a903b1eb93f9596a4249dbd3c9a921a
+
+# Additional Library recovery: SOLOBOLO finite-witness branches
+
+This supplements `solobolo-review.md`. The final retrieval found 20 additional SOLOBOLO ZIPs outside the large review bundle. They were extracted under `reinference/new-solobolo-finite/`; STURMION is reviewed separately by another agent. Comparison with tracked repository sources yields **200 unique Lean source hashes across these 20 ZIPs, 127 absent from the tracked repository**. Repeated version packages do not represent independent mathematical results. See `new-solobolo-finite-coverage.json`.
+
+No compiler was run. All findings below concern exact source terms and declarations.
+
+## Latest v1.0.2: useful finite-code architecture, no finished RH checker
+
+`SOLOBOLO_FINITE_WITNESS_IFF_RH_GOODWORKFLOWFRONTIER_v1_0_2_REINFERRED_FASTCORE` has 73 Lean files, of which 67 source hashes are absent from the tracked repository. Its `FiniteIff/Specification.lean` defines an actual finite payload:
+
+```lean
+inductive Packet where
+  | rationalSpectrum (w : WitnessSolobolo.FiniteWitness)
+  | certificateCode (bytes : List Nat)
+```
+
+It then parameterizes a future `check : Packet → Bool`. The existing executable `seedOnlyChecker` is explicitly kept separate. The main theorem has exactly five substantive gates:
+
+```lean
+theorem FINITE_WITNESS_IFF_NATIVE_RH
+    (check : Packet → Bool)
+    (hSound : CheckerSoundness check)
+    (hComplete : CheckerCompleteness check)
+    (hHadamard : SoloboloTrace.RHPositiveProductBridge)
+    (hFredholm : SoloboloTrace.ActualFredholmBridge)
+    (hGeometry : SoloboloTrace.NativeThetaGeometryBridge) :
+    FiniteWitnessIffNativeRH check
+```
+
+The induction variant replaces Fredholm/zero geometry by `ResolventToActualRows` and `ActualEnergyPoleExclusion`, retaining soundness, completeness and the RH-to-positive-product bridge. Thus it does not derive the actual induction input from the finite packet.
+
+New useful architecture includes:
+
+- `DecodedActualSoundness check decode`: every accepted packet must calibrate the **specific decoded** positive summable spectral sequence to actual xi. This is more informative than simply asserting an unrelated existential admission, but the decoder/calibration are not constructed.
+- `SeedFirewall.lean`: proves that the finite seed checker accepts a trivial packet, and therefore identifying that seed checker with RH would already prove RH. It prevents substituting model positivity for actual calibration.
+- `QuantifierFirewall.lean`: explicit example of `∀ n, ∃ w, StageFits n w` while `¬ ∃ w, ∀ n, StageFits n w`, preserving the required one-witness quantifier order.
+- Actual-source admission is a positive summable diagonal trace resolvent matching the literal actual logarithmic derivative on **every positive real parameter**. This is an infinite analytic condition, not a finite sample check.
+
+The package's `GOODWORKFLOWFRONTIER_REINFERRED_v1_0_2.txt` expressly states that a fixed full RH certificate checker has not been implemented and the five gates remain open. This agrees with the source types.
+
+## Additional finite algebra and GP estimates in v1.0.2
+
+The recovered package has more reusable work than the conditional theorem assembly:
+
+| Source result | What it derives | What it does not derive |
+|---|---|---|
+| `TraceClass/BernsteinRows.lean:79,86`, `checked_row_energy_bound`, `checked_linear_energy_bound` | One checked finite positive rational spectrum yields nonnegative Bernstein rows of fixed mass and an all-depth linear row-energy bound. | Calibration of those model rows to actual xi rows. |
+| `SoloBoloWitness/PolynomialSOS.lean:38`, `checkPolynomialSOS_sound` | Exact rational polynomial SOS equality certifies the polynomial bound on the entire real interval `[0,1]`. | That the polynomial is an actual xi/GP analytic residual. |
+| `SoloBoloWitness/DifferenceEnvelopes.lean` | A terminating rational envelope check; a separately named actual-row enclosure condition. | Actual derivative enclosure or universal calibration from the numerical packet. |
+| `GP/CubicToAbel.lean:75,97` | A universal cubic shell estimate yields an Abel debit and Q4 budget with constant `14*C`; the scalar constant is sharp at the first index. | The universal estimate for actual odd-zeta shells. |
+| `GP/PrefixFourth.lean:67,174` | Cubic prefix mass bounds yield the weighted fourth-order budget `≤ 4*B`, including an actual odd-zeta-shell specialization. | The all-prefix actual bound itself. |
+
+`GP/FullEndpoint.lean` still needs actual-xi-to-GP gap comparison, a GP budget/debit premise, and the actual energy spectral bridge. These estimates sharpen and reorganize the induction input; they do not close its actual finite reduction.
+
+## v0.2.3: a genuine additional native RH equivalence, but proof-carrying witness soundness
+
+`SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_2_3_GOODWORKFLOW_CACHED_MATHLIB` contains a stronger analytic endpoint than its filename alone suggests. `SoloboloAdmission/NativeODE.lean` defines
+
+```lean
+def SlitODEAdmission : Prop :=
+  ∃ A : ℂ → ℂ,
+    AnalyticOnNhd ℂ A Complex.slitPlane ∧
+      ∀ z ∈ Complex.slitPlane,
+        deriv AWPIRH.theta z + A z * AWPIRH.theta z = 0
+
+theorem slitODEAdmission_iff_RH :
+    SlitODEAdmission ↔ _root_.RiemannHypothesis
+```
+
+This is an unconditional source-level equivalence for the actual Mathlib-backed entire theta, using the imported actual zero-geometry equivalence. RH gives `A=-theta'/theta`; the converse uses finite analytic zero order to exclude zeros of the actual entire theta wherever a holomorphic homogeneous first-order ODE holds. No rational positive-spectrum or finite-program realization is proved by this theorem. This exact declaration is not present in the current tracked equivalence catalog.
+
+Its normalization is `xi(s)=(1+s*(s−1)*completedRiemannZeta₀(s))/2`, `centeredXi(w)=xi(1/2+w)`, and `theta(z)=centeredXi(Complex.sqrt z)`. This is the repaired entire xi, including values `1/2` at 0 and 1. The cut domain is `Complex.slitPlane`, excluding the nonpositive real axis. The argument uses `AWPIRH.theta_entire`, `AWPIRH.theta_one_ne_zero`, and `AngularMaster.native_RH_iff_theta_zeros_nonpositive`. It imports `AngularMaster.ZeroGeometry`, `AWPIRH.AnalyticODE` and Mathlib. These imported project dependencies are not bundled in the small v0.2.3 overlay; the broad corpus supplies them. A correct late `ZeroGeometry` variant is needed (`a2a155d8584f3682c4a48f4b8f0c9fdd1473c25ed4934c448f5015a4647361df` or `2d76bb505b1aa7f385d1e384c5b199877698abf7aee2659b4b1c1b71d21f6cdf`); the older `b0812a3b...` variant lacks that equivalence. This source recovery is not a compilation of the assembled dependency chain.
+
+`NativeResidual.lean` also derives native RH from an actual rational-resolvent residual limit. However, the apparent “finite witness” soundness theorem must be read with its structure expanded:
+
+```lean
+structure FiniteProofWitness where
+  program : FiniteProgram
+  calibrated : AnalyticCalibration program
+```
+
+`AnalyticCalibration` contains a holomorphic coefficient on the entire slit plane, convergence of the rational program's resolvents to that coefficient at every slit point, and actual theta residual convergence to zero there. `finiteWitness_sound (W : FiniteProofWitness) : RH` therefore **does not prove that a Boolean checker derives those analytic conditions from finite code**. They are proof fields in the witness. No inhabitant is supplied. The reverse direction needs `ActualXiCalibrationOfRH G` for a fixed generator, or the explicitly open fixed/RH-dependent realizability condition.
+
+This distinction is directly relevant to the user's instruction that the induction input must be derived and reduced to a finite witness: the proof-carrying formulation records what such a proof would contain, but does not supply that derivation.
+
+## v0.3.1 FAST16: concrete actual moments, three open bridges
+
+`SoloFinite/ActualXiTransfer.lean` retains a finite rational payload but a parameterized `checkRH`. Its native-RH iff needs:
+
+1. accepted code implies the actual xi Chebyshev gate admission;
+2. `ActualXiPoleDetector` supplies actual off-axis pole/coefficient growth;
+3. native RH supplies one accepted finite code.
+
+The actual mass/beta functions are defined, which is useful binding progress, but these three arguments remain explicit. The algebra-only checker is not identified with the RH checker. `SoloEndpoint/XiGateBridge.lean` also needs an RH-to-Chebyshev bound for the two-way analytic admission equivalence.
+
+## What changed in the overall assessment
+
+The additional retrieval confirms **more constructions and another actual analytic RH criterion** than the current repository preserves. It strengthens the evidence for reusable finite algebra and clearer actual-source interfaces. It does not change the conclusion about the still-open finite-checker soundness/completeness and actual induction-input reduction.
+
+Representative SHA-256 hashes:
+
+- v1.0.2 `FiniteIff/NativeEndpoint.lean`: `b848d3327a37483ad48568f78597c748005ecccdcf53016347116dce87e2c964`
+- `FiniteIff/DecodedSoundness.lean`: `2ae9f41b874c2efe1341d4ae3dcce009b3cacbfd0dd31bd7d5d51917d904ba89`
+- `TraceClass/BernsteinRows.lean`: `677563df272c49e174b5529d1e16a07ef5716d4cc045f6a158185b907ecda483`
+- `GP/PrefixFourth.lean`: `731557e0a831a6d59133eb67bd946826f86fb75a5b0bb3298012e8a42f2430c7`
+- `GP/CubicToAbel.lean`: `085022136a7ecd74a8e80267ed751ce966751258ee75c1cc657b6d026334a5b0`
+- v0.2.3 `SoloboloAdmission/NativeODE.lean`: `554667603de88d116d8455b3db517ea6258ff91acf4c4a557a3da3be298f254e`
+- v0.2.3 `SoloboloAdmission/FiniteWitness.lean`: `70afdd2694bea4c9c9640120ea2dddcbe941b886e4c46cb370ebd7f7cb1e92f4`
+
+
+APPENDIX 4: STURMION FINITE-CODE AND INDUCTION REVIEW
+Review file: sturmion-review.md
+SHA-256: 287f750ec645f42295a50efa177f1d7ebd24d45dd77284e2763403a1d8b5b9c0
+
+# STURMION finite-witness reinference: source review
+
+Status: **SOURCE_REVIEW_ONLY; NATIVE_NOT_RUN.** Review date: 2026-10-25. Original Lean sources were not changed. This review inspects the newly recovered STURMION packages, including the separate v0.10 finite-calibration branch, rather than extrapolating from the older bundle.
+
+The new sources contain useful constructive finite algebra, actual odd-zeta finite calibration, and a derivation of all signed-difference positivity from stagewise spectral convergence. The v0.13 headline finite-witness/RH equivalence is a conditional specification: it has no concrete RH checker, no proof of that checker's soundness or completeness, and no accepted RH witness. Three independently reviewed source issues also prevent treating its displayed theorem headers as native-verified declarations.
+
+## Provenance and comparison
+
+Latest archive: `reinfer_library_sources/IRRATIONALITY/STURMION_FINITE_WITNESS_IFF_RH_v0_13_3_GOODWORKFLOW_CACHED_MATHLIB.zip`, SHA256 `5eac041bb2ac52a764f956cf7f4fa9cdb674009760fb9061a3a0f9dc24a43239`. Text extraction is at `reinference/sturmion_sources/v0_13_3/`; all paths below are relative to that directory unless prefixed v0.10.
+
+`reinference/sturmion-source-comparison.json` records each project source hash and cross-version/repository comparison. All **64 project Lean sources are byte-identical across v0.13.0, v0.13.1, v0.13.2 and v0.13.3**. The two auxiliary cached-Mathlib facade/probe files are not included in that project-source count. The 60 v0.12.0/v0.12.1 sources are unchanged in v0.13.3; v0.13 adds `FiniteWitnessGoal`, `RuleCheckerSoundness`, `SeedCounterexample` and `FiniteWitnessMainV13`. The 56 v0.11 sources are unchanged in the later branch. v0.10 has a distinct 38-module `Solobolo/*` tree, not a path-preserving earlier version of these 64 modules.
+
+At the comparison snapshot, 34 of the latest 64 source hashes were already git-tracked in `Riemann-Hypothesis-Final`: 10 in its full build plan, 24 only as archived references. Thirty hashes were absent from tracked sources. The 10 active identical modules are `FiniteWitness/{PositiveSyntax,GPMoments,FiniteSpectrum,TraceInduction,UniversalRecurrence,GramFactor,NativeXi,FiniteLayers,TelescopicSpectrum,FiniteDebit}`. This distinguishes missing bytes from present-but-inactive sources; it does not imply all recovered checker mathematics was previously absent.
+
+## Exact v0.13 endpoint and open inputs
+
+`STURMION/FiniteWitnessGoal.lean:20` defines the raw finite code as `List ℕ`, with no proof, function or analytic fields. Its checker is a variable, not an implemented function. The displayed header at line 82 is:
+
+```lean
+theorem finiteAccepted_iff_nativeRH
+    (check : FiniteWitnessCode → Bool)
+    (hProduct : RH_CANONICAL_PRODUCT_TRACE_BRIDGE)
+    (hExplosion : OFFLINE_WIDDER_EXPLOSION_FRONTIER)
+    (hSound : FiniteCheckerSound check)
+    (hComplete : FiniteCheckerComplete check) :
+    FiniteAccepted check ↔ _root_.RiemannHypothesis
+```
+
+Here the exact definitions are:
+
+- `FiniteAccepted check := ∃ w : List ℕ, check w = true` (line 23).
+- `FiniteCheckerSound check := ∀ w, check w = true → HypotheticalStageAdmission` (line 29).
+- `FiniteCheckerComplete check := HypotheticalStageAdmission → FiniteAccepted check` (line 35).
+- `RH_CANONICAL_PRODUCT_TRACE_BRIDGE` is RH implying a positive infinite spectrum with all-positive-anchor/all-depth convergence to **actual** central Widder moments (`RHDownstream/CanonicalProductInterface.lean:32`). This analytic binding is defined as an open proposition, not proved.
+- `OFFLINE_WIDDER_EXPLOSION_FRONTIER` is `¬ RH → ∃ b > 0, ∀ C, ∃ p, C < actualCentralWidder b p` (`Bridge/ActualTraceEndpoint.lean:20`). It too is an open proposition.
+
+The forward implication needs soundness, explosion and an accepted code. The reverse needs RH, the canonical-product bridge and finite compression/completeness. Defining `FiniteCheckerSound` is not proving it. No concrete `List ℕ → Bool` with these soundness/completeness properties, finite-code decoder for these properties, bounded RH witness enumerator, or accepted RH code is constructed in the reviewed 64 modules. The source's own comments explicitly acknowledge this.
+
+`STURMION/RuleCheckerSoundness.lean` provides a more informative factorization:
+
+```lean
+FiniteRuleSound check P :=
+  ∀ w, check w = true → P 0 ∧ (∀ n, P n → P (n + 1))
+FiniteRuleActualXiRealization P :=
+  (∀ n, P n) → HypotheticalStageAdmission
+```
+
+`checked_rule_propagates` (line 28) applies genuine natural-number induction; `rule_sound_implies_checker_sound` (line 38) composes it with actual-ξ realization. The displayed `checked_rule_finiteWitness_iff_nativeRH` header (line 60) still requires `hProduct`, `hExplosion`, `hRule`, `hRealize`, and `hComplete`. Neither a concrete invariant/checker nor the universal rule certificate and its actual-ξ interpretation is supplied. The induction transition is correctly isolated as a uniform proposition; its required input is not yet derived from checked raw finite data in this branch.
+
+## What v0.12 really derives
+
+`STURMION/FiniteStageAdmission.lean:27` defines admission by functions `dimension : ℕ → ℕ` and `scales : ℕ → ℕ → ℝ`, positive at each finite stage, whose finite traces tend to `actualCentralWidder a n` for every positive anchor `a` and every depth `n`. Thus each stage is finite, but the admission object contains infinite functions and universal convergence; it is not one finite witness.
+
+The substantive theorem `stageAdmission_implies_momentAdmission` (line 38) proves all signed Hausdorff differences nonnegative. It first obtains finite-stage nonnegativity from the same positive spectrum, proves convergence of each finite signed-difference expression using `signedDiffReal_tendsto`, then passes the inequality to the limit. It does **not** assume the desired actual signed-difference positivity. `canonicalAdmission_implies_stageAdmission` (line 64) embeds ordinary fixed-spectrum truncations into this more general stage-dependent framework. `stageAdmission_iff_nativeRH` (line 83) still takes both analytic bridge hypotheses.
+
+`STURMION/FunctionalInductionV12.lean:26` transfers positivity via equality of two function sequences obeying one transition. Its base is equality of entire functions, not equality at one anchor. The actual specialization `hypothetical_base_function_implies_nativeRH` (line 49) retains `hExplosion`, full-function `hBase`, the actual sequence's uniform recurrence `hActual`, the model recurrence `hModel`, and model signed-difference positivity `hPositive`. In particular, it does not prove the differential recurrence for the actual central Widder sequence. `SeedCounterexample.lean` explicitly records equal first moments with different second moments, so this branch recognizes that a numerical seed alone cannot determine the induction tower.
+
+`STURMION/ZeroAdmission.lean:62` also contains the unconditional source theorem `zeroSpectralAdmission_iff_nativeRH`, derived from centered-square geometry of actual zeros. Its admission is a zero-geometric statement, not a finite-code existence theorem.
+
+## Implemented finite checkers and their exact scope
+
+| Source | Constructive content | Remaining boundary |
+|---|---|---|
+| `FiniteWitness/FiniteSpectrum.lean:35,65` | Finite witness fields are naturals, a finite rational-expression AST and a finite AST list; `checkSeed` decides finite-depth atom/mass bounds. | Only stages through `baseDepth` are checked. The certificate list is unused by this check; its accepted zero-spectrum example is explicitly not RH. |
+| `FiniteWitness/PositiveSyntax.lean` | Structural rational-expression checker proves nonnegativity for every level and slot; squares allow a nontrivial accepted expression. | Universal algebraic positivity, with no ξ calibration. |
+| `FiniteWitness/TelescopicSpectrum.lean:45,102` | A checked rational `c ∈ [0,1]` produces `qᵢ = c(1/(i+1)−1/(i+2))`; exact telescoping derives contraction and mass bounds at **all** layers. The nonzero sample `c=1/2` is accepted by `decide`. | This is real finite-to-universal progress, but the generated spectrum is not proved to represent actual ξ. |
+| `FiniteWitness/GramFactor.lean` | Finite rational matrix entry checking establishes a supplied Gram factorization. | Matrices are functions on finite indices, not a supplied `List ℕ` serialization/decoder; they are not automatically actual-ξ matrices. |
+| `FiniteWitness/RationalJetEnclosure.lean:158,167` | A finite rational program generates center/radius rectangles; one layer's denominator guards and factorial error budget are decidable. | Soundness separately assumes `ActualXiJetInside`. Checking the budget does not establish that the actual analytic jets lie in the boxes. |
+
+Additional inherited source proofs give finite trace induction, all-depth debit identities, anchor transport/mass bounds, complete monotonicity, and finite determinant derivatives/floors. These are worth retaining as mathematics. The literal corrected ξ and direct actual central-Widder definitions are present; this rules out dismissing the entire branch as an arbitrary model. What remains open is the claimed relationship between the accepted model certificate and those actual quantities. The alternative determinant-ODE endpoint likewise exposes actual ODE/zero-correspondence hypotheses instead of discharging them.
+
+## Distinct v0.10 branch: actual finite calibration progress
+
+Sources here are under `reinference/sturmion_sources/v0_10_0/Solobolo/`.
+
+`FiniteDualityChecker.lean:32` implements `checkFiniteDuality N`, a finite rational matrix-identity check. `checked_finite_duality_reconstruct` (line 59) derives reconstruction of any finite real sample vector from acceptance, with a small `N=3` diagnostic proved by `decide` in the source. This is an implemented algebraic verifier, not an unspecified soundness argument.
+
+`TriangularCalibration.lean:127`, `actualOddZeta_exact_triangular_calibration`, derives exact triangular interpolation for the actual odd-zeta readout at every finite sample index. Its coefficients come from a noncomputable real recursion on actual `oddLogReadout`, so this theorem does not itself produce a finite rational certificate.
+
+`FiniteLegendreCalibration.lean:26,76` specializes accepted finite duality to actual odd-zeta samples; `TriangularUniqueness.lean:56`, `checked_triangular_eq_legendre`, identifies the actual triangular innovations with normalized actual Legendre readouts below an accepted bound `N`. This is concrete actual-data coefficient identification, stronger than an arbitrary-model interpolation. Acceptance for one `N` does not establish the matrix identity for every `N`, actual coefficient positivity, or RH. The universal cubic shell bound and analytic Schwarz-tower existence/boundedness remain hypotheses in the later endpoint chain. `MainChainV10` adds finite contraction-packet/Gram positivity, without proving actual ξ spectral realization.
+
+## Static issues and native evidence
+
+Two reviewers independently traced these exact source issues. These are source-level blockers to investigate, not claimed compiler diagnostics:
+
+1. `Bridge/ActualWidderTwoSided.lean:30` applies `.1` to `allLevel_allRealAnchorTrace_le`. That referenced theorem (`FiniteWitness/RealAnchorMass.lean:168`) concludes one upper-bound inequality, not a conjunction. The required nonnegativity is available from the different conjunctive theorem `allRealAnchorTrace_bound`; the source calls the wrong result.
+2. `STURMION/RuleCheckerSoundness.lean:50,63` refers to `WitnessSolobolo.RHDownstream.OFFLINE_WIDDER_EXPLOSION_FRONTIER`. The actual declaration is `WitnessSolobolo.OFFLINE_WIDDER_EXPLOSION_FRONTIER`; no matching nested alias was found.
+3. `STURMION/FiniteWitnessGoal.lean:63,85,97` uses the unqualified explosion name while opening only `WitnessSolobolo.RHDownstream`. It needs the parent namespace opened or the name fully qualified. Imported file-local `open` commands do not supply that scope. Automatic implicit inference would not turn the undefined intended name into the required analytic declaration.
+
+A comment/string-aware scan of all 64 project modules found no `axiom`, `sorry`, `admit`, `opaque` or `native_decide` tokens in code, and all local project imports resolved in the extracted set (`reinference/sturmion-static-audit.json`). This is a static audit, not compilation or a transitive Mathlib axiom audit; explicit theorem hypotheses must still be checked.
+
+The v0.13.2 README embeds a reported October 24 log with `NATIVE_LEAN_433=READY`, `MATHLIB_CACHE=NOT_READY`, `FAILED_REASON=MATHLIB_FINGERPRINT_UNAVAILABLE`, and `LEAN_CHECKS=0/64`. This is source-embedded historical reporting, not a raw receipt independently verified here. v0.13.3 changes cache discovery/runner behavior and explicitly leaves the mathematical obligations open. No native test was run in this review.
+
+The appropriate next integration is selective: preserve the exact recovered sources and source hashes, repair/recheck the named source issues in a separate edited layer, retain the constructive finite checker/finite-calibration and stage-limit results, and keep the concrete actual-ξ rule soundness, realization, analytic bridges and finite compression as named open obligations. Neither the archive title nor the conditional iff supplies those proofs.
+
+
+APPENDIX 5: GP, RR, HILBERT AND NATIVE ANALYTIC BRIDGES
+Review file: gp-analytic-review.md
+SHA-256: 7b84401fc0af9281d1b3ec0a85af2b0a99441924525574a6fee3f3df3f0d4333
+
+# GP, RR, Hilbert and native analytic reinference
+
+Read-only review, 25 October 2026. No Lean, Lake or Windows runner was executed. “Historical native accepted” below describes supplied Windows logs, not a new validation. Comparison with the current repository uses `git ls-files`; ignored extracted copies are excluded. Corpus paths and full hashes are in `inventory-files.json`. Source-only discoveries are not promoted to compiled results.
+
+## Main correction
+
+The project contains substantially more actual analytic work than the active GP graph exposes. D152 evaluates the literal native density Mellin integral and identifies its completed xi germ. D153 identifies its entire recurrence/energy sequence with actual xi. D154 identifies those actual coefficients with a concrete complex Rodrigues jet. D156 constructs the actual RR zero-occurrence binding and its convergent defect, rather than merely assuming a generic zero model. Historical focused native logs support all four steps. **D153 and D156 are already tracked archival sources; D152 and D154 are missing from tracked source by exact hash.** None is in the active GP build graph.
+
+Nevertheless, no reviewed source closes the native RH endpoint, supplies a finite induction input, or identifies the RR Hilbert realization with the independently defined literal GP/H_a construction. The newest candidate trigger reports N01, N02 and N03 all OPEN and CANDIDATE_ACCOMPLISHED=0.
+
+## 1. Exact-debit GP ledger: genuine finite algebra, analytic realization still input
+
+Package `RH_GP_EXACT_LEDGER_ADAPTER_LEAN_v0_1_0`, `RHGPExactLedgerAdapter.lean`, SHA-256 `80be58dded8b44054fd158b31c4703d4aca51b1977ea7aa2935f1db574b04fbb`. Missing tracked; scratch copy `gp-selected/RHGPExactLedgerAdapter.lean`.
+
+Substantive declarations:
+
+| Declaration | Exact content and assumptions |
+|---|---|
+| `ExactDebitLedger` | Nonnegative storage S and payment p; the identity p_n+S_(n+1)=S_n is a field. |
+| `EXACT_DEBIT_PREFIX` / `EXACT_DEBIT_PREFIX_LE_INITIAL` | Finite telescoping sum p=S_0−S_N, hence prefix payment ≤S_0. |
+| `ledgerOfGPRealization` | Constructs a ledger from an arbitrary state, nonnegative energy, observation and step, **given** the identity 3|obs x|²+energy(step x)=energy x for every state. |
+| `ZERO_AND_JET_GIVE_EXACT_SECOND_PAYMENT` | Given that debit identity, obs(seed)=0 and obs(step seed)=3·jet, proves 27|jet|²+energy(step² seed)=energy(seed). |
+| `SIGNED_GRAM_ABSORPTION` | Under nonnegativity of Y,Vend,V,Q,Z,L,c,Z0,s, s²=L·Z0, Q≤L, Z≤cY+Z0, net²≤QZ and Vend+Y≤V+net, derives Y≤2V+2s+cL. |
+| `EXACT_LEDGER_PAYS_RESERVE_FLOOR` | Given max(R_n−R_(n+1),0)≤p_n at every n and strict S_0<R_0, derives the positive uniform floor R_N≥R_0−S_0. |
+
+These are useful explicit reductions, not a derivation of the actual inputs. The package README leaves PLUS_PASSIVITY_CORE open. It still needs the analytic GP boundary energy, obs f=f(1), the specific step `((u+2)f(u)−3f(1))/(u−1)`, and its debit law; actual Phi/xi jet readout; reserve-loss domination; and a strict initial margin. The legacy collision-opening datum permits an arbitrary gap and vanishing sequence and must be identified with the actual tracked xi pair before use.
+
+Evidence: README says source prepared/reviewed, NOT YET COMPILED. The tiny `run_556_32000` payment log and empty source-scan file are not a complete native pass for the adapter. No such pass was found in this targeted review.
+
+## 2. RI01 Taylor and determinant limits: actual local analytic results
+
+Missing tracked modules:
+
+- `GrandConditionalMerge/RI01NativeTaylorConvergence.lean` (v0.12): `0b61f6ea5be4ed8fbdbcb6f3f7918d8a0e311957f11b4944c289505fe493aaf3`.
+- `GrandConditionalMerge/RI01NativeHolomorphicBall.lean` (v0.16.1 CONTINUITY_FIX1): `8c9556a592a301b3090ad5f6e4bd017c132ac9613a9669a9cff31a53eda16b3d`.
+
+The later fixed versions also occur inside the `KQ_GP_BKQR_HILBERT_SOLOBOLO_ENDPOINTS_v0_1_3_FASTCORE_FIX1` snapshot. Their presence there is an archive occurrence, not evidence that the current active KQ source subset imports them.
+
+`RI01_ACTUAL_THETA_SCALAR_TAYLOR_HAS_SUM` proves, for every positive real anchor a, the actual slit-theta scalar Taylor expansion at a for sufficiently small complex displacement. `RI01_ACTUAL_THETA_FINITE_PREFIX_TENDSTO` gives convergence of the explicit Horner prefixes. `RI01_ACTUAL_LOCAL_CAYLEY_DETERMINANT_TENDSTO` applies that result to a pair of roots with sum 2a(1−2r), product a², under the two Taylor-sum hypotheses.
+
+The later layer proves `RI01_ACTUAL_DETERMINANT_UNIFORM_ON_SMALL_DISK`: for a>0, a sufficiently small r-disk admits uniform convergence of those finite determinants to the actual theta product. The geometric error is bounded through 3C²q^N with 0<q<1. `RI01_ACTUAL_DETERMINANT_HOLOMORPHIC_ON_SMALL_DISK`, `RI01_ACTUAL_DETERMINANT_HAS_HOLOMORPHIC_GERM`, and differentiability at zero follow. No RI01 research hypothesis is needed for this local germ. FIX1 repairs the explicit continuity proof for the root-displacement bound; it does not strengthen the domain.
+
+A further recovered native calibration is `RI01NativeSlitDerivative.lean`, hash `73a12fddd779b02194b907f7839c12cb5fc015fe95c1b4845ebbfc68417ec753`. Its `RI01_NATIVE_WEIGHTED_LOG_DERIVATIVE` identifies the actual real `xiR`, cast to complex, with the literal actual slit-theta logarithmic derivative at every positive regular anchor. The proof includes the real/complex square-root derivative normalization. This is stronger than the active `NativeBinding.actualLogDerivative_eq_native`, which only identifies two already literal complex quotient definitions by reflexivity. Both available RI01 source variants are absent tracked. No new kernel pass is claimed.
+
+The scope remains a small disk at r=0, not the whole unit disk or global slit plane. The sources expressly leave the all-depth actual Cayley/Widder coefficient identity and `RI01_NATIVE_IMP_RH` open. The latter appears as a goal specification, not a theorem. The separate `RI01_ACTUAL_WIDDER_DISK_SUMMABLE` requires `ResearchInput01LocalMass`; it cannot replace a proof of that research input.
+
+Evidence: v0.16.1 README records a prior native error repaired at source level and says native compilation NOT_RUN. CRC/diff checks are not a kernel pass. The prior Taylor/root/uniform/macro dependency chain is recovered in the corpus, so a future integration can reconstruct its complete source closure rather than importing a lone patch.
+
+## 3. D152: native Mellin is genuinely identified, but it is not the current literal GP Mellin
+
+Key missing tracked hashes:
+
+| Module | SHA-256 |
+|---|---|
+| `Develop/NativeDensityDerivative.lean` | `424368a278f450f16ab05d16a49d08373f188c93660bade04907edff08077196` |
+| `Develop/NativeMellinKernels.lean` | `4a1012d51322d651ef32c155c4781bb88df66269c6c12e379dc6ac7b6308cf0f` |
+| `Develop/NativeMellinBridge.lean` | `93e37d26b744a3a2475778a7187d39adae0c6af1d84bdcb5f77a5e824229a2f9` |
+
+Here d(t)=[e^t(t−1)+1]/(e^t−1)²=−d/dt[t/(e^t−1)]. The derivative is proved on t>0. With native Mellin M(s)=∫_(0,∞)t^(s−1)d(t)dt, `nativeMellin_eq_gamma_zeta` proves
+
+M(s)=Gamma(s)(s−1)zeta(s), for Re(s)>1.
+
+It establishes the required Planck and weighted-Planck integral convergence; the result does not hide it in a remaining input. `AWPIRH.NATIVE_MELLIN_ANCHOR_GERM` is then premise-free. The completion factor and duplication formula give the actual xi germ at anchor s(y)=1/2+exp(y/2), which at y=0 is 3/2.
+
+Current `RHFinal/GP/Literal.lean` uses the same density formula, but **a different measure and Mellin transform**: dμ=2d(r)dr·dy/y on y∈[1/4,1/2], spectral coordinate ry. Its target closed expression is 2^(2−s)Gamma(s)(1−2^(1−s))zeta(s), with value 2log2 at s=1. The change-of-variables/pushforward integration bridge, extension to Re(s)>0, and removable value are not supplied by D152. Therefore D152 must not simply be relabeled as `Literal.MellinEvaluation` or `Literal.NativeXiFactorization`. Its density derivative is reusable for one half of `DensityLaw`; strict positivity and the required integral-domain arguments remain separate.
+
+## 4. D153–D154: actual tower binding is present; product coefficient binding is not
+
+`Develop/NativeEnergyBridge.lean`, hash `48bafdf431fc3357f8710227353112932f94974790057271245225addcd36300`, is tracked in `research/upstream/rh-equivalences-corpus/` but not active. It gives native coefficients=actual xi coefficients, row/energy identities, recurrence uniqueness, the variation/energy growth equivalence, negative-mass energy bounds, and the reciprocal/exponential theta product relation. `nativeRH_of_variation_and_product` explicitly takes both the growth input and product-coefficient identity.
+
+`Develop/NativeCoefficientCoordinates.lean`, hash `efba47147dbf09a883e7155787e281edf5565aae11505ed0b27dd8d6beaa7178`, is missing tracked. `xiWidder_eq_xiWidderMoment_exp` and `xiWidderDirect_ofReal_eq_complexRodrigues` carefully transport the real logarithmic coordinate and derivatives to the complex positive-anchor jet. The resulting unconditional theorem is
+
+`nativeCoefficients_eq_complexRodrigues (n) : nativeCoefficients n = complexRodrigues 1 n`,
+
+where
+
+`complexRodrigues a n = (-1)^n (4a)^(n+1)/(2n+1)! · D^(2n+1)[z^(n+1) theta'(z)/theta(z)](a)`.
+
+`product_identity_iff_complexRodrigues` is only an equivalence reducing the remaining identity to `∀ n, complexRodrigues 1 n = productLogCoefficients n`. Neither direction proves that statement. This is a precise actual-tower identification, but not identification with an independent positive GP moment representation.
+
+## 5. D156: actual RR binding and tail are established in the historical branch
+
+`Develop/NativeRRBinding.lean`, hash `9653ffc2a05cc7e4cbccbe3d138a9a859d2756a8a92cb83c15d5c77811e0ca63`, is **already tracked** in the hashed archive and represented by catalogue E23/E24. The material correction is to recognize this as an actual native binding, not an opaque model assumption.
+
+The source uses upper-half-plane canonical entire-xi zero occurrences, preserving repeated indices for analytic multiplicities. Its occurrence multiplicity field is 1 because multiplicity is already encoded by repetition; it does not assume simple zeros. With rho=1/2+i·w, gamma=Re w and delta=−Im w, it derives gamma>1 and delta²≤1/4. Canonical inverse-norm summability yields height-mass summability and the convergent nonnegative defect. `actualData` and `actualBinding` are constructed, including soundness and completeness; lower-half-plane zeros are handled by conjugation.
+
+Unconditional results include `actual_defect_zero_iff_nativeRH` and `actual_all_height_bound_iff_nativeRH`. The prefix results give, for T>0,
+
+0≤C−prefix(T)≤3c1/(4T²),
+
+and `prefix_zero_iff_verified`, plus `exists_height_full_bound_fails` if an actual occurrence is off-line. This is a certified reduction to actual zeros; it does **not** supply C≤0, the all-height inequality, any verified finite numerical prefix, or a finite closing witness. It does not claim the stronger independent `CanonicalZetaBinding` support-multiplicity/curvature-trace package.
+
+The generic tail source `PositivityPremise/Tail.lean`, hash `8bab71177104144c65bf5f077bfd520186b0a9fa7ecc24becb56171560144226`, is absent by exact tracked hash and belongs in a reconstructed dependency closure.
+
+## 6. Hilbert/GNS: strong constructions are real, their native identification is extra
+
+The recovered GNS package `RH_GP_BKQR_HOPF_GNS_LEAN_v0_8_6_FINSET_PROD_FIX6` adds meaningful source absent from tracked files:
+
+- `KernelLift.lean`, hash `d2505391e5a579137ec96c897c8eed0faaaca80f5c7e0c1d2af5de5a0ae062ab`.
+- `PositiveShift.lean`, hash `6b9e9c5377e9f844c91c799202989a2f1085edd38b786e23c02126e222788781`.
+- `RKHSOperationsLocal.lean`, hash `d173c70ab87e58f6f893b845e782c6d152921f9e97fe2eccd5dd6adc291510a2`.
+- `AtomicGPHopfKernel.lean`, hash `b7c26986c64c33f5fa5495001465f8664b53ae04e46ab7f222b28911c33a0645`.
+- `AtomicCayleyComplex.lean`, hash `43eb68d8ae9cf60c00b14a671fc78704adf0481d501d00e71168f0e39d49d8e9`.
+
+For a `BKQRHopfKernelLift`, `hopfBinaryIsometry` is a constructed RKHS sum-space isometry. `positiveShiftQ=A†A`, its positive complementary operator, Q+B†B=I, and the exact shift action on kernel orbits are derived. `HOPF_SUM_POSITIVE_SHIFT_EXTENSION_TARGET` is a theorem for that supplied lift, not an assumed positive-operator conclusion.
+
+The lift, however, has an essential field: the two-input Hankel kernel must be positive semidefinite **for every common shift and defect depth**. Its anchor must agree with the preexisting BKQR table. The underlying old `OurStrongData` uses an opaque RH proposition and opaque integer-valued coefficient transforms, not Mathlib's xi. Thus this is not a derivation of the required native input.
+
+The finite atomic variant really derives PSD from explicit finite features with alpha²+beta²=1. It constructs Cayley weights 4q(1−q)∈[0,1], a finite determinant nonzero off the ray [1,∞), and its algebraic trace-resolvent/logarithmic-formal-derivative identity. The derivative is explicitly a finite erased-product expression. Passing this finite model into the legacy GNS pipeline requires an all-depth anchor equality; no actual xi calibration or infinite-limit theorem is provided. These are valuable constructive model modules and should not be described as an RR-to-GP isometry. README native claims were found, but no matching complete native receipt for this selected GNS package was independently established in this review.
+
+The reconstruction paper correctly distinguishes the RR Hilbert model: with measure m_i t exp(−gamma_i t)dt, vectors A_i(t)=exp(i delta_i t), B_i(t)=1, one obtains C=(1/2)||A−B||² under convergence. An isometry to independent GP/H_a and matching moments with actual SOLOBOLO remain additional theorems. No such source theorem was recovered in the inspected branches.
+
+## 7. Historical receipts and latest overlays
+
+Directly inspected evidence under `gp-selected/native-candidates-evidence/.audit-logs/`:
+
+| Checkpoint | Evidence inspected | Interpretation |
+|---|---|---|
+| `focus_mellin_28832_936_16411` | D152 prepare: LEAN_INVOCATION=START, LEAN_EXIT=0, source/snapshot FC identical; D152 log: three AUDIT_POLICY_PASS records. | Actual historical focused native acceptance of Mellin bridge. |
+| `focus_n01_bridge_11591_20079_6468` | D153 prepare: LEAN_EXIT=0 and source snapshot; seven whitelist audit passes. | Historical native acceptance of actual energy/tower bridge, with explicit remaining inputs. |
+| `focus_three_bridges_3595_19799_1630` | D154 prepare/log in corpus `adfa1ac4534ba4004cd9a20f072bab6c94e7746196e8b693ec50c425d4bc8ceb.log` / `482b9a8b1bfff81644e4d38b53eef97d2d28368b47b85b10ca950dbd30b11db7.log`; D156 prepare/log local; all native exits 0. | D154 four and D156 six audit-policy passes, dependencies only propext, Classical.choice, Quot.sound. |
+
+The focused three-bridges summary explicitly says REUSED_PREREQUISITES=149, REBUILT_PREREQUISITES=0, FULL_AUDIT=NOT_RUN, CANDIDATE_ROWS=0, RH=NOT_PROVEN. Historical cached-binary provenance was not independently reproduced. Warnings occur in D153/D154/D156; the current runner's warning-as-error setting could reject unchanged files. Historical acceptance must not be copied into the current build's NOT_RUN status.
+
+Newly downloaded `THREE_BRIDGES_FIX2.zip` reproduces the inspected D154 and D156 hashes exactly. `THREE_TRIGGER_AUDIT_FIX1` and `TRIGGER_QUALIFICATION1_FIX2` are trigger overlays, not replacements of those mathematics modules. The latest trigger recorded by the reconstruction is `trigger_candidates_2920_32033_1895`: ten controls matched, TRIGGER_ARMED=1, all three candidates OPEN, accomplished=0, infrastructure=0, exit=4. A copy-only receipt, a source status assertion, and a failed candidate are not successful native proofs.
+
+## 8. Cross-review: what the combined branches do and do not discharge
+
+Cross-review with the SOLOBOLO agent confirms the recovered real/complex logarithmic-derivative calibration above. Local determinant holomorphy plus its nonzero value at zero also gives a local analytic logarithmic derivative mathematically; that last combination is an inference here, not a newly encoded Lean theorem.
+
+The active direct=recursive actual Widder theorem plus D154 genuinely remove the ambiguity between the native recurrence and an explicit complex differential jet. RI01 then supplies the analytic theta-product germ and converging finite approximants. **Together they give the prerequisites for a new all-order coefficient proof, not that proof itself.** One must still compute the logarithmic derivative/Taylor coefficients of the actual symmetric product and identify their factorials, signs and anchor scaling with `complexRodrigues`. Taylor convergence of theta alone does not establish this logarithmic-derivative coefficient formula; product coefficients and log-product derivative coefficients are different objects.
+
+The later `Candidate_Derivations_Rounds_1_3`, `4_6`, `7_9`, `10_13` and reconstruction contain a plausible explicit finite symmetric-power/Cauchy-contour route. The reconstruction states the formula at anchor one using F(1+u)=Σb_j u^j:
+
+productLogCoeff(n)=(-1)^n4^(n+1)Σ_(j=0)^(n+1) choose(n+1,j)b_(2n+1−j)=complexRodrigues(1,n).
+
+This is labeled a paper derivation awaiting Lean encoding, not a missing premise that can be discharged by `rfl` or an existing theorem citation. Even a successful formalization would leave N01's energy-growth estimate open.
+
+The latest rounds further derive explicit **signed** finite spectral models and exact fixed-moment convergence for arbitrary Bernstein rows. The sign operator is essential. They propose an exact energy increment and positive-weight expansion in the shifted-Legendre transform `ell_k=Σ_(j≤k)(−1)^j choose(k,j)choose(k+j,j)c_j`. These are useful next finite-algebra tasks, but the paper explicitly says they were not compiled and the uniform/subexponential bound on ell remains unproved. Old GP estimates for differently defined coefficients cannot be transported by name.
+
+For RR, simultaneous scaling of heights and deviations preserves the defect exactly; phase-only scaling tends to zero for every admissible configuration and proves no vanishing at scale one. The stronger o(epsilon²) defect estimate would be substantive. The paper's corrected small-phase bounds and norm limit are not native receipts. Completeness of a Hilbert space or convergence of signed moments does not remove negative mass, prove actual positive moments, or prove an RR-to-GP isometry.
+
+## Integration priorities
+
+1. Recover D152/D154 together with their full import closure, preserve the actual formulas, and attach historical receipts as historical evidence. Keep D153/D156's existing catalogue records and distinguish archive from active build.
+2. Recover RI01's actual local Taylor/uniform/holomorphic chain; expose its radius and precise hypotheses. It is useful analytic infrastructure and is not a native RH implication.
+3. Preserve the exact ledger as an explicit conditional payment reduction and the GNS/atomic modules as constructive models. Do not turn all-depth positivity/calibration fields into a claimed finite input.
+4. Encode the actual product-log coefficient identity next, then the exact Bernstein-row energy decomposition. Neither establishes the remaining analytic energy bound, residual angular positivity, nor RR defect nonpositivity.
+
+No reviewed branch currently produces the requested finite witness or derives the actual induction input. The advance is a much sharper, partly historically checked division between established native bridges, model-level constructions, and the remaining concrete obligations.
+
+
+APPENDIX 6: RH EQUIVALENCES AND MISSING DEPENDENCY CLOSURES
+Review file: equivalence-review.md
+SHA-256: 9879ae0a8f59c0ddd38e103a5b982991a17b8be3219aac93695e7928947c57f0
+
+# Equivalence, QQRH, angular and moment reinference review
+
+Status: source comparison only; native Lean compilation and kernel axiom audit **NOT_RUN**. No repository edits were made.
+
+## Scope and comparison rules
+
+The checked **local RH checkout revision** is `69ad4d6a66c5826d77013c33afeb40b7a1a90639`; this is not a claim about the current remote revision. The parent publication report records the remote separately. Coverage uses **`git ls-files`** from that local checkout, not filesystem `rglob`: ignored local copies do not count as tracked repository content. All 51 primary E/M entry hashes are present in tracked files (33 unique source bodies); 0 of those bodies are active in the 89-module full build plan. The catalogue is source evidence, not an importable combined proof package.
+
+The shared corpus comprises 1,794 unique Lean byte hashes recovered from snapshots and nested archives of `RH_REVIEW_BUNDLE_18679_14231_11714.zip`. This review screened every body for theorem/lemma iff headers referring to RH/Riemann/QQRH, masking nested comments and string literals. It found 443 such source headers. This is a discovery count, not a number of independent criteria or verified theorems. It also compared the existing 51-entry catalogue, its aliases, the 115 local primary records and 27 linked auxiliaries. Exact-name matches alone were not accepted as object identification.
+
+The machine screen is `reinference/equivalence-corpus-scan.json`; its generator is `reinference/equivalence-coverage-scan.py`. Human inspection prioritized the newer native-candidate, angular, QQRH, AWPI and layered-frontier sources. Non-iff sufficient constructions remain the responsibility of the companion GP/SOLOBOLO reviews.
+
+## Result
+
+The original 1,794-body broad-bundle comparison found no additional substantively distinct unconditional actual/native RH criterion beyond the current catalogue and local criteria. **The later supplemental SOLOBOLO packages add two explicit analytic criterion forms absent from the 51-entry catalogue:** slit-plane theta ODE admission and whole-disk analytic reciprocal admission for actual J. These are related to the established nonvanishing/analytic-continuation mechanisms, with source details in the late-input supplement below; no independent-new-mechanism or native-verification claim is made. Many other absent source bodies contain useful dependencies, compositions or earlier conditional versions. The layered literature interface is a separate serious defect: its arbitrary-predicate axioms are logically inconsistent and must remain outside the active graph.
+
+## 1. Real publication gap: the coherent angular dependency closure
+
+The previously inspected `RH_MASTER_CLOSURE_ANGULAR_LEAN_v0_1_1_FIX1` family supplies exact-hash matches for the 16 catalogue IDs `E01, E02, E03, E05, E06, E09, E10, E11, E13, E15, E16, E17, E18, E20, E21, E22`. Its selected local dependency closure is 118 modules / 1,091,316 bytes. Only **13** of those exact module hashes occur in tracked RH files; **105** are absent. The 13 present bodies are archival catalogue blobs, not a coherent module-path build. Thus the endpoint statements are preserved, while most of their import closure is not published.
+
+This is the clearest substantive next incorporation step for the angular/QQRH branch: preserve a coherent, versioned closure with original paths and notices, then define a source integration/build plan. Do not silently import the complete mixed 240-module package or report its source-only FIX1 status as compiled. Its own status records an earlier revision failure, a source fix, and `NOT_RUN_FOR_FIX1`.
+
+The exact missing-module inventory is attached below and in `reinference/equivalence-review.json`. The current catalogue documentation correctly warns that its source map is not a combined import closure; this finding does not falsify that documentation.
+
+## 2. Criteria already covered byte-for-byte
+
+The following actual/native QQRH and angular statements are already in tracked local source bytes. They correspond to E20–E22 and E15–E16, rather than newly discovered criteria.
+
+### rh_iff_allSlopeQQRH
+
+Source: `RH_REVIEW_BUNDLE_18679_14231_11714/snapshots/downloads/RH_MASTER_CLOSURE_ANGULAR_LEAN_v0_1_1_FIX1/RHMaster/QQRHClosure.lean`, line 71. SHA-256: `6af86a8b5a7f4b328726fa8cb72008e688fd563efc42d63261d2d8e0e294b3d1`.
+
+Exact-byte publication: `research/upstream/rh-equivalences-corpus/6af86a8b5a7f4b328726fa8cb72008e688fd563efc42d63261d2d8e0e294b3d1.lean`.
+
+```lean
+theorem rh_iff_allSlopeQQRH : _root_.RiemannHypothesis ↔ AllSlopeQQRH
+```
+
+### rh_iff_cofinalSlopeQQRH
+
+Source: `RH_REVIEW_BUNDLE_18679_14231_11714/snapshots/downloads/RH_MASTER_CLOSURE_ANGULAR_LEAN_v0_1_1_FIX1/RHMaster/QQRHClosure.lean`, line 74. SHA-256: `6af86a8b5a7f4b328726fa8cb72008e688fd563efc42d63261d2d8e0e294b3d1`.
+
+Exact-byte publication: `research/upstream/rh-equivalences-corpus/6af86a8b5a7f4b328726fa8cb72008e688fd563efc42d63261d2d8e0e294b3d1.lean`.
+
+```lean
+theorem rh_iff_cofinalSlopeQQRH : _root_.RiemannHypothesis ↔ CofinalSlopeQQRH
+```
+
+### rh_iff_allSlopePositivity
+
+Source: `RH_REVIEW_BUNDLE_18679_14231_11714/snapshots/downloads/RH_MASTER_CLOSURE_ANGULAR_LEAN_v0_1_1_FIX1/RHMaster/QQRHClosure.lean`, line 93. SHA-256: `6af86a8b5a7f4b328726fa8cb72008e688fd563efc42d63261d2d8e0e294b3d1`.
+
+Exact-byte publication: `research/upstream/rh-equivalences-corpus/6af86a8b5a7f4b328726fa8cb72008e688fd563efc42d63261d2d8e0e294b3d1.lean`.
+
+```lean
+theorem rh_iff_allSlopePositivity :
+    _root_.RiemannHypothesis ↔ AllSlopePositivity
+```
+
+### native_RH_iff_actual_profileMaster
+
+Source: `RH_REVIEW_BUNDLE_18679_14231_11714/snapshots/downloads/RH_NATIVE_CANDIDATES_v0_1_1_MELLIN/AngularMaster/Chain.lean`, line 38. SHA-256: `6a438ade860096372c31d9ea2656a10027e11eb65fc8e577379615b99b72dfa1`.
+
+Exact-byte publication: `research/upstream/rh-equivalences-corpus/6a438ade860096372c31d9ea2656a10027e11eb65fc8e577379615b99b72dfa1.lean`.
+
+```lean
+theorem native_RH_iff_actual_profileMaster :
+    _root_.RiemannHypothesis ↔ ProfileMaster actualProfile
+```
+
+### native_RH_iff_actual_logMaster
+
+Source: `RH_REVIEW_BUNDLE_18679_14231_11714/snapshots/downloads/RH_NATIVE_CANDIDATES_v0_1_1_MELLIN/AngularMaster/Chain.lean`, line 57. SHA-256: `6a438ade860096372c31d9ea2656a10027e11eb65fc8e577379615b99b72dfa1`.
+
+Exact-byte publication: `research/upstream/rh-equivalences-corpus/6a438ade860096372c31d9ea2656a10027e11eb65fc8e577379615b99b72dfa1.lean`.
+
+```lean
+theorem native_RH_iff_actual_logMaster
+    {ε : ℝ} {S : ℝ → ℝ} (hε : 0 < ε) (hS : NormalizerPositive S) :
+    _root_.RiemannHypothesis ↔ LogMaster ε S actualProfile
+```
+
+## 3. Missing route/composition sources, but duplicate criterion content
+
+`RHMaster/CayleyRoutes.lean` and `RHMaster/AWPIRoutes.lean` are absent by hash. Their actual-native statements connect the already catalogued angular, Cayley and AWPI routes. The first composes E09 with E15; the second is E36 under a project alias. The PPC and right-half-plane files below similarly repackage E34/E33/E04. Preserve them if the desired repository is a full source atlas, but do not call them independent missing RH mechanisms. Native signatures retain their original targets; no new premise-free positivity is derived by the composition.
+
+### cayley_zero_loss_iff_angular_master
+
+Source: `RH_REVIEW_BUNDLE_18679_14231_11714/snapshots/downloads/RH_MASTER_CLOSURE_ANGULAR_LEAN_v0_1_1_FIX1/RHMaster/CayleyRoutes.lean`, line 63. SHA-256: `a1bbe52a6901d32b6681f8f6be280010803cd137d1e5bd5bd89c637b7199aed7`.
+
+Exact-byte publication: **absent from tracked RH repository**.
+
+```lean
+theorem cayley_zero_loss_iff_angular_master :
+    CayleyRHAClosure.ZetaCayleyZeroLoss ↔
+      AngularMaster.ProfileMaster AngularMaster.actualProfile
+```
+
+### awpi_exact_tail_upper_iff_rh
+
+Source: `RH_REVIEW_BUNDLE_18679_14231_11714/snapshots/downloads/RH_MASTER_CLOSURE_ANGULAR_LEAN_v0_1_1_FIX1/RHMaster/AWPIRoutes.lean`, line 46. SHA-256: `8f278e18190a62171a7e999c690ce4a4c59b1648aa2b647ca0282ad8ee6f1624`.
+
+Exact-byte publication: **absent from tracked RH repository**.
+
+```lean
+theorem awpi_exact_tail_upper_iff_rh :
+    AWPIExactTailUpper ↔ _root_.RiemannHypothesis
+```
+
+### PPC_IFF_MATHLIB_RH
+
+Source: `RH_REVIEW_BUNDLE_18679_14231_11714/snapshots/downloads/RH_NATIVE_SOLOBOLO_IMPLICATION_RH_04_FROZEN_v0_1_3_FIX3/Bridge/ImplicationRH04.lean`, line 40. SHA-256: `08982b6bac3528bd81ddcc95424e9026e355fcb263352dd31edeb9e2b9563a8b`.
+
+Exact-byte publication: **absent from tracked RH repository**.
+
+```lean
+theorem PPC_IFF_MATHLIB_RH :
+    AWPI.PhiRH.Final.PlusPassivityCore ↔ RiemannHypothesis
+```
+
+### NO_RIGHT_HALF_PLANE_ZEROS_IFF_MATHLIB_RH
+
+Source: `RH_REVIEW_BUNDLE_18679_14231_11714/snapshots/downloads/awpi_phi_rh_lean_dyadic_scale_v0_1_8_run_20260918_182436_414/awpi_phi_rh_lean_dyadic_scale_v0_1_8/AWPI/PhiRH/NativeRHRightHalfPlane.lean`, line 87. SHA-256: `85b570475751ad28e5f61e386271b4cd486ec94733865ba855e1c1ec73f08e78`.
+
+Exact-byte publication: **absent from tracked RH repository**.
+
+```lean
+theorem NO_RIGHT_HALF_PLANE_ZEROS_IFF_MATHLIB_RH :
+    NoRightHalfPlaneNontrivialZeros ↔
+      RiemannHypothesis
+```
+
+## 4. Missing actual coefficient-coordinate bridge, not a completed RH iff
+
+The newer `Develop/NativeCoefficientCoordinates.lean` source is genuinely absent from tracked bytes. Its Rodrigues-coordinate equivalence is useful to the finite-witness program because it exposes the remaining actual product-coefficient identity. The source comment explicitly says neither direction supplies that identity premise-free. This is a target reformulation, not a new unconditional RH equivalence, and a finite Taylor jet cannot replace its all-order quantifier.
+
+Source: `RH_REVIEW_BUNDLE_18679_14231_11714/snapshots/downloads/RH_NATIVE_CANDIDATES_v0_1_1_MELLIN/Develop/NativeCoefficientCoordinates.lean`, line 281. SHA-256: `efba47147dbf09a883e7155787e281edf5565aae11505ed0b27dd8d6beaa7178`.
+
+Exact-byte publication: **absent from tracked RH repository**.
+
+```lean
+theorem product_identity_iff_complexRodrigues :
+    AWPIRH.XiWidderProductCoefficientIdentity ↔
+      ∀ n : ℕ, complexRodrigues 1 n = AWPIRH.productLogCoefficients n
+```
+
+The companion fixed `NativeEnergyBridge.lean` is already present by exact byte hash. Its energy/variation/negative-mass equivalences were retained in Part III of the original catalogue. Earlier unfixed copies should not be imported merely because their hashes are absent. Its RH implication still additionally requires the product-coefficient identity.
+
+Source: `RH_REVIEW_BUNDLE_18679_14231_11714/snapshots/downloads/RH_NATIVE_CANDIDATES_v0_1_1_MELLIN/Develop/NativeEnergyBridge.lean`, line 393. SHA-256: `48bafdf431fc3357f8710227353112932f94974790057271245225addcd36300`.
+
+Exact-byte publication: `research/upstream/rh-equivalences-corpus/48bafdf431fc3357f8710227353112932f94974790057271245225addcd36300.lean`.
+
+```lean
+theorem native_energy_iff_xi_variation :
+    AWPIRH.US_AWPI ↔
+      Tendsto (fun N : ℕ => Real.log (1 + rowVariation xiCoefficients N) / (N : ℝ))
+        atTop (𝓝 0)
+```
+
+## 5. Omitted layered literature interfaces: quarantine, not native equivalences
+
+`GP_RH_LAYERED_FRONTIERS_LEAN_v0_3_1_TRACE_BRIDGE_FASTCORE` adds Li, Weil, Suzuki and Zhang-named wrappers. Its RH variable is an arbitrary `Prop`, not Mathlib RH; the positivity predicates are arbitrary parameters too. This is materially weaker evidence than a proof about actual Xi or an identified literature formula.
+
+Source: `GP_RH_LAYERED_FRONTIERS_LEAN_v0_3_1_TRACE_BRIDGE_FASTCORE/Derivations/Literature/Assemble.lean`, line 14. SHA-256: `d4f153f68a9e4516a400794b4465caa1dc8176525798c22af12ade93d6163a4e`.
+
+Exact-byte publication: **absent from tracked RH repository**.
+
+```lean
+theorem RH_IFF_CURRENT_HAUSDORFF_FRONTIER
+    {Scale : Type}
+    (RH : Prop)
+    (AdmissibleScale : Scale → Prop)
+    (CellNonnegative : Scale → Nat → Nat → Prop) :
+    RH ↔ ∃ L : Scale, AdmissibleScale L ∧
+      ∀ n k : Nat, CellNonnegative L n k
+```
+
+The Li source `Derivations/Literature/Li1997/PaperAxiom.lean`, SHA-256 `9a1fcc768772e5c44520dfc1d5b21d4c6bc94a354fcf1d3e68cd9db2ac20341f`, contains exactly:
+
+```lean
+axiom LI_1997_CRITERION
+    (RH : Prop)
+    (LiNonnegative : Nat → Prop) :
+    RH ↔ ∀ n : Nat, n > 0 → LiNonnegative n
+```
+
+By specialization to `RH := False` and `LiNonnegative := fun _ => True`, its reverse implication yields `False` from the trivial positivity proof. This is a direct source-level inconsistency argument, not a compiler result. The Weil/Suzuki/Zhang interfaces have the same arbitrary-input defect; the Bombieri–Lagarias bridge also equates arbitrary families. These axioms do not faithfully formalize their cited theorems. They must not enter an axiom-clean active proof graph or be added as native Li/Weil/Suzuki RH equivalences. An archival record should name this defect explicitly.
+
+The older “ActualXi Tier-A” wrappers are also not native discoveries. They package opaque `RHGPBKQR.RiemannHypothesis` with unimplemented coefficient objects and imported literature axioms; this is the model-only M01/M06–M10 family, not native Xi calibration.
+
+Source: `RH_REVIEW_BUNDLE_18679_14231_11714/snapshots/downloads/GP_BKQR_A_TIER_ANCHORING_01_LEAN_v0_2_0_CONCRETE_CALIBRATION/Anchors/ActualXiTierARH.lean`, line 12. SHA-256: `49e5a96bd7f3ac14392324692cff8bb3d352b46d4e1f1908ae4acf8b9507d992`.
+
+Exact-byte publication: **absent from tracked RH repository**.
+
+```lean
+theorem RH_IFF_ACTUAL_XI_TIER_A_PACKAGE :
+    RHGPBKQR.RiemannHypothesis ↔ ActualXiTierAPackage
+```
+
+## 6. Rejected apparent additions
+
+- Earlier conditional Lagarias/anti-Herglotz variants assume canonical quotient growth, Hadamard/log-derivative data, characteristic growth or explicit boundary growth. They are dependency/route variants of E05/E06, not stronger premise-free equivalences than the already preserved unconditional endpoints.
+- Old angular master v0.2 variants retain an actual-product bridge; v0.3 source already removes that explicit binder at the endpoint. Adding an old conditional name must not regress the public criterion or be counted anew.
+- `canonicalPlusExactTailUpper_iff_RiemannHypothesis` occurs in multiple byte-distinct AWPI snapshots. The catalogue’s later selected body is already tracked; an absent earlier overlay is not a missing theorem. Any differences in chosen jets/scales still require snapshot-specific normalization checks.
+- GRH and RH-to-GRH conditional formulations are now in the separate Generalized-Dirichlet-L-Function-Hypothesis repository. Their absence from the RH source tree is intentional separation, not evidence of an omitted unconditional RH↔GRH result.
+- Generic model constructor iff statements retain background/tail calibration and positive energy hypotheses. No named “constructor” makes those infinite analytic premises finite raw certificate data.
+
+## Round-3 cross-review requests
+
+1. Verify the 118-module angular closure and 105 missing tracked hashes against the shared inventory’s final publication coverage classification.
+2. Confirm the layered arbitrary-predicate axiom inconsistency independently and keep those files out of any proposed active integration.
+3. Coordinate the actual Rodrigues coefficient bridge with the SOLOBOLO/GP reviewers: its all-order identity must not be claimed constructed by the existing finite real Taylor formula.
+4. Before expanding any build graph, preserve exact native targets, source namespaces, cached Mathlib/toolchain expectations, and every analytic premise. None of the source findings establishes native compilation or finite-witness closure.
+
+## Missing modules in the 118-module angular selection
+
+| Module | Exact source SHA-256 |
+|---|---|
+| `AWPIRH.ThetaEntire` | `cb1f0838f2d90a1ba30e696afd05337e721ee7cc7e021a30ec28cdf2f810533b` |
+| `AWPIRH.XiCore` | `6bda1a14b59a508811b9f9a8bff400ed824d86f366b2ddeecd728571be7fd9db` |
+| `AngularMaster.ActualHadamard` | `0f5bac2eeac91ce9a44f6e1eed7afbe8caead36cca0b95fad34efae714bd72e3` |
+| `AngularMaster.ActualProfile` | `7f5a711f8f0be1bb73ba8a308d2c4ae944bb6b17752c65dd55609ea694462010` |
+| `AngularMaster.AnalyticExtension` | `23d1f3a4d5814bb1e87854f2b4ff8186dbf87b8bde2d5fb3b102196fed13ae9c` |
+| `AngularMaster.AnchorHeight` | `07084ddd1f5e622dcb82cbe711670cfff09638ba25878a86c6929aa32de1643a` |
+| `AngularMaster.CanonicalProduct` | `7d60c79fc356caf94dd3a670034db7be7b831bf3ce135577c96e165cb5f9ce01` |
+| `AngularMaster.ComplexScaleProduct` | `2a25b446accead2b314877c8eace2764f775e8b6b8675aa9909be89f421f535d` |
+| `AngularMaster.ConjugateFactor` | `578dd3c727876d8a773f3aa140f17c042619a7d357da4b0094685aedd9bede04` |
+| `AngularMaster.FullXGeometry` | `c4f1e71a09df8d144193b5d861f929234d7a79d84f1eb998c70f1b7271d0f1c5` |
+| `AngularMaster.FullXProduct` | `cfa5ecd23fd41e70d717b7332f01e7df028d1c114fdeeeb73eca8e8c053210d2` |
+| `AngularMaster.HeightExtension` | `e4ca1898f70541e936dad8808b94c0dac9cd455bab26b2c3c8295b3880755206` |
+| `AngularMaster.IndexedProduct` | `8c22f114f76f5a90e102c2ec130225393b08e983c6c8314def5bba5f53cccd60` |
+| `AngularMaster.LowHeightGeometry` | `ac1ae1242e0a6a069be8d599e80c6b32fe78bcba86a7a4105f37c6eb31a04b60` |
+| `AngularMaster.MellinAnchorBound` | `d38e72e3c5ba927d7d2ed01f85ec4165f7e54ba196cf8d0f789ac91bc84274d8` |
+| `AngularMaster.MellinEndpointBound` | `061df1283ff2011629a2fe501f3151f17e2d6d67b84d7da18fb1a225b8ab19c3` |
+| `AngularMaster.MellinPairedBound` | `5d2e593be01d93f425ccff6a178706d46b90479dcc843eb7f2f21e78b4a954d7` |
+| `AngularMaster.ProductLimit` | `6b16366089083cee1c9bd1ad2b082cdccbb53a1631e2cf396e9011aa991b16f8` |
+| `AngularMaster.ProductSummability` | `40aea813fb3146aa1aecae3e385b6c79e66f393a7e603f3779b9e679f29e159b` |
+| `AngularMaster.ProductValueLimit` | `6611dd8cba2d2c6766cdeca9da926675df8d968d958caa2f2de803aa674b4d8f` |
+| `AngularMaster.QQRH` | `7c6a8802744ac36b33a22be1a5596f7ade7cb3f6989927e531d522942ca703c6` |
+| `AngularMaster.QQRHUnconditional` | `41deb779222374488651f85c76aa3c7b9ce4225f33a26ec61f793d761b0b3d4a` |
+| `AngularMaster.SecondFullXAnchor` | `16e3a34ff3d3ea0cb812ba5575bfc1636578edd55f5cbcccc76d86f2f4e827d7` |
+| `AngularMaster.SectorPositivity` | `6c94b4cb699fe9a62d343e6dadc2667403e353e9f7d10bffe572f9bb26c8a7df` |
+| `AngularMaster.SharperZeroFreeSeed` | `c291292f10dc2479634bb56901d1595fa11eaafab2fe65caa9008f43fb7acbf0` |
+| `AngularMaster.StripProductBound` | `616dcc0be8cddcad2a2eac3b43887cb2c2571559c7067b57649a18e3405a4314` |
+| `AngularMaster.ThetaKernelAnchorBound` | `5bb0ac885fba20de6daecfea0f1ad5f7dab8062eeeebfb1584ba356f1ffe074d` |
+| `AngularMaster.ThetaKernelExplicitBound` | `9a01fbfd31a48c096eb8c27fcfd07c7fec716d7069669dfc28dd7c77c9d37122` |
+| `AngularMaster.ThetaKernelSharperBound` | `f5a651fdb70c67e8643c8c58d791720709cd5929b4f2fa447cb47dd3f2c5c026` |
+| `AngularMaster.ZeroExclusion` | `a66106b85dcd395d139e5acc628bff9e990125767203e00d6319804cd920cf45` |
+| `AngularMaster.ZeroFreeSeed` | `4c617c74b545f1473f85c8ea59dd31818b5de9e8b5a35814d0a0e8a7ca1a3aa4` |
+| `AngularRegularity` | `a4070a3c6d44617d60edf7dc7569af09f7a46f38ee8af42909b9fb233c902832` |
+| `AngularRegularity.Actual` | `4c7e66a7ce7d5c6fc1d97808b9408d30d392c465ef38969aab39d9cbc87ce463` |
+| `AngularRegularity.Calculus` | `7aa6b8452c507d8b4d895ae8a84820467cfc6eba09e54e0331f44a174602ab46` |
+| `AngularRegularity.DerivativeFormula` | `bb153f4a303d4e40d808351d5b2ec580f452f9e59a72c3bebfd86af8855fa4c9` |
+| `AngularRegularity.LocalFactor` | `a2815d7af2d68edfadf4dda768452d0dbcbb4c361d64b6002032fcf29621c50e` |
+| `AngularRegularity.RadiusIsolation` | `99f312f95277d1139c201ff645f8df3e4822c69f849619bfcd25b98962656d83` |
+| `AngularRegularity.StationaryAlgebra` | `bc338488ac25a905fe3308ade667db0487c54086d9a8c9fc8f5ff743a2f3d8b1` |
+| `AngularRegularity.Targets` | `b3c3ce7366f5c874cf820717f6e9985ca25150ecd306b230a90eb4f1b36d7cdf` |
+| `AngularRegularity.Topology` | `fb546c2d03f7c336d264c9b284b217643213075ca73192d8509b2c0b86d8b4c9` |
+| `CayleyConstruction` | `0da5a6afc63579fa5fe08cfc440811874e1caa8d7a6a613ec66ddb5efeaa03f2` |
+| `CayleyGolPhi.CayleyCore` | `29b6366ed563c5a01e40f1cf82bbc9d173f806a5cf90f096f13b221795e07b81` |
+| `CayleyGolPhi.GolPhiSlice` | `daa4140558365fcf50178c1f7194a36b9ea70563627c6011ec9a4bae6d18aaa4` |
+| `GeneralizedCharacter` | `c4ba708b8217e463b18545df2d59e18b5cb8d18cf9b2fe732aaad4c9c367ed44` |
+| `HausdorffKernel` | `c971898ba7bc9657b12dbc0ce0f01eab243553b5aea84ff13afce7cc50b59c8a` |
+| `RiemannHypothesis.ComplexAnalysis.AntiHerglotz` | `1792b68059adde42fba35af15461764462d9b686e4a702eae240d5db0012fa88` |
+| `RiemannHypothesis.ComplexAnalysis.EntireQuotient` | `ca9213e5608b0d63e5d3a2a5fe982ffb72bf77b815c8a0f29ce6420cd471105e` |
+| `RiemannHypothesis.ComplexAnalysis.EvenAnalyticOrder` | `1b40cdb7861734c5f5e13d55be65abc211cbcfcf5e1f27e8e89b9ab4a9f01659` |
+| `RiemannHypothesis.ComplexAnalysis.FactorialDyadicGrowth` | `4f0c560effde7259d8fa6ef52b17df85aebb39294dc71ad3bf8009769954a50c` |
+| `RiemannHypothesis.ComplexAnalysis.GrowthRigidity` | `6393cb9257fb39f5979974b9eb01a86c2b426aaa9199f310bbb021d4c015cc4e` |
+| `RiemannHypothesis.ComplexAnalysis.LogDerivative` | `46e6818321ea99f466740578e0b16a0ba0b8a57f8b8ae5f3fb91921c9f7ffe64` |
+| `RiemannHypothesis.ComplexAnalysis.MellinGrowth` | `95150cb0fec21a8ffb62ef6eb59bee9d7fc9570cd4d150fdc67a49b848e7db0e` |
+| `RiemannHypothesis.ComplexAnalysis.PoleProbe` | `40401afe8024afdf5feb81be0da723a25139047f8e6d209281cb387ff2abffaa` |
+| `RiemannHypothesis.ComplexAnalysis.ProximityGrowth` | `2c4130bb3afe29e94aaf339599a4aef2f50b2b68da53361ffb0755d1c0850b9d` |
+| `RiemannHypothesis.ComplexAnalysis.RealPartGrowth` | `17f4a7906ac32639c2187ebcade312bbcf0fa91dbc1dc49bb14669aafb6a7128` |
+| `RiemannHypothesis.ComplexAnalysis.RealSymmetry` | `5f83e842a50fe85e7601290db5f7620244da46951ee129ac4135e8d6a07726ea` |
+| `RiemannHypothesis.GammaCancellation.CompletedZeta` | `a68c5c838f8a4b7666f4fe579908946212ea0f052d81cdb6d6d2b929f88c001b` |
+| `RiemannHypothesis.GammaCancellation.PoleSet` | `eb5c37f7ded790b001f868fc8e6991973ae9a3ac1c74eea51e5d05746ae3eb63` |
+| `RiemannHypothesis.GammaCancellation.TextbookXi` | `b08c3353a4bade05487631009f2ebbd1d993d524481274a858886105fe6059c7` |
+| `RiemannHypothesis.HadamardProduct.CanonicalProductDivisor` | `7c26232ff13951e9a30df96fa8066aca71064d99790a0ff2e5343537b860f950` |
+| `RiemannHypothesis.HadamardProduct.CanonicalProductDyadicGrowth` | `8adf77b92fa13a212eece3131d72cac0df2e07bf364ede8a01c2843191d12c29` |
+| `RiemannHypothesis.HadamardProduct.CanonicalProductGrowth` | `677a9e98c5e9a8a7073ff2b14d9c1a1af325dff5ae880ba3524aab49f1d5219a` |
+| `RiemannHypothesis.HadamardProduct.CanonicalProductMultiplicity` | `10da8fd539dee790695e73c76bc30565171aff83c5b3d72b8cfad091063b786f` |
+| `RiemannHypothesis.HadamardProduct.CompletedLFunction` | `25e2ea5bd1238b6c15bbafa05cfe06f4eca5dd4ea6ecdde4cc433bb8c5f699be` |
+| `RiemannHypothesis.HadamardProduct.DyadicZeroCount` | `c1a3b871311e0a4b8af3b7c8c10ba5071874db3105a6005ac176c85421148b00` |
+| `RiemannHypothesis.HadamardProduct.ExponentialPrefactor` | `b567173b5bce7c312e65f755ea29757e0339e9237abe1cd3fbf6f39fe5feb024` |
+| `RiemannHypothesis.HadamardProduct.GenusOne` | `6ea6e3041c9db215831e4fd3b5825797dea27f0fb6a497aec5523f61aab5ea69` |
+| `RiemannHypothesis.HadamardProduct.IndexedRealZeroSign` | `5cc725c58ee37d7e6fa286157d4e6f66d6c3ed1eab918d1700cda30ad39df26f` |
+| `RiemannHypothesis.HadamardProduct.InfiniteProducts` | `0a52a01b6f1a79e490d794f470cd6096fec3ca683d5d7d7d725a91f84ad8ce48` |
+| `RiemannHypothesis.HadamardProduct.LogDerivative` | `0f6d76241e3da7221cf486c748faf51f44a262d75a9142b207529e36caf56586` |
+| `RiemannHypothesis.HadamardProduct.NatZeroData` | `54ca9e5f26fd1d7e7e2e70bb63590425ecd058b6d9a6740b4d2eef5d95fd4934` |
+| `RiemannHypothesis.HadamardProduct.OriginMultiplicityCriterion` | `5c304d933e1fd7ef22b80d5901153483abca28a8f81056a4467d1f9e5dfe8f0e` |
+| `RiemannHypothesis.HadamardProduct.PairedCanonicalProductGrowth` | `ec5a9bcb065e2c3e286321ef0924014f97544ddb50d126895f4d7ba3a170aa24` |
+| `RiemannHypothesis.HadamardProduct.PairedGenusOne` | `8b5a6002231a9ed90995c4a8a252c6772114e4ff9ed78e5cded7bdc4965fe0c2` |
+| `RiemannHypothesis.HadamardProduct.RealZeroSign` | `4309deef7755b23c1f1da8aca5cec5566a2269d5ffca0eb2d61ece83abfa193e` |
+| `RiemannHypothesis.HadamardProduct.StrictRealZeroCriterion` | `832d9b74b67b4d916d21808acb0280445e1f63cc3438a066670ae8e7f6d41028` |
+| `RiemannHypothesis.RealZeros.Engine` | `0f48d57c45672a56f354c8cacc6e017c0a6c45e4809b5f89b44c96e6819c77c7` |
+| `RiemannHypothesis.RealZeros.EntireFunctions` | `cf7b51cbe17e56e7bc4a2674c0d122a4d42fab3b8a2b2204da5a5d6ae6ec3902` |
+| `RiemannHypothesis.Reduction.BacklundCanonicalDivisor` | `ca04cd2aa7b38d0443f1316c3c61ce2d0c79c32256d0490cdbb743d37aaee43c` |
+| `RiemannHypothesis.Xi.BacklundTuringBridge` | `415689e15ab1afc103378d0817d6c23137d7bacada4b85b1b33c62db14888ffc` |
+| `RiemannHypothesis.Xi.CanonicalDivisor` | `7fe314d6754729e36ffcbb43978d59d8226d47e007338493ca1b6a751eb299ec` |
+| `RiemannHypothesis.Xi.CanonicalProductCharacteristicGrowth` | `173dc74a9f1dce4e868eb5cc2fbde83c6648ff4cf9c2e827a22009183f44ee86` |
+| `RiemannHypothesis.Xi.CanonicalProductPairedGrowth` | `1c3708464031f711376c6a2727fe5e9fc85c221f05fb87b841e8f1ff92d05184` |
+| `RiemannHypothesis.Xi.CanonicalProductSymmetry` | `6940c75da42737642c461e82e62b964edd85a678eaf8773d3cae66dabee5af12` |
+| `RiemannHypothesis.Xi.CanonicalQuotientCharacteristicGrowth` | `c92a5502f4fd4a1c8f9d796ce199ca9332d2fd7fd5dddbdddbfbd8c29e00ab23` |
+| `RiemannHypothesis.Xi.CanonicalQuotientCriterion` | `39a5b9d0917f4a261e0fd826c4105da87805af19c2b94c264209796eb4b7da19` |
+| `RiemannHypothesis.Xi.CanonicalQuotientLogNormGrowth` | `e2a7504dce7dbeb659c74c3914ad98ff819c8d2a37ff062543f5f146e3a3e2a8` |
+| `RiemannHypothesis.Xi.CanonicalQuotientThetaCharacteristicGrowth` | `398c3e9ae6a72d47a178ca1d346400ab92b946d7b145927e1739ae0e52d38662` |
+| `RiemannHypothesis.Xi.CompletedLFunctionInstance` | `b31ea04b198a71519a650c1da1954d242c280bdaec1742e7c1110b41ede2f576` |
+| `RiemannHypothesis.Xi.Definitions` | `a421e366b8a199e997d88ff8cc822b51aff637bfab17e59e19f60ab663c70280` |
+| `RiemannHypothesis.Xi.DyadicZeroCountBridge` | `a8e22bbbe7c4fdff270926860d890608c499bf1aedd93bfd6441186e40bfd622` |
+| `RiemannHypothesis.Xi.EntireXiLogNormGrowth` | `2be4e49647505f922cb097e3e781487fe4cbdb8e8a84024d684e640d09acac57` |
+| `RiemannHypothesis.Xi.EntireXiMellinGrowth` | `7e917cc060fcc9f2358526e55f02538c3e42a905b8e0b38f11fb8086bbd650d4` |
+| `RiemannHypothesis.Xi.FunctionalEquation` | `c8b22abfc9b7d193c2b7060fca2524263f606e10ab12ffc890f59ecaee5db34a` |
+| `RiemannHypothesis.Xi.HadamardLogDerivativeCriterion` | `66f396b981d181a8eed8a62e5de61b2b98d96a670ac30a7a2c9841caa1aaf062` |
+| `RiemannHypothesis.Xi.JensenDyadicCountBridge` | `3712fa9953497863b55cfe7e260dba68d985a57706064b1bc480d78e5b337eda` |
+| `RiemannHypothesis.Xi.Pullback` | `8fd6242f9e252abbfa3c3b391923d44944b409bd87d05ea23ac6b050263a5b43` |
+| `RiemannHypothesis.Xi.SignTargets` | `5408924103ee1b4bc2fa939d6de918eadb3b225dc253df60a808f40414e7d65f` |
+| `RiemannHypothesis.Xi.StrictLagariasCriterion` | `64be344e40e2ec962da464bc337df22d0f2eefd7305dd224721bb3cb8239494d` |
+| `RiemannHypothesis.Xi.ThetaKernelMellinGrowth` | `26bbe69ddcc599a2bfcbbe378e411b03043eddc3e85ee5663cea382743d1ec9b` |
+| `RiemannHypothesis.Xi.ZetaMultiplicityBridge` | `4ad8d6b8140d745a0e3841c700bd097064648480bcc51117363e53be9f750579` |
+| `RiemannHypothesis.ZeroCounting.SmoothMainTerm` | `a734783488373589e5502cb01e33e3c0db9b7d5bf261030e4786249af9c94223` |
+| `RiemannHypothesis.ZeroCounting.ZetaZeros` | `9015953ecae3abec20c23f337d005edefe60c56e183a436254b4c4a5a2a219c9` |
+| `ScaleGeometry` | `384c844e7927f69900f8f3f4547115af016db1dbe43aa82ea58a97d67bc8fe04` |
+| `StandardCayleyLoss` | `3325cda903fce484dae15b287a538fe1d7876ae57c3b7832d88712d5f36049d9` |
+
+## Late-input addendum: RH_NEEDED_SOURCES v0.1.0
+
+The newly retrieved `RH_NEEDED_SOURCES_v0_1_0.zip` (SHA-256 `5013473c4c46a4e54edc17196512924694a4d5f36a47a43a0f304dde86652871`) is a six-file Windows collector, not a mathematical source package. It contains no `.lean` or `.v` files. Its requested GRH predecessor modules are now recovered; it also requests KQ/GRAND package families. It contributes no N01 product identity or new actual/native RH equivalence, and does not supersede the missing actual coefficient-coordinate bridge identified above.
+
+## Supplemental late-input review: two additional explicit analytic criterion forms
+
+The later recovered SOLOBOLO packages were outside the original 1,794-body broad-bundle scan. They change its bounded negative finding: **two explicit actual/native RH criterion formulations absent from the 51-entry catalogue are now identified in source**. Both have unconditional iff declaration signatures, but their analytic admissions remain the criteria to be constructed. This is source inspection only; native compilation and axiom audit remain **NOT_RUN**. Neither equivalence proves RH or reduces its analytic admission to an accepted finite raw witness.
+
+### Slit-plane theta ODE admission
+
+Source: `reinference/new-solobolo-finite/SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_2_3_GOODWORKFLOW_CACHED_MATHLIB/SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_2_3_GOODWORKFLOW_CACHED_MATHLIB/SoloboloAdmission/NativeODE.lean`. SHA-256: `554667603de88d116d8455b3db517ea6258ff91acf4c4a557a3da3be298f254e`. Exact body absent from tracked RH repository.
+
+```lean
+def SlitODEAdmission : Prop :=
+  ∃ A : ℂ → ℂ,
+    AnalyticOnNhd ℂ A Complex.slitPlane ∧
+      ∀ z ∈ Complex.slitPlane,
+        deriv AWPIRH.theta z + A z * AWPIRH.theta z = 0
+
+theorem slitODEAdmission_iff_RH :
+    SlitODEAdmission ↔ _root_.RiemannHypothesis
+```
+
+This differs literally from E08: E08 uses an analytic coefficient for the entire xi on Re(s)>1/2 and requires an ODE germ at s=1; the new criterion uses actual `AWPIRH.theta` on `Complex.slitPlane` and requires the division-free identity at every point of that domain. It is also a new analytic formulation of E03's theta-zero geometry. Its proof uses the same standard zero-free/logarithmic-derivative mechanism: RH supplies A=−Θ′/Θ; a holomorphic first-order ODE for the nonzero entire Θ excludes zeros by finite analytic order. It is appropriate to add as an explicit criterion form grouped with analytic continuation/ODE and linked to E03/E08, without claiming an independent new RH mechanism or originality.
+
+The object is the actual Mathlib-backed completion Θ(z)=ξ(1/2+sqrt(z)), ξ(s)=(1+s(s−1)completedRiemannZeta₀(s))/2. The import must resolve against the late `AngularMaster.ZeroGeometry` source containing `native_RH_iff_theta_zeros_nonpositive`; a same-named earlier file lacking that theorem is not compatible. Source-level proof inspection is not a native build receipt.
+
+### Whole-disk analytic reciprocal of actual J
+
+Source: `reinference/new-solobolo-finite/SOLOBOLO_FINITE_WITNESS_IFF_RH_GOODWORKFLOWFRONTIER_v0_4_1_CACHED_MATHLIB_FIX1/SOLOBOLO_FINITE_WITNESS_IFF_RH_GOODWORKFLOWFRONTIER_v0_4_1_CACHED_MATHLIB_FIX1/SoloAdmission/AnalyticInverse.lean`. SHA-256: `153fb74cd3c7a940c7b5f2d21daaf45fe94e2369845abd0106c50f464745ef97`. Exact body absent from tracked RH repository.
+
+```lean
+def AnalyticReciprocalAdmission : Prop :=
+  ∃ u : ℂ → ℂ,
+    DifferentiableOn ℂ u CayleyBridge.unitDisk ∧
+    ∀ w : ℂ, w ∈ CayleyBridge.unitDisk → HardyActual.J w * u w = 1
+
+theorem ANALYTIC_ADMISSION_IFF_RH :
+    AnalyticReciprocalAdmission ↔ RiemannHypothesis
+```
+
+The actual `HardyActual.J` is the regularized Cayley zeta function. On the unit disk away from w=0 it is w·ζ(1/(1−w)); its regularized value is J(0)=1, not the pointwise totalized value of that raw product. Existing FiveInduction source proves its differentiability and `J_NONZERO_IFF_RH`. The new forward proof derives nonvanishing from J·u=1; the reverse constructs u=J⁻¹ using RH. This is an explicit analytic-reciprocal criterion absent from the primary catalogue, closely related to E04/E07 and the existing local J-nonvanishing criterion. Its quantified function and whole-disk identity are infinite analytic data, not a finite certificate.
+
+Source: `reinference/new-solobolo-finite/SOLOBOLO_FINITE_WITNESS_IFF_RH_GOODWORKFLOWFRONTIER_v0_4_1_CACHED_MATHLIB_FIX1/SOLOBOLO_FINITE_WITNESS_IFF_RH_GOODWORKFLOWFRONTIER_v0_4_1_CACHED_MATHLIB_FIX1/FiveInduction/HardyActual.lean`. SHA-256: `2370ad37e95ba384dd4ac363a6e2246057446037f592d4cb0a99262cc8361c03`. Exact body already tracked at `research/upstream/five-induction-v030/FiveInduction/HardyActual.lean`.
+
+Thus `J_NONZERO_IFF_RH` itself is already preserved byte-for-byte and must not be counted as an additional missing source theorem. The new `AnalyticInverse.lean` wrapper is the actual source gap.
+
+### Bundle/composition and conditional residual endpoints
+
+Source: `reinference/new-solobolo-finite/SOLOBOLO_FINITE_WITNESS_IFF_RH_GOODWORKFLOWFRONTIER_v0_4_1_CACHED_MATHLIB_FIX1/SOLOBOLO_FINITE_WITNESS_IFF_RH_GOODWORKFLOWFRONTIER_v0_4_1_CACHED_MATHLIB_FIX1/SoloAdmission/NativeEquivalence.lean`. SHA-256: `349c7797eef68d351f9d7fd6739a18561d8a2792c4405a58c59217b981b5c133`. Exact body absent from tracked RH repository.
+
+```lean
+def ActualCompletionAdmission : Prop := RHDownstream.ActualNativeConsequences
+
+theorem ACTUAL_COMPLETION_ADMISSION_IFF_RH :
+    ActualCompletionAdmission ↔ RiemannHypothesis
+
+theorem ANALYTIC_IFF_COMPLETION :
+    AnalyticReciprocalAdmission ↔ ActualCompletionAdmission
+```
+
+`ActualNativeConsequences` is the conjunction of disk J-nonvanishing, right and left xi-nonvanishing, real Ξ zeros, nonpositive real Θ zeros and all positive-slope QQRH. Its first conjunct already implies RH; RH supplies the other conjuncts. The completion iff and analytic-to-completion iff are useful bundle/composition endpoints, not new independent criterion mechanisms. The downstream definition source is also absent from tracked bytes.
+
+Source: `reinference/new-solobolo-finite/SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_2_3_GOODWORKFLOW_CACHED_MATHLIB/SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_2_3_GOODWORKFLOW_CACHED_MATHLIB/SoloboloAdmission/NativeResidual.lean`. SHA-256: `11bf0b451609559546aad24ce132335c5a256ea069f1a56e5bbd394d64dd1bd1`. Exact body absent from tracked RH repository.
+
+```lean
+def ActualResidualAdmission : Prop :=
+  Nonempty (ResidualLimit AWPIRH.theta Complex.slitPlane)
+
+def PositiveResolventForwardConstruction : Prop :=
+  _root_.RiemannHypothesis → ActualResidualAdmission
+
+theorem actualResidualAdmission_iff_RH_of_forward
+    (hForward : PositiveResolventForwardConstruction) :
+    ActualResidualAdmission ↔ _root_.RiemannHypothesis
+```
+
+This residual iff explicitly assumes the forward construction `RH → ActualResidualAdmission`. The unconditional direction supplies only actual residual admission → slit ODE → RH. In particular `ResidualLimit` contains an infinite packet sequence, a holomorphic coefficient, all-point resolvent convergence and all-point actual-residual convergence:
+
+Source: `reinference/new-solobolo-finite/SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_2_3_GOODWORKFLOW_CACHED_MATHLIB/SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_2_3_GOODWORKFLOW_CACHED_MATHLIB/SoloboloAdmission/ResidualLimits.lean`. SHA-256: `5868845b9c31b8023a8e74f6e0a5ebd56a5eef2c942a030819d896032b8ac458`. Exact body absent from tracked RH repository.
+
+```lean
+structure ResidualLimit (Y : ℂ → ℂ) (U : Set ℂ) where
+  dimension : ℕ → ℕ
+  packet : (n : ℕ) → RationalPacket (dimension n)
+  packet_checked : ∀ n, (packet n).check = true
+  coefficient : ℂ → ℂ
+  coefficient_analytic : AnalyticOnNhd ℂ coefficient U
+  resolvent_convergence : ∀ z ∈ U,
+    Tendsto (fun n : ℕ => rationalODECoefficient (packet n) z)
+      atTop (𝓝 (coefficient z))
+  actual_residual_convergence : ∀ z ∈ U,
+    Tendsto (fun n : ℕ =>
+      deriv Y z + rationalODECoefficient (packet n) z * Y z)
+      atTop (𝓝 0)
+```
+
+The per-packet Boolean checks do not derive these universal convergence/analyticity fields. Likewise the later workflow package's final finite-model checker has open actual-xi soundness/completeness obligations. The newly recovered unconditional analytic iff declarations therefore do not close the user's requested finite witness reduction.
+
+Exact signatures, definition evidence, source hashes, archive hashes and tracked-byte comparisons are in `reinference/supplemental-analytic-equivalences.json`. This supplement does not assign new E identifiers or alter the original catalogue.
+
+
+APPENDIX 7: AWPI AND INDEPENDENT PAPER-ARGUMENT REVIEW
+Review file: awpi-paper-review.md
+SHA-256: 6e76aa8830f3ca1b62e347a177094a1cbf004fabad7b446e66853bed096fd731
+
+# AWPI source recovery and independent paper review
+
+Review date: 2026-10-25. Read-only mathematical/source audit; no Lean or Rocq compilation, numerical RH test, or repository source edit was performed. This report is an internal review artifact, not a claim that the paper deductions have been formalized.
+
+## Main finding
+
+The tracked repository omits substantial existing AWPI analytic source behind its archived endpoint. The direct paired-Phi route already contains native zeta binding, shifted nonvanishing, a concrete positive carrier, exact finite telescoping, and exact tail control. The remaining exact-defect upper bound is expressly RH-equivalent; it is not supplied by the recovered tail theorems.
+
+The relevant Round5–7 AWPI estimates and the finite rational-grid/logistic deductions survive the independent checks described below, with their stated analytic hypotheses. They do **not** yet reduce RH to a single decidable finite certificate. Two different finite constructions must remain separate: derivative-prefix energies have a derived approximation theorem but an unresolved sign, while negative-square fluxes have the sign but an unresolved comparison with the actual energy.
+
+## Sources and hash comparison
+
+Primary local inputs:
+
+- `reinfer_library_sources/Riemann-Hypothesis-Final/RH_Package_Reinference_Round5.txt`, especially lines 175–267.
+- `RH_Package_Reinference_Round6.txt`, lines 235–394 and 418–565.
+- `RH_Package_Reinference_Round7.txt`, lines 540–742, 1434–1486 and 1570–1712.
+- `equivalence_sources/Riemann-Hypothesis-Final/RH_REVIEW_BUNDLE_18679_14231_11714.zip`.
+- `reinference/inventory-files.json`, including nested archive occurrences and their `corpus_path`.
+
+The selected coherent source tree is the bundle member prefix `snapshots/lean-native/awpi_phi_rh_lean_sieved_v0_1_1/`. Starting at `AWPI.PhiRH.CanonicalOneSidedTail`, all 23 local imports resolve inside that tree. No declarations of `axiom` or `opaque`, and no `sorry` or `admit` token, occur in those 23 source files. This is a static source check, not a kernel axiom audit. The same closure's bytes were compared with the nested `awpi_phi_rh_final_v0_2_16_portable` package, as recorded below.
+
+The comparison uses **only `git ls-files`**, excluding ignored or untracked research copies. A matching archived hash is not evidence that the module is part of the active build. The tracked `CanonicalOneSidedTail` is a content-addressed archived file; its presence alone does not supply its import closure.
+
+Comparison snapshot: repository HEAD `69ad4d6a66c5826d77013c33afeb40b7a1a90639`; selected closure matches P23 portable for 23/23 files. At this snapshot, 3/23 exact hashes were tracked.
+
+| Module | SHA-256 | Tracked repository status |
+|---|---|---|
+| ActivityFrontier | `6444ba52240f69228f32e49535df88447afb6421e0a46b01d1c731bd8d13a3b4` | Missing from tracked files |
+| CanonicalBindingScales | `e7da828092f40542762d39f5268dfd5542e6ab7073924e4c60cc0a12b6be7dc5` | Missing from tracked files |
+| CanonicalOneSidedTail | `f5e6948f3afef9d09d3316387ad111fa4edafe9e1389086a85981b5ba636aff3` | Tracked |
+| CanonicalPhiS1 | `8c4ef90c9e05feff7dc8cff4aaae85b35226cf29fe34a503830cb657a330e7f4` | Missing from tracked files |
+| CanonicalTailDecay | `62ded70182869e25ea82a727b03db8fd721293ca985b6be9ac09b89fad9e8efe` | Missing from tracked files |
+| CanonicalTransverseJet | `e7a7f21e009a0d23b4036b8518e4876c111080fbd00366e996123cd6c67f3482` | Missing from tracked files |
+| ConcreteLeafSurface | `1450338a5a16f2779aad17665e0178672beb9cd3958d9f64ed661f709056b247` | Missing from tracked files |
+| Core | `eeaf46a7f04b59b5a9144646f22b50003d1510f68436f942dce44556a937ac50` | Tracked |
+| FiveLeafSurface | `7807384e854590913d166c08564b5c603cfdd0ae567fb22f476b0f5e5fefaab5` | Missing from tracked files |
+| Forward | `822d5f60ac028d8028f3883e9b6160aaf0e8270fd03820454b1c406c183b9a50` | Missing from tracked files |
+| Geometry | `ae19fbf1d63e6a7fad3423f22e2b4a942bb26887837f46124bf3d9a19490457d` | Missing from tracked files |
+| LiteralModel | `497d1eac96c9f33acb0867a0033e3e8bff5123162f7222bc4901549929b9bd7b` | Tracked |
+| MathlibBridge | `25a64990add700b9b1fe11c8318e43370bfeaf896593a01f3276c7fe7139f3d3` | Missing from tracked files |
+| NativeLeafSurface | `ef79c402196c91b6192072d2ab598d36e91e2ac22ecc989ab339663aca9c9577` | Missing from tracked files |
+| NativeZetaSupport | `39f64920bd89b0c16ec1c2a7065fbf3924c3a51ba17987f3f390c509bfb2d1d1` | Missing from tracked files |
+| PhiS1Series | `b5a61c2d92ff1c500e58da0e9a1df98d8db4b4eef00a5b44da9a57037fe54ed6` | Missing from tracked files |
+| Reverse | `a89cd177115c9f7ab70177a5fcbe49bafce0cb49cfd9704b3ffdf4651f57ef4e` | Missing from tracked files |
+| RocqPortModel | `ea0ff2f46b938fcf73b8a5b856c408648c739488f5c50a6119dc02f885117092` | Missing from tracked files |
+| RocqSourceLayer | `26ce4110d8489be8b0f46e088899f3d46731fc1e88a1ece8ccf2fb98c0e9ee55` | Missing from tracked files |
+| S1Prefactor | `d5f656e95233d479395a0fa422e32471672a18de27da2c9864234512df702591` | Missing from tracked files |
+| ShiftedSliceFrontier | `57ea1c114ac1dad795b2c7b6f25396beabcb1e54c05b012f05e4d67dcd01fed0` | Missing from tracked files |
+| Split | `44f07b28a756aa8c5891db0af6db5f6e83d12dbfb32a8e27c1309867d14788a0` | Missing from tracked files |
+| TransverseFrontier | `c59ec647a94fbb1527e66d6806d26d33ef2e4d4c8ffd368d51fad5477fb5c94f` | Missing from tracked files |
+
+The separately useful P05 `TailDecayDisassembly` and `MinimalFrontier` hashes were already tracked. Recover the coherent P23 closure rather than treating its endpoint as an isolated importable file. Preserve P05 as a distinct normalization: its simplified shifted value is not automatically the same carrier as P23's directly summed Phi.
+
+## Substantial existing results worth recovering
+
+All line references here are to the selected byte-identical P23 source, under `AWPI/PhiRH/`.
+
+1. **Independent paired series and native zeta.** `PhiS1Series.lean` lines 20–36 defines the positive-integer terms, paired eta sum and Phi slice; lines 46–63 prove summability/native zeta equality for `Re(s)>1`; lines 96–153 prove the eta and S1 factorizations. `CanonicalPhiS1.lean` lines 21–24 directly defines the paired cell sum without zeta in its definition. Lines 35–57 give the required factorization and nonvanishing at `rho+1`. This is an actual derived binding on the shifted half-plane, not an assumed identification.
+2. **Native zero support.** `NativeZetaSupport.lean` lines 14–68 derives nonzero Gamma factor, completed-zeta zero, `0<Re(rho)`, and shifted zeta nonvanishing. `S1Prefactor.lean` lines 20–56 fixes the genuine complex-power prefactor and proves its shifted nonvanishing. `CanonicalOneSidedTail.lean` lines 33–73 supplies `Re(rho)<1` and the full native zero-predicate reflection `rho ↦ 1-rho`.
+3. **Concrete activity, with an explicit model-choice caveat.** `CanonicalTransverseJet.lean` lines 24–44 defines `J=normSq(rho)*normSq(canonicalPhiS1(rho+1))` and proves it nonzero. Its own comment says this instantiates the previously abstract carrier; it does not prove equality with a separate historical jet. `CanonicalBindingScales.lean` lines 14–32 similarly chooses unit scales and says so explicitly. A full two-variable derivative interpretation remains a paper deduction.
+4. **Exact finite residual.** `RocqSourceLayer.lean` lines 24–102 gives cells, recursive prefixes, shifted residuals and the prescribed rotation. `CanonicalTailDecay.lean` lines 65–142 proves finite telescoping and residual = minus terminal cell, at every finite N. Lines 164–192 give exact norm squares; lines 266–317 give rotation norm conservation, coordinate domination and joint tail decay. At `u=1`, with `X_N=2(N+1)`, the joint squared tail is `16 X_N^(-2 sigma)`.
+5. **Honest final frontier.** `CanonicalOneSidedTail.lean` lines 25–29 requires the exact plus defect to be bounded by the prescribed plus-coordinate squared tail **for every n and every native zero**. Lines 77–155 prove this criterion equivalent to native Mathlib RH. The shrinking tail and positive activity do not prove that upper bound.
+
+There is a distinct existing named `NativePassivityCore.canonicalBackground` in the final-freeze branch (hash `e9dbacd7b75ea2fb2469f90503faa53f9608ba33984f2ec4a1120e08e1ba1d9d`, lines 107 onward). Therefore a blanket statement that the corpus has no named canonical Background assembly is false. That branch uses `phiEta = 4*2^(-s)*(2*LFunctionTrivChar 2 s - riemannZeta s)`, not the direct paired-sum definition above. It imports `NativeAxiomLedgerV2`, which declares AX01–AX11. Imported axioms alone do not show a theorem depends on them: inspect its proof dependency with a native `#print axioms` before promoting it. No such native output for `canonicalBackground` was found in the scanned corpus logs/text. Keep the branches and their evidence separate.
+
+## Independent AWPI estimate checks
+
+Write
+
+`Phi_N(u,s)=4 sum_{m<N} (-1)^m (2m+u+1)^(-s)`,
+
+`T_N(s)=partial_u Phi_N(1,s)`, `T(s)=-s Phi(1,s+1)`, and `sigma=Re(s)>0`.
+
+The Round5 paired-integral argument is valid on compact subsets of `u>-1`, `Re(s)>0`: paired cells are bounded by a summable `O(k^(-1-delta))`, while the u-derivative cells are absolutely locally uniformly summable. It therefore realizes the real-u derivative, and its local complex-u extension, rather than merely declaring the desired derivative formula. The source has not formalized this two-variable family.
+
+The normalization is essential: P23 uses `J=|T|^2` and exact energy `E=J^2=|T|^4`. It does not use `E=|T|^2`.
+
+The omitted derivative terms pair over the disjoint intervals `[X_N+4k,X_N+4k+2]`. Direct integration gives
+
+`|T-T_N| <= 4 |s| |s+1|/(sigma+1) * X_N^(-sigma-1)`.
+
+The index `X_N=2(N+1)` and factor 4 are correct, including odd N. The finite shifted residual is not this derivative-truncation error.
+
+The Round6 quartic bound `||z|^4-|w|^4|<=4B^3|z-w|`, for both norms at most B, gives the stated defect error `O_s(X_N^(-sigma-1))`. Dividing by the **joint** tail `16 X_N^(-2sigma)` leaves `O_s(X_N^(sigma-1))`, which tends to zero at each native zero because the source proves `0<sigma<1`. This is eventually valid at a point-dependent cutoff, not an all-index prescribed-coordinate bound. The height-independent joint tail bound `8/(N+1)` on `sigma>=1/2` does not make the derivative-error cutoff uniform in unbounded height. The paper's plus-channel cofinal construction is valid: choose indices with `tau log(4(N+1))` approaching an integer multiple of pi so that the plus square captures a fixed fraction of the joint tail.
+
+The Round7 Euler-product bounds also check. For `a>1`, factorwise triangle inequalities give
+
+`zeta(2a)/zeta(a) <= |zeta(a+it)| <= zeta(a)`.
+
+With `T(s)=-2s*2^(-s)*(1-2^(-s))*zeta(s+1)`, valid analytically on `sigma>0`, the constants
+
+`L_*=(1-2^(-1/2))/zeta(3/2)` and `U_*=(sqrt(2)+1)*zeta(3/2)`
+
+indeed satisfy `L_*|s|<=|T(s)|<=U_*|s|` for `1/2<=sigma<1`. The sufficient cutoff
+
+`X_N^(3/2) >= 16 |s+1|/(3 L_*)`
+
+therefore gives `|T_N|>=L_*|s|/2` and `E_N>=L_*^4|s|^4/16>0`. This is a useful finite **activity** bound, not finite passivity.
+
+Already `T_1=-2s*2^(-s)` is nonzero at every native zero, so `D_1=(2^(2sigma-1)-1)|T_1|^4<=0` is precisely the one-sided zero-location assertion. This first-prefix observation is not a finite test over a known finite zero set. Likewise, a prescribed negative boundary square tends to zero, whereas the natural derivative defect tends to the actual defect; they cannot be identified just because both have finite definitions.
+
+The reflection identities in Round7 are correct. The normalized sum is `g+1/g-2>=0`, supplying the opposite inequality to the desired upper sign. The unweighted sum retains a shifted-zeta ratio; the zeta functional equation reflects `s+1` to `-s`, not to `2-s`. The paper's both-sign argument concerns ordinary strip points and does not construct off-line zeta zeros. Its recurrence-time argument should explicitly choose positive integer times bounded below by 1; simultaneous pigeonhole approximation then yields an unbounded approximating sequence, since a bounded subsequence would force a common nonzero period for log 2 and log 3. With that detail the analytic argument is sound.
+
+The local implicit-function statement is also consistent: the nonzero u derivative gives a local complex-u graph near each native zero, and the leading coefficient in Round7 equation (16) follows from `u(s)-1=-Phi(1,s)/T(rho)+higher order`. Its contact order is the spectral zero multiplicity. This requires the paper's two-variable holomorphy and continued factorization, not merely the existing shifted source theorem.
+
+## Finite rational-anchor criterion: exact quantifier audit
+
+Round7 lines 1434–1486 propose, with `p_k=2^k`,
+
+`A_k={j/(k p_k) : 1<=j<=k^2 p_k}`,
+
+`RH <-> forall K, exists k>=max(K,1), forall a in A_k, mu_(p_k-1)(a)>=0`.
+
+The sampling argument checks **given** the actual divisor formula, a maximal off-line conjugate pair, a strict local remainder gap, and the summable-tail bound. The negative-phase anchor tends to a fixed R>0 and has width comparable to `1/p_k`. The grid covers `(0,k]`, has exactly `k^2 p_k` positive rational points, and nearest-point error at most `1/(2k p_k)` for sufficiently large k. Hence phase error tends to zero after multiplication by p_k. Failure of RH gives a negative sample at **every sufficiently large k**, which contradicts the displayed cofinal positive-grid quantifier. Under RH every node contributes positively.
+
+Necessary caveats:
+
+- No one finite grid, no finite initial list of depths, and no existential successful grid proves RH.
+- The criterion still asks for infinitely many successful stages, with a common k for all anchors in that stage.
+- Each actual moment is an analytic/infinite object. Rational anchors do not make its exact sign a terminating rational checker automatically.
+- The proof requires the actual moment/divisor identification and phase-stability estimate, not only the finite channel algebra.
+- A uniform `exp(o(p_k))` approximation error over each stage's entire finite grid would preserve the negative-witness argument, but such a calibrated nonnegative construction is not supplied.
+- A shrinking mesh with no relation to p_k is insufficient for this general moving-phase proof. Fixed-width radius-detection intervals have a different sampling requirement.
+
+Thus the finite-grid formulation is a sound analytic reduction in the stated setting; it is **not yet the requested finite witness reduction of the induction input**.
+
+## Inverse smoothing and logistic story: independent check
+
+The Round6 Green proof is coherent assuming its explicit actual divisor expansion and normal convergence. Near zero, `mu_n(a)=a^(n+1) F_(n+1)(a)` with F holomorphic supplies the exact incoming-flux cancellation. At infinity, the strip estimate `Re(t)>=|t|-1/2` and summable inverse divisor powers give dominated convergence. The displayed weighted integrals converge absolutely; solving the homogeneous second-order equation with both boundary conditions gives the Green identity, so it is not just a formal inverse differential operator.
+
+For `A_n=4^n(n!)^2/(2n+1)!`, its ratio is `A_(n+1)/A_n=2(n+1)/(2n+3)`. Therefore the normalized identities are correctly scaled:
+
+`v_n=K_(n+1)*v_(n+1)`, `K_m(y)=(m/2)exp(-m|y|)`,
+
+`v_(n+1)=(1-partial_y^2/(n+1)^2)v_n`.
+
+The positive operator runs downward. Positivity of v_0 does not propagate upward through the differential operators.
+
+The density `L_n(y)=sech^(2n+2)(y/2)/(4A_n)` integrates to 1; the beta integral gives the stated gamma-ratio Fourier transform and the product starting at m=n+1. In particular `L_0` is exactly the logistic density, and `L_n` is the remaining convolution tail. The elementary bound `1/A_n<=n+1` verifies concentration at zero.
+
+Under RH the representation `v_n/4=L_n*M`, with `M=sum nu_j delta_(log gamma_j^2)`, has the correct factor 4. The paper supplies a summable bound for the infinite divisor tail on each compact set, so its vague/distributional convergence does not incorrectly interchange an uncontrolled infinite sum and limit. M and v_n have infinite global mass; the Fourier statements apply to K_m and L_n, not automatically to M or v_n.
+
+The converse distributional obstruction is logically valid under the stated actual divisor/gap hypotheses. A maximal off-line pair yields positive bumps of size `P^m` on a window of width `1/m`, while the test functions' C^s seminorms grow only polynomially. Uniform boundedness of distributions on one fixed compact set gives a common finite derivative order, contradicting every cofinal bounded subsequence. This is stronger than merely requiring a positive limit. It must be stated as existence of one unbounded/cofinal subsequence, not a finite-depth property. Local convergence alone would not justify convolution against a noncompact kernel for an arbitrary chain; the paper correctly avoids that inference by its actual local-pole argument.
+
+The missing mathematical target is still a derived terminal boundedness/compactness estimate, or cofinal positivity input. The recurrence and logistic kernels do not supply it. None of these paper syntheses is an existing Lean declaration merely because related source recurrences are present.
+
+## External inputs independently checked
+
+- NIST DLMF §25.2, including the absolutely convergent zeta series/Euler product: https://dlmf.nist.gov/25.2 . The two-sided modulus bounds above are deductions from this input, not quoted theorems from DLMF.
+- NIST DLMF §4.36.1, the sinh product: https://dlmf.nist.gov/4.36 . This supports the logistic characteristic product normalization.
+- Stéphane Nonnenmacher, *Distributions and Partial Differential Equations* (2022), Theorem 2.6.1, p.119: https://www.imo.universite-paris-saclay.fr/~stephane.nonnenmacher/enseign/Distributions2022_Chap1-2.pdf . Direct fetch returned 503, but the search-indexed primary PDF text supplied the exact compact-set uniform boundedness statement. The Baire proof in Round7 was also checked directly.
+
+These checks verify the stated local deductions and exposed quantifiers; they do not establish originality, an unconditional RH theorem, or a new native compilation result.
+
+
+APPENDIX 8: RH-TO-GRH PREMISE TRACING
+Review file: grh-review.md
+SHA-256: 4235a8ca3188da34f90025a486b75dcb3ec0d82e1bcca876e3ee9dc8a8451da3
+
+# RH-to-GRH reinference: rounds 1 and 2
+
+**Assessment:** no discharged generalized Cayley lift, unconditional ordinary-RH-to-Dirichlet-GRH implication, or unconditional ordinary-RH/GRH equivalence was found in the searched corpus. The recovered chain does contain genuine source proofs of Dirichlet-GRH equivalences, the all-character reduction, and GRH → actual Mathlib RH. Its strongest RH ↔ GRH endpoints retain an explicit lift or cross-family transfer premise.
+
+This is source inspection and mathematical reinference. **Native compilation and kernel axiom audit this session: NOT_RUN.** No mathematical source was changed. A user-message report retrieved earlier in the parent session describes an October 6 native Windows PASS for the v0.6.1 completed-pair frontier atlas; no raw receipt was available to this reviewer. Even if admitted as historical execution evidence, that atlas asserts the conditional-frontier equivalences shown below, not a proof of the frontier.
+
+## Round 1: search beyond the familiar branch
+
+The independent direct-ZIP pass searched every one of the review bundle's **11,808 `.lean` members**, without filtering by filename or package name. A second pass used the recursively recovered index: **27,025 Lean occurrences representing 1,794 distinct byte hashes**. The broad case-insensitive query was `grh|dirichlet|completed.?l.?function|generalized.{0,40}riemann|riemann.{0,40}generalized`; it selected **79 distinct Lean sources**, including generic and incidental matches. Search evidence and exact occurrence mappings are in [grh-snapshot-scan.json](grh-snapshot-scan.json) and [grh-corpus-scan.json](grh-corpus-scan.json). The supplied archive's SHA-256 is `b233c8d7468c3c484a6a90d318ba09d4e9a9586e744a980aa13bbcdf8301ed81`.
+
+All seven RH-to-GRH frontier modules have only **one distinct byte hash each** across the recovered versions. The Cayley-lift, cross-transfer, primitive-character, centered-pair, reflection-pair, completed-pair-factor, and completed-L-factor files are repeated in later packaging without a new theorem discharging the target. No later RH-to-GRH source than the v0.7 completed-L-factor frontier was found in this index. This is a bounded search result, not an assertion that no other source could exist.
+
+The wider query found two candidate families worth distinguishing:
+
+- **Generic completed-L Hadamard infrastructure:** `RH_ANGULAR_MASTER_SINGLE_v0_1_0/master.lean` defines `CompletedLFunctionHadamardData` at line 6864, with analytic, evenness, Schwarz reflection, zero-divisor, and logarithmic-derivative fields. At line 8890 the concrete instance is `entireXiPullbackCompletedLFunctionHadamardData`, for Riemann ξ alone. The closing comment at line 9308 explicitly says textbook GRH is not instantiated. This is useful reusable infrastructure, but no family of Dirichlet-L instances or RH-to-family transfer is supplied. Its byte hash is `94c7b4943a28d3584181084739fc6547c16ff27713cbbdbc2662aac88fb9fa13`.
+- **The independent eta construction:** `AWPI/PhiRH/NativeEtaPhi.lean` constructs `etaViaL2 = 2 LFunctionTrivChar 2 - riemannZeta`, proves its literal zeta factorization at line 33, and derives the corresponding `phiEta` value identity and shifted-slice nonvanishing. Those are positive analytic identifications. The endpoint at line 213 is explicitly `RH_FROM_9_PROJECT_AXIOMS` and invokes AX03–AX11; it concerns Riemann RH, not arbitrary primitive characters or the generalized lift. Its byte hash is `b1337de601d465196f2c33792f3d0cfb22afbd29688d8ef328832b6e3986f460`.
+
+Other broad matches were zeta/eta Dirichlet-series normalization, generic Mellin or canonical-product infrastructure, audit commands, and unrelated uses of “Dirichlet.” None supplied a new actual-Dirichlet-GRH endpoint.
+
+## Round 2: trace the strongest exact statements
+
+Write `RH` for `_root_.RiemannHypothesis` and `GRH` for `CayleyGRHClosure.GeneralizedRiemannHypothesis`. The latter is defined using the actual Mathlib `DirichletCharacter.LFunction`: for every nonzero modulus and primitive character, every zero with `0 < Re(s) < 1` has `Re(s) = 1/2`. `TextbookGeneralizedRiemannHypothesis` removes the primitivity restriction; its source proof reduces imprimitive characters to their primitive character through nonzero finite Euler factors. This is Dirichlet GRH, not a statement about every possible automorphic or Artin L-function.
+
+| Exact source endpoint | Proven statement in the source | Remaining input |
+|---|---|---|
+| `CayleyGRHClosure.GRH_IMPLIES_MATHLIB_RH`, `CayleyGRHClosure.lean:212` | `GRH → RH`, via the primitive modulus-one character | GRH itself |
+| `CayleyGRHStrong.TEXTBOOK_GENERALIZED_RIEMANN_HYPOTHESIS_IFF_GRH`, `TextbookDirichletGRH.lean:136` | All-character Dirichlet GRH ↔ primitive Dirichlet GRH | Neither side asserted |
+| `CayleyGRHStrong.GENERALIZED_COMPLETED_PAIR_ACTUAL_CAYLEY_OBSERVABLE_CRITICAL_TOTAL_IFF_GRH`, `CompletedPairCayleyCoverage.lean:159` | Actual completed-pair Cayley totality ↔ GRH | Neither side asserted |
+| `RHToGRHFrontier.RIEMANN_TO_GENERALIZED_CAYLEY_LIFT_IFF_RH_IMPLIES_GRH`, `RHToGRHCayleyLiftFrontier.lean:26` | `Lift ↔ (RH → GRH)` | No proof of `Lift` |
+| `RHToGRHFrontier.RH_IFF_GRH_OF_GENERALIZED_CAYLEY_LIFT`, same file, line 68 | `(hLift : Lift) → (RH ↔ GRH)` | Explicit `hLift` |
+| `RHToGRHFrontier.RH_IFF_TEXTBOOK_GRH_OF_GENERALIZED_CAYLEY_LIFT`, same file, line 80 | `(hLift : Lift) → (RH ↔ textbook GRH)` | Explicit `hLift` |
+| `RHToGRHCrossCayley.RH_IFF_GRH_OF_CROSS_CAYLEY_TRANSFER`, `RHToGRHCrossCayleyDisassembly.lean:103` | `(hTransfer : Transfer) → (RH ↔ GRH)` | Explicit cross-family transfer |
+| `RHToGRHCompletedLFactor.COMPLETED_L_FACTORS_NONZERO_IFF_RH_IMPLIES_GRH`, `RHToGRHCompletedLFactorFrontier.lean:61` | Four-factor frontier ↔ `(RH → GRH)` | No proof of the four-factor frontier |
+
+The lift is defined, not asserted:
+
+```lean
+def RiemannToGeneralizedCayleyLift : Prop :=
+  _root_.RiemannHypothesis →
+    GeneralizedCompletedPairActualCayleyObservableCriticalTotal
+```
+
+The totality target quantifies over all nonzero moduli, primitive characters, and admissible real parameter pairs. Admissibility places both Cayley points in the squared centered critical strip and the principal slit plane. The completed-L frontier still begins with `RH →` and universally quantifies the character and complex point. None is finite raw witness data.
+
+The 25-module assembled source closure contains no project `axiom`, `opaque`, `sorry`, `admit`, `unsafe`, or `native_decide` code tokens after comments and strings are removed. The endpoint-bearing files have no section-level variable declarations hiding a lift assumption. This is a source-level check; it cannot replace the prepared `#print axioms` audit of elaborated terms and imported Mathlib dependencies.
+
+There is one independent binder issue: `CENTERED_COMPLETED_PAIR_GLOBAL_IFF_POINTWISE` in `RHToGRHCenteredPairFrontier.lean:57` uses `hRH` after an anonymous `RH →` binder. Under the default automatic-implicit settings this is expected to introduce an unintended outer `{hRH : RH}`; stricter settings could reject it. The point-obligation definition ignores the proof argument, so the intended corrected `∀ hRH : RH, ...` version is definitionally provable by `rfl` without an outer RH assumption. That would repair a reformulation theorem, not discharge its proposition. This helper is unused by the main lift, cross-transfer, and completed-L endpoint proofs; no edit or native signature claim is made here.
+
+## New useful simplification: one factor for the whole family
+
+The four factors are **not four independent family obligations**. Let
+
+\[
+s(z)=\tfrac12+\sqrt z,\qquad
+H_1 := \mathrm{RH}\Rightarrow
+\forall N,\ \forall\chi\text{ primitive},\ \forall z\in D\cap\mathrm{slit},
+\quad\Lambda(\chi,s(z))\ne0,
+\]
+
+where `D` is `completedPairCriticalSquareDomain` and Λ is Mathlib's `completedLFunction`. Then the existing source lemmas give the mathematical reduction
+
+\[
+H_1\quad\Longleftrightarrow\quad
+\text{v0.7 four-factor frontier}\quad\Longleftrightarrow\quad
+(\mathrm{RH}\Rightarrow\mathrm{GRH}).
+\]
+
+The forward construction is explicit:
+
+1. `H₁` applied to χ gives `Λ(χ,s) ≠ 0`.
+2. `primitive_inv` (`PrimitiveCompletedPair.lean:8`) makes χ⁻¹ primitive, so `H₁` applied to χ⁻¹ gives `Λ(χ⁻¹,s) ≠ 0`.
+3. `PRIMITIVE_COMPLETED_ZERO_REFLECTION_IFF` (same file, line 29) identifies a zero of `Λ(χ,1-s)` with a zero of `Λ(χ⁻¹,s)`, ruling out the third factor.
+4. Apply that same lemma to χ⁻¹ and simplify `(χ⁻¹)⁻¹ = χ` to rule out `Λ(χ⁻¹,1-s)`.
+
+Conversely, the first conjunct of the four-factor frontier gives `H₁`. The reflection lemma uses the genuine primitive functional equation twice, so this reduction needs no new root-number nonvanishing assumption. An independent reviewer checked this derivation. **This composition has not been added as a Lean theorem or compiled.** This derivation uses universal family quantification; it does not give a fixed-character, fixed-point implication from the first factor alone. A separate argument using conjugation and domain symmetry for one character over the entire domain has not been excluded.
+
+This suggests a more focused analytic target: establish the single universal first-factor implication, then use the existing algebraic and functional-equation machinery for the other factors and the existing Euler-factor bridge for all imprimitive characters. It removes duplicated obligations while retaining the actual missing analytic content. It is still equivalent to RH → GRH, not an easier condition known to hold, and not a finite-witness reduction.
+
+The square-root parametrization can also be read as the right half of the critical strip: `s = 1/2 + sqrt z` has `1/2 < Re(s) < 1` on the stated square/slit domain, and a point in that half-strip corresponds to `z = (s-1/2)^2`. The source's square/slit geometry and primitive inverse-character reflection provide the ingredients for stating the same target directly in that half-strip. This is a mathematical interpretation, not a newly checked Lean endpoint.
+
+## Meaning of totality and the next review gate
+
+`completedPairActualCayleyObservable` returns `none` exactly when one sampled theta value is zero. It does not guard its separate divided-difference denominator `z₋-z₊`. In particular, `r=0` gives coincident points and can be admissible; if theta is nonzero, Lean's totalized division returns a `some` value (zero here). Thus the existing equivalence is a correct source-level **zero-detection totality formulation**; it does not by itself establish an analytic diagonal-limit theorem. This issue does not create a proof of the lift or invalidate the stated denominator-zero detector equivalence.
+
+The next decisive new content would be an actual proof of `H₁` (or an equivalent lift predicate) with every modulus, character, and point quantified, using RH and derived mathematical inputs. Repackaging, an axiom-clean proof of an iff, or a native PASS of the frontier atlas cannot substitute for that proof. A finite-witness route would additionally have to derive this universal input from finite checked data; the reviewed sources do not supply that step.
+
+## Reproducible source anchors
+
+The complete 134-theorem declaration inventory and all 25 source hashes are already recorded in `Generalized-Dirichlet-L-Function-Hypothesis/provenance/theorem-audit.json`. The files central to this review have these exact hashes:
+
+| File | SHA-256 |
+|---|---|
+| `RHToGRHCayleyLiftFrontier.lean` | `1f4305998e7befe68c59fbdac4544f942508e5c15a4a147fa6a602a1483c5e2f` |
+| `RHToGRHCrossCayleyDisassembly.lean` | `56819defdfea949bfbaed3e836de87e0f00f020acbf640f70c76d40aa0221661` |
+| `RHToGRHCompletedLFactorFrontier.lean` | `a74bc6e0f557fa310fb8e596b72a231188c4b01872f56167eb6df0ec8644cc2d` |
+| `PrimitiveCompletedPair.lean` | `809514a5932d061808cfbfafe962678b4da017f40cfe57f2bf465fb4ce981371` |
+| `CompletedPairCayleyCoverage.lean` | `4accf27b131c1552939e5064b37e3f076a5dbd1fdb69432c6f3972686bdca7a2` |
+| `TextbookDirichletGRH.lean` | `95f6f1563f9701f7c144be437713abbdc6136a96c963f129aede9c61280e49fb` |
+| `RHToGRHCenteredPairFrontier.lean` | `dd5c232d84b0d5d709b6f8fc1f9883578695dfae3824311c4e831999bc6cd174` |
+
+Review limit: searches cover the recovered bundle/index and the assembled repositories available in this session. Historical reports are kept separate from verified native receipts. No claim of global absence, Lean PASS, or resolution of RH/GRH is made.
+
+Add-on coverage check: the later recovered 24-ZIP index supplied 192 distinct Lean hashes, all already present in the searched bundle, and therefore added no GRH mathematical source. Newly discovered STURMION finite-witness releases are reviewed separately in `sturmion-review.md`; this GRH assessment does not infer their contents from old package names.
+
+## Final recent-source extension
+
+The later finite-witness/STURMION recovery added 292 additional unique Lean source hashes beyond the original bundle. A fresh text scan for `GRH`, `RHToGRH`, `RH_TO_GRH`, `RH_IFF_GRH`, `GeneralizedRiemann`, `GeneralizedDirichlet`, and `TextbookDirichletGRH` found no matches in those added sources. This extends the searched corpus, without claiming absence outside it. See `reinference/grh-recent-extension-scan.json`; native verification remains NOT_RUN.
+
+
+APPENDIX 9: INDEPENDENT ACTUAL-POLE AND NORMALIZATION CHECK
+Review file: crossreview-lean.md
+SHA-256: ccdea5d895cafda0bbce9629620ba75258c1a00ee81397420691d9cc22672767
+
+# Round 3: independent SOLOBOLO cross-review
+
+Reviewed `reinference/solobolo-review.md` against actual source and the tracked repository inventory. No source edits or Lean compilation; native status remains **NOT_RUN**.
+
+**Result:** the two missing actual-data constructions checked below are correctly characterized. Their displayed Lean terms prove meaningful identifications/constructions with the stated inputs; they do not derive the remaining negativity, GP isometry, or finite-witness hypotheses. The report also correctly recognizes that the actual direct/recursive Widder identification is already retained.
+
+## 1. Actual off-line zero → actual interior simple pole
+
+`RH_NATIVE_SOLOBOLO_MERGER04_LOCAL_POLE_v0_4_1_FIX1/Migration/ActualLocalPoleBinding.lean` contains:
+
+```lean
+theorem OFFLINE_ZERO_GIVES_ACTUAL_XI_INTERIOR_SIMPLE_POLE
+    {rho : ℂ} (hz : Merger02.NontrivialZero rho)
+    (hoff : rho.re ≠ (1 / 2 : ℝ)) :
+    ∃ P : ActualXiInteriorSimplePole, P.rho = rho
+
+theorem NOT_RH_GIVES_ACTUAL_XI_INTERIOR_SIMPLE_POLE
+    (hnot : ¬ _root_.RiemannHypothesis) :
+    ∃ P : ActualXiInteriorSimplePole, True
+```
+
+The proof follows `Merger02.actual_offline_simple_pole`, which derives a positive finite analytic zero order, a nonzero principal-part coefficient, an analytic remainder, and the local punctured-neighborhood identity. It does not assume the final pole as an input. The cross-branch actual ξ, centered ξ, and slit-theta identifications are explicitly proved by `rfl` in the binding module.
+
+The report's limitation is essential and correct: `Bridge/USForwardLocalPole07.lean` concludes RH only with **both** `ActualLocalPoleForcesDirectNegativity` and `ActualCofinalUniformDepthPositive`. The new construction removes the former need to supply zero selection and local meromorphic factorization; it does not derive eventual negative actual-Widder coefficients. Moreover, `ActualXiInteriorSimplePole` contains complex parameters, an infinite remainder function, and proof fields; the word “certificate” here must not be read as finite executable witness data.
+
+The import closure from the binding module resolves to 26 local modules with no missing local imports. Source scanning found no project axiom, opaque, sorry, admit, or native_decide declaration/use. This is not a compiled transitive kernel-axiom audit.
+
+## 2. Canonical GP u=1 completion → the branch's actual ξ normalization
+
+`RH_NATIVE_SOLOBOLO_A_TIER_GP_COMPLETION_BRIDGE_v0_14_0/Bridge/GPUOneCompletion.lean:56` states:
+
+```lean
+theorem CANONICAL_COMPLETED_GP_U1_SHIFTED_EQ_ACTUAL_XI
+    (rho : ℂ) (hz : NontrivialZetaZero rho) :
+    canonicalCompletedGPUOne (rho + 1) = actualXi (rho + 1)
+```
+
+`canonicalRawGPUOne` is the independently defined `canonicalPhiS1` paired infinite cell sum; the completion multiplies it by `s*(s-1)*Gammaℝ(s)/s1Prefactor(s)`. The proof uses the established factorization on `Re(s)>1`, applied at `rho+1`, and derives the prefactor and gamma nonvanishing from the actual nontrivial-zero hypothesis. There is no additional arbitrary model or function-identity hypothesis in this endpoint.
+
+The report accurately limits its conclusion. `Bridge/WidderWallBinding.lean:38` defines `actualXi s = s*(s-1)*completedRiemannZeta s`; this is the branch's raw doubled normalization, not the repaired globally entire normalization in every later branch. The source proves the displayed shifted-point equality, not an all-anchor Hilbert isometry, a finite cell certificate, or convergence of all actual moment traces. The imported AWPI model variables belong to separate generic declarations; `NontrivialZetaZero` and the concrete factorization used here do not depend on those model parameters.
+
+This endpoint's import closure resolves to 28 local modules with no missing local imports and no project axiom, opaque, sorry, admit, or native_decide hit. Again, no native proof validation is claimed.
+
+## Coverage and retained work
+
+The comparison used `git ls-files '*.lean'`, not every scratch or ignored file. At review time, neither of these exact source hashes appeared in the tracked RH repository:
+
+| Missing source body | SHA-256 |
+|---|---|
+| `Migration/ActualLocalPoleBinding.lean` | `a9f4f52786f89cbf9c9cc2b298f410529bbce556695f1c44b824a9ecf818f382` |
+| `Bridge/GPUOneCompletion.lean` | `fb05e56f35ea4c05762fd8959ce48aee46bbe7c99fadfd2eb78bb3ffb6fcf53c` |
+
+Searching tracked source text also found no declaration of either endpoint. An archived copy of `USForwardLocalPole07.lean` exists and references the missing local-pole derivation, so “the entire local-pole route is absent” would be inaccurate; the original report correctly describes an incomplete archival dependency chain.
+
+Independently checked retained source: `Bridge/XiWidderIdentification.lean:106` proves all-order equality between the independently defined direct actual-xi derivatives and the recursive tower on `xiRegularAnchors`; line 121 derives the quarter-anchor regularity without an added nonvanishing premise. `Bridge/ExplicitMersenneReadout.lean:98` has the stronger regularity-free direct-xi forward criterion, while still requiring `ActualOffLineChannelAnalysis` and actual cofinal trace convergence.
+
+**Wording refinement:** these retained modules are active in the explicitly selected **full Mathlib build**, `build-modules-full.txt` (entries 33 and 36), and are exposed through `RHFinal/GP/KQEndpoints` and `KQAudit`. They are not part of the default six-module Std-only core plan. Describing them as “already active in the full build” avoids conflating source retention, full-build reachability, default compilation, and a native PASS.
+
+
+APPENDIX 10: INDEPENDENT RI01/SOLOBOLO COMPOSITION CHECK
+Review file: crossreview-solobolo.md
+SHA-256: 41b0d3417c78a375e00c42d3376159b05a75070e5099ac42f24bb51d8d27a8c1
+
+# Round 3: can the recovered RI01 / GP results close the SOLOBOLO inputs?
+
+Reviewed independently from the SOLOBOLO branch against the actual RI01 theorem types. No Lean compiler was run and no new theorem was implemented. The parent GP audit's RI01 conclusion is supported: there is additional useful actual analysis, but it does not discharge the actual finite trace-convergence or off-line negativity obligations by composition alone.
+
+## A genuine recovered cross-branch calibration
+
+`RI01NativeSlitDerivative.lean`, SHA-256 `73a12fddd779b02194b907f7839c12cb5fc015fe95c1b4845ebbfc68417ec753`, theorem at line 69:
+
+```lean
+theorem RI01_NATIVE_WEIGHTED_LOG_DERIVATIVE
+    (a : ℝ) (ha : a ∈ NativeSoloboloNegativity.xiRegularAnchors) :
+    (NativeSoloboloNegativity.xiR a : ℂ) =
+      deriv NativeSolobolo.mathlibSlitTheta (a : ℂ) /
+        NativeSolobolo.mathlibSlitTheta (a : ℂ)
+```
+
+This uses actual xi reality, actual real/complex derivative agreement, and the complex square-root chain rule. It does not assume GP calibration, RH, or a moment model. The alternative proof-body hash `6dc7a2afd717e7fe3b369c883af591faba479236b7ed0aaa4d31293ec0407eab` has the same statement. Neither source hash is in the tracked repository.
+
+This is directly relevant to the user's intended actual induction derivation: it aligns the real SOLOBOLO logarithmic derivative with the actual complex theta logarithmic derivative. The already-active MERGER05 theorem then identifies direct and recursive real Widder expressions on the same regular anchors. A description that leaves this value/first-derivative calibration entirely open understates the recovered work.
+
+## Exact comparison of the convergence statements
+
+| Recovered RI01 result | Required SOLOBOLO input | Why they do not match |
+|---|---|---|
+| Actual Taylor/Horner prefixes converge to actual theta for sufficiently small complex displacement. | A single family of finite nonnegative contractive eigenvalues whose `2^k` trace powers converge to actual Widder moments at cofinally many Mersenne depths. | Taylor coefficients are actual complex analytic derivatives; they are not constructed as nonnegative eigenvalues of a contraction. The approximants and limits differ. |
+| Actual finite symmetric determinants converge uniformly on some small disk to `theta(zplus)*theta(zminus)`. | `CofinalMersenneXiCayleyTraceConvergence S`, quantified over every positive real anchor and a cofinal sequence of moment orders. | Determinant convergence is a function limit near radius zero. It is not a moment trace-power limit, nor a construction of `S`. |
+| Actual determinant has a holomorphic germ at radius zero for every positive anchor. | The disk ODE binding or a global moment/zero amplification statement. | A small disk has unspecified positive radius, not the whole unit disk. Holomorphy alone gives no zero exclusion on a larger disk, no positivity and no moment bounds. |
+| Actual xiR equals complex theta'/theta at regular anchors. | All-depth Cayley-to-Widder coefficient identity and the global determinant ODE. | It establishes the base analytic object, not by itself the all-order coefficient formula or its continuation to every `‖r‖<1`. |
+
+Convergence source: `RI01NativeTaylorConvergence.lean`, hash `0b61f6ea5be4ed8fbdbcb6f3f7918d8a0e311957f11b4944c289505fe493aaf3`, lines 28, 89 and 104. Uniform/holomorphic source: `RI01NativeHolomorphicBall.lean`, hash `8c9556a592a301b3090ad5f6e4bd017c132ac9613a9669a9cff31a53eda16b3d`, lines 70, 116 and 138.
+
+## The global ODE endpoint still displays its missing arguments
+
+`RI01NativeMacroODE.lean`, hash `e1132c9af93837a0d09abf06889b7792d7edc68778830ec17699d055f934703f`, line 23, `RI01_ACTUAL_DETERMINANT_DISK_ZERO_FREE_OF_NATIVE_BINDINGS`, requires:
+
+- `hRI : ResearchInput01LocalMass`;
+- a regular positive anchor;
+- `hODE`, identifying the derivative of the actual determinant with minus the actual Widder disk series times that determinant **at every radius with norm < 1**;
+- `hPrimitive`, providing a holomorphic primitive for the Widder series on that same disk.
+
+The theorem does discharge the nonzero anchor value, and the generic ODE contradiction. Its hypotheses are not discharged by the local holomorphic-ball theorem. Separately, `RI01NativeDiskSeries.lean` derives summability throughout the unit disk from `hRI`; it does not prove `hRI` or identify the series with the determinant's logarithmic derivative.
+
+## Useful inferred next composition, not a recovered Lean theorem
+
+At a regular anchor, the recovered local determinant holomorphy plus the recovered nonzero value at radius zero implies a smaller neighborhood where the determinant is nonzero and its logarithmic derivative is analytic. This is a standard local analytic consequence of the source statements. It narrows the next local proof task substantially.
+
+To connect it to the already-active finite Cayley coefficient algebra, one still needs an exact comparison of the RI01 determinant polynomial convention and the active canonical Cayley coefficients, and then derivative/coefficient passage through the locally uniform limit. The real/complex xiR calibration is now available for that passage. Neither the missing exact comparison nor the resulting all-depth analytic binding was located as a proved theorem in the inspected RI01 chain.
+
+Even completing that local coefficient binding would not construct the finite positive spectral system or prove actual moment boundedness. It would be a meaningful additional analytic bridge, not a completed finite-witness reduction.
+
+## Local pole and GP checks
+
+The RI01 sources do not mention or construct `ActualXiPeakData`, `ActualOffLineChannelAnalysis`, `ActualLocalPoleForcesDirectNegativity`, or the Mersenne trace system. Their Taylor and holomorphy results therefore do not directly instantiate the missing off-line coefficient-dominance theorem. The separately recovered actual interior local-pole theorem remains useful input for that future argument.
+
+The GP report's described exact-ledger telescoping/payment reductions and abstract GNS isometry also have different inputs: actual analytic debit/readout/domination data in the first case, and all-shift/all-depth positive semidefiniteness in the second. Neither is interchangeable with the actual Cayley trace convergence condition without a proved identification of the same functions, normalizations and domains.
+
+The completed `gp-analytic-review.md` was then read in full. Its positive D154 result strengthens this picture: the native actual coefficient sequence is identified with an explicit complex Rodrigues jet. Section 8 correctly keeps the remaining identity with the actual product-log coefficients separate. The determinant convergence, that complex jet identification, and the active direct/recursive equality supply ingredients for a new coefficient proof; the exact coefficient/factorial/anchor identity is still needed. No contradiction with the SOLOBOLO report's open finite-convergence or local-pole negativity conditions was found. The historical D152/D154/D156 native receipts reported there should remain historical evidence, not be transferred to the newly assembled source graph.
+
+**Cross-review conclusion:** yes, the project had more genuine actual-data analysis than the current repository preserves; the real-to-complex logarithmic derivative calibration is especially valuable. No completed actual finite-witness input reduction emerges by simply combining the recovered RI01/GP and SOLOBOLO endpoints.
+
+
+APPENDIX 11: INDEPENDENT GRH CARRIER AND FIRST-FACTOR CHECK
+Review file: crossreview-equivalences.md
+SHA-256: 3ad7e93e3f00d39bba561cba11781bb98e873671a76ea343dc257dab54a52ae9
+
+# Round-3 cross-review of the GRH reinference
+
+Source-only review; native Lean compilation and kernel axiom audit remain **NOT_RUN**. No repository changes.
+
+## Assessment
+
+The GRH report's central result is supported: the recovered source proves actual Dirichlet-GRH equivalences and GRH→Mathlib RH, while RH→GRH remains an explicit lift/transfer hypothesis. I independently checked the seven frontier filenames against the full shared occurrence index: each has exactly one unique byte hash despite repeated packaging. Their main signatures retain the stated lift. No stronger endpoint was found in this comparison or the separate 1,794-body RH-iff screen. This remains a bounded corpus result.
+
+## First-factor reduction
+
+The proposed universal first-factor implication correctly yields all four completed-L nonvanishing conditions:
+
+- Apply it to χ and to χ⁻¹; `primitive_inv` supplies primitivity of the latter.
+- `PRIMITIVE_COMPLETED_ZERO_REFLECTION_IFF hχ s` identifies a zero of Λ(χ,1−s) with a zero of Λ(χ⁻¹,s).
+- Apply the same lemma to χ⁻¹ and simplify inverse-inverse for the last factor.
+- The converse is projection to the first conjunct.
+
+No new root-number nonvanishing lemma is needed for this composition: the existing reflection iff itself uses the primitive functional equation twice. Domain assumptions remain exactly the same z in `completedPairCriticalSquareDomain ∩ Complex.slitPlane`. The resulting criterion remains equivalent to RH→GRH and does not supply its proof.
+
+**Precision requested:** replace “the universal family quantifier is essential” with “this derivation uses universal family quantification; it does not establish a fixed-character, fixed-point implication from the first factor alone.” A different fixed-character/all-domain derivation could potentially use a conjugation theorem and domain symmetry. Those additional ingredients are not part of the displayed reflection-only proof, so a blanket impossibility claim is unnecessary. The current mathematical construction itself is valid.
+
+## Round-7 carrier correction versus the recovered source
+
+The earlier `RH_Package_Reinference_Round7.txt`, section 8 and Appendix 1, correctly warns that Mathlib's raw inverse-character pair does not generally become even merely by centering: its functional equation retains conductor factors. It explicitly says the missing imported completed-pair code had not been inspected, so it does not accuse that source of a parity error.
+
+The newly recovered `PrimitiveCompletedPair.lean` explicitly retains the functional factor. `CompletedPairCayleyAnalytic.lean` then defines
+
+```lean
+reflectionSymmetrizedCompletedPair χ s :=
+  completedDirichletPair χ s * completedDirichletPair χ (1 - s)
+```
+
+and proves literal reflection symmetry by multiplication commutativity. Centering that object supplies actual evenness before square descent. This avoids the raw-pair parity mistake and needs no claim that the raw inverse pair itself is even.
+
+The current four-factor symmetrized carrier is not automatically the same normalization as Round 7's proposed two-factor entire carrier. Any transfer of derivative energies, constants, or all-order moments must identify them explicitly. For the principal character, the current differentiability theorems require χ≠1; the critical-strip zero equivalences avoid the pole endpoints. Round 7's removable entire completion remains relevant to an entire-energy construction, not evidence that the restricted-domain source equivalences failed.
+
+The current Cayley sample predicate includes all real a,r satisfying the two critical-square/slit membership conditions. Its coverage proof allows r=0 when the centered zero is real. Thus the old warning that an exclusively open angular parametrization could omit real off-line L-zeros does not establish such an omission here. The report also correctly distinguishes option-valued zero detection from an analytic diagonal-limit theorem at coincident samples.
+
+## Late source-collector archive
+
+`RH_NEEDED_SOURCES_v0_1_0.zip` has SHA-256 `5013473c4c46a4e54edc17196512924694a4d5f36a47a43a0f304dde86652871`. Its six files are a Windows source collector, README/target lists and selection patterns; it contains **zero Lean or Rocq mathematical source files**. It requests three GRH predecessor modules now recovered, plus KQ/GRAND package families. It supplies neither a new generalized lift nor the N01 actual product-coefficient formula. This late file does not change the mathematical findings.
+
+
+FINAL INVENTORY TOTALS (MACHINE-READABLE SUMMARY)
+{
+  "scope": "BUNDLE_PLUS_52_MATERIALIZED_ARCHIVES_AND_10_REPORTS",
+  "unique_lean_hashes": 2086,
+  "tracked_repo_coverage": {
+    "TRACKED_REFERENCE_ONLY": 226,
+    "ABSENT_FROM_TRACKED_REPOS": 1777,
+    "ACTIVE": 83
+  },
+  "new_to_bundle_coverage": {
+    "ABSENT_FROM_TRACKED_REPOS": 191,
+    "TRACKED_REFERENCE_ONLY": 91,
+    "ACTIVE": 10
+  },
+  "native_compilation": "NOT_RUN"
+}
+
+
+SOURCE COLLECTION IDENTIFIER
+RH_REVIEW_BUNDLE_18679_14231_11714.zip
+SHA-256: b233c8d7468c3c484a6a90d318ba09d4e9a9586e744a980aa13bbcdf8301ed81

@@ -1,0 +1,370 @@
+[
+  {
+    "id": 140,
+    "attachment": 10,
+    "archive_chain": [
+      "10-GP7_UNIFIED_LEAN_BASE_v1_0_1_IMPORT_FIX-2-.zip"
+    ],
+    "member": "GP7_UNIFIED_LEAN_BASE_v1_0_1_IMPORT_FIX/Audit.lean",
+    "sha256": "882fc0289aaf37a355bcfe1c2f13850d0147570bff4901c61cbc8a2e6ecf062b",
+    "bytes": 2098,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "GP7"
+    ],
+    "declarations": [],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/10/root/GP7_UNIFIED_LEAN_BASE_v1_0_1_IMPORT_FIX/Audit.lean"
+  },
+  {
+    "id": 141,
+    "attachment": 10,
+    "archive_chain": [
+      "10-GP7_UNIFIED_LEAN_BASE_v1_0_1_IMPORT_FIX-2-.zip"
+    ],
+    "member": "GP7_UNIFIED_LEAN_BASE_v1_0_1_IMPORT_FIX/GP7/AnalyticObjects.lean",
+    "sha256": "ed82e253ae222946e4badcb36cff897334975a899a6011b30a01a069a64696ea",
+    "bytes": 10918,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [
+      {
+        "repo": "Riemann-Hypothesis-Final",
+        "path": "GP7/AnalyticObjects.lean"
+      }
+    ],
+    "imports": [
+      "Mathlib",
+      "GP7.CoreAlgebra",
+      "GP7.RationalPolynomial"
+    ],
+    "declarations": [
+      "zetaSeven",
+      "densitySeven",
+      "singularResolvent",
+      "regularizedG",
+      "approximationError",
+      "R_nonneg_left",
+      "abs_R_div_one_add_le",
+      "R_reflect_pair",
+      "finiteSpectral",
+      "finiteSpectral_difference",
+      "finiteSpectral_antitone",
+      "expTerm",
+      "expOdd",
+      "expEven",
+      "etaExpPartial",
+      "zetaExpPairPartial",
+      "zetaExpPartial",
+      "expEven_eq",
+      "finite_dyadic_with_argument",
+      "finite_dyadic_at_exp",
+      "laplaceMomentSeven",
+      "unitPowerMoment",
+      "sevenfoldMoment",
+      "unitPowerMoment_eq",
+      "sevenfoldMoment_eq",
+      "laplaceMomentSeven_eq",
+      "laplaceMomentSeven_eq_sevenfoldMoment",
+      "sevenfoldMoment_eq_rationalMoment",
+      "zetaSeven_eq_tsum_sevenfold",
+      "zetaSeven_eq_tsum_laplace"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/10/root/GP7_UNIFIED_LEAN_BASE_v1_0_1_IMPORT_FIX/GP7/AnalyticObjects.lean"
+  },
+  {
+    "id": 142,
+    "attachment": 10,
+    "archive_chain": [
+      "10-GP7_UNIFIED_LEAN_BASE_v1_0_1_IMPORT_FIX-2-.zip"
+    ],
+    "member": "GP7_UNIFIED_LEAN_BASE_v1_0_1_IMPORT_FIX/GP7/Base.lean",
+    "sha256": "6c517c16cb14023702d38a946fb970409459e9fb54ed96ab7d835d129c794ca8",
+    "bytes": 456,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "GP7.ExpDefectBridge",
+      "GP7.FiniteDyadic",
+      "GP7.ScalarRankOne"
+    ],
+    "declarations": [],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/10/root/GP7_UNIFIED_LEAN_BASE_v1_0_1_IMPORT_FIX/GP7/Base.lean"
+  },
+  {
+    "id": 143,
+    "attachment": 10,
+    "archive_chain": [
+      "10-GP7_UNIFIED_LEAN_BASE_v1_0_1_IMPORT_FIX-2-.zip"
+    ],
+    "member": "GP7_UNIFIED_LEAN_BASE_v1_0_1_IMPORT_FIX/GP7/CoreAlgebra.lean",
+    "sha256": "4818d17decea05ffdf496ff83515836b993e9339205185a6dfe1a44c6c41c638",
+    "bytes": 2746,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [
+      {
+        "repo": "Riemann-Hypothesis-Final",
+        "path": "GP7/CoreAlgebra.lean"
+      }
+    ],
+    "imports": [
+      "Mathlib"
+    ],
+    "declarations": [
+      "t",
+      "a",
+      "base",
+      "R",
+      "t_reflect",
+      "a_reflect",
+      "base_reflect",
+      "R_reflect",
+      "R_at_neg_one",
+      "base_nonneg",
+      "base_upper_on_unit",
+      "R_abs_upper_on_unit"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/10/root/GP7_UNIFIED_LEAN_BASE_v1_0_1_IMPORT_FIX/GP7/CoreAlgebra.lean"
+  },
+  {
+    "id": 144,
+    "attachment": 10,
+    "archive_chain": [
+      "10-GP7_UNIFIED_LEAN_BASE_v1_0_1_IMPORT_FIX-2-.zip"
+    ],
+    "member": "GP7_UNIFIED_LEAN_BASE_v1_0_1_IMPORT_FIX/GP7/ExpDefectBridge.lean",
+    "sha256": "0d9140c921f33261d899db84c0191f37c02119ba6d4cbf9ca274815206f6f008",
+    "bytes": 4216,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [
+      {
+        "repo": "Riemann-Hypothesis-Final",
+        "path": "GP7/ExpDefectBridge.lean"
+      }
+    ],
+    "imports": [
+      "GP7.PolynomialLaplaceBridge"
+    ],
+    "declarations": [
+      "laplaceKernel_factor",
+      "polynomialLaplaceKernel_pointwise",
+      "Qpoly_eval₂_factor",
+      "Qpoly_eval₂_ratio",
+      "rationalApprox_eq_expDefect_integral"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/10/root/GP7_UNIFIED_LEAN_BASE_v1_0_1_IMPORT_FIX/GP7/ExpDefectBridge.lean"
+  },
+  {
+    "id": 145,
+    "attachment": 10,
+    "archive_chain": [
+      "10-GP7_UNIFIED_LEAN_BASE_v1_0_1_IMPORT_FIX-2-.zip"
+    ],
+    "member": "GP7_UNIFIED_LEAN_BASE_v1_0_1_IMPORT_FIX/GP7/FiniteDyadic.lean",
+    "sha256": "fb5a1b25ad3806a8eb9e75c3a4ada85e7b1021baee7ab06a6a859ff19aca339b",
+    "bytes": 1765,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [
+      {
+        "repo": "Riemann-Hypothesis-Final",
+        "path": "GP7/FiniteDyadic.lean"
+      }
+    ],
+    "imports": [
+      "Mathlib"
+    ],
+    "declarations": [
+      "term",
+      "oddTerm",
+      "evenTerm",
+      "etaPairPartial",
+      "zetaPairPartial",
+      "zetaPartial",
+      "even_term_eq",
+      "finite_dyadic_pair"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/10/root/GP7_UNIFIED_LEAN_BASE_v1_0_1_IMPORT_FIX/GP7/FiniteDyadic.lean"
+  },
+  {
+    "id": 146,
+    "attachment": 10,
+    "archive_chain": [
+      "10-GP7_UNIFIED_LEAN_BASE_v1_0_1_IMPORT_FIX-2-.zip"
+    ],
+    "member": "GP7_UNIFIED_LEAN_BASE_v1_0_1_IMPORT_FIX/GP7/PolynomialLaplace.lean",
+    "sha256": "992f8ccc9652b5b1343d6307e978f2ba0496e1c7e53c7ed9ee6baf29a3fce0ba",
+    "bytes": 3136,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [
+      {
+        "repo": "Riemann-Hypothesis-Final",
+        "path": "GP7/PolynomialLaplace.lean"
+      }
+    ],
+    "imports": [
+      "GP7.AnalyticObjects"
+    ],
+    "declarations": [
+      "laplaceKernel",
+      "laplaceKernel_integrable",
+      "finiteLaplaceKernel",
+      "finiteLaplaceKernel_integral",
+      "finiteLaplaceKernel_integral_rational"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/10/root/GP7_UNIFIED_LEAN_BASE_v1_0_1_IMPORT_FIX/GP7/PolynomialLaplace.lean"
+  },
+  {
+    "id": 147,
+    "attachment": 10,
+    "archive_chain": [
+      "10-GP7_UNIFIED_LEAN_BASE_v1_0_1_IMPORT_FIX-2-.zip"
+    ],
+    "member": "GP7_UNIFIED_LEAN_BASE_v1_0_1_IMPORT_FIX/GP7/PolynomialLaplaceBridge.lean",
+    "sha256": "d19c4b0d2c82325b413933b2568d0e1ea9c042c7b46e33d53372d18c4fb7bf6b",
+    "bytes": 2447,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [
+      {
+        "repo": "Riemann-Hypothesis-Final",
+        "path": "GP7/PolynomialLaplaceBridge.lean"
+      }
+    ],
+    "imports": [
+      "GP7.PolynomialLaplace"
+    ],
+    "declarations": [
+      "polynomialLaplaceKernel",
+      "polynomialLaplaceKernel_integral",
+      "rationalApprox_eq_polynomialLaplace"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/10/root/GP7_UNIFIED_LEAN_BASE_v1_0_1_IMPORT_FIX/GP7/PolynomialLaplaceBridge.lean"
+  },
+  {
+    "id": 148,
+    "attachment": 10,
+    "archive_chain": [
+      "10-GP7_UNIFIED_LEAN_BASE_v1_0_1_IMPORT_FIX-2-.zip"
+    ],
+    "member": "GP7_UNIFIED_LEAN_BASE_v1_0_1_IMPORT_FIX/GP7/RationalPolynomial.lean",
+    "sha256": "e1b2e5395261be65718f48237132d2066661c62734b10f7d4ed992d1021a873a",
+    "bytes": 2288,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [
+      {
+        "repo": "Riemann-Hypothesis-Final",
+        "path": "GP7/RationalPolynomial.lean"
+      }
+    ],
+    "imports": [
+      "Mathlib"
+    ],
+    "declarations": [
+      "tP",
+      "aP",
+      "uP",
+      "vP",
+      "Rpoly",
+      "Rpoly_eval_neg_one",
+      "rational_quotient_exists",
+      "Qpoly",
+      "Qpoly_factor",
+      "rationalMoment",
+      "rationalMomentFunctional",
+      "rationalApprox"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/10/root/GP7_UNIFIED_LEAN_BASE_v1_0_1_IMPORT_FIX/GP7/RationalPolynomial.lean"
+  },
+  {
+    "id": 149,
+    "attachment": 10,
+    "archive_chain": [
+      "10-GP7_UNIFIED_LEAN_BASE_v1_0_1_IMPORT_FIX-2-.zip"
+    ],
+    "member": "GP7_UNIFIED_LEAN_BASE_v1_0_1_IMPORT_FIX/GP7/Representatives.lean",
+    "sha256": "6f84afde35893d9e19e96de7b9aa0f03c991d7ebdcd3d2d2437e7e41485bf4cf",
+    "bytes": 982,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "GP7.Base"
+    ],
+    "declarations": [],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/10/root/GP7_UNIFIED_LEAN_BASE_v1_0_1_IMPORT_FIX/GP7/Representatives.lean"
+  },
+  {
+    "id": 150,
+    "attachment": 10,
+    "archive_chain": [
+      "10-GP7_UNIFIED_LEAN_BASE_v1_0_1_IMPORT_FIX-2-.zip"
+    ],
+    "member": "GP7_UNIFIED_LEAN_BASE_v1_0_1_IMPORT_FIX/GP7/ScalarRankOne.lean",
+    "sha256": "b4d04e9c10ad348ab7e31e83092f1301646d716f14c86b0bf53095c59dc580e8",
+    "bytes": 866,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [
+      {
+        "repo": "Riemann-Hypothesis-Final",
+        "path": "GP7/ScalarRankOne.lean"
+      }
+    ],
+    "imports": [
+      "Mathlib"
+    ],
+    "declarations": [
+      "scalar_rank_one_threshold"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/10/root/GP7_UNIFIED_LEAN_BASE_v1_0_1_IMPORT_FIX/GP7/ScalarRankOne.lean"
+  },
+  {
+    "id": 151,
+    "attachment": 10,
+    "archive_chain": [
+      "10-GP7_UNIFIED_LEAN_BASE_v1_0_1_IMPORT_FIX-2-.zip"
+    ],
+    "member": "GP7_UNIFIED_LEAN_BASE_v1_0_1_IMPORT_FIX/GP7.lean",
+    "sha256": "7ab6a9f6208bce1d209a3bc541723aa5b1b84c49a1ec5a116508af5ffdbd28d1",
+    "bytes": 198,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "GP7.Representatives"
+    ],
+    "declarations": [],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/10/root/GP7_UNIFIED_LEAN_BASE_v1_0_1_IMPORT_FIX/GP7.lean"
+  }
+]

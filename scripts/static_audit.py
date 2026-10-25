@@ -16,6 +16,13 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 ERRORS: list[str] = []
 CHECKS: dict[str, object] = {}
+# Public theorem coverage for the original integration and the newly active
+# analytic/native finite-program closures. This remains a static target-list
+# check; only the native runner executes the corresponding axiom reports.
+AUDITED_SOURCE_PREFIXES = (
+    'RHFinal/', 'AWPIRH/', 'AngularMaster/', 'FiveInduction/',
+    'SoloAdmission/', 'SoloboloAdmission/',
+)
 
 
 def require(condition: bool, message: str) -> None:
@@ -144,6 +151,71 @@ def verify_manifest(name: str, field: str, suffix: str = '') -> int:
     return len(entries)
 
 
+def verify_analytic_publication(full: list[str], core: list[str]) -> None:
+    """Check exact recovered bytes and the explicit native-RH audit types.
+
+    These are source-text and hash checks, not Lean elaboration or executed
+    axiom reports. The ordinary native build remains the proof gate.
+    """
+    entries = json.loads((ROOT / 'provenance/recovered-analytic-sources.json')
+                         .read_text())['originals']
+    checked = []
+    for entry in entries:
+        for field in ['active_path', 'archive_path']:
+            path = ROOT / entry[field]
+            require(path.is_file(), f'Recovered analytic source missing: {entry[field]}')
+            if path.is_file():
+                require(digest(path) == entry['sha256'],
+                        f'Recovered analytic hash mismatch: {entry[field]}')
+        module = entry['active_path'].removesuffix('.lean')
+        require(module in full and module not in core,
+                f'Recovered analytic source must be full-only: {module}')
+        checked.append(entry['active_path'])
+    typed_checks = {
+        'ReciprocalAudit': (
+            '#check (SoloAdmission.ANALYTIC_ADMISSION_IFF_RH : '
+            'SoloAdmission.AnalyticReciprocalAdmission ↔ _root_.RiemannHypothesis)',
+        ),
+        'AnalyticPublicationAudit': (
+            '#check (SoloboloAdmission.slitODEAdmission_iff_RH : '
+            'SoloboloAdmission.SlitODEAdmission ↔ _root_.RiemannHypothesis)',
+        ),
+        'AnalyticEndpointAudit': (
+            '#check (SoloboloAdmission.FiniteProgram.nativeRH_of_uniformResidual : '
+            '∀ G : SoloboloAdmission.FiniteProgram, '
+            'SoloboloAdmission.ActualUniformResidualCondition G → _root_.RiemannHypothesis)',
+            '#check (SoloboloAdmission.exists_finiteProgram_uniformResidual_implies_RH : '
+            '(∃ G : SoloboloAdmission.FiniteProgram, '
+            'SoloboloAdmission.ActualUniformResidualCondition G) → _root_.RiemannHypothesis)',
+        ),
+    }
+    for module, statements in typed_checks.items():
+        flat = ' '.join(lean_code((ROOT / (module + '.lean')).read_text()).split())
+        for statement in statements:
+            require(statement in flat, f'Missing exact native RH audit type: {module}')
+    endpoint_code = ' '.join(lean_code((ROOT / 'AnalyticEndpointAudit.lean').read_text()).split())
+    expanded = (
+        '(Iff.rfl : SoloboloAdmission.ActualUniformResidualCondition G ↔ '
+        'TendstoLocallyUniformlyOn (fun (n : ℕ) (z : ℂ) => '
+        'deriv AWPIRH.theta z + SoloboloAdmission.rationalODECoefficient '
+        '(G.emit n) z * AWPIRH.theta z) (fun _ : ℂ => 0) '
+        'Filter.atTop Complex.slitPlane)'
+    )
+    require(expanded in endpoint_code, 'Missing definitional expansion of the single actual condition')
+    original_audit_count = sum(len(re.findall(r'#print\s+axioms\s+',
+        lean_code((ROOT / (m + '.lean')).read_text())))
+        for m in ['ReciprocalAudit', 'AnalyticPublicationAudit'])
+    require(original_audit_count == 61, 'Recovered analytic audit command count changed')
+    CHECKS['analytic_publication'] = {
+        'original_active_and_archive_hashes_verified': checked,
+        'exact_native_RH_typed_checks': sum(map(len, typed_checks.values())),
+        'single_actual_condition_definitional_check': expanded in endpoint_code,
+        'preserved_analytic_axiom_print_commands': original_audit_count,
+        'native_compilation': 'NOT_RUN', 'native_axiom_audit': 'NOT_RUN',
+        'finite_witness_iff_rh': 'OPEN',
+    }
+
+
 def plus(a: list[int], b: list[int]) -> list[int]:
     return [(a[i] if i < len(a) else 0) + (b[i] if i < len(b) else 0)
             for i in range(max(len(a), len(b)))]
@@ -234,19 +306,22 @@ def main() -> int:
         if module.endswith('Audit'):
             require(bool(printed), f'{module}: no explicit axiom audit declarations')
             reports.update(printed)
-        if module.startswith('RHFinal/'):
+        if module.startswith(AUDITED_SOURCE_PREFIXES):
             new_theorems.extend(theorem_names(code))
     require(len(new_theorems) == len(set(new_theorems)), 'Duplicate new theorem declarations')
     missing = sorted(set(new_theorems) - reports)
     require(not missing, f'New public theorems missing axiom audit: {missing}')
     CHECKS['new_theorems_audit_coverage'] = {'declarations': sorted(new_theorems),
-                                           'count': len(new_theorems), 'missing': missing}
+                                           'count': len(new_theorems), 'missing': missing,
+                                           'source_prefixes': list(AUDITED_SOURCE_PREFIXES),
+                                           'native_execution': 'NOT_RUN'}
     CHECKS['active_source_sha256'] = {m + '.lean': digest(ROOT / (m + '.lean')) for m in full}
     CHECKS['reviewed_tooling_sha256'] = {
         name: digest(ROOT / name) for name in
         ['run.cmd', 'scripts/cache/Build.lean', 'docs/BUILD.md', 'scripts/static_audit.py']}
     CHECKS['upstream_hashes_verified'] = verify_manifest('upstream-files.json', 'path')
     CHECKS['active_import_hashes_verified'] = verify_manifest('active-imports.json', 'module', '.lean')
+    verify_analytic_publication(full, core)
     inputs = json.loads((ROOT / 'provenance/input-files.json').read_text())
     checked_inputs, unavailable_inputs = 0, []
     for entry in inputs:

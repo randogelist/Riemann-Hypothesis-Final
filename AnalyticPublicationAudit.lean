@@ -1,0 +1,56 @@
+import SoloboloAdmission.NativeODE
+
+-- Source-only audit target list; native execution NOT_RUN.
+#check (SoloboloAdmission.slitODEAdmission_iff_RH :
+  SoloboloAdmission.SlitODEAdmission ↔ _root_.RiemannHypothesis)
+#print SoloboloAdmission.slitODEAdmission_iff_RH
+#print axioms AWPIRH.xi
+#print axioms AWPIRH.centeredXi
+#print axioms AWPIRH.NontrivialZero
+#print axioms AWPIRH.xi_differentiable
+#print axioms AWPIRH.xi_reflection
+#print axioms AWPIRH.centeredXi_differentiable
+#print axioms AWPIRH.centeredXi_even
+#print axioms AWPIRH.nontrivialZero_ne_zero
+#print axioms AWPIRH.gammaR_ne_zero_of_nontrivialZero
+#print axioms AWPIRH.completedZeta_zero_of_nontrivialZero
+#print axioms AWPIRH.xi_eq_completed
+#print axioms AWPIRH.xi_zero_of_nontrivialZero
+#print axioms AWPIRH.xi_ne_zero_of_one_le_re
+#print axioms AWPIRH.theta
+#print axioms AWPIRH.complex_sqrt_sq
+#print axioms AWPIRH.theta_square
+#print axioms AWPIRH.theta_one
+#print axioms AWPIRH.theta_one_ne_zero
+#print axioms AWPIRH.theta_zero_of_nontrivialZero
+#print axioms AWPIRH.sqrt_differentiableAt_one
+#print axioms AWPIRH.sqrt_continuousAt_zero
+#print axioms AWPIRH.normalizedSqrt
+#print axioms AWPIRH.normalizedSqrt_sq
+#print axioms AWPIRH.normalizedSqrt_differentiableAt
+#print axioms AWPIRH.theta_eq_normalizedSqrt
+#print axioms AWPIRH.theta_differentiableAt_of_ne_zero
+#print axioms AWPIRH.theta_continuousAt_zero
+#print axioms AWPIRH.theta_analyticAt_zero
+#print axioms AWPIRH.theta_differentiable
+#print axioms AWPIRH.theta_analyticAt
+#print axioms AWPIRH.theta_entire
+#print axioms AWPIRH.theta_continuous
+#print axioms AngularMaster.XiZerosCritical
+#print axioms AngularMaster.ThetaZerosNonpositive
+#print axioms AngularMaster.xi_zero_mem_critical_strip
+#print axioms AngularMaster.nontrivialZero_of_xi_zero
+#print axioms AngularMaster.xi_zero_iff_nontrivialZero
+#print axioms AngularMaster.xi_zero_conj
+#print axioms AngularMaster.theta_zero_conj
+#print axioms AngularMaster.native_RH_iff_xi_zeros_critical
+#print axioms AngularMaster.square_nonpositive_iff_re_zero
+#print axioms AngularMaster.xi_zeros_critical_iff_theta_zeros_nonpositive
+#print axioms AngularMaster.native_RH_iff_theta_zeros_nonpositive
+#print axioms AWPIRH.analytic_ode_nonvanishing
+#print axioms AWPIRH.analytic_local_ode_nonvanishing
+#print axioms SoloboloAdmission.SlitODEAdmission
+#print axioms SoloboloAdmission.entire_local_ode_nonvanishing
+#print axioms SoloboloAdmission.slitODE_of_rh
+#print axioms SoloboloAdmission.rh_of_slitODE
+#print axioms SoloboloAdmission.slitODEAdmission_iff_RH

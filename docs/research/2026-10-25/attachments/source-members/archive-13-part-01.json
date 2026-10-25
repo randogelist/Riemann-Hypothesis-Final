@@ -1,0 +1,1184 @@
+[
+  {
+    "id": 659,
+    "attachment": 20,
+    "archive_chain": [
+      "20-ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_2_6_ADJACENT_DRIFT_BRIDGE1.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/ANALYTIC_FRONTIER.lean",
+    "sha256": "aa3f36a22bcfec1b3a29bd3e2d3011dd95a71a9ed56cb72248459f8c47b1a1ec",
+    "bytes": 2556,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "MAIN_CHAIN",
+      "Theorem_3_1_Rational_Integral_Bridge"
+    ],
+    "declarations": [
+      "REALIZATION_FROM_POLE_INTEGRALS",
+      "GRAM_POSITIVE_FROM_POLE_INTEGRALS",
+      "MAIN_CHAIN_FROM_POLE_INTEGRALS",
+      "MAIN_CHAIN_UNIFORM_FROM_POLE_INTEGRALS"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/20/root/ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/ANALYTIC_FRONTIER.lean"
+  },
+  {
+    "id": 660,
+    "attachment": 20,
+    "archive_chain": [
+      "20-ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_2_6_ADJACENT_DRIFT_BRIDGE1.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/Definition_2_1_Order_s_Rational_Moment_Functional.lean",
+    "sha256": "73e1d6c965990ba7f241ffb732194bab7763eea93f6b07d3d71302a515936c5c",
+    "bytes": 4467,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Mathlib.NumberTheory.LSeries.RiemannZeta",
+      "Mathlib.Analysis.PSeries",
+      "Mathlib.NumberTheory.Bernoulli",
+      "Mathlib.LinearAlgebra.Matrix.Determinant.Basic",
+      "Mathlib.Algebra.Polynomial.Div",
+      "Mathlib.Algebra.Polynomial.Derivative",
+      "Mathlib.Topology.Algebra.InfiniteSum.Real"
+    ],
+    "declarations": [
+      "Parameters",
+      "Parameters.h",
+      "Parameters.weight",
+      "Admissible",
+      "zeta",
+      "harmonic",
+      "D",
+      "tailD",
+      "numerator",
+      "quotient",
+      "monomialMoment",
+      "polynomialMoment",
+      "residue",
+      "poleConstant",
+      "entryA",
+      "entryM",
+      "pencil",
+      "delta",
+      "realPolynomial",
+      "evalQ",
+      "gram",
+      "derivativeMatrix",
+      "zeta_series_summable",
+      "zeta_series_hasSum",
+      "zeta_eq_riemannZeta",
+      "zeta_eq_riemannZeta_re",
+      "riemannZeta_nat_im_zero",
+      "zeta_pos",
+      "zeta_five_eq_riemannZeta_re"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/20/root/ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/Definition_2_1_Order_s_Rational_Moment_Functional.lean"
+  },
+  {
+    "id": 661,
+    "attachment": 20,
+    "archive_chain": [
+      "20-ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_2_6_ADJACENT_DRIFT_BRIDGE1.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/MAIN_CHAIN.lean",
+    "sha256": "c167315c258eede8a4e0230cb0faf95a85055867d6582a8ed1a5e9d0f6ae6450",
+    "bytes": 2564,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Theorem_2_4_Canonical_Basis_Invariance",
+      "Theorem_3_1_General_Odd_Weight_Endpoint",
+      "Theorem_3_1_Positive_Moment_Realization",
+      "Theorem_4_1_Spectral_Irrationality_Measure_Criterion"
+    ],
+    "declarations": [
+      "MAIN_CHAIN",
+      "MAIN_CHAIN_FROM_MOMENTS",
+      "MAIN_CHAIN_UNIFORM",
+      "GENERAL_DIOPHANTINE_TRANSFER"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/20/root/ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/MAIN_CHAIN.lean"
+  },
+  {
+    "id": 662,
+    "attachment": 20,
+    "archive_chain": [
+      "20-ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_2_6_ADJACENT_DRIFT_BRIDGE1.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/MAIN_CHAIN_ARITHMETIC.lean",
+    "sha256": "244ab29e35a151f3205d33da0ab9a223a8d1ba5befb71745720e9ec270e96c5d",
+    "bytes": 5742,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "MAIN_CHAIN_ASSEMBLED",
+      "Theorem_4_1_General_Odd_Zeta_Application",
+      "Theorem_4_1_Integer_Polynomial_Irrationality",
+      "Theorem_4_1_Linear_Odd_Zeta_Family"
+    ],
+    "declarations": [
+      "gramPositiveFamily",
+      "normalized_eval_nonzero",
+      "DecayHypothesis",
+      "EventualQuadraticDecay",
+      "irrational_of_quadratic_decay",
+      "irrational_of_eventual_quadratic_decay",
+      "measure_and_irrational",
+      "GENERAL_IRRATIONALITY",
+      "GENERAL_RIEMANN_ZETA_IRRATIONALITY",
+      "LINEAR_FAMILY_IRRATIONALITY",
+      "LINEAR_FAMILY_RIEMANN_ZETA_IRRATIONALITY"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/20/root/ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/MAIN_CHAIN_ARITHMETIC.lean"
+  },
+  {
+    "id": 663,
+    "attachment": 20,
+    "archive_chain": [
+      "20-ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_2_6_ADJACENT_DRIFT_BRIDGE1.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/MAIN_CHAIN_ASSEMBLED.lean",
+    "sha256": "b4d72cddd0f4a3c6c13005d4b080c43883b714ca565fa571b740aa02d1ddbdbe",
+    "bytes": 4772,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "ANALYTIC_FRONTIER",
+      "Zetahyperbolic.AnalyticMainChain",
+      "Theorem_3_1_Pole_Integral_Identity"
+    ],
+    "declarations": [
+      "REALIZATION",
+      "GRAM_POSITIVE",
+      "MAIN_CHAIN_UNCONDITIONAL",
+      "EXACT_ZERO_FREE_DISK",
+      "GRAM_POSITIVE_ORIGINAL",
+      "MAIN_CHAIN_UNCONDITIONAL",
+      "ORIGINAL_EXACT_ZERO_FREE_DISK"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/20/root/ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/MAIN_CHAIN_ASSEMBLED.lean"
+  },
+  {
+    "id": 664,
+    "attachment": 20,
+    "archive_chain": [
+      "20-ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_2_6_ADJACENT_DRIFT_BRIDGE1.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/MAIN_CHAIN_IRRATIONALITY.lean",
+    "sha256": "abbe4440ff1b6123024787987387789a544c7b4205a9ad73852936d5ab914b69",
+    "bytes": 11596,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "MAIN_CHAIN_ASSEMBLED",
+      "Theorem_4_1_Direct_Irrationality_From_Decay",
+      "Theorem_2_4_Primitive_Normalization_Minimality",
+      "Mathlib.Analysis.SpecialFunctions.Log.Basic"
+    ],
+    "declarations": [
+      "normalization",
+      "primitivePolynomial",
+      "primitivePolynomial_isPrimitive",
+      "primitivePolynomial_eval",
+      "primitivePolynomial_natDegree",
+      "primitivePolynomial_natDegree_le_K",
+      "primitivePolynomial_eval_pos",
+      "NormalizedQuadraticDecay",
+      "normalizedQuadraticDecay_of_integral_rescalings",
+      "UnboundedOnTails",
+      "unboundedOnTails_of_unbounded",
+      "quadratic_denominator_squeeze",
+      "irrational_zeta_of_normalized_decay",
+      "irrational_riemannZeta_of_normalized_decay",
+      "OddWeightDecayHypothesis",
+      "irrational_odd_zeta",
+      "all_odd_zeta_irrational",
+      "affineFamily",
+      "affineFamily_admissible",
+      "affineFamily_unbounded",
+      "AffineFamilyDecay",
+      "oddWeightDecayHypothesis_of_affineFamilyDecay",
+      "all_odd_zeta_irrational_of_affineFamilyDecay"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/20/root/ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/MAIN_CHAIN_IRRATIONALITY.lean"
+  },
+  {
+    "id": 665,
+    "attachment": 20,
+    "archive_chain": [
+      "20-ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_2_6_ADJACENT_DRIFT_BRIDGE1.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/Mathlib.lean",
+    "sha256": "4345472a973b08067cec3e9b40c415b12786c83156086e9ceb1539edb75e09e7",
+    "bytes": 1496,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Mathlib.Algebra.BigOperators.Intervals",
+      "Mathlib.Algebra.Polynomial.BigOperators",
+      "Mathlib.Algebra.Polynomial.Degree.SmallDegree",
+      "Mathlib.Algebra.Polynomial.Degree.Units",
+      "Mathlib.Algebra.Polynomial.DenomsClearable",
+      "Mathlib.Algebra.Polynomial.Derivative",
+      "Mathlib.Algebra.Polynomial.Div",
+      "Mathlib.Analysis.Complex.Exponential",
+      "Mathlib.Analysis.Matrix.Order",
+      "Mathlib.Analysis.PSeries",
+      "Mathlib.LinearAlgebra.Complex.Module",
+      "Mathlib.LinearAlgebra.Matrix.Determinant.Basic",
+      "Mathlib.LinearAlgebra.Matrix.Polynomial",
+      "Mathlib.LinearAlgebra.Matrix.PosDef",
+      "Mathlib.LinearAlgebra.Matrix.Symmetric",
+      "Mathlib.LinearAlgebra.Vandermonde",
+      "Mathlib.NumberTheory.Bernoulli",
+      "Mathlib.NumberTheory.LSeries.RiemannZeta",
+      "Mathlib.NumberTheory.Real.Irrational",
+      "Mathlib.RingTheory.Polynomial.GaussLemma",
+      "Mathlib.Tactic.FieldSimp",
+      "Mathlib.Tactic.Linarith",
+      "Mathlib.Tactic.NormNum",
+      "Mathlib.Tactic.Positivity",
+      "Mathlib.Tactic.Ring",
+      "Mathlib.Topology.Algebra.InfiniteSum.Real",
+      "Lean.Elab.Tactic.Omega"
+    ],
+    "declarations": [],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/20/root/ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/Mathlib.lean"
+  },
+  {
+    "id": 666,
+    "attachment": 20,
+    "archive_chain": [
+      "20-ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_2_6_ADJACENT_DRIFT_BRIDGE1.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/PaperChain/Audit.lean",
+    "sha256": "98c84e83ffad220dcbed562c32f86608182cde8f74c246f64cae04ffc1d24c41",
+    "bytes": 1793,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChain.Stage10"
+    ],
+    "declarations": [],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/20/root/ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/PaperChain/Audit.lean"
+  },
+  {
+    "id": 667,
+    "attachment": 20,
+    "archive_chain": [
+      "20-ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_2_6_ADJACENT_DRIFT_BRIDGE1.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/PaperChain/Stage01.lean",
+    "sha256": "f56e3621249d90c45b8ca800358118bca983564933610b1533af8e1d165d88a5",
+    "bytes": 1879,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zetahyperbolic.Section2Checked"
+    ],
+    "declarations": [
+      "stage01_pullback_monomial",
+      "stage01_pullback_simple_pole",
+      "stage01_tau_reflection_monomial",
+      "stage01_tau_reflection_pole",
+      "stage01_tau_difference_all_nonzero"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/20/root/ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/PaperChain/Stage01.lean"
+  },
+  {
+    "id": 668,
+    "attachment": 20,
+    "archive_chain": [
+      "20-ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_2_6_ADJACENT_DRIFT_BRIDGE1.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/PaperChain/Stage02.lean",
+    "sha256": "234233336702ed57b240fc80415f87fd37ce791fcfcc31a61947531d429d249b",
+    "bytes": 1258,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChain.Stage01",
+      "Theorem_2_5_Lagrange_Pole_Diagonalization"
+    ],
+    "declarations": [
+      "stage02_derivative_factorization",
+      "stage02_derivative_nonsingular",
+      "stage02_raw_rational_pencil_exact_degree"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/20/root/ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/PaperChain/Stage02.lean"
+  },
+  {
+    "id": 669,
+    "attachment": 20,
+    "archive_chain": [
+      "20-ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_2_6_ADJACENT_DRIFT_BRIDGE1.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/PaperChain/Stage03.lean",
+    "sha256": "26105393891146136373ff0b058b0b80c72401406217bad381516f6a9efda28d",
+    "bytes": 1593,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChain.Stage02",
+      "Theorem_3_1_Universal_Hyperbolicity_And_Zero_Free_Disk"
+    ],
+    "declarations": [
+      "stage03_spectral_factorization",
+      "stage03_all_roots_real",
+      "stage03_zero_free_disk"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/20/root/ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/PaperChain/Stage03.lean"
+  },
+  {
+    "id": 670,
+    "attachment": 20,
+    "archive_chain": [
+      "20-ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_2_6_ADJACENT_DRIFT_BRIDGE1.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/PaperChain/Stage03UnconditionalAudit.lean",
+    "sha256": "44bd91f6afbfa0541da563d4c2662194f7ed8d8da396a9613e639a7fe4a26119",
+    "bytes": 908,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChain.Stage03UnconditionalBridge"
+    ],
+    "declarations": [],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/20/root/ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/PaperChain/Stage03UnconditionalAudit.lean"
+  },
+  {
+    "id": 671,
+    "attachment": 20,
+    "archive_chain": [
+      "20-ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_2_6_ADJACENT_DRIFT_BRIDGE1.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/PaperChain/Stage03UnconditionalBridge.lean",
+    "sha256": "11bc9eca09794254bcf00bbb0cb7ba7701d09c72000295535a5dca4e41100ee3",
+    "bytes": 2439,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "MAIN_CHAIN_ASSEMBLED",
+      "PaperChain.Stage03"
+    ],
+    "declarations": [
+      "stage03_original_gram_unconditional",
+      "stage03_original_exact_zero_free_disk",
+      "stage03_unconditional_general_statement"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/20/root/ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/PaperChain/Stage03UnconditionalBridge.lean"
+  },
+  {
+    "id": 672,
+    "attachment": 20,
+    "archive_chain": [
+      "20-ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_2_6_ADJACENT_DRIFT_BRIDGE1.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/PaperChain/Stage04.lean",
+    "sha256": "b72f61cc820db9019865a779bbfd78a0c4e24eb1c708860beb5cc603486109ac",
+    "bytes": 1341,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChain.Stage03"
+    ],
+    "declarations": [
+      "expectedMinorDegree",
+      "stage04_expected_degree_le_size",
+      "stage04_expected_degree_zero",
+      "ExactMinorRankLaw",
+      "InterlacesFiniteRootLists"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/20/root/ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/PaperChain/Stage04.lean"
+  },
+  {
+    "id": 673,
+    "attachment": 20,
+    "archive_chain": [
+      "20-ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_2_6_ADJACENT_DRIFT_BRIDGE1.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/PaperChain/Stage05.lean",
+    "sha256": "bba609ea9f6df97b7a039d91e298c672bff3c1841447c021b0e98d2a988dbf4e",
+    "bytes": 1521,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChain.Stage04",
+      "Theorem_4_1_Integer_Polynomial_Irrationality"
+    ],
+    "declarations": [
+      "stage05_irrational_from_quadratic_decay",
+      "stage05_conditional_rational_measure"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/20/root/ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/PaperChain/Stage05.lean"
+  },
+  {
+    "id": 674,
+    "attachment": 20,
+    "archive_chain": [
+      "20-ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_2_6_ADJACENT_DRIFT_BRIDGE1.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/PaperChain/Stage05AdjacentDriftAudit.lean",
+    "sha256": "12fad9cd88d052ec5dd7e1ce4b0e7ecc0885699d2f951bab056d7b6890cba008",
+    "bytes": 1336,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChain.Stage05AdjacentDriftBridge"
+    ],
+    "declarations": [],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/20/root/ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/PaperChain/Stage05AdjacentDriftAudit.lean"
+  },
+  {
+    "id": 675,
+    "attachment": 20,
+    "archive_chain": [
+      "20-ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_2_6_ADJACENT_DRIFT_BRIDGE1.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/PaperChain/Stage05AdjacentDriftBridge.lean",
+    "sha256": "240b88567ba72680039684688507bef6bfbfeb7f7356a208d67183154860fe0c",
+    "bytes": 3244,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Theorem_4_1_Adjacent_Log_Increment",
+      "PaperChain.Stage05ContentGramBridge"
+    ],
+    "declarations": [
+      "stage05_affine_original_adjacent_log_ratio",
+      "stage05_zeta5_irrational_if_adjacent_energy_drift",
+      "stage05_zeta5_irrational_if_adjacent_content_gram_rates",
+      "stage05_zeta5_irrational_if_adjacent_primitive_ratio"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/20/root/ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/PaperChain/Stage05AdjacentDriftBridge.lean"
+  },
+  {
+    "id": 676,
+    "attachment": 20,
+    "archive_chain": [
+      "20-ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_2_6_ADJACENT_DRIFT_BRIDGE1.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/PaperChain/Stage05ContentGramAudit.lean",
+    "sha256": "4900c875d3ff3b7cdbae4882d2cc1527e65ee63fd3c10876635df57d945618fc",
+    "bytes": 1112,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChain.Stage05ContentGramBridge"
+    ],
+    "declarations": [],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/20/root/ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/PaperChain/Stage05ContentGramAudit.lean"
+  },
+  {
+    "id": 677,
+    "attachment": 20,
+    "archive_chain": [
+      "20-ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_2_6_ADJACENT_DRIFT_BRIDGE1.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/PaperChain/Stage05ContentGramBridge.lean",
+    "sha256": "93a4f58a93253e77fe8979e672c35a85e265cee68574a73d8e26bb41f490e0b4",
+    "bytes": 2644,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Theorem_4_1_Content_Gram_Cancellation",
+      "PaperChain.Stage08PoleProductBridge"
+    ],
+    "declarations": [
+      "stage08_original_exact_content_gram_value",
+      "stage08_original_content_gram_energy_identity",
+      "stage05_zeta5_irrational_if_content_gram_log_rates"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/20/root/ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/PaperChain/Stage05ContentGramBridge.lean"
+  },
+  {
+    "id": 678,
+    "attachment": 20,
+    "archive_chain": [
+      "20-ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_2_6_ADJACENT_DRIFT_BRIDGE1.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/PaperChain/Stage05PrimitiveAudit.lean",
+    "sha256": "21d30603204f0fa8534e37b8b07dcd14b64e019e2e2eeff1bd8a3213271b5fa0",
+    "bytes": 1241,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChain.Stage05PrimitiveBridge"
+    ],
+    "declarations": [],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/20/root/ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/PaperChain/Stage05PrimitiveAudit.lean"
+  },
+  {
+    "id": 679,
+    "attachment": 20,
+    "archive_chain": [
+      "20-ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_2_6_ADJACENT_DRIFT_BRIDGE1.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/PaperChain/Stage05PrimitiveBridge.lean",
+    "sha256": "80d3835a694d76386e15adf6d246ab954267d0ba7cef3875963c195cf9f97c4b",
+    "bytes": 4016,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "MAIN_CHAIN_IRRATIONALITY",
+      "MAIN_CHAIN_ARITHMETIC",
+      "PaperChain.Stage03UnconditionalBridge"
+    ],
+    "declarations": [
+      "stage05_original_integer_primitive",
+      "stage05_original_integer_primitive_degree",
+      "stage05_original_integer_primitive_center_pos",
+      "stage05_fixed_odd_zeta_irrational_if_affine_decay",
+      "stage05_zeta5_irrational_if_normalized_quadratic_decay",
+      "stage05_linear_family_irrational_if_decay"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/20/root/ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/PaperChain/Stage05PrimitiveBridge.lean"
+  },
+  {
+    "id": 680,
+    "attachment": 20,
+    "archive_chain": [
+      "20-ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_2_6_ADJACENT_DRIFT_BRIDGE1.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/PaperChain/Stage05RateGapAudit.lean",
+    "sha256": "dda9b010e911ba17866de18f74585be3405d316e8371242a226cdf38ea297fd3",
+    "bytes": 1508,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChain.Stage05RateGapBridge",
+      "PaperChain.Stage07WeightShiftBridge"
+    ],
+    "declarations": [],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/20/root/ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/PaperChain/Stage05RateGapAudit.lean"
+  },
+  {
+    "id": 681,
+    "attachment": 20,
+    "archive_chain": [
+      "20-ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_2_6_ADJACENT_DRIFT_BRIDGE1.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/PaperChain/Stage05RateGapBridge.lean",
+    "sha256": "d58da9e7f7476019d96bc68acbbec4b15aa6732fcf3ff15a2965476ca5901ef1",
+    "bytes": 3073,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChain.Stage05PrimitiveBridge",
+      "Theorem_4_1_Leading_Coefficient_Gap"
+    ],
+    "declarations": [
+      "stage05_original_primitive_gap_identity",
+      "stage05_original_leading_height_ge_one",
+      "stage05_original_determinant_ratio_pos",
+      "stage05_zeta5_irrational_if_leading_ratio_gap"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/20/root/ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/PaperChain/Stage05RateGapBridge.lean"
+  },
+  {
+    "id": 682,
+    "attachment": 20,
+    "archive_chain": [
+      "20-ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_2_6_ADJACENT_DRIFT_BRIDGE1.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/PaperChain/Stage06.lean",
+    "sha256": "1a8b10c22a076a9b44ae9aab7746f916ad00f8131bf0e04ce017c71a5b241c02",
+    "bytes": 1231,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChain.Stage05"
+    ],
+    "declarations": [
+      "HasZeta5StandardSpectralEstimate",
+      "HasZeta5SharpenedSpectralEstimate",
+      "stage06_sharpened_implies_standard"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/20/root/ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/PaperChain/Stage06.lean"
+  },
+  {
+    "id": 683,
+    "attachment": 20,
+    "archive_chain": [
+      "20-ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_2_6_ADJACENT_DRIFT_BRIDGE1.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/PaperChain/Stage07.lean",
+    "sha256": "7ec21cf40052dca2d8412fe63c96ce990632d27ec227242ee707fc86ee993d63",
+    "bytes": 992,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChain.Stage06"
+    ],
+    "declarations": [
+      "stage07_coupled_shift",
+      "WeightSandwich",
+      "Zeta3Zeta5PositivityCone"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/20/root/ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/PaperChain/Stage07.lean"
+  },
+  {
+    "id": 684,
+    "attachment": 20,
+    "archive_chain": [
+      "20-ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_2_6_ADJACENT_DRIFT_BRIDGE1.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/PaperChain/Stage07WeightShiftBridge.lean",
+    "sha256": "7666273c13fcc2022d188d4558e76f406dd0bd1df78fe2a7040cb967b6f6fc53",
+    "bytes": 2696,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Theorem_2_5_Weight_Change",
+      "Zetahyperbolic.ManuscriptCompatibility"
+    ],
+    "declarations": [
+      "stage07_original_derivative_det_reweight",
+      "stage07_original_reweight_factor_pos"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/20/root/ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/PaperChain/Stage07WeightShiftBridge.lean"
+  },
+  {
+    "id": 685,
+    "attachment": 20,
+    "archive_chain": [
+      "20-ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_2_6_ADJACENT_DRIFT_BRIDGE1.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/PaperChain/Stage08.lean",
+    "sha256": "e8374de0a44bc8764466f885ce93873291b190fc764d014450bf138611b98fe7",
+    "bytes": 1201,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChain.Stage07"
+    ],
+    "declarations": [
+      "DeterminantAsymptoticWindow",
+      "RootCollapseCount",
+      "PotentialGapConservation"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/20/root/ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/PaperChain/Stage08.lean"
+  },
+  {
+    "id": 686,
+    "attachment": 20,
+    "archive_chain": [
+      "20-ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_2_6_ADJACENT_DRIFT_BRIDGE1.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/PaperChain/Stage08FinitePotentialAudit.lean",
+    "sha256": "35050837cb2454741d0ad010f92e67fe7df6d5cbfe51becd705aa918f7d7c01e",
+    "bytes": 1038,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChain.Stage08FinitePotentialBridge"
+    ],
+    "declarations": [],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/20/root/ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/PaperChain/Stage08FinitePotentialAudit.lean"
+  },
+  {
+    "id": 687,
+    "attachment": 20,
+    "archive_chain": [
+      "20-ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_2_6_ADJACENT_DRIFT_BRIDGE1.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/PaperChain/Stage08FinitePotentialBridge.lean",
+    "sha256": "77104e22d0d4d6402990b969c00d94dd8e5f85f8a8c557a3c2a81aa1827b685b",
+    "bytes": 4062,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Theorem_4_1_Determinant_Log_Energy",
+      "PaperChain.Stage05RateGapBridge"
+    ],
+    "declarations": [
+      "stage08_original_finite_potential_conservation",
+      "stage08_original_finite_potential_conservation_per_K_sq",
+      "stage05_zeta5_irrational_if_finite_energy_gap",
+      "stage05_zeta5_irrational_if_three_log_rates"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/20/root/ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/PaperChain/Stage08FinitePotentialBridge.lean"
+  },
+  {
+    "id": 688,
+    "attachment": 20,
+    "archive_chain": [
+      "20-ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_2_6_ADJACENT_DRIFT_BRIDGE1.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/PaperChain/Stage08PoleProductAudit.lean",
+    "sha256": "b81d1b1fb32ba8e7c6ec075f0d57722ffa13d212171850687833cd611bc1b110",
+    "bytes": 836,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChain.Stage08PoleProductBridge"
+    ],
+    "declarations": [],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/20/root/ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/PaperChain/Stage08PoleProductAudit.lean"
+  },
+  {
+    "id": 689,
+    "attachment": 20,
+    "archive_chain": [
+      "20-ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_2_6_ADJACENT_DRIFT_BRIDGE1.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/PaperChain/Stage08PoleProductBridge.lean",
+    "sha256": "5ee129cb9979fd6ec6cfbad1d3a56de22a0cefcfc732c20a46dff6b85270990a",
+    "bytes": 2599,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Theorem_4_1_Pole_Log_Slope",
+      "PaperChain.Stage08FinitePotentialBridge"
+    ],
+    "declarations": [
+      "stage08_original_finite_pole_energy",
+      "stage05_zeta5_irrational_if_pole_log_rates"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/20/root/ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/PaperChain/Stage08PoleProductBridge.lean"
+  },
+  {
+    "id": 690,
+    "attachment": 20,
+    "archive_chain": [
+      "20-ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_2_6_ADJACENT_DRIFT_BRIDGE1.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/PaperChain/Stage09.lean",
+    "sha256": "7391658918b064c6475ee950c652468bb4f0e077f6e3b90acd93a296bbdf5ca0",
+    "bytes": 1203,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChain.Stage08"
+    ],
+    "declarations": [
+      "stage09_qadic_nonvanishing_sign",
+      "StrictTailCertificate",
+      "stage09_weight7_rational_signs"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/20/root/ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/PaperChain/Stage09.lean"
+  },
+  {
+    "id": 691,
+    "attachment": 20,
+    "archive_chain": [
+      "20-ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_2_6_ADJACENT_DRIFT_BRIDGE1.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/PaperChain/Stage10.lean",
+    "sha256": "de7388af6b2da928ff40ac2b86f11d062b2889fe79534692f44411a628c4f2dc",
+    "bytes": 1978,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChain.Stage09"
+    ],
+    "declarations": [
+      "stage10_character_vandermonde_sign",
+      "stage10_even_start_positive",
+      "BetaPadeRate"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/20/root/ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/PaperChain/Stage10.lean"
+  },
+  {
+    "id": 692,
+    "attachment": 20,
+    "archive_chain": [
+      "20-ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_2_6_ADJACENT_DRIFT_BRIDGE1.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/Theorem_2_4_Canonical_Basis_Invariance.lean",
+    "sha256": "72d310e0b344c2aa6310e99aee1fe672dfd43b3c93cadd958ca9abf43b90af34",
+    "bytes": 8399,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Definition_2_1_Order_s_Rational_Moment_Functional",
+      "Mathlib.RingTheory.Polynomial.GaussLemma",
+      "Mathlib.Algebra.Polynomial.Degree.Units",
+      "Mathlib.Tactic.Ring"
+    ],
+    "declarations": [
+      "changeBasisPencil",
+      "changeBasisPencil_apply",
+      "det_changeBasisPencil",
+      "det_changeBasisPencil_ne_zero_iff",
+      "changeBasisPencil_eval_zero_iff",
+      "PrimitiveNormalization",
+      "primitive_eq_or_eq_neg_of_associated",
+      "primitive_scalar_unique",
+      "primitiveNormalization_scalar_invariance",
+      "theorem_2_4_canonical_basis_invariance",
+      "primitiveNormalization_nonempty",
+      "primitiveNormalization",
+      "primitiveNormalization_exists_iff",
+      "theorem_2_4_constructed_canonical_basis_invariance"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/20/root/ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/Theorem_2_4_Canonical_Basis_Invariance.lean"
+  },
+  {
+    "id": 693,
+    "attachment": 20,
+    "archive_chain": [
+      "20-ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_2_6_ADJACENT_DRIFT_BRIDGE1.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/Theorem_2_4_Primitive_Normalization_Minimality.lean",
+    "sha256": "eedaa21c81c3bc0739ab2ab144e7e6b2b3ced34b8f8e481111e24bc084fb1113",
+    "bytes": 5802,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Theorem_2_4_Canonical_Basis_Invariance"
+    ],
+    "declarations": [
+      "primitiveNormalization_integer_multiple",
+      "primitiveNormalization_scale_le",
+      "primitiveNormalization_eval_le",
+      "primitiveNormalization_abs_eval_le",
+      "evalQ_intMap",
+      "primitiveNormalization_abs_eval_int_le"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/20/root/ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/Theorem_2_4_Primitive_Normalization_Minimality.lean"
+  },
+  {
+    "id": 694,
+    "attachment": 20,
+    "archive_chain": [
+      "20-ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_2_6_ADJACENT_DRIFT_BRIDGE1.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/Theorem_2_5_Lagrange_Pole_Diagonalization.lean",
+    "sha256": "4ab4ba8669d84d6878a58cc3503d31f96037e58721ce3296421a6195cf978a83",
+    "bytes": 14131,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Theorem_2_4_Canonical_Basis_Invariance",
+      "Mathlib.Algebra.Polynomial.BigOperators",
+      "Mathlib.Algebra.BigOperators.Intervals",
+      "Mathlib.LinearAlgebra.Vandermonde",
+      "Mathlib.LinearAlgebra.Matrix.Polynomial",
+      "Mathlib.Tactic.NormNum",
+      "Mathlib.Tactic.Linarith",
+      "Mathlib.Tactic.Ring"
+    ],
+    "declarations": [
+      "poleIndex",
+      "poleNode",
+      "poleWeight",
+      "poleVandermonde",
+      "poleIndex_mem",
+      "poleIndex_pos",
+      "poleNode_injective",
+      "D_eval_ne_zero_of_lt",
+      "tailD_derivative_eval",
+      "tailD_derivative_eval_ne_zero",
+      "poleWeight_ne_zero",
+      "sum_tail_eq_fin",
+      "rationalDerivativeMatrix",
+      "entryM_eq_sum_poleWeight",
+      "rationalDerivativeMatrix_factorization",
+      "rationalDerivativeMatrix_det",
+      "poleVandermonde_eq",
+      "rationalDerivativeMatrix_det_product",
+      "poleVandermonde_det_ne_zero",
+      "rationalDerivativeMatrix_det_ne_zero",
+      "derivativeMatrix_det_ne_zero",
+      "rationalConstantMatrix",
+      "pencil_eq_X_smul_add",
+      "delta_coeff_dimension",
+      "delta_ne_zero",
+      "delta_natDegree",
+      "delta_leadingCoeff",
+      "poleDiagonalPencil",
+      "poleConstantMatrix",
+      "pole_slope_diagonal",
+      "poleDiagonalPencil_eq",
+      "poleDiagonalPencil_off_diagonal",
+      "poleDiagonalPencil_diagonal",
+      "poleDiagonalRemainder",
+      "poleDiagonalPencil_diagonal_harmonic",
+      "theorem_2_5_lagrange_pole_diagonalization",
+      "theorem_2_4_constructed_for_manuscript"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/20/root/ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/Theorem_2_5_Lagrange_Pole_Diagonalization.lean"
+  },
+  {
+    "id": 695,
+    "attachment": 20,
+    "archive_chain": [
+      "20-ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_2_6_ADJACENT_DRIFT_BRIDGE1.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/Theorem_2_5_Weight_Change.lean",
+    "sha256": "86910bdcecb9b9d8b48ef9a1f1bb6396c5270311859411fed222905302b72ced",
+    "bytes": 5005,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Theorem_2_5_Lagrange_Pole_Diagonalization"
+    ],
+    "declarations": [
+      "poleWeight_reweight_add",
+      "rationalDerivativeMatrix_det_reweight_add",
+      "rationalDerivativeMatrix_det_reweight_cross",
+      "reweight_factor_pos",
+      "rationalDerivativeMatrix_det_reweight_ratio",
+      "delta_leadingCoeff_reweight_add",
+      "delta_leadingCoeff_reweight_cross"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/20/root/ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/Theorem_2_5_Weight_Change.lean"
+  },
+  {
+    "id": 696,
+    "attachment": 20,
+    "archive_chain": [
+      "20-ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_2_6_ADJACENT_DRIFT_BRIDGE1.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/Theorem_3_1_Bose_Tail_Integral.lean",
+    "sha256": "025e9aa5f80c6be3d2ea79ce6b0c486955a3cb5974d3afe8c8bbe64d7cd63a6c",
+    "bytes": 5803,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Theorem_3_1_Hyperbolic_Moments",
+      "Theorem_3_1_Zeta_Tail"
+    ],
+    "declarations": [
+      "bose_geometric",
+      "boseTailTerm",
+      "boseTailCoefficient",
+      "boseTailTerm_integrable",
+      "integral_boseTailTerm",
+      "boseTailTerm_nonneg",
+      "summable_boseTail",
+      "summable_integral_norm_boseTailTerm",
+      "integral_tsum_boseTailTerm",
+      "integrableOn_tsum_boseTailTerm",
+      "bose_tail_eq_tsum",
+      "integrableOn_bose_tail",
+      "integral_bose_tail_tsum",
+      "integral_bose_tail"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/20/root/ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/Theorem_3_1_Bose_Tail_Integral.lean"
+  },
+  {
+    "id": 697,
+    "attachment": 20,
+    "archive_chain": [
+      "20-ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_2_6_ADJACENT_DRIFT_BRIDGE1.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/Theorem_3_1_Concrete_Moment_Realization.lean",
+    "sha256": "dadcabb037d690d321c82ce5564d7f154f7dd79284e574d0c77931e13019e50c",
+    "bytes": 7641,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Theorem_3_1_Hyperbolic_Moments",
+      "Theorem_3_1_Positive_Moment_Realization",
+      "Zetahyperbolic.Section2Checked",
+      "Mathlib.MeasureTheory.Integral.Bochner.ContinuousLinearMap"
+    ],
+    "declarations": [
+      "weightedDensity",
+      "weightedDensity_pos",
+      "measurable_weightedDensity",
+      "weightedMeasure",
+      "weightedMeasure_nonzero",
+      "momentMeasure",
+      "momentMeasure_nonzero",
+      "integral_momentMeasure",
+      "integrable_momentMeasure_iff",
+      "integrableOn_polynomial_density",
+      "integrableOn_weightedDensity_moment",
+      "realization"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/20/root/ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/Theorem_3_1_Concrete_Moment_Realization.lean"
+  },
+  {
+    "id": 698,
+    "attachment": 20,
+    "archive_chain": [
+      "20-ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_2_6_ADJACENT_DRIFT_BRIDGE1.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/Theorem_3_1_Coth_Partial_Fractions.lean",
+    "sha256": "6fe401c823eceefbaecc7b4b3b2115e0897bb7637d01912889eff691e31aa74e",
+    "bytes": 4826,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Mathlib.Analysis.SpecialFunctions.Trigonometric.Cotangent",
+      "Mathlib.Tactic"
+    ],
+    "declarations": [
+      "summable_coth_terms",
+      "cot_term_imaginary",
+      "coth_partial_fractions_one",
+      "coth_partial_fractions"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/20/root/ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/Theorem_3_1_Coth_Partial_Fractions.lean"
+  },
+  {
+    "id": 699,
+    "attachment": 20,
+    "archive_chain": [
+      "20-ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_2_6_ADJACENT_DRIFT_BRIDGE1.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/Theorem_3_1_General_Odd_Weight_Endpoint.lean",
+    "sha256": "0f54be96d9835151343900d072344700cd843e11d0c399340a172e91b2c90d68",
+    "bytes": 8611,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Theorem_2_5_Lagrange_Pole_Diagonalization",
+      "Theorem_3_1_Universal_Hyperbolicity_And_Zero_Free_Disk"
+    ],
+    "declarations": [
+      "GramPositive",
+      "delta_degree",
+      "delta_nonzero",
+      "derivative_nonsingular",
+      "factorization",
+      "ComplexRoot",
+      "complex_eval_transport",
+      "complex_root_iff",
+      "roots_real",
+      "roots_avoid_center",
+      "center_nonvanishing",
+      "indices_nonempty",
+      "spectralRadius",
+      "beta_abs_le",
+      "spectralRadius_pos",
+      "zeroFreeRadius",
+      "zeroFreeRadius_pos",
+      "complex_root_distance",
+      "complex_zero_free_disk",
+      "zeroFreeRadius_attained",
+      "complex_root_on_boundary",
+      "center_eq_riemannZeta",
+      "GeneralStatement",
+      "theorem_3_1_general"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/20/root/ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/Theorem_3_1_General_Odd_Weight_Endpoint.lean"
+  }
+]

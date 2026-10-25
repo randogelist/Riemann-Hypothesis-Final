@@ -1,0 +1,197 @@
+[
+  {
+    "id": 40,
+    "attachment": 3,
+    "archive_chain": [
+      "03-WITNESS_FRONTIER_HANDOFF_20261022.zip"
+    ],
+    "member": "WITNESS_FRONTIER_HANDOFF_20261022/GP7_WitnessCoordinateJunction.lean",
+    "sha256": "dd0f38c99f0e4c165490d3406727a2202390cafe49d9ea34a071382754100978",
+    "bytes": 3767,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Mathlib"
+    ],
+    "declarations": [
+      "mu7",
+      "polyAt",
+      "energy",
+      "numerator",
+      "pade7",
+      "coordRe",
+      "coordIm",
+      "Coordinates",
+      "extractedCoordinates",
+      "IsWitness",
+      "check",
+      "check_iff",
+      "WitnessCondition",
+      "canonical_witness_iff_packet"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/03/root/WITNESS_FRONTIER_HANDOFF_20261022/GP7_WitnessCoordinateJunction.lean"
+  },
+  {
+    "id": 41,
+    "attachment": 3,
+    "archive_chain": [
+      "03-WITNESS_FRONTIER_HANDOFF_20261022.zip",
+      "WITNESS_FRONTIER_HANDOFF_20261022/ZETA3_WITNESS_TRUST_BOUNDARY_v0_1_6_FIX6.zip"
+    ],
+    "member": "ZETA3_WITNESS_TRUST_BOUNDARY_v0_1_6_FIX6/Zeta3Witness/Samples.lean",
+    "sha256": "1ae340d659e2f55a475c3e69a06205330a6735aeba241afa660ef41184bb4d81",
+    "bytes": 6034,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta3Witness.Core"
+    ],
+    "declarations": [
+      "riesz1",
+      "riesz2",
+      "fakeRieszMonic",
+      "fakeRieszOrth",
+      "fakeRieszEnergy",
+      "fakeRieszEndpoint",
+      "fakeRieszComplex",
+      "fakeRieszLength",
+      "aperyGood",
+      "fakeAperyRecurrence",
+      "fakeAperyB",
+      "fakeAperyDenominator",
+      "fakeAperyCleared",
+      "fakeAperyTooWeakEnvelope",
+      "fakeAperyEnvelope",
+      "rangeOne",
+      "rangeTwo",
+      "rangeThree",
+      "riesz1_valid",
+      "riesz2_valid",
+      "accept_riesz1",
+      "accept_riesz2",
+      "invalid_monic",
+      "invalid_orth",
+      "invalid_energy",
+      "invalid_endpoint",
+      "invalid_complex",
+      "invalid_length",
+      "rejected_of_invalid",
+      "reject_riesz_monic",
+      "reject_riesz_orth",
+      "reject_riesz_energy",
+      "reject_riesz_endpoint",
+      "reject_riesz_complex",
+      "reject_riesz_length"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/03/nested1/ZETA3_WITNESS_TRUST_BOUNDARY_v0_1_6_FIX6/Zeta3Witness/Samples.lean"
+  },
+  {
+    "id": 42,
+    "attachment": 3,
+    "archive_chain": [
+      "03-WITNESS_FRONTIER_HANDOFF_20261022.zip",
+      "WITNESS_FRONTIER_HANDOFF_20261022/ZETA3_WITNESS_TRUST_BOUNDARY_v0_1_6_FIX6.zip"
+    ],
+    "member": "ZETA3_WITNESS_TRUST_BOUNDARY_v0_1_6_FIX6/Zeta3Witness/Core.lean",
+    "sha256": "2be9294d9faf7dced6339874df865754674a9532081ca35746e71dfc52d82555",
+    "bytes": 6958,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Mathlib"
+    ],
+    "declarations": [
+      "moment3",
+      "evalPoly",
+      "atI",
+      "orthValue",
+      "gramEnergy",
+      "RieszPacket",
+      "RieszValid",
+      "checkRiesz",
+      "checkRiesz_iff",
+      "checkRiesz_sound",
+      "harmonic3",
+      "lower3",
+      "upper3",
+      "AperyPacket",
+      "AperyValid",
+      "checkApery",
+      "checkApery_iff",
+      "checkApery_sound"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/03/nested1/ZETA3_WITNESS_TRUST_BOUNDARY_v0_1_6_FIX6/Zeta3Witness/Core.lean"
+  },
+  {
+    "id": 43,
+    "attachment": 3,
+    "archive_chain": [
+      "03-WITNESS_FRONTIER_HANDOFF_20261022.zip",
+      "WITNESS_FRONTIER_HANDOFF_20261022/ZETA3_WITNESS_TRUST_BOUNDARY_v0_1_6_FIX6.zip"
+    ],
+    "member": "ZETA3_WITNESS_TRUST_BOUNDARY_v0_1_6_FIX6/Zeta3Witness/AttackExpectedToFail.lean",
+    "sha256": "72eb3cc284062a808e97019883b943975d47c7810ac4168ee45283d05690b0ed",
+    "bytes": 528,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta3Witness.Samples"
+    ],
+    "declarations": [],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/03/nested1/ZETA3_WITNESS_TRUST_BOUNDARY_v0_1_6_FIX6/Zeta3Witness/AttackExpectedToFail.lean"
+  },
+  {
+    "id": 44,
+    "attachment": 3,
+    "archive_chain": [
+      "03-WITNESS_FRONTIER_HANDOFF_20261022.zip",
+      "WITNESS_FRONTIER_HANDOFF_20261022/ZETA3_WITNESS_TRUST_BOUNDARY_v0_1_6_FIX6.zip"
+    ],
+    "member": "ZETA3_WITNESS_TRUST_BOUNDARY_v0_1_6_FIX6/Zeta3Witness/Envelope.lean",
+    "sha256": "03f9b4f7d51b4803200fd337949b8cb6040678622b3b1fc9c516e3012bb4540f",
+    "bytes": 2978,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta3Witness.Samples"
+    ],
+    "declarations": [
+      "rangeEighteen",
+      "harmonic3_18",
+      "lower3_18",
+      "upper3_18",
+      "apery_good_valid",
+      "accept_apery2",
+      "apery_invalid_recurrence",
+      "apery_invalid_b",
+      "apery_invalid_denominator",
+      "apery_invalid_cleared",
+      "apery_invalid_envelope",
+      "rangeOne",
+      "apery_invalid_weak",
+      "apery_rejected_of_invalid",
+      "reject_apery_recurrence",
+      "reject_apery_b",
+      "reject_apery_denominator",
+      "reject_apery_cleared",
+      "reject_apery_envelope",
+      "reject_apery_weak_envelope"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/03/nested1/ZETA3_WITNESS_TRUST_BOUNDARY_v0_1_6_FIX6/Zeta3Witness/Envelope.lean"
+  }
+]

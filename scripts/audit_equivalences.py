@@ -146,6 +146,24 @@ for entry in supplementary:
     require(set(entry['reference_ids']) <= references.keys(),
             f"{entry['id']}: unknown supplementary reference")
 
+# The recovered analytic supplement is distinct from the frozen 51-entry
+# catalogue and supplies its own exact active-source hashes and audit targets.
+recovered = json.loads((FOLDER / 'recovered-analytic.json').read_text())
+require([x['id'] for x in recovered['entries']] == ['A01', 'A02'],
+        'Expected two separately indexed recovered analytic criteria')
+for entry in recovered['entries']:
+    text = checked_file(entry['source_path'], entry['source_sha256'])
+    require(entry['declaration'].split('.')[-1] in text,
+            f"{entry['id']}: endpoint declaration missing")
+    audit = (ROOT / entry['audit_path']).read_text()
+    require(entry['declaration'] in audit and '_root_.RiemannHypothesis' in audit,
+            f"{entry['id']}: native-RH audit missing")
+    require(entry['native_compilation'] == 'NOT_RUN' and
+            entry['native_axiom_audit'] == 'NOT_RUN',
+            f"{entry['id']}: unsupported native result")
+    require(not entry['finite_raw_checker_equivalence'] and not entry['novelty_claim'],
+            f"{entry['id']}: analytic supplement scope changed")
+
 # Check relative Markdown file links in this collection. Fragment targets are
 # navigational labels; source identity is validated independently above.
 for doc in FOLDER.rglob('*.md'):
@@ -172,6 +190,7 @@ report = {
     'literature_classification_entries_checked': len(classified),
     'literature_category_counts': literature_counts,
     'supplementary_literature_items_checked': len(supplementary),
+    'recovered_analytic_supplement_checked': len(recovered['entries']),
     'literature_review_certifies_novelty': False,
     'native_lean_compilation': 'NOT_RUN',
     'native_axiom_audit': 'NOT_RUN',

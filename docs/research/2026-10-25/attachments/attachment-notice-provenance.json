@@ -1,0 +1,996 @@
+[
+  {
+    "attachment": 3,
+    "archive_chain": [
+      "03-WITNESS_FRONTIER_HANDOFF_20261022.zip"
+    ],
+    "member": "WITNESS_FRONTIER_HANDOFF_20261022/GP7_WitnessCoordinateJunction_README.md",
+    "sha256": "422900fe2ac196fc126bae7e336559b992ab9260dc9bd378a88c21fc76372927",
+    "bytes": 1708,
+    "extracted_path": "publication_work/attachment_sources/03/root/WITNESS_FRONTIER_HANDOFF_20261022/GP7_WitnessCoordinateJunction_README.md"
+  },
+  {
+    "attachment": 3,
+    "archive_chain": [
+      "03-WITNESS_FRONTIER_HANDOFF_20261022.zip"
+    ],
+    "member": "WITNESS_FRONTIER_HANDOFF_20261022/README_FOR_NEXT_LLM.md",
+    "sha256": "5c15d677aac6570ddc5aed50a182f977bb9d46a69d02fab88d23f00cfae2a1e2",
+    "bytes": 5406,
+    "extracted_path": "publication_work/attachment_sources/03/root/WITNESS_FRONTIER_HANDOFF_20261022/README_FOR_NEXT_LLM.md"
+  },
+  {
+    "attachment": 3,
+    "archive_chain": [
+      "03-WITNESS_FRONTIER_HANDOFF_20261022.zip"
+    ],
+    "member": "WITNESS_FRONTIER_HANDOFF_20261022/SHA256SUMS.txt",
+    "sha256": "540f94b1741d8813e00f3bbd069977999abcf1b161dd63f5a8bbed998b34dfc4",
+    "bytes": 501,
+    "extracted_path": "publication_work/attachment_sources/03/root/WITNESS_FRONTIER_HANDOFF_20261022/SHA256SUMS.txt"
+  },
+  {
+    "attachment": 3,
+    "archive_chain": [
+      "03-WITNESS_FRONTIER_HANDOFF_20261022.zip"
+    ],
+    "member": "WITNESS_FRONTIER_HANDOFF_20261022/USER_REPORTED_LEAN_PASS.txt",
+    "sha256": "f031d391504707bae8fd007535fa9b211bd03103e3144da13c405c7abbb68b51",
+    "bytes": 486,
+    "extracted_path": "publication_work/attachment_sources/03/root/WITNESS_FRONTIER_HANDOFF_20261022/USER_REPORTED_LEAN_PASS.txt"
+  },
+  {
+    "attachment": 3,
+    "archive_chain": [
+      "03-WITNESS_FRONTIER_HANDOFF_20261022.zip",
+      "WITNESS_FRONTIER_HANDOFF_20261022/ZETA3_WITNESS_TRUST_BOUNDARY_v0_1_6_FIX6.zip"
+    ],
+    "member": "ZETA3_WITNESS_TRUST_BOUNDARY_v0_1_6_FIX6/README.md",
+    "sha256": "a4b4944c5c54bbb2016519c16b138888785ab1fe19afa7c6abebbb5d87cc3717",
+    "bytes": 8827,
+    "extracted_path": "publication_work/attachment_sources/03/nested1/ZETA3_WITNESS_TRUST_BOUNDARY_v0_1_6_FIX6/README.md"
+  },
+  {
+    "attachment": 3,
+    "archive_chain": [
+      "03-WITNESS_FRONTIER_HANDOFF_20261022.zip",
+      "WITNESS_FRONTIER_HANDOFF_20261022/ZETA3_WITNESS_TRUST_BOUNDARY_v0_1_6_FIX6.zip"
+    ],
+    "member": "ZETA3_WITNESS_TRUST_BOUNDARY_v0_1_6_FIX6/attack.cmd",
+    "sha256": "44b8f8188eaa48ef9e7ef31e44c88be401280fd6c7913da6e36860f52fba8f80",
+    "bytes": 1302,
+    "extracted_path": "publication_work/attachment_sources/03/nested1/ZETA3_WITNESS_TRUST_BOUNDARY_v0_1_6_FIX6/attack.cmd"
+  },
+  {
+    "attachment": 3,
+    "archive_chain": [
+      "03-WITNESS_FRONTIER_HANDOFF_20261022.zip",
+      "WITNESS_FRONTIER_HANDOFF_20261022/ZETA3_WITNESS_TRUST_BOUNDARY_v0_1_6_FIX6.zip"
+    ],
+    "member": "ZETA3_WITNESS_TRUST_BOUNDARY_v0_1_6_FIX6/EXACT_ARITHMETIC_AUDIT.txt",
+    "sha256": "11649cefbaa0033d9c0ef21d813d2da013f3e1b30ee94cf7fccc7ba36e9efcd7",
+    "bytes": 1398,
+    "extracted_path": "publication_work/attachment_sources/03/nested1/ZETA3_WITNESS_TRUST_BOUNDARY_v0_1_6_FIX6/EXACT_ARITHMETIC_AUDIT.txt"
+  },
+  {
+    "attachment": 3,
+    "archive_chain": [
+      "03-WITNESS_FRONTIER_HANDOFF_20261022.zip",
+      "WITNESS_FRONTIER_HANDOFF_20261022/ZETA3_WITNESS_TRUST_BOUNDARY_v0_1_6_FIX6.zip"
+    ],
+    "member": "ZETA3_WITNESS_TRUST_BOUNDARY_v0_1_6_FIX6/run.cmd",
+    "sha256": "19ebaa7e8c03ec3a099cfc281d62424d1e2f20d3791b40689bcfabc1dea109ff",
+    "bytes": 2206,
+    "extracted_path": "publication_work/attachment_sources/03/nested1/ZETA3_WITNESS_TRUST_BOUNDARY_v0_1_6_FIX6/run.cmd"
+  },
+  {
+    "attachment": 5,
+    "archive_chain": [
+      "05-CLASSIFIER_64_PI_BKQR_CALIBRATION_v0_5_2_FIX2-1-.zip"
+    ],
+    "member": "CLASSIFIER_64_PI_BKQR_CALIBRATION_v0_5_2_FIX2/FIX1_CHANGELOG.md",
+    "sha256": "a50303c12eab2c978c69798db4b8f86f161c67255388d505ae266cc7222f3d19",
+    "bytes": 870,
+    "extracted_path": "publication_work/attachment_sources/05/root/CLASSIFIER_64_PI_BKQR_CALIBRATION_v0_5_2_FIX2/FIX1_CHANGELOG.md"
+  },
+  {
+    "attachment": 5,
+    "archive_chain": [
+      "05-CLASSIFIER_64_PI_BKQR_CALIBRATION_v0_5_2_FIX2-1-.zip"
+    ],
+    "member": "CLASSIFIER_64_PI_BKQR_CALIBRATION_v0_5_2_FIX2/FIX2_CHANGELOG.md",
+    "sha256": "b74e63b5b3cedc51db29aa3374b71f53e5d2f172e810f923dca31cb25a415d78",
+    "bytes": 931,
+    "extracted_path": "publication_work/attachment_sources/05/root/CLASSIFIER_64_PI_BKQR_CALIBRATION_v0_5_2_FIX2/FIX2_CHANGELOG.md"
+  },
+  {
+    "attachment": 5,
+    "archive_chain": [
+      "05-CLASSIFIER_64_PI_BKQR_CALIBRATION_v0_5_2_FIX2-1-.zip"
+    ],
+    "member": "CLASSIFIER_64_PI_BKQR_CALIBRATION_v0_5_2_FIX2/MATHEMATICAL_CERTIFICATE.md",
+    "sha256": "e2510f05bc4a3d70a7fe75d05355693cdb35b7c4e73de1a6a02ffecf2971d569",
+    "bytes": 1988,
+    "extracted_path": "publication_work/attachment_sources/05/root/CLASSIFIER_64_PI_BKQR_CALIBRATION_v0_5_2_FIX2/MATHEMATICAL_CERTIFICATE.md"
+  },
+  {
+    "attachment": 5,
+    "archive_chain": [
+      "05-CLASSIFIER_64_PI_BKQR_CALIBRATION_v0_5_2_FIX2-1-.zip"
+    ],
+    "member": "CLASSIFIER_64_PI_BKQR_CALIBRATION_v0_5_2_FIX2/MATHEMATICAL_ENDPOINT.md",
+    "sha256": "392f407dd67d43a6a4b98f556b903c969e039c891a96fe4bb94bc30e7be2d731",
+    "bytes": 1061,
+    "extracted_path": "publication_work/attachment_sources/05/root/CLASSIFIER_64_PI_BKQR_CALIBRATION_v0_5_2_FIX2/MATHEMATICAL_ENDPOINT.md"
+  },
+  {
+    "attachment": 5,
+    "archive_chain": [
+      "05-CLASSIFIER_64_PI_BKQR_CALIBRATION_v0_5_2_FIX2-1-.zip"
+    ],
+    "member": "CLASSIFIER_64_PI_BKQR_CALIBRATION_v0_5_2_FIX2/PATCH_NOTES.txt",
+    "sha256": "012cbc7578ce67c5a59f3a99b718aec4ad85e748385de2950adc90ddb055ff55",
+    "bytes": 620,
+    "extracted_path": "publication_work/attachment_sources/05/root/CLASSIFIER_64_PI_BKQR_CALIBRATION_v0_5_2_FIX2/PATCH_NOTES.txt"
+  },
+  {
+    "attachment": 5,
+    "archive_chain": [
+      "05-CLASSIFIER_64_PI_BKQR_CALIBRATION_v0_5_2_FIX2-1-.zip"
+    ],
+    "member": "CLASSIFIER_64_PI_BKQR_CALIBRATION_v0_5_2_FIX2/PI_CALIBRATION_MATH.md",
+    "sha256": "8ba248b8e42f60e66a3312e7c8d63e42dab58d8fc993d66a104a9821f2821e4b",
+    "bytes": 2084,
+    "extracted_path": "publication_work/attachment_sources/05/root/CLASSIFIER_64_PI_BKQR_CALIBRATION_v0_5_2_FIX2/PI_CALIBRATION_MATH.md"
+  },
+  {
+    "attachment": 5,
+    "archive_chain": [
+      "05-CLASSIFIER_64_PI_BKQR_CALIBRATION_v0_5_2_FIX2-1-.zip"
+    ],
+    "member": "CLASSIFIER_64_PI_BKQR_CALIBRATION_v0_5_2_FIX2/RATE_CERTIFICATE.md",
+    "sha256": "869d8ca8d45ff58bff868344264f37d373dc838692c9b5b14674324feaca8f56",
+    "bytes": 1552,
+    "extracted_path": "publication_work/attachment_sources/05/root/CLASSIFIER_64_PI_BKQR_CALIBRATION_v0_5_2_FIX2/RATE_CERTIFICATE.md"
+  },
+  {
+    "attachment": 5,
+    "archive_chain": [
+      "05-CLASSIFIER_64_PI_BKQR_CALIBRATION_v0_5_2_FIX2-1-.zip"
+    ],
+    "member": "CLASSIFIER_64_PI_BKQR_CALIBRATION_v0_5_2_FIX2/README.md",
+    "sha256": "045a9f245d83531d05fd223b9760f5df7f859d2c584f43e8d2210356e2619422",
+    "bytes": 2786,
+    "extracted_path": "publication_work/attachment_sources/05/root/CLASSIFIER_64_PI_BKQR_CALIBRATION_v0_5_2_FIX2/README.md"
+  },
+  {
+    "attachment": 5,
+    "archive_chain": [
+      "05-CLASSIFIER_64_PI_BKQR_CALIBRATION_v0_5_2_FIX2-1-.zip"
+    ],
+    "member": "CLASSIFIER_64_PI_BKQR_CALIBRATION_v0_5_2_FIX2/SHA256SUMS.txt",
+    "sha256": "1037d4988a6fd956084a8f619d5d9387739fef2b3bc7ac048de9d9f2cf0b4235",
+    "bytes": 2151,
+    "extracted_path": "publication_work/attachment_sources/05/root/CLASSIFIER_64_PI_BKQR_CALIBRATION_v0_5_2_FIX2/SHA256SUMS.txt"
+  },
+  {
+    "attachment": 5,
+    "archive_chain": [
+      "05-CLASSIFIER_64_PI_BKQR_CALIBRATION_v0_5_2_FIX2-1-.zip"
+    ],
+    "member": "CLASSIFIER_64_PI_BKQR_CALIBRATION_v0_5_2_FIX2/run.cmd",
+    "sha256": "b3f87a2d294b5accef8e12333e3ef49558df47456970c2acebdd194afef1b61c",
+    "bytes": 2430,
+    "extracted_path": "publication_work/attachment_sources/05/root/CLASSIFIER_64_PI_BKQR_CALIBRATION_v0_5_2_FIX2/run.cmd"
+  },
+  {
+    "attachment": 6,
+    "archive_chain": [
+      "06-GP_NATIVE_E_PI_v0_4_0-1-.zip"
+    ],
+    "member": "GP_NATIVE_E_PI_v0_4_0/README.txt",
+    "sha256": "abbccd556467c5b29a78db2faf60a56d24052539dc20b9cfe919dc4038156e66",
+    "bytes": 3686,
+    "extracted_path": "publication_work/attachment_sources/06/root/GP_NATIVE_E_PI_v0_4_0/README.txt"
+  },
+  {
+    "attachment": 6,
+    "archive_chain": [
+      "06-GP_NATIVE_E_PI_v0_4_0-1-.zip"
+    ],
+    "member": "GP_NATIVE_E_PI_v0_4_0/SHA256SUMS.txt",
+    "sha256": "38852d4cf8b23acf9c72abaade87a66913d9605644921527e9481a40f1b46e94",
+    "bytes": 1528,
+    "extracted_path": "publication_work/attachment_sources/06/root/GP_NATIVE_E_PI_v0_4_0/SHA256SUMS.txt"
+  },
+  {
+    "attachment": 6,
+    "archive_chain": [
+      "06-GP_NATIVE_E_PI_v0_4_0-1-.zip"
+    ],
+    "member": "GP_NATIVE_E_PI_v0_4_0/VALIDATED_AUDIT.log",
+    "sha256": "a2a022e10caeffd9e74b04578e9a995fd9733d0b0c3ead86f2805edc84bf9603",
+    "bytes": 3550,
+    "extracted_path": "publication_work/attachment_sources/06/root/GP_NATIVE_E_PI_v0_4_0/VALIDATED_AUDIT.log"
+  },
+  {
+    "attachment": 6,
+    "archive_chain": [
+      "06-GP_NATIVE_E_PI_v0_4_0-1-.zip"
+    ],
+    "member": "GP_NATIVE_E_PI_v0_4_0/VALIDATION.txt",
+    "sha256": "7227eb09dd4e8aa51905d1884c2ed9e61a430546b31eca354782bcfeaded1351",
+    "bytes": 1561,
+    "extracted_path": "publication_work/attachment_sources/06/root/GP_NATIVE_E_PI_v0_4_0/VALIDATION.txt"
+  },
+  {
+    "attachment": 6,
+    "archive_chain": [
+      "06-GP_NATIVE_E_PI_v0_4_0-1-.zip"
+    ],
+    "member": "GP_NATIVE_E_PI_v0_4_0/run.cmd",
+    "sha256": "c988d9b779f08bdb21c6a788f2659a6e93700f06a2ebb4e25bd3b14ffa4f5d70",
+    "bytes": 5062,
+    "extracted_path": "publication_work/attachment_sources/06/root/GP_NATIVE_E_PI_v0_4_0/run.cmd"
+  },
+  {
+    "attachment": 10,
+    "archive_chain": [
+      "10-GP7_UNIFIED_LEAN_BASE_v1_0_1_IMPORT_FIX-2-.zip"
+    ],
+    "member": "GP7_UNIFIED_LEAN_BASE_v1_0_1_IMPORT_FIX/CHANGELOG_v1_0_1.md",
+    "sha256": "711cb10867a2d031cf6092f539e461e4e1a3ede27b284fc5bb1d1a7c08876283",
+    "bytes": 507,
+    "extracted_path": "publication_work/attachment_sources/10/root/GP7_UNIFIED_LEAN_BASE_v1_0_1_IMPORT_FIX/CHANGELOG_v1_0_1.md"
+  },
+  {
+    "attachment": 10,
+    "archive_chain": [
+      "10-GP7_UNIFIED_LEAN_BASE_v1_0_1_IMPORT_FIX-2-.zip"
+    ],
+    "member": "GP7_UNIFIED_LEAN_BASE_v1_0_1_IMPORT_FIX/README.md",
+    "sha256": "5183711b29b70938d01292ad30d3847d2c5f4f89669466f6b12165100b337f29",
+    "bytes": 1620,
+    "extracted_path": "publication_work/attachment_sources/10/root/GP7_UNIFIED_LEAN_BASE_v1_0_1_IMPORT_FIX/README.md"
+  },
+  {
+    "attachment": 10,
+    "archive_chain": [
+      "10-GP7_UNIFIED_LEAN_BASE_v1_0_1_IMPORT_FIX-2-.zip"
+    ],
+    "member": "GP7_UNIFIED_LEAN_BASE_v1_0_1_IMPORT_FIX/docs/API.md",
+    "sha256": "03c4a74cc0353972def69c4af88fd54684fd193663a14b175210c1984d7fe2b3",
+    "bytes": 1041,
+    "extracted_path": "publication_work/attachment_sources/10/root/GP7_UNIFIED_LEAN_BASE_v1_0_1_IMPORT_FIX/docs/API.md"
+  },
+  {
+    "attachment": 10,
+    "archive_chain": [
+      "10-GP7_UNIFIED_LEAN_BASE_v1_0_1_IMPORT_FIX-2-.zip"
+    ],
+    "member": "GP7_UNIFIED_LEAN_BASE_v1_0_1_IMPORT_FIX/docs/PROOF_STATUS.md",
+    "sha256": "cf86e831316fd69c7ea66d88e680c7ba5d1bfda0008e82a08a1307da4027dbe3",
+    "bytes": 2055,
+    "extracted_path": "publication_work/attachment_sources/10/root/GP7_UNIFIED_LEAN_BASE_v1_0_1_IMPORT_FIX/docs/PROOF_STATUS.md"
+  },
+  {
+    "attachment": 10,
+    "archive_chain": [
+      "10-GP7_UNIFIED_LEAN_BASE_v1_0_1_IMPORT_FIX-2-.zip"
+    ],
+    "member": "GP7_UNIFIED_LEAN_BASE_v1_0_1_IMPORT_FIX/docs/PROVENANCE.md",
+    "sha256": "8a5e8bc9bbbc019785be995019a9636be1ea02b96b1745061f00e9d3a63edbcd",
+    "bytes": 781,
+    "extracted_path": "publication_work/attachment_sources/10/root/GP7_UNIFIED_LEAN_BASE_v1_0_1_IMPORT_FIX/docs/PROVENANCE.md"
+  },
+  {
+    "attachment": 10,
+    "archive_chain": [
+      "10-GP7_UNIFIED_LEAN_BASE_v1_0_1_IMPORT_FIX-2-.zip"
+    ],
+    "member": "GP7_UNIFIED_LEAN_BASE_v1_0_1_IMPORT_FIX/lean-toolchain",
+    "sha256": "302cd63c54178885b89e669f33b38f12f4dd7ae7e5cac537b3203e3768d8fb2b",
+    "bytes": 25,
+    "extracted_path": "publication_work/attachment_sources/10/root/GP7_UNIFIED_LEAN_BASE_v1_0_1_IMPORT_FIX/lean-toolchain"
+  },
+  {
+    "attachment": 10,
+    "archive_chain": [
+      "10-GP7_UNIFIED_LEAN_BASE_v1_0_1_IMPORT_FIX-2-.zip"
+    ],
+    "member": "GP7_UNIFIED_LEAN_BASE_v1_0_1_IMPORT_FIX/research/NativeZetaSeven_v032_UNVERIFIED.lean.txt",
+    "sha256": "48d77852b98cd1ae034e083b4f97bbdbf21fa08bae8eba91053f10ccc64ad53d",
+    "bytes": 1970,
+    "extracted_path": "publication_work/attachment_sources/10/root/GP7_UNIFIED_LEAN_BASE_v1_0_1_IMPORT_FIX/research/NativeZetaSeven_v032_UNVERIFIED.lean.txt"
+  },
+  {
+    "attachment": 10,
+    "archive_chain": [
+      "10-GP7_UNIFIED_LEAN_BASE_v1_0_1_IMPORT_FIX-2-.zip"
+    ],
+    "member": "GP7_UNIFIED_LEAN_BASE_v1_0_1_IMPORT_FIX/research/README.md",
+    "sha256": "2b2117adb99925c089a26032d2d48a40ad8a28efbcbd1ffc0f9cc4e575e4cbe2",
+    "bytes": 484,
+    "extracted_path": "publication_work/attachment_sources/10/root/GP7_UNIFIED_LEAN_BASE_v1_0_1_IMPORT_FIX/research/README.md"
+  },
+  {
+    "attachment": 10,
+    "archive_chain": [
+      "10-GP7_UNIFIED_LEAN_BASE_v1_0_1_IMPORT_FIX-2-.zip"
+    ],
+    "member": "GP7_UNIFIED_LEAN_BASE_v1_0_1_IMPORT_FIX/run.cmd",
+    "sha256": "466fb3da62c2be0d9bf64252a91cd1d90a10ba0d158d3022d99f96bfdafb2ae3",
+    "bytes": 5094,
+    "extracted_path": "publication_work/attachment_sources/10/root/GP7_UNIFIED_LEAN_BASE_v1_0_1_IMPORT_FIX/run.cmd"
+  },
+  {
+    "attachment": 16,
+    "archive_chain": [
+      "16-RH_FIVE_INDUCTION_LEAN_v0_3_0-1-.zip"
+    ],
+    "member": "RH_FIVE_INDUCTION_LEAN_v0_3_0/README.md",
+    "sha256": "f3a98f33d8ae317b68130d75faa6cf9f08ef5ece8449053372069ff902a19c38",
+    "bytes": 6959,
+    "extracted_path": "publication_work/attachment_sources/16/root/RH_FIVE_INDUCTION_LEAN_v0_3_0/README.md"
+  },
+  {
+    "attachment": 16,
+    "archive_chain": [
+      "16-RH_FIVE_INDUCTION_LEAN_v0_3_0-1-.zip"
+    ],
+    "member": "RH_FIVE_INDUCTION_LEAN_v0_3_0/STATUS.txt",
+    "sha256": "48a498ffd654bb2b053d4ee5c5d842ea72bd492675f17fbfa4f971365affe8de",
+    "bytes": 1068,
+    "extracted_path": "publication_work/attachment_sources/16/root/RH_FIVE_INDUCTION_LEAN_v0_3_0/STATUS.txt"
+  },
+  {
+    "attachment": 16,
+    "archive_chain": [
+      "16-RH_FIVE_INDUCTION_LEAN_v0_3_0-1-.zip"
+    ],
+    "member": "RH_FIVE_INDUCTION_LEAN_v0_3_0/lean-toolchain",
+    "sha256": "b2b5068d5a4835675e651ce83b29c0ddb308d28b80076e7c007aef4630af0477",
+    "bytes": 26,
+    "extracted_path": "publication_work/attachment_sources/16/root/RH_FIVE_INDUCTION_LEAN_v0_3_0/lean-toolchain"
+  },
+  {
+    "attachment": 16,
+    "archive_chain": [
+      "16-RH_FIVE_INDUCTION_LEAN_v0_3_0-1-.zip"
+    ],
+    "member": "RH_FIVE_INDUCTION_LEAN_v0_3_0/run.cmd",
+    "sha256": "ac6889faa45c9c0361943bf2f6948f5569b0e1e4a929c0fe921cfcdd430d4d8e",
+    "bytes": 6596,
+    "extracted_path": "publication_work/attachment_sources/16/root/RH_FIVE_INDUCTION_LEAN_v0_3_0/run.cmd"
+  },
+  {
+    "attachment": 16,
+    "archive_chain": [
+      "16-RH_FIVE_INDUCTION_LEAN_v0_3_0-1-.zip"
+    ],
+    "member": "RH_FIVE_INDUCTION_LEAN_v0_3_0/validation/AUDITED_THEOREMS.txt",
+    "sha256": "3f22ef644f27acc1194e77086ca46363088d38cf9e202d984b4c437b253eb804",
+    "bytes": 12689,
+    "extracted_path": "publication_work/attachment_sources/16/root/RH_FIVE_INDUCTION_LEAN_v0_3_0/validation/AUDITED_THEOREMS.txt"
+  },
+  {
+    "attachment": 16,
+    "archive_chain": [
+      "16-RH_FIVE_INDUCTION_LEAN_v0_3_0-1-.zip"
+    ],
+    "member": "RH_FIVE_INDUCTION_LEAN_v0_3_0/validation/BUILD_STATUS.json",
+    "sha256": "84512b450dcc817c917544da908404703264bd89d5bf7fdbd2395ee58c24315b",
+    "bytes": 3804,
+    "extracted_path": "publication_work/attachment_sources/16/root/RH_FIVE_INDUCTION_LEAN_v0_3_0/validation/BUILD_STATUS.json"
+  },
+  {
+    "attachment": 16,
+    "archive_chain": [
+      "16-RH_FIVE_INDUCTION_LEAN_v0_3_0-1-.zip"
+    ],
+    "member": "RH_FIVE_INDUCTION_LEAN_v0_3_0/validation/COMPILE_ORDER.json",
+    "sha256": "67c58ee870dd4c892c0fa98a4af15215e74161c3deb4f82381b7ad224e659a70",
+    "bytes": 870,
+    "extracted_path": "publication_work/attachment_sources/16/root/RH_FIVE_INDUCTION_LEAN_v0_3_0/validation/COMPILE_ORDER.json"
+  },
+  {
+    "attachment": 16,
+    "archive_chain": [
+      "16-RH_FIVE_INDUCTION_LEAN_v0_3_0-1-.zip"
+    ],
+    "member": "RH_FIVE_INDUCTION_LEAN_v0_3_0/validation/FiveInduction_ActualXi.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "extracted_path": "publication_work/attachment_sources/16/root/RH_FIVE_INDUCTION_LEAN_v0_3_0/validation/FiveInduction_ActualXi.log"
+  },
+  {
+    "attachment": 16,
+    "archive_chain": [
+      "16-RH_FIVE_INDUCTION_LEAN_v0_3_0-1-.zip"
+    ],
+    "member": "RH_FIVE_INDUCTION_LEAN_v0_3_0/validation/FiveInduction_Applications.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "extracted_path": "publication_work/attachment_sources/16/root/RH_FIVE_INDUCTION_LEAN_v0_3_0/validation/FiveInduction_Applications.log"
+  },
+  {
+    "attachment": 16,
+    "archive_chain": [
+      "16-RH_FIVE_INDUCTION_LEAN_v0_3_0-1-.zip"
+    ],
+    "member": "RH_FIVE_INDUCTION_LEAN_v0_3_0/validation/FiveInduction_CayleyBridge.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "extracted_path": "publication_work/attachment_sources/16/root/RH_FIVE_INDUCTION_LEAN_v0_3_0/validation/FiveInduction_CayleyBridge.log"
+  },
+  {
+    "attachment": 16,
+    "archive_chain": [
+      "16-RH_FIVE_INDUCTION_LEAN_v0_3_0-1-.zip"
+    ],
+    "member": "RH_FIVE_INDUCTION_LEAN_v0_3_0/validation/FiveInduction_Differential.log",
+    "sha256": "2baeda9e70da0a5b851a06ea6da357bb55d9e8bee2a12c84fa21b11fbd5efa40",
+    "bytes": 576,
+    "extracted_path": "publication_work/attachment_sources/16/root/RH_FIVE_INDUCTION_LEAN_v0_3_0/validation/FiveInduction_Differential.log"
+  },
+  {
+    "attachment": 16,
+    "archive_chain": [
+      "16-RH_FIVE_INDUCTION_LEAN_v0_3_0-1-.zip"
+    ],
+    "member": "RH_FIVE_INDUCTION_LEAN_v0_3_0/validation/FiveInduction_DiskTransfer.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "extracted_path": "publication_work/attachment_sources/16/root/RH_FIVE_INDUCTION_LEAN_v0_3_0/validation/FiveInduction_DiskTransfer.log"
+  },
+  {
+    "attachment": 16,
+    "archive_chain": [
+      "16-RH_FIVE_INDUCTION_LEAN_v0_3_0-1-.zip"
+    ],
+    "member": "RH_FIVE_INDUCTION_LEAN_v0_3_0/validation/FiveInduction_HardyActual.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "extracted_path": "publication_work/attachment_sources/16/root/RH_FIVE_INDUCTION_LEAN_v0_3_0/validation/FiveInduction_HardyActual.log"
+  },
+  {
+    "attachment": 16,
+    "archive_chain": [
+      "16-RH_FIVE_INDUCTION_LEAN_v0_3_0-1-.zip"
+    ],
+    "member": "RH_FIVE_INDUCTION_LEAN_v0_3_0/validation/FiveInduction_LimitTransfer.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "extracted_path": "publication_work/attachment_sources/16/root/RH_FIVE_INDUCTION_LEAN_v0_3_0/validation/FiveInduction_LimitTransfer.log"
+  },
+  {
+    "attachment": 16,
+    "archive_chain": [
+      "16-RH_FIVE_INDUCTION_LEAN_v0_3_0-1-.zip"
+    ],
+    "member": "RH_FIVE_INDUCTION_LEAN_v0_3_0/validation/FiveInduction_Sturm.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "extracted_path": "publication_work/attachment_sources/16/root/RH_FIVE_INDUCTION_LEAN_v0_3_0/validation/FiveInduction_Sturm.log"
+  },
+  {
+    "attachment": 16,
+    "archive_chain": [
+      "16-RH_FIVE_INDUCTION_LEAN_v0_3_0-1-.zip"
+    ],
+    "member": "RH_FIVE_INDUCTION_LEAN_v0_3_0/validation/PREVIOUS_BUILD_STATUS.json",
+    "sha256": "0abfa8af2ef3573f8825bcbd262089e80d6024785f4be1f75964392ccab1d9af",
+    "bytes": 3638,
+    "extracted_path": "publication_work/attachment_sources/16/root/RH_FIVE_INDUCTION_LEAN_v0_3_0/validation/PREVIOUS_BUILD_STATUS.json"
+  },
+  {
+    "attachment": 16,
+    "archive_chain": [
+      "16-RH_FIVE_INDUCTION_LEAN_v0_3_0-1-.zip"
+    ],
+    "member": "RH_FIVE_INDUCTION_LEAN_v0_3_0/validation/SOURCE_SHA256.txt",
+    "sha256": "3fe4f919b7667eb1a595822bad1d2b8bec429b8d5e157f66a3c0b12a613b4502",
+    "bytes": 2781,
+    "extracted_path": "publication_work/attachment_sources/16/root/RH_FIVE_INDUCTION_LEAN_v0_3_0/validation/SOURCE_SHA256.txt"
+  },
+  {
+    "attachment": 19,
+    "archive_chain": [
+      "19-ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/INPUT_CHAIN_ORDER.json",
+    "sha256": "46aee5bf25a9f95bea4df142c45b4c41bc97aa9e20d65cc2900773eec7cbd64b",
+    "bytes": 3774,
+    "extracted_path": "publication_work/attachment_sources/19/root/ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/INPUT_CHAIN_ORDER.json"
+  },
+  {
+    "attachment": 19,
+    "archive_chain": [
+      "19-ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/INPUT_CHAIN_ORDER.md",
+    "sha256": "1defd9b6e32403290c7dbf9dd5eeeff9a802a92161b6770394ded9a84f51aaf9",
+    "bytes": 7822,
+    "extracted_path": "publication_work/attachment_sources/19/root/ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/INPUT_CHAIN_ORDER.md"
+  },
+  {
+    "attachment": 19,
+    "archive_chain": [
+      "19-ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/NATIVE_COMPILER_PATCH_V017.txt",
+    "sha256": "3490888f6ecfd147d19812544b9ba60156b4ff76ff821c574a10df06c81b4da3",
+    "bytes": 546,
+    "extracted_path": "publication_work/attachment_sources/19/root/ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/NATIVE_COMPILER_PATCH_V017.txt"
+  },
+  {
+    "attachment": 19,
+    "archive_chain": [
+      "19-ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/NATIVE_COMPILER_PATCH_V018.txt",
+    "sha256": "a08432aeea9589bed044a4575217e9b14dad617e6b297ed85de9e655da913778",
+    "bytes": 627,
+    "extracted_path": "publication_work/attachment_sources/19/root/ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/NATIVE_COMPILER_PATCH_V018.txt"
+  },
+  {
+    "attachment": 19,
+    "archive_chain": [
+      "19-ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/NATIVE_COMPILER_REPACK_V019.txt",
+    "sha256": "d06e189440cbd79985426ed386db41b2d2581682f79806b3051894ec3a72abe3",
+    "bytes": 450,
+    "extracted_path": "publication_work/attachment_sources/19/root/ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/NATIVE_COMPILER_REPACK_V019.txt"
+  },
+  {
+    "attachment": 19,
+    "archive_chain": [
+      "19-ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/NATIVE_INCREMENT_V0111.txt",
+    "sha256": "c4794c8d469e134a3bcad7cb3228f93f772c1b30eea47894308cfa0808c692ac",
+    "bytes": 959,
+    "extracted_path": "publication_work/attachment_sources/19/root/ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/NATIVE_INCREMENT_V0111.txt"
+  },
+  {
+    "attachment": 19,
+    "archive_chain": [
+      "19-ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/NATIVE_INCREMENT_V0112.txt",
+    "sha256": "2a3ccdfcfe98b6bfb6953423a167f50997cfd4c1f9b7084e60d47f7cc9e47578",
+    "bytes": 897,
+    "extracted_path": "publication_work/attachment_sources/19/root/ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/NATIVE_INCREMENT_V0112.txt"
+  },
+  {
+    "attachment": 19,
+    "archive_chain": [
+      "19-ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/NATIVE_INCREMENT_V0113.txt",
+    "sha256": "be72cee339e91b9ba9cdd19a1cef3208a11d9b3e2c4d19056ae46d0cb6eeba10",
+    "bytes": 786,
+    "extracted_path": "publication_work/attachment_sources/19/root/ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/NATIVE_INCREMENT_V0113.txt"
+  },
+  {
+    "attachment": 19,
+    "archive_chain": [
+      "19-ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/NATIVE_INCREMENT_V0114.txt",
+    "sha256": "5d1a84f316820a9e1371c4a68cd01da58cf098946b2252daab35654df233bb81",
+    "bytes": 704,
+    "extracted_path": "publication_work/attachment_sources/19/root/ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/NATIVE_INCREMENT_V0114.txt"
+  },
+  {
+    "attachment": 19,
+    "archive_chain": [
+      "19-ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/NATIVE_INCREMENT_V0115.txt",
+    "sha256": "c77a909ca1dc2390126a0f86855d0f13e2940dbe75b5baa0a1fcf13e1707bd65",
+    "bytes": 389,
+    "extracted_path": "publication_work/attachment_sources/19/root/ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/NATIVE_INCREMENT_V0115.txt"
+  },
+  {
+    "attachment": 19,
+    "archive_chain": [
+      "19-ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/NATIVE_INCREMENT_V0116.txt",
+    "sha256": "40fdad00787a6851fe43f7b288223b5dc705642dc673447838f481250b9682f3",
+    "bytes": 591,
+    "extracted_path": "publication_work/attachment_sources/19/root/ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/NATIVE_INCREMENT_V0116.txt"
+  },
+  {
+    "attachment": 19,
+    "archive_chain": [
+      "19-ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/NATIVE_INCREMENT_V0117.txt",
+    "sha256": "787c3c453f31a0f4c82bfb5dec268ad84053dcc92d65b0cfdd318e8e005c0f5d",
+    "bytes": 481,
+    "extracted_path": "publication_work/attachment_sources/19/root/ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/NATIVE_INCREMENT_V0117.txt"
+  },
+  {
+    "attachment": 19,
+    "archive_chain": [
+      "19-ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/NATIVE_INCREMENT_V0118.txt",
+    "sha256": "55c4b1725fade682090474a03c40708efaf45881f38c0d667cddb4a250665770",
+    "bytes": 582,
+    "extracted_path": "publication_work/attachment_sources/19/root/ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/NATIVE_INCREMENT_V0118.txt"
+  },
+  {
+    "attachment": 19,
+    "archive_chain": [
+      "19-ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/NATIVE_INCREMENT_V0119.txt",
+    "sha256": "2cac550aa52ac69dec422c089e72eb8ecea7426c3c7dfd375e8f86ea3564fbe0",
+    "bytes": 616,
+    "extracted_path": "publication_work/attachment_sources/19/root/ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/NATIVE_INCREMENT_V0119.txt"
+  },
+  {
+    "attachment": 19,
+    "archive_chain": [
+      "19-ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/NATIVE_RUNNER_PATCH_V0110.txt",
+    "sha256": "906e3a535b6331420fe5b1de0b3ce157edb6ffe62fcf4ca2587b123d184b842b",
+    "bytes": 615,
+    "extracted_path": "publication_work/attachment_sources/19/root/ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/NATIVE_RUNNER_PATCH_V0110.txt"
+  },
+  {
+    "attachment": 19,
+    "archive_chain": [
+      "19-ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/README.md",
+    "sha256": "9794bfafff9e21170f6ed7e63172c34326097c074a3387f094cfc3f4b982e961",
+    "bytes": 4308,
+    "extracted_path": "publication_work/attachment_sources/19/root/ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/README.md"
+  },
+  {
+    "attachment": 19,
+    "archive_chain": [
+      "19-ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/TEN_BLOCK_PROGRESS_20261025.md",
+    "sha256": "8f64445e3cc22a9f282caf302b5a9a15ce2266e514dc4903f0ea33cf61a490e8",
+    "bytes": 3317,
+    "extracted_path": "publication_work/attachment_sources/19/root/ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/TEN_BLOCK_PROGRESS_20261025.md"
+  },
+  {
+    "attachment": 19,
+    "archive_chain": [
+      "19-ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/TEN_STAGE_MANIFEST.json",
+    "sha256": "628195c04d76d2e124cbe9cc62c67aa3b5d5db043b669b8eb73525916a204e32",
+    "bytes": 9212,
+    "extracted_path": "publication_work/attachment_sources/19/root/ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/TEN_STAGE_MANIFEST.json"
+  },
+  {
+    "attachment": 19,
+    "archive_chain": [
+      "19-ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/run.cmd",
+    "sha256": "ce248f8eb253ca26aade8f4cb009da8c5e619d0f8a7cfbf5abb1243f70bc3648",
+    "bytes": 19335,
+    "extracted_path": "publication_work/attachment_sources/19/root/ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/run.cmd"
+  },
+  {
+    "attachment": 20,
+    "archive_chain": [
+      "20-ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_2_6_ADJACENT_DRIFT_BRIDGE1.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/MANIFEST.json",
+    "sha256": "f535e6e10ce64e10fce04cfcc71a202734d7e0b35895781ad6c750add36e566f",
+    "bytes": 10864,
+    "extracted_path": "publication_work/attachment_sources/20/root/ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/MANIFEST.json"
+  },
+  {
+    "attachment": 20,
+    "archive_chain": [
+      "20-ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_2_6_ADJACENT_DRIFT_BRIDGE1.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/MODULES.txt",
+    "sha256": "ab1f71e9c7a5d7f36a725f2288d61fbd3ed4d9705874f319a3c30e230abb2fb9",
+    "bytes": 2402,
+    "extracted_path": "publication_work/attachment_sources/20/root/ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/MODULES.txt"
+  },
+  {
+    "attachment": 20,
+    "archive_chain": [
+      "20-ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_2_6_ADJACENT_DRIFT_BRIDGE1.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/STATUS.md",
+    "sha256": "20f58304eba7b106302d5dc42f3885a6539e651c086090960207652a1d279434",
+    "bytes": 1829,
+    "extracted_path": "publication_work/attachment_sources/20/root/ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/STATUS.md"
+  },
+  {
+    "attachment": 20,
+    "archive_chain": [
+      "20-ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_2_6_ADJACENT_DRIFT_BRIDGE1.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/run.cmd",
+    "sha256": "1350e050cdf2e742e1c4b93f013ed81b661bc87bea1bf3955b91dfe899e6d63f",
+    "bytes": 15238,
+    "extracted_path": "publication_work/attachment_sources/20/root/ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/run.cmd"
+  },
+  {
+    "attachment": 21,
+    "archive_chain": [
+      "21-ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_2_6_PROGRESS_AUDIT.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_2_6_PROGRESS_AUDIT/PROGRESS.md",
+    "sha256": "04aef95d8e3a43f53830d60aa65fb6d05b7373e5d7098383d317e652b0035262",
+    "bytes": 3291,
+    "extracted_path": "publication_work/attachment_sources/21/root/ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_2_6_PROGRESS_AUDIT/PROGRESS.md"
+  },
+  {
+    "attachment": 21,
+    "archive_chain": [
+      "21-ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_2_6_PROGRESS_AUDIT.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_2_6_PROGRESS_AUDIT/run.cmd",
+    "sha256": "b9c9d3d012d7f45216a6e485d2fbbb2f5a2e22bc9195eb0e8dfa86ad4e4b321f",
+    "bytes": 1226,
+    "extracted_path": "publication_work/attachment_sources/21/root/ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_2_6_PROGRESS_AUDIT/run.cmd"
+  },
+  {
+    "attachment": 22,
+    "archive_chain": [
+      "22-ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_19_OLEAN_TRANSACTION_FIX.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_19_OLEAN_TRANSACTION_FIX/CHECKPOINT_MANIFEST.json",
+    "sha256": "9d8bc5567da0ad3452208a514fc054e7cd4c418b29758ea473bfa9f5ccd2b35f",
+    "bytes": 1091,
+    "extracted_path": "publication_work/attachment_sources/22/root/ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_19_OLEAN_TRANSACTION_FIX/CHECKPOINT_MANIFEST.json"
+  },
+  {
+    "attachment": 22,
+    "archive_chain": [
+      "22-ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_19_OLEAN_TRANSACTION_FIX.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_19_OLEAN_TRANSACTION_FIX/PROOF_FRONTIER.md",
+    "sha256": "1604c5ead8b6f3947ce1b9f14754de44a2e75d2c952baf52c61f2f641424641a",
+    "bytes": 2110,
+    "extracted_path": "publication_work/attachment_sources/22/root/ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_19_OLEAN_TRANSACTION_FIX/PROOF_FRONTIER.md"
+  },
+  {
+    "attachment": 22,
+    "archive_chain": [
+      "22-ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_19_OLEAN_TRANSACTION_FIX.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_19_OLEAN_TRANSACTION_FIX/run.cmd",
+    "sha256": "a1568f3da5364663febe8885ba9c2fe662ca9b6201c59e900556541259a9de94",
+    "bytes": 9207,
+    "extracted_path": "publication_work/attachment_sources/22/root/ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_19_OLEAN_TRANSACTION_FIX/run.cmd"
+  },
+  {
+    "attachment": 23,
+    "archive_chain": [
+      "23-ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX.zip"
+    ],
+    "member": "ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX/MANUSCRIPT_10_BLOCK_SCOPE.md",
+    "sha256": "fefa09e61bd483002c4506216b73e65e32a8f1c25224267db06ab0275b527c79",
+    "bytes": 25259,
+    "extracted_path": "publication_work/attachment_sources/23/root/ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX/MANUSCRIPT_10_BLOCK_SCOPE.md"
+  },
+  {
+    "attachment": 23,
+    "archive_chain": [
+      "23-ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX.zip"
+    ],
+    "member": "ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX/SHA256SUMS.txt",
+    "sha256": "05458794c165798bf2b8073b7ac73a4ec80e673dfb4e2dc001e24942f6b9035a",
+    "bytes": 4742,
+    "extracted_path": "publication_work/attachment_sources/23/root/ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX/SHA256SUMS.txt"
+  },
+  {
+    "attachment": 23,
+    "archive_chain": [
+      "23-ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX.zip"
+    ],
+    "member": "ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX/run.cmd",
+    "sha256": "68025b28753eefe6dd707ccaf165cb35f32c817b106587a5cf720d0fa729189c",
+    "bytes": 14242,
+    "extracted_path": "publication_work/attachment_sources/23/root/ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX/run.cmd"
+  },
+  {
+    "attachment": 24,
+    "archive_chain": [
+      "24-ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX/CHAIN_COVERAGE.md",
+    "sha256": "93855ff77ea801493b4f3f03c5956ce7cc153c1918c83522ec3467225ff7d207",
+    "bytes": 21833,
+    "extracted_path": "publication_work/attachment_sources/24/root/ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX/CHAIN_COVERAGE.md"
+  },
+  {
+    "attachment": 24,
+    "archive_chain": [
+      "24-ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX/MODULES_NEW.txt",
+    "sha256": "3516e0348e6b48eaf67f8289f4b2cf2c1331c4ee5c9af4a1e33b2cd99dfe8efb",
+    "bytes": 480,
+    "extracted_path": "publication_work/attachment_sources/24/root/ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX/MODULES_NEW.txt"
+  },
+  {
+    "attachment": 24,
+    "archive_chain": [
+      "24-ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX/README.md",
+    "sha256": "7d66c1c21154b2141e765668168d91b0e03ba9e7658ad3de628712769a000903",
+    "bytes": 24393,
+    "extracted_path": "publication_work/attachment_sources/24/root/ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX/README.md"
+  },
+  {
+    "attachment": 24,
+    "archive_chain": [
+      "24-ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX/SHA256SUMS.txt",
+    "sha256": "5da9fc24cc30ad7f6d7c79423e786e7ced44cae4a7a8fc2deb0a902acc99a6a6",
+    "bytes": 3226,
+    "extracted_path": "publication_work/attachment_sources/24/root/ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX/SHA256SUMS.txt"
+  },
+  {
+    "attachment": 24,
+    "archive_chain": [
+      "24-ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX/VERSION.json",
+    "sha256": "467cfb71c0be98a76f2aa3e45cca395d977d180ab3e97369bd9794aa374c877f",
+    "bytes": 4647,
+    "extracted_path": "publication_work/attachment_sources/24/root/ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX/VERSION.json"
+  },
+  {
+    "attachment": 24,
+    "archive_chain": [
+      "24-ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX/lean-toolchain",
+    "sha256": "302cd63c54178885b89e669f33b38f12f4dd7ae7e5cac537b3203e3768d8fb2b",
+    "bytes": 25,
+    "extracted_path": "publication_work/attachment_sources/24/root/ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX/lean-toolchain"
+  },
+  {
+    "attachment": 24,
+    "archive_chain": [
+      "24-ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX/provenance/Theorem_3_1_Hyperbolic_Moments.historical.log",
+    "sha256": "43d97973c7e82b2c20482c7a05673a7c7e6f65e64e3fa3b91fcea19dee91b6e0",
+    "bytes": 705,
+    "extracted_path": "publication_work/attachment_sources/24/root/ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX/provenance/Theorem_3_1_Hyperbolic_Moments.historical.log"
+  },
+  {
+    "attachment": 24,
+    "archive_chain": [
+      "24-ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX/run.cmd",
+    "sha256": "52e57539890674e4c65a25aa67ac4dfcc71bbd443d552a33680c32e1f675fc41",
+    "bytes": 10023,
+    "extracted_path": "publication_work/attachment_sources/24/root/ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX/run.cmd"
+  },
+  {
+    "attachment": 25,
+    "archive_chain": [
+      "25-ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_16_WEIGHTED_MONOMIAL_GRAM-1-.zip"
+    ],
+    "member": "ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_16_WEIGHTED_MONOMIAL_GRAM/BASELINE_USER_LOG.txt",
+    "sha256": "45afd20d867ab97b116aca674b86debccb998084c1c36704edaa52db0567458a",
+    "bytes": 541,
+    "extracted_path": "publication_work/attachment_sources/25/root/ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_16_WEIGHTED_MONOMIAL_GRAM/BASELINE_USER_LOG.txt"
+  },
+  {
+    "attachment": 25,
+    "archive_chain": [
+      "25-ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_16_WEIGHTED_MONOMIAL_GRAM-1-.zip"
+    ],
+    "member": "ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_16_WEIGHTED_MONOMIAL_GRAM/NATIVE_CHECKPOINT_v0210_USER_REPORTED.txt",
+    "sha256": "1bd533690f98849d19c3b26f40ec90b90e721ee1b6d2a9f33c277aa7ecf4f2c2",
+    "bytes": 523,
+    "extracted_path": "publication_work/attachment_sources/25/root/ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_16_WEIGHTED_MONOMIAL_GRAM/NATIVE_CHECKPOINT_v0210_USER_REPORTED.txt"
+  },
+  {
+    "attachment": 25,
+    "archive_chain": [
+      "25-ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_16_WEIGHTED_MONOMIAL_GRAM-1-.zip"
+    ],
+    "member": "ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_16_WEIGHTED_MONOMIAL_GRAM/NATIVE_CHECKPOINT_v0211_USER_REPORTED.txt",
+    "sha256": "9b2d2b5602331e8a10ebd5793894a3fed9a735a0031b88f38181f2e094ae6165",
+    "bytes": 545,
+    "extracted_path": "publication_work/attachment_sources/25/root/ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_16_WEIGHTED_MONOMIAL_GRAM/NATIVE_CHECKPOINT_v0211_USER_REPORTED.txt"
+  },
+  {
+    "attachment": 25,
+    "archive_chain": [
+      "25-ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_16_WEIGHTED_MONOMIAL_GRAM-1-.zip"
+    ],
+    "member": "ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_16_WEIGHTED_MONOMIAL_GRAM/NATIVE_CHECKPOINT_v0213_USER_REPORTED.txt",
+    "sha256": "5c5b0886966d9269c03466830e44c04c5a12c561ec07db8a08169a383a5a6e06",
+    "bytes": 588,
+    "extracted_path": "publication_work/attachment_sources/25/root/ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_16_WEIGHTED_MONOMIAL_GRAM/NATIVE_CHECKPOINT_v0213_USER_REPORTED.txt"
+  },
+  {
+    "attachment": 25,
+    "archive_chain": [
+      "25-ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_16_WEIGHTED_MONOMIAL_GRAM-1-.zip"
+    ],
+    "member": "ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_16_WEIGHTED_MONOMIAL_GRAM/NATIVE_CHECKPOINT_v0214_USER_REPORTED.txt",
+    "sha256": "0aafcc002b41f78f67fb27d67715af975a2a1d14d17d24d8b2acdb2e521826e5",
+    "bytes": 672,
+    "extracted_path": "publication_work/attachment_sources/25/root/ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_16_WEIGHTED_MONOMIAL_GRAM/NATIVE_CHECKPOINT_v0214_USER_REPORTED.txt"
+  },
+  {
+    "attachment": 25,
+    "archive_chain": [
+      "25-ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_16_WEIGHTED_MONOMIAL_GRAM-1-.zip"
+    ],
+    "member": "ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_16_WEIGHTED_MONOMIAL_GRAM/NATIVE_CHECKPOINT_v0215_USER_REPORTED.txt",
+    "sha256": "3c9f94ad8b592f972348b7dfe7287a6f483eb074299ea43c7c3a1a05f1308d1a",
+    "bytes": 395,
+    "extracted_path": "publication_work/attachment_sources/25/root/ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_16_WEIGHTED_MONOMIAL_GRAM/NATIVE_CHECKPOINT_v0215_USER_REPORTED.txt"
+  },
+  {
+    "attachment": 25,
+    "archive_chain": [
+      "25-ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_16_WEIGHTED_MONOMIAL_GRAM-1-.zip"
+    ],
+    "member": "ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_16_WEIGHTED_MONOMIAL_GRAM/NATIVE_CHECKPOINT_v028.txt",
+    "sha256": "d3ccc42415525761ad467046e703e4f1e7d7ada2cb62929ed473220d1d53795e",
+    "bytes": 344,
+    "extracted_path": "publication_work/attachment_sources/25/root/ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_16_WEIGHTED_MONOMIAL_GRAM/NATIVE_CHECKPOINT_v028.txt"
+  },
+  {
+    "attachment": 25,
+    "archive_chain": [
+      "25-ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_16_WEIGHTED_MONOMIAL_GRAM-1-.zip"
+    ],
+    "member": "ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_16_WEIGHTED_MONOMIAL_GRAM/NATIVE_CHECKPOINT_v029.txt",
+    "sha256": "00f5c66efa6a64a3f6411bc03282ce69d14295d2b7d3eb6eb976f0eff9bd1e03",
+    "bytes": 341,
+    "extracted_path": "publication_work/attachment_sources/25/root/ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_16_WEIGHTED_MONOMIAL_GRAM/NATIVE_CHECKPOINT_v029.txt"
+  },
+  {
+    "attachment": 25,
+    "archive_chain": [
+      "25-ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_16_WEIGHTED_MONOMIAL_GRAM-1-.zip"
+    ],
+    "member": "ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_16_WEIGHTED_MONOMIAL_GRAM/README.md",
+    "sha256": "1e7de51b1a00b75e775dbb2c67a441124b9dc8757fd6f8971d6116e9ce9d7a76",
+    "bytes": 2185,
+    "extracted_path": "publication_work/attachment_sources/25/root/ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_16_WEIGHTED_MONOMIAL_GRAM/README.md"
+  },
+  {
+    "attachment": 25,
+    "archive_chain": [
+      "25-ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_16_WEIGHTED_MONOMIAL_GRAM-1-.zip"
+    ],
+    "member": "ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_16_WEIGHTED_MONOMIAL_GRAM/SOURCE_MANIFEST.json",
+    "sha256": "28c0b13e33aa1e0ab4a983f25d85051b531e95955c51b74bf39c5e4fa0a1ab63",
+    "bytes": 7610,
+    "extracted_path": "publication_work/attachment_sources/25/root/ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_16_WEIGHTED_MONOMIAL_GRAM/SOURCE_MANIFEST.json"
+  },
+  {
+    "attachment": 25,
+    "archive_chain": [
+      "25-ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_16_WEIGHTED_MONOMIAL_GRAM-1-.zip"
+    ],
+    "member": "ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_16_WEIGHTED_MONOMIAL_GRAM/run.cmd",
+    "sha256": "0319adb309e8b98952c15c710fcb48ed233e089ad6b726e2bb6db7713b446275",
+    "bytes": 21126,
+    "extracted_path": "publication_work/attachment_sources/25/root/ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_16_WEIGHTED_MONOMIAL_GRAM/run.cmd"
+  }
+]

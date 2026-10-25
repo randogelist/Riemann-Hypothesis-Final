@@ -1,0 +1,490 @@
+[
+  {
+    "id": 0,
+    "attachment": 1,
+    "archive_chain": [
+      "01-ZETA3_EULER_BINOMIAL_ROW_MASS_v0_4_2.zip"
+    ],
+    "member": "ZETA3_EULER_BINOMIAL_ROW_MASS_v0_4_2/Main.lean",
+    "sha256": "ddcf10f99ed181b6b031671f02f63277f87754a387bb514628c4cda0da26eb95",
+    "bytes": 80,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta3R2Finite.EulerLimitExistsAudit",
+      "Zeta3R2Finite.EulerLimitAudit"
+    ],
+    "declarations": [],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 1,
+    "attachment": 1,
+    "archive_chain": [
+      "01-ZETA3_EULER_BINOMIAL_ROW_MASS_v0_4_2.zip"
+    ],
+    "member": "ZETA3_EULER_BINOMIAL_ROW_MASS_v0_4_2/Zeta3R2Finite/EulerBinomialFirst.lean",
+    "sha256": "694b216bee16d8b1f18577ca5bb330b1f18bcb1b6c4e22753ae90b35459d5e72",
+    "bytes": 3782,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta3R2Finite.EulerLimitExists"
+    ],
+    "declarations": [
+      "binomialDifference",
+      "alternating_row_shift_int",
+      "binomial_row_shift",
+      "choose_div_succ",
+      "binomial_difference_one"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 2,
+    "attachment": 1,
+    "archive_chain": [
+      "01-ZETA3_EULER_BINOMIAL_ROW_MASS_v0_4_2.zip"
+    ],
+    "member": "ZETA3_EULER_BINOMIAL_ROW_MASS_v0_4_2/Zeta3R2Finite/Arithmetic.lean",
+    "sha256": "49c3394b5707ff4bd88aeff1ed75c0b2708534104e5a2b68ba161a0279faca8a",
+    "bytes": 3926,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Mathlib"
+    ],
+    "declarations": [
+      "Q",
+      "value",
+      "homogeneous",
+      "centerQ",
+      "valueQ",
+      "slopeBudget",
+      "center_positive_exact",
+      "center_small_exact",
+      "center_with_margin_exact",
+      "value_eq_eval₂",
+      "scaled_value_eq_integer"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 3,
+    "attachment": 1,
+    "archive_chain": [
+      "01-ZETA3_EULER_BINOMIAL_ROW_MASS_v0_4_2.zip"
+    ],
+    "member": "ZETA3_EULER_BINOMIAL_ROW_MASS_v0_4_2/Zeta3R2Finite/EulerBinomialMass.lean",
+    "sha256": "e555ece43771cac7b95b1278049e103199047c0e311506574c8afe080feb11fa",
+    "bytes": 2021,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta3R2Finite.EulerBinomialFirst"
+    ],
+    "declarations": [
+      "binomial_geometric_row",
+      "binomial_row_mass"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 4,
+    "attachment": 1,
+    "archive_chain": [
+      "01-ZETA3_EULER_BINOMIAL_ROW_MASS_v0_4_2.zip"
+    ],
+    "member": "ZETA3_EULER_BINOMIAL_ROW_MASS_v0_4_2/Zeta3R2Finite/EulerLimitExistsAudit.lean",
+    "sha256": "ddf1f0e1870eecd640830d4d49946032cb15b2a8125bc83ee798d6ebc6dd878e",
+    "bytes": 574,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta3R2Finite.EulerLimitExists"
+    ],
+    "declarations": [],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 5,
+    "attachment": 1,
+    "archive_chain": [
+      "01-ZETA3_EULER_BINOMIAL_ROW_MASS_v0_4_2.zip"
+    ],
+    "member": "ZETA3_EULER_BINOMIAL_ROW_MASS_v0_4_2/Zeta3R2Finite/Audit.lean",
+    "sha256": "26ada353133a821f55368361d7120c8d799aac8c09b758d3722f981de285c371",
+    "bytes": 842,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta3R2Finite.CenterBridge"
+    ],
+    "declarations": [],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 6,
+    "attachment": 1,
+    "archive_chain": [
+      "01-ZETA3_EULER_BINOMIAL_ROW_MASS_v0_4_2.zip"
+    ],
+    "member": "ZETA3_EULER_BINOMIAL_ROW_MASS_v0_4_2/Zeta3R2Finite/EulerLimitBridge.lean",
+    "sha256": "9a8ea55bdab2fc00c864127fc786a8c478759ce8e9facc40868c88c228e34cb7",
+    "bytes": 3451,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta3R2Finite.EulerPositive"
+    ],
+    "declarations": [
+      "tail",
+      "tail_shift",
+      "abstract_geometric_euler_tail",
+      "EulerConvergesToZeta3",
+      "eulerTail_of_eulerConvergence",
+      "centerBox_of_eulerConvergence",
+      "excludes_denominator_le_5792_of_eulerConvergence"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 7,
+    "attachment": 1,
+    "archive_chain": [
+      "01-ZETA3_EULER_BINOMIAL_ROW_MASS_v0_4_2.zip"
+    ],
+    "member": "ZETA3_EULER_BINOMIAL_ROW_MASS_v0_4_2/Zeta3R2Finite/EulerPositive.lean",
+    "sha256": "feee6679383a88753e5869f26169d6becfa0afe65e8bdac7fe05da8786607893",
+    "bytes": 5261,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta3R2Finite.EulerBridge"
+    ],
+    "declarations": [
+      "state_h_step",
+      "state_h2_step",
+      "state_e_step",
+      "harmonic_state_bounds",
+      "euler_step_bound_Q",
+      "euler_step_bound_real"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 8,
+    "attachment": 1,
+    "archive_chain": [
+      "01-ZETA3_EULER_BINOMIAL_ROW_MASS_v0_4_2.zip"
+    ],
+    "member": "ZETA3_EULER_BINOMIAL_ROW_MASS_v0_4_2/Zeta3R2Finite/EulerBridge.lean",
+    "sha256": "f90290d1b5bdf8fa23e0293f71390c6a1556c267565dfd867ad7dc1cf466b822",
+    "bytes": 2734,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta3R2Finite.EulerExact"
+    ],
+    "declarations": [
+      "zeta3_dirichlet_series_complex",
+      "EulerTailAtZeta3",
+      "centerBox_of_eulerTail",
+      "excludes_denominator_le_5792_of_eulerTail"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 9,
+    "attachment": 1,
+    "archive_chain": [
+      "01-ZETA3_EULER_BINOMIAL_ROW_MASS_v0_4_2.zip"
+    ],
+    "member": "ZETA3_EULER_BINOMIAL_ROW_MASS_v0_4_2/Zeta3R2Finite/EulerGeometric.lean",
+    "sha256": "70ce02f7bec07cb32e6fd71dd9d1aad6b390161c8a8c1ab716c2668b196e6f4d",
+    "bytes": 1655,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Mathlib"
+    ],
+    "declarations": [
+      "geometric_remainder_step",
+      "finite_geometric_euler"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 10,
+    "attachment": 1,
+    "archive_chain": [
+      "01-ZETA3_EULER_BINOMIAL_ROW_MASS_v0_4_2.zip"
+    ],
+    "member": "ZETA3_EULER_BINOMIAL_ROW_MASS_v0_4_2/Zeta3R2Finite/EulerAudit.lean",
+    "sha256": "1ec7d6aae0849b339bf92bf395c61266ce3de6ee2a05c71a571678dbf8f4b341",
+    "bytes": 565,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta3R2Finite.Audit",
+      "Zeta3R2Finite.EulerGeometric",
+      "Zeta3R2Finite.EulerBridge"
+    ],
+    "declarations": [],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 11,
+    "attachment": 1,
+    "archive_chain": [
+      "01-ZETA3_EULER_BINOMIAL_ROW_MASS_v0_4_2.zip"
+    ],
+    "member": "ZETA3_EULER_BINOMIAL_ROW_MASS_v0_4_2/Zeta3R2Finite/FiniteBridge.lean",
+    "sha256": "840f1d31f9873f5c44a7e64c0c718d8257d0c8b277229c58f830ec301c823592",
+    "bytes": 2654,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta3R2Finite.Arithmetic",
+      "OddZetaHolyGrail.R2Admission",
+      "MahlerScore.Closure"
+    ],
+    "declarations": [
+      "AnalyticGate",
+      "excludes_denominator_le_5792",
+      "value_eq_oddZetaEvaluator",
+      "value_eq_mahlerEvaluator"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 12,
+    "attachment": 1,
+    "archive_chain": [
+      "01-ZETA3_EULER_BINOMIAL_ROW_MASS_v0_4_2.zip"
+    ],
+    "member": "ZETA3_EULER_BINOMIAL_ROW_MASS_v0_4_2/Zeta3R2Finite/EulerLimitAudit.lean",
+    "sha256": "2906586c14d3d05b165b502615d95b2bdfa94fa845b29e0c467b2635370120e6",
+    "bytes": 569,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta3R2Finite.EulerLimitBridge"
+    ],
+    "declarations": [],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 13,
+    "attachment": 1,
+    "archive_chain": [
+      "01-ZETA3_EULER_BINOMIAL_ROW_MASS_v0_4_2.zip"
+    ],
+    "member": "ZETA3_EULER_BINOMIAL_ROW_MASS_v0_4_2/Zeta3R2Finite/EulerLimitExists.lean",
+    "sha256": "a53b304ae44ead22d682494930d27fb051dda1c88e38b8f937dbb7612fc4cccf",
+    "bytes": 3911,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta3R2Finite.EulerLimitBridge"
+    ],
+    "declarations": [
+      "eulerV",
+      "remBudget",
+      "remBudget_nonneg",
+      "remBudget_shift",
+      "eulerV_monotone",
+      "eulerV_plus_remBudget_le_start",
+      "eulerV_bddAbove",
+      "eulerLimit",
+      "eulerLimit_tendsto",
+      "eulerLimit_geometric_box",
+      "EulerLimitEqualsZeta3",
+      "eulerConvergence_of_eulerLimitEquality",
+      "excludes_denominator_le_5792_of_eulerLimitEquality"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 14,
+    "attachment": 1,
+    "archive_chain": [
+      "01-ZETA3_EULER_BINOMIAL_ROW_MASS_v0_4_2.zip"
+    ],
+    "member": "ZETA3_EULER_BINOMIAL_ROW_MASS_v0_4_2/Zeta3R2Finite/CenterBridge.lean",
+    "sha256": "e585b13fe026104d23f9293176786987ef5f231a818de542b122509efcde2f99",
+    "bytes": 9866,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta3R2Finite.FiniteBridge"
+    ],
+    "declarations": [
+      "pow_difference_bound",
+      "abs_sum_six",
+      "value_lipschitz_on_abs_two",
+      "CenterBox",
+      "center_margin_real",
+      "analyticGate_of_centerBox",
+      "excludes_denominator_le_5792_of_centerBox"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 15,
+    "attachment": 1,
+    "archive_chain": [
+      "01-ZETA3_EULER_BINOMIAL_ROW_MASS_v0_4_2.zip"
+    ],
+    "member": "ZETA3_EULER_BINOMIAL_ROW_MASS_v0_4_2/Zeta3R2Finite/EulerExact.lean",
+    "sha256": "7d8c008ae8551448e1c2f75e6c50384fb7407b725a8266a917f910bbcba571ec",
+    "bytes": 36467,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta3R2Finite.CenterBridge"
+    ],
+    "declarations": [
+      "State",
+      "nextState",
+      "state",
+      "cp008",
+      "cp008_checked",
+      "cp016",
+      "cp016_checked",
+      "cp024",
+      "cp024_checked",
+      "cp032",
+      "cp032_checked",
+      "cp040",
+      "cp040_checked",
+      "cp048",
+      "cp048_checked",
+      "cp056",
+      "cp056_checked",
+      "cp064",
+      "cp064_checked",
+      "cp072",
+      "cp072_checked",
+      "cp080",
+      "cp080_checked",
+      "cp088",
+      "cp088_checked",
+      "cp096",
+      "cp096_checked",
+      "cp104",
+      "cp104_checked",
+      "cp112",
+      "cp112_checked",
+      "cp120",
+      "cp120_checked",
+      "cp128",
+      "cp128_checked",
+      "cp136",
+      "cp136_checked",
+      "cp144",
+      "cp144_checked",
+      "cp152",
+      "cp152_checked",
+      "cp160",
+      "cp160_checked",
+      "cp168",
+      "cp168_checked",
+      "cp176",
+      "cp176_checked",
+      "cp184",
+      "cp184_checked",
+      "cp192",
+      "cp192_checked",
+      "cp200",
+      "cp200_checked",
+      "cp208",
+      "cp208_checked",
+      "cp216",
+      "cp216_checked",
+      "cp224",
+      "cp224_checked",
+      "cp232",
+      "cp232_checked",
+      "cp240",
+      "cp240_checked",
+      "cp248",
+      "cp248_checked",
+      "cp256",
+      "cp256_checked",
+      "finite_euler256_checked",
+      "finite_rational_box"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 16,
+    "attachment": 1,
+    "archive_chain": [
+      "01-ZETA3_EULER_BINOMIAL_ROW_MASS_v0_4_2.zip"
+    ],
+    "member": "ZETA3_EULER_BINOMIAL_ROW_MASS_v0_4_2/Zeta3R2Finite/EulerBinomialFirstAudit.lean",
+    "sha256": "b8af72192ca8347e4c2fcc2079285eaf7c1cd0e66a14e05338de46cd1fd7b37c",
+    "bytes": 255,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta3R2Finite.EulerBinomialFirst"
+    ],
+    "declarations": [],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 17,
+    "attachment": 1,
+    "archive_chain": [
+      "01-ZETA3_EULER_BINOMIAL_ROW_MASS_v0_4_2.zip"
+    ],
+    "member": "ZETA3_EULER_BINOMIAL_ROW_MASS_v0_4_2/Zeta3R2Finite/EulerBinomialMassAudit.lean",
+    "sha256": "6b6a1edbe28c78fdb547c1b8de00d5950006422bbe2bc5c3121a79c66bc42164",
+    "bytes": 224,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta3R2Finite.EulerBinomialMass"
+    ],
+    "declarations": [],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  }
+]

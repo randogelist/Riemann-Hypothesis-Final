@@ -1,0 +1,46 @@
+{
+  "native_status": "NOT_RUN",
+  "source_review": "Independent cross-review against local Mathlib 4.33 source APIs; no compiler executed.",
+  "modules": [
+    {
+      "path": "SoloboloAdmission/ResidualNonvanishing.lean",
+      "sha256": "87f35fc6911d828436a8d599c6ecd55730ad49a702f5010eb814f5d5af992295",
+      "origin": "new source derivation"
+    },
+    {
+      "path": "SoloboloAdmission/FiniteProgramEndpoint.lean",
+      "sha256": "9b8825a351da89f5ea8228becb54fdd0f73059a7a34fb07e8f349b474deb219d",
+      "origin": "new source derivation"
+    }
+  ],
+  "raw_payload": {
+    "type": "SoloboloAdmission.FiniteProgram",
+    "fields": [
+      "additionalRank : Nat",
+      "nodeExpr : RatExpr",
+      "massExpr : RatExpr"
+    ],
+    "proof_fields": false,
+    "function_fields": false,
+    "analytic_condition_in_payload": false
+  },
+  "condition": {
+    "name": "SoloboloAdmission.ActualUniformResidualCondition",
+    "arguments": "(G : SoloboloAdmission.FiniteProgram)",
+    "expansion": "TendstoLocallyUniformlyOn (fun n z => deriv AWPIRH.theta z + rationalODECoefficient (G.emit n) z * AWPIRH.theta z) (fun _ : Complex => 0) atTop Complex.slitPlane",
+    "coefficient_limit_assumed": false,
+    "coefficient_analyticity_assumed": false,
+    "boolean_decider_constructed": false
+  },
+  "endpoint": {
+    "name": "SoloboloAdmission.FiniteProgram.nativeRH_of_uniformResidual",
+    "type": "(G : FiniteProgram) -> ActualUniformResidualCondition G -> _root_.RiemannHypothesis",
+    "analytic_conditions": 1
+  },
+  "remaining": [
+    "Construct one finite program and prove its actual uniform residual condition, or derive that condition from a fixed terminating finite checker.",
+    "For the requested finite-checker iff, additionally prove RH implies acceptance by that same checker.",
+    "Run native Lean 4.33 compilation and exact endpoint axiom audits before any verified build claim."
+  ],
+  "smoke_check_scope": "FiniteProgram.smoke is true for every program; it is not a selective actual-RH verifier."
+}

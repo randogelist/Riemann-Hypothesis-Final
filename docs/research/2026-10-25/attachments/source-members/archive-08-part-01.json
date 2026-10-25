@@ -1,0 +1,1312 @@
+[
+  {
+    "id": 434,
+    "attachment": 16,
+    "archive_chain": [
+      "16-RH_FIVE_INDUCTION_LEAN_v0_3_0-1-.zip"
+    ],
+    "member": "RH_FIVE_INDUCTION_LEAN_v0_3_0/Audit.lean",
+    "sha256": "de1450cb45e9b78aa1ccf9754ae9a66e9442bbb1e24b208ef8a320074c84e42c",
+    "bytes": 16636,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [
+      {
+        "repo": "Riemann-Hypothesis-Final",
+        "path": "research/upstream/five-induction-v030/Audit.lean"
+      }
+    ],
+    "imports": [
+      "FiveInduction.InputChain",
+      "FiveInduction.HardyInduction"
+    ],
+    "declarations": [],
+    "forbidden_tokens": [],
+    "rh_target_mentions": true,
+    "extracted_path": "publication_work/attachment_sources/16/root/RH_FIVE_INDUCTION_LEAN_v0_3_0/Audit.lean"
+  },
+  {
+    "id": 435,
+    "attachment": 16,
+    "archive_chain": [
+      "16-RH_FIVE_INDUCTION_LEAN_v0_3_0-1-.zip"
+    ],
+    "member": "RH_FIVE_INDUCTION_LEAN_v0_3_0/FiveInduction/ActualXi.lean",
+    "sha256": "4046240fce376b4f81b20db36dffcb1cfbad0a3819184c953beb9200976d20e3",
+    "bytes": 3128,
+    "prior_union_matches": [
+      {
+        "index": "inventory-recent-files.json",
+        "occurrence_id": 1,
+        "corpus_path": "reinference/corpus/4046240fce376b4f81b20db36dffcb1cfbad0a3819184c953beb9200976d20e3.lean"
+      },
+      {
+        "index": "inventory-recent-files.json",
+        "occurrence_id": 23,
+        "corpus_path": "reinference/corpus/4046240fce376b4f81b20db36dffcb1cfbad0a3819184c953beb9200976d20e3.lean"
+      },
+      {
+        "index": "inventory-recent-files.json",
+        "occurrence_id": 1090,
+        "corpus_path": "reinference/corpus/4046240fce376b4f81b20db36dffcb1cfbad0a3819184c953beb9200976d20e3.lean"
+      },
+      {
+        "index": "inventory-recent-files.json",
+        "occurrence_id": 1132,
+        "corpus_path": "reinference/corpus/4046240fce376b4f81b20db36dffcb1cfbad0a3819184c953beb9200976d20e3.lean"
+      }
+    ],
+    "prior_union_occurrence_count": 5,
+    "tracked_repo_paths": [
+      {
+        "repo": "Riemann-Hypothesis-Final",
+        "path": "research/upstream/five-induction-v030/FiveInduction/ActualXi.lean"
+      }
+    ],
+    "imports": [
+      "Mathlib.NumberTheory.LSeries.RiemannZeta",
+      "Mathlib.Analysis.SpecialFunctions.Gamma.Deligne",
+      "Mathlib.Tactic"
+    ],
+    "declarations": [
+      "xi",
+      "Xi",
+      "differentiable_xi",
+      "differentiable_Xi",
+      "xi_eq_completed",
+      "xi_zero_of_nontrivial_zeta_zero",
+      "critical_shift_re",
+      "rh_of_real_zeros",
+      "rh_of_nonreal_nonzero",
+      "Xi_nontrivial"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": true,
+    "extracted_path": "publication_work/attachment_sources/16/root/RH_FIVE_INDUCTION_LEAN_v0_3_0/FiveInduction/ActualXi.lean"
+  },
+  {
+    "id": 436,
+    "attachment": 16,
+    "archive_chain": [
+      "16-RH_FIVE_INDUCTION_LEAN_v0_3_0-1-.zip"
+    ],
+    "member": "RH_FIVE_INDUCTION_LEAN_v0_3_0/FiveInduction/Applications.lean",
+    "sha256": "6e2f2611429e2bb2968c2cec75acc6d754aff891825ec61fcd54e890e21f2b8e",
+    "bytes": 4764,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [
+      {
+        "repo": "Riemann-Hypothesis-Final",
+        "path": "research/upstream/five-induction-v030/FiveInduction/Applications.lean"
+      }
+    ],
+    "imports": [
+      "FiveInduction.Sturm",
+      "FiveInduction.Differential",
+      "FiveInduction.ActualXi",
+      "FiveInduction.LimitTransfer"
+    ],
+    "declarations": [
+      "sturmApproximant",
+      "RH_OF_STURM_CONVERGENCE",
+      "sturm_calibration_forced",
+      "SturmXiRealization",
+      "RH_OF_STURM_REALIZATION",
+      "differentialApproximant",
+      "RH_OF_DIFFERENTIAL_CONVERGENCE",
+      "DifferentialXiRealization",
+      "RH_OF_DIFFERENTIAL_REALIZATION"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": true,
+    "extracted_path": "publication_work/attachment_sources/16/root/RH_FIVE_INDUCTION_LEAN_v0_3_0/FiveInduction/Applications.lean"
+  },
+  {
+    "id": 437,
+    "attachment": 16,
+    "archive_chain": [
+      "16-RH_FIVE_INDUCTION_LEAN_v0_3_0-1-.zip"
+    ],
+    "member": "RH_FIVE_INDUCTION_LEAN_v0_3_0/FiveInduction/CayleyBridge.lean",
+    "sha256": "7f8e2dcaf147bf124ca20f8b5b07118e3cea5daaa53c7ae8b2a2e62c6b39d3dd",
+    "bytes": 3208,
+    "prior_union_matches": [
+      {
+        "index": "inventory-recent-files.json",
+        "occurrence_id": 1091,
+        "corpus_path": "reinference/corpus/7f8e2dcaf147bf124ca20f8b5b07118e3cea5daaa53c7ae8b2a2e62c6b39d3dd.lean"
+      },
+      {
+        "index": "inventory-recent-files.json",
+        "occurrence_id": 1133,
+        "corpus_path": "reinference/corpus/7f8e2dcaf147bf124ca20f8b5b07118e3cea5daaa53c7ae8b2a2e62c6b39d3dd.lean"
+      },
+      {
+        "index": "inventory-recent-files.json",
+        "occurrence_id": 1672,
+        "corpus_path": "reinference/corpus/7f8e2dcaf147bf124ca20f8b5b07118e3cea5daaa53c7ae8b2a2e62c6b39d3dd.lean"
+      }
+    ],
+    "prior_union_occurrence_count": 3,
+    "tracked_repo_paths": [
+      {
+        "repo": "Riemann-Hypothesis-Final",
+        "path": "research/upstream/five-induction-v030/FiveInduction/CayleyBridge.lean"
+      }
+    ],
+    "imports": [
+      "FiveInduction.ActualXi",
+      "Mathlib.Analysis.Complex.CauchyIntegral"
+    ],
+    "declarations": [
+      "unitDisk",
+      "F",
+      "xi_one_sub",
+      "one_sub_ne_zero",
+      "differentiableAt_F",
+      "differentiableOn_F",
+      "analyticOnNhd_F",
+      "cayley_inverse_mem_disk",
+      "cayley_inverse_identity",
+      "xi_nonzero_right_of_cayley",
+      "RH_OF_CAYLEY_NONZERO"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": true,
+    "extracted_path": "publication_work/attachment_sources/16/root/RH_FIVE_INDUCTION_LEAN_v0_3_0/FiveInduction/CayleyBridge.lean"
+  },
+  {
+    "id": 438,
+    "attachment": 16,
+    "archive_chain": [
+      "16-RH_FIVE_INDUCTION_LEAN_v0_3_0-1-.zip"
+    ],
+    "member": "RH_FIVE_INDUCTION_LEAN_v0_3_0/FiveInduction/Differential.lean",
+    "sha256": "bc28664d0d724c9e44c6629be867cec6a4ca450fdd97104b8365d45b274c45df",
+    "bytes": 9710,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [
+      {
+        "repo": "Riemann-Hypothesis-Final",
+        "path": "research/upstream/five-induction-v030/FiveInduction/Differential.lean"
+      }
+    ],
+    "imports": [
+      "Mathlib"
+    ],
+    "declarations": [
+      "NegativeRealRoots",
+      "rootSum",
+      "rootSum_im",
+      "rootSum_re_nonneg",
+      "reciprocalNormSum_pos",
+      "differentialStep",
+      "root_of_differentialStep",
+      "differentialStep_preserves",
+      "insert_preserves",
+      "successor",
+      "successor_preserves",
+      "family",
+      "family_negative_real_roots",
+      "family_constant_ne_zero",
+      "normalizedPullback",
+      "family_eval_zero_ne_zero",
+      "real_of_negative_square",
+      "normalizedPullback_nonreal_nonzero",
+      "normalizedPullback_even",
+      "normalizedPullback_analytic",
+      "normalizedPullback_differentiable"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/16/root/RH_FIVE_INDUCTION_LEAN_v0_3_0/FiveInduction/Differential.lean"
+  },
+  {
+    "id": 439,
+    "attachment": 16,
+    "archive_chain": [
+      "16-RH_FIVE_INDUCTION_LEAN_v0_3_0-1-.zip"
+    ],
+    "member": "RH_FIVE_INDUCTION_LEAN_v0_3_0/FiveInduction/DiskTransfer.lean",
+    "sha256": "11b29c2f1f82224aeb2470b25027500a7b48909df0eedb8f181a9381444c3b9a",
+    "bytes": 3534,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [
+      {
+        "repo": "Riemann-Hypothesis-Final",
+        "path": "research/upstream/five-induction-v030/FiveInduction/DiskTransfer.lean"
+      }
+    ],
+    "imports": [
+      "FiveInduction.LimitTransfer"
+    ],
+    "declarations": [
+      "exists_small_nonzero_sphere_on",
+      "nonzero_on_of_locally_uniform_limit",
+      "nonzero_on_unitDisk_of_locally_uniform_limit"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/16/root/RH_FIVE_INDUCTION_LEAN_v0_3_0/FiveInduction/DiskTransfer.lean"
+  },
+  {
+    "id": 440,
+    "attachment": 16,
+    "archive_chain": [
+      "16-RH_FIVE_INDUCTION_LEAN_v0_3_0-1-.zip"
+    ],
+    "member": "RH_FIVE_INDUCTION_LEAN_v0_3_0/FiveInduction/HardyActual.lean",
+    "sha256": "2370ad37e95ba384dd4ac363a6e2246057446037f592d4cb0a99262cc8361c03",
+    "bytes": 6176,
+    "prior_union_matches": [
+      {
+        "index": "inventory-recent-files.json",
+        "occurrence_id": 1092,
+        "corpus_path": "reinference/corpus/2370ad37e95ba384dd4ac363a6e2246057446037f592d4cb0a99262cc8361c03.lean"
+      },
+      {
+        "index": "inventory-recent-files.json",
+        "occurrence_id": 1134,
+        "corpus_path": "reinference/corpus/2370ad37e95ba384dd4ac363a6e2246057446037f592d4cb0a99262cc8361c03.lean"
+      },
+      {
+        "index": "inventory-recent-files.json",
+        "occurrence_id": 1673,
+        "corpus_path": "reinference/corpus/2370ad37e95ba384dd4ac363a6e2246057446037f592d4cb0a99262cc8361c03.lean"
+      }
+    ],
+    "prior_union_occurrence_count": 3,
+    "tracked_repo_paths": [
+      {
+        "repo": "Riemann-Hypothesis-Final",
+        "path": "research/upstream/five-induction-v030/FiveInduction/HardyActual.lean"
+      }
+    ],
+    "imports": [
+      "FiveInduction.CayleyBridge",
+      "Mathlib.Analysis.Complex.TaylorSeries",
+      "Mathlib.NumberTheory.Harmonic.EulerMascheroni",
+      "Mathlib.NumberTheory.Harmonic.ZetaAsymp"
+    ],
+    "declarations": [
+      "J",
+      "differentiableAt_J",
+      "differentiableOn_J",
+      "analyticOnNhd_J",
+      "cayley_re_gt_half",
+      "J_eq_zeta",
+      "J_eq_regularized",
+      "hasDerivAt_J_zero",
+      "RH_OF_J_NONZERO",
+      "J_NONZERO_OF_RH",
+      "J_NONZERO_IFF_RH",
+      "coeff",
+      "hasSum_coeff",
+      "K",
+      "ActualHardyEnergy"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": true,
+    "extracted_path": "publication_work/attachment_sources/16/root/RH_FIVE_INDUCTION_LEAN_v0_3_0/FiveInduction/HardyActual.lean"
+  },
+  {
+    "id": 441,
+    "attachment": 16,
+    "archive_chain": [
+      "16-RH_FIVE_INDUCTION_LEAN_v0_3_0-1-.zip"
+    ],
+    "member": "RH_FIVE_INDUCTION_LEAN_v0_3_0/FiveInduction/HardyCompleteness.lean",
+    "sha256": "2a2fea4113f60cdcc6ce8ee3694e3f2e26ee59edd217832ba4f9112f340f9815",
+    "bytes": 7559,
+    "prior_union_matches": [
+      {
+        "index": "inventory-recent-files.json",
+        "occurrence_id": 1093,
+        "corpus_path": "reinference/corpus/2a2fea4113f60cdcc6ce8ee3694e3f2e26ee59edd217832ba4f9112f340f9815.lean"
+      },
+      {
+        "index": "inventory-recent-files.json",
+        "occurrence_id": 1135,
+        "corpus_path": "reinference/corpus/2a2fea4113f60cdcc6ce8ee3694e3f2e26ee59edd217832ba4f9112f340f9815.lean"
+      },
+      {
+        "index": "inventory-recent-files.json",
+        "occurrence_id": 1674,
+        "corpus_path": "reinference/corpus/2a2fea4113f60cdcc6ce8ee3694e3f2e26ee59edd217832ba4f9112f340f9815.lean"
+      }
+    ],
+    "prior_union_occurrence_count": 3,
+    "tracked_repo_paths": [
+      {
+        "repo": "Riemann-Hypothesis-Final",
+        "path": "research/upstream/five-induction-v030/FiveInduction/HardyCompleteness.lean"
+      }
+    ],
+    "imports": [
+      "FiveInduction.HardyTail"
+    ],
+    "declarations": [
+      "partial_tendsto",
+      "mass_tendsto",
+      "tailMass_tendsto_zero",
+      "defect_tendsto",
+      "exists_positive_defect_of_nonzero",
+      "nonzero_iff_exists_positive_defect",
+      "zero_iff_all_defect_nonpos",
+      "continuous_partial",
+      "continuous_defect",
+      "isOpen_positive_defect",
+      "exists_uniform_positive_defect_on_compact",
+      "exists_uniform_positive_defect_on_disk",
+      "nonzero_on_disk_iff_finite_certificate",
+      "DiskExhaustion",
+      "diskExhaustion_iff_nonzero"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/16/root/RH_FIVE_INDUCTION_LEAN_v0_3_0/FiveInduction/HardyCompleteness.lean"
+  },
+  {
+    "id": 442,
+    "attachment": 16,
+    "archive_chain": [
+      "16-RH_FIVE_INDUCTION_LEAN_v0_3_0-1-.zip"
+    ],
+    "member": "RH_FIVE_INDUCTION_LEAN_v0_3_0/FiveInduction/HardyConstants.lean",
+    "sha256": "8f748dedc766d3d89d4f9e08017f8b52a5383a042d807d4c4143085726392bc4",
+    "bytes": 1318,
+    "prior_union_matches": [
+      {
+        "index": "inventory-recent-files.json",
+        "occurrence_id": 1094,
+        "corpus_path": "reinference/corpus/8f748dedc766d3d89d4f9e08017f8b52a5383a042d807d4c4143085726392bc4.lean"
+      },
+      {
+        "index": "inventory-recent-files.json",
+        "occurrence_id": 1136,
+        "corpus_path": "reinference/corpus/8f748dedc766d3d89d4f9e08017f8b52a5383a042d807d4c4143085726392bc4.lean"
+      },
+      {
+        "index": "inventory-recent-files.json",
+        "occurrence_id": 1675,
+        "corpus_path": "reinference/corpus/8f748dedc766d3d89d4f9e08017f8b52a5383a042d807d4c4143085726392bc4.lean"
+      }
+    ],
+    "prior_union_occurrence_count": 3,
+    "tracked_repo_paths": [
+      {
+        "repo": "Riemann-Hypothesis-Final",
+        "path": "research/upstream/five-induction-v030/FiveInduction/HardyConstants.lean"
+      }
+    ],
+    "imports": [
+      "FiveInduction.HardyActual",
+      "FiveInduction.HardySeed"
+    ],
+    "declarations": [
+      "K_pos",
+      "K_lt_three",
+      "actual_seed_half"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/16/root/RH_FIVE_INDUCTION_LEAN_v0_3_0/FiveInduction/HardyConstants.lean"
+  },
+  {
+    "id": 443,
+    "attachment": 16,
+    "archive_chain": [
+      "16-RH_FIVE_INDUCTION_LEAN_v0_3_0-1-.zip"
+    ],
+    "member": "RH_FIVE_INDUCTION_LEAN_v0_3_0/FiveInduction/HardyDefect.lean",
+    "sha256": "b9c4637cecf21e9b7ce37ae095563aabbda6fd3738915d48fad65ed0d964c112",
+    "bytes": 4346,
+    "prior_union_matches": [
+      {
+        "index": "inventory-recent-files.json",
+        "occurrence_id": 1095,
+        "corpus_path": "reinference/corpus/b9c4637cecf21e9b7ce37ae095563aabbda6fd3738915d48fad65ed0d964c112.lean"
+      },
+      {
+        "index": "inventory-recent-files.json",
+        "occurrence_id": 1137,
+        "corpus_path": "reinference/corpus/b9c4637cecf21e9b7ce37ae095563aabbda6fd3738915d48fad65ed0d964c112.lean"
+      },
+      {
+        "index": "inventory-recent-files.json",
+        "occurrence_id": 1676,
+        "corpus_path": "reinference/corpus/b9c4637cecf21e9b7ce37ae095563aabbda6fd3738915d48fad65ed0d964c112.lean"
+      }
+    ],
+    "prior_union_occurrence_count": 3,
+    "tracked_repo_paths": [
+      {
+        "repo": "Riemann-Hypothesis-Final",
+        "path": "research/upstream/five-induction-v030/FiveInduction/HardyDefect.lean"
+      }
+    ],
+    "imports": [
+      "Mathlib"
+    ],
+    "declarations": [
+      "«partial»",
+      "mass",
+      "tailMass",
+      "defect",
+      "partial_succ",
+      "mass_succ",
+      "tailMass_succ",
+      "normSq_affine_identity",
+      "defect_succ",
+      "defect_succ_squares",
+      "partial_at_zero",
+      "defect_zero",
+      "defect_at_zero",
+      "defect_succ_nonneg",
+      "defect_succ_pos_of_ne_zero",
+      "defect_succ_pos",
+      "defect_nonneg_of_le",
+      "defect_pos_of_le"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/16/root/RH_FIVE_INDUCTION_LEAN_v0_3_0/FiveInduction/HardyDefect.lean"
+  },
+  {
+    "id": 444,
+    "attachment": 16,
+    "archive_chain": [
+      "16-RH_FIVE_INDUCTION_LEAN_v0_3_0-1-.zip"
+    ],
+    "member": "RH_FIVE_INDUCTION_LEAN_v0_3_0/FiveInduction/HardyEndpoint.lean",
+    "sha256": "b0b10654cdf7a65fd5c6fbc78cc2fbf2db424fcd7d2fa1ca09480ac436ff4f58",
+    "bytes": 4843,
+    "prior_union_matches": [
+      {
+        "index": "inventory-recent-files.json",
+        "occurrence_id": 1096,
+        "corpus_path": "reinference/corpus/b0b10654cdf7a65fd5c6fbc78cc2fbf2db424fcd7d2fa1ca09480ac436ff4f58.lean"
+      },
+      {
+        "index": "inventory-recent-files.json",
+        "occurrence_id": 1138,
+        "corpus_path": "reinference/corpus/b0b10654cdf7a65fd5c6fbc78cc2fbf2db424fcd7d2fa1ca09480ac436ff4f58.lean"
+      },
+      {
+        "index": "inventory-recent-files.json",
+        "occurrence_id": 1677,
+        "corpus_path": "reinference/corpus/b0b10654cdf7a65fd5c6fbc78cc2fbf2db424fcd7d2fa1ca09480ac436ff4f58.lean"
+      }
+    ],
+    "prior_union_occurrence_count": 3,
+    "tracked_repo_paths": [
+      {
+        "repo": "Riemann-Hypothesis-Final",
+        "path": "research/upstream/five-induction-v030/FiveInduction/HardyEndpoint.lean"
+      }
+    ],
+    "imports": [
+      "FiveInduction.HardyActual",
+      "FiveInduction.HardyCompleteness",
+      "FiveInduction.HardySeed",
+      "FiveInduction.HardyConstants"
+    ],
+    "declarations": [
+      "D",
+      "FiniteDiskCertificate",
+      "ActualDiskExhaustion",
+      "u",
+      "actual_coeff_one",
+      "actual_first_disk_certificate",
+      "ACTUAL_BASE_CERTIFICATE",
+      "actual_defect_succ",
+      "actual_positive_persists",
+      "normSq_lt_one",
+      "actual_series",
+      "actual_tail_bound",
+      "actual_nonzero_of_positive",
+      "actual_defect_tendsto",
+      "actual_nonzero_iff_finite_certificate",
+      "actual_disk_iff_finite_certificate",
+      "RH_IFF_ACTUAL_DISK_EXHAUSTION",
+      "RH_OF_ACTUAL_HARDY_EXHAUSTION"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": true,
+    "extracted_path": "publication_work/attachment_sources/16/root/RH_FIVE_INDUCTION_LEAN_v0_3_0/FiveInduction/HardyEndpoint.lean"
+  },
+  {
+    "id": 445,
+    "attachment": 16,
+    "archive_chain": [
+      "16-RH_FIVE_INDUCTION_LEAN_v0_3_0-1-.zip"
+    ],
+    "member": "RH_FIVE_INDUCTION_LEAN_v0_3_0/FiveInduction/HardyInduction.lean",
+    "sha256": "e67707aaab4cb3dd0267763f7a453cc6b658349232f2df7b9e6699dd300125e9",
+    "bytes": 2792,
+    "prior_union_matches": [
+      {
+        "index": "inventory-recent-files.json",
+        "occurrence_id": 1097,
+        "corpus_path": "reinference/corpus/e67707aaab4cb3dd0267763f7a453cc6b658349232f2df7b9e6699dd300125e9.lean"
+      },
+      {
+        "index": "inventory-recent-files.json",
+        "occurrence_id": 1139,
+        "corpus_path": "reinference/corpus/e67707aaab4cb3dd0267763f7a453cc6b658349232f2df7b9e6699dd300125e9.lean"
+      },
+      {
+        "index": "inventory-recent-files.json",
+        "occurrence_id": 1678,
+        "corpus_path": "reinference/corpus/e67707aaab4cb3dd0267763f7a453cc6b658349232f2df7b9e6699dd300125e9.lean"
+      }
+    ],
+    "prior_union_occurrence_count": 3,
+    "tracked_repo_paths": [
+      {
+        "repo": "Riemann-Hypothesis-Final",
+        "path": "research/upstream/five-induction-v030/FiveInduction/HardyInduction.lean"
+      }
+    ],
+    "imports": [
+      "FiveInduction.HardyEndpoint"
+    ],
+    "declarations": [
+      "radius",
+      "radius_pos",
+      "radius_lt_one",
+      "radius_tendsto_one",
+      "PrescribedRadiusStep",
+      "base",
+      "all_stages_of_step",
+      "exhaustion_of_all_stages",
+      "exhaustion_of_step",
+      "prescribed_step_iff_exhaustion",
+      "RH_OF_PRESCRIBED_RADIUS_STEP",
+      "RH_IFF_PRESCRIBED_RADIUS_STEP"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": true,
+    "extracted_path": "publication_work/attachment_sources/16/root/RH_FIVE_INDUCTION_LEAN_v0_3_0/FiveInduction/HardyInduction.lean"
+  },
+  {
+    "id": 446,
+    "attachment": 16,
+    "archive_chain": [
+      "16-RH_FIVE_INDUCTION_LEAN_v0_3_0-1-.zip"
+    ],
+    "member": "RH_FIVE_INDUCTION_LEAN_v0_3_0/FiveInduction/HardySeed.lean",
+    "sha256": "55eb4d25a28dcb27e1f952bfc665fe7acbff0362998f97cc1d88a45775358fae",
+    "bytes": 2883,
+    "prior_union_matches": [
+      {
+        "index": "inventory-recent-files.json",
+        "occurrence_id": 1098,
+        "corpus_path": "reinference/corpus/55eb4d25a28dcb27e1f952bfc665fe7acbff0362998f97cc1d88a45775358fae.lean"
+      },
+      {
+        "index": "inventory-recent-files.json",
+        "occurrence_id": 1140,
+        "corpus_path": "reinference/corpus/55eb4d25a28dcb27e1f952bfc665fe7acbff0362998f97cc1d88a45775358fae.lean"
+      },
+      {
+        "index": "inventory-recent-files.json",
+        "occurrence_id": 1679,
+        "corpus_path": "reinference/corpus/55eb4d25a28dcb27e1f952bfc665fe7acbff0362998f97cc1d88a45775358fae.lean"
+      }
+    ],
+    "prior_union_occurrence_count": 3,
+    "tracked_repo_paths": [
+      {
+        "repo": "Riemann-Hypothesis-Final",
+        "path": "research/upstream/five-induction-v030/FiveInduction/HardySeed.lean"
+      }
+    ],
+    "imports": [
+      "FiveInduction.HardyDefect"
+    ],
+    "declarations": [
+      "partial_one",
+      "mass_one",
+      "defect_one",
+      "seed_zero_pos",
+      "affine_norm_lower",
+      "first_disk_pos"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/16/root/RH_FIVE_INDUCTION_LEAN_v0_3_0/FiveInduction/HardySeed.lean"
+  },
+  {
+    "id": 447,
+    "attachment": 16,
+    "archive_chain": [
+      "16-RH_FIVE_INDUCTION_LEAN_v0_3_0-1-.zip"
+    ],
+    "member": "RH_FIVE_INDUCTION_LEAN_v0_3_0/FiveInduction/HardyTail.lean",
+    "sha256": "71d9a73a01a738efe8838d6cad05189f00914ddc3a9be4852718fa220411f410",
+    "bytes": 5055,
+    "prior_union_matches": [
+      {
+        "index": "inventory-recent-files.json",
+        "occurrence_id": 1099,
+        "corpus_path": "reinference/corpus/71d9a73a01a738efe8838d6cad05189f00914ddc3a9be4852718fa220411f410.lean"
+      },
+      {
+        "index": "inventory-recent-files.json",
+        "occurrence_id": 1141,
+        "corpus_path": "reinference/corpus/71d9a73a01a738efe8838d6cad05189f00914ddc3a9be4852718fa220411f410.lean"
+      },
+      {
+        "index": "inventory-recent-files.json",
+        "occurrence_id": 1680,
+        "corpus_path": "reinference/corpus/71d9a73a01a738efe8838d6cad05189f00914ddc3a9be4852718fa220411f410.lean"
+      }
+    ],
+    "prior_union_occurrence_count": 3,
+    "tracked_repo_paths": [
+      {
+        "repo": "Riemann-Hypothesis-Final",
+        "path": "research/upstream/five-induction-v030/FiveInduction/HardyTail.lean"
+      }
+    ],
+    "imports": [
+      "FiveInduction.HardyDefect"
+    ],
+    "declarations": [
+      "normSq_sum_mul_le",
+      "normSq_hasSum_mul_le",
+      "summable_mul_of_normSq",
+      "coeffSeries_summable",
+      "tailMass_hasSum",
+      "tailMass_nonneg",
+      "tail_bound",
+      "defect_nonpos_of_zero",
+      "nonzero_of_defect_pos"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/16/root/RH_FIVE_INDUCTION_LEAN_v0_3_0/FiveInduction/HardyTail.lean"
+  },
+  {
+    "id": 448,
+    "attachment": 16,
+    "archive_chain": [
+      "16-RH_FIVE_INDUCTION_LEAN_v0_3_0-1-.zip"
+    ],
+    "member": "RH_FIVE_INDUCTION_LEAN_v0_3_0/FiveInduction/InputChain.lean",
+    "sha256": "420c077b4099c96b72c2e09b8451e1669d6f53c00e8fdf6120ac5883d9bdfc24",
+    "bytes": 1745,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [
+      {
+        "repo": "Riemann-Hypothesis-Final",
+        "path": "research/upstream/five-induction-v030/FiveInduction/InputChain.lean"
+      }
+    ],
+    "imports": [
+      "FiveInduction.MainChain",
+      "FiveInduction.SOSInput",
+      "FiveInduction.ProjectionInput",
+      "FiveInduction.SchurInput",
+      "FiveInduction.NormalizedInputs"
+    ],
+    "declarations": [
+      "AnyInput",
+      "RH_OF_ANY_INPUT",
+      "FIVE_INPUT_ENDPOINTS"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": true,
+    "extracted_path": "publication_work/attachment_sources/16/root/RH_FIVE_INDUCTION_LEAN_v0_3_0/FiveInduction/InputChain.lean"
+  },
+  {
+    "id": 449,
+    "attachment": 16,
+    "archive_chain": [
+      "16-RH_FIVE_INDUCTION_LEAN_v0_3_0-1-.zip"
+    ],
+    "member": "RH_FIVE_INDUCTION_LEAN_v0_3_0/FiveInduction/LimitTransfer.lean",
+    "sha256": "5016acef5b1d1dddcdaa61a005d680b58cb01c9724274d53494bdc164d333798",
+    "bytes": 5258,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [
+      {
+        "repo": "Riemann-Hypothesis-Final",
+        "path": "research/upstream/five-induction-v030/FiveInduction/LimitTransfer.lean"
+      }
+    ],
+    "imports": [
+      "Mathlib.Analysis.Complex.AbsMax",
+      "Mathlib.Analysis.Analytic.IsolatedZeros",
+      "Mathlib.Topology.UniformSpace.LocallyUniformConvergence",
+      "Mathlib.Tactic"
+    ],
+    "declarations": [
+      "disk_lower_bound",
+      "nonzero_of_boundary_convergence",
+      "exists_small_nonzero_sphere",
+      "real_zeros_of_locally_uniform_limit"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/16/root/RH_FIVE_INDUCTION_LEAN_v0_3_0/FiveInduction/LimitTransfer.lean"
+  },
+  {
+    "id": 450,
+    "attachment": 16,
+    "archive_chain": [
+      "16-RH_FIVE_INDUCTION_LEAN_v0_3_0-1-.zip"
+    ],
+    "member": "RH_FIVE_INDUCTION_LEAN_v0_3_0/FiveInduction/MainChain.lean",
+    "sha256": "600b991629a49982f27897a794ba8facfe871b987c74e971f215bd259677409b",
+    "bytes": 3685,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [
+      {
+        "repo": "Riemann-Hypothesis-Final",
+        "path": "research/upstream/five-induction-v030/FiveInduction/MainChain.lean"
+      }
+    ],
+    "imports": [
+      "FiveInduction.SOS",
+      "FiveInduction.Projection",
+      "FiveInduction.Schur",
+      "FiveInduction.Sturm",
+      "FiveInduction.Differential"
+    ],
+    "declarations": [
+      "DesignData",
+      "StageInvariant",
+      "FIVE_INDUCTION_CHAIN",
+      "BASE_CERTIFICATE",
+      "PROVED_SUCCESSOR",
+      "exampleData",
+      "EXAMPLE_ALL_STAGES"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/16/root/RH_FIVE_INDUCTION_LEAN_v0_3_0/FiveInduction/MainChain.lean"
+  },
+  {
+    "id": 451,
+    "attachment": 16,
+    "archive_chain": [
+      "16-RH_FIVE_INDUCTION_LEAN_v0_3_0-1-.zip"
+    ],
+    "member": "RH_FIVE_INDUCTION_LEAN_v0_3_0/FiveInduction/NormalizedInputs.lean",
+    "sha256": "44094c1316ab9b887755e55bdb32798a21770ef285636b81b203d2682a2ab4f8",
+    "bytes": 2427,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [
+      {
+        "repo": "Riemann-Hypothesis-Final",
+        "path": "research/upstream/five-induction-v030/FiveInduction/NormalizedInputs.lean"
+      }
+    ],
+    "imports": [
+      "FiveInduction.Applications"
+    ],
+    "declarations": [
+      "differential_calibration_forced",
+      "SturmInput",
+      "DifferentialInput",
+      "sturm_input_iff_realization",
+      "differential_input_iff_realization",
+      "RH_OF_STURM_INPUT",
+      "RH_OF_DIFFERENTIAL_INPUT"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": true,
+    "extracted_path": "publication_work/attachment_sources/16/root/RH_FIVE_INDUCTION_LEAN_v0_3_0/FiveInduction/NormalizedInputs.lean"
+  },
+  {
+    "id": 452,
+    "attachment": 16,
+    "archive_chain": [
+      "16-RH_FIVE_INDUCTION_LEAN_v0_3_0-1-.zip"
+    ],
+    "member": "RH_FIVE_INDUCTION_LEAN_v0_3_0/FiveInduction/Projection.lean",
+    "sha256": "87020c6b726094fa54bb4c8f3c0f0a23dc366914c55d99b359a7c9a30d3142ba",
+    "bytes": 2465,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [
+      {
+        "repo": "Riemann-Hypothesis-Final",
+        "path": "research/upstream/five-induction-v030/FiveInduction/Projection.lean"
+      }
+    ],
+    "imports": [
+      "Mathlib.Analysis.InnerProductSpace.Basic",
+      "Mathlib.Tactic"
+    ],
+    "declarations": [
+      "step",
+      "exact_debit",
+      "step_norm_sq_le",
+      "trajectory",
+      "trajectory_exact_debit",
+      "trajectory_norm_sq_le",
+      "trajectory_norm_le",
+      "readout_bound"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/16/root/RH_FIVE_INDUCTION_LEAN_v0_3_0/FiveInduction/Projection.lean"
+  },
+  {
+    "id": 453,
+    "attachment": 16,
+    "archive_chain": [
+      "16-RH_FIVE_INDUCTION_LEAN_v0_3_0-1-.zip"
+    ],
+    "member": "RH_FIVE_INDUCTION_LEAN_v0_3_0/FiveInduction/ProjectionConvolution.lean",
+    "sha256": "972e040ddcb518caa0f0f3cd915959ac2bb5ad6c93ce329ea118372e4d89c359",
+    "bytes": 3414,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [
+      {
+        "repo": "Riemann-Hypothesis-Final",
+        "path": "research/upstream/five-induction-v030/FiveInduction/ProjectionConvolution.lean"
+      }
+    ],
+    "imports": [
+      "Mathlib.Analysis.Analytic.Uniqueness",
+      "Mathlib.Analysis.Analytic.OfScalars",
+      "Mathlib.Analysis.Normed.Ring.InfiniteSum",
+      "Mathlib.Analysis.Normed.Module.FiniteDimension",
+      "Mathlib.LinearAlgebra.Complex.FiniteDimensional",
+      "Mathlib.Tactic"
+    ],
+    "declarations": [
+      "convolution",
+      "hasFPowerSeriesAt_mul",
+      "convolution_eq_of_product_germ",
+      "reciprocal_coeff_zero",
+      "reciprocal_coeff_succ"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/16/root/RH_FIVE_INDUCTION_LEAN_v0_3_0/FiveInduction/ProjectionConvolution.lean"
+  },
+  {
+    "id": 454,
+    "attachment": 16,
+    "archive_chain": [
+      "16-RH_FIVE_INDUCTION_LEAN_v0_3_0-1-.zip"
+    ],
+    "member": "RH_FIVE_INDUCTION_LEAN_v0_3_0/FiveInduction/ProjectionInput.lean",
+    "sha256": "ed6c288f738e97e1f4d506fda84ab1004019e7e1ee04d13c58a8168e17ee8dc2",
+    "bytes": 8626,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [
+      {
+        "repo": "Riemann-Hypothesis-Final",
+        "path": "research/upstream/five-induction-v030/FiveInduction/ProjectionInput.lean"
+      }
+    ],
+    "imports": [
+      "FiveInduction.Projection",
+      "FiveInduction.ProjectionRadius",
+      "FiveInduction.ProjectionConvolution",
+      "FiveInduction.CayleyBridge",
+      "Mathlib.Analysis.Analytic.OfScalars",
+      "Mathlib.Analysis.Analytic.Uniqueness",
+      "Mathlib.Analysis.Analytic.Constructions",
+      "Mathlib.Analysis.Analytic.ChangeOrigin",
+      "Mathlib.Analysis.Calculus.IteratedDeriv.Defs",
+      "Mathlib.Analysis.SpecialFunctions.Exp"
+    ],
+    "declarations": [
+      "analyticAt_reciprocal",
+      "reciprocalSeries",
+      "hasFPowerSeriesAt_reciprocal",
+      "reciprocalCoeff",
+      "reciprocalSeries_eq_ofScalars",
+      "reciprocalCoeff_eq_iteratedDeriv",
+      "cayleyCoeff",
+      "hasFPowerSeriesAt_cayley",
+      "local_reciprocal_identity",
+      "reciprocalCoeff_succ",
+      "reciprocalFromTaylor",
+      "reciprocalFromTaylor_eq",
+      "reciprocalSum",
+      "reciprocalSum_eventually",
+      "cayley_mul_reciprocalSum",
+      "RH_OF_RECIPROCAL_RADIUS",
+      "ProjectionXiRealization",
+      "reciprocalCoeff_subexp_of_realization",
+      "RH_OF_PROJECTION_REALIZATION"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": true,
+    "extracted_path": "publication_work/attachment_sources/16/root/RH_FIVE_INDUCTION_LEAN_v0_3_0/FiveInduction/ProjectionInput.lean"
+  },
+  {
+    "id": 455,
+    "attachment": 16,
+    "archive_chain": [
+      "16-RH_FIVE_INDUCTION_LEAN_v0_3_0-1-.zip"
+    ],
+    "member": "RH_FIVE_INDUCTION_LEAN_v0_3_0/FiveInduction/ProjectionRadius.lean",
+    "sha256": "d71aed7ad816eda68f8f4cbffee53a42cfb604ec9da23ab4380fbe305516b58a",
+    "bytes": 1400,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [
+      {
+        "repo": "Riemann-Hypothesis-Final",
+        "path": "research/upstream/five-induction-v030/FiveInduction/ProjectionRadius.lean"
+      }
+    ],
+    "imports": [
+      "Mathlib.Analysis.Analytic.OfScalars",
+      "Mathlib.Analysis.SpecialFunctions.Log.Basic",
+      "Mathlib.Tactic"
+    ],
+    "declarations": [
+      "radius_ge_one_of_subexp"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/16/root/RH_FIVE_INDUCTION_LEAN_v0_3_0/FiveInduction/ProjectionRadius.lean"
+  },
+  {
+    "id": 456,
+    "attachment": 16,
+    "archive_chain": [
+      "16-RH_FIVE_INDUCTION_LEAN_v0_3_0-1-.zip"
+    ],
+    "member": "RH_FIVE_INDUCTION_LEAN_v0_3_0/FiveInduction/SOS.lean",
+    "sha256": "f72b6b0b7b9fe897a5f76ec43ab3865dec3cb0ff0661b35e55d9427cbbedf3da",
+    "bytes": 2632,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [
+      {
+        "repo": "Riemann-Hypothesis-Final",
+        "path": "research/upstream/five-induction-v030/FiveInduction/SOS.lean"
+      }
+    ],
+    "imports": [
+      "Mathlib.Algebra.Polynomial.Eval.Defs",
+      "Mathlib.Algebra.BigOperators.Group.Finset.Basic",
+      "Mathlib.Tactic"
+    ],
+    "declarations": [
+      "sequence",
+      "eval_succ",
+      "one_sub_sq_nonneg",
+      "step_lower_bound",
+      "lower_bound",
+      "all_positive"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/16/root/RH_FIVE_INDUCTION_LEAN_v0_3_0/FiveInduction/SOS.lean"
+  },
+  {
+    "id": 457,
+    "attachment": 16,
+    "archive_chain": [
+      "16-RH_FIVE_INDUCTION_LEAN_v0_3_0-1-.zip"
+    ],
+    "member": "RH_FIVE_INDUCTION_LEAN_v0_3_0/FiveInduction/SOSGeometry.lean",
+    "sha256": "8d715aeb9500fac77f87c7d3e6dd92934fee1293eef894637513e95c915f9f41",
+    "bytes": 21982,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [
+      {
+        "repo": "Riemann-Hypothesis-Final",
+        "path": "research/upstream/five-induction-v030/FiveInduction/SOSGeometry.lean"
+      }
+    ],
+    "imports": [
+      "FiveInduction.ActualXi",
+      "Mathlib.NumberTheory.LSeries.Nonvanishing",
+      "Mathlib.Analysis.Complex.SqrtDeriv",
+      "Mathlib.Analysis.Complex.RemovableSingularity",
+      "Mathlib.Tactic.FunProp",
+      "Mathlib.Tactic.FieldSimp",
+      "Mathlib.Tactic.NormNum",
+      "Mathlib.Tactic.Ring",
+      "Mathlib.Tactic.Linarith",
+      "Mathlib.Analysis.Analytic.IsolatedZeros",
+      "Mathlib.Analysis.Complex.Basic",
+      "Mathlib.Topology.Order.DenselyOrdered",
+      "Mathlib.Tactic.Continuity",
+      "Mathlib.Analysis.SpecialFunctions.Sqrt",
+      "Mathlib.Analysis.Complex.RealDeriv"
+    ],
+    "declarations": [
+      "xi",
+      "centeredXi",
+      "NontrivialZero",
+      "xi_differentiable",
+      "xi_reflection",
+      "centeredXi_differentiable",
+      "centeredXi_even",
+      "nontrivialZero_ne_zero",
+      "gammaR_ne_zero_of_nontrivialZero",
+      "completedZeta_zero_of_nontrivialZero",
+      "xi_eq_completed",
+      "xi_zero_of_nontrivialZero",
+      "xi_ne_zero_of_one_le_re",
+      "theta",
+      "complex_sqrt_sq",
+      "theta_square",
+      "theta_one",
+      "theta_one_ne_zero",
+      "theta_zero_of_nontrivialZero",
+      "sqrt_differentiableAt_one",
+      "sqrt_continuousAt_zero",
+      "normalizedSqrt",
+      "normalizedSqrt_sq",
+      "normalizedSqrt_differentiableAt",
+      "theta_eq_normalizedSqrt",
+      "theta_differentiableAt_of_ne_zero",
+      "theta_continuousAt_zero",
+      "theta_analyticAt_zero",
+      "theta_differentiable",
+      "theta_analyticAt",
+      "theta_entire",
+      "theta_continuous",
+      "circlePoint",
+      "angularNormSq",
+      "continuous_circlePoint",
+      "injective_circlePoint",
+      "entire_eq_zero_of_zero_arc",
+      "circlePoint_norm_re_div",
+      "xi_zero_mem_critical_strip",
+      "nontrivialZero_of_xi_zero",
+      "xi_zero_conj",
+      "theta_zero_conj",
+      "angularDerivative",
+      "actualProfile",
+      "actualProfile_nonnegative_all",
+      "actualProfile_continuous",
+      "actualProfile_interior_differentiable",
+      "circle_ne_zero_of_angular_monotone_cutoff",
+      "ne_zero_of_angular_monotone_cutoff",
+      "CutoffDerivativeNonnegative",
+      "actualProfile_monotoneOn_cutoff",
+      "actual_theta_ne_zero_of_angular_cutoff"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/16/root/RH_FIVE_INDUCTION_LEAN_v0_3_0/FiveInduction/SOSGeometry.lean"
+  },
+  {
+    "id": 458,
+    "attachment": 16,
+    "archive_chain": [
+      "16-RH_FIVE_INDUCTION_LEAN_v0_3_0-1-.zip"
+    ],
+    "member": "RH_FIVE_INDUCTION_LEAN_v0_3_0/FiveInduction/SOSInput.lean",
+    "sha256": "8065bc19abec8f33f9752276106616552f6a102ad6f37cfff10341052c3a5152",
+    "bytes": 3352,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [
+      {
+        "repo": "Riemann-Hypothesis-Final",
+        "path": "research/upstream/five-induction-v030/FiveInduction/SOSInput.lean"
+      }
+    ],
+    "imports": [
+      "FiveInduction.SOS",
+      "FiveInduction.SOSGeometry",
+      "Mathlib.Topology.Order.Basic"
+    ],
+    "declarations": [
+      "xi_identification",
+      "theta_identification",
+      "SOSXiRealization",
+      "actual_derivative_nonnegative",
+      "full_angular_input",
+      "squared_shift_in_sector",
+      "RH_OF_SOS_REALIZATION"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": true,
+    "extracted_path": "publication_work/attachment_sources/16/root/RH_FIVE_INDUCTION_LEAN_v0_3_0/FiveInduction/SOSInput.lean"
+  },
+  {
+    "id": 459,
+    "attachment": 16,
+    "archive_chain": [
+      "16-RH_FIVE_INDUCTION_LEAN_v0_3_0-1-.zip"
+    ],
+    "member": "RH_FIVE_INDUCTION_LEAN_v0_3_0/FiveInduction/Schur.lean",
+    "sha256": "8525c8ac5d8b2242e131152f261ed48cbb94089466525e926d64352b6319e05d",
+    "bytes": 11465,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [
+      {
+        "repo": "Riemann-Hypothesis-Final",
+        "path": "research/upstream/five-induction-v030/FiveInduction/Schur.lean"
+      }
+    ],
+    "imports": [
+      "Mathlib.Analysis.Complex.Norm",
+      "Mathlib.Algebra.Polynomial.Reverse",
+      "Mathlib.Tactic"
+    ],
+    "declarations": [
+      "normSq_gap",
+      "disk_mul_norm_le",
+      "step_margin",
+      "step_dominance",
+      "step_preserves",
+      "pair",
+      "p",
+      "q",
+      "p_succ",
+      "q_succ",
+      "reciprocal_pair",
+      "p_succ_reciprocal",
+      "conjugate_pair",
+      "q_eq_conjugate_reverse",
+      "polyPair",
+      "pPoly",
+      "qPoly",
+      "pPoly_succ",
+      "qPoly_succ",
+      "poly_eval_pair",
+      "poly_natDegree_le",
+      "closedDisk_invariant",
+      "closedDisk_nonzero",
+      "margin",
+      "margin_pos",
+      "closedDisk_margin",
+      "half_parameter_margin",
+      "half_parameter_closedDisk_bound"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/16/root/RH_FIVE_INDUCTION_LEAN_v0_3_0/FiveInduction/Schur.lean"
+  },
+  {
+    "id": 460,
+    "attachment": 16,
+    "archive_chain": [
+      "16-RH_FIVE_INDUCTION_LEAN_v0_3_0-1-.zip"
+    ],
+    "member": "RH_FIVE_INDUCTION_LEAN_v0_3_0/FiveInduction/SchurInput.lean",
+    "sha256": "43162220f175e57ab05f0849e757b8da3366ba37fbea0bf449c5f6bda6184caa",
+    "bytes": 2255,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [
+      {
+        "repo": "Riemann-Hypothesis-Final",
+        "path": "research/upstream/five-induction-v030/FiveInduction/SchurInput.lean"
+      }
+    ],
+    "imports": [
+      "FiveInduction.Schur",
+      "FiveInduction.CayleyBridge",
+      "FiveInduction.DiskTransfer",
+      "Mathlib.Analysis.Analytic.Polynomial"
+    ],
+    "declarations": [
+      "schur_differentiable",
+      "SchurXiRealization",
+      "RH_OF_SCHUR_CONVERGENCE",
+      "RH_OF_SCHUR_REALIZATION"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": true,
+    "extracted_path": "publication_work/attachment_sources/16/root/RH_FIVE_INDUCTION_LEAN_v0_3_0/FiveInduction/SchurInput.lean"
+  },
+  {
+    "id": 461,
+    "attachment": 16,
+    "archive_chain": [
+      "16-RH_FIVE_INDUCTION_LEAN_v0_3_0-1-.zip"
+    ],
+    "member": "RH_FIVE_INDUCTION_LEAN_v0_3_0/FiveInduction/Sturm.lean",
+    "sha256": "9c3ac9eaf44ce100ab66b0a9d08e41e6aeff71c2610537455a0ec6ef65af07d4",
+    "bytes": 6802,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [
+      {
+        "repo": "Riemann-Hypothesis-Final",
+        "path": "research/upstream/five-induction-v030/FiveInduction/Sturm.lean"
+      }
+    ],
+    "imports": [
+      "Mathlib.Analysis.Complex.Polynomial.Basic",
+      "Mathlib.Analysis.Analytic.Polynomial",
+      "Mathlib.Tactic.Linarith",
+      "Mathlib.Tactic.Ring",
+      "Mathlib.Tactic.Positivity",
+      "Mathlib.Tactic.NormNum"
+    ],
+    "declarations": [
+      "J",
+      "J_step",
+      "value",
+      "value_step",
+      "imaginary_step",
+      "wronskian",
+      "wronskian_step",
+      "imaginary_wronskian_pos",
+      "all_nonreal_nonzero",
+      "zero_im_eq_zero",
+      "parity",
+      "eval_zero_step",
+      "odd_zero",
+      "even_zero_formula",
+      "even_zero_ne",
+      "value_at_zero",
+      "normalized",
+      "normalized_nonreal_nonzero",
+      "normalized_parity",
+      "value_analytic",
+      "normalized_analytic"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/16/root/RH_FIVE_INDUCTION_LEAN_v0_3_0/FiveInduction/Sturm.lean"
+  },
+  {
+    "id": 462,
+    "attachment": 16,
+    "archive_chain": [
+      "16-RH_FIVE_INDUCTION_LEAN_v0_3_0-1-.zip"
+    ],
+    "member": "RH_FIVE_INDUCTION_LEAN_v0_3_0/Main.lean",
+    "sha256": "ccdc19bf4a5e2e910d147ff1434635c4f6cdefa4dcdd76b157178cd0d1f3d702",
+    "bytes": 2203,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [
+      {
+        "repo": "Riemann-Hypothesis-Final",
+        "path": "research/upstream/five-induction-v030/Main.lean"
+      }
+    ],
+    "imports": [
+      "FiveInduction.InputChain",
+      "FiveInduction.HardyInduction"
+    ],
+    "declarations": [],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/16/root/RH_FIVE_INDUCTION_LEAN_v0_3_0/Main.lean"
+  }
+]

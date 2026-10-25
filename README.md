@@ -2,24 +2,29 @@
 
 Lean 4.33 research toward a finite-witness reduction of the **actual Mathlib
 Riemann hypothesis**, using SOLOBOLO, shared-spectrum Cayley–Sturm induction,
-and a derived finite induction input.
+and work to derive the induction input from finite data.
 
-**Status: `v0_1_0_construction`.** Repository sources prepared; native Lean
-compilation pending. The actual-ξ finite base calibration and full RH reduction
-remain open. No RH proof, complete accepted RH witness, or Lean-ready claim.
+**Status: `v0_1_0_construction`; native compilation and axiom audits `NOT_RUN`.**
+The full build now includes source-complete analytic equivalences with native
+RH: an actual theta ODE on the slit plane and an analytic reciprocal of the
+actual regularized Cayley zeta function. See
+[recovered equivalences](docs/RECOVERED_EQUIVALENCES.md).
 
-The intended chain is
+The next construction is organized around **one explicit actual-calibration
+condition**, `ActualUniformResidualCondition G`, stated in
+[ACTUAL_CONDITION.md](docs/ACTUAL_CONDITION.md). It requires the actual theta
+residual of one fixed finite program to tend locally uniformly to zero. It is an infinite analytic condition,
+not a finite witness or a checker result. A concrete finite reduction still
+needs independently proved checker soundness and RH-to-code completeness.
+No accepted actual-RH witness or proof of RH is claimed.
 
-```mermaid
-flowchart TD
-  W["Finite certificate + terminating check"] --> B["Actual–GP functional BASE"]
-  B --> I["Derived common successor: all orders"]
-  I --> P["Actual moment bounds from GP positivity"]
-  P --> R["Native Mathlib RiemannHypothesis"]
-```
-
-The arrows involving actual-data calibration and the final analytic transfer
-are open obligations; the diagram states the target route.
+The intended finite-input route is: finite program and checked estimates →
+locally uniform vanishing of the actual theta residual → zero exclusion →
+native RH.
+The recovered analytic endpoint is implemented in source; deriving its input
+from a concrete finite check remains open. The shared-spectrum induction
+and GP constructions supply useful algebra and candidate representations,
+with their actual-function bindings kept explicit.
 
 ## Contents
 
@@ -28,10 +33,14 @@ are open obligations; the diagram states the target route.
 | `RHFinal/Core/` | Raw finite SOS certificates, exact local checks, induction transfer |
 | `RHFinal/Search.lean` | Terminating bounded local search; no RH admission |
 | `FiniteWitness/` | Ten unchanged SOLOBOLO finite-spectrum and trace modules |
-| `RHFinal/Actual/` | Actual ξ/native RH definitions, differential successor and open inputs |
+| `RHFinal/Actual/` | Actual ξ/native RH definitions, differential successor and explicit calibration frontier |
 | `RHFinal/GP/` | Literal Mellin–Hilbert objects, native ξ binding, KQ/GP/BKQR endpoints, GP7 and generic master extraction |
 | `docs/GP_CONSTRUCTION.md` | GP layers, exact normalizations, source scope and remaining finite-input obligations |
 | [`RH-Equivalences/`](RH-Equivalences/README.md) | 41 native-target and 10 model formulations, split by literature provenance and provisional novelty; exact sources and newer local criteria |
+| [`docs/ACTUAL_CONDITION.md`](docs/ACTUAL_CONDITION.md) | Exact remaining calibration condition and separate finite-checker obligations |
+| [`docs/RECOVERED_EQUIVALENCES.md`](docs/RECOVERED_EQUIVALENCES.md) | Two actual analytic RH iff endpoints, exact imports and native audit status |
+| `AWPIRH/`, `AngularMaster/`, `SoloboloAdmission/` | Recovered actual theta/slit-ODE proof chain |
+| `FiveInduction/`, `SoloAdmission/` | Recovered actual-J analytic reciprocal proof chain |
 | `docs/FRONTIER.md` | Ordered analytic and finite-reduction work plan |
 | `docs/SOURCE_AUDIT.md`, `docs/SOLOBOLO_AUDIT.md` | Source scope and unresolved assumptions |
 | `provenance/` | SHA-256 input inventory and unchanged-import manifests |
@@ -46,8 +55,8 @@ and does not invoke Python, PowerShell, WSL or Lake setup.
 run.cmd core
 ```
 
-To include the Mathlib-dependent SOLOBOLO sources, integrated GP construction
-and actual-data interfaces:
+To include the Mathlib-dependent SOLOBOLO sources, integrated GP construction,
+recovered analytic RH equivalences and actual-data interfaces:
 
 ```cmd
 set "RH_MATHLIB_ROOT=C:\path\to\cached\mathlib"
@@ -90,12 +99,14 @@ The workflow definition is [YOU_ARE_GOODWORKFLOWFRONTIER
 v1_0_15](docs/YOU_ARE_GOODWORKFLOWFRONTIER_v1_0_15.txt). Construction follows
 `A_TIER_PLANNING` and `A_TIER_EXECUTION`, with proof tiers awarded only after
 their stated gates. The exact final goal includes both checker soundness and
-RH-to-witness completeness.
+RH-to-witness completeness. A single named analytic condition does not combine
+those two open theorems into an established finite equivalence.
 
 Source imports retain provenance. No license grant has been added.
 
 The user-created public repository is
 [`randogelist/Riemann-Hypothesis-Final`](https://github.com/randogelist/Riemann-Hypothesis-Final).
-These research sources include the GP integration. See
+These research sources include the GP construction and recovered analytic
+equivalence chains. See
 [clone and update instructions](docs/PUBLISH.md); repository publication does
 not certify a native Lean build.

@@ -47,7 +47,9 @@ snapshot paths recorded in the map. Applicable supplied notices are preserved.
 These are archived source files, **not a combined Lean library**. Their import
 closures are not all installed in the active build. Equal declaration names in
 different snapshots do not establish compatible definitions. The active
-89-module build and its finite SOS diagnostic are unchanged by this collection.
+full build is listed in `build-modules-full.txt`; the historical catalogue
+remains archival. Two recovered analytic closures are now separately integrated
+and indexed below. The finite SOS diagnostic retains its local scope.
 
 No new native Lean compilation or kernel axiom audit was run. The original
 catalogue's “no extra theorem hypotheses” label describes a declaration's
@@ -62,6 +64,10 @@ all-depth bounds are not finite raw witnesses accepted by a terminating checker.
 The actual-ξ finite-witness reduction remains open.
 
 ## Additional evidence
+
+- [Recovered analytic criteria](RECOVERED_ANALYTIC.md) add the actual Cayley
+  reciprocal and actual theta slit-ODE formulations, with full source closures
+  and explicit native-RH audits. They are separate from the 51-entry count.
 
 - [Current repository criteria](LOCAL_CRITERIA.md) distinguish genuine native
   targets, scalar proxy encodings, conditional sufficient results and custom RH

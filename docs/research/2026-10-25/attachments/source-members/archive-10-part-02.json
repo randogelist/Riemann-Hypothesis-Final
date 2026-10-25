@@ -1,0 +1,490 @@
+[
+  {
+    "id": 605,
+    "attachment": 18,
+    "archive_chain": [
+      "18-Zetahyperbolic-general-assembled-lean433-3-.zip"
+    ],
+    "member": "Zetahyperbolic-general-assembled-lean433/Zetahyperbolic/LagrangeBasis.lean",
+    "sha256": "16d9de144984002c73e6546b784ec7e1649744f60faea08e983476c290a9d9c8",
+    "bytes": 4931,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Mathlib"
+    ],
+    "declarations": [
+      "lagrangePolePolynomial",
+      "lagrangePolePolynomial_eval_self",
+      "lagrangePolePolynomial_eval_ne",
+      "lagrangePolePolynomial_eval",
+      "lagrangePolePolynomial_eval_eq_one_iff",
+      "lagrangePoleEvaluationMatrix",
+      "lagrangePoleEvaluationMatrix_eq_one",
+      "det_lagrangePoleEvaluationMatrix",
+      "lagrangePoleEvaluationMatrix_det_ne_zero",
+      "lagrangePoleEvaluationMatrix_mulVec"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 606,
+    "attachment": 18,
+    "archive_chain": [
+      "18-Zetahyperbolic-general-assembled-lean433-3-.zip"
+    ],
+    "member": "Zetahyperbolic-general-assembled-lean433/Zetahyperbolic/MainChain.lean",
+    "sha256": "3511a62eed6a71c9060fd6832a50eb8c5e7854ebbdfbc73bbdd5e2e95a68007f",
+    "bytes": 3110,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "MAIN_CHAIN",
+      "Zetahyperbolic.ManuscriptCompatibility"
+    ],
+    "declarations": [
+      "GramPositiveOriginal",
+      "gramPositiveOriginal_iff",
+      "MAIN_CHAIN",
+      "original_delta_degree",
+      "MAIN_CHAIN_ORIGINAL_ROOTS"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 607,
+    "attachment": 18,
+    "archive_chain": [
+      "18-Zetahyperbolic-general-assembled-lean433-3-.zip"
+    ],
+    "member": "Zetahyperbolic-general-assembled-lean433/Zetahyperbolic/ManuscriptBlueprint.lean",
+    "sha256": "289631fb4b413feb17cc407a77e3d803c2acbfd3175d13bdf555264da735ff89",
+    "bytes": 594,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zetahyperbolic.Section2Checked",
+      "Zetahyperbolic.MainChain"
+    ],
+    "declarations": [],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 608,
+    "attachment": 18,
+    "archive_chain": [
+      "18-Zetahyperbolic-general-assembled-lean433-3-.zip"
+    ],
+    "member": "Zetahyperbolic-general-assembled-lean433/Zetahyperbolic/ManuscriptCompatibility.lean",
+    "sha256": "e7e4d944019954289c525c025d90880fc53b30b6d3a07a52a0b918e2254efc2c",
+    "bytes": 8730,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zetahyperbolic.Section2Checked",
+      "Theorem_2_5_Lagrange_Pole_Diagonalization",
+      "Theorem_3_1_Universal_Hyperbolicity_And_Zero_Free_Disk"
+    ],
+    "declarations": [
+      "toParameters",
+      "toParameters_admissible",
+      "harmonicWeight_eq_harmonic",
+      "D_poly_eq_D",
+      "tailPolynomial_eq_tailD",
+      "muMonomial_eq_monomialMoment",
+      "kernelNumerator_eq_numerator",
+      "muPolePoly_eq_affine",
+      "kernelRatElem_residue_eq",
+      "kernelRatElem_polyPart_eq_div",
+      "kernelRatElem_polyPart_eq_quotient",
+      "polynomialMoment_sum",
+      "G_pencil_eq_pencil",
+      "Delta_poly_eq_delta",
+      "gram_eq_original_evaluation",
+      "M_deriv_entry_eq"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 609,
+    "attachment": 18,
+    "archive_chain": [
+      "18-Zetahyperbolic-general-assembled-lean433-3-.zip"
+    ],
+    "member": "Zetahyperbolic-general-assembled-lean433/Zetahyperbolic/Section2Algebra.lean",
+    "sha256": "9c4cdfcbeac3c94449e2aab5825a44b36d118ec94742e6bde050bc296487a170",
+    "bytes": 1698,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zetahyperbolic.Foundations",
+      "Zetahyperbolic.CoreLinearAlgebra",
+      "Zetahyperbolic.LagrangeBasis"
+    ],
+    "declarations": [
+      "oddZetaPoleMoment_injective",
+      "oddZetaPoleMoment_shift",
+      "lagrangePoleEvaluationMatrix_isUnit"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 610,
+    "attachment": 18,
+    "archive_chain": [
+      "18-Zetahyperbolic-general-assembled-lean433-3-.zip"
+    ],
+    "member": "Zetahyperbolic-general-assembled-lean433/Zetahyperbolic/Section2Checked.lean",
+    "sha256": "97a3eebe510a69450ce92a8c880ed7341f90017d52748152e44786f8ea612822",
+    "bytes": 64808,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Mathlib",
+      "Zetahyperbolic.CoreLinearAlgebra",
+      "Zetahyperbolic.Section3Elementary"
+    ],
+    "declarations": [
+      "HankelParams",
+      "h",
+      "alpha",
+      "lam",
+      "h_pos",
+      "alpha_add_lam",
+      "D_poly",
+      "D_poly_zero",
+      "D_real",
+      "D_real_eq_eval₂",
+      "D_real_pos",
+      "D_real_ratio_pos",
+      "D_real_ne_zero",
+      "D_real_succ",
+      "D_real_mono",
+      "D_real_ge_one",
+      "harmonicWeight",
+      "harmonicWeight_zero",
+      "harmonicWeight_succ",
+      "muMonomial",
+      "muPolePoly",
+      "muPoleEval",
+      "RatMomentElem",
+      "muFunctionalPoly",
+      "coeff_C_mul_X_sub_C",
+      "muPolePoly_coeff_one",
+      "muFunctionalPoly_coeff_one",
+      "dIndex",
+      "dIndex_reflect",
+      "bernoulli_binomial_sum",
+      "tauMonomial",
+      "tauMonomial_eq_choose",
+      "tauMonomial_binomial_convolution",
+      "tauPolePoly",
+      "tauPolePoly_reflect",
+      "pullback_identity_monomial",
+      "affinePoleLeft",
+      "affinePoleRight",
+      "pullback_identity_pole",
+      "tau_reflection_pole",
+      "tau_reflection_monomial",
+      "tau_difference_pole",
+      "kernelNumerator",
+      "kernelNumerator_eval_tail_pole",
+      "KernelPartialFractionData",
+      "tailPoleFactors_pairwise_coprime",
+      "kernelNumerator_partial_fraction_exists",
+      "polynomial_eq_C_of_degree_lt_one",
+      "kernelPartialFractionData",
+      "kernelRatElem",
+      "kernelNumerator_partial_fraction",
+      "G_pencil",
+      "Delta_poly",
+      "ratContent",
+      "ratContent_pos",
+      "ratContent_eq_zero_iff",
+      "primitiveRationalPolynomial",
+      "P_prim",
+      "canonical_basis_invariance",
+      "D_tail",
+      "D_tail_eq_tailPolynomial",
+      "D_poly_factorization",
+      "D_poly_eq_denominatorPolynomial",
+      "kernelNumerator_eval_old_pole",
+      "kernelRatElem_poleRes_eq_prod",
+      "kernelRatElem_poleRes_old_zero",
+      "poleNat",
+      "poleNat_mem_tail",
+      "exists_poleNat_eq",
+      "poleNat_injective",
+      "poleIndexEquiv",
+      "poleNode",
+      "V_pole",
+      "poleNode_injective",
+      "V_pole_det_ne_zero",
+      "gammaWeight",
+      "gammaWeight_ne_zero",
+      "kernelResidue_weighted_eq_gamma",
+      "M_deriv",
+      "M_deriv_entry_eq_tail_residue_sum",
+      "M_deriv_entry_eq_gamma_sum",
+      "M_deriv_factorization",
+      "ratContent_C_mul",
+      "canonical_primitive_content_invariance",
+      "G_lagrange",
+      "G_lagrange_coeff_one",
+      "G_lagrange_coeff_one_diagonal",
+      "coeff_C_mul_X_sub_C_zero",
+      "muPolePoly_coeff_zero_of_one_lt",
+      "muFunctionalPoly_coeff_zero_of_one_lt",
+      "G_pencil_coeff_zero_of_one_lt",
+      "G_lagrange_coeff_zero_of_one_lt",
+      "G_lagrange_natDegree_le_one",
+      "G_lagrange_offdiag_natDegree_zero",
+      "G_lagrange_diagonal_affine",
+      "lagrange_pole_diagonalization",
+      "V_pole_det_formula",
+      "det_M_deriv_factorization",
+      "M_deriv_det_ne_zero"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 611,
+    "attachment": 18,
+    "archive_chain": [
+      "18-Zetahyperbolic-general-assembled-lean433-3-.zip"
+    ],
+    "member": "Zetahyperbolic-general-assembled-lean433/Zetahyperbolic/Section3Elementary.lean",
+    "sha256": "4f77ae02e97b3e9c2844aefd0c8bb2ee6f3e40fa179f10b320ab71b3e8e971e4",
+    "bytes": 3861,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zetahyperbolic.Foundations"
+    ],
+    "declarations": [
+      "fekete_polynomial_positivity_basic",
+      "denominatorPolynomial_eval_pos",
+      "denominatorPolynomial_eval_ge_one",
+      "tailPolynomial_eval_ge_one",
+      "tailPolynomial_eval_pos"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 612,
+    "attachment": 18,
+    "archive_chain": [
+      "18-Zetahyperbolic-general-assembled-lean433-3-.zip"
+    ],
+    "member": "Zetahyperbolic-general-assembled-lean433/Zetahyperbolic/Targets.lean",
+    "sha256": "3ce11e4c6b0d4157a75f9f6b5796d3a590844f990fef8bb7975be271c12bcf63",
+    "bytes": 300,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Mathlib.Analysis.PSeries"
+    ],
+    "declarations": [
+      "zetaFiveReal"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 613,
+    "attachment": 18,
+    "archive_chain": [
+      "18-Zetahyperbolic-general-assembled-lean433-3-.zip"
+    ],
+    "member": "Zetahyperbolic-general-assembled-lean433/Zetahyperbolic/Theorem_6_10_Finite_Determinant_Identity.lean",
+    "sha256": "2c9005cb6d0a53f6a199fe49bf6d1ed9f4d2bb3147d8d2720cb57400fbe62f5d",
+    "bytes": 6454,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Mathlib.LinearAlgebra.Matrix.Polynomial",
+      "Mathlib.LinearAlgebra.Matrix.NonsingularInverse",
+      "Mathlib.Analysis.Matrix.Order",
+      "Mathlib.Tactic"
+    ],
+    "declarations": [
+      "centeredPencil",
+      "normalizedDet",
+      "centeredPencil_eq",
+      "normalizedDet_coeff",
+      "normalizedDet_natDegree",
+      "normalizedDet_eval_center",
+      "relativeMatrix",
+      "base_det_mul_relative_det",
+      "abs_top_coefficient_eq_eval_mul_relative_det",
+      "symmetricRelativeMatrix",
+      "square_root_det_identity",
+      "abs_top_coefficient_eq_eval_mul_spectral_det",
+      "abs_top_coefficient_eq_eval_mul_sqrt_det",
+      "abs_leadingCoeff_eq_eval_mul_sqrt_det"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 614,
+    "attachment": 18,
+    "archive_chain": [
+      "18-Zetahyperbolic-general-assembled-lean433-3-.zip"
+    ],
+    "member": "Zetahyperbolic-general-assembled-lean433/Zetahyperbolic/Theorem_6_9_Triple_Pole_Hermite_Repair.lean",
+    "sha256": "ba8dc313f5e120fec29da378c89312bbdd4d88b2f689b4b135317e27a32e9408",
+    "bytes": 8050,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Mathlib"
+    ],
+    "declarations": [
+      "kernelNumerator",
+      "kernelDenominator",
+      "correctedKernel",
+      "kernelNumerator_eval_zero_ne_zero",
+      "jet",
+      "multipliedPoleCoefficients",
+      "poleFunctional",
+      "jetWeights",
+      "jetFunctional",
+      "poleFunctional_eq_jetFunctional",
+      "localBlock",
+      "localBlock_det",
+      "localBlock_det_ne_zero",
+      "jet_mul_zero",
+      "jet_mul_one",
+      "jet_mul_two",
+      "local_congruence",
+      "dimension_9m",
+      "jetTable",
+      "momentMatrix",
+      "hermite_congruence",
+      "momentMatrix_det",
+      "momentMatrix_det_ne_zero"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 615,
+    "attachment": 18,
+    "archive_chain": [
+      "18-Zetahyperbolic-general-assembled-lean433-3-.zip"
+    ],
+    "member": "Zetahyperbolic-general-assembled-lean433/Zetahyperbolic/Zeta5Application.lean",
+    "sha256": "c0fb961e3b8b16946884e849c6fa7ed68c471d9398c71a7da8ff2e7c61d4c697",
+    "bytes": 2516,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zetahyperbolic.Zeta5Compatibility",
+      "ZETA5_APPLICATION"
+    ],
+    "declarations": [
+      "ZETA5_APPLICATION",
+      "ZETA5_APPLICATION_MEASURE"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 616,
+    "attachment": 18,
+    "archive_chain": [
+      "18-Zetahyperbolic-general-assembled-lean433-3-.zip"
+    ],
+    "member": "Zetahyperbolic-general-assembled-lean433/Zetahyperbolic/Zeta5Compatibility.lean",
+    "sha256": "f7aa3505e6c56cc664a813083f5ac9019130f31069a997f8e9fff7198bd3069f",
+    "bytes": 2926,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zetahyperbolic.ManuscriptCompatibility",
+      "Zetahyperbolic.Targets",
+      "Theorem_4_4_Sharpened_Spectral_Bound_And_Effective_Irrationality_Measure_For_Zeta_5"
+    ],
+    "declarations": [
+      "S_K5",
+      "S_K5_pos",
+      "mainHankelParams",
+      "mainDelta_eq_original",
+      "S_K5_eq_section4Scale",
+      "mainF_eq_original",
+      "zetaFiveReal_eq_zeta",
+      "zetaFiveReal_eq_riemannZeta_re"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 617,
+    "attachment": 18,
+    "archive_chain": [
+      "18-Zetahyperbolic-general-assembled-lean433-3-.zip"
+    ],
+    "member": "Zetahyperbolic-general-assembled-lean433/Zetahyperbolic.lean",
+    "sha256": "483b3255273a65ea43ae3c71ba83478e202bfc8fb5137b1875ff33438642d7c3",
+    "bytes": 1148,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zetahyperbolic.Foundations",
+      "Zetahyperbolic.CoreLinearAlgebra",
+      "Zetahyperbolic.LagrangeBasis",
+      "Zetahyperbolic.Section2Algebra",
+      "Zetahyperbolic.Section3Elementary",
+      "Zetahyperbolic.Section2Checked",
+      "Zetahyperbolic.ManuscriptCompatibility",
+      "Zetahyperbolic.MainChain",
+      "MAIN_CHAIN_ASSEMBLED",
+      "MAIN_CHAIN_ARITHMETIC"
+    ],
+    "declarations": [
+      "setup_smoke_test"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 618,
+    "attachment": 18,
+    "archive_chain": [
+      "18-Zetahyperbolic-general-assembled-lean433-3-.zip"
+    ],
+    "member": "Zetahyperbolic-general-assembled-lean433/lakefile.lean",
+    "sha256": "a2cbb16f4b5c5541df6f9b05760b60f42ddc61af6ee6d89a81a55b4dfecadbe1",
+    "bytes": 2355,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Lake"
+    ],
+    "declarations": [],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  }
+]

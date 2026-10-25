@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "scope": "Two supplemental recovered analytic formulations, outside the frozen 51-entry catalogue count; standard mechanisms, not two independent new mechanisms.",
+  "entries": [
+    {
+      "id": "A01",
+      "title": "Analytic reciprocal of actual regularized Cayley zeta",
+      "criterion": "SoloAdmission.AnalyticReciprocalAdmission",
+      "declaration": "SoloAdmission.ANALYTIC_ADMISSION_IFF_RH",
+      "source_path": "SoloAdmission/AnalyticInverse.lean",
+      "audit_path": "ReciprocalAudit.lean",
+      "classification": "Identified by Literature",
+      "relationship": "standard_analytic_reciprocal_reformulation_of_zero_freeness",
+      "related_primary_entries": [
+        "E04",
+        "E07"
+      ],
+      "original_module_count": 4,
+      "source_sha256": "153fb74cd3c7a940c7b5f2d21daaf45fe94e2369845abd0106c50f464745ef97",
+      "native_target": "_root_.RiemannHypothesis",
+      "extra_endpoint_hypotheses": [],
+      "native_compilation": "NOT_RUN",
+      "native_axiom_audit": "NOT_RUN",
+      "finite_raw_checker_equivalence": false,
+      "classification_is_inference": true,
+      "exact_published_formulation_found": false,
+      "novelty_claim": false
+    },
+    {
+      "id": "A02",
+      "title": "Actual theta slit-plane ODE admission",
+      "criterion": "SoloboloAdmission.SlitODEAdmission",
+      "declaration": "SoloboloAdmission.slitODEAdmission_iff_RH",
+      "source_path": "SoloboloAdmission/NativeODE.lean",
+      "audit_path": "AnalyticPublicationAudit.lean",
+      "classification": "Identified by Literature",
+      "relationship": "slit_plane_theta_version_of_standard_linear_ODE_zero_freeness_reformulation",
+      "related_primary_entries": [
+        "E08"
+      ],
+      "original_module_count": 5,
+      "source_sha256": "554667603de88d116d8455b3db517ea6258ff91acf4c4a557a3da3be298f254e",
+      "native_target": "_root_.RiemannHypothesis",
+      "extra_endpoint_hypotheses": [],
+      "native_compilation": "NOT_RUN",
+      "native_axiom_audit": "NOT_RUN",
+      "finite_raw_checker_equivalence": false,
+      "classification_is_inference": true,
+      "exact_published_formulation_found": false,
+      "novelty_claim": false
+    }
+  ],
+  "rh_proved": false
+}

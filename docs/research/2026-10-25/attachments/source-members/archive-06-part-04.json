@@ -1,0 +1,685 @@
+[
+  {
+    "id": 348,
+    "attachment": 14,
+    "archive_chain": [
+      "14-ODD_ZETA_3X3_MERGED_v0_3_0.zip"
+    ],
+    "member": "ODD_ZETA_3X3_MERGED_v0_3_0/provenance/IMPACTG_v0_10_1/ImpactG/Chain.lean",
+    "sha256": "2744207eb91959f4a69d3fa8a130a466bde94dbe44636474745a81081ace604e",
+    "bytes": 2157,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "ImpactG.FareyLift"
+    ],
+    "declarations": [
+      "chainMatrix",
+      "IMPACTG_CHAIN_EXACT",
+      "IMPACTG_CHAIN_DET",
+      "IMPACTG_CHAIN_RATIO35",
+      "IMPACTG_CHAIN_RATIO57"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 349,
+    "attachment": 14,
+    "archive_chain": [
+      "14-ODD_ZETA_3X3_MERGED_v0_3_0.zip"
+    ],
+    "member": "ODD_ZETA_3X3_MERGED_v0_3_0/provenance/IMPACTG_v0_10_1/ImpactG/ContractionLock.lean",
+    "sha256": "3d08921290f4784edd07ca5a930b282ce84bed9ba8633538cb8d3d51eb705126",
+    "bytes": 6429,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "ImpactG.Defect35"
+    ],
+    "declarations": [
+      "defectReal",
+      "IMPACTG_DEFECT_TENDSTO",
+      "IMPACTG_EVENTUAL_CONTRACTION_FORCES_ZERO",
+      "IMPACTG_CONTRACTION_IMPLIES_ETA_RELATION",
+      "IMPACTG_TAIL_PROFILE_IMPLIES_STRONG_CONTRACTION",
+      "IMPACTG_CONTRACTION_IFF_ZERO_OF_TAIL_PROFILE"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 350,
+    "attachment": 14,
+    "archive_chain": [
+      "14-ODD_ZETA_3X3_MERGED_v0_3_0.zip"
+    ],
+    "member": "ODD_ZETA_3X3_MERGED_v0_3_0/provenance/IMPACTG_v0_10_1/ImpactG/Core.lean",
+    "sha256": "f9698ad797ceba6c96e8f0aba26be9f5e9c9d1f2e06fc28d112e3da22a947d4d",
+    "bytes": 3588,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Mathlib"
+    ],
+    "declarations": [
+      "Tri3",
+      "triMul",
+      "core",
+      "triDet",
+      "IMPACTG_CORE_MUL",
+      "IMPACTG_DET_MUL",
+      "IMPACTG_DET",
+      "IMPACTG_ROW2_SUM",
+      "IMPACTG_ROW3_SUM",
+      "IMPACTG_CUMULATIVE_2",
+      "IMPACTG_CUMULATIVE_3",
+      "IMPACTG_RATIO_CHAIN",
+      "Triple",
+      "matrixOf",
+      "transition",
+      "IMPACTG_EXACT_TRANSITION",
+      "IMPACTG_FINITE_35",
+      "IMPACTG_FINITE_57",
+      "IMPACTG_PRODUCT_CLOSED"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 351,
+    "attachment": 14,
+    "archive_chain": [
+      "14-ODD_ZETA_3X3_MERGED_v0_3_0.zip"
+    ],
+    "member": "ODD_ZETA_3X3_MERGED_v0_3_0/provenance/IMPACTG_v0_10_1/ImpactG/CorridorContraction.lean",
+    "sha256": "4bef124571164412b9723428c1f3947989e3b68901b2bae9bc52a359e08d03c5",
+    "bytes": 3358,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "ImpactG.ContractionLock",
+      "ImpactG.CanonicalRatios"
+    ],
+    "declarations": [
+      "dyadicDefect35",
+      "dyadicDefectReal",
+      "IMPACTG_DYADIC_DEFECT_TENDSTO",
+      "IMPACTG_DYADIC_CONTRACTION_IMPLIES_RATIONAL_RELATION"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 352,
+    "attachment": 14,
+    "archive_chain": [
+      "14-ODD_ZETA_3X3_MERGED_v0_3_0.zip"
+    ],
+    "member": "ODD_ZETA_3X3_MERGED_v0_3_0/provenance/IMPACTG_v0_10_1/ImpactG/Defect35.lean",
+    "sha256": "77c022a14f505788a0662c4f06507b56a2cb1ea4ae0838acf65c89532349184c",
+    "bytes": 1646,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "ImpactG.RatioEnclosure"
+    ],
+    "declarations": [
+      "etaIncrement",
+      "IMPACTG_ETA_FINITE_STEP",
+      "defect35",
+      "IMPACTG_DEFECT_STEP",
+      "IMPACTG_DEFECT_ONE",
+      "IMPACTG_SPURIOUS_ZERO_N1",
+      "IMPACTG_SPURIOUS_ZERO_N2"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 353,
+    "attachment": 14,
+    "archive_chain": [
+      "14-ODD_ZETA_3X3_MERGED_v0_3_0.zip"
+    ],
+    "member": "ODD_ZETA_3X3_MERGED_v0_3_0/provenance/IMPACTG_v0_10_1/ImpactG/Direct37.lean",
+    "sha256": "779fb14af00b3636da55978a09abd3c242774407153d3e00a36da013243b24ca",
+    "bytes": 4294,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "ImpactG.CanonicalRatios"
+    ],
+    "declarations": [
+      "etaRatio37",
+      "IMPACTG_DIRECT37_PRODUCT",
+      "IMPACTG_DIRECT37_N2",
+      "IMPACTG_DIRECT37_LIMIT",
+      "altRatio37",
+      "IMPACTG_CORRIDOR_DIRECT37_LIMIT"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 354,
+    "attachment": 14,
+    "archive_chain": [
+      "14-ODD_ZETA_3X3_MERGED_v0_3_0.zip"
+    ],
+    "member": "ODD_ZETA_3X3_MERGED_v0_3_0/provenance/IMPACTG_v0_10_1/ImpactG/EtaCorridor.lean",
+    "sha256": "4ee06bd28d74e413ff9fb75b041a74c1e03e7fbb281752e54de162a6a4e3f54b",
+    "bytes": 3867,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "ImpactG.AlternatingBounds"
+    ],
+    "declarations": [
+      "etaCorridor",
+      "IMPACTG_ALT_BOUNDED",
+      "IMPACTG_ALT_CANONICAL_LOWER",
+      "IMPACTG_ALT_CANONICAL_UPPER",
+      "IMPACTG_FOUR_SCALAR_CORRIDOR",
+      "IMPACTG_ALT_CANONICAL_TENDSTO"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 355,
+    "attachment": 14,
+    "archive_chain": [
+      "14-ODD_ZETA_3X3_MERGED_v0_3_0.zip"
+    ],
+    "member": "ODD_ZETA_3X3_MERGED_v0_3_0/provenance/IMPACTG_v0_10_1/ImpactG/EulerAgreement.lean",
+    "sha256": "2d2db14f19d53bc66276bc6cb00baf9fb42e670d337ebc8917a9ce27bd3e79b2",
+    "bytes": 5587,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "ImpactG.EulerWeightedMass",
+      "ImpactG.EulerLimitTarget"
+    ],
+    "declarations": [
+      "IMPACTG_ETA_FINITE_ERROR_ESTIMATE",
+      "IMPACTG_ETA_FINITE_TENDSTO_CORRIDOR",
+      "IMPACTG_EULER_FOUR_WEIGHT_AGREEMENT",
+      "IMPACTG_CONTRACTION_TO_CANONICAL_UNCONDITIONAL"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 356,
+    "attachment": 14,
+    "archive_chain": [
+      "14-ODD_ZETA_3X3_MERGED_v0_3_0.zip"
+    ],
+    "member": "ODD_ZETA_3X3_MERGED_v0_3_0/provenance/IMPACTG_v0_10_1/ImpactG/EulerBinomialAverage.lean",
+    "sha256": "4fdd477b23ed9b6133ac2e3c4d399499f6a29acf5f68ad39bc10ecc46677be2e",
+    "bytes": 4533,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "ImpactG.EulerFiniteReindex"
+    ],
+    "declarations": [
+      "eulerAltPartial",
+      "IMPACTG_EULER_PARTIAL_STEP",
+      "eulerBinomialNumerator",
+      "IMPACTG_PASCAL_SUM",
+      "IMPACTG_EULER_SHIFTED_PARTIAL",
+      "IMPACTG_EULER_NUMERATOR_STEP",
+      "eulerBinomialAverage",
+      "IMPACTG_EULER_AVERAGE_STEP",
+      "IMPACTG_ETA_FINITE_BINOMIAL_AVERAGE",
+      "IMPACTG_ETA_FINITE_BINOMIAL_SUM"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 357,
+    "attachment": 14,
+    "archive_chain": [
+      "14-ODD_ZETA_3X3_MERGED_v0_3_0.zip"
+    ],
+    "member": "ODD_ZETA_3X3_MERGED_v0_3_0/provenance/IMPACTG_v0_10_1/ImpactG/EulerFiniteReindex.lean",
+    "sha256": "0a2aabb772ba0b674313ce088a513fc8d4d98091734f8c9a6289971c8cc9b85e",
+    "bytes": 2850,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "ImpactG.EulerRowMass"
+    ],
+    "declarations": [
+      "eulerColumnMass",
+      "IMPACTG_EULER_COLUMN_NONNEG",
+      "IMPACTG_EULER_COLUMN_STEP",
+      "sum_choose_extend",
+      "IMPACTG_ETA_FINITE_ROW_IDENTITY"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 358,
+    "attachment": 14,
+    "archive_chain": [
+      "14-ODD_ZETA_3X3_MERGED_v0_3_0.zip"
+    ],
+    "member": "ODD_ZETA_3X3_MERGED_v0_3_0/provenance/IMPACTG_v0_10_1/ImpactG/EulerLimitTarget.lean",
+    "sha256": "db35e5628b71934d1ef7b4c1e9eb4be7152201d23d9321cdbc2fa0d3cb1012eb",
+    "bytes": 1501,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "ImpactG.EulerFiniteReindex"
+    ],
+    "declarations": [
+      "EulerFourWeightAgreement",
+      "IMPACTG_CONTRACTION_TO_CANONICAL_OF_EULER_BRIDGE"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 359,
+    "attachment": 14,
+    "archive_chain": [
+      "14-ODD_ZETA_3X3_MERGED_v0_3_0.zip"
+    ],
+    "member": "ODD_ZETA_3X3_MERGED_v0_3_0/provenance/IMPACTG_v0_10_1/ImpactG/EulerParity.lean",
+    "sha256": "9cbfaa8a58bc3ade3a2e526e962bf984694bebc450767f79f3d9a7abe7cb011f",
+    "bytes": 5154,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "ImpactG.EulerBinomialAverage"
+    ],
+    "declarations": [
+      "IMPACTG_ALT_TERM_CAST",
+      "IMPACTG_EVEN_TERM",
+      "IMPACTG_ODD_TERM",
+      "IMPACTG_EULER_PARTIAL_EVEN",
+      "IMPACTG_EULER_PARTIAL_ODD",
+      "IMPACTG_ALT_TERM_RECIP_BOUND",
+      "IMPACTG_EULER_PARTIAL_UNIFORM"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 360,
+    "attachment": 14,
+    "archive_chain": [
+      "14-ODD_ZETA_3X3_MERGED_v0_3_0.zip"
+    ],
+    "member": "ODD_ZETA_3X3_MERGED_v0_3_0/provenance/IMPACTG_v0_10_1/ImpactG/EulerRowMass.lean",
+    "sha256": "d8fddf42e8071a9de92d0db745900925ae79324071f7c19f40f4d4259d4feecc",
+    "bytes": 2508,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "ImpactG.CorridorContraction"
+    ],
+    "declarations": [
+      "IMPACTG_BINOMIAL_GEOMETRIC_ROW",
+      "IMPACTG_EULER_ROW_MASS_ONE"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 361,
+    "attachment": 14,
+    "archive_chain": [
+      "14-ODD_ZETA_3X3_MERGED_v0_3_0.zip"
+    ],
+    "member": "ODD_ZETA_3X3_MERGED_v0_3_0/provenance/IMPACTG_v0_10_1/ImpactG/EulerWeightedMass.lean",
+    "sha256": "0dae7c714a73dc7a26cb7867ba4a697b13a42f227cf316a52235184a873a7213",
+    "bytes": 2599,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "ImpactG.EulerParity"
+    ],
+    "declarations": [
+      "IMPACTG_CHOOSE_RECIP_SHIFT",
+      "IMPACTG_CHOOSE_SHIFTED_SUM",
+      "IMPACTG_CHOOSE_RECIP_MASS",
+      "IMPACTG_CHOOSE_RECIP_MASS_REAL"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 362,
+    "attachment": 14,
+    "archive_chain": [
+      "14-ODD_ZETA_3X3_MERGED_v0_3_0.zip"
+    ],
+    "member": "ODD_ZETA_3X3_MERGED_v0_3_0/provenance/IMPACTG_v0_10_1/ImpactG/Farey.lean",
+    "sha256": "ea5825301834ae57b84564b4c69e1d83eaccb9709dad76e01d7072a14a45e088",
+    "bytes": 2150,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "ImpactG.Finite"
+    ],
+    "declarations": [
+      "IMPACTG_FAREY_GAP",
+      "IMPACTG_FAREY_35_DETERMINANT",
+      "IMPACTG_FAREY_35_SUM",
+      "IMPACTG_R35_EXCLUDE_1000000",
+      "IMPACTG_R35_INTERVAL_WITHIN_FAREY"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 363,
+    "attachment": 14,
+    "archive_chain": [
+      "14-ODD_ZETA_3X3_MERGED_v0_3_0.zip"
+    ],
+    "member": "ODD_ZETA_3X3_MERGED_v0_3_0/provenance/IMPACTG_v0_10_1/ImpactG/Farey200.lean",
+    "sha256": "d6fe13a6615f51b5b3eee7e5a28190a1aa638142efdf0022f4a136fa50a9cecc",
+    "bytes": 9950,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "ImpactG.FareyLift"
+    ],
+    "declarations": [
+      "r35DigitPrefix200",
+      "r35TenPow200",
+      "IMPACTG_200_DECIMAL_FAREY_DET",
+      "IMPACTG_200_DECIMAL_FAREY_SUM",
+      "IMPACTG_200_DECIMAL_FAREY_GT_1E100",
+      "IMPACTG_200_DECIMAL_LEFT_ARITH",
+      "IMPACTG_200_DECIMAL_RIGHT_ARITH",
+      "IMPACTG_200_DECIMAL_DENOM",
+      "IMPACTG_200_DIGIT_REAL_DENOM",
+      "IMPACTG_200_FINE_FAREY_DET",
+      "IMPACTG_200_FINE_FAREY_SUM",
+      "IMPACTG_200_FINE_DENOM"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 364,
+    "attachment": 14,
+    "archive_chain": [
+      "14-ODD_ZETA_3X3_MERGED_v0_3_0.zip"
+    ],
+    "member": "ODD_ZETA_3X3_MERGED_v0_3_0/provenance/IMPACTG_v0_10_1/ImpactG/FareyLift.lean",
+    "sha256": "ac8943b21196e4c10120dc8d6ee7532550e08a38c294b559bc6eb8a2a574cbeb",
+    "bytes": 2254,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "ImpactG.GeneratorBridge",
+      "ImpactG.Locks"
+    ],
+    "declarations": [
+      "IMPACTG_FAREY_REAL_DENOM",
+      "IMPACTG_DECIMAL_REAL_DENOM"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 365,
+    "attachment": 14,
+    "archive_chain": [
+      "14-ODD_ZETA_3X3_MERGED_v0_3_0.zip"
+    ],
+    "member": "ODD_ZETA_3X3_MERGED_v0_3_0/provenance/IMPACTG_v0_10_1/ImpactG/Finite.lean",
+    "sha256": "5880192dca74edc3f61603b9828e28e1a650d621acbf0fc59b8b71f219430074",
+    "bytes": 3147,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "ImpactG.Core"
+    ],
+    "declarations": [
+      "etaTerm",
+      "etaFinite",
+      "wallisFinite",
+      "inputTriple",
+      "impactgMatrix",
+      "ratio35",
+      "ratio57",
+      "IMPACTG_ETA_ONE",
+      "IMPACTG_ETA_TWO_2",
+      "IMPACTG_ETA_TWO_3",
+      "IMPACTG_ETA_TWO_5",
+      "IMPACTG_ETA_TWO_7",
+      "IMPACTG_WALLIS_TWO",
+      "IMPACTG_R35_N2",
+      "IMPACTG_R57_N2",
+      "IMPACTG_STEP_N"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 366,
+    "attachment": 14,
+    "archive_chain": [
+      "14-ODD_ZETA_3X3_MERGED_v0_3_0.zip"
+    ],
+    "member": "ODD_ZETA_3X3_MERGED_v0_3_0/provenance/IMPACTG_v0_10_1/ImpactG/GeneratorBridge.lean",
+    "sha256": "2ed2931c260874d1cc8a2b468c78f6e1c51386a85ad8c94ff1dfba72cdd69f36",
+    "bytes": 4516,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "ImpactG.LimitBridge"
+    ],
+    "declarations": [
+      "IMPACTG_GENERATOR_U_FORMULA",
+      "IMPACTG_GENERATOR_V_FORMULA",
+      "IMPACTG_GENERATOR_W_FORMULA",
+      "IMPACTG_GENERATORS_TO_DIAGONALS",
+      "IMPACTG_GENERATORS_TO_MATRIX"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 367,
+    "attachment": 14,
+    "archive_chain": [
+      "14-ODD_ZETA_3X3_MERGED_v0_3_0.zip"
+    ],
+    "member": "ODD_ZETA_3X3_MERGED_v0_3_0/provenance/IMPACTG_v0_10_1/ImpactG/JTransfer.lean",
+    "sha256": "8c385ca64378bf774132b3fbf37221f8b934564c371cb2597a4fb1777c6bce39",
+    "bytes": 1816,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "ImpactG.Transfer"
+    ],
+    "declarations": [
+      "j5From",
+      "j6From",
+      "j7From",
+      "transfer5",
+      "transfer7",
+      "IMPACTG_J6_FROM_J5",
+      "IMPACTG_J7_FROM_J5",
+      "IMPACTG_J_RATIONAL_PARAMETERS"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 368,
+    "attachment": 14,
+    "archive_chain": [
+      "14-ODD_ZETA_3X3_MERGED_v0_3_0.zip"
+    ],
+    "member": "ODD_ZETA_3X3_MERGED_v0_3_0/provenance/IMPACTG_v0_10_1/ImpactG/LimitBridge.lean",
+    "sha256": "7904043b86c778cd344a97e1709b2ad152e5cba1d28b33fb440c81b03a9bb0cb",
+    "bytes": 4359,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "ImpactG.JTransfer"
+    ],
+    "declarations": [
+      "IMPACTG_MATRIX_LIMIT",
+      "IMPACTG_RATIO35_LIMIT",
+      "IMPACTG_RATIO57_LIMIT",
+      "IMPACTG_RATIO37_LIMIT",
+      "IMPACTG_CUMULATIVE_LIMIT"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 369,
+    "attachment": 14,
+    "archive_chain": [
+      "14-ODD_ZETA_3X3_MERGED_v0_3_0.zip"
+    ],
+    "member": "ODD_ZETA_3X3_MERGED_v0_3_0/provenance/IMPACTG_v0_10_1/ImpactG/Locks.lean",
+    "sha256": "635d1125a7c8e29cedff051121092ac52103e7d787156cc3466056d6797b92d5",
+    "bytes": 1101,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "ImpactG.Transfer"
+    ],
+    "declarations": [
+      "DenomSeal",
+      "IMPACTG_LOCK_IMP_NO_RATIONAL"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 370,
+    "attachment": 14,
+    "archive_chain": [
+      "14-ODD_ZETA_3X3_MERGED_v0_3_0.zip"
+    ],
+    "member": "ODD_ZETA_3X3_MERGED_v0_3_0/provenance/IMPACTG_v0_10_1/ImpactG/RatioEnclosure.lean",
+    "sha256": "5462302da7a67cd6685fa8d5c0317095809db58db14bd773f8f70c0ab9002b07",
+    "bytes": 5828,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "ImpactG.Direct37"
+    ],
+    "declarations": [
+      "IMPACTG_POSITIVE_RATIO_INTERVAL",
+      "etaFastUpper",
+      "IMPACTG_FAST35_FROM_BOUNDS",
+      "IMPACTG_FAST57_FROM_BOUNDS",
+      "IMPACTG_FAST35_FAREY_LIFT"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 371,
+    "attachment": 14,
+    "archive_chain": [
+      "14-ODD_ZETA_3X3_MERGED_v0_3_0.zip"
+    ],
+    "member": "ODD_ZETA_3X3_MERGED_v0_3_0/provenance/IMPACTG_v0_10_1/ImpactG/RatioReduction.lean",
+    "sha256": "cf2a7a7f5216037dc624712452043bef789db72f53b9b0089631de34a2880f83",
+    "bytes": 4266,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "ImpactG.Chain"
+    ],
+    "declarations": [
+      "etaRatio35",
+      "etaRatio57",
+      "IMPACTG_RATIO35_WALLIS_CANCEL",
+      "IMPACTG_RATIO57_WALLIS_CANCEL",
+      "IMPACTG_REDUCED35_N2",
+      "IMPACTG_REDUCED57_N2",
+      "IMPACTG_REDUCED35_LIMIT",
+      "IMPACTG_REDUCED57_LIMIT"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 372,
+    "attachment": 14,
+    "archive_chain": [
+      "14-ODD_ZETA_3X3_MERGED_v0_3_0.zip"
+    ],
+    "member": "ODD_ZETA_3X3_MERGED_v0_3_0/provenance/IMPACTG_v0_10_1/ImpactG/Transfer.lean",
+    "sha256": "1a392d13edfb55bb9897b833b287d885b8083ffdbc3405f7e20b3e8ef387f57d",
+    "bytes": 1237,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "ImpactG.Farey"
+    ],
+    "declarations": [
+      "normalizedI1",
+      "normalizedI2",
+      "normalizedI3",
+      "IMPACTG_FORMAL_35",
+      "IMPACTG_FORMAL_57",
+      "IMPACTG_FORMAL_37"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 373,
+    "attachment": 14,
+    "archive_chain": [
+      "14-ODD_ZETA_3X3_MERGED_v0_3_0.zip"
+    ],
+    "member": "ODD_ZETA_3X3_MERGED_v0_3_0/verification/merge/FunctionalBridgeAudit.lean",
+    "sha256": "18c6537e7745e44e4f0917d9e7733028ec4fc85acb231ce3706af23d348b3413",
+    "bytes": 311,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Merge.FunctionalBridge"
+    ],
+    "declarations": [],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  }
+]

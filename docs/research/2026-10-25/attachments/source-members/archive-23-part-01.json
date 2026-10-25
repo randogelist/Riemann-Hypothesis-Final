@@ -1,0 +1,618 @@
+[
+  {
+    "id": 118,
+    "attachment": 9,
+    "archive_chain": [
+      "09-CHEBYSHEV_MASTERTIER_LEAN_v0_1_37_INV_POW_FIX27-1-.zip"
+    ],
+    "member": "CHEBYSHEV_MASTERTIER_LEAN_v0_1_37_INV_POW_FIX27/Core.lean",
+    "sha256": "52f6390c8f18f81d12e04e0c448c8c0866429ba689fc8895405484f30656156c",
+    "bytes": 6412,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Mathlib"
+    ],
+    "declarations": [
+      "chebC",
+      "seedV",
+      "seedW",
+      "Xplus",
+      "seed_factorization",
+      "Stage",
+      "initial",
+      "step",
+      "stage",
+      "Locked",
+      "initial_locked",
+      "locked_step",
+      "every_stage_locked",
+      "stage_a_power",
+      "stage_v_power",
+      "every_stage_divisibility",
+      "stageMatrix",
+      "stage_matrix_square",
+      "matrix_exponentiation",
+      "scalarProjector",
+      "projector_idempotent",
+      "finiteMoment",
+      "rationalStage",
+      "arithmetic_certificate_0",
+      "stage_one_polynomial",
+      "arithmetic_certificate_1"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 119,
+    "attachment": 9,
+    "archive_chain": [
+      "09-CHEBYSHEV_MASTERTIER_LEAN_v0_1_37_INV_POW_FIX27-1-.zip"
+    ],
+    "member": "CHEBYSHEV_MASTERTIER_LEAN_v0_1_37_INV_POW_FIX27/DyadicGridReadout.lean",
+    "sha256": "91e8ef57944eda2ecc392f4f81a131a4f4177aa20d97404142372466b10dc0ba",
+    "bytes": 2142,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "GridMomentLimit",
+      "HardyArithmetic"
+    ],
+    "declarations": [
+      "finiteMoment_cast",
+      "dyadic_integer_readout_grid_limit"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 120,
+    "attachment": 9,
+    "archive_chain": [
+      "09-CHEBYSHEV_MASTERTIER_LEAN_v0_1_37_INV_POW_FIX27-1-.zip"
+    ],
+    "member": "CHEBYSHEV_MASTERTIER_LEAN_v0_1_37_INV_POW_FIX27/Edge.lean",
+    "sha256": "9b9350682f4dcf7a82bdf2c49d434fc5c7e215ed8f4c7b3e689e603a4de17e83",
+    "bytes": 2138,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Mathlib"
+    ],
+    "declarations": [
+      "cReal",
+      "cReal_factor",
+      "cReal_abs_le_one",
+      "cReal_even_power_bounds",
+      "cReal_normalized_error"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 121,
+    "attachment": 9,
+    "archive_chain": [
+      "09-CHEBYSHEV_MASTERTIER_LEAN_v0_1_37_INV_POW_FIX27-1-.zip"
+    ],
+    "member": "CHEBYSHEV_MASTERTIER_LEAN_v0_1_37_INV_POW_FIX27/EtaChebGridComparison.lean",
+    "sha256": "50e0ecc946f65a00ab5806be128f9c2cd43999d03fc49de7eb4e20e4fbb87a32",
+    "bytes": 6242,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "HybridError",
+      "GridMomentLimit"
+    ],
+    "declarations": [
+      "etaScalarEntry",
+      "eta_scalar_residual",
+      "eta_scalar_residual_interval",
+      "etaMeanStage",
+      "eta_mean_error_exact",
+      "eta_mean_error_interval",
+      "eta_grid_error",
+      "cheb_eta_grid_comparison",
+      "eta_grid_comparison_moment_tendsto"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 122,
+    "attachment": 9,
+    "archive_chain": [
+      "09-CHEBYSHEV_MASTERTIER_LEAN_v0_1_37_INV_POW_FIX27-1-.zip"
+    ],
+    "member": "CHEBYSHEV_MASTERTIER_LEAN_v0_1_37_INV_POW_FIX27/EtaMomentExpansion.lean",
+    "sha256": "e3883b32ede645754a3fff108437fe96c867a9b31a7de0eed6bdd6d43a769396",
+    "bytes": 1765,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "EtaPolynomialLock"
+    ],
+    "declarations": [
+      "eta_numerator_succ_add",
+      "eta_numerator_explicit",
+      "eta_integer_matrix_explicit"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 123,
+    "attachment": 9,
+    "archive_chain": [
+      "09-CHEBYSHEV_MASTERTIER_LEAN_v0_1_37_INV_POW_FIX27-1-.zip"
+    ],
+    "member": "CHEBYSHEV_MASTERTIER_LEAN_v0_1_37_INV_POW_FIX27/EtaMomentReadout.lean",
+    "sha256": "20463a0887a07b6e21db3fbefde789f3b0210f5906a1b041c7324eb8f23e654e",
+    "bytes": 3142,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "EtaMomentExpansion"
+    ],
+    "declarations": [
+      "finiteMoment_add",
+      "finiteMoment_finset_sum",
+      "finiteMoment_X_pow",
+      "finiteMoment_sub",
+      "eta_integer_moment_eq_partial",
+      "etaMatrixReadout",
+      "etaMatrixReadout_eq_partial"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 124,
+    "attachment": 9,
+    "archive_chain": [
+      "09-CHEBYSHEV_MASTERTIER_LEAN_v0_1_37_INV_POW_FIX27-1-.zip"
+    ],
+    "member": "CHEBYSHEV_MASTERTIER_LEAN_v0_1_37_INV_POW_FIX27/EtaPolynomialLock.lean",
+    "sha256": "9c995a9bb71890c91afde74896c16fb32ac928aa0942f3f74589302ca78b482c",
+    "bytes": 3217,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Core",
+      "UniversalSemigroup"
+    ],
+    "declarations": [
+      "etaKernel",
+      "etaNumerator",
+      "eta_polynomial_lock",
+      "etaIntegerMatrix",
+      "etaPowerStage",
+      "eta_integer_matrix_power",
+      "eta_integer_matrix_upper"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 125,
+    "attachment": 9,
+    "archive_chain": [
+      "09-CHEBYSHEV_MASTERTIER_LEAN_v0_1_37_INV_POW_FIX27-1-.zip"
+    ],
+    "member": "CHEBYSHEV_MASTERTIER_LEAN_v0_1_37_INV_POW_FIX27/EtaTsumGeneric.lean",
+    "sha256": "c8c81748e421d98edc7df73cab35466693ce14d46bd01a97dfb2baa8fb1c5ee5",
+    "bytes": 1975,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Mathlib"
+    ],
+    "declarations": [
+      "eta_tsum_of_odd_scaling"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 126,
+    "attachment": 9,
+    "archive_chain": [
+      "09-CHEBYSHEV_MASTERTIER_LEAN_v0_1_37_INV_POW_FIX27-1-.zip"
+    ],
+    "member": "CHEBYSHEV_MASTERTIER_LEAN_v0_1_37_INV_POW_FIX27/GridMean.lean",
+    "sha256": "456e36febbe638b517474407843ea573f23fe7c6a7c970132b47d23dfc5d6dce",
+    "bytes": 4324,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "MeanTransfer"
+    ],
+    "declarations": [
+      "gridNode",
+      "gridNode_mem",
+      "gridMean",
+      "productMean",
+      "productPower",
+      "sevenfoldGrid",
+      "grid_sevenfold_error",
+      "grid_sevenfold_cauchy"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 127,
+    "attachment": 9,
+    "archive_chain": [
+      "09-CHEBYSHEV_MASTERTIER_LEAN_v0_1_37_INV_POW_FIX27-1-.zip"
+    ],
+    "member": "CHEBYSHEV_MASTERTIER_LEAN_v0_1_37_INV_POW_FIX27/GridMomentLimit.lean",
+    "sha256": "78b3b82ca90e14c9b5092b13a005fceb43fc355bc7d1a89a4f32117d00d9be90",
+    "bytes": 4828,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PowerSumSqueeze"
+    ],
+    "declarations": [
+      "gridMoment_eq_normalized_power_sum",
+      "gridMoment_rate",
+      "gridMoment_tendsto",
+      "rationalGridMoment_tendsto",
+      "sevenfoldGrid_monomial_tendsto",
+      "finite_rational_grid_moment_tendsto"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 128,
+    "attachment": 9,
+    "archive_chain": [
+      "09-CHEBYSHEV_MASTERTIER_LEAN_v0_1_37_INV_POW_FIX27-1-.zip"
+    ],
+    "member": "CHEBYSHEV_MASTERTIER_LEAN_v0_1_37_INV_POW_FIX27/GridMomentLock.lean",
+    "sha256": "30bec95a54ec719d10802047b9d7b98ce449a779ba95c21d6962e38e44c4e956",
+    "bytes": 6045,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "GridMean"
+    ],
+    "declarations": [
+      "gridMoment",
+      "gridMean_scale",
+      "gridMoment_zero",
+      "gridMoment_interval",
+      "productPower_grid_monomial_scaled",
+      "sevenfoldGrid_monomial",
+      "sevenfoldGrid_monomial_interval",
+      "rationalGridMoment",
+      "rationalGridMoment_cast",
+      "rationalSevenfoldMoment",
+      "sevenfoldGrid_monomial_rational"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 129,
+    "attachment": 9,
+    "archive_chain": [
+      "09-CHEBYSHEV_MASTERTIER_LEAN_v0_1_37_INV_POW_FIX27-1-.zip"
+    ],
+    "member": "CHEBYSHEV_MASTERTIER_LEAN_v0_1_37_INV_POW_FIX27/HardyArithmetic.lean",
+    "sha256": "87bfcacde3d1413b3c9939275a83537fcb8433e0c1a61b627bdd0ce1f3ac6411",
+    "bytes": 3003,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Core"
+    ],
+    "declarations": [
+      "hardyCoeff",
+      "hardyIter",
+      "hardyIter_coeff",
+      "integerCoeffs",
+      "hardyMoment",
+      "hardyMoment_formula",
+      "hardyMoment_seven",
+      "sevenfoldDyadic",
+      "sevenfoldDyadic_eq_rationalStage",
+      "hardyCoeff_add"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 130,
+    "attachment": 9,
+    "archive_chain": [
+      "09-CHEBYSHEV_MASTERTIER_LEAN_v0_1_37_INV_POW_FIX27-1-.zip"
+    ],
+    "member": "CHEBYSHEV_MASTERTIER_LEAN_v0_1_37_INV_POW_FIX27/HybridError.lean",
+    "sha256": "51c2152b43b6aa090c307b89e8662bab9a3307b34c691f674429aa3e1e27a2a5",
+    "bytes": 8176,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "UniversalSemigroup",
+      "MeanTransfer"
+    ],
+    "declarations": [
+      "hybridRatio",
+      "hybridEntry",
+      "hybrid_entry_closed",
+      "hybrid_error_exact",
+      "hybrid_error_interval",
+      "hybridMean",
+      "hybridResidual",
+      "hybrid_residual_eq_error",
+      "hybrid_mean_error_exact",
+      "hybrid_mean_error_bound",
+      "hybrid_mean_moment_bound",
+      "hybrid_mean_seventh_moment_bound"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 131,
+    "attachment": 9,
+    "archive_chain": [
+      "09-CHEBYSHEV_MASTERTIER_LEAN_v0_1_37_INV_POW_FIX27-1-.zip"
+    ],
+    "member": "CHEBYSHEV_MASTERTIER_LEAN_v0_1_37_INV_POW_FIX27/HybridIntegerLock.lean",
+    "sha256": "ea4c75eaf87c95507c9bf4853dfe8bce30f1c3b9d141d29fd66637ada16440e4",
+    "bytes": 2593,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "EtaPolynomialLock"
+    ],
+    "declarations": [
+      "hybridIntegerNumerator",
+      "hybrid_integer_lock",
+      "hybrid_integer_divisibility",
+      "hybrid_integer_matrix_entry",
+      "hybridIntegerReadout"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 132,
+    "attachment": 9,
+    "archive_chain": [
+      "09-CHEBYSHEV_MASTERTIER_LEAN_v0_1_37_INV_POW_FIX27-1-.zip"
+    ],
+    "member": "CHEBYSHEV_MASTERTIER_LEAN_v0_1_37_INV_POW_FIX27/ImportProbe.lean",
+    "sha256": "21657be1f1cd469db6ab6b9a645aa32b5c8b863bf852fa0cd98bc01d024efdc4",
+    "bytes": 93,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Lean.Elab.Command",
+      "ImportGraph.Imports.Redundant",
+      "Mathlib"
+    ],
+    "declarations": [],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 133,
+    "attachment": 9,
+    "archive_chain": [
+      "09-CHEBYSHEV_MASTERTIER_LEAN_v0_1_37_INV_POW_FIX27-1-.zip"
+    ],
+    "member": "CHEBYSHEV_MASTERTIER_LEAN_v0_1_37_INV_POW_FIX27/MeanTransfer.lean",
+    "sha256": "e79df49a846103ebf1aecfd6a3c680168a6b43442a1bec06cb03a39a5a25d90d",
+    "bytes": 5134,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "ScalarPower"
+    ],
+    "declarations": [
+      "PositiveIntervalMean",
+      "dyadicEntry",
+      "meanTarget",
+      "meanStage",
+      "mean_stage_error",
+      "mean_stage_tendsto",
+      "mean_stage_cauchy",
+      "pointMass",
+      "pointMass_stage"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 134,
+    "attachment": 9,
+    "archive_chain": [
+      "09-CHEBYSHEV_MASTERTIER_LEAN_v0_1_37_INV_POW_FIX27-1-.zip"
+    ],
+    "member": "CHEBYSHEV_MASTERTIER_LEAN_v0_1_37_INV_POW_FIX27/NativeEtaMatrixEndpoint.lean",
+    "sha256": "332948f81c03a0ecfdb5faf33913465f67a38d8d3f659bea13564c65d92cb853",
+    "bytes": 3471,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "EtaMomentReadout",
+      "NativeEtaSeven"
+    ],
+    "declarations": [
+      "rat_seventh_cast_nativeTerm",
+      "etaMatrixReadout_cast",
+      "eta_matrix_zeta7_endpoint"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 135,
+    "attachment": 9,
+    "archive_chain": [
+      "09-CHEBYSHEV_MASTERTIER_LEAN_v0_1_37_INV_POW_FIX27-1-.zip"
+    ],
+    "member": "CHEBYSHEV_MASTERTIER_LEAN_v0_1_37_INV_POW_FIX27/NativeEtaSeven.lean",
+    "sha256": "7eb9f8659eb70ade709a02dcba0ad85c8a670fb6fc989337b77ea7a73e9b81e4",
+    "bytes": 4781,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "EtaTsumGeneric",
+      "NativeZetaAnchor"
+    ],
+    "declarations": [
+      "nativeTerm7",
+      "nativeTerm7_summable",
+      "native_zeta7_eq_term_tsum",
+      "nativeTerm7_odd",
+      "nativeEtaPartial",
+      "native_eta7_eq_zeta7",
+      "native_eta7_partial_tendsto",
+      "native_eta7_dyadic_tendsto"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 136,
+    "attachment": 9,
+    "archive_chain": [
+      "09-CHEBYSHEV_MASTERTIER_LEAN_v0_1_37_INV_POW_FIX27-1-.zip"
+    ],
+    "member": "CHEBYSHEV_MASTERTIER_LEAN_v0_1_37_INV_POW_FIX27/NativeZetaAnchor.lean",
+    "sha256": "d7bd50a6817d075e929d99e59874b4dc73bd5be066e8c505bd97185ae8fe6882",
+    "bytes": 1033,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Mathlib"
+    ],
+    "declarations": [
+      "native_zeta7_dirichlet",
+      "native_zeta7_shifted"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 137,
+    "attachment": 9,
+    "archive_chain": [
+      "09-CHEBYSHEV_MASTERTIER_LEAN_v0_1_37_INV_POW_FIX27-1-.zip"
+    ],
+    "member": "CHEBYSHEV_MASTERTIER_LEAN_v0_1_37_INV_POW_FIX27/PowerSumSqueeze.lean",
+    "sha256": "03fb5044fb627e40e92ed092a40c34bca5620bfd417b089410ab3f27482db324",
+    "bytes": 6469,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "GridMomentLock"
+    ],
+    "declarations": [
+      "power_step_squeeze",
+      "rightPowerSum",
+      "leftPowerSum",
+      "telescoping_power",
+      "right_sub_left",
+      "arithmetic_power_sum_bounds",
+      "normalized_power_sum_error"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 138,
+    "attachment": 9,
+    "archive_chain": [
+      "09-CHEBYSHEV_MASTERTIER_LEAN_v0_1_37_INV_POW_FIX27-1-.zip"
+    ],
+    "member": "CHEBYSHEV_MASTERTIER_LEAN_v0_1_37_INV_POW_FIX27/ScalarPower.lean",
+    "sha256": "082a70305b5f116fa1fc59c6de0290f91e26bae7617c7ff0fc35a49d24272738",
+    "bytes": 8912,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Mathlib"
+    ],
+    "declarations": [
+      "scalarTriangular",
+      "scalarClosed",
+      "scalar_triangular_power",
+      "scalar_triangular_entry",
+      "scalarCheb",
+      "scalarRatio",
+      "scalar_seed_connection",
+      "scalar_cheb_interval",
+      "scalar_ratio_interval",
+      "scalar_geometric_error",
+      "scalar_geometric_error_interval",
+      "scalar_pairwise_cauchy_bound",
+      "scalar_dyadic_error_interval",
+      "scalar_geometric_tendsto",
+      "scalar_geometric_cauchy",
+      "scalar_dyadic_tendsto",
+      "scalar_dyadic_cauchy"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 139,
+    "attachment": 9,
+    "archive_chain": [
+      "09-CHEBYSHEV_MASTERTIER_LEAN_v0_1_37_INV_POW_FIX27-1-.zip"
+    ],
+    "member": "CHEBYSHEV_MASTERTIER_LEAN_v0_1_37_INV_POW_FIX27/UniversalSemigroup.lean",
+    "sha256": "feb54a12c961cf47cb4faab26cb22501842f1e77fd5fe4a3b943ff2ef9f944eb",
+    "bytes": 3863,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "ScalarPower"
+    ],
+    "declarations": [
+      "universalMatrix",
+      "universal_matrix_mul",
+      "universal_matrix_commute",
+      "universal_matrix_one",
+      "universal_matrix_pow",
+      "universal_two_parameter",
+      "universal_upper_right",
+      "universal_two_parameter_entry",
+      "universal_eq_scalar",
+      "eta_cheb_real_commute",
+      "eta_upper_right_eq_one_sub"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  }
+]

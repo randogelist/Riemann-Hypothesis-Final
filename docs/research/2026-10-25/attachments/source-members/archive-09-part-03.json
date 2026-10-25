@@ -1,0 +1,804 @@
+[
+  {
+    "id": 542,
+    "attachment": 17,
+    "archive_chain": [
+      "17-zeta5-spectral-lean-1-.zip"
+    ],
+    "member": "zeta5-spectral-lean/Zeta5/Sec6/RhoCross.lean",
+    "sha256": "13a33fdff9104bc107fa8f9b6983e58c3d9fecbad6f531beed9a073763a13f80",
+    "bytes": 3474,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta5.Sec6.SmoothArc",
+      "Zeta5.Sec6.Measures"
+    ],
+    "declarations": [
+      "rho_cross"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 543,
+    "attachment": 17,
+    "archive_chain": [
+      "17-zeta5-spectral-lean-1-.zip"
+    ],
+    "member": "zeta5-spectral-lean/Zeta5/Sec6/RhoEnergy.lean",
+    "sha256": "bf1ebc18dde9c1714fa4aec5cbe871c137ded005fb431bed3be7b51f8ed1fc87",
+    "bytes": 1116,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta5.Sec6.PairEnergy",
+      "Zeta5.Sec6.Bilinear",
+      "Zeta5.Sec6.ArcComm",
+      "Zeta5.Sec6.IrhoSum"
+    ],
+    "declarations": [
+      "rho_energy_ge"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 544,
+    "attachment": 17,
+    "archive_chain": [
+      "17-zeta5-spectral-lean-1-.zip"
+    ],
+    "member": "zeta5-spectral-lean/Zeta5/Sec6/SmoothArc.lean",
+    "sha256": "cfb5aae818cc6976b4303e35125e2712dd33528cc6b25ea6c76ab289614344c2",
+    "bytes": 3643,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta5.Sec6.SmoothErr",
+      "Zeta5.Sec6.ArcsinePot"
+    ],
+    "declarations": [
+      "arcsine_smooth_err"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 545,
+    "attachment": 17,
+    "archive_chain": [
+      "17-zeta5-spectral-lean-1-.zip"
+    ],
+    "member": "zeta5-spectral-lean/Zeta5/Sec6/SmoothAux.lean",
+    "sha256": "4132a592f7693b34011d8b1b14588294107087b620c14f73911a93e87e8bf264",
+    "bytes": 3855,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta5.Sec6.Defs"
+    ],
+    "declarations": [
+      "sin_ge_of_mem",
+      "cos_sub_cos_ge",
+      "exists_nearest_cos"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 546,
+    "attachment": 17,
+    "archive_chain": [
+      "17-zeta5-spectral-lean-1-.zip"
+    ],
+    "member": "zeta5-spectral-lean/Zeta5/Sec6/SmoothErr.lean",
+    "sha256": "0cd346e87e0746d78b0708ffc28e1a5e28a5c8b392244ceefcc84a74e0da57e4",
+    "bytes": 7366,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta5.Sec6.SmoothAux",
+      "Zeta5.Sec6.Antideriv"
+    ],
+    "declarations": [
+      "smooth_err_norm"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 547,
+    "attachment": 17,
+    "archive_chain": [
+      "17-zeta5-spectral-lean-1-.zip"
+    ],
+    "member": "zeta5-spectral-lean/Zeta5/Sec6/Swap.lean",
+    "sha256": "06a3bba1c86105bfe090546efa7c3406f3772c7c82a12b3cd4af23ca4ec318db",
+    "bytes": 5489,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta5.Sec6.Defs"
+    ],
+    "declarations": [
+      "swap_frullani_bound",
+      "swap_frullani"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 548,
+    "attachment": 17,
+    "archive_chain": [
+      "17-zeta5-spectral-lean-1-.zip"
+    ],
+    "member": "zeta5-spectral-lean/Zeta5/Section3.lean",
+    "sha256": "d0c1c0cee35ce5675986ecda8ddaf5b46d53a57111a1b2acb3316f75ef5134be",
+    "bytes": 22461,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta5.LocalFunctional",
+      "Zeta5.HermiteBasis",
+      "Zeta5.InnerEntries"
+    ],
+    "declarations": [
+      "eq_4_2_of_lemma_3_1",
+      "eq_4_3_of_lemma_3_1",
+      "lemma_3_1_hyps_of_near",
+      "ordinary_degree_le_p_add_one",
+      "zero_degree_le_p_add_one",
+      "sq_ne_sq_mod",
+      "rowPoly_natDegree_lt",
+      "entry_bounds_4_2_4_3",
+      "prop_4_1"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 549,
+    "attachment": 17,
+    "archive_chain": [
+      "17-zeta5-spectral-lean-1-.zip"
+    ],
+    "member": "zeta5-spectral-lean/Zeta5/Section41.lean",
+    "sha256": "94884877d072c4121a1236713f5f5f929a26e3e68132a804b980bef0d5adbe86",
+    "bytes": 54126,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta5.Counting"
+    ],
+    "declarations": [
+      "div_eq_ite_of_lt_two_mul",
+      "ell_closed",
+      "ell_le_naive",
+      "ell_naive_attained",
+      "ell_eq_naive_of_large_v",
+      "naive_not_enough",
+      "ell_two_consecutive",
+      "ell_lt_caseSplit",
+      "xVal",
+      "xVal_pos",
+      "three_le_xVal",
+      "xVal_lt_M",
+      "alpha_xVal",
+      "bCoef_lt_real",
+      "allocTarget",
+      "exists_TE",
+      "unique_TE",
+      "inner_facts",
+      "T_lt_int",
+      "T_gt_int",
+      "T_lt",
+      "T_gt",
+      "T_sub_bCoef_gt",
+      "two_lam_bound",
+      "L_gt_three_halves",
+      "bCoef_le_naive_real",
+      "naive_chain",
+      "naive_bound_insufficient",
+      "card_filter_le_v",
+      "card_filter_ge_v",
+      "sum_ell",
+      "dimension_identity",
+      "Ldim",
+      "Ldim_cast",
+      "rowPoly",
+      "nu",
+      "pow_nu_dvd_rowPoly",
+      "nu_le",
+      "rowW",
+      "sum_rowW",
+      "degree_bound_ordinary",
+      "two_T_add_one_lt",
+      "degree_bound_zero",
+      "zero_degree_le",
+      "degrees_le_p_add_one",
+      "weight_comparison",
+      "zero_source_bound",
+      "p_pos_rat",
+      "zpow_p_pos",
+      "padicNorm_le_iff",
+      "vGAtLeast_iff",
+      "vGAtLeast_mono",
+      "vGAtLeast_intCast",
+      "vGAtLeast_one",
+      "vGAtLeast_mul",
+      "vGAtLeast_sum",
+      "vGAtLeast_prod",
+      "vGAtLeast_det",
+      "Prop_4_1",
+      "prop_4_1_of_entry_bounds",
+      "exists_top_subset",
+      "exists_innerAlloc_of_inner"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 550,
+    "attachment": 17,
+    "archive_chain": [
+      "17-zeta5-spectral-lean-1-.zip"
+    ],
+    "member": "zeta5-spectral-lean/Zeta5/Skeleton.lean",
+    "sha256": "5174f6b17491ff5031202c32ae157aac83bc6a000fcce4eebaed0d0970964ac9",
+    "bytes": 7144,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta5.Basic"
+    ],
+    "declarations": [
+      "intValue_eq",
+      "irrational_of_integerPolynomials",
+      "Theorem_2_1",
+      "evalZeta5_map",
+      "theorem_1_1"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 551,
+    "attachment": 17,
+    "archive_chain": [
+      "17-zeta5-spectral-lean-1-.zip"
+    ],
+    "member": "zeta5-spectral-lean/Zeta5/Tail.lean",
+    "sha256": "38185e919d321f937ba8b6ad1e316c318bbc4d39a64a9f43afc7ae00182df3e9",
+    "bytes": 30954,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta5.Basic"
+    ],
+    "declarations": [
+      "hasDerivWithinAt_floor_mul",
+      "hasDerivWithinAt_fract_mul",
+      "hasDerivWithinAt_fract",
+      "Fc",
+      "phi",
+      "G0",
+      "Pc",
+      "Cc",
+      "Pbar",
+      "NN",
+      "WW",
+      "Ub",
+      "continuous_phi_fract",
+      "continuous_G0_fract",
+      "continuous_Pc",
+      "continuous_Cc",
+      "continuous_NN",
+      "continuousOn_WW",
+      "hasDerivAt_phi",
+      "hasDerivAt_G0",
+      "Pc_hasDerivWithinAt",
+      "Cc_hasDerivWithinAt",
+      "NN_hasDerivWithinAt",
+      "WW_hasDerivWithinAt",
+      "G0_sq_le",
+      "abs_G0_le",
+      "abs_Cc_le",
+      "abs_Fc_le",
+      "abs_six_Cc_le",
+      "measurable_Fc",
+      "measurable_Cc",
+      "measurable_six_Cc",
+      "numerator_bounds",
+      "eta_bounds",
+      "square_bounds",
+      "mixed_bounds",
+      "eq_5_14",
+      "intervalIntegrable_bdd_div",
+      "integration_by_parts",
+      "fract_eq_zero_of_eq_intCast",
+      "Pc_Cc_twenty",
+      "Pc_Cc_of_dvd",
+      "continuousOn_ub",
+      "integral_ub",
+      "tail_bound_strong",
+      "tail_bound"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 552,
+    "attachment": 17,
+    "archive_chain": [
+      "17-zeta5-spectral-lean-1-.zip"
+    ],
+    "member": "zeta5-spectral-lean/Zeta5/Uniformity.lean",
+    "sha256": "4cbab3f36cafcaef3e8cd5c01260bc53f64419cb32d9051638f25b690a6804ad",
+    "bytes": 67068,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta5.Arithmetic",
+      "Zeta5.AppendixB"
+    ],
+    "declarations": [
+      "floor_natDiv",
+      "Gs",
+      "fG",
+      "Gs_eq_range",
+      "Gs_bound_range",
+      "Gs_bound",
+      "leg_single",
+      "vS_large",
+      "vS_inner_bound",
+      "R0Z",
+      "dZ",
+      "S5",
+      "ToutZ",
+      "S5_expand",
+      "K_mul_Tout",
+      "S5_two_eq",
+      "S5_sub_Gs",
+      "not_prime_mul_even",
+      "outer_core",
+      "outer_bound",
+      "UUT",
+      "VVT",
+      "IT",
+      "Gam_split",
+      "IT_succ",
+      "ell_eq_ellR",
+      "count_lt",
+      "FT",
+      "integrand_eq",
+      "abs_e0",
+      "sum_exceptional",
+      "ell_le_real",
+      "ind",
+      "ind_nonneg",
+      "ind_le_one",
+      "cc1",
+      "cc2",
+      "cc3",
+      "Rfun",
+      "IT_eq_cc",
+      "integrand_eq_Rfun",
+      "closed_bounds",
+      "Rfun_bound",
+      "FT_bound",
+      "FT_eq_Rfun",
+      "sum_Rfun",
+      "D_bound",
+      "riemann",
+      "qN",
+      "Top",
+      "ellK_mem",
+      "U_eq",
+      "eps_ell_sum",
+      "Z0",
+      "sum_range_affine",
+      "gammaIn_expand",
+      "Z0_bound",
+      "T_cases",
+      "sub_min_eq",
+      "assembly",
+      "qN_bounds",
+      "T_bounds",
+      "delta_bound",
+      "U_near",
+      "delta_eq",
+      "gamma_eq",
+      "qR_eq",
+      "gamma_inner_bound",
+      "eq_5_7_uniformity"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 553,
+    "attachment": 17,
+    "archive_chain": [
+      "17-zeta5-spectral-lean-1-.zip"
+    ],
+    "member": "zeta5-spectral-lean/Zeta5.lean",
+    "sha256": "b0a79d379b423955a7fbc4afdacd1b3b2f6e76af1f377b4c758f8dba45d19eed",
+    "bytes": 1937,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta5.Basic",
+      "Zeta5.Counting",
+      "Zeta5.Skeleton",
+      "Zeta5.Asymptotics",
+      "Zeta5.Functional",
+      "Zeta5.Section41",
+      "Zeta5.Lemma42",
+      "Zeta5.Tail",
+      "Zeta5.OuterLocal",
+      "Zeta5.OuterRange",
+      "Zeta5.RealBound",
+      "Zeta5.AppendixB",
+      "Zeta5.Normalization",
+      "Zeta5.Axioms",
+      "Zeta5.Hermite",
+      "Zeta5.PNT",
+      "Zeta5.Positivity",
+      "Zeta5.PrimeSum",
+      "Zeta5.Interface",
+      "Zeta5.Arithmetic",
+      "Zeta5.Section3",
+      "Zeta5.CrudeBound",
+      "Zeta5.Checks",
+      "Zeta5.AppendixBCheck",
+      "Zeta5.HermiteBasisCore",
+      "Zeta5.HermiteBasis",
+      "Zeta5.LocalFunctional",
+      "Zeta5.Lemma33",
+      "Zeta5.InnerTate",
+      "Zeta5.InnerGeneral",
+      "Zeta5.InnerEntries",
+      "Zeta5.OuterBasis",
+      "Zeta5.Uniformity",
+      "Zeta5.Sec6.Defs",
+      "Zeta5.Sec6.Measures",
+      "Zeta5.Sec6.Frullani",
+      "Zeta5.Sec6.GaussPD",
+      "Zeta5.Sec6.Swap",
+      "Zeta5.Sec6.CND",
+      "Zeta5.Sec6.LogCosInt",
+      "Zeta5.Sec6.LogCosOn",
+      "Zeta5.Sec6.LogCosOff",
+      "Zeta5.Sec6.LogCos",
+      "Zeta5.Sec6.ArcsinePot",
+      "Zeta5.Sec6.SmoothAux",
+      "Zeta5.Sec6.Antideriv",
+      "Zeta5.Sec6.SmoothErr",
+      "Zeta5.Sec6.SmoothArc",
+      "Zeta5.Sec6.RhoCross",
+      "Zeta5.Sec6.IrhoSum",
+      "Zeta5.Sec6.PairEnergy",
+      "Zeta5.Sec6.ArcComm",
+      "Zeta5.Sec6.Bilinear",
+      "Zeta5.Sec6.RhoEnergy",
+      "Zeta5.Sec6.Field",
+      "Zeta5.Sec6.Num.Eval",
+      "Zeta5.Sec6.Num.Sound",
+      "Zeta5.Sec6.Num.Cell",
+      "Zeta5.Sec6.Num.Tail",
+      "Zeta5.Sec6.Num.Seg1",
+      "Zeta5.Sec6.Num.Seg2",
+      "Zeta5.Sec6.Num.Seg3",
+      "Zeta5.Sec6.Num.Seg4",
+      "Zeta5.Sec6.Num.Seg5",
+      "Zeta5.Sec6.Num.Seg6",
+      "Zeta5.Sec6.Num.Final",
+      "Zeta5.Sec6.Potential",
+      "Zeta5.Sec6.Gram",
+      "Zeta5.Sec6.Energy",
+      "Zeta5.Sec6.Final"
+    ],
+    "declarations": [],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 554,
+    "attachment": 17,
+    "archive_chain": [
+      "17-zeta5-spectral-lean-1-.zip"
+    ],
+    "member": "zeta5-spectral-lean/Zeta5Merge/FauzanBridge.lean",
+    "sha256": "471f03ae26e54191622cd5cb162656cf6b94b6eafb629454329169d104a076e1",
+    "bytes": 1645,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta5.Interface",
+      "Zeta5Merge.FauzanCertificate"
+    ],
+    "declarations": [
+      "manuscript_zeta5_irrational",
+      "riemannZeta_five_re_irrational",
+      "h40_certificate"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 555,
+    "attachment": 17,
+    "archive_chain": [
+      "17-zeta5-spectral-lean-1-.zip"
+    ],
+    "member": "zeta5-spectral-lean/Zeta5Merge/FauzanCertificate.lean",
+    "sha256": "be6da70b564b46686f22b10cbef9f72174cbaf5262e9a29093314b7179d129b9",
+    "bytes": 3206,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta5.Skeleton",
+      "Zeta5Merge.TargetIdentification"
+    ],
+    "declarations": [
+      "H40Certificate",
+      "h40_decay_eq",
+      "h40_certificate_iff_theorem_2_1",
+      "h40_certificate_of_theorem_2_1",
+      "manuscript_zeta5_irrational_of_theorem_2_1",
+      "riemannZeta_five_re_irrational_of_theorem_2_1",
+      "riemannZeta_five_re_irrational_of_h40_certificate"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 556,
+    "attachment": 17,
+    "archive_chain": [
+      "17-zeta5-spectral-lean-1-.zip"
+    ],
+    "member": "zeta5-spectral-lean/Zeta5Merge/QuadraticDecay.lean",
+    "sha256": "d58022c9a892e9d1a059fce03e09130169c66a3b1242e9f4e49baa26e79271ac",
+    "bytes": 6729,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Theorem_4_4_Sharpened_Spectral_Bound_And_Effective_Irrationality_Measure_For_Zeta_5",
+      "Mathlib.LinearAlgebra.Matrix.Polynomial"
+    ],
+    "declarations": [
+      "irrational_of_quadratic_decay",
+      "natDegree_detPolynomial_le",
+      "MainNormalization.natDegree_le",
+      "MAIN_CHAIN_IRRATIONAL_REDUCED",
+      "MAIN_CHAIN_IRRATIONAL_REDUCED_MATHLIB_ZETA"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 557,
+    "attachment": 17,
+    "archive_chain": [
+      "17-zeta5-spectral-lean-1-.zip"
+    ],
+    "member": "zeta5-spectral-lean/Zeta5Merge/TargetIdentification.lean",
+    "sha256": "c4457c0ecf07d1d1230f966adff5de1fbaac48caef9a28252a3f77b131a6b83e",
+    "bytes": 1876,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta5.Basic",
+      "Definition_2_1_Order_s_Rational_Moment_Functional"
+    ],
+    "declarations": [
+      "zeta5_eq_manuscript_zeta",
+      "zeta5_eq_riemannZeta",
+      "zeta5_eq_riemannZeta_re",
+      "original_parameters",
+      "no_positive_parameter_identification"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 558,
+    "attachment": 17,
+    "archive_chain": [
+      "17-zeta5-spectral-lean-1-.zip"
+    ],
+    "member": "zeta5-spectral-lean/Zeta5Merge/Theorem6_10.lean",
+    "sha256": "1ec7e3f5a25e0bebd4d0d1ecc4c2cf1c3fc51cdad8d999a6852bd30b4338e168",
+    "bytes": 4449,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Mathlib.Analysis.SpecialFunctions.Log.Basic",
+      "Mathlib.Tactic.NormNum",
+      "Mathlib.Tactic.Linarith"
+    ],
+    "declarations": [
+      "energyLower",
+      "ratio_gt_of_sum_lower",
+      "height_decay_ratio_gt_581",
+      "height_decay_ratio_gt_581_of_le_one_2500",
+      "lower_decay_bound_counterexample",
+      "evaluation_upper_gives_rate_lower",
+      "evaluation_lower_gives_rate_upper",
+      "not_ratio_from_lower_decay_bound"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 559,
+    "attachment": 17,
+    "archive_chain": [
+      "17-zeta5-spectral-lean-1-.zip"
+    ],
+    "member": "zeta5-spectral-lean/Zeta5Merge/Theorem6_16.lean",
+    "sha256": "6507a2fe8cd759efac516d4f01576363c18ad18e8b65210a58e827b046b82517",
+    "bytes": 4570,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Mathlib.Topology.Order.Compact",
+      "Mathlib.Topology.Instances.Real.Lemmas",
+      "Mathlib.Tactic.NormNum",
+      "Mathlib.Tactic.Linarith",
+      "Mathlib.Tactic.Positivity"
+    ],
+    "declarations": [
+      "uniform_bounds_of_positive_continuous",
+      "uniform_bounds_of_positive_interior_and_endpoints",
+      "weight_comparison_of_compact_ratio",
+      "missing_zero_endpoint_counterexample"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 560,
+    "attachment": 17,
+    "archive_chain": [
+      "17-zeta5-spectral-lean-1-.zip"
+    ],
+    "member": "zeta5-spectral-lean/Zeta5Merge/Theorem6_17.lean",
+    "sha256": "6117841ec643d5abe560d93ece84ea8bfb13777c213def2b638ae5ed1488af98",
+    "bytes": 5654,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Mathlib.Data.Nat.Basic",
+      "Mathlib.Tactic.NormNum"
+    ],
+    "declarations": [
+      "height",
+      "shift",
+      "degree",
+      "parameters",
+      "row_indices",
+      "harmonic_windows",
+      "low_denominator_lt",
+      "low_no_multiple",
+      "high_multiple_iff",
+      "high_unique_multiple",
+      "index_difference_not_dvd",
+      "shift_not_dvd",
+      "row_support_disjoint",
+      "shift_mod_four_one",
+      "shift_mod_four_three",
+      "q41_regression"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 561,
+    "attachment": 17,
+    "archive_chain": [
+      "17-zeta5-spectral-lean-1-.zip"
+    ],
+    "member": "zeta5-spectral-lean/Zeta5Merge/Theorem6_18.lean",
+    "sha256": "982b3cdfbc2d2a8130091dab4b4e2beeb4c70c376bace8b5f092654680a9e1c5",
+    "bytes": 1564,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Mathlib.Algebra.Polynomial.FieldDivision",
+      "Mathlib.Tactic.NormNum"
+    ],
+    "declarations": [
+      "boundary_degree_formula",
+      "shifted_numerator_degree_lt",
+      "shifted_quotient_zero"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 562,
+    "attachment": 17,
+    "archive_chain": [
+      "17-zeta5-spectral-lean-1-.zip"
+    ],
+    "member": "zeta5-spectral-lean/cert/Check.lean",
+    "sha256": "2ed7594c96bc1920139ea7172f266f6d3abc196cb135df4799e218cd452021d2",
+    "bytes": 693,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta5"
+    ],
+    "declarations": [],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 563,
+    "attachment": 17,
+    "archive_chain": [
+      "17-zeta5-spectral-lean-1-.zip"
+    ],
+    "member": "zeta5-spectral-lean/numerics/HermiteBasisControls.lean",
+    "sha256": "32f451e19464173e8fd1e6ab36a9f1927d4a98e3a00625f92b421b1a9c804fca",
+    "bytes": 5761,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta5.HermiteBasis"
+    ],
+    "declarations": [
+      "U4_rows",
+      "U4_eq",
+      "U4_det"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 564,
+    "attachment": 17,
+    "archive_chain": [
+      "17-zeta5-spectral-lean-1-.zip"
+    ],
+    "member": "zeta5-spectral-lean/numerics/HermiteConsumerExamples.lean",
+    "sha256": "76375b76c4703712dddf25a94ea592979e22122b70b54c4953f1fa22d3e43c79",
+    "bytes": 4254,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta5.OuterRange",
+      "Zeta5.Section3"
+    ],
+    "declarations": [],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  }
+]

@@ -1,0 +1,1412 @@
+[
+  {
+    "id": 565,
+    "attachment": 18,
+    "archive_chain": [
+      "18-Zetahyperbolic-general-assembled-lean433-3-.zip"
+    ],
+    "member": "Zetahyperbolic-general-assembled-lean433/ANALYTIC_FRONTIER.lean",
+    "sha256": "aa3f36a22bcfec1b3a29bd3e2d3011dd95a71a9ed56cb72248459f8c47b1a1ec",
+    "bytes": 2556,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "MAIN_CHAIN",
+      "Theorem_3_1_Rational_Integral_Bridge"
+    ],
+    "declarations": [
+      "REALIZATION_FROM_POLE_INTEGRALS",
+      "GRAM_POSITIVE_FROM_POLE_INTEGRALS",
+      "MAIN_CHAIN_FROM_POLE_INTEGRALS",
+      "MAIN_CHAIN_UNIFORM_FROM_POLE_INTEGRALS"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 566,
+    "attachment": 18,
+    "archive_chain": [
+      "18-Zetahyperbolic-general-assembled-lean433-3-.zip"
+    ],
+    "member": "Zetahyperbolic-general-assembled-lean433/APPLICATIONS.lean",
+    "sha256": "4c4cf52c6b57267425719486c76306aba90b2bd5b6e9e12be66fc52584190e52",
+    "bytes": 270,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zetahyperbolic.Zeta5Application",
+      "AUDITED_REPAIRS"
+    ],
+    "declarations": [],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 567,
+    "attachment": 18,
+    "archive_chain": [
+      "18-Zetahyperbolic-general-assembled-lean433-3-.zip"
+    ],
+    "member": "Zetahyperbolic-general-assembled-lean433/AUDITED_REPAIRS.lean",
+    "sha256": "43a762e1dd9a39379495e322f4f660b990de00c5c6826cb4022de3764f57da78",
+    "bytes": 463,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zetahyperbolic.Theorem_6_9_Triple_Pole_Hermite_Repair",
+      "Zetahyperbolic.Theorem_6_10_Finite_Determinant_Identity",
+      "Zeta5Merge.Theorem6_10",
+      "Zeta5Merge.Theorem6_16",
+      "Zeta5Merge.Theorem6_17",
+      "Zeta5Merge.Theorem6_18"
+    ],
+    "declarations": [],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 568,
+    "attachment": 18,
+    "archive_chain": [
+      "18-Zetahyperbolic-general-assembled-lean433-3-.zip"
+    ],
+    "member": "Zetahyperbolic-general-assembled-lean433/CHECK_AXIOMS.lean",
+    "sha256": "0043669e7073cfe817663b5d65f2cabfb3e0686b8121bf953e8d9a95917e2b7c",
+    "bytes": 3728,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zetahyperbolic",
+      "APPLICATIONS",
+      "Zetahyperbolic.ExternalResults",
+      "Zetahyperbolic.ManuscriptBlueprint"
+    ],
+    "declarations": [],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 569,
+    "attachment": 18,
+    "archive_chain": [
+      "18-Zetahyperbolic-general-assembled-lean433-3-.zip"
+    ],
+    "member": "Zetahyperbolic-general-assembled-lean433/Definition_2_1_Order_s_Rational_Moment_Functional.lean",
+    "sha256": "73e1d6c965990ba7f241ffb732194bab7763eea93f6b07d3d71302a515936c5c",
+    "bytes": 4467,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Mathlib.NumberTheory.LSeries.RiemannZeta",
+      "Mathlib.Analysis.PSeries",
+      "Mathlib.NumberTheory.Bernoulli",
+      "Mathlib.LinearAlgebra.Matrix.Determinant.Basic",
+      "Mathlib.Algebra.Polynomial.Div",
+      "Mathlib.Algebra.Polynomial.Derivative",
+      "Mathlib.Topology.Algebra.InfiniteSum.Real"
+    ],
+    "declarations": [
+      "Parameters",
+      "Parameters.h",
+      "Parameters.weight",
+      "Admissible",
+      "zeta",
+      "harmonic",
+      "D",
+      "tailD",
+      "numerator",
+      "quotient",
+      "monomialMoment",
+      "polynomialMoment",
+      "residue",
+      "poleConstant",
+      "entryA",
+      "entryM",
+      "pencil",
+      "delta",
+      "realPolynomial",
+      "evalQ",
+      "gram",
+      "derivativeMatrix",
+      "zeta_series_summable",
+      "zeta_series_hasSum",
+      "zeta_eq_riemannZeta",
+      "zeta_eq_riemannZeta_re",
+      "riemannZeta_nat_im_zero",
+      "zeta_pos",
+      "zeta_five_eq_riemannZeta_re"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 570,
+    "attachment": 18,
+    "archive_chain": [
+      "18-Zetahyperbolic-general-assembled-lean433-3-.zip"
+    ],
+    "member": "Zetahyperbolic-general-assembled-lean433/MAIN_CHAIN.lean",
+    "sha256": "c167315c258eede8a4e0230cb0faf95a85055867d6582a8ed1a5e9d0f6ae6450",
+    "bytes": 2564,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Theorem_2_4_Canonical_Basis_Invariance",
+      "Theorem_3_1_General_Odd_Weight_Endpoint",
+      "Theorem_3_1_Positive_Moment_Realization",
+      "Theorem_4_1_Spectral_Irrationality_Measure_Criterion"
+    ],
+    "declarations": [
+      "MAIN_CHAIN",
+      "MAIN_CHAIN_FROM_MOMENTS",
+      "MAIN_CHAIN_UNIFORM",
+      "GENERAL_DIOPHANTINE_TRANSFER"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 571,
+    "attachment": 18,
+    "archive_chain": [
+      "18-Zetahyperbolic-general-assembled-lean433-3-.zip"
+    ],
+    "member": "Zetahyperbolic-general-assembled-lean433/MAIN_CHAIN_ARITHMETIC.lean",
+    "sha256": "244ab29e35a151f3205d33da0ab9a223a8d1ba5befb71745720e9ec270e96c5d",
+    "bytes": 5742,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "MAIN_CHAIN_ASSEMBLED",
+      "Theorem_4_1_General_Odd_Zeta_Application",
+      "Theorem_4_1_Integer_Polynomial_Irrationality",
+      "Theorem_4_1_Linear_Odd_Zeta_Family"
+    ],
+    "declarations": [
+      "gramPositiveFamily",
+      "normalized_eval_nonzero",
+      "DecayHypothesis",
+      "EventualQuadraticDecay",
+      "irrational_of_quadratic_decay",
+      "irrational_of_eventual_quadratic_decay",
+      "measure_and_irrational",
+      "GENERAL_IRRATIONALITY",
+      "GENERAL_RIEMANN_ZETA_IRRATIONALITY",
+      "LINEAR_FAMILY_IRRATIONALITY",
+      "LINEAR_FAMILY_RIEMANN_ZETA_IRRATIONALITY"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 572,
+    "attachment": 18,
+    "archive_chain": [
+      "18-Zetahyperbolic-general-assembled-lean433-3-.zip"
+    ],
+    "member": "Zetahyperbolic-general-assembled-lean433/MAIN_CHAIN_ASSEMBLED.lean",
+    "sha256": "b4d72cddd0f4a3c6c13005d4b080c43883b714ca565fa571b740aa02d1ddbdbe",
+    "bytes": 4772,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "ANALYTIC_FRONTIER",
+      "Zetahyperbolic.AnalyticMainChain",
+      "Theorem_3_1_Pole_Integral_Identity"
+    ],
+    "declarations": [
+      "REALIZATION",
+      "GRAM_POSITIVE",
+      "MAIN_CHAIN_UNCONDITIONAL",
+      "EXACT_ZERO_FREE_DISK",
+      "GRAM_POSITIVE_ORIGINAL",
+      "MAIN_CHAIN_UNCONDITIONAL",
+      "ORIGINAL_EXACT_ZERO_FREE_DISK"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 573,
+    "attachment": 18,
+    "archive_chain": [
+      "18-Zetahyperbolic-general-assembled-lean433-3-.zip"
+    ],
+    "member": "Zetahyperbolic-general-assembled-lean433/Theorem_2_4_Canonical_Basis_Invariance.lean",
+    "sha256": "72d310e0b344c2aa6310e99aee1fe672dfd43b3c93cadd958ca9abf43b90af34",
+    "bytes": 8399,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Definition_2_1_Order_s_Rational_Moment_Functional",
+      "Mathlib.RingTheory.Polynomial.GaussLemma",
+      "Mathlib.Algebra.Polynomial.Degree.Units",
+      "Mathlib.Tactic.Ring"
+    ],
+    "declarations": [
+      "changeBasisPencil",
+      "changeBasisPencil_apply",
+      "det_changeBasisPencil",
+      "det_changeBasisPencil_ne_zero_iff",
+      "changeBasisPencil_eval_zero_iff",
+      "PrimitiveNormalization",
+      "primitive_eq_or_eq_neg_of_associated",
+      "primitive_scalar_unique",
+      "primitiveNormalization_scalar_invariance",
+      "theorem_2_4_canonical_basis_invariance",
+      "primitiveNormalization_nonempty",
+      "primitiveNormalization",
+      "primitiveNormalization_exists_iff",
+      "theorem_2_4_constructed_canonical_basis_invariance"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 574,
+    "attachment": 18,
+    "archive_chain": [
+      "18-Zetahyperbolic-general-assembled-lean433-3-.zip"
+    ],
+    "member": "Zetahyperbolic-general-assembled-lean433/Theorem_2_5_Lagrange_Pole_Diagonalization.lean",
+    "sha256": "4ab4ba8669d84d6878a58cc3503d31f96037e58721ce3296421a6195cf978a83",
+    "bytes": 14131,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Theorem_2_4_Canonical_Basis_Invariance",
+      "Mathlib.Algebra.Polynomial.BigOperators",
+      "Mathlib.Algebra.BigOperators.Intervals",
+      "Mathlib.LinearAlgebra.Vandermonde",
+      "Mathlib.LinearAlgebra.Matrix.Polynomial",
+      "Mathlib.Tactic.NormNum",
+      "Mathlib.Tactic.Linarith",
+      "Mathlib.Tactic.Ring"
+    ],
+    "declarations": [
+      "poleIndex",
+      "poleNode",
+      "poleWeight",
+      "poleVandermonde",
+      "poleIndex_mem",
+      "poleIndex_pos",
+      "poleNode_injective",
+      "D_eval_ne_zero_of_lt",
+      "tailD_derivative_eval",
+      "tailD_derivative_eval_ne_zero",
+      "poleWeight_ne_zero",
+      "sum_tail_eq_fin",
+      "rationalDerivativeMatrix",
+      "entryM_eq_sum_poleWeight",
+      "rationalDerivativeMatrix_factorization",
+      "rationalDerivativeMatrix_det",
+      "poleVandermonde_eq",
+      "rationalDerivativeMatrix_det_product",
+      "poleVandermonde_det_ne_zero",
+      "rationalDerivativeMatrix_det_ne_zero",
+      "derivativeMatrix_det_ne_zero",
+      "rationalConstantMatrix",
+      "pencil_eq_X_smul_add",
+      "delta_coeff_dimension",
+      "delta_ne_zero",
+      "delta_natDegree",
+      "delta_leadingCoeff",
+      "poleDiagonalPencil",
+      "poleConstantMatrix",
+      "pole_slope_diagonal",
+      "poleDiagonalPencil_eq",
+      "poleDiagonalPencil_off_diagonal",
+      "poleDiagonalPencil_diagonal",
+      "poleDiagonalRemainder",
+      "poleDiagonalPencil_diagonal_harmonic",
+      "theorem_2_5_lagrange_pole_diagonalization",
+      "theorem_2_4_constructed_for_manuscript"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 575,
+    "attachment": 18,
+    "archive_chain": [
+      "18-Zetahyperbolic-general-assembled-lean433-3-.zip"
+    ],
+    "member": "Zetahyperbolic-general-assembled-lean433/Theorem_3_1_Bose_Tail_Integral.lean",
+    "sha256": "025e9aa5f80c6be3d2ea79ce6b0c486955a3cb5974d3afe8c8bbe64d7cd63a6c",
+    "bytes": 5803,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Theorem_3_1_Hyperbolic_Moments",
+      "Theorem_3_1_Zeta_Tail"
+    ],
+    "declarations": [
+      "bose_geometric",
+      "boseTailTerm",
+      "boseTailCoefficient",
+      "boseTailTerm_integrable",
+      "integral_boseTailTerm",
+      "boseTailTerm_nonneg",
+      "summable_boseTail",
+      "summable_integral_norm_boseTailTerm",
+      "integral_tsum_boseTailTerm",
+      "integrableOn_tsum_boseTailTerm",
+      "bose_tail_eq_tsum",
+      "integrableOn_bose_tail",
+      "integral_bose_tail_tsum",
+      "integral_bose_tail"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 576,
+    "attachment": 18,
+    "archive_chain": [
+      "18-Zetahyperbolic-general-assembled-lean433-3-.zip"
+    ],
+    "member": "Zetahyperbolic-general-assembled-lean433/Theorem_3_1_Concrete_Moment_Realization.lean",
+    "sha256": "dadcabb037d690d321c82ce5564d7f154f7dd79284e574d0c77931e13019e50c",
+    "bytes": 7641,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Theorem_3_1_Hyperbolic_Moments",
+      "Theorem_3_1_Positive_Moment_Realization",
+      "Zetahyperbolic.Section2Checked",
+      "Mathlib.MeasureTheory.Integral.Bochner.ContinuousLinearMap"
+    ],
+    "declarations": [
+      "weightedDensity",
+      "weightedDensity_pos",
+      "measurable_weightedDensity",
+      "weightedMeasure",
+      "weightedMeasure_nonzero",
+      "momentMeasure",
+      "momentMeasure_nonzero",
+      "integral_momentMeasure",
+      "integrable_momentMeasure_iff",
+      "integrableOn_polynomial_density",
+      "integrableOn_weightedDensity_moment",
+      "realization"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 577,
+    "attachment": 18,
+    "archive_chain": [
+      "18-Zetahyperbolic-general-assembled-lean433-3-.zip"
+    ],
+    "member": "Zetahyperbolic-general-assembled-lean433/Theorem_3_1_Coth_Partial_Fractions.lean",
+    "sha256": "6fe401c823eceefbaecc7b4b3b2115e0897bb7637d01912889eff691e31aa74e",
+    "bytes": 4826,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Mathlib.Analysis.SpecialFunctions.Trigonometric.Cotangent",
+      "Mathlib.Tactic"
+    ],
+    "declarations": [
+      "summable_coth_terms",
+      "cot_term_imaginary",
+      "coth_partial_fractions_one",
+      "coth_partial_fractions"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 578,
+    "attachment": 18,
+    "archive_chain": [
+      "18-Zetahyperbolic-general-assembled-lean433-3-.zip"
+    ],
+    "member": "Zetahyperbolic-general-assembled-lean433/Theorem_3_1_General_Odd_Weight_Endpoint.lean",
+    "sha256": "0f54be96d9835151343900d072344700cd843e11d0c399340a172e91b2c90d68",
+    "bytes": 8611,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Theorem_2_5_Lagrange_Pole_Diagonalization",
+      "Theorem_3_1_Universal_Hyperbolicity_And_Zero_Free_Disk"
+    ],
+    "declarations": [
+      "GramPositive",
+      "delta_degree",
+      "delta_nonzero",
+      "derivative_nonsingular",
+      "factorization",
+      "ComplexRoot",
+      "complex_eval_transport",
+      "complex_root_iff",
+      "roots_real",
+      "roots_avoid_center",
+      "center_nonvanishing",
+      "indices_nonempty",
+      "spectralRadius",
+      "beta_abs_le",
+      "spectralRadius_pos",
+      "zeroFreeRadius",
+      "zeroFreeRadius_pos",
+      "complex_root_distance",
+      "complex_zero_free_disk",
+      "zeroFreeRadius_attained",
+      "complex_root_on_boundary",
+      "center_eq_riemannZeta",
+      "GeneralStatement",
+      "theorem_3_1_general"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 579,
+    "attachment": 18,
+    "archive_chain": [
+      "18-Zetahyperbolic-general-assembled-lean433-3-.zip"
+    ],
+    "member": "Zetahyperbolic-general-assembled-lean433/Theorem_3_1_Hyperbolic_Moments.lean",
+    "sha256": "649a92bfeaebfc3f49858cbbc024b7dec06a94e0156df5310e67a39741daec9d",
+    "bytes": 6755,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Theorem_3_1_Hyperbolic_Weight",
+      "Mathlib.Analysis.SpecialFunctions.Gamma.Basic",
+      "Mathlib.MeasureTheory.Integral.DominatedConvergence",
+      "Mathlib.NumberTheory.ZetaValues",
+      "Mathlib.Tactic"
+    ],
+    "declarations": [
+      "integral_pow_mul_exp",
+      "integrableOn_pow_mul_exp",
+      "momentTerm",
+      "momentCoefficient",
+      "momentTerm_integrable",
+      "integral_momentTerm",
+      "momentTerm_nonneg",
+      "summable_integral_norm_momentTerm",
+      "integral_tsum_momentTerm",
+      "integrableOn_tsum_momentTerm",
+      "monomial_density_eq_tsum",
+      "integrableOn_monomial_density",
+      "integral_monomial_density",
+      "zeta_even_bernoulli",
+      "integral_monomial_density_eq_monomialMoment"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 580,
+    "attachment": 18,
+    "archive_chain": [
+      "18-Zetahyperbolic-general-assembled-lean433-3-.zip"
+    ],
+    "member": "Zetahyperbolic-general-assembled-lean433/Theorem_3_1_Hyperbolic_Weight.lean",
+    "sha256": "022fd5309135919ddb02767670e0f64830cc16176202add1422d6ff5d2a9ee64",
+    "bytes": 3744,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Definition_2_1_Order_s_Rational_Moment_Functional",
+      "Mathlib.Analysis.SpecialFunctions.Exp",
+      "Mathlib.Analysis.SpecialFunctions.Gamma.Basic",
+      "Mathlib.Analysis.SpecialFunctions.Gaussian.GaussianIntegral",
+      "Mathlib.MeasureTheory.Integral.DominatedConvergence",
+      "Mathlib.MeasureTheory.Constructions.Polish.Basic",
+      "Mathlib.MeasureTheory.Measure.WithDensity"
+    ],
+    "declarations": [
+      "exponentialTerm",
+      "density",
+      "exponentialTerm_pos",
+      "summable_exponentialTerm",
+      "exponentialSeries_pos",
+      "density_pos",
+      "density_nonneg",
+      "density_zero",
+      "measurable_exponentialTerm",
+      "measurable_density",
+      "baseMeasure",
+      "baseMeasure_nonzero"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 581,
+    "attachment": 18,
+    "archive_chain": [
+      "18-Zetahyperbolic-general-assembled-lean433-3-.zip"
+    ],
+    "member": "Zetahyperbolic-general-assembled-lean433/Theorem_3_1_Pole_Integral_Identity.lean",
+    "sha256": "0bb9b8b32b6a17f31a8e3f6d92c95bc78740f2eedff53af6cc8b54fbfafa1c70",
+    "bytes": 5296,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Theorem_3_1_Rational_Integral_Bridge",
+      "Theorem_3_1_Pole_Scaling",
+      "Theorem_3_1_Coth_Partial_Fractions",
+      "Theorem_3_1_Bose_Tail_Integral"
+    ],
+    "declarations": [
+      "pole_scaled_kernel_split_algebra",
+      "pole_integral_constants",
+      "poleIntegralIdentity"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 582,
+    "attachment": 18,
+    "archive_chain": [
+      "18-Zetahyperbolic-general-assembled-lean433-3-.zip"
+    ],
+    "member": "Zetahyperbolic-general-assembled-lean433/Theorem_3_1_Pole_Scaling.lean",
+    "sha256": "b4285ddaf00fcdcc01abf7c6e0678a517c7e0694cb7248ba4c1aaf7bbfab9575",
+    "bytes": 7225,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Theorem_3_1_Hyperbolic_Moments",
+      "Mathlib.MeasureTheory.Integral.IntegralEqImproper"
+    ],
+    "declarations": [
+      "poleTerm",
+      "scaledPoleTerm",
+      "poleTerm_nonneg",
+      "norm_poleTerm_le",
+      "poleTerm_integrable",
+      "summable_integral_norm_poleTerm",
+      "scaledPoleTerm_nonneg",
+      "norm_scaledPoleTerm_le",
+      "scaledPoleTerm_integrable",
+      "summable_scaledPole_bound",
+      "summable_integral_norm_scaledPoleTerm",
+      "poleTerm_eq_scaled",
+      "integral_poleTerm_eq_scaled",
+      "density_div_quadratic_eq_tsum",
+      "tsum_scaledPoleTerm",
+      "integral_density_div_quadratic"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 583,
+    "attachment": 18,
+    "archive_chain": [
+      "18-Zetahyperbolic-general-assembled-lean433-3-.zip"
+    ],
+    "member": "Zetahyperbolic-general-assembled-lean433/Theorem_3_1_Positive_Moment_Realization.lean",
+    "sha256": "7291be864f417a11b4b39938d6e7d5c45eb48598f91348e518672389821f0248",
+    "bytes": 5839,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Definition_2_1_Order_s_Rational_Moment_Functional",
+      "Mathlib.Algebra.Polynomial.OfFn",
+      "Mathlib.Algebra.Polynomial.Roots",
+      "Mathlib.LinearAlgebra.Matrix.PosDef",
+      "Mathlib.MeasureTheory.Integral.Bochner.Basic",
+      "Mathlib.MeasureTheory.Measure.Typeclasses.NullSingletonClass"
+    ],
+    "declarations": [
+      "momentMatrix",
+      "eval_ofFn_eq_sum",
+      "eval_ofFn_sq_eq_sum",
+      "integrable_eval_ofFn_sq",
+      "quadratic_eq_integral_sq",
+      "integral_polynomial_sq_pos",
+      "momentMatrix_posDef",
+      "PositiveMomentRealization",
+      "PositiveMomentRealization.gram_posDef"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 584,
+    "attachment": 18,
+    "archive_chain": [
+      "18-Zetahyperbolic-general-assembled-lean433-3-.zip"
+    ],
+    "member": "Zetahyperbolic-general-assembled-lean433/Theorem_3_1_Rational_Integral_Bridge.lean",
+    "sha256": "5a582a718e45da1dfbe916c47dae20078e7b240d0eb039d9796a02818ac4ad76",
+    "bytes": 10030,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Theorem_3_1_Hyperbolic_Moments",
+      "Mathlib.Tactic",
+      "Zetahyperbolic.ManuscriptCompatibility",
+      "Theorem_3_1_Concrete_Moment_Realization"
+    ],
+    "declarations": [
+      "PoleIntegralIdentity",
+      "evalQ_sq_eq_sum",
+      "integrableOn_polynomial_density",
+      "integral_polynomial_density",
+      "integrableOn_pole_density",
+      "resolvedKernel",
+      "integrableOn_resolvedKernel_density",
+      "gram_eq_resolvedKernel_integral",
+      "resolvedKernel_eq_fraction",
+      "resolvedKernel_eq_weighted",
+      "gram_eq_weighted_integral_original",
+      "gram_eq_weighted_integral"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 585,
+    "attachment": 18,
+    "archive_chain": [
+      "18-Zetahyperbolic-general-assembled-lean433-3-.zip"
+    ],
+    "member": "Zetahyperbolic-general-assembled-lean433/Theorem_3_1_Universal_Hyperbolicity_And_Zero_Free_Disk.lean",
+    "sha256": "5623f9c75519e4b88bd8c41d39656e5290520a45cec956facfa76a5234a5ac2e",
+    "bytes": 16586,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Mathlib.Analysis.Matrix.Order",
+      "Theorem_2_4_Canonical_Basis_Invariance",
+      "Definition_2_1_Order_s_Rational_Moment_Functional",
+      "Mathlib.Algebra.Polynomial.BigOperators",
+      "Mathlib.Algebra.Polynomial.Degree.SmallDegree",
+      "Mathlib.LinearAlgebra.Complex.Module",
+      "Mathlib.LinearAlgebra.Matrix.Determinant.Basic",
+      "Mathlib.LinearAlgebra.Matrix.PosDef",
+      "Mathlib.LinearAlgebra.Matrix.Symmetric",
+      "Mathlib.Tactic.Ring"
+    ],
+    "declarations": [
+      "SymmetricAffinePencil",
+      "matrixAt",
+      "polynomialMatrix",
+      "detPolynomial",
+      "detValue",
+      "BasePositive",
+      "eval_detPolynomial",
+      "base_det_ne_zero_of_positive",
+      "center_nonvanishing_of_positive",
+      "numerator_symmetric",
+      "entryA_symmetric",
+      "entryM_symmetric",
+      "gram_symmetric",
+      "derivativeMatrix_symmetric",
+      "manuscriptPencil",
+      "manuscriptPencil_matrixAt",
+      "manuscriptPencil_polynomialMatrix",
+      "manuscriptPencil_detPolynomial",
+      "delta_eval_eq_det_gram",
+      "delta_nonzero_of_positive",
+      "spectralFactor",
+      "RootFactorization",
+      "linear_factor_eq_zero_iff",
+      "spectralFactor_ne_zero",
+      "natDegree_spectralFactor",
+      "root",
+      "eval_eq",
+      "center_nonvanishing",
+      "determinant_center_nonvanishing",
+      "polynomial_ne_zero",
+      "natDegree_eq",
+      "eval_eq_zero_iff",
+      "eval_root",
+      "root_ne_center",
+      "complex_root_location",
+      "complex_root_im_zero",
+      "root_distance",
+      "root_distance_lower_bound",
+      "eval_ne_zero_of_distance_lt",
+      "delta_real_natDegree",
+      "det_one_add_smul_of_hermitian",
+      "rootFactorization_nonempty_of_posDef",
+      "rootFactorizationOfPosDef",
+      "theorem_3_1_degree_of_posDef",
+      "theorem_3_1_hyperbolicity_of_posDef"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 586,
+    "attachment": 18,
+    "archive_chain": [
+      "18-Zetahyperbolic-general-assembled-lean433-3-.zip"
+    ],
+    "member": "Zetahyperbolic-general-assembled-lean433/Theorem_3_1_Zeta_Tail.lean",
+    "sha256": "e51b97c896ff81086ac2d6b8155fd438696323a0ad62ba70b7d1538c15d564af",
+    "bytes": 2330,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Definition_2_1_Order_s_Rational_Moment_Functional",
+      "Mathlib.Tactic"
+    ],
+    "declarations": [
+      "harmonic_cast_eq_sum",
+      "zeta_tail_summable",
+      "zeta_tail_sum",
+      "zeta_odd_tail_sum",
+      "zeta_tail_pole_value"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 587,
+    "attachment": 18,
+    "archive_chain": [
+      "18-Zetahyperbolic-general-assembled-lean433-3-.zip"
+    ],
+    "member": "Zetahyperbolic-general-assembled-lean433/Theorem_4_1_General_Odd_Zeta_Application.lean",
+    "sha256": "8fc1e128bf3361e2ea09f038d0159bd1eeb3e6e4636a05de79753d49aba8a57e",
+    "bytes": 10043,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Theorem_3_1_General_Odd_Weight_Endpoint",
+      "Theorem_3_1_Positive_Moment_Realization",
+      "Theorem_4_1_Spectral_Irrationality_Measure_Criterion"
+    ],
+    "declarations": [
+      "primitiveNormalization",
+      "primitivePolynomial",
+      "primitiveMultiplier",
+      "primitive_isPrimitive",
+      "primitiveMultiplier_pos",
+      "primitive_polynomial_identity",
+      "primitive_real_identity",
+      "primitive_degree",
+      "primitive_eval",
+      "primitive_eval_nonzero",
+      "determinant_normalization",
+      "OddWeightFamily",
+      "center",
+      "Q",
+      "weight_eq",
+      "k_pos",
+      "center_eq_riemannZeta",
+      "degree",
+      "GramPositiveFamily",
+      "familySpectralBound",
+      "localRadius",
+      "familySpectralBound_pos",
+      "localRadius_pos",
+      "family_eval_nonzero",
+      "localComparison",
+      "EvaluationUpper",
+      "decay",
+      "general_measure_and_irrational",
+      "general_riemannZeta_measure_and_irrational",
+      "positivityFromMoments",
+      "general_measure_and_irrational_from_moments"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 588,
+    "attachment": 18,
+    "archive_chain": [
+      "18-Zetahyperbolic-general-assembled-lean433-3-.zip"
+    ],
+    "member": "Zetahyperbolic-general-assembled-lean433/Theorem_4_1_Integer_Polynomial_Irrationality.lean",
+    "sha256": "1542550d3604eb4aa775980bb39264925adcc72507e6c6a033a5ccaef13bb536",
+    "bytes": 4647,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Theorem_4_1_Spectral_Irrationality_Measure_Criterion"
+    ],
+    "declarations": [
+      "irrational_of_denominator_decay",
+      "exists_index_of_linear_degree_quadratic_decay",
+      "irrational_of_linear_degree_quadratic_decay"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 589,
+    "attachment": 18,
+    "archive_chain": [
+      "18-Zetahyperbolic-general-assembled-lean433-3-.zip"
+    ],
+    "member": "Zetahyperbolic-general-assembled-lean433/Theorem_4_1_Linear_Odd_Zeta_Family.lean",
+    "sha256": "7a91047a95e9075d148fdb6afb05b513a4ff0a43c684e8a091ae9d7bc276a38c",
+    "bytes": 2777,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Theorem_4_1_General_Odd_Zeta_Application"
+    ],
+    "declarations": [
+      "linearParameters",
+      "linearParameters_admissible",
+      "linearFamily"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 590,
+    "attachment": 18,
+    "archive_chain": [
+      "18-Zetahyperbolic-general-assembled-lean433-3-.zip"
+    ],
+    "member": "Zetahyperbolic-general-assembled-lean433/Theorem_4_1_Spectral_Irrationality_Measure_Criterion.lean",
+    "sha256": "7a4e4762865d8346f9d8ba1b36099850fc31ef4ee452960ca16770dc4d2ffa92",
+    "bytes": 11867,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Theorem_3_1_Universal_Hyperbolicity_And_Zero_Free_Disk",
+      "Mathlib.Algebra.Polynomial.DenomsClearable",
+      "Mathlib.NumberTheory.Real.Irrational",
+      "Mathlib.Tactic.NormNum",
+      "Mathlib.Tactic.Linarith",
+      "Mathlib.Tactic.Positivity",
+      "Mathlib.Tactic.Ring",
+      "Mathlib.Tactic.FieldSimp",
+      "Mathlib.Analysis.Complex.Exponential"
+    ],
+    "declarations": [
+      "evalReal",
+      "cleared_eval_is_integer",
+      "polynomial_integer_squeeze",
+      "LocalComparison",
+      "Decay",
+      "IndexBudget",
+      "RationalMeasure",
+      "conditional_measure",
+      "RationalMeasure.irrational",
+      "conditional_irrational",
+      "paper_parameter_inequalities",
+      "paper_transfer_threshold",
+      "paper_decay_margin",
+      "product_comparison_of_sum_abs_le",
+      "comparisonRadius",
+      "comparisonRadius_pos",
+      "comparison_of_sum_le",
+      "perturbation_sum_le_of_radius",
+      "comparison_of_radius",
+      "normalized_comparison_of_radius",
+      "localComparison_of_spectral"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 591,
+    "attachment": 18,
+    "archive_chain": [
+      "18-Zetahyperbolic-general-assembled-lean433-3-.zip"
+    ],
+    "member": "Zetahyperbolic-general-assembled-lean433/Theorem_4_4_Sharpened_Spectral_Bound_And_Effective_Irrationality_Measure_For_Zeta_5.lean",
+    "sha256": "04cc187203aeecaf477ac6a3d54c54789df7e85fc75b3b1f8c6c718425f2068a",
+    "bytes": 29166,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Theorem_2_5_Lagrange_Pole_Diagonalization",
+      "Mathlib.Analysis.SpecialFunctions.Log.Basic",
+      "Mathlib.Algebra.Order.Floor.Ring",
+      "Mathlib.RingTheory.Localization.Integral",
+      "Mathlib.RingTheory.Localization.FractionRing",
+      "Theorem_4_1_Spectral_Irrationality_Measure_Criterion",
+      "Mathlib.Analysis.SpecialFunctions.Exp",
+      "Mathlib.Algebra.Polynomial.Roots"
+    ],
+    "declarations": [
+      "mainParameters",
+      "section4Scale",
+      "mainDelta",
+      "mainF",
+      "epsilon",
+      "rhoPrinted",
+      "rhoRepaired",
+      "zeta5",
+      "mainK",
+      "MainNormalization",
+      "MainNormalization.eval_transport",
+      "BaseValuePositive",
+      "multiplierRate",
+      "archimedeanRate",
+      "decayBudget",
+      "MultiplierUpper",
+      "ArchimedeanUpper",
+      "combined_rate_le",
+      "normalized_value_pos",
+      "main_decay",
+      "section4Scale_pos",
+      "section4Scale_real_pos",
+      "normalizationScale",
+      "normalizationScale_pos",
+      "MainNormalization.eval_spectral_transport",
+      "MainNormalization.spectral_polynomial_identity",
+      "MainNormalization.inverse_spectral_polynomial_identity",
+      "printedSpectralBound",
+      "printedSpectralBound_pos",
+      "mainSpectralRadius",
+      "mainSpectralRadius_pos",
+      "MainSpectralData",
+      "MainNormalization.natDegree_eq",
+      "MainNormalization.degree_rate",
+      "main_localComparison",
+      "indexLogThreshold",
+      "indexDenominatorThreshold",
+      "paperIndex",
+      "log_ge_of_denominator_threshold",
+      "paper_index_bounds",
+      "radius_exponential_margin",
+      "decay_exponent_margin",
+      "main_indexBudget",
+      "exists_main_indexBudget",
+      "exists_positive_integer_polynomial_multiple",
+      "denominatorClearingNormalization",
+      "mainNormalization_nonempty",
+      "denominatorClearingNormalization_multiplier_ge_one",
+      "MultiplierUpper.lt_one_at_onset",
+      "not_multiplierUpper_of_one_le_at_onset",
+      "denominatorClearingNormalization_no_multiplierUpper",
+      "mainRootFactorization",
+      "baseValuePositive_of_gram",
+      "mainSpectralDataOfGram",
+      "theorem_4_4_measure_with_index",
+      "theorem_4_4_irrationality_with_index",
+      "theorem_4_4_measure",
+      "theorem_4_4_irrationality",
+      "theorem_4_4_irrationality_riemannZeta",
+      "theorem_4_4_irrationality_from_gram",
+      "mainF_ne_zero",
+      "primitiveMainPolynomialNormalization",
+      "primitiveMainNormalization",
+      "primitiveMainNormalization_isPrimitive",
+      "primitiveMainNormalization_onset",
+      "theorem_4_4_measure_primitive_from_gram",
+      "theorem_4_4_irrationality_primitive_from_gram"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 592,
+    "attachment": 18,
+    "archive_chain": [
+      "18-Zetahyperbolic-general-assembled-lean433-3-.zip"
+    ],
+    "member": "Zetahyperbolic-general-assembled-lean433/Theorem_5_1_Two_Variable_Beukers_Measure_For_Zeta_7.lean",
+    "sha256": "ed4ab4dd6a57e4fd9c23fde209a432566e45ba856f21468cfd66c5b501a90465",
+    "bytes": 1791,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Definition_2_1_Order_s_Rational_Moment_Functional"
+    ],
+    "declarations": [
+      "dualConstant",
+      "dualEntry",
+      "dualDelta",
+      "IntegerNormalization",
+      "normalization_coeff"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 593,
+    "attachment": 18,
+    "archive_chain": [
+      "18-Zetahyperbolic-general-assembled-lean433-3-.zip"
+    ],
+    "member": "Zetahyperbolic-general-assembled-lean433/Theorem_5_2_Dual_Hyperbolicity_And_Krein_Space_Decomposition_Of_The_Two_Variable_Zeta_7_Pencil.lean",
+    "sha256": "a4ad4e36f3c2d5053db1672456050c84cad3918bd906abb7bfff9660251d9874",
+    "bytes": 5824,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Theorem_5_1_Two_Variable_Beukers_Measure_For_Zeta_7",
+      "Mathlib.LinearAlgebra.Matrix.PosDef",
+      "Mathlib.Tactic.Linarith",
+      "Mathlib.Tactic.Ring"
+    ],
+    "declarations": [
+      "qform",
+      "PositiveQForm",
+      "NegativeQForm",
+      "posDef_of_symmetric_positive_qform",
+      "qform_sub",
+      "qform_add",
+      "qform_smul",
+      "positive_of_tail_certificate",
+      "negative_of_tail_certificate",
+      "integralMom",
+      "weightSevenTruncation",
+      "l2Gram",
+      "matrixToReal",
+      "tailError",
+      "weightSevenGram",
+      "WeightSevenTailBound",
+      "FinitePositiveCertificate",
+      "FiniteNegativeCertificate",
+      "weight_seven_positive_from_finite_certificate",
+      "weight_seven_negative_from_finite_certificate",
+      "weight_seven_posDef_from_finite_certificate"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 594,
+    "attachment": 18,
+    "archive_chain": [
+      "18-Zetahyperbolic-general-assembled-lean433-3-.zip"
+    ],
+    "member": "Zetahyperbolic-general-assembled-lean433/Theorem_6_3_Unconditional_Q_Adic_Non_Vanishing_And_Explicit_Positive_Cone_Approximations_For_G_A_7.lean",
+    "sha256": "f8e1cd4b6c7cd1833c65d08a2971d70d2c18ee80743cb5b0e1a2fd2e37a3dec8",
+    "bytes": 1562,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Theorem_5_2_Dual_Hyperbolicity_And_Krein_Space_Decomposition_Of_The_Two_Variable_Zeta_7_Pencil"
+    ],
+    "declarations": [
+      "IndependentRows",
+      "PositiveBasisExistence",
+      "positive_basis_from_explicit_inputs"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 595,
+    "attachment": 18,
+    "archive_chain": [
+      "18-Zetahyperbolic-general-assembled-lean433-3-.zip"
+    ],
+    "member": "Zetahyperbolic-general-assembled-lean433/Theorem_6_4_Character_Vandermonde_Sign_Cancellation_And_Unconditional_Hyperbolicity_For_Beta_4.lean",
+    "sha256": "0ba3f475ca5f3888f0e731a8a9695a7abfad90f70d7a87b4ce12c49b4c4f7706",
+    "bytes": 2342,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Definition_2_1_Order_s_Rational_Moment_Functional",
+      "Mathlib.MeasureTheory.Integral.Bochner.Basic",
+      "Mathlib.MeasureTheory.Integral.IntegrableOn",
+      "Mathlib.MeasureTheory.Measure.Lebesgue.Basic"
+    ],
+    "declarations": [
+      "beta",
+      "BetaRepairData",
+      "BetaCandidateRealization",
+      "beta_constant_mass",
+      "beta_same_weight_same_constant"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 596,
+    "attachment": 18,
+    "archive_chain": [
+      "18-Zetahyperbolic-general-assembled-lean433-3-.zip"
+    ],
+    "member": "Zetahyperbolic-general-assembled-lean433/ZETA5_APPLICATION.lean",
+    "sha256": "34adb5ed25618e5ee0fac6e230da631a88aab532af17a6fe32b3e0098bba59f6",
+    "bytes": 8732,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Definition_2_1_Order_s_Rational_Moment_Functional",
+      "Theorem_2_4_Canonical_Basis_Invariance",
+      "Theorem_2_5_Lagrange_Pole_Diagonalization",
+      "Theorem_3_1_Universal_Hyperbolicity_And_Zero_Free_Disk",
+      "Theorem_4_1_Spectral_Irrationality_Measure_Criterion",
+      "Theorem_4_4_Sharpened_Spectral_Bound_And_Effective_Irrationality_Measure_For_Zeta_5",
+      "Theorem_5_1_Two_Variable_Beukers_Measure_For_Zeta_7",
+      "Theorem_5_2_Dual_Hyperbolicity_And_Krein_Space_Decomposition_Of_The_Two_Variable_Zeta_7_Pencil",
+      "Theorem_6_3_Unconditional_Q_Adic_Non_Vanishing_And_Explicit_Positive_Cone_Approximations_For_G_A_7",
+      "Theorem_6_4_Character_Vandermonde_Sign_Cancellation_And_Unconditional_Hyperbolicity_For_Beta_4"
+    ],
+    "declarations": [
+      "ZETA5_APPLICATION_MEASURE",
+      "ZETA5_APPLICATION",
+      "ZETA5_APPLICATION_MATHLIB_ZETA",
+      "ZETA5_APPLICATION_FROM_GRAM",
+      "MAIN_EXTENSION_POSITIVITY",
+      "ZETA5_APPLICATION_PRIMITIVE_FROM_GRAM",
+      "ZETA5_APPLICATION_MEASURE_PRIMITIVE_FROM_GRAM"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 597,
+    "attachment": 18,
+    "archive_chain": [
+      "18-Zetahyperbolic-general-assembled-lean433-3-.zip"
+    ],
+    "member": "Zetahyperbolic-general-assembled-lean433/Zeta5Merge/Theorem6_10.lean",
+    "sha256": "9adde78014caa5e44352bf420536b782450d2969969371f38dcc2844ad983289",
+    "bytes": 4448,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Mathlib.Analysis.SpecialFunctions.Log.Basic",
+      "Mathlib.Tactic.NormNum",
+      "Mathlib.Tactic.Linarith"
+    ],
+    "declarations": [
+      "energyLower",
+      "ratio_gt_of_sum_lower",
+      "height_decay_ratio_gt_581",
+      "height_decay_ratio_gt_581_of_le_one_2500",
+      "lower_decay_bound_counterexample",
+      "evaluation_upper_gives_rate_lower",
+      "evaluation_lower_gives_rate_upper",
+      "not_ratio_from_lower_decay_bound"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 598,
+    "attachment": 18,
+    "archive_chain": [
+      "18-Zetahyperbolic-general-assembled-lean433-3-.zip"
+    ],
+    "member": "Zetahyperbolic-general-assembled-lean433/Zeta5Merge/Theorem6_16.lean",
+    "sha256": "6507a2fe8cd759efac516d4f01576363c18ad18e8b65210a58e827b046b82517",
+    "bytes": 4570,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Mathlib.Topology.Order.Compact",
+      "Mathlib.Topology.Instances.Real.Lemmas",
+      "Mathlib.Tactic.NormNum",
+      "Mathlib.Tactic.Linarith",
+      "Mathlib.Tactic.Positivity"
+    ],
+    "declarations": [
+      "uniform_bounds_of_positive_continuous",
+      "uniform_bounds_of_positive_interior_and_endpoints",
+      "weight_comparison_of_compact_ratio",
+      "missing_zero_endpoint_counterexample"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 599,
+    "attachment": 18,
+    "archive_chain": [
+      "18-Zetahyperbolic-general-assembled-lean433-3-.zip"
+    ],
+    "member": "Zetahyperbolic-general-assembled-lean433/Zeta5Merge/Theorem6_17.lean",
+    "sha256": "6117841ec643d5abe560d93ece84ea8bfb13777c213def2b638ae5ed1488af98",
+    "bytes": 5654,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Mathlib.Data.Nat.Basic",
+      "Mathlib.Tactic.NormNum"
+    ],
+    "declarations": [
+      "height",
+      "shift",
+      "degree",
+      "parameters",
+      "row_indices",
+      "harmonic_windows",
+      "low_denominator_lt",
+      "low_no_multiple",
+      "high_multiple_iff",
+      "high_unique_multiple",
+      "index_difference_not_dvd",
+      "shift_not_dvd",
+      "row_support_disjoint",
+      "shift_mod_four_one",
+      "shift_mod_four_three",
+      "q41_regression"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 600,
+    "attachment": 18,
+    "archive_chain": [
+      "18-Zetahyperbolic-general-assembled-lean433-3-.zip"
+    ],
+    "member": "Zetahyperbolic-general-assembled-lean433/Zeta5Merge/Theorem6_18.lean",
+    "sha256": "982b3cdfbc2d2a8130091dab4b4e2beeb4c70c376bace8b5f092654680a9e1c5",
+    "bytes": 1564,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Mathlib.Algebra.Polynomial.FieldDivision",
+      "Mathlib.Tactic.NormNum"
+    ],
+    "declarations": [
+      "boundary_degree_formula",
+      "shifted_numerator_degree_lt",
+      "shifted_quotient_zero"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 601,
+    "attachment": 18,
+    "archive_chain": [
+      "18-Zetahyperbolic-general-assembled-lean433-3-.zip"
+    ],
+    "member": "Zetahyperbolic-general-assembled-lean433/Zetahyperbolic/AnalyticMainChain.lean",
+    "sha256": "d0c4587bcc0b0cb3999e9973bd3410abf45608f2b3a5a75e2b132d2d45a02549",
+    "bytes": 3098,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "ANALYTIC_FRONTIER",
+      "Zetahyperbolic.MainChain",
+      "Zetahyperbolic.ManuscriptCompatibility"
+    ],
+    "declarations": [
+      "GRAM_POSITIVE_ORIGINAL_FROM_POLE_INTEGRALS",
+      "MAIN_CHAIN_FROM_POLE_INTEGRALS",
+      "MAIN_CHAIN_ORIGINAL_ROOTS_FROM_POLE_INTEGRALS",
+      "MAIN_CHAIN_UNIFORM_FROM_POLE_INTEGRALS"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 602,
+    "attachment": 18,
+    "archive_chain": [
+      "18-Zetahyperbolic-general-assembled-lean433-3-.zip"
+    ],
+    "member": "Zetahyperbolic-general-assembled-lean433/Zetahyperbolic/CoreLinearAlgebra.lean",
+    "sha256": "683fe127f88dae1ff89833b83f8dbfad19afaa8b0604defc6b4283f756cc23e0",
+    "bytes": 5169,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Mathlib"
+    ],
+    "declarations": [
+      "det_change_of_basis",
+      "det_change_of_basis_nonzero_factor",
+      "det_conjugated_diagonal",
+      "det_diagonal_weights",
+      "det_conjugated_diagonal_eq_zero_of_weight_zero",
+      "det_change_of_basis_polynomial",
+      "det_change_of_basis_rational_polynomial",
+      "det_conjugated_diagonal_ne_zero"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 603,
+    "attachment": 18,
+    "archive_chain": [
+      "18-Zetahyperbolic-general-assembled-lean433-3-.zip"
+    ],
+    "member": "Zetahyperbolic-general-assembled-lean433/Zetahyperbolic/ExternalResults.lean",
+    "sha256": "037087a089a7a468de18ad5bbc959a4f4bb1c73f998d035c123af782d99b813a",
+    "bytes": 623,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zetahyperbolic.Targets",
+      "Mathlib.NumberTheory.Real.Irrational"
+    ],
+    "declarations": [
+      "ExternalZetaFiveIrrationality",
+      "zetaFive_irrational_external"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 604,
+    "attachment": 18,
+    "archive_chain": [
+      "18-Zetahyperbolic-general-assembled-lean433-3-.zip"
+    ],
+    "member": "Zetahyperbolic-general-assembled-lean433/Zetahyperbolic/Foundations.lean",
+    "sha256": "9337c13e41c8b6df1b4ff27e2d3b01b852cbaecc93a579dfd45b9a4059a5bc26",
+    "bytes": 4862,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Mathlib"
+    ],
+    "declarations": [
+      "harmonicNumber",
+      "denominatorPolynomial",
+      "tailPolynomial",
+      "oddZetaPoleMoment",
+      "oddZetaPoleMoment_sub",
+      "oddZetaPoleMoment_add",
+      "denominatorPolynomial_eval_pole",
+      "tailPolynomial_eval_pole",
+      "tailPolynomial_derivative_eval_pole",
+      "lagrangePoleDenominator_ne_zero"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  }
+]

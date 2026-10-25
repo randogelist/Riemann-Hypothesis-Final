@@ -1,0 +1,431 @@
+[
+  {
+    "id": 74,
+    "attachment": 6,
+    "archive_chain": [
+      "06-GP_NATIVE_E_PI_v0_4_0-1-.zip"
+    ],
+    "member": "GP_NATIVE_E_PI_v0_4_0/GPBKQRXY/AWPIEncoding.lean",
+    "sha256": "8e72bccb16712500b63588a517719f3060d40d5eb9d0115b0591defd9dd3d0a8",
+    "bytes": 5733,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "GPBKQRXY.MatrixEncoding"
+    ],
+    "declarations": [
+      "ratio",
+      "increment",
+      "input",
+      "ratio_pos",
+      "ratio_le_one_sixth",
+      "increment_pos",
+      "increment_le_three",
+      "weight_pos",
+      "weight_le_geometric",
+      "term_pos",
+      "term_le_geometric",
+      "term_summable",
+      "value",
+      "series_hasSum",
+      "partialSum_tendsto",
+      "value_pos",
+      "remainder_eq_tail",
+      "remainder_bounds",
+      "term_zero",
+      "partialSum_one",
+      "partialSum_two",
+      "partialSum_three"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": true,
+    "extracted_path": "publication_work/attachment_sources/06/root/GP_NATIVE_E_PI_v0_4_0/GPBKQRXY/AWPIEncoding.lean"
+  },
+  {
+    "id": 75,
+    "attachment": 6,
+    "archive_chain": [
+      "06-GP_NATIVE_E_PI_v0_4_0-1-.zip"
+    ],
+    "member": "GP_NATIVE_E_PI_v0_4_0/GPBKQRXY/AWPIInput.lean",
+    "sha256": "3f8fc3236b163852f6380ff871cbdeffda9a2e232fdec7fcd2cacc8822f2c1ef",
+    "bytes": 3141,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "GPBKQRXY.AWPIEncoding",
+      "GPBKQRXY.EncodedEndpoint"
+    ],
+    "declarations": [
+      "encoded",
+      "encoded_value_eq",
+      "coordinate",
+      "coordinate_matches",
+      "coordinate_two",
+      "prefix_two_exact",
+      "endpoint",
+      "IRRATIONAL_ENCODED_VALUE_OF_COORDINATE",
+      "IRRATIONAL_ENCODED_VALUE_OF_PACKET",
+      "rawEnvelope",
+      "raw_coordinate_two_checks",
+      "forged_accumulator_rejected",
+      "forged_weight_rejected",
+      "forged_stage_rejected"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": true,
+    "extracted_path": "publication_work/attachment_sources/06/root/GP_NATIVE_E_PI_v0_4_0/GPBKQRXY/AWPIInput.lean"
+  },
+  {
+    "id": 76,
+    "attachment": 6,
+    "archive_chain": [
+      "06-GP_NATIVE_E_PI_v0_4_0-1-.zip"
+    ],
+    "member": "GP_NATIVE_E_PI_v0_4_0/GPBKQRXY/EncodedEndpoint.lean",
+    "sha256": "af1918ea52873336b1b8619325eee7b4209ccac068c689f0e07a93c96935683d",
+    "bytes": 7670,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "GPBKQRXY.MatrixEncoding",
+      "GPBKQRXY.RieszRepresentative",
+      "GPBKQRXY.RieszXY"
+    ],
+    "declarations": [
+      "EncodedAffine2",
+      "value",
+      "hasSum",
+      "series",
+      "coordinate",
+      "encodingCheck",
+      "attachEncoding",
+      "admissible_encoding",
+      "generated_coordinate_matches",
+      "EncodedEndpointInput",
+      "value",
+      "representative",
+      "check",
+      "Admission",
+      "checked_coordinate_matches",
+      "IRRATIONAL_OF_ENCODED_INPUT",
+      "IRRATIONAL_OF_ENCODED_COORDINATE",
+      "IRRATIONAL_OF_ENCODED_ADMISSION",
+      "partialSumReadout",
+      "partialSumReadout_identity",
+      "ClearedTailBounds",
+      "linearLaws_of_cleared_tail",
+      "endpointOfClearedTail",
+      "EncodedXYInput",
+      "IRRATIONAL_OF_ENCODED_XY_COORDINATE"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": true,
+    "extracted_path": "publication_work/attachment_sources/06/root/GP_NATIVE_E_PI_v0_4_0/GPBKQRXY/EncodedEndpoint.lean"
+  },
+  {
+    "id": 77,
+    "attachment": 6,
+    "archive_chain": [
+      "06-GP_NATIVE_E_PI_v0_4_0-1-.zip"
+    ],
+    "member": "GP_NATIVE_E_PI_v0_4_0/GPBKQRXY/EncodedGuard.lean",
+    "sha256": "49524c8931ab6f63f56f0509dca487d9aa746946e82cad9340ee6787600a9fc6",
+    "bytes": 2221,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "GPBKQRXY.AWPIInput"
+    ],
+    "declarations": [
+      "raw_lock",
+      "term_le_remainder",
+      "raw_envelope_not_cleared"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": true,
+    "extracted_path": "publication_work/attachment_sources/06/root/GP_NATIVE_E_PI_v0_4_0/GPBKQRXY/EncodedGuard.lean"
+  },
+  {
+    "id": 78,
+    "attachment": 6,
+    "archive_chain": [
+      "06-GP_NATIVE_E_PI_v0_4_0-1-.zip"
+    ],
+    "member": "GP_NATIVE_E_PI_v0_4_0/GPBKQRXY/MatrixEncoding.lean",
+    "sha256": "745efe8ef0854ac8be80d2626d12dff49e42a4e0288cc775de92a4eb220bf920",
+    "bytes": 3292,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Mathlib"
+    ],
+    "declarations": [
+      "Affine2Input",
+      "weight",
+      "term",
+      "partialSum",
+      "step",
+      "prefixProduct",
+      "partialSum_succ",
+      "prefix_eq",
+      "state",
+      "state_succ",
+      "prefix_one",
+      "prefix_two"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": true,
+    "extracted_path": "publication_work/attachment_sources/06/root/GP_NATIVE_E_PI_v0_4_0/GPBKQRXY/MatrixEncoding.lean"
+  },
+  {
+    "id": 79,
+    "attachment": 6,
+    "archive_chain": [
+      "06-GP_NATIVE_E_PI_v0_4_0-1-.zip"
+    ],
+    "member": "GP_NATIVE_E_PI_v0_4_0/GPBKQRXY/NativeAudit.lean",
+    "sha256": "50a7c7630db3f8a3597dad45ef204bf78616607ac8e98eead68b734f62241047",
+    "bytes": 3821,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "GPBKQRXY.NativeChecks",
+      "GPBKQRXY.NativePiChecks",
+      "Lean"
+    ],
+    "declarations": [
+      "audit"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": true,
+    "extracted_path": "publication_work/attachment_sources/06/root/GP_NATIVE_E_PI_v0_4_0/GPBKQRXY/NativeAudit.lean"
+  },
+  {
+    "id": 80,
+    "attachment": 6,
+    "archive_chain": [
+      "06-GP_NATIVE_E_PI_v0_4_0-1-.zip"
+    ],
+    "member": "GP_NATIVE_E_PI_v0_4_0/GPBKQRXY/NativeChecks.lean",
+    "sha256": "8b34db8da2fd51c521ecee1ae261da5e0b3b25ddbef1ef73c42346150c84ab7e",
+    "bytes": 808,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "GPBKQRXY.NativeE"
+    ],
+    "declarations": [
+      "seedPacket",
+      "seed_packet_checks",
+      "verifiedSeed",
+      "wrong_state_rejected",
+      "wrong_numerator_rejected",
+      "NATIVE_E_IRRATIONAL_FROM_PACKET"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": true,
+    "extracted_path": "publication_work/attachment_sources/06/root/GP_NATIVE_E_PI_v0_4_0/GPBKQRXY/NativeChecks.lean"
+  },
+  {
+    "id": 81,
+    "attachment": 6,
+    "archive_chain": [
+      "06-GP_NATIVE_E_PI_v0_4_0-1-.zip"
+    ],
+    "member": "GP_NATIVE_E_PI_v0_4_0/GPBKQRXY/NativeE.lean",
+    "sha256": "10118fe4bc5a557c1c05a832fd6aad5abd9bf9e2596d70a7b254b70c02ee97f7",
+    "bytes": 5344,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "GPBKQRXY.RieszRepresentative"
+    ],
+    "declarations": [
+      "numerator",
+      "partialSum",
+      "partial_succ",
+      "numerator_identity",
+      "partial_lt_exp_one",
+      "cleared_tail_bound",
+      "series",
+      "state",
+      "coordinate",
+      "system",
+      "readout",
+      "error_halves",
+      "lock",
+      "linear_laws",
+      "representative",
+      "seed",
+      "seed_checks",
+      "seed_data",
+      "certificate",
+      "NATIVE_E_IRRATIONAL_FROM_ONE_COORDINATE"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": true,
+    "extracted_path": "publication_work/attachment_sources/06/root/GP_NATIVE_E_PI_v0_4_0/GPBKQRXY/NativeE.lean"
+  },
+  {
+    "id": 82,
+    "attachment": 6,
+    "archive_chain": [
+      "06-GP_NATIVE_E_PI_v0_4_0-1-.zip"
+    ],
+    "member": "GP_NATIVE_E_PI_v0_4_0/GPBKQRXY/NativePiChecks.lean",
+    "sha256": "8f57ec9d39d8d2880e5dc15a20d578d572b6c9e457704f4a800e065162ae31fe",
+    "bytes": 1682,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "GPBKQRXY.EncodedGuard"
+    ],
+    "declarations": [
+      "seed_bound",
+      "unchanged_readout_halved_bound_fails",
+      "awpi_stage_two_bound_fails",
+      "raw_awpi_has_no_native_pi_linear_laws"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": true,
+    "extracted_path": "publication_work/attachment_sources/06/root/GP_NATIVE_E_PI_v0_4_0/GPBKQRXY/NativePiChecks.lean"
+  },
+  {
+    "id": 83,
+    "attachment": 6,
+    "archive_chain": [
+      "06-GP_NATIVE_E_PI_v0_4_0-1-.zip"
+    ],
+    "member": "GP_NATIVE_E_PI_v0_4_0/GPBKQRXY/RieszCore.lean",
+    "sha256": "e2fe9cd0a2a4ce3c3f1aaf95c6d249abb018d45d1e754c787536421c3f4f8121",
+    "bytes": 5368,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Mathlib"
+    ],
+    "declarations": [
+      "Coordinates",
+      "EnvelopeSystem",
+      "Admissible",
+      "check",
+      "check_eq_true_iff",
+      "LockLaws",
+      "orbit",
+      "orbit_admissible",
+      "orbit_rate_le",
+      "orbit_error_le",
+      "orbit_error_antitone",
+      "exists_small_error",
+      "exists_small_error_after"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": true,
+    "extracted_path": "publication_work/attachment_sources/06/root/GP_NATIVE_E_PI_v0_4_0/GPBKQRXY/RieszCore.lean"
+  },
+  {
+    "id": 84,
+    "attachment": 6,
+    "archive_chain": [
+      "06-GP_NATIVE_E_PI_v0_4_0-1-.zip"
+    ],
+    "member": "GP_NATIVE_E_PI_v0_4_0/GPBKQRXY/RieszRepresentative.lean",
+    "sha256": "4eca7a528858af2e5dfac0a52530245afd56f75d64eb89d11f40f643ce62a5ba",
+    "bytes": 6574,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "GPBKQRXY.RieszCore"
+    ],
+    "declarations": [
+      "AnalyticPowerSeriesInput",
+      "LinearReadout",
+      "LinearLaws",
+      "AnalyticRepresentative",
+      "check",
+      "check_eq_true_iff",
+      "CoordinateAdmission",
+      "AdmissionCertificate",
+      "WitnessPacket",
+      "checkWitness",
+      "VerifiedWitness",
+      "IRRATIONAL_OF_LINEAR_LOCK",
+      "IRRATIONAL_OF_VERIFIED_COORDINATE",
+      "IRRATIONAL_OF_CERTIFICATE",
+      "IRRATIONAL_OF_VERIFIED_WITNESS",
+      "IRRATIONAL_OF_COORDINATE_ADMISSION",
+      "IRRATIONAL_OF_ADMITTED_REPRESENTATIVE",
+      "rational_has_no_admitted_coordinate"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": true,
+    "extracted_path": "publication_work/attachment_sources/06/root/GP_NATIVE_E_PI_v0_4_0/GPBKQRXY/RieszRepresentative.lean"
+  },
+  {
+    "id": 85,
+    "attachment": 6,
+    "archive_chain": [
+      "06-GP_NATIVE_E_PI_v0_4_0-1-.zip"
+    ],
+    "member": "GP_NATIVE_E_PI_v0_4_0/GPBKQRXY/RieszXY.lean",
+    "sha256": "58dab5e295876ed00bc5b29c51bac44bce1a28e374dce3743e5cea699b533eef",
+    "bytes": 4818,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "GPBKQRXY.RieszCore",
+      "GPBKQRXY.WitnessCriterion"
+    ],
+    "declarations": [
+      "XYBridgeLaws",
+      "orbit_budget_lower_bound",
+      "XY_WITNESS_OF_ADMITTED_COORDINATE",
+      "IRRATIONAL_OF_XY_ADMITTED_COORDINATE",
+      "IRRATIONAL_OF_XY_CHECKED_COORDINATE",
+      "IRRATIONAL_OF_XY_COORDINATE_ADMISSION"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": true,
+    "extracted_path": "publication_work/attachment_sources/06/root/GP_NATIVE_E_PI_v0_4_0/GPBKQRXY/RieszXY.lean"
+  },
+  {
+    "id": 86,
+    "attachment": 6,
+    "archive_chain": [
+      "06-GP_NATIVE_E_PI_v0_4_0-1-.zip"
+    ],
+    "member": "GP_NATIVE_E_PI_v0_4_0/GPBKQRXY/WitnessCriterion.lean",
+    "sha256": "227a1aa7e9b9f8b0a006cd59d351d254f944844eb1c175be169d3b20786f73d1",
+    "bytes": 3591,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Mathlib"
+    ],
+    "declarations": [
+      "RationalIntegralFamily",
+      "XYWitness",
+      "XY_WITNESS_EXCLUDES_DENOMINATORS",
+      "IRRATIONAL_OF_XY_WITNESSES",
+      "linearTensorFamily",
+      "LINEAR_TENSOR_RATIONAL_INTEGRAL"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": true,
+    "extracted_path": "publication_work/attachment_sources/06/root/GP_NATIVE_E_PI_v0_4_0/GPBKQRXY/WitnessCriterion.lean"
+  }
+]

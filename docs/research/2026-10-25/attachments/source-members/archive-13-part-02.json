@@ -1,0 +1,950 @@
+[
+  {
+    "id": 700,
+    "attachment": 20,
+    "archive_chain": [
+      "20-ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_2_6_ADJACENT_DRIFT_BRIDGE1.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/Theorem_3_1_Hyperbolic_Moments.lean",
+    "sha256": "649a92bfeaebfc3f49858cbbc024b7dec06a94e0156df5310e67a39741daec9d",
+    "bytes": 6755,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Theorem_3_1_Hyperbolic_Weight",
+      "Mathlib.Analysis.SpecialFunctions.Gamma.Basic",
+      "Mathlib.MeasureTheory.Integral.DominatedConvergence",
+      "Mathlib.NumberTheory.ZetaValues",
+      "Mathlib.Tactic"
+    ],
+    "declarations": [
+      "integral_pow_mul_exp",
+      "integrableOn_pow_mul_exp",
+      "momentTerm",
+      "momentCoefficient",
+      "momentTerm_integrable",
+      "integral_momentTerm",
+      "momentTerm_nonneg",
+      "summable_integral_norm_momentTerm",
+      "integral_tsum_momentTerm",
+      "integrableOn_tsum_momentTerm",
+      "monomial_density_eq_tsum",
+      "integrableOn_monomial_density",
+      "integral_monomial_density",
+      "zeta_even_bernoulli",
+      "integral_monomial_density_eq_monomialMoment"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/20/root/ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/Theorem_3_1_Hyperbolic_Moments.lean"
+  },
+  {
+    "id": 701,
+    "attachment": 20,
+    "archive_chain": [
+      "20-ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_2_6_ADJACENT_DRIFT_BRIDGE1.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/Theorem_3_1_Hyperbolic_Weight.lean",
+    "sha256": "022fd5309135919ddb02767670e0f64830cc16176202add1422d6ff5d2a9ee64",
+    "bytes": 3744,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Definition_2_1_Order_s_Rational_Moment_Functional",
+      "Mathlib.Analysis.SpecialFunctions.Exp",
+      "Mathlib.Analysis.SpecialFunctions.Gamma.Basic",
+      "Mathlib.Analysis.SpecialFunctions.Gaussian.GaussianIntegral",
+      "Mathlib.MeasureTheory.Integral.DominatedConvergence",
+      "Mathlib.MeasureTheory.Constructions.Polish.Basic",
+      "Mathlib.MeasureTheory.Measure.WithDensity"
+    ],
+    "declarations": [
+      "exponentialTerm",
+      "density",
+      "exponentialTerm_pos",
+      "summable_exponentialTerm",
+      "exponentialSeries_pos",
+      "density_pos",
+      "density_nonneg",
+      "density_zero",
+      "measurable_exponentialTerm",
+      "measurable_density",
+      "baseMeasure",
+      "baseMeasure_nonzero"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/20/root/ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/Theorem_3_1_Hyperbolic_Weight.lean"
+  },
+  {
+    "id": 702,
+    "attachment": 20,
+    "archive_chain": [
+      "20-ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_2_6_ADJACENT_DRIFT_BRIDGE1.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/Theorem_3_1_Pole_Integral_Identity.lean",
+    "sha256": "0bb9b8b32b6a17f31a8e3f6d92c95bc78740f2eedff53af6cc8b54fbfafa1c70",
+    "bytes": 5296,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Theorem_3_1_Rational_Integral_Bridge",
+      "Theorem_3_1_Pole_Scaling",
+      "Theorem_3_1_Coth_Partial_Fractions",
+      "Theorem_3_1_Bose_Tail_Integral"
+    ],
+    "declarations": [
+      "pole_scaled_kernel_split_algebra",
+      "pole_integral_constants",
+      "poleIntegralIdentity"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/20/root/ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/Theorem_3_1_Pole_Integral_Identity.lean"
+  },
+  {
+    "id": 703,
+    "attachment": 20,
+    "archive_chain": [
+      "20-ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_2_6_ADJACENT_DRIFT_BRIDGE1.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/Theorem_3_1_Pole_Scaling.lean",
+    "sha256": "b4285ddaf00fcdcc01abf7c6e0678a517c7e0694cb7248ba4c1aaf7bbfab9575",
+    "bytes": 7225,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Theorem_3_1_Hyperbolic_Moments",
+      "Mathlib.MeasureTheory.Integral.IntegralEqImproper"
+    ],
+    "declarations": [
+      "poleTerm",
+      "scaledPoleTerm",
+      "poleTerm_nonneg",
+      "norm_poleTerm_le",
+      "poleTerm_integrable",
+      "summable_integral_norm_poleTerm",
+      "scaledPoleTerm_nonneg",
+      "norm_scaledPoleTerm_le",
+      "scaledPoleTerm_integrable",
+      "summable_scaledPole_bound",
+      "summable_integral_norm_scaledPoleTerm",
+      "poleTerm_eq_scaled",
+      "integral_poleTerm_eq_scaled",
+      "density_div_quadratic_eq_tsum",
+      "tsum_scaledPoleTerm",
+      "integral_density_div_quadratic"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/20/root/ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/Theorem_3_1_Pole_Scaling.lean"
+  },
+  {
+    "id": 704,
+    "attachment": 20,
+    "archive_chain": [
+      "20-ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_2_6_ADJACENT_DRIFT_BRIDGE1.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/Theorem_3_1_Positive_Moment_Realization.lean",
+    "sha256": "7291be864f417a11b4b39938d6e7d5c45eb48598f91348e518672389821f0248",
+    "bytes": 5839,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Definition_2_1_Order_s_Rational_Moment_Functional",
+      "Mathlib.Algebra.Polynomial.OfFn",
+      "Mathlib.Algebra.Polynomial.Roots",
+      "Mathlib.LinearAlgebra.Matrix.PosDef",
+      "Mathlib.MeasureTheory.Integral.Bochner.Basic",
+      "Mathlib.MeasureTheory.Measure.Typeclasses.NullSingletonClass"
+    ],
+    "declarations": [
+      "momentMatrix",
+      "eval_ofFn_eq_sum",
+      "eval_ofFn_sq_eq_sum",
+      "integrable_eval_ofFn_sq",
+      "quadratic_eq_integral_sq",
+      "integral_polynomial_sq_pos",
+      "momentMatrix_posDef",
+      "PositiveMomentRealization",
+      "PositiveMomentRealization.gram_posDef"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/20/root/ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/Theorem_3_1_Positive_Moment_Realization.lean"
+  },
+  {
+    "id": 705,
+    "attachment": 20,
+    "archive_chain": [
+      "20-ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_2_6_ADJACENT_DRIFT_BRIDGE1.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/Theorem_3_1_Rational_Integral_Bridge.lean",
+    "sha256": "5a582a718e45da1dfbe916c47dae20078e7b240d0eb039d9796a02818ac4ad76",
+    "bytes": 10030,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Theorem_3_1_Hyperbolic_Moments",
+      "Mathlib.Tactic",
+      "Zetahyperbolic.ManuscriptCompatibility",
+      "Theorem_3_1_Concrete_Moment_Realization"
+    ],
+    "declarations": [
+      "PoleIntegralIdentity",
+      "evalQ_sq_eq_sum",
+      "integrableOn_polynomial_density",
+      "integral_polynomial_density",
+      "integrableOn_pole_density",
+      "resolvedKernel",
+      "integrableOn_resolvedKernel_density",
+      "gram_eq_resolvedKernel_integral",
+      "resolvedKernel_eq_fraction",
+      "resolvedKernel_eq_weighted",
+      "gram_eq_weighted_integral_original",
+      "gram_eq_weighted_integral"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/20/root/ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/Theorem_3_1_Rational_Integral_Bridge.lean"
+  },
+  {
+    "id": 706,
+    "attachment": 20,
+    "archive_chain": [
+      "20-ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_2_6_ADJACENT_DRIFT_BRIDGE1.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/Theorem_3_1_Universal_Hyperbolicity_And_Zero_Free_Disk.lean",
+    "sha256": "5623f9c75519e4b88bd8c41d39656e5290520a45cec956facfa76a5234a5ac2e",
+    "bytes": 16586,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Mathlib.Analysis.Matrix.Order",
+      "Theorem_2_4_Canonical_Basis_Invariance",
+      "Definition_2_1_Order_s_Rational_Moment_Functional",
+      "Mathlib.Algebra.Polynomial.BigOperators",
+      "Mathlib.Algebra.Polynomial.Degree.SmallDegree",
+      "Mathlib.LinearAlgebra.Complex.Module",
+      "Mathlib.LinearAlgebra.Matrix.Determinant.Basic",
+      "Mathlib.LinearAlgebra.Matrix.PosDef",
+      "Mathlib.LinearAlgebra.Matrix.Symmetric",
+      "Mathlib.Tactic.Ring"
+    ],
+    "declarations": [
+      "SymmetricAffinePencil",
+      "matrixAt",
+      "polynomialMatrix",
+      "detPolynomial",
+      "detValue",
+      "BasePositive",
+      "eval_detPolynomial",
+      "base_det_ne_zero_of_positive",
+      "center_nonvanishing_of_positive",
+      "numerator_symmetric",
+      "entryA_symmetric",
+      "entryM_symmetric",
+      "gram_symmetric",
+      "derivativeMatrix_symmetric",
+      "manuscriptPencil",
+      "manuscriptPencil_matrixAt",
+      "manuscriptPencil_polynomialMatrix",
+      "manuscriptPencil_detPolynomial",
+      "delta_eval_eq_det_gram",
+      "delta_nonzero_of_positive",
+      "spectralFactor",
+      "RootFactorization",
+      "linear_factor_eq_zero_iff",
+      "spectralFactor_ne_zero",
+      "natDegree_spectralFactor",
+      "root",
+      "eval_eq",
+      "center_nonvanishing",
+      "determinant_center_nonvanishing",
+      "polynomial_ne_zero",
+      "natDegree_eq",
+      "eval_eq_zero_iff",
+      "eval_root",
+      "root_ne_center",
+      "complex_root_location",
+      "complex_root_im_zero",
+      "root_distance",
+      "root_distance_lower_bound",
+      "eval_ne_zero_of_distance_lt",
+      "delta_real_natDegree",
+      "det_one_add_smul_of_hermitian",
+      "rootFactorization_nonempty_of_posDef",
+      "rootFactorizationOfPosDef",
+      "theorem_3_1_degree_of_posDef",
+      "theorem_3_1_hyperbolicity_of_posDef"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/20/root/ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/Theorem_3_1_Universal_Hyperbolicity_And_Zero_Free_Disk.lean"
+  },
+  {
+    "id": 707,
+    "attachment": 20,
+    "archive_chain": [
+      "20-ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_2_6_ADJACENT_DRIFT_BRIDGE1.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/Theorem_3_1_Zeta_Tail.lean",
+    "sha256": "e51b97c896ff81086ac2d6b8155fd438696323a0ad62ba70b7d1538c15d564af",
+    "bytes": 2330,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Definition_2_1_Order_s_Rational_Moment_Functional",
+      "Mathlib.Tactic"
+    ],
+    "declarations": [
+      "harmonic_cast_eq_sum",
+      "zeta_tail_summable",
+      "zeta_tail_sum",
+      "zeta_odd_tail_sum",
+      "zeta_tail_pole_value"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/20/root/ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/Theorem_3_1_Zeta_Tail.lean"
+  },
+  {
+    "id": 708,
+    "attachment": 20,
+    "archive_chain": [
+      "20-ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_2_6_ADJACENT_DRIFT_BRIDGE1.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/Theorem_4_1_Adjacent_Log_Increment.lean",
+    "sha256": "932171189e0c567e0375e053219cc2b936c0d768bbfae4faac46da731f5f578e",
+    "bytes": 7084,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Theorem_4_1_Content_Gram_Cancellation",
+      "Mathlib.Tactic.Linarith",
+      "Mathlib.Tactic.Ring"
+    ],
+    "declarations": [
+      "affineEnergy",
+      "primitiveValue",
+      "primitiveValue_pos",
+      "log_primitiveValue_eq_affineEnergy",
+      "affineEnergy_increment_eq_log_ratio",
+      "eventual_quadratic_bound_of_adjacent_drift",
+      "affine_K",
+      "normalizedQuadraticDecay_of_adjacent_energy_drift",
+      "normalizedQuadraticDecay_of_two_adjacent_log_rates",
+      "normalizedQuadraticDecay_of_adjacent_primitive_ratio"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/20/root/ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/Theorem_4_1_Adjacent_Log_Increment.lean"
+  },
+  {
+    "id": 709,
+    "attachment": 20,
+    "archive_chain": [
+      "20-ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_2_6_ADJACENT_DRIFT_BRIDGE1.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/Theorem_4_1_Content_Gram_Cancellation.lean",
+    "sha256": "683baa221034cdb21a008b495d92a09d9f2e674d70cd06e1a56710f374d13a6a",
+    "bytes": 4585,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Theorem_4_1_Determinant_Log_Energy",
+      "Mathlib.Tactic.Linarith"
+    ],
+    "declarations": [
+      "contentLog",
+      "primitive_eval_eq_scale_mul_gram",
+      "primitive_eval_log_eq_content_add_gram",
+      "valueDecayLog_eq_neg_content_sub_gram",
+      "content_add_gram_eq_height_sub_energy",
+      "normalizedQuadraticDecay_iff_content_gram_quadratic",
+      "normalizedQuadraticDecay_of_content_gram_rates"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/20/root/ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/Theorem_4_1_Content_Gram_Cancellation.lean"
+  },
+  {
+    "id": 710,
+    "attachment": 20,
+    "archive_chain": [
+      "20-ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_2_6_ADJACENT_DRIFT_BRIDGE1.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/Theorem_4_1_Determinant_Log_Energy.lean",
+    "sha256": "3dedd3c28e1699621d3e80687863812ed53bd2db51379dae2b876bc1ea80f30e",
+    "bytes": 6534,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Theorem_4_1_Leading_Coefficient_Gap",
+      "Mathlib.Analysis.SpecialFunctions.Log.Basic",
+      "Mathlib.Tactic.Linarith"
+    ],
+    "declarations": [
+      "leadingLog",
+      "gramLog",
+      "derivativeLog",
+      "determinantEnergy",
+      "valueDecayLog",
+      "primitive_eval_log_identity",
+      "finite_potential_conservation",
+      "finite_potential_conservation_per_K_sq",
+      "normalizedQuadraticDecay_iff_energy_gap",
+      "normalizedQuadraticDecay_of_three_log_rates"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/20/root/ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/Theorem_4_1_Determinant_Log_Energy.lean"
+  },
+  {
+    "id": 711,
+    "attachment": 20,
+    "archive_chain": [
+      "20-ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_2_6_ADJACENT_DRIFT_BRIDGE1.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/Theorem_4_1_Direct_Irrationality_From_Decay.lean",
+    "sha256": "5854e02220b623a1c06d569a6246eae4236b7a3ce6f7c2bd42a353a19d231415",
+    "bytes": 1998,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Theorem_4_1_Spectral_Irrationality_Measure_Criterion"
+    ],
+    "declarations": [
+      "irrational_of_decay_and_denominator_budget"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/20/root/ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/Theorem_4_1_Direct_Irrationality_From_Decay.lean"
+  },
+  {
+    "id": 712,
+    "attachment": 20,
+    "archive_chain": [
+      "20-ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_2_6_ADJACENT_DRIFT_BRIDGE1.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/Theorem_4_1_General_Odd_Zeta_Application.lean",
+    "sha256": "8fc1e128bf3361e2ea09f038d0159bd1eeb3e6e4636a05de79753d49aba8a57e",
+    "bytes": 10043,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Theorem_3_1_General_Odd_Weight_Endpoint",
+      "Theorem_3_1_Positive_Moment_Realization",
+      "Theorem_4_1_Spectral_Irrationality_Measure_Criterion"
+    ],
+    "declarations": [
+      "primitiveNormalization",
+      "primitivePolynomial",
+      "primitiveMultiplier",
+      "primitive_isPrimitive",
+      "primitiveMultiplier_pos",
+      "primitive_polynomial_identity",
+      "primitive_real_identity",
+      "primitive_degree",
+      "primitive_eval",
+      "primitive_eval_nonzero",
+      "determinant_normalization",
+      "OddWeightFamily",
+      "center",
+      "Q",
+      "weight_eq",
+      "k_pos",
+      "center_eq_riemannZeta",
+      "degree",
+      "GramPositiveFamily",
+      "familySpectralBound",
+      "localRadius",
+      "familySpectralBound_pos",
+      "localRadius_pos",
+      "family_eval_nonzero",
+      "localComparison",
+      "EvaluationUpper",
+      "decay",
+      "general_measure_and_irrational",
+      "general_riemannZeta_measure_and_irrational",
+      "positivityFromMoments",
+      "general_measure_and_irrational_from_moments"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/20/root/ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/Theorem_4_1_General_Odd_Zeta_Application.lean"
+  },
+  {
+    "id": 713,
+    "attachment": 20,
+    "archive_chain": [
+      "20-ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_2_6_ADJACENT_DRIFT_BRIDGE1.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/Theorem_4_1_Integer_Polynomial_Irrationality.lean",
+    "sha256": "1542550d3604eb4aa775980bb39264925adcc72507e6c6a033a5ccaef13bb536",
+    "bytes": 4647,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Theorem_4_1_Spectral_Irrationality_Measure_Criterion"
+    ],
+    "declarations": [
+      "irrational_of_denominator_decay",
+      "exists_index_of_linear_degree_quadratic_decay",
+      "irrational_of_linear_degree_quadratic_decay"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/20/root/ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/Theorem_4_1_Integer_Polynomial_Irrationality.lean"
+  },
+  {
+    "id": 714,
+    "attachment": 20,
+    "archive_chain": [
+      "20-ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_2_6_ADJACENT_DRIFT_BRIDGE1.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/Theorem_4_1_Leading_Coefficient_Gap.lean",
+    "sha256": "05299284123a8af80ee812bf43327f61aaf14f6973244ec3308b5ba0b074630e",
+    "bytes": 5798,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "MAIN_CHAIN_IRRATIONALITY"
+    ],
+    "declarations": [
+      "leadingSize",
+      "determinantRatio",
+      "primitive_leadingCoeff_real",
+      "leadingSize_eq_scale_mul_abs_det",
+      "leadingSize_ge_one",
+      "determinantRatio_pos",
+      "primitivePolynomial_eval_eq",
+      "normalizedQuadraticDecay_of_gap",
+      "irrational_riemannZeta_of_gap"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/20/root/ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/Theorem_4_1_Leading_Coefficient_Gap.lean"
+  },
+  {
+    "id": 715,
+    "attachment": 20,
+    "archive_chain": [
+      "20-ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_2_6_ADJACENT_DRIFT_BRIDGE1.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/Theorem_4_1_Linear_Odd_Zeta_Family.lean",
+    "sha256": "7a91047a95e9075d148fdb6afb05b513a4ff0a43c684e8a091ae9d7bc276a38c",
+    "bytes": 2777,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Theorem_4_1_General_Odd_Zeta_Application"
+    ],
+    "declarations": [
+      "linearParameters",
+      "linearParameters_admissible",
+      "linearFamily"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/20/root/ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/Theorem_4_1_Linear_Odd_Zeta_Family.lean"
+  },
+  {
+    "id": 716,
+    "attachment": 20,
+    "archive_chain": [
+      "20-ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_2_6_ADJACENT_DRIFT_BRIDGE1.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/Theorem_4_1_Pole_Log_Slope.lean",
+    "sha256": "81298b7f37823e8b3bf2abdd31092763f9e2656d559515705128ddb13cbacd77",
+    "bytes": 5124,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Theorem_4_1_Determinant_Log_Energy",
+      "Theorem_2_5_Lagrange_Pole_Diagonalization"
+    ],
+    "declarations": [
+      "vandermondeSize",
+      "poleProductSize",
+      "vandermondeSize_pos",
+      "poleProductSize_pos",
+      "real_derivative_det_pole_product",
+      "derivative_abs_pole_product",
+      "derivative_log_pole_split",
+      "finite_energy_pole_product",
+      "normalizedQuadraticDecay_of_pole_log_rates"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/20/root/ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/Theorem_4_1_Pole_Log_Slope.lean"
+  },
+  {
+    "id": 717,
+    "attachment": 20,
+    "archive_chain": [
+      "20-ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_2_6_ADJACENT_DRIFT_BRIDGE1.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/Theorem_4_1_Spectral_Irrationality_Measure_Criterion.lean",
+    "sha256": "7a4e4762865d8346f9d8ba1b36099850fc31ef4ee452960ca16770dc4d2ffa92",
+    "bytes": 11867,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Theorem_3_1_Universal_Hyperbolicity_And_Zero_Free_Disk",
+      "Mathlib.Algebra.Polynomial.DenomsClearable",
+      "Mathlib.NumberTheory.Real.Irrational",
+      "Mathlib.Tactic.NormNum",
+      "Mathlib.Tactic.Linarith",
+      "Mathlib.Tactic.Positivity",
+      "Mathlib.Tactic.Ring",
+      "Mathlib.Tactic.FieldSimp",
+      "Mathlib.Analysis.Complex.Exponential"
+    ],
+    "declarations": [
+      "evalReal",
+      "cleared_eval_is_integer",
+      "polynomial_integer_squeeze",
+      "LocalComparison",
+      "Decay",
+      "IndexBudget",
+      "RationalMeasure",
+      "conditional_measure",
+      "RationalMeasure.irrational",
+      "conditional_irrational",
+      "paper_parameter_inequalities",
+      "paper_transfer_threshold",
+      "paper_decay_margin",
+      "product_comparison_of_sum_abs_le",
+      "comparisonRadius",
+      "comparisonRadius_pos",
+      "comparison_of_sum_le",
+      "perturbation_sum_le_of_radius",
+      "comparison_of_radius",
+      "normalized_comparison_of_radius",
+      "localComparison_of_spectral"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/20/root/ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/Theorem_4_1_Spectral_Irrationality_Measure_Criterion.lean"
+  },
+  {
+    "id": 718,
+    "attachment": 20,
+    "archive_chain": [
+      "20-ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_2_6_ADJACENT_DRIFT_BRIDGE1.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/Zetahyperbolic/AnalyticMainChain.lean",
+    "sha256": "d0c4587bcc0b0cb3999e9973bd3410abf45608f2b3a5a75e2b132d2d45a02549",
+    "bytes": 3098,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "ANALYTIC_FRONTIER",
+      "Zetahyperbolic.MainChain",
+      "Zetahyperbolic.ManuscriptCompatibility"
+    ],
+    "declarations": [
+      "GRAM_POSITIVE_ORIGINAL_FROM_POLE_INTEGRALS",
+      "MAIN_CHAIN_FROM_POLE_INTEGRALS",
+      "MAIN_CHAIN_ORIGINAL_ROOTS_FROM_POLE_INTEGRALS",
+      "MAIN_CHAIN_UNIFORM_FROM_POLE_INTEGRALS"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/20/root/ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/Zetahyperbolic/AnalyticMainChain.lean"
+  },
+  {
+    "id": 719,
+    "attachment": 20,
+    "archive_chain": [
+      "20-ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_2_6_ADJACENT_DRIFT_BRIDGE1.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/Zetahyperbolic/CoreLinearAlgebra.lean",
+    "sha256": "683fe127f88dae1ff89833b83f8dbfad19afaa8b0604defc6b4283f756cc23e0",
+    "bytes": 5169,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Mathlib"
+    ],
+    "declarations": [
+      "det_change_of_basis",
+      "det_change_of_basis_nonzero_factor",
+      "det_conjugated_diagonal",
+      "det_diagonal_weights",
+      "det_conjugated_diagonal_eq_zero_of_weight_zero",
+      "det_change_of_basis_polynomial",
+      "det_change_of_basis_rational_polynomial",
+      "det_conjugated_diagonal_ne_zero"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/20/root/ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/Zetahyperbolic/CoreLinearAlgebra.lean"
+  },
+  {
+    "id": 720,
+    "attachment": 20,
+    "archive_chain": [
+      "20-ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_2_6_ADJACENT_DRIFT_BRIDGE1.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/Zetahyperbolic/Foundations.lean",
+    "sha256": "9337c13e41c8b6df1b4ff27e2d3b01b852cbaecc93a579dfd45b9a4059a5bc26",
+    "bytes": 4862,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Mathlib"
+    ],
+    "declarations": [
+      "harmonicNumber",
+      "denominatorPolynomial",
+      "tailPolynomial",
+      "oddZetaPoleMoment",
+      "oddZetaPoleMoment_sub",
+      "oddZetaPoleMoment_add",
+      "denominatorPolynomial_eval_pole",
+      "tailPolynomial_eval_pole",
+      "tailPolynomial_derivative_eval_pole",
+      "lagrangePoleDenominator_ne_zero"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/20/root/ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/Zetahyperbolic/Foundations.lean"
+  },
+  {
+    "id": 721,
+    "attachment": 20,
+    "archive_chain": [
+      "20-ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_2_6_ADJACENT_DRIFT_BRIDGE1.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/Zetahyperbolic/MainChain.lean",
+    "sha256": "3511a62eed6a71c9060fd6832a50eb8c5e7854ebbdfbc73bbdd5e2e95a68007f",
+    "bytes": 3110,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "MAIN_CHAIN",
+      "Zetahyperbolic.ManuscriptCompatibility"
+    ],
+    "declarations": [
+      "GramPositiveOriginal",
+      "gramPositiveOriginal_iff",
+      "MAIN_CHAIN",
+      "original_delta_degree",
+      "MAIN_CHAIN_ORIGINAL_ROOTS"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/20/root/ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/Zetahyperbolic/MainChain.lean"
+  },
+  {
+    "id": 722,
+    "attachment": 20,
+    "archive_chain": [
+      "20-ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_2_6_ADJACENT_DRIFT_BRIDGE1.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/Zetahyperbolic/ManuscriptCompatibility.lean",
+    "sha256": "e7e4d944019954289c525c025d90880fc53b30b6d3a07a52a0b918e2254efc2c",
+    "bytes": 8730,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zetahyperbolic.Section2Checked",
+      "Theorem_2_5_Lagrange_Pole_Diagonalization",
+      "Theorem_3_1_Universal_Hyperbolicity_And_Zero_Free_Disk"
+    ],
+    "declarations": [
+      "toParameters",
+      "toParameters_admissible",
+      "harmonicWeight_eq_harmonic",
+      "D_poly_eq_D",
+      "tailPolynomial_eq_tailD",
+      "muMonomial_eq_monomialMoment",
+      "kernelNumerator_eq_numerator",
+      "muPolePoly_eq_affine",
+      "kernelRatElem_residue_eq",
+      "kernelRatElem_polyPart_eq_div",
+      "kernelRatElem_polyPart_eq_quotient",
+      "polynomialMoment_sum",
+      "G_pencil_eq_pencil",
+      "Delta_poly_eq_delta",
+      "gram_eq_original_evaluation",
+      "M_deriv_entry_eq"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/20/root/ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/Zetahyperbolic/ManuscriptCompatibility.lean"
+  },
+  {
+    "id": 723,
+    "attachment": 20,
+    "archive_chain": [
+      "20-ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_2_6_ADJACENT_DRIFT_BRIDGE1.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/Zetahyperbolic/Section2Checked.lean",
+    "sha256": "97a3eebe510a69450ce92a8c880ed7341f90017d52748152e44786f8ea612822",
+    "bytes": 64808,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Mathlib",
+      "Zetahyperbolic.CoreLinearAlgebra",
+      "Zetahyperbolic.Section3Elementary"
+    ],
+    "declarations": [
+      "HankelParams",
+      "h",
+      "alpha",
+      "lam",
+      "h_pos",
+      "alpha_add_lam",
+      "D_poly",
+      "D_poly_zero",
+      "D_real",
+      "D_real_eq_eval₂",
+      "D_real_pos",
+      "D_real_ratio_pos",
+      "D_real_ne_zero",
+      "D_real_succ",
+      "D_real_mono",
+      "D_real_ge_one",
+      "harmonicWeight",
+      "harmonicWeight_zero",
+      "harmonicWeight_succ",
+      "muMonomial",
+      "muPolePoly",
+      "muPoleEval",
+      "RatMomentElem",
+      "muFunctionalPoly",
+      "coeff_C_mul_X_sub_C",
+      "muPolePoly_coeff_one",
+      "muFunctionalPoly_coeff_one",
+      "dIndex",
+      "dIndex_reflect",
+      "bernoulli_binomial_sum",
+      "tauMonomial",
+      "tauMonomial_eq_choose",
+      "tauMonomial_binomial_convolution",
+      "tauPolePoly",
+      "tauPolePoly_reflect",
+      "pullback_identity_monomial",
+      "affinePoleLeft",
+      "affinePoleRight",
+      "pullback_identity_pole",
+      "tau_reflection_pole",
+      "tau_reflection_monomial",
+      "tau_difference_pole",
+      "kernelNumerator",
+      "kernelNumerator_eval_tail_pole",
+      "KernelPartialFractionData",
+      "tailPoleFactors_pairwise_coprime",
+      "kernelNumerator_partial_fraction_exists",
+      "polynomial_eq_C_of_degree_lt_one",
+      "kernelPartialFractionData",
+      "kernelRatElem",
+      "kernelNumerator_partial_fraction",
+      "G_pencil",
+      "Delta_poly",
+      "ratContent",
+      "ratContent_pos",
+      "ratContent_eq_zero_iff",
+      "primitiveRationalPolynomial",
+      "P_prim",
+      "canonical_basis_invariance",
+      "D_tail",
+      "D_tail_eq_tailPolynomial",
+      "D_poly_factorization",
+      "D_poly_eq_denominatorPolynomial",
+      "kernelNumerator_eval_old_pole",
+      "kernelRatElem_poleRes_eq_prod",
+      "kernelRatElem_poleRes_old_zero",
+      "poleNat",
+      "poleNat_mem_tail",
+      "exists_poleNat_eq",
+      "poleNat_injective",
+      "poleIndexEquiv",
+      "poleNode",
+      "V_pole",
+      "poleNode_injective",
+      "V_pole_det_ne_zero",
+      "gammaWeight",
+      "gammaWeight_ne_zero",
+      "kernelResidue_weighted_eq_gamma",
+      "M_deriv",
+      "M_deriv_entry_eq_tail_residue_sum",
+      "M_deriv_entry_eq_gamma_sum",
+      "M_deriv_factorization",
+      "ratContent_C_mul",
+      "canonical_primitive_content_invariance",
+      "G_lagrange",
+      "G_lagrange_coeff_one",
+      "G_lagrange_coeff_one_diagonal",
+      "coeff_C_mul_X_sub_C_zero",
+      "muPolePoly_coeff_zero_of_one_lt",
+      "muFunctionalPoly_coeff_zero_of_one_lt",
+      "G_pencil_coeff_zero_of_one_lt",
+      "G_lagrange_coeff_zero_of_one_lt",
+      "G_lagrange_natDegree_le_one",
+      "G_lagrange_offdiag_natDegree_zero",
+      "G_lagrange_diagonal_affine",
+      "lagrange_pole_diagonalization",
+      "V_pole_det_formula",
+      "det_M_deriv_factorization",
+      "M_deriv_det_ne_zero"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/20/root/ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/Zetahyperbolic/Section2Checked.lean"
+  },
+  {
+    "id": 724,
+    "attachment": 20,
+    "archive_chain": [
+      "20-ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_2_6_ADJACENT_DRIFT_BRIDGE1.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/Zetahyperbolic/Section3Elementary.lean",
+    "sha256": "4f77ae02e97b3e9c2844aefd0c8bb2ee6f3e40fa179f10b320ab71b3e8e971e4",
+    "bytes": 3861,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zetahyperbolic.Foundations"
+    ],
+    "declarations": [
+      "fekete_polynomial_positivity_basic",
+      "denominatorPolynomial_eval_pos",
+      "denominatorPolynomial_eval_ge_one",
+      "tailPolynomial_eval_ge_one",
+      "tailPolynomial_eval_pos"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/20/root/ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/Zetahyperbolic/Section3Elementary.lean"
+  }
+]

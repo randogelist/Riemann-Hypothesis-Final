@@ -1,0 +1,394 @@
+[
+  {
+    "id": 59,
+    "attachment": 5,
+    "archive_chain": [
+      "05-CLASSIFIER_64_PI_BKQR_CALIBRATION_v0_5_2_FIX2-1-.zip"
+    ],
+    "member": "CLASSIFIER_64_PI_BKQR_CALIBRATION_v0_5_2_FIX2/Classifier64/Adaptive.lean",
+    "sha256": "6292b37de7f49b470ab3be179470e6158578a8709f7955dade0ce44f5107ef5e",
+    "bytes": 5619,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Classifier64.PowerSeries"
+    ],
+    "declarations": [
+      "Certificate",
+      "LockedAt",
+      "AdaptiveLock",
+      "CLASSIFIER_64_POWER_SERIES_ADAPTIVE",
+      "CLASSIFIER_64_POWER_SERIES_FIXED",
+      "CompleteForIrrational",
+      "CLASSIFIER_64_POWER_SERIES_REP_IFF"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/05/root/CLASSIFIER_64_PI_BKQR_CALIBRATION_v0_5_2_FIX2/Classifier64/Adaptive.lean"
+  },
+  {
+    "id": 60,
+    "attachment": 5,
+    "archive_chain": [
+      "05-CLASSIFIER_64_PI_BKQR_CALIBRATION_v0_5_2_FIX2-1-.zip"
+    ],
+    "member": "CLASSIFIER_64_PI_BKQR_CALIBRATION_v0_5_2_FIX2/Classifier64/Audit.lean",
+    "sha256": "37e3ffd4c48df2dc8e640d3a7060bd497842b924013101c47c176b6b7670014b",
+    "bytes": 625,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Classifier64.Rate"
+    ],
+    "declarations": [],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/05/root/CLASSIFIER_64_PI_BKQR_CALIBRATION_v0_5_2_FIX2/Classifier64/Audit.lean"
+  },
+  {
+    "id": 61,
+    "attachment": 5,
+    "archive_chain": [
+      "05-CLASSIFIER_64_PI_BKQR_CALIBRATION_v0_5_2_FIX2-1-.zip"
+    ],
+    "member": "CLASSIFIER_64_PI_BKQR_CALIBRATION_v0_5_2_FIX2/Classifier64/Beukers.lean",
+    "sha256": "b22c86672f77b8f074a192932cb3ef3fb113f6f21e3930b7eed47ee78f3c43c9",
+    "bytes": 4705,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Classifier64.Rate"
+    ],
+    "declarations": [
+      "harmonic",
+      "coeff",
+      "cross",
+      "rationalPart",
+      "mass",
+      "beta",
+      "upper",
+      "den_mul_cast",
+      "linear_form_identity",
+      "CLASSIFIER_64_BEUKERS_RATIONAL"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/05/root/CLASSIFIER_64_PI_BKQR_CALIBRATION_v0_5_2_FIX2/Classifier64/Beukers.lean"
+  },
+  {
+    "id": 62,
+    "attachment": 5,
+    "archive_chain": [
+      "05-CLASSIFIER_64_PI_BKQR_CALIBRATION_v0_5_2_FIX2-1-.zip"
+    ],
+    "member": "CLASSIFIER_64_PI_BKQR_CALIBRATION_v0_5_2_FIX2/Classifier64/BeukersAudit.lean",
+    "sha256": "78237e0b12e8c1d09eac765ba3e9d87fe370dbf91d9f4d9a3f1f3584b123386d",
+    "bytes": 374,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Classifier64.Beukers"
+    ],
+    "declarations": [],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/05/root/CLASSIFIER_64_PI_BKQR_CALIBRATION_v0_5_2_FIX2/Classifier64/BeukersAudit.lean"
+  },
+  {
+    "id": 63,
+    "attachment": 5,
+    "archive_chain": [
+      "05-CLASSIFIER_64_PI_BKQR_CALIBRATION_v0_5_2_FIX2-1-.zip"
+    ],
+    "member": "CLASSIFIER_64_PI_BKQR_CALIBRATION_v0_5_2_FIX2/Classifier64/Core.lean",
+    "sha256": "684701e2a02d6a59603a863d34be7c06fae0202ed73c4fc6776deb209e72f2a1",
+    "bytes": 3318,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Mathlib"
+    ],
+    "declarations": [
+      "no_positive_small_integer_multiples",
+      "irrational_of_positive_integer_forms",
+      "irrational_of_geometric_integer_forms"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/05/root/CLASSIFIER_64_PI_BKQR_CALIBRATION_v0_5_2_FIX2/Classifier64/Core.lean"
+  },
+  {
+    "id": 64,
+    "attachment": 5,
+    "archive_chain": [
+      "05-CLASSIFIER_64_PI_BKQR_CALIBRATION_v0_5_2_FIX2-1-.zip"
+    ],
+    "member": "CLASSIFIER_64_PI_BKQR_CALIBRATION_v0_5_2_FIX2/Classifier64/PiAudit.lean",
+    "sha256": "e906f50026d76d254eb103a828f7ba74ae6a6085b2a1407cd9b2d3301a50752b",
+    "bytes": 961,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Classifier64.PiMoment"
+    ],
+    "declarations": [],
+    "forbidden_tokens": [],
+    "rh_target_mentions": true,
+    "extracted_path": "publication_work/attachment_sources/05/root/CLASSIFIER_64_PI_BKQR_CALIBRATION_v0_5_2_FIX2/Classifier64/PiAudit.lean"
+  },
+  {
+    "id": 65,
+    "attachment": 5,
+    "archive_chain": [
+      "05-CLASSIFIER_64_PI_BKQR_CALIBRATION_v0_5_2_FIX2-1-.zip"
+    ],
+    "member": "CLASSIFIER_64_PI_BKQR_CALIBRATION_v0_5_2_FIX2/Classifier64/PiCalibration.lean",
+    "sha256": "581361440ba7f1ed796409ea90e0e2cf31d42d5997dd67d03540d56d7a073b59",
+    "bytes": 6563,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Classifier64.Adaptive"
+    ],
+    "declarations": [
+      "ratio",
+      "gamma",
+      "h",
+      "piCoeff",
+      "piPartial",
+      "piPartial_succ",
+      "step",
+      "state",
+      "state_zero",
+      "state_step",
+      "product",
+      "product_eq_state",
+      "piSeries",
+      "piSeries_partial",
+      "pi_partial_three",
+      "rhoPoly",
+      "rho_factor",
+      "bPoly",
+      "quotientOne",
+      "quotient_one_factor",
+      "quotient",
+      "quotient_factor",
+      "rho",
+      "rho_bound"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": true,
+    "extracted_path": "publication_work/attachment_sources/05/root/CLASSIFIER_64_PI_BKQR_CALIBRATION_v0_5_2_FIX2/Classifier64/PiCalibration.lean"
+  },
+  {
+    "id": 66,
+    "attachment": 5,
+    "archive_chain": [
+      "05-CLASSIFIER_64_PI_BKQR_CALIBRATION_v0_5_2_FIX2-1-.zip"
+    ],
+    "member": "CLASSIFIER_64_PI_BKQR_CALIBRATION_v0_5_2_FIX2/Classifier64/PiConditional.lean",
+    "sha256": "d6cb743362f5da82d84cb484afb7032157b8e6090a827405919d2477a0556346",
+    "bytes": 2889,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Classifier64.PiCalibration"
+    ],
+    "declarations": [
+      "PiAnalyticIdentification",
+      "PiErrorEnvelope",
+      "pi_first_finite_lock",
+      "pi_first_lock_from_envelope",
+      "PiSparseLock",
+      "CLASSIFIER_64_PI_BKQR_FIXED"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": true,
+    "extracted_path": "publication_work/attachment_sources/05/root/CLASSIFIER_64_PI_BKQR_CALIBRATION_v0_5_2_FIX2/Classifier64/PiConditional.lean"
+  },
+  {
+    "id": 67,
+    "attachment": 5,
+    "archive_chain": [
+      "05-CLASSIFIER_64_PI_BKQR_CALIBRATION_v0_5_2_FIX2-1-.zip"
+    ],
+    "member": "CLASSIFIER_64_PI_BKQR_CALIBRATION_v0_5_2_FIX2/Classifier64/PiMoment.lean",
+    "sha256": "035abff2a3bbd5023daa748f08be36c640241a58f9dc487331c1e8371385e66d",
+    "bytes": 3457,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Classifier64.PiConditional"
+    ],
+    "declarations": [
+      "betaMoment",
+      "PiBetaEnvelope",
+      "upper_three",
+      "lower_six",
+      "upper_nine",
+      "pi_lock_three_of_beta",
+      "pi_no_lock_six_of_beta",
+      "pi_lock_nine_of_beta"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": true,
+    "extracted_path": "publication_work/attachment_sources/05/root/CLASSIFIER_64_PI_BKQR_CALIBRATION_v0_5_2_FIX2/Classifier64/PiMoment.lean"
+  },
+  {
+    "id": 68,
+    "attachment": 5,
+    "archive_chain": [
+      "05-CLASSIFIER_64_PI_BKQR_CALIBRATION_v0_5_2_FIX2-1-.zip"
+    ],
+    "member": "CLASSIFIER_64_PI_BKQR_CALIBRATION_v0_5_2_FIX2/Classifier64/PowerSeries.lean",
+    "sha256": "3c85cc94d306b825d7b5b270b5b3daed941b38dae48f454d590c232ad0d95cc7",
+    "bytes": 6040,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Classifier64.Sparse"
+    ],
+    "declarations": [
+      "RationalSeries",
+      "RationalSeries.partial",
+      "RationalSeries.toFormal",
+      "RationalSeries.fromFormal",
+      "RationalSeries.relocate",
+      "RationalSeries.partial_relocate",
+      "Represents",
+      "Represents.of_hasSum",
+      "Representative",
+      "Representative.ofHasSum",
+      "SamePartials",
+      "Represents.transport",
+      "Represents.relocate",
+      "RepresentationClass",
+      "Representative.mem_class",
+      "dirichletSeven"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/05/root/CLASSIFIER_64_PI_BKQR_CALIBRATION_v0_5_2_FIX2/Classifier64/PowerSeries.lean"
+  },
+  {
+    "id": 69,
+    "attachment": 5,
+    "archive_chain": [
+      "05-CLASSIFIER_64_PI_BKQR_CALIBRATION_v0_5_2_FIX2-1-.zip"
+    ],
+    "member": "CLASSIFIER_64_PI_BKQR_CALIBRATION_v0_5_2_FIX2/Classifier64/PowerSeriesAudit.lean",
+    "sha256": "200284107b856f961ba53b490b4eb6c996d24788467ed9d4bb2ea4e2eba3cc2b",
+    "bytes": 1095,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Classifier64.Adaptive"
+    ],
+    "declarations": [],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/05/root/CLASSIFIER_64_PI_BKQR_CALIBRATION_v0_5_2_FIX2/Classifier64/PowerSeriesAudit.lean"
+  },
+  {
+    "id": 70,
+    "attachment": 5,
+    "archive_chain": [
+      "05-CLASSIFIER_64_PI_BKQR_CALIBRATION_v0_5_2_FIX2-1-.zip"
+    ],
+    "member": "CLASSIFIER_64_PI_BKQR_CALIBRATION_v0_5_2_FIX2/Classifier64/Rate.lean",
+    "sha256": "5b58ef6795e8bb5522d1267bf51115ea19c5f0fe392246e9c1d205b30621ca65",
+    "bytes": 4538,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Classifier64.Core"
+    ],
+    "declarations": [
+      "scale64",
+      "scale64_pos",
+      "Slow64",
+      "Witness",
+      "Witness.irrational",
+      "CLASSIFIER_64",
+      "CLASSIFIER_64_GEOMETRIC",
+      "CLASSIFIER_64_ZETA7_ENDPOINT"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/05/root/CLASSIFIER_64_PI_BKQR_CALIBRATION_v0_5_2_FIX2/Classifier64/Rate.lean"
+  },
+  {
+    "id": 71,
+    "attachment": 5,
+    "archive_chain": [
+      "05-CLASSIFIER_64_PI_BKQR_CALIBRATION_v0_5_2_FIX2-1-.zip"
+    ],
+    "member": "CLASSIFIER_64_PI_BKQR_CALIBRATION_v0_5_2_FIX2/Classifier64/Sparse.lean",
+    "sha256": "9961f22beedc52da3ba33623a241f00f07bf9f61c32cb1b145ef5e42635138ba",
+    "bytes": 2702,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Classifier64.Beukers"
+    ],
+    "declarations": [
+      "CLASSIFIER_64_BEUKERS_SPARSE"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/05/root/CLASSIFIER_64_PI_BKQR_CALIBRATION_v0_5_2_FIX2/Classifier64/Sparse.lean"
+  },
+  {
+    "id": 72,
+    "attachment": 5,
+    "archive_chain": [
+      "05-CLASSIFIER_64_PI_BKQR_CALIBRATION_v0_5_2_FIX2-1-.zip"
+    ],
+    "member": "CLASSIFIER_64_PI_BKQR_CALIBRATION_v0_5_2_FIX2/Classifier64/SparseAudit.lean",
+    "sha256": "65d229a6bebf841d3bd8b7ddd62450d373358134af5f03b4ec0d354ad381c45a",
+    "bytes": 151,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Classifier64.Sparse"
+    ],
+    "declarations": [],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/05/root/CLASSIFIER_64_PI_BKQR_CALIBRATION_v0_5_2_FIX2/Classifier64/SparseAudit.lean"
+  },
+  {
+    "id": 73,
+    "attachment": 5,
+    "archive_chain": [
+      "05-CLASSIFIER_64_PI_BKQR_CALIBRATION_v0_5_2_FIX2-1-.zip"
+    ],
+    "member": "CLASSIFIER_64_PI_BKQR_CALIBRATION_v0_5_2_FIX2/Main.lean",
+    "sha256": "07a46a5aabc44853c3e18f3189ac30928529763747319ce306948b1835f06bd1",
+    "bytes": 550,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Classifier64.PiAudit"
+    ],
+    "declarations": [],
+    "forbidden_tokens": [],
+    "rh_target_mentions": true,
+    "extracted_path": "publication_work/attachment_sources/05/root/CLASSIFIER_64_PI_BKQR_CALIBRATION_v0_5_2_FIX2/Main.lean"
+  }
+]

@@ -1,0 +1,66 @@
+[
+  {
+    "source": "FiveInduction/HardyActual.lean",
+    "recorded_source_sha256": "2370ad37e95ba384dd4ac363a6e2246057446037f592d4cb0a99262cc8361c03",
+    "actual_source_sha256": "2370ad37e95ba384dd4ac363a6e2246057446037f592d4cb0a99262cc8361c03",
+    "matches": true,
+    "historical_status": "INDIVIDUALLY_COMPILED_PASS",
+    "native_replay_this_session": "NOT_RUN"
+  },
+  {
+    "source": "FiveInduction/HardyCompleteness.lean",
+    "recorded_source_sha256": "2a2fea4113f60cdcc6ce8ee3694e3f2e26ee59edd217832ba4f9112f340f9815",
+    "actual_source_sha256": "2a2fea4113f60cdcc6ce8ee3694e3f2e26ee59edd217832ba4f9112f340f9815",
+    "matches": true,
+    "historical_status": "INDIVIDUALLY_COMPILED_PASS",
+    "native_replay_this_session": "NOT_RUN"
+  },
+  {
+    "source": "FiveInduction/HardyConstants.lean",
+    "recorded_source_sha256": "8f748dedc766d3d89d4f9e08017f8b52a5383a042d807d4c4143085726392bc4",
+    "actual_source_sha256": "8f748dedc766d3d89d4f9e08017f8b52a5383a042d807d4c4143085726392bc4",
+    "matches": true,
+    "historical_status": "INDIVIDUALLY_COMPILED_PASS",
+    "native_replay_this_session": "NOT_RUN"
+  },
+  {
+    "source": "FiveInduction/HardyDefect.lean",
+    "recorded_source_sha256": "b9c4637cecf21e9b7ce37ae095563aabbda6fd3738915d48fad65ed0d964c112",
+    "actual_source_sha256": "b9c4637cecf21e9b7ce37ae095563aabbda6fd3738915d48fad65ed0d964c112",
+    "matches": true,
+    "historical_status": "INDIVIDUALLY_COMPILED_PASS",
+    "native_replay_this_session": "NOT_RUN"
+  },
+  {
+    "source": "FiveInduction/HardyEndpoint.lean",
+    "recorded_source_sha256": "b0b10654cdf7a65fd5c6fbc78cc2fbf2db424fcd7d2fa1ca09480ac436ff4f58",
+    "actual_source_sha256": "b0b10654cdf7a65fd5c6fbc78cc2fbf2db424fcd7d2fa1ca09480ac436ff4f58",
+    "matches": true,
+    "historical_status": "INDIVIDUALLY_COMPILED_PASS",
+    "native_replay_this_session": "NOT_RUN"
+  },
+  {
+    "source": "FiveInduction/HardyInduction.lean",
+    "recorded_source_sha256": "e67707aaab4cb3dd0267763f7a453cc6b658349232f2df7b9e6699dd300125e9",
+    "actual_source_sha256": "e67707aaab4cb3dd0267763f7a453cc6b658349232f2df7b9e6699dd300125e9",
+    "matches": true,
+    "historical_status": "INDIVIDUALLY_COMPILED_PASS",
+    "native_replay_this_session": "NOT_RUN"
+  },
+  {
+    "source": "FiveInduction/HardySeed.lean",
+    "recorded_source_sha256": "55eb4d25a28dcb27e1f952bfc665fe7acbff0362998f97cc1d88a45775358fae",
+    "actual_source_sha256": "55eb4d25a28dcb27e1f952bfc665fe7acbff0362998f97cc1d88a45775358fae",
+    "matches": true,
+    "historical_status": "INDIVIDUALLY_COMPILED_PASS",
+    "native_replay_this_session": "NOT_RUN"
+  },
+  {
+    "source": "FiveInduction/HardyTail.lean",
+    "recorded_source_sha256": "71d9a73a01a738efe8838d6cad05189f00914ddc3a9be4852718fa220411f410",
+    "actual_source_sha256": "71d9a73a01a738efe8838d6cad05189f00914ddc3a9be4852718fa220411f410",
+    "matches": true,
+    "historical_status": "INDIVIDUALLY_COMPILED_PASS",
+    "native_replay_this_session": "NOT_RUN"
+  }
+]

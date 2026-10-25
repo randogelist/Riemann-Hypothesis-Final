@@ -1,0 +1,1808 @@
+[
+  {
+    "id": 293,
+    "attachment": 14,
+    "archive_chain": [
+      "14-ODD_ZETA_3X3_MERGED_v0_3_0.zip"
+    ],
+    "member": "ODD_ZETA_3X3_MERGED_v0_3_0/Zeta5/PrimeSum.lean",
+    "sha256": "6fcf1896a77d6f442c60b95f184bf4ea8ec548b0e17f5eaa46746d16570e68c7",
+    "bytes": 74299,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta5.Basic",
+      "Zeta5.PNT",
+      "Zeta5.AppendixB",
+      "Zeta5.Uniformity"
+    ],
+    "declarations": [
+      "PS",
+      "B1",
+      "Bnot",
+      "B2",
+      "B3",
+      "sum_split",
+      "log_mKM",
+      "K_div_forty",
+      "le_two_h_of_le_K",
+      "mem_B1",
+      "mem_B2",
+      "mem_B3",
+      "floor_inv_mul",
+      "floor_zero_mul",
+      "floor_two_lam_K",
+      "B1_eq",
+      "B2_eq",
+      "B3_eq",
+      "tendsto_K",
+      "tendsto_primeSum",
+      "natLog_mul_log_le",
+      "one_le_natLog",
+      "natLog_le_one",
+      "sum_padicVal24_le",
+      "S1",
+      "S2",
+      "S3",
+      "negLp_of_B1",
+      "block1_le",
+      "tendsto_log_div_id",
+      "tendsto_log_div_sqrt",
+      "tendsto_5K",
+      "ErrNum",
+      "tendsto_ErrNum",
+      "tendsto_theta_of",
+      "tendsto_S1",
+      "tendsto_S2",
+      "tendsto_S3",
+      "continuousAt_of_affine",
+      "Tout_bdd",
+      "Tout_piecewise",
+      "phiIn",
+      "integral_inv_subst",
+      "continuousAt_floorR",
+      "continuousAt_floor_mul",
+      "continuousAt_fract_mul",
+      "continuousAt_d0_fract",
+      "continuousAt_e0_fract",
+      "fract_ne_of_two",
+      "latticeFinset",
+      "mem_latticeFinset",
+      "RR_piecewise",
+      "abs_mul_le'",
+      "floor_nonneg_R",
+      "RR_bddOn",
+      "RegR",
+      "RR_reg",
+      "eq_5_7_uniformity",
+      "phiIn_bdd",
+      "phiIn_pc",
+      "P2",
+      "P3",
+      "three_lt_M",
+      "inv_M_lt_inv_three",
+      "tendsto_P2",
+      "tendsto_P3",
+      "log_nonneg_of_prime",
+      "block2_le",
+      "block3_le",
+      "prop_5_2"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 294,
+    "attachment": 14,
+    "archive_chain": [
+      "14-ODD_ZETA_3X3_MERGED_v0_3_0.zip"
+    ],
+    "member": "ODD_ZETA_3X3_MERGED_v0_3_0/Zeta5/RealBound.lean",
+    "sha256": "a9f2f140c278b531636aa4d2c80d23b9f3f119c729c4edd95c524c943a690b98",
+    "bytes": 62654,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta5.Basic"
+    ],
+    "declarations": [
+      "aT",
+      "bT",
+      "cT",
+      "cS",
+      "wT",
+      "sum_cT",
+      "cS_sixteen",
+      "cT_pos",
+      "aT_strictAnti",
+      "bT_strictMono",
+      "tab1_length",
+      "aT_last_pos",
+      "bT_last_lt_two",
+      "aT_lt_bT",
+      "tab1_nested",
+      "log_two_bounds",
+      "logLen0",
+      "logLen1",
+      "logLen2",
+      "logLen3",
+      "logLen4",
+      "logLen5",
+      "logLen6",
+      "logLen7",
+      "logLen8",
+      "logLen9",
+      "logLen10",
+      "logLen11",
+      "logLen12",
+      "logLen13",
+      "logLen14",
+      "logLen15",
+      "Irho",
+      "Cstar",
+      "M0",
+      "wT_val0",
+      "wT_val1",
+      "wT_val2",
+      "wT_val3",
+      "wT_val4",
+      "wT_val5",
+      "wT_val6",
+      "wT_val7",
+      "wT_val8",
+      "wT_val9",
+      "wT_val10",
+      "wT_val11",
+      "wT_val12",
+      "wT_val13",
+      "wT_val14",
+      "wT_val15",
+      "log_alpha_bounds",
+      "log_twolam_bounds",
+      "A10_Irho",
+      "A10_Cstar",
+      "eq_6_4",
+      "Ubar_lt",
+      "lam_mul_M0",
+      "sqrt_len_gt",
+      "reg_const_le_sixty",
+      "K2logK_cancel",
+      "prop_6_3_of",
+      "one_sub_inv_le_log",
+      "log_factorial_ge",
+      "log_factorial_le",
+      "sum_log_fact",
+      "log_S_eq",
+      "eq_6_15",
+      "qminus",
+      "qplus",
+      "AA",
+      "AA_strictMono",
+      "t2",
+      "abutB",
+      "chainB",
+      "tilesUnitB",
+      "table2_tiles",
+      "table2_card",
+      "abut_real",
+      "choose_four_id",
+      "eq_6_11"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 295,
+    "attachment": 14,
+    "archive_chain": [
+      "14-ODD_ZETA_3X3_MERGED_v0_3_0.zip"
+    ],
+    "member": "ODD_ZETA_3X3_MERGED_v0_3_0/Zeta5/Sec6/Antideriv.lean",
+    "sha256": "a8c5355cc533f10ed78acae3477349abcc34a0adffc703aadf326533b65bff00",
+    "bytes": 3733,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta5.Sec6.Defs"
+    ],
+    "declarations": [
+      "integral_log_one_add_sq_div"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 296,
+    "attachment": 14,
+    "archive_chain": [
+      "14-ODD_ZETA_3X3_MERGED_v0_3_0.zip"
+    ],
+    "member": "ODD_ZETA_3X3_MERGED_v0_3_0/Zeta5/Sec6/ArcComm.lean",
+    "sha256": "4250e1b14f04408947693a349b37e7773f545df6d2128001bf6f8aa119b59411",
+    "bytes": 1832,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta5.Sec6.Measures"
+    ],
+    "declarations": [
+      "kE_arc_comm_aux",
+      "kE_arc_comm"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 297,
+    "attachment": 14,
+    "archive_chain": [
+      "14-ODD_ZETA_3X3_MERGED_v0_3_0.zip"
+    ],
+    "member": "ODD_ZETA_3X3_MERGED_v0_3_0/Zeta5/Sec6/ArcsinePot.lean",
+    "sha256": "6306d5915fd8265a7751866a9c951d19ed90e861fd646140e502fc48e233c400",
+    "bytes": 4231,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta5.Sec6.LogCos"
+    ],
+    "declarations": [
+      "arcsine_pot"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 298,
+    "attachment": 14,
+    "archive_chain": [
+      "14-ODD_ZETA_3X3_MERGED_v0_3_0.zip"
+    ],
+    "member": "ODD_ZETA_3X3_MERGED_v0_3_0/Zeta5/Sec6/Bilinear.lean",
+    "sha256": "c278fa857db98d61866d9072263002dcf1cce712f4842d2d8c01f04aaf71dd58",
+    "bytes": 2813,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta5.Sec6.Measures"
+    ],
+    "declarations": [
+      "kE_rhoM_expand_intRho",
+      "kE_rhoM_expand_kC_cont",
+      "kE_rhoM_expand_gcont",
+      "kE_rhoM_expand"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 299,
+    "attachment": 14,
+    "archive_chain": [
+      "14-ODD_ZETA_3X3_MERGED_v0_3_0.zip"
+    ],
+    "member": "ODD_ZETA_3X3_MERGED_v0_3_0/Zeta5/Sec6/CND.lean",
+    "sha256": "7c72a17fcfe35ff8661925bb96901afa3203cdf9727a9cc8b189a73e23bb4555",
+    "bytes": 8056,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta5.Sec6.Frullani",
+      "Zeta5.Sec6.GaussPD",
+      "Zeta5.Sec6.Swap",
+      "Zeta5.Sec6.Measures"
+    ],
+    "declarations": [
+      "kC_eq_frullani",
+      "cauchy_cnd_split",
+      "cauchy_cnd"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 300,
+    "attachment": 14,
+    "archive_chain": [
+      "14-ODD_ZETA_3X3_MERGED_v0_3_0.zip"
+    ],
+    "member": "ODD_ZETA_3X3_MERGED_v0_3_0/Zeta5/Sec6/Defs.lean",
+    "sha256": "6f2f3c63a629130d122de641e3b57301aa2aca3a7bdd058ba878ff6cd7991843",
+    "bytes": 6769,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta5.RealBound"
+    ],
+    "declarations": [
+      "Vfield",
+      "Vclosed",
+      "Uarc",
+      "Urho",
+      "Psi",
+      "kC",
+      "kE",
+      "frF",
+      "gaussE",
+      "arcsine",
+      "mid",
+      "rad",
+      "arc",
+      "rhoM",
+      "pts",
+      "fW",
+      "ConfigBound",
+      "kC_zero",
+      "kC_neg",
+      "kC_sub_comm",
+      "log_abs_le_kC",
+      "continuous_kC"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 301,
+    "attachment": 14,
+    "archive_chain": [
+      "14-ODD_ZETA_3X3_MERGED_v0_3_0.zip"
+    ],
+    "member": "ODD_ZETA_3X3_MERGED_v0_3_0/Zeta5/Sec6/Energy.lean",
+    "sha256": "52d4de0695b5c8afedc47eeef84b56d57bc83125293fbee8c25290c6423a2e44",
+    "bytes": 9971,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta5.Sec6.CND",
+      "Zeta5.Sec6.RhoCross",
+      "Zeta5.Sec6.RhoEnergy",
+      "Zeta5.Sec6.Potential",
+      "Zeta5.Sec6.Gram"
+    ],
+    "declarations": [
+      "sum_sum_symm",
+      "kE_pts_pts",
+      "kE_pts_rho",
+      "eq_6_6_cauchy",
+      "config_log",
+      "configBound"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 302,
+    "attachment": 14,
+    "archive_chain": [
+      "14-ODD_ZETA_3X3_MERGED_v0_3_0.zip"
+    ],
+    "member": "ODD_ZETA_3X3_MERGED_v0_3_0/Zeta5/Sec6/Field.lean",
+    "sha256": "1f34e5085677242e9cc222cb0688d9bc706959ece576c8067e24581cd38be2c7",
+    "bytes": 2628,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta5.Sec6.Defs"
+    ],
+    "declarations": [
+      "integral_log_add_sq",
+      "Vfield_eq_Vclosed"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 303,
+    "attachment": 14,
+    "archive_chain": [
+      "14-ODD_ZETA_3X3_MERGED_v0_3_0.zip"
+    ],
+    "member": "ODD_ZETA_3X3_MERGED_v0_3_0/Zeta5/Sec6/Final.lean",
+    "sha256": "f46f1d8d04b0aae0e316ba1ebe257203db0134e438780ca6af4f36b596235a9e",
+    "bytes": 7591,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta5.Sec6.Energy"
+    ],
+    "declarations": [
+      "eq_6_14",
+      "prop_6_3"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 304,
+    "attachment": 14,
+    "archive_chain": [
+      "14-ODD_ZETA_3X3_MERGED_v0_3_0.zip"
+    ],
+    "member": "ODD_ZETA_3X3_MERGED_v0_3_0/Zeta5/Sec6/Frullani.lean",
+    "sha256": "5a2fc4034ba4e872a87620275ea4e7125c5c2f6b1d117b4f2d20ef139e829a97",
+    "bytes": 4022,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta5.Sec6.Defs"
+    ],
+    "declarations": [
+      "frullani_integrable",
+      "frullani_cauchy"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 305,
+    "attachment": 14,
+    "archive_chain": [
+      "14-ODD_ZETA_3X3_MERGED_v0_3_0.zip"
+    ],
+    "member": "ODD_ZETA_3X3_MERGED_v0_3_0/Zeta5/Sec6/GaussPD.lean",
+    "sha256": "6e56b0faa69c13159ee50f6b22b15720c4f83b0f586c2fcc75420951feaad139",
+    "bytes": 8668,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta5.Sec6.Defs"
+    ],
+    "declarations": [
+      "gauss_conv",
+      "gpd_k_le_one",
+      "gpd_k_int",
+      "gpd_k_integral",
+      "gpdG",
+      "gpdG_cont",
+      "gpdG_bdd",
+      "gpdG_int",
+      "gpd_repr",
+      "gpd_prod_int",
+      "gauss_pd"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 306,
+    "attachment": 14,
+    "archive_chain": [
+      "14-ODD_ZETA_3X3_MERGED_v0_3_0.zip"
+    ],
+    "member": "ODD_ZETA_3X3_MERGED_v0_3_0/Zeta5/Sec6/Gram.lean",
+    "sha256": "d59c6b6932707298f50091aa8939130af426bb6fd96e5c4e7e52a0d8973b6839",
+    "bytes": 33355,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta5.Positivity",
+      "Zeta5.Sec6.Defs"
+    ],
+    "declarations": [
+      "configBound_of_log",
+      "factorial_mul_det",
+      "andreief",
+      "evalZeta5_G",
+      "integrableOn_G_entry",
+      "eq_6_10",
+      "sum_Icc_one_eq_range",
+      "K_mul_Lint",
+      "G_monoOn",
+      "G_continuous",
+      "eq_6_12_lower",
+      "eq_6_12_upper",
+      "log_aeval_D",
+      "fW_le",
+      "fW_nonneg",
+      "prod_pairs_scale",
+      "integrand_le",
+      "integral_g_le",
+      "integrableOn_g",
+      "gram_bound",
+      "eq_6_14_of_config",
+      "paper_6_9_admissible"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 307,
+    "attachment": 14,
+    "archive_chain": [
+      "14-ODD_ZETA_3X3_MERGED_v0_3_0.zip"
+    ],
+    "member": "ODD_ZETA_3X3_MERGED_v0_3_0/Zeta5/Sec6/IrhoSum.lean",
+    "sha256": "25ee69c2f1321a76e501531bfa73690123d9f2c9e45ea2cf4e77f94aa2b06e58",
+    "bytes": 2124,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta5.Sec6.Defs"
+    ],
+    "declarations": [
+      "Irho_double_sum_aux",
+      "Irho_double_sum"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 308,
+    "attachment": 14,
+    "archive_chain": [
+      "14-ODD_ZETA_3X3_MERGED_v0_3_0.zip"
+    ],
+    "member": "ODD_ZETA_3X3_MERGED_v0_3_0/Zeta5/Sec6/LogCos.lean",
+    "sha256": "6f45dc1f54cfd12da67eb3457dcbabe64d4df320e0d20d04090a3e24e1296a5f",
+    "bytes": 1609,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta5.Sec6.LogCosInt",
+      "Zeta5.Sec6.LogCosOn",
+      "Zeta5.Sec6.LogCosOff"
+    ],
+    "declarations": [
+      "integral_log_abs_sub_cos"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 309,
+    "attachment": 14,
+    "archive_chain": [
+      "14-ODD_ZETA_3X3_MERGED_v0_3_0.zip"
+    ],
+    "member": "ODD_ZETA_3X3_MERGED_v0_3_0/Zeta5/Sec6/LogCosInt.lean",
+    "sha256": "4bf3cf6e56e76ec85c9eafd4a5172d7b31b5e6262c88226a01a86a0b99586000",
+    "bytes": 996,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta5.Sec6.Defs"
+    ],
+    "declarations": [
+      "intervalIntegrable_log_abs_sub_cos"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 310,
+    "attachment": 14,
+    "archive_chain": [
+      "14-ODD_ZETA_3X3_MERGED_v0_3_0.zip"
+    ],
+    "member": "ODD_ZETA_3X3_MERGED_v0_3_0/Zeta5/Sec6/LogCosOff.lean",
+    "sha256": "61dffc523d20f8054667965b80e5bf37662dee0d68be9e8fd01a644292a6ae74",
+    "bytes": 5357,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta5.Sec6.Defs"
+    ],
+    "declarations": [
+      "integral_log_abs_sub_cos_of_one_lt_abs"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 311,
+    "attachment": 14,
+    "archive_chain": [
+      "14-ODD_ZETA_3X3_MERGED_v0_3_0.zip"
+    ],
+    "member": "ODD_ZETA_3X3_MERGED_v0_3_0/Zeta5/Sec6/LogCosOn.lean",
+    "sha256": "473a18af7c3bfc16310e923b8cf16dd4f442609554e4c9e7f0c1086b17a4226b",
+    "bytes": 4333,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta5.Sec6.Defs"
+    ],
+    "declarations": [
+      "integral_log_abs_sub_cos_of_abs_le"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 312,
+    "attachment": 14,
+    "archive_chain": [
+      "14-ODD_ZETA_3X3_MERGED_v0_3_0.zip"
+    ],
+    "member": "ODD_ZETA_3X3_MERGED_v0_3_0/Zeta5/Sec6/Measures.lean",
+    "sha256": "aa56748041a32450fe55e74845ad801d12177cf0d38c6cfb782ec2b5d2612276",
+    "bytes": 6489,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta5.Sec6.Defs"
+    ],
+    "declarations": [
+      "measurable_cosMap",
+      "continuous_cosMap",
+      "arcsine_univ",
+      "integral_arcsine",
+      "integrable_arcsine",
+      "arcsine_ae",
+      "cT_nonneg",
+      "aT_le_bT",
+      "rad_nonneg",
+      "mid_sub_rad",
+      "mid_add_rad",
+      "arc_ae",
+      "tab1_in_02",
+      "rhoM_univ",
+      "rhoM_ae",
+      "integral_rhoM",
+      "integral_pts",
+      "pts_univ",
+      "pts_ae"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 313,
+    "attachment": 14,
+    "archive_chain": [
+      "14-ODD_ZETA_3X3_MERGED_v0_3_0.zip"
+    ],
+    "member": "ODD_ZETA_3X3_MERGED_v0_3_0/Zeta5/Sec6/Num/Cell.lean",
+    "sha256": "431dd57a5cef3a4bff845cb2d431c71fe93c8d3c9d6ab3235ef404dfbc9f0043",
+    "bytes": 11358,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta5.Sec6.Num.Sound"
+    ],
+    "declarations": [
+      "UomR",
+      "Uclosed",
+      "Vclosed",
+      "outside_facts",
+      "UomR_anti",
+      "UomR_mono",
+      "UomUp_sound",
+      "tab_facts",
+      "UUpR_cast",
+      "Uclosed_le",
+      "VLo_le",
+      "cell_sound",
+      "chain_sound"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 314,
+    "attachment": 14,
+    "archive_chain": [
+      "14-ODD_ZETA_3X3_MERGED_v0_3_0.zip"
+    ],
+    "member": "ODD_ZETA_3X3_MERGED_v0_3_0/Zeta5/Sec6/Num/Eval.lean",
+    "sha256": "f95840f54767711fa97dbd2cd945cf1704f726b3d226bd696e019ba738882110",
+    "bytes": 7252,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Mathlib"
+    ],
+    "declarations": [
+      "L2lo",
+      "L2hi",
+      "PIlo",
+      "PIhi",
+      "PREC",
+      "NLOG",
+      "NATAN",
+      "rUp",
+      "rDn",
+      "oUp",
+      "oDn",
+      "lser",
+      "lerr",
+      "redExp",
+      "logUpRaw",
+      "logLoRaw",
+      "logUp",
+      "logLo",
+      "aser",
+      "aerr",
+      "atanLoRaw",
+      "atanUpRaw",
+      "atanLo",
+      "atanUp",
+      "isqrtIter",
+      "isqrt",
+      "sqrtCand",
+      "sqrtLo",
+      "sqrtUp",
+      "aQ",
+      "bQ",
+      "cQ",
+      "alphaQ",
+      "M0Q",
+      "UomUp",
+      "UUpR",
+      "UUp",
+      "VLo",
+      "BUp",
+      "cellOK",
+      "chainOK"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 315,
+    "attachment": 14,
+    "archive_chain": [
+      "14-ODD_ZETA_3X3_MERGED_v0_3_0.zip"
+    ],
+    "member": "ODD_ZETA_3X3_MERGED_v0_3_0/Zeta5/Sec6/Num/Final.lean",
+    "sha256": "d281ac565f5dc32948576bc0723fa14d460305343e65492f6ee9fe25a690ac80",
+    "bytes": 6162,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta5.Sec6.Num.Seg3",
+      "Zeta5.Sec6.Num.Seg6",
+      "Zeta5.Sec6.Num.Tail"
+    ],
+    "declarations": [
+      "segB",
+      "pot_on_02",
+      "pot_on_24",
+      "eq_6_2_closed",
+      "eq_6_7_closed"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 316,
+    "attachment": 14,
+    "archive_chain": [
+      "14-ODD_ZETA_3X3_MERGED_v0_3_0.zip"
+    ],
+    "member": "ODD_ZETA_3X3_MERGED_v0_3_0/Zeta5/Sec6/Num/Seg1.lean",
+    "sha256": "8fc54e3a6de3b99f10fc316fe70160391a91171592530d73c6422f67e34be97f",
+    "bytes": 3982,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta5.Sec6.Num.Cell"
+    ],
+    "declarations": [
+      "seg0",
+      "seg1",
+      "seg2",
+      "seg3",
+      "seg4"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 317,
+    "attachment": 14,
+    "archive_chain": [
+      "14-ODD_ZETA_3X3_MERGED_v0_3_0.zip"
+    ],
+    "member": "ODD_ZETA_3X3_MERGED_v0_3_0/Zeta5/Sec6/Num/Seg2.lean",
+    "sha256": "345af38d35ffaccab18f205cc1b0256b07083b7a966980f8b058f3d498983a83",
+    "bytes": 4237,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta5.Sec6.Num.Seg1"
+    ],
+    "declarations": [
+      "seg5",
+      "seg6",
+      "seg7",
+      "seg8",
+      "seg9"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 318,
+    "attachment": 14,
+    "archive_chain": [
+      "14-ODD_ZETA_3X3_MERGED_v0_3_0.zip"
+    ],
+    "member": "ODD_ZETA_3X3_MERGED_v0_3_0/Zeta5/Sec6/Num/Seg3.lean",
+    "sha256": "d3cc9240be45e485bad9e6b99e9c24f59e9f30ffa24e3629069ec487ff5c2b2f",
+    "bytes": 4348,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta5.Sec6.Num.Seg2"
+    ],
+    "declarations": [
+      "seg10",
+      "seg11",
+      "seg12",
+      "seg13",
+      "seg14"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 319,
+    "attachment": 14,
+    "archive_chain": [
+      "14-ODD_ZETA_3X3_MERGED_v0_3_0.zip"
+    ],
+    "member": "ODD_ZETA_3X3_MERGED_v0_3_0/Zeta5/Sec6/Num/Seg4.lean",
+    "sha256": "cea2c41a0f20031427eeef3fbd82d77b63c35436eadd13269032ed59ae5a49df",
+    "bytes": 4444,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta5.Sec6.Num.Cell"
+    ],
+    "declarations": [
+      "seg15",
+      "seg16",
+      "seg17",
+      "seg18",
+      "seg19"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 320,
+    "attachment": 14,
+    "archive_chain": [
+      "14-ODD_ZETA_3X3_MERGED_v0_3_0.zip"
+    ],
+    "member": "ODD_ZETA_3X3_MERGED_v0_3_0/Zeta5/Sec6/Num/Seg5.lean",
+    "sha256": "af69302b82408ceafe0867b0e658cdee60cd032e0f96d9229eb77b5556fd4686",
+    "bytes": 4444,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta5.Sec6.Num.Seg4"
+    ],
+    "declarations": [
+      "seg20",
+      "seg21",
+      "seg22",
+      "seg23",
+      "seg24"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 321,
+    "attachment": 14,
+    "archive_chain": [
+      "14-ODD_ZETA_3X3_MERGED_v0_3_0.zip"
+    ],
+    "member": "ODD_ZETA_3X3_MERGED_v0_3_0/Zeta5/Sec6/Num/Seg6.lean",
+    "sha256": "fe63b6a2d8f3c36612d36ab1a5dc744f64001a772b3854007d52e347f7101b8b",
+    "bytes": 4437,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta5.Sec6.Num.Seg5"
+    ],
+    "declarations": [
+      "seg25",
+      "seg26",
+      "seg27",
+      "seg28",
+      "seg29"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 322,
+    "attachment": 14,
+    "archive_chain": [
+      "14-ODD_ZETA_3X3_MERGED_v0_3_0.zip"
+    ],
+    "member": "ODD_ZETA_3X3_MERGED_v0_3_0/Zeta5/Sec6/Num/Sound.lean",
+    "sha256": "7b82fe64f0f1ea8ebfb61f968d102d63ab312e2c53db898fb9b3dd39a7a48470",
+    "bytes": 13791,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta5.Sec6.Num.Eval"
+    ],
+    "declarations": [
+      "rUp_ge",
+      "rDn_le",
+      "rDn_nonneg",
+      "oUp_ge",
+      "oDn_le",
+      "tail_bound",
+      "sq_lt_one_of_abs",
+      "pow_split",
+      "log_series_bound",
+      "arctan_series_bound",
+      "lser_cast",
+      "aser_cast",
+      "log_two_bounds",
+      "pi_bounds",
+      "log_eq_series_form",
+      "log_reduce",
+      "logUpRaw_sound",
+      "logUp_sound",
+      "logLoRaw_sound",
+      "logLo_sound",
+      "arctan_eq_quarter",
+      "arctan_eq_half",
+      "aser_bounds",
+      "atanLoRaw_le",
+      "atanLo_sound",
+      "atanUpRaw_ge",
+      "atanUp_sound",
+      "sqrtLo_nonneg",
+      "sqrtLo_sound",
+      "sqrtUp_sound"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 323,
+    "attachment": 14,
+    "archive_chain": [
+      "14-ODD_ZETA_3X3_MERGED_v0_3_0.zip"
+    ],
+    "member": "ODD_ZETA_3X3_MERGED_v0_3_0/Zeta5/Sec6/Num/Tail.lean",
+    "sha256": "bad2de0d26814edbd85692dd56320900012e5311c627ef486c8bef9b21544858",
+    "bytes": 3986,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta5.Sec6.Num.Cell"
+    ],
+    "declarations": [
+      "UomR_le_log",
+      "tab_pos",
+      "sum_cQ",
+      "Uclosed_le_log",
+      "tail_bound_ge4"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 324,
+    "attachment": 14,
+    "archive_chain": [
+      "14-ODD_ZETA_3X3_MERGED_v0_3_0.zip"
+    ],
+    "member": "ODD_ZETA_3X3_MERGED_v0_3_0/Zeta5/Sec6/PairEnergy.lean",
+    "sha256": "082d2a76485b1009b1b2c37d67041113a65017d6d1114d19917d3764c16debb7",
+    "bytes": 4639,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta5.Sec6.ArcsinePot",
+      "Zeta5.Sec6.Measures"
+    ],
+    "declarations": [
+      "pairEnergyGe_nest",
+      "pairEnergyGe_inner",
+      "pair_energy_ge"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 325,
+    "attachment": 14,
+    "archive_chain": [
+      "14-ODD_ZETA_3X3_MERGED_v0_3_0.zip"
+    ],
+    "member": "ODD_ZETA_3X3_MERGED_v0_3_0/Zeta5/Sec6/Potential.lean",
+    "sha256": "2ff392f95ab7d6e27b28931b0f9fa0297975322d790ed2414109d31cc9634ed3",
+    "bytes": 1880,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta5.Sec6.Field",
+      "Zeta5.Sec6.Num.Final"
+    ],
+    "declarations": [
+      "Uclosed_eq_Urho",
+      "Num_Vclosed_eq",
+      "eq_6_7_closed",
+      "eq_6_7_field"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 326,
+    "attachment": 14,
+    "archive_chain": [
+      "14-ODD_ZETA_3X3_MERGED_v0_3_0.zip"
+    ],
+    "member": "ODD_ZETA_3X3_MERGED_v0_3_0/Zeta5/Sec6/RhoCross.lean",
+    "sha256": "13a33fdff9104bc107fa8f9b6983e58c3d9fecbad6f531beed9a073763a13f80",
+    "bytes": 3474,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta5.Sec6.SmoothArc",
+      "Zeta5.Sec6.Measures"
+    ],
+    "declarations": [
+      "rho_cross"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 327,
+    "attachment": 14,
+    "archive_chain": [
+      "14-ODD_ZETA_3X3_MERGED_v0_3_0.zip"
+    ],
+    "member": "ODD_ZETA_3X3_MERGED_v0_3_0/Zeta5/Sec6/RhoEnergy.lean",
+    "sha256": "bf1ebc18dde9c1714fa4aec5cbe871c137ded005fb431bed3be7b51f8ed1fc87",
+    "bytes": 1116,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta5.Sec6.PairEnergy",
+      "Zeta5.Sec6.Bilinear",
+      "Zeta5.Sec6.ArcComm",
+      "Zeta5.Sec6.IrhoSum"
+    ],
+    "declarations": [
+      "rho_energy_ge"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 328,
+    "attachment": 14,
+    "archive_chain": [
+      "14-ODD_ZETA_3X3_MERGED_v0_3_0.zip"
+    ],
+    "member": "ODD_ZETA_3X3_MERGED_v0_3_0/Zeta5/Sec6/SmoothArc.lean",
+    "sha256": "cfb5aae818cc6976b4303e35125e2712dd33528cc6b25ea6c76ab289614344c2",
+    "bytes": 3643,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta5.Sec6.SmoothErr",
+      "Zeta5.Sec6.ArcsinePot"
+    ],
+    "declarations": [
+      "arcsine_smooth_err"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 329,
+    "attachment": 14,
+    "archive_chain": [
+      "14-ODD_ZETA_3X3_MERGED_v0_3_0.zip"
+    ],
+    "member": "ODD_ZETA_3X3_MERGED_v0_3_0/Zeta5/Sec6/SmoothAux.lean",
+    "sha256": "4132a592f7693b34011d8b1b14588294107087b620c14f73911a93e87e8bf264",
+    "bytes": 3855,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta5.Sec6.Defs"
+    ],
+    "declarations": [
+      "sin_ge_of_mem",
+      "cos_sub_cos_ge",
+      "exists_nearest_cos"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 330,
+    "attachment": 14,
+    "archive_chain": [
+      "14-ODD_ZETA_3X3_MERGED_v0_3_0.zip"
+    ],
+    "member": "ODD_ZETA_3X3_MERGED_v0_3_0/Zeta5/Sec6/SmoothErr.lean",
+    "sha256": "0cd346e87e0746d78b0708ffc28e1a5e28a5c8b392244ceefcc84a74e0da57e4",
+    "bytes": 7366,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta5.Sec6.SmoothAux",
+      "Zeta5.Sec6.Antideriv"
+    ],
+    "declarations": [
+      "smooth_err_norm"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 331,
+    "attachment": 14,
+    "archive_chain": [
+      "14-ODD_ZETA_3X3_MERGED_v0_3_0.zip"
+    ],
+    "member": "ODD_ZETA_3X3_MERGED_v0_3_0/Zeta5/Sec6/Swap.lean",
+    "sha256": "06a3bba1c86105bfe090546efa7c3406f3772c7c82a12b3cd4af23ca4ec318db",
+    "bytes": 5489,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta5.Sec6.Defs"
+    ],
+    "declarations": [
+      "swap_frullani_bound",
+      "swap_frullani"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 332,
+    "attachment": 14,
+    "archive_chain": [
+      "14-ODD_ZETA_3X3_MERGED_v0_3_0.zip"
+    ],
+    "member": "ODD_ZETA_3X3_MERGED_v0_3_0/Zeta5/Section3.lean",
+    "sha256": "d0c1c0cee35ce5675986ecda8ddaf5b46d53a57111a1b2acb3316f75ef5134be",
+    "bytes": 22461,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta5.LocalFunctional",
+      "Zeta5.HermiteBasis",
+      "Zeta5.InnerEntries"
+    ],
+    "declarations": [
+      "eq_4_2_of_lemma_3_1",
+      "eq_4_3_of_lemma_3_1",
+      "lemma_3_1_hyps_of_near",
+      "ordinary_degree_le_p_add_one",
+      "zero_degree_le_p_add_one",
+      "sq_ne_sq_mod",
+      "rowPoly_natDegree_lt",
+      "entry_bounds_4_2_4_3",
+      "prop_4_1"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 333,
+    "attachment": 14,
+    "archive_chain": [
+      "14-ODD_ZETA_3X3_MERGED_v0_3_0.zip"
+    ],
+    "member": "ODD_ZETA_3X3_MERGED_v0_3_0/Zeta5/Section41.lean",
+    "sha256": "8742ab3125d88fae97d745b3f929fc6c788de2b784bc3d2ebdad24bce8169721",
+    "bytes": 54087,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta5.Counting"
+    ],
+    "declarations": [
+      "div_eq_ite_of_lt_two_mul",
+      "ell_closed",
+      "ell_le_naive",
+      "ell_naive_attained",
+      "ell_eq_naive_of_large_v",
+      "naive_not_enough",
+      "ell_two_consecutive",
+      "ell_lt_caseSplit",
+      "xVal",
+      "xVal_pos",
+      "three_le_xVal",
+      "xVal_lt_M",
+      "alpha_xVal",
+      "bCoef_lt_real",
+      "allocTarget",
+      "exists_TE",
+      "unique_TE",
+      "inner_facts",
+      "T_lt_int",
+      "T_gt_int",
+      "T_lt",
+      "T_gt",
+      "T_sub_bCoef_gt",
+      "two_lam_bound",
+      "L_gt_three_halves",
+      "bCoef_le_naive_real",
+      "naive_chain",
+      "naive_bound_insufficient",
+      "card_filter_le_v",
+      "card_filter_ge_v",
+      "sum_ell",
+      "dimension_identity",
+      "Ldim",
+      "Ldim_cast",
+      "rowPoly",
+      "nu",
+      "pow_nu_dvd_rowPoly",
+      "nu_le",
+      "rowW",
+      "sum_rowW",
+      "degree_bound_ordinary",
+      "two_T_add_one_lt",
+      "degree_bound_zero",
+      "zero_degree_le",
+      "degrees_le_p_add_one",
+      "weight_comparison",
+      "zero_source_bound",
+      "p_pos_rat",
+      "zpow_p_pos",
+      "padicNorm_le_iff",
+      "vGAtLeast_iff",
+      "vGAtLeast_mono",
+      "vGAtLeast_intCast",
+      "vGAtLeast_one",
+      "vGAtLeast_mul",
+      "vGAtLeast_sum",
+      "vGAtLeast_prod",
+      "vGAtLeast_det",
+      "Prop_4_1",
+      "prop_4_1_of_entry_bounds",
+      "exists_top_subset",
+      "exists_innerAlloc_of_inner"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 334,
+    "attachment": 14,
+    "archive_chain": [
+      "14-ODD_ZETA_3X3_MERGED_v0_3_0.zip"
+    ],
+    "member": "ODD_ZETA_3X3_MERGED_v0_3_0/Zeta5/Skeleton.lean",
+    "sha256": "5174f6b17491ff5031202c32ae157aac83bc6a000fcce4eebaed0d0970964ac9",
+    "bytes": 7144,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta5.Basic"
+    ],
+    "declarations": [
+      "intValue_eq",
+      "irrational_of_integerPolynomials",
+      "Theorem_2_1",
+      "evalZeta5_map",
+      "theorem_1_1"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 335,
+    "attachment": 14,
+    "archive_chain": [
+      "14-ODD_ZETA_3X3_MERGED_v0_3_0.zip"
+    ],
+    "member": "ODD_ZETA_3X3_MERGED_v0_3_0/Zeta5/Tail.lean",
+    "sha256": "e41e8c101ccff94d57d6b76c6d90f35e0e73974dfa190913e60bb52a54f5b03a",
+    "bytes": 30974,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta5.Basic"
+    ],
+    "declarations": [
+      "hasDerivWithinAt_floor_mul",
+      "hasDerivWithinAt_fract_mul",
+      "hasDerivWithinAt_fract",
+      "Fc",
+      "phi",
+      "G0",
+      "Pc",
+      "Cc",
+      "Pbar",
+      "NN",
+      "WW",
+      "Ub",
+      "continuous_phi_fract",
+      "continuous_G0_fract",
+      "continuous_Pc",
+      "continuous_Cc",
+      "continuous_NN",
+      "continuousOn_WW",
+      "hasDerivAt_phi",
+      "hasDerivAt_G0",
+      "Pc_hasDerivWithinAt",
+      "Cc_hasDerivWithinAt",
+      "NN_hasDerivWithinAt",
+      "WW_hasDerivWithinAt",
+      "G0_sq_le",
+      "abs_G0_le",
+      "abs_Cc_le",
+      "abs_Fc_le",
+      "abs_six_Cc_le",
+      "measurable_Fc",
+      "measurable_Cc",
+      "measurable_six_Cc",
+      "numerator_bounds",
+      "eta_bounds",
+      "square_bounds",
+      "mixed_bounds",
+      "eq_5_14",
+      "intervalIntegrable_bdd_div",
+      "integration_by_parts",
+      "fract_eq_zero_of_eq_intCast",
+      "Pc_Cc_twenty",
+      "Pc_Cc_of_dvd",
+      "continuousOn_ub",
+      "integral_ub",
+      "tail_bound_strong",
+      "tail_bound"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 336,
+    "attachment": 14,
+    "archive_chain": [
+      "14-ODD_ZETA_3X3_MERGED_v0_3_0.zip"
+    ],
+    "member": "ODD_ZETA_3X3_MERGED_v0_3_0/Zeta5/Uniformity.lean",
+    "sha256": "4cbab3f36cafcaef3e8cd5c01260bc53f64419cb32d9051638f25b690a6804ad",
+    "bytes": 67068,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta5.Arithmetic",
+      "Zeta5.AppendixB"
+    ],
+    "declarations": [
+      "floor_natDiv",
+      "Gs",
+      "fG",
+      "Gs_eq_range",
+      "Gs_bound_range",
+      "Gs_bound",
+      "leg_single",
+      "vS_large",
+      "vS_inner_bound",
+      "R0Z",
+      "dZ",
+      "S5",
+      "ToutZ",
+      "S5_expand",
+      "K_mul_Tout",
+      "S5_two_eq",
+      "S5_sub_Gs",
+      "not_prime_mul_even",
+      "outer_core",
+      "outer_bound",
+      "UUT",
+      "VVT",
+      "IT",
+      "Gam_split",
+      "IT_succ",
+      "ell_eq_ellR",
+      "count_lt",
+      "FT",
+      "integrand_eq",
+      "abs_e0",
+      "sum_exceptional",
+      "ell_le_real",
+      "ind",
+      "ind_nonneg",
+      "ind_le_one",
+      "cc1",
+      "cc2",
+      "cc3",
+      "Rfun",
+      "IT_eq_cc",
+      "integrand_eq_Rfun",
+      "closed_bounds",
+      "Rfun_bound",
+      "FT_bound",
+      "FT_eq_Rfun",
+      "sum_Rfun",
+      "D_bound",
+      "riemann",
+      "qN",
+      "Top",
+      "ellK_mem",
+      "U_eq",
+      "eps_ell_sum",
+      "Z0",
+      "sum_range_affine",
+      "gammaIn_expand",
+      "Z0_bound",
+      "T_cases",
+      "sub_min_eq",
+      "assembly",
+      "qN_bounds",
+      "T_bounds",
+      "delta_bound",
+      "U_near",
+      "delta_eq",
+      "gamma_eq",
+      "qR_eq",
+      "gamma_inner_bound",
+      "eq_5_7_uniformity"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 337,
+    "attachment": 14,
+    "archive_chain": [
+      "14-ODD_ZETA_3X3_MERGED_v0_3_0.zip"
+    ],
+    "member": "ODD_ZETA_3X3_MERGED_v0_3_0/Zeta5.lean",
+    "sha256": "b0a79d379b423955a7fbc4afdacd1b3b2f6e76af1f377b4c758f8dba45d19eed",
+    "bytes": 1937,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta5.Basic",
+      "Zeta5.Counting",
+      "Zeta5.Skeleton",
+      "Zeta5.Asymptotics",
+      "Zeta5.Functional",
+      "Zeta5.Section41",
+      "Zeta5.Lemma42",
+      "Zeta5.Tail",
+      "Zeta5.OuterLocal",
+      "Zeta5.OuterRange",
+      "Zeta5.RealBound",
+      "Zeta5.AppendixB",
+      "Zeta5.Normalization",
+      "Zeta5.Axioms",
+      "Zeta5.Hermite",
+      "Zeta5.PNT",
+      "Zeta5.Positivity",
+      "Zeta5.PrimeSum",
+      "Zeta5.Interface",
+      "Zeta5.Arithmetic",
+      "Zeta5.Section3",
+      "Zeta5.CrudeBound",
+      "Zeta5.Checks",
+      "Zeta5.AppendixBCheck",
+      "Zeta5.HermiteBasisCore",
+      "Zeta5.HermiteBasis",
+      "Zeta5.LocalFunctional",
+      "Zeta5.Lemma33",
+      "Zeta5.InnerTate",
+      "Zeta5.InnerGeneral",
+      "Zeta5.InnerEntries",
+      "Zeta5.OuterBasis",
+      "Zeta5.Uniformity",
+      "Zeta5.Sec6.Defs",
+      "Zeta5.Sec6.Measures",
+      "Zeta5.Sec6.Frullani",
+      "Zeta5.Sec6.GaussPD",
+      "Zeta5.Sec6.Swap",
+      "Zeta5.Sec6.CND",
+      "Zeta5.Sec6.LogCosInt",
+      "Zeta5.Sec6.LogCosOn",
+      "Zeta5.Sec6.LogCosOff",
+      "Zeta5.Sec6.LogCos",
+      "Zeta5.Sec6.ArcsinePot",
+      "Zeta5.Sec6.SmoothAux",
+      "Zeta5.Sec6.Antideriv",
+      "Zeta5.Sec6.SmoothErr",
+      "Zeta5.Sec6.SmoothArc",
+      "Zeta5.Sec6.RhoCross",
+      "Zeta5.Sec6.IrhoSum",
+      "Zeta5.Sec6.PairEnergy",
+      "Zeta5.Sec6.ArcComm",
+      "Zeta5.Sec6.Bilinear",
+      "Zeta5.Sec6.RhoEnergy",
+      "Zeta5.Sec6.Field",
+      "Zeta5.Sec6.Num.Eval",
+      "Zeta5.Sec6.Num.Sound",
+      "Zeta5.Sec6.Num.Cell",
+      "Zeta5.Sec6.Num.Tail",
+      "Zeta5.Sec6.Num.Seg1",
+      "Zeta5.Sec6.Num.Seg2",
+      "Zeta5.Sec6.Num.Seg3",
+      "Zeta5.Sec6.Num.Seg4",
+      "Zeta5.Sec6.Num.Seg5",
+      "Zeta5.Sec6.Num.Seg6",
+      "Zeta5.Sec6.Num.Final",
+      "Zeta5.Sec6.Potential",
+      "Zeta5.Sec6.Gram",
+      "Zeta5.Sec6.Energy",
+      "Zeta5.Sec6.Final"
+    ],
+    "declarations": [],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 338,
+    "attachment": 14,
+    "archive_chain": [
+      "14-ODD_ZETA_3X3_MERGED_v0_3_0.zip"
+    ],
+    "member": "ODD_ZETA_3X3_MERGED_v0_3_0/cert/Check.lean",
+    "sha256": "3106289dd6aa4f936029f8f5ed6d401125ecc63ad2d35c64b4abf9065b41fa50",
+    "bytes": 521,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta5"
+    ],
+    "declarations": [],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 339,
+    "attachment": 14,
+    "archive_chain": [
+      "14-ODD_ZETA_3X3_MERGED_v0_3_0.zip"
+    ],
+    "member": "ODD_ZETA_3X3_MERGED_v0_3_0/numerics/HermiteBasisControls.lean",
+    "sha256": "32f451e19464173e8fd1e6ab36a9f1927d4a98e3a00625f92b421b1a9c804fca",
+    "bytes": 5761,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta5.HermiteBasis"
+    ],
+    "declarations": [
+      "U4_rows",
+      "U4_eq",
+      "U4_det"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 340,
+    "attachment": 14,
+    "archive_chain": [
+      "14-ODD_ZETA_3X3_MERGED_v0_3_0.zip"
+    ],
+    "member": "ODD_ZETA_3X3_MERGED_v0_3_0/numerics/HermiteConsumerExamples.lean",
+    "sha256": "76375b76c4703712dddf25a94ea592979e22122b70b54c4953f1fa22d3e43c79",
+    "bytes": 4254,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta5.OuterRange",
+      "Zeta5.Section3"
+    ],
+    "declarations": [],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 341,
+    "attachment": 14,
+    "archive_chain": [
+      "14-ODD_ZETA_3X3_MERGED_v0_3_0.zip"
+    ],
+    "member": "ODD_ZETA_3X3_MERGED_v0_3_0/provenance/IMPACTG_v0_10_1/ImpactG/AlternatingBounds.lean",
+    "sha256": "e381e9bfbf5bcefcebc6e9dc4b1228cd75e1ea6323a324ed99df60bb8065794a",
+    "bytes": 5015,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "ImpactG.RatioReduction"
+    ],
+    "declarations": [
+      "altTerm",
+      "altLower",
+      "altUpper",
+      "IMPACTG_ALT_TERM_POS",
+      "IMPACTG_ALT_TERM_ANTITONE",
+      "IMPACTG_ALT_LOWER_STEP",
+      "IMPACTG_ALT_UPPER_STEP",
+      "IMPACTG_ALT_LOWER_STEP_LE",
+      "IMPACTG_ALT_UPPER_STEP_LE",
+      "IMPACTG_ALT_LOWER_MONOTONE",
+      "IMPACTG_ALT_UPPER_ANTITONE",
+      "IMPACTG_ALT_WIDTH",
+      "IMPACTG_ALT_STRICT_INTERVAL",
+      "IMPACTG_ALT_LOWER_NONNEG",
+      "IMPACTG_ALT_UPPER_LE_ONE",
+      "IMPACTG_ALT_NESTED",
+      "IMPACTG_ALT_ANCHOR_2",
+      "IMPACTG_ALT_ANCHOR_3",
+      "IMPACTG_ALT_ANCHOR_5",
+      "IMPACTG_ALT_ANCHOR_7"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 342,
+    "attachment": 14,
+    "archive_chain": [
+      "14-ODD_ZETA_3X3_MERGED_v0_3_0.zip"
+    ],
+    "member": "ODD_ZETA_3X3_MERGED_v0_3_0/provenance/IMPACTG_v0_10_1/ImpactG/Audit.lean",
+    "sha256": "ee6a313c43cd144aaa04d601a0621c15badaa53136f095c94c65344861692b2a",
+    "bytes": 4779,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "ImpactG.RatioEnclosure"
+    ],
+    "declarations": [],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 343,
+    "attachment": 14,
+    "archive_chain": [
+      "14-ODD_ZETA_3X3_MERGED_v0_3_0.zip"
+    ],
+    "member": "ODD_ZETA_3X3_MERGED_v0_3_0/provenance/IMPACTG_v0_10_1/ImpactG/AuditBinomial.lean",
+    "sha256": "e4cade756d8f7b6d7d9ebfdb4bb636cf8a61310085d0540d864c5aa544d50753",
+    "bytes": 304,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "ImpactG.EulerBinomialAverage"
+    ],
+    "declarations": [],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 344,
+    "attachment": 14,
+    "archive_chain": [
+      "14-ODD_ZETA_3X3_MERGED_v0_3_0.zip"
+    ],
+    "member": "ODD_ZETA_3X3_MERGED_v0_3_0/provenance/IMPACTG_v0_10_1/ImpactG/AuditContraction.lean",
+    "sha256": "561e1ae7ed932e9ffb0951587b17c4fee318d98757749dcf50dd77356951f6f4",
+    "bytes": 1192,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "ImpactG.CorridorContraction"
+    ],
+    "declarations": [],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 345,
+    "attachment": 14,
+    "archive_chain": [
+      "14-ODD_ZETA_3X3_MERGED_v0_3_0.zip"
+    ],
+    "member": "ODD_ZETA_3X3_MERGED_v0_3_0/provenance/IMPACTG_v0_10_1/ImpactG/AuditEuler.lean",
+    "sha256": "c8a34c74927fbde9d91d5ed11929cff311f4d2eff23c6f08b4dc635d7e6630ef",
+    "bytes": 579,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "ImpactG.EulerLimitTarget"
+    ],
+    "declarations": [],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 346,
+    "attachment": 14,
+    "archive_chain": [
+      "14-ODD_ZETA_3X3_MERGED_v0_3_0.zip"
+    ],
+    "member": "ODD_ZETA_3X3_MERGED_v0_3_0/provenance/IMPACTG_v0_10_1/ImpactG/AuditEulerAgreement.lean",
+    "sha256": "ac8ccf2f9ba9828b62c1e204a8b824106221dc5f298a62c11718d7353b086623",
+    "bytes": 697,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "ImpactG.EulerAgreement"
+    ],
+    "declarations": [],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 347,
+    "attachment": 14,
+    "archive_chain": [
+      "14-ODD_ZETA_3X3_MERGED_v0_3_0.zip"
+    ],
+    "member": "ODD_ZETA_3X3_MERGED_v0_3_0/provenance/IMPACTG_v0_10_1/ImpactG/CanonicalRatios.lean",
+    "sha256": "648465226f87ac2fcff55f3034b5013c98b47cd210dde67670e5089c18eff637",
+    "bytes": 4570,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "ImpactG.EtaCorridor"
+    ],
+    "declarations": [
+      "altRatio35",
+      "altRatio57",
+      "IMPACTG_ALT_RATIO35_N1",
+      "IMPACTG_ALT_RATIO57_N1",
+      "IMPACTG_CORRIDOR_2_POS",
+      "IMPACTG_CORRIDOR_3_POS",
+      "IMPACTG_CORRIDOR_5_POS",
+      "IMPACTG_CORRIDOR_7_POS",
+      "IMPACTG_CORRIDOR_RATIO35_LIMIT",
+      "IMPACTG_CORRIDOR_RATIO57_LIMIT"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  }
+]

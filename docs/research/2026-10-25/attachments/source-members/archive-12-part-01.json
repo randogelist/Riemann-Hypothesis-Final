@@ -1,0 +1,547 @@
+[
+  {
+    "id": 18,
+    "attachment": 2,
+    "archive_chain": [
+      "02-ZETA3_ELEMENTARY_ANCHOR_SERIES_v0_7_1_FIX1-10-.zip"
+    ],
+    "member": "ZETA3_ELEMENTARY_ANCHOR_SERIES_v0_7_1_FIX1/INTEGRATION_EXAMPLE.lean",
+    "sha256": "e7303d8bc1c0d6b109c55571f00985e74b30dff24411ae3771221f8c7433948b",
+    "bytes": 459,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta3Anchor"
+    ],
+    "declarations": [],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 19,
+    "attachment": 2,
+    "archive_chain": [
+      "02-ZETA3_ELEMENTARY_ANCHOR_SERIES_v0_7_1_FIX1-10-.zip"
+    ],
+    "member": "ZETA3_ELEMENTARY_ANCHOR_SERIES_v0_7_1_FIX1/Zeta3Anchor/ArithmeticAudit.lean",
+    "sha256": "8e06b722c509fe247b6e396bf1d7d202cc1ad9851b291b1cdda8d0d11655a6f6",
+    "bytes": 607,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta3Anchor.ArithmeticCriterion",
+      "Zeta3Anchor.DyadicKernel"
+    ],
+    "declarations": [],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 20,
+    "attachment": 2,
+    "archive_chain": [
+      "02-ZETA3_ELEMENTARY_ANCHOR_SERIES_v0_7_1_FIX1-10-.zip"
+    ],
+    "member": "ZETA3_ELEMENTARY_ANCHOR_SERIES_v0_7_1_FIX1/Zeta3Anchor/ArithmeticCriterion.lean",
+    "sha256": "e5dcc1ab6d3a9b734a03c2446650bf891a866f75377fad99952c9a5c5bc27772",
+    "bytes": 5115,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta3Anchor.RiemannBridge",
+      "Mathlib"
+    ],
+    "declarations": [
+      "NO_POSITIVE_SMALL_INTEGER_MULTIPLES",
+      "IRRATIONAL_OF_INTEGER_LINEAR_FORMS",
+      "IRRATIONAL_OF_GEOMETRIC_INTEGER_FORMS",
+      "BeukersDyadicWitness",
+      "BeukersDyadicWitness.irrational",
+      "ZETA3_IRRATIONAL_OF_DYADIC_WITNESS",
+      "BeukersArithmeticWitness",
+      "BeukersArithmeticWitness.irrational",
+      "ZETA3_IRRATIONAL_OF_BEUKERS_WITNESS"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 21,
+    "attachment": 2,
+    "archive_chain": [
+      "02-ZETA3_ELEMENTARY_ANCHOR_SERIES_v0_7_1_FIX1-10-.zip"
+    ],
+    "member": "ZETA3_ELEMENTARY_ANCHOR_SERIES_v0_7_1_FIX1/Zeta3Anchor/Audit.lean",
+    "sha256": "8c61b56c66bcd419cb2c9c723329f1ece0262e78a9334848c83d9c0d8c95effc",
+    "bytes": 1290,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta3Anchor.GPTransfer",
+      "Lean"
+    ],
+    "declarations": [],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 22,
+    "attachment": 2,
+    "archive_chain": [
+      "02-ZETA3_ELEMENTARY_ANCHOR_SERIES_v0_7_1_FIX1-10-.zip"
+    ],
+    "member": "ZETA3_ELEMENTARY_ANCHOR_SERIES_v0_7_1_FIX1/Zeta3Anchor/Certified.lean",
+    "sha256": "c3d06adc2c689b740ab43193934966e4d2389427479bfd738d9e78427c55a40d",
+    "bytes": 1580,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta3Anchor.RiemannBridge",
+      "Zeta3Irrational.Basic"
+    ],
+    "declarations": [
+      "ZETA3_RIEMANN_NO_RATIONAL",
+      "ZETA3_REAL_NO_RATIONAL",
+      "ZETA3_IRRATIONAL",
+      "ZETA3_LOG_KERNEL_IDENTIFIED",
+      "elementaryIntegral",
+      "ZETA3_ELEMENTARY_IDENTIFIED",
+      "ZETA3_ELEMENTARY_IRRATIONAL"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 23,
+    "attachment": 2,
+    "archive_chain": [
+      "02-ZETA3_ELEMENTARY_ANCHOR_SERIES_v0_7_1_FIX1-10-.zip"
+    ],
+    "member": "ZETA3_ELEMENTARY_ANCHOR_SERIES_v0_7_1_FIX1/Zeta3Anchor/DyadicKernel.lean",
+    "sha256": "4b56a7882e51acae809a1385e9535b1697f11107c07f4378ba8b89de81260fef",
+    "bytes": 4921,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Mathlib"
+    ],
+    "declarations": [
+      "DYADIC_SCALAR_CONTRACTION",
+      "DYADIC_DENOMINATOR_SOS",
+      "DYADIC_KERNEL_CORE",
+      "DYADIC_KERNEL_POLYNOMIAL",
+      "DYADIC_KERNEL_BOUND",
+      "DYADIC_FINAL_FACTOR"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 24,
+    "attachment": 2,
+    "archive_chain": [
+      "02-ZETA3_ELEMENTARY_ANCHOR_SERIES_v0_7_1_FIX1-10-.zip"
+    ],
+    "member": "ZETA3_ELEMENTARY_ANCHOR_SERIES_v0_7_1_FIX1/Zeta3Anchor/Elementary.lean",
+    "sha256": "a3e04f47e6dbdfebf87eeed2e18128fe22feef585224ef18d7fb7e24cea3615b",
+    "bytes": 641,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Mathlib.NumberTheory.LSeries.RiemannZeta",
+      "Mathlib.NumberTheory.Real.Irrational"
+    ],
+    "declarations": [
+      "zetaThree",
+      "ZETA3_SERIES_IDENTIFIED"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 25,
+    "attachment": 2,
+    "archive_chain": [
+      "02-ZETA3_ELEMENTARY_ANCHOR_SERIES_v0_7_1_FIX1-10-.zip"
+    ],
+    "member": "ZETA3_ELEMENTARY_ANCHOR_SERIES_v0_7_1_FIX1/Zeta3Anchor/GPTransfer.lean",
+    "sha256": "57c41316fbf6c7d121c255fb0660c573db344b7a54914183b2dbfba5e2ee839e",
+    "bytes": 951,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta3Anchor.Certified"
+    ],
+    "declarations": [
+      "GP13_IRRATIONAL_OF_IDENTIFICATION",
+      "OPERATOR_LIMIT_IRRATIONAL_OF_IDENTIFICATION"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 26,
+    "attachment": 2,
+    "archive_chain": [
+      "02-ZETA3_ELEMENTARY_ANCHOR_SERIES_v0_7_1_FIX1-10-.zip"
+    ],
+    "member": "ZETA3_ELEMENTARY_ANCHOR_SERIES_v0_7_1_FIX1/Zeta3Anchor/GeometricBound.lean",
+    "sha256": "6dfb46084b30c9a69ff66bcdfaabb1179ca2e1d00205a3188a0d3fa5a9d61944",
+    "bytes": 1207,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Mathlib.NumberTheory.Real.Irrational",
+      "Mathlib.Tactic"
+    ],
+    "declarations": [
+      "sqrt_two_gt_rational",
+      "BEUKERS_SCALAR_LT_ONE_THIRTIETH",
+      "BEUKERS_RATIO_LT_ONE"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 27,
+    "attachment": 2,
+    "archive_chain": [
+      "02-ZETA3_ELEMENTARY_ANCHOR_SERIES_v0_7_1_FIX1-10-.zip"
+    ],
+    "member": "ZETA3_ELEMENTARY_ANCHOR_SERIES_v0_7_1_FIX1/Zeta3Anchor/MomentArithmetic.lean",
+    "sha256": "946d67a584e039e81e9391bd47ffda3ee2af00086e48899cc3538f65c0602a20",
+    "bytes": 7370,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Mathlib"
+    ],
+    "declarations": [
+      "MomentLCM",
+      "MOMENT_LCM_DIVISOR",
+      "RationalInteger",
+      "RationalInteger.sub",
+      "RationalInteger.int_mul",
+      "RationalInteger.finset_sum",
+      "MOMENT_CUBE_DENOMINATOR",
+      "MOMENT_MIXED_DENOMINATOR",
+      "momentH3",
+      "momentOff",
+      "MOMENT_H3_SCALED_INTEGER",
+      "MOMENT_OFF_SCALED_INTEGER",
+      "legendreMomentCoeff",
+      "finiteMomentA",
+      "finiteMomentB",
+      "MOMENT_FINITE_DENOMINATOR",
+      "MOMENT_LEGENDRE_DENOMINATOR"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 28,
+    "attachment": 2,
+    "archive_chain": [
+      "02-ZETA3_ELEMENTARY_ANCHOR_SERIES_v0_7_1_FIX1-10-.zip"
+    ],
+    "member": "ZETA3_ELEMENTARY_ANCHOR_SERIES_v0_7_1_FIX1/Zeta3Anchor/MomentAudit.lean",
+    "sha256": "2e86e3c9fbb0f6266837918bcd39d087be5bebbd16729405f95642430cd5ab60",
+    "bytes": 584,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta3Anchor.MomentArithmetic",
+      "Zeta3Anchor.MomentPartialFraction"
+    ],
+    "declarations": [],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 29,
+    "attachment": 2,
+    "archive_chain": [
+      "02-ZETA3_ELEMENTARY_ANCHOR_SERIES_v0_7_1_FIX1-10-.zip"
+    ],
+    "member": "ZETA3_ELEMENTARY_ANCHOR_SERIES_v0_7_1_FIX1/Zeta3Anchor/MomentPartialFraction.lean",
+    "sha256": "b1ebeec57a02fba8905b8932f4eb49821415ddeb96aa8eec2c95421674505874",
+    "bytes": 628,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Mathlib"
+    ],
+    "declarations": [
+      "MOMENT_PARTIAL_FRACTION"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 30,
+    "attachment": 2,
+    "archive_chain": [
+      "02-ZETA3_ELEMENTARY_ANCHOR_SERIES_v0_7_1_FIX1-10-.zip"
+    ],
+    "member": "ZETA3_ELEMENTARY_ANCHOR_SERIES_v0_7_1_FIX1/Zeta3Anchor/MomentSeriesAudit.lean",
+    "sha256": "81cf5d2656511d210f43d01a3f44d8f6ef58e835ee06da49ae6a6ccc8717327d",
+    "bytes": 547,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta3Anchor.MomentSeriesFinite"
+    ],
+    "declarations": [],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 31,
+    "attachment": 2,
+    "archive_chain": [
+      "02-ZETA3_ELEMENTARY_ANCHOR_SERIES_v0_7_1_FIX1-10-.zip"
+    ],
+    "member": "ZETA3_ELEMENTARY_ANCHOR_SERIES_v0_7_1_FIX1/Zeta3Anchor/MomentSeriesFinite.lean",
+    "sha256": "814fe717beb7255f70e3d9ac582958147aea52e76d6ca0349aef50d49a769872",
+    "bytes": 4289,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta3Anchor.MomentSeriesTerm",
+      "Mathlib"
+    ],
+    "declarations": [
+      "momentSeriesH2",
+      "momentSeriesH3",
+      "momentSeriesSquare",
+      "momentSeriesCube",
+      "momentSeriesPartial",
+      "MOMENT_SERIES_FINITE_SHIFT",
+      "MOMENT_SERIES_SQUARE_SHIFT",
+      "MOMENT_SERIES_CUBE_SHIFT",
+      "MOMENT_SERIES_DIAGONAL_TRUNCATION",
+      "MOMENT_SERIES_OFF_DIAGONAL_SUM",
+      "MOMENT_SERIES_OFF_DIAGONAL_TRUNCATION"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 32,
+    "attachment": 2,
+    "archive_chain": [
+      "02-ZETA3_ELEMENTARY_ANCHOR_SERIES_v0_7_1_FIX1-10-.zip"
+    ],
+    "member": "ZETA3_ELEMENTARY_ANCHOR_SERIES_v0_7_1_FIX1/Zeta3Anchor/MomentSeriesTerm.lean",
+    "sha256": "b299ab1f91cd83e0a3f3dea7de42e6c4536b4274ac6fd398341be02b6541c8a4",
+    "bytes": 2388,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta3Anchor.MomentPartialFraction",
+      "Mathlib"
+    ],
+    "declarations": [
+      "momentSeriesShift",
+      "momentSeriesTerm",
+      "MOMENT_SERIES_DIAGONAL",
+      "MOMENT_SERIES_OFF_DIAGONAL"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 33,
+    "attachment": 2,
+    "archive_chain": [
+      "02-ZETA3_ELEMENTARY_ANCHOR_SERIES_v0_7_1_FIX1-10-.zip"
+    ],
+    "member": "ZETA3_ELEMENTARY_ANCHOR_SERIES_v0_7_1_FIX1/Zeta3Anchor/MomentSqueeze.lean",
+    "sha256": "cc4f24b4f27bd3c083f7f8086f560b2d28b1331abc4531692f534d300ee188af",
+    "bytes": 5130,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta3Anchor.MomentArithmetic",
+      "Zeta3Anchor.ArithmeticCriterion",
+      "Mathlib"
+    ],
+    "declarations": [
+      "finiteMomentReal",
+      "MOMENT_LCM_POSITIVE",
+      "MOMENT_INTEGER_LINEAR_FORM",
+      "MOMENT_ZETA3_IRRATIONAL_OF_SQUEEZE",
+      "MOMENT_LEGENDRE_ZETA3_IRRATIONAL_OF_ESTIMATES"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 34,
+    "attachment": 2,
+    "archive_chain": [
+      "02-ZETA3_ELEMENTARY_ANCHOR_SERIES_v0_7_1_FIX1-10-.zip"
+    ],
+    "member": "ZETA3_ELEMENTARY_ANCHOR_SERIES_v0_7_1_FIX1/Zeta3Anchor/MomentSqueezeAudit.lean",
+    "sha256": "2a4a6a138bd5f86bf686245d18e26a04e3133ed03f21c40ba37cc287a7649d90",
+    "bytes": 627,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta3Anchor.MomentSqueeze"
+    ],
+    "declarations": [],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 35,
+    "attachment": 2,
+    "archive_chain": [
+      "02-ZETA3_ELEMENTARY_ANCHOR_SERIES_v0_7_1_FIX1-10-.zip"
+    ],
+    "member": "ZETA3_ELEMENTARY_ANCHOR_SERIES_v0_7_1_FIX1/Zeta3Anchor/OperatorTransfer.lean",
+    "sha256": "764975d6df77a4a85b18c9d04d56be94804246e6391ac4c5b03f1353f047f281",
+    "bytes": 6765,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta3Anchor.MomentSqueeze",
+      "Zeta3Anchor.DyadicKernel",
+      "Mathlib"
+    ],
+    "declarations": [
+      "BeukersCube",
+      "beukersDen",
+      "beukersNum",
+      "beukersKernel",
+      "beukersWeight",
+      "beukersTerm",
+      "BEUKERS_DEN_POS",
+      "BEUKERS_NUM_POS",
+      "BEUKERS_KERNEL_POS",
+      "BEUKERS_KERNEL_UPPER",
+      "BEUKERS_WEIGHT_POS",
+      "BEUKERS_TERM_POS",
+      "BEUKERS_TERM_CONTRACTION",
+      "BeukersPolynomialFunctional",
+      "BeukersMomentRealization",
+      "BEUKERS_OPERATOR_MASS_POS",
+      "BEUKERS_MOMENT_POS_OF_REALIZATION",
+      "BEUKERS_MOMENT_UPPER_OF_REALIZATION",
+      "ZETA3_IRRATIONAL_OF_OPERATOR_REALIZATION"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 36,
+    "attachment": 2,
+    "archive_chain": [
+      "02-ZETA3_ELEMENTARY_ANCHOR_SERIES_v0_7_1_FIX1-10-.zip"
+    ],
+    "member": "ZETA3_ELEMENTARY_ANCHOR_SERIES_v0_7_1_FIX1/Zeta3Anchor/OperatorTransferAudit.lean",
+    "sha256": "e75fcabc1379e413728ee78ee04579857bee057ed147a49ca9e04f69a5264d5f",
+    "bytes": 994,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta3Anchor.OperatorTransfer",
+      "Zeta3Anchor.TighterKernel"
+    ],
+    "declarations": [],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 37,
+    "attachment": 2,
+    "archive_chain": [
+      "02-ZETA3_ELEMENTARY_ANCHOR_SERIES_v0_7_1_FIX1-10-.zip"
+    ],
+    "member": "ZETA3_ELEMENTARY_ANCHOR_SERIES_v0_7_1_FIX1/Zeta3Anchor/RiemannBridge.lean",
+    "sha256": "1bb0cfb539a55782d34899479c7cc0fc340e83101bb0c3702a27b9b3d852d1e6",
+    "bytes": 617,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta3Anchor.Elementary",
+      "Mathlib.Tactic"
+    ],
+    "declarations": [
+      "ZETA3_RIEMANN_IDENTIFIED"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 38,
+    "attachment": 2,
+    "archive_chain": [
+      "02-ZETA3_ELEMENTARY_ANCHOR_SERIES_v0_7_1_FIX1-10-.zip"
+    ],
+    "member": "ZETA3_ELEMENTARY_ANCHOR_SERIES_v0_7_1_FIX1/Zeta3Anchor/TighterKernel.lean",
+    "sha256": "87f4db3c384787e4b68aded20f184da23af28f80543f25c4326d5b29af6ce525",
+    "bytes": 5780,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Mathlib"
+    ],
+    "declarations": [
+      "REFINED_SCALAR_CONTRACTION",
+      "REFINED_DENOMINATOR_SOS",
+      "REFINED_KERNEL_CORE",
+      "REFINED_KERNEL_POLYNOMIAL",
+      "REFINED_KERNEL_BOUND",
+      "REFINED_FINAL_FACTOR",
+      "REFINED_SCALAR_SOS",
+      "REFINED_SCALAR_STRICT",
+      "REFINED_DENOMINATOR_RATIO",
+      "REFINED_RELAXED_LCM_RATIO",
+      "REFINED_RELAXED_LCM_CONTRACTION"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 39,
+    "attachment": 2,
+    "archive_chain": [
+      "02-ZETA3_ELEMENTARY_ANCHOR_SERIES_v0_7_1_FIX1-10-.zip"
+    ],
+    "member": "ZETA3_ELEMENTARY_ANCHOR_SERIES_v0_7_1_FIX1/Zeta3Anchor.lean",
+    "sha256": "e5dca2cd02d06451989956db62053c71dbe7948ded12250a9b02da24ab037b86",
+    "bytes": 30,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta3Anchor.GPTransfer"
+    ],
+    "declarations": [],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  }
+]

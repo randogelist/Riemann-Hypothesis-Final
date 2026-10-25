@@ -1,0 +1,963 @@
+[
+  {
+    "id": 725,
+    "attachment": 23,
+    "archive_chain": [
+      "23-ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX.zip"
+    ],
+    "member": "ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX/PaperChronology/Paper10ChainAudit.lean",
+    "sha256": "b5da3b6a2d8745ccc9e9fab731db23d82469f05621e9902e675679911d693f98",
+    "bytes": 1299,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChronology.Paper10Section2PoleAlgebra",
+      "PaperChronology.Paper10Section2TauPoleDifference",
+      "PaperChronology.Paper10Section4RootDistance",
+      "PaperChronology.Paper10Section6BetaSign",
+      "PaperChronology.Paper10Section8FiniteMass"
+    ],
+    "declarations": [
+      "PAPER10_ROOT_NONVANISHING_AND_CHARACTER_SIGN"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/23/root/ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX/PaperChronology/Paper10ChainAudit.lean"
+  },
+  {
+    "id": 726,
+    "attachment": 23,
+    "archive_chain": [
+      "23-ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX.zip"
+    ],
+    "member": "ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX/PaperChronology/Paper10ChainAuditV2.lean",
+    "sha256": "be9067ace70d36ec5f4d690c9ac0d5b89e7be99c7147e35ad3117ab726ea3584",
+    "bytes": 1192,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChronology.Paper10ChainAudit",
+      "PaperChronology.Paper10Section2OddPoleAllWeights",
+      "PaperChronology.Paper10Section2PoleReflection",
+      "PaperChronology.Paper10Section4SharpSpectralComparison",
+      "PaperChronology.Paper10Section6BetaNormalizedSign"
+    ],
+    "declarations": [
+      "PAPER10_REFLECTION_AND_BETA_NORMALIZATION"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/23/root/ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX/PaperChronology/Paper10ChainAuditV2.lean"
+  },
+  {
+    "id": 727,
+    "attachment": 23,
+    "archive_chain": [
+      "23-ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX.zip"
+    ],
+    "member": "ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX/PaperChronology/Paper10ChainAuditV3.lean",
+    "sha256": "f7426d81fd9ebc2cd7f61fc77e1cedf1119096449844d9c02b7c9b5437b1fc95",
+    "bytes": 785,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChronology.Paper10ChainAuditV2",
+      "PaperChronology.Paper10Section4IntegerPolynomialTransfer",
+      "PaperChronology.Paper10Section6PositiveDiagonal"
+    ],
+    "declarations": [],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/23/root/ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX/PaperChronology/Paper10ChainAuditV3.lean"
+  },
+  {
+    "id": 728,
+    "attachment": 23,
+    "archive_chain": [
+      "23-ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX.zip"
+    ],
+    "member": "ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX/PaperChronology/Paper10ChainAuditV4.lean",
+    "sha256": "30a5b96e2ad6a49ffd24e393efaec554a6b7c1dd56321a1a4584159759643a38",
+    "bytes": 1048,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChronology.Paper10ChainAuditV3",
+      "PaperChronology.Paper10Section3InjectiveWeightedGram",
+      "PaperChronology.Paper10Section6BetaResidueEnergy",
+      "PaperChronology.Paper10Section4CenterRationalObstruction"
+    ],
+    "declarations": [],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/23/root/ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX/PaperChronology/Paper10ChainAuditV4.lean"
+  },
+  {
+    "id": 729,
+    "attachment": 23,
+    "archive_chain": [
+      "23-ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX.zip"
+    ],
+    "member": "ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX/PaperChronology/Paper10ChainAuditV5.lean",
+    "sha256": "9941392fa345234c5f7e0e15494d107c0aec5d4a7134ee2c18e3a755ef380eee",
+    "bytes": 1380,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChronology.Paper10ChainAuditV4",
+      "PaperChronology.Paper10Section2FinitePoleSum",
+      "PaperChronology.Paper10Section3ThreeNodeGram",
+      "PaperChronology.Paper10Section4RationalFamilyCriterion",
+      "PaperChronology.Paper10Section6ShiftPoleAlignment",
+      "PaperChronology.Paper10Section6BetaThreeNode"
+    ],
+    "declarations": [],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/23/root/ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX/PaperChronology/Paper10ChainAuditV5.lean"
+  },
+  {
+    "id": 730,
+    "attachment": 23,
+    "archive_chain": [
+      "23-ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX.zip"
+    ],
+    "member": "ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX/PaperChronology/Paper10ChainAuditV6.lean",
+    "sha256": "d61fd21bb6bd6b8f4a29776db9cc34009737a70e0e9f209accca8d731e30f59a",
+    "bytes": 1287,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChronology.Paper10ChainAuditV5",
+      "PaperChronology.Paper10Section2CanonicalBasis",
+      "PaperChronology.Paper10Section3TwoByTwoInterlacing",
+      "PaperChronology.Paper10Section5TensorGridEnergy",
+      "PaperChronology.Paper10Section6BetaTensorGrid"
+    ],
+    "declarations": [],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/23/root/ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX/PaperChronology/Paper10ChainAuditV6.lean"
+  },
+  {
+    "id": 731,
+    "attachment": 23,
+    "archive_chain": [
+      "23-ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX.zip"
+    ],
+    "member": "ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX/PaperChronology/Paper10ChainAuditV7.lean",
+    "sha256": "67099f4bedeed450b9904fe70e7c8d46fac1f4ac4f179559c8dd62447c91db4a",
+    "bytes": 1118,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChronology.Paper10ChainAuditV6",
+      "PaperChronology.Paper10Section3Hankel3Determinant",
+      "PaperChronology.Paper10Section3RankTwoNewton",
+      "PaperChronology.Paper10Section8FinitePotentialIdentity",
+      "PaperChronology.Paper10Section8QuantitativeMassFraction"
+    ],
+    "declarations": [],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/23/root/ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX/PaperChronology/Paper10ChainAuditV7.lean"
+  },
+  {
+    "id": 732,
+    "attachment": 23,
+    "archive_chain": [
+      "23-ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX.zip"
+    ],
+    "member": "ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX/PaperChronology/Paper10ChainAuditV8.lean",
+    "sha256": "8e239d6a62b9cda1b955b8829513340e66472b93bc3600907b1de2db6682c925",
+    "bytes": 1169,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChronology.Paper10ChainAuditV7",
+      "PaperChronology.Paper10Section2AllRankResidueMatrix",
+      "PaperChronology.Paper10Section6AllRankBetaPoleDeterminant"
+    ],
+    "declarations": [],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/23/root/ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX/PaperChronology/Paper10ChainAuditV8.lean"
+  },
+  {
+    "id": 733,
+    "attachment": 23,
+    "archive_chain": [
+      "23-ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX.zip"
+    ],
+    "member": "ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX/PaperChronology/Paper10ChronologyAnchorBridge.lean",
+    "sha256": "6ed82d9027ad65ae8ab7a322337563829d8243118da6094969e18041543ee6a7",
+    "bytes": 622,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChronology.InputChainOrder",
+      "PaperChronology.Paper10ChainAudit"
+    ],
+    "declarations": [
+      "PAPER10_CHRONOLOGY_BRIDGE_SOURCE_CONNECTED"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/23/root/ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX/PaperChronology/Paper10ChronologyAnchorBridge.lean"
+  },
+  {
+    "id": 734,
+    "attachment": 23,
+    "archive_chain": [
+      "23-ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX.zip"
+    ],
+    "member": "ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX/PaperChronology/Paper10OriginalPaperBridge.lean",
+    "sha256": "1b5ac838363e573a9a3dff9e893f3dcdbae180cc0bf82cd015f72cca615b3613",
+    "bytes": 2443,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "MAIN_CHAIN_ASSEMBLED",
+      "MAIN_CHAIN_IRRATIONALITY",
+      "PaperChronology.Paper10ChainAudit"
+    ],
+    "declarations": [
+      "PAPER10_ACTUAL_ODD_ZETA_SPECTRAL_ARITHMETIC_ANCHOR",
+      "PAPER10_AFFINE_DECAY_IMPLIES_ODD_ZETA_IRRATIONAL"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/23/root/ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX/PaperChronology/Paper10OriginalPaperBridge.lean"
+  },
+  {
+    "id": 735,
+    "attachment": 23,
+    "archive_chain": [
+      "23-ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX.zip"
+    ],
+    "member": "ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX/PaperChronology/Paper10Section2AllRankResidueMatrix.lean",
+    "sha256": "01a459069fdc9a3919557e451812029fec1b07bf6412dbc0e72c68e310a2be4a",
+    "bytes": 2397,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Mathlib"
+    ],
+    "declarations": [
+      "PAPER10_RESIDUE_DIAGONAL_MATRIX",
+      "PAPER10_ALL_RANK_RESIDUE_DET_FACTOR",
+      "PAPER10_ALL_RANK_RESIDUE_DET_NONZERO",
+      "PAPER10_ALL_RANK_POSITIVE_RESIDUE_DET"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/23/root/ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX/PaperChronology/Paper10Section2AllRankResidueMatrix.lean"
+  },
+  {
+    "id": 736,
+    "attachment": 23,
+    "archive_chain": [
+      "23-ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX.zip"
+    ],
+    "member": "ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX/PaperChronology/Paper10Section2CanonicalBasis.lean",
+    "sha256": "f6953264385c087e93ca4896c581959bfac4176028909814e7f21491f01307d7",
+    "bytes": 9012,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Mathlib.RingTheory.Polynomial.GaussLemma",
+      "Mathlib.Algebra.Polynomial.Degree.Units",
+      "Mathlib.Tactic"
+    ],
+    "declarations": [
+      "PAPER10_CHANGE_BASIS_PENCIL",
+      "PAPER10_DET_CHANGE_BASIS",
+      "PAPER10_DET_CHANGE_BASIS_NONZERO_IFF",
+      "PAPER10_DET_CHANGE_BASIS_EVAL_ZERO_IFF",
+      "PAPER10_PRIMITIVE_ASSOCIATED_SIGN",
+      "PAPER10_PRIMITIVE_SCALAR_UNIQUE",
+      "PAPER10_PrimitiveNormalization",
+      "PAPER10_PRIMITIVE_SCALAR_INVARIANCE",
+      "PAPER10_PRIMITIVE_DET_BASIS_INVARIANCE",
+      "PAPER10_PRIMITIVE_NORMALIZATION_NONEMPTY",
+      "PAPER10_primitiveNormalization",
+      "PAPER10_CONSTRUCTED_PRIMITIVE_BASIS_INVARIANCE"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/23/root/ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX/PaperChronology/Paper10Section2CanonicalBasis.lean"
+  },
+  {
+    "id": 737,
+    "attachment": 23,
+    "archive_chain": [
+      "23-ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX.zip"
+    ],
+    "member": "ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX/PaperChronology/Paper10Section2FinitePoleSum.lean",
+    "sha256": "ff5b3c4190d3c5ed1a24b4eb3db5840629e9677c1b03659d9468fcc680b93d31",
+    "bytes": 1726,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChronology.Paper10Section2OddPoleAllWeights",
+      "Mathlib.Tactic"
+    ],
+    "declarations": [
+      "PAPER10_FINITE_ODD_POLE_SUM_PULLBACK"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/23/root/ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX/PaperChronology/Paper10Section2FinitePoleSum.lean"
+  },
+  {
+    "id": 738,
+    "attachment": 23,
+    "archive_chain": [
+      "23-ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX.zip"
+    ],
+    "member": "ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX/PaperChronology/Paper10Section2OddPoleAllWeights.lean",
+    "sha256": "dbd517ff4a4f08edff15c021cba1828040f36de14ee87745e85f34ce5fbf98e5",
+    "bytes": 3171,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChronology.Paper10Section2PoleAlgebra",
+      "Mathlib.Tactic"
+    ],
+    "declarations": [
+      "PAPER10_ODD_QUOTIENT",
+      "PAPER10_ODD_POLYNOMIAL_DIVISION",
+      "PAPER10_ALL_ODD_POLE_PULLBACK"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/23/root/ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX/PaperChronology/Paper10Section2OddPoleAllWeights.lean"
+  },
+  {
+    "id": 739,
+    "attachment": 23,
+    "archive_chain": [
+      "23-ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX.zip"
+    ],
+    "member": "ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX/PaperChronology/Paper10Section2PoleAlgebra.lean",
+    "sha256": "58ed3e048b293a2e2c0d4e32ba578eb12bf4aae06aa991e3e524fb9da7bffd1d",
+    "bytes": 1880,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Mathlib.Tactic"
+    ],
+    "declarations": [
+      "square_den_ne_zero",
+      "PAPER10_SQUARE_POLE_PARTIAL_FRACTIONS",
+      "PAPER10_CUBIC_POLE_PULLBACK"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/23/root/ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX/PaperChronology/Paper10Section2PoleAlgebra.lean"
+  },
+  {
+    "id": 740,
+    "attachment": 23,
+    "archive_chain": [
+      "23-ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX.zip"
+    ],
+    "member": "ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX/PaperChronology/Paper10Section2PoleReflection.lean",
+    "sha256": "ec1748fef59d8addad6c8b54563c6490b18aa387395b6f0ac0763af31db37bda",
+    "bytes": 1550,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChronology.Paper10Section2TauPoleDifference"
+    ],
+    "declarations": [
+      "PAPER10_TAU_POLE_REFLECTION",
+      "PAPER10_TAU_REFLECTION_TRANSLATION_TRIPLE"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/23/root/ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX/PaperChronology/Paper10Section2PoleReflection.lean"
+  },
+  {
+    "id": 741,
+    "attachment": 23,
+    "archive_chain": [
+      "23-ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX.zip"
+    ],
+    "member": "ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX/PaperChronology/Paper10Section2TauPoleDifference.lean",
+    "sha256": "d82958364f9370daa4e636ec788d1c9feb6292c5d9ce642a044332c65c530dd4",
+    "bytes": 2491,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Mathlib.Tactic"
+    ],
+    "declarations": [
+      "PAPER10_HARMONIC",
+      "PAPER10_HARMONIC_SUCC",
+      "PAPER10_TAU_POSITIVE_POLE",
+      "PAPER10_TAU_POSITIVE_POLE_DIFFERENCE",
+      "PAPER10_TAU_NEGATIVE_POLE",
+      "PAPER10_TAU_NEGATIVE_POLE_DIFFERENCE"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/23/root/ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX/PaperChronology/Paper10Section2TauPoleDifference.lean"
+  },
+  {
+    "id": 742,
+    "attachment": 23,
+    "archive_chain": [
+      "23-ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX.zip"
+    ],
+    "member": "ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX/PaperChronology/Paper10Section3Hankel3Determinant.lean",
+    "sha256": "f4231e805afac419586c6442231eeb7413938561509971a1c31e6be9e5b6178b",
+    "bytes": 2448,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Mathlib"
+    ],
+    "declarations": [
+      "PAPER10_THREE_ATOM_MOMENT",
+      "PAPER10_THREE_ATOM_HANKEL",
+      "PAPER10_THREE_ATOM_HANKEL_DET_FACTOR",
+      "PAPER10_THREE_ATOM_HANKEL_DET_POS"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/23/root/ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX/PaperChronology/Paper10Section3Hankel3Determinant.lean"
+  },
+  {
+    "id": 743,
+    "attachment": 23,
+    "archive_chain": [
+      "23-ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX.zip"
+    ],
+    "member": "ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX/PaperChronology/Paper10Section3InjectiveWeightedGram.lean",
+    "sha256": "ae26bf066a8bbbcf16aea59e20b3e7a8aac886bc06b863b4e4ad3569a9967fc6",
+    "bytes": 3172,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChronology.Paper10Section6PositiveDiagonal",
+      "Mathlib.Tactic"
+    ],
+    "declarations": [
+      "PAPER10_TWO_NODE_VANDERMONDE_ZERO",
+      "PAPER10_TWO_NODE_VANDERMONDE_GRAM_STRICT",
+      "PAPER10_FINITE_WEIGHTED_GRAM_STRICT"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/23/root/ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX/PaperChronology/Paper10Section3InjectiveWeightedGram.lean"
+  },
+  {
+    "id": 744,
+    "attachment": 23,
+    "archive_chain": [
+      "23-ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX.zip"
+    ],
+    "member": "ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX/PaperChronology/Paper10Section3RankTwoNewton.lean",
+    "sha256": "3a995608ca50b3430cfa46958952575909759ed864a3e840f104f1c9a779dd94",
+    "bytes": 1319,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Mathlib.Tactic"
+    ],
+    "declarations": [
+      "PAPER10_STRICT_NEWTON_RANK_TWO",
+      "PAPER10_NORMALIZED_E2_STRICT_LOG_CONCAVITY"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/23/root/ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX/PaperChronology/Paper10Section3RankTwoNewton.lean"
+  },
+  {
+    "id": 745,
+    "attachment": 23,
+    "archive_chain": [
+      "23-ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX.zip"
+    ],
+    "member": "ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX/PaperChronology/Paper10Section3ThreeNodeGram.lean",
+    "sha256": "b1c46ae1b655885bd90143bbea50677508526d832a8998231aecc0050bb66d92",
+    "bytes": 4384,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChronology.Paper10Section3InjectiveWeightedGram",
+      "Mathlib.Tactic"
+    ],
+    "declarations": [
+      "PAPER10_TWO_NODE_GRAM_DETERMINANT",
+      "PAPER10_TWO_NODE_GRAM_DETERMINANT_POSITIVE",
+      "PAPER10_THREE_NODE_VANDERMONDE_ZERO",
+      "PAPER10_THREE_NODE_WEIGHTED_GRAM_STRICT"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/23/root/ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX/PaperChronology/Paper10Section3ThreeNodeGram.lean"
+  },
+  {
+    "id": 746,
+    "attachment": 23,
+    "archive_chain": [
+      "23-ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX.zip"
+    ],
+    "member": "ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX/PaperChronology/Paper10Section3TwoByTwoInterlacing.lean",
+    "sha256": "ab496d548ef232c24aab632e24b8cc22ff9c756d5a33669ef26d27c01217a3a8",
+    "bytes": 3675,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Mathlib.Tactic"
+    ],
+    "declarations": [
+      "PAPER10_TWO_BY_TWO_CHARACTERISTIC",
+      "PAPER10_TWO_BY_TWO_ROOT_TRACE",
+      "PAPER10_TWO_BY_TWO_ROOT_PRODUCT",
+      "PAPER10_STRICT_TWO_BY_TWO_INTERLACING"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/23/root/ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX/PaperChronology/Paper10Section3TwoByTwoInterlacing.lean"
+  },
+  {
+    "id": 747,
+    "attachment": 23,
+    "archive_chain": [
+      "23-ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX.zip"
+    ],
+    "member": "ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX/PaperChronology/Paper10Section4CenterRationalObstruction.lean",
+    "sha256": "bdd9134bc315cab41e801803d4dcb3ca29b20cc066e7de5a4a6a4f06257c50f2",
+    "bytes": 1498,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChronology.Paper10Section4IntegerPolynomialTransfer",
+      "Mathlib.Tactic"
+    ],
+    "declarations": [
+      "PAPER10_INTEGER_SPECTRAL_CENTER_NOT_RATIONAL_AT"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/23/root/ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX/PaperChronology/Paper10Section4CenterRationalObstruction.lean"
+  },
+  {
+    "id": 748,
+    "attachment": 23,
+    "archive_chain": [
+      "23-ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX.zip"
+    ],
+    "member": "ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX/PaperChronology/Paper10Section4IntegerPolynomialTransfer.lean",
+    "sha256": "77e963dd2031ca03deadfd3f780d861d380e1d3362113d0954744f7c6e9a9e9e",
+    "bytes": 3353,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChronology.Paper10Section4SharpSpectralComparison",
+      "Mathlib.Algebra.Polynomial.DenomsClearable",
+      "Mathlib.Tactic"
+    ],
+    "declarations": [
+      "PAPER10_EVAL_INTEGER_POLYNOMIAL",
+      "PAPER10_INTEGER_POLYNOMIAL_HEIGHT_GAP",
+      "PAPER10_INTEGER_POLYNOMIAL_SPECTRAL_EXCLUSION"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/23/root/ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX/PaperChronology/Paper10Section4IntegerPolynomialTransfer.lean"
+  },
+  {
+    "id": 749,
+    "attachment": 23,
+    "archive_chain": [
+      "23-ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX.zip"
+    ],
+    "member": "ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX/PaperChronology/Paper10Section4RationalFamilyCriterion.lean",
+    "sha256": "7b5b185fb3623843796be6afc64a7e4fc661b65f47d7918b15838a3de9a6d01b",
+    "bytes": 1629,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChronology.Paper10Section4CenterRationalObstruction",
+      "Mathlib.Tactic"
+    ],
+    "declarations": [
+      "PAPER10_ALL_RATIONAL_PAIRS_EXCLUDED_FROM_CERTIFICATES"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/23/root/ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX/PaperChronology/Paper10Section4RationalFamilyCriterion.lean"
+  },
+  {
+    "id": 750,
+    "attachment": 23,
+    "archive_chain": [
+      "23-ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX.zip"
+    ],
+    "member": "ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX/PaperChronology/Paper10Section4RootDistance.lean",
+    "sha256": "e254665ee33410f53ce28d386d04bccd0b86e8a39720edc314d9d413e34aeb2e",
+    "bytes": 2872,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Mathlib.Tactic"
+    ],
+    "declarations": [
+      "PAPER10_REAL_ROOT_SEPARATION",
+      "PAPER10_FINITE_ROOT_PRODUCT_NONZERO",
+      "PAPER10_REAL_ROOT_FACTOR_UPPER",
+      "PAPER10_FINITE_ROOT_PRODUCT_UPPER"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/23/root/ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX/PaperChronology/Paper10Section4RootDistance.lean"
+  },
+  {
+    "id": 751,
+    "attachment": 23,
+    "archive_chain": [
+      "23-ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX.zip"
+    ],
+    "member": "ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX/PaperChronology/Paper10Section4SharpSpectralComparison.lean",
+    "sha256": "181f66da5eee5583846b84a3f018fa04d1126928c72b2280275478be9486e4e4",
+    "bytes": 4516,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChronology.Paper10Section4RootDistance",
+      "Mathlib.Analysis.Complex.Exponential",
+      "Mathlib.Tactic"
+    ],
+    "declarations": [
+      "PAPER10_SPECTRAL_PRODUCT_SHARP_TWO",
+      "PAPER10_SHARP_RADIUS",
+      "PAPER10_SHARP_RADIUS_POS",
+      "PAPER10_SHARP_RADIUS_SUM_BOUND",
+      "PAPER10_SPECTRAL_LOCAL_COMPARISON"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/23/root/ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX/PaperChronology/Paper10Section4SharpSpectralComparison.lean"
+  },
+  {
+    "id": 752,
+    "attachment": 23,
+    "archive_chain": [
+      "23-ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX.zip"
+    ],
+    "member": "ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX/PaperChronology/Paper10Section5TensorGridEnergy.lean",
+    "sha256": "8645adc2c1c5a89461de6d0fad6fd6625cd6b4ac7fc474b02f4a45542741f7e7",
+    "bytes": 4084,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChronology.Paper10Section3InjectiveWeightedGram",
+      "Mathlib.Tactic"
+    ],
+    "declarations": [
+      "PAPER10_BILINEAR_TENSOR_GRID_ZERO",
+      "PAPER10_BILINEAR_TENSOR_GRID_GRAM_STRICT"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/23/root/ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX/PaperChronology/Paper10Section5TensorGridEnergy.lean"
+  },
+  {
+    "id": 753,
+    "attachment": 23,
+    "archive_chain": [
+      "23-ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX.zip"
+    ],
+    "member": "ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX/PaperChronology/Paper10Section6AllRankBetaPoleDeterminant.lean",
+    "sha256": "3116577676d8cd477b3166c1d4268eb67345c0629b1eebbc941be9ac9ca68dc9",
+    "bytes": 3995,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChronology.Paper10Section2AllRankResidueMatrix",
+      "PaperChronology.Paper10Section6BetaResidueEnergy"
+    ],
+    "declarations": [
+      "PAPER10_ALL_RANK_VANDERMONDE_DET_NONZERO",
+      "PAPER10_ALL_RANK_VANDERMONDE_RESIDUE_DET_NONZERO",
+      "PAPER10_ALL_RANK_VANDERMONDE_POSITIVE_DET",
+      "PAPER10_BETA_ALL_RANK_VANDERMONDE_PENCIL",
+      "PAPER10_BETA_ALL_RANK_VANDERMONDE_DET_POS",
+      "PAPER10_BETA_ALL_RANK_VANDERMONDE_DET_NONZERO"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/23/root/ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX/PaperChronology/Paper10Section6AllRankBetaPoleDeterminant.lean"
+  },
+  {
+    "id": 754,
+    "attachment": 23,
+    "archive_chain": [
+      "23-ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX.zip"
+    ],
+    "member": "ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX/PaperChronology/Paper10Section6BetaNormalizedSign.lean",
+    "sha256": "57dcc85a5565f4da71dd1d427d14384f77a1bfce8c0f9619fda7d6f7fead6eba",
+    "bytes": 860,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChronology.Paper10Section6BetaSign"
+    ],
+    "declarations": [
+      "PAPER10_BETA_FULL_CHARACTER_VANDERMONDE_CANCELLATION"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/23/root/ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX/PaperChronology/Paper10Section6BetaNormalizedSign.lean"
+  },
+  {
+    "id": 755,
+    "attachment": 23,
+    "archive_chain": [
+      "23-ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX.zip"
+    ],
+    "member": "ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX/PaperChronology/Paper10Section6BetaResidueEnergy.lean",
+    "sha256": "7eeba174e604a3adab8517fc9102786f142b0d7be97d7401b80e16cb1e1d3ffc",
+    "bytes": 3854,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChronology.Paper10Section3InjectiveWeightedGram",
+      "PaperChronology.Paper10Section6BetaNormalizedSign",
+      "Mathlib.Tactic"
+    ],
+    "declarations": [
+      "PAPER10_BETA_REAL_SIGN_NORMALIZATION",
+      "PAPER10_BETA_NORMALIZED_RESIDUE",
+      "PAPER10_BETA_NORMALIZED_RESIDUE_EQ",
+      "PAPER10_BETA_NORMALIZED_RESIDUES_POSITIVE",
+      "PAPER10_BETA_INJECTIVE_PENCIL_STRICT",
+      "PAPER10_BETA_TWO_NODE_PENCIL_STRICT"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/23/root/ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX/PaperChronology/Paper10Section6BetaResidueEnergy.lean"
+  },
+  {
+    "id": 756,
+    "attachment": 23,
+    "archive_chain": [
+      "23-ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX.zip"
+    ],
+    "member": "ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX/PaperChronology/Paper10Section6BetaSign.lean",
+    "sha256": "5e094479660892561cd55e167020650d9c66050a4c6278e8f51bb986c3d31fac",
+    "bytes": 1546,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Mathlib.Tactic"
+    ],
+    "declarations": [
+      "PAPER10_BETA_VANDERMONDE_RESIDUAL_SIGN",
+      "PAPER10_BETA_VANDERMONDE_EVEN_BASE",
+      "PAPER10_BETA_VANDERMONDE_ODD_BASE"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/23/root/ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX/PaperChronology/Paper10Section6BetaSign.lean"
+  },
+  {
+    "id": 757,
+    "attachment": 23,
+    "archive_chain": [
+      "23-ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX.zip"
+    ],
+    "member": "ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX/PaperChronology/Paper10Section6BetaTensorGrid.lean",
+    "sha256": "bd6778a20c8d1a44e669a54ab8eccc6364674efb48cc385b0b828e23e5b7f7f8",
+    "bytes": 1803,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChronology.Paper10Section5TensorGridEnergy",
+      "PaperChronology.Paper10Section6BetaResidueEnergy",
+      "Mathlib.Tactic"
+    ],
+    "declarations": [
+      "PAPER10_BETA_BILINEAR_TENSOR_GRID_STRICT"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/23/root/ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX/PaperChronology/Paper10Section6BetaTensorGrid.lean"
+  },
+  {
+    "id": 758,
+    "attachment": 23,
+    "archive_chain": [
+      "23-ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX.zip"
+    ],
+    "member": "ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX/PaperChronology/Paper10Section6BetaThreeNode.lean",
+    "sha256": "3a171213df4a83a343dc9d6e73b8862fe8a7f03cd24aca2065efba8eeacb1655",
+    "bytes": 1540,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChronology.Paper10Section3ThreeNodeGram",
+      "PaperChronology.Paper10Section6BetaResidueEnergy",
+      "Mathlib.Tactic"
+    ],
+    "declarations": [
+      "PAPER10_BETA_THREE_NODE_PENCIL_STRICT"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/23/root/ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX/PaperChronology/Paper10Section6BetaThreeNode.lean"
+  },
+  {
+    "id": 759,
+    "attachment": 23,
+    "archive_chain": [
+      "23-ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX.zip"
+    ],
+    "member": "ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX/PaperChronology/Paper10Section6PositiveDiagonal.lean",
+    "sha256": "a0938b53bdd98853e87ee03c82d5ba2207af8511f93582d4137d4f95a4a4d094",
+    "bytes": 1605,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChronology.Paper10Section6BetaNormalizedSign",
+      "Mathlib.Tactic"
+    ],
+    "declarations": [
+      "PAPER10_POSITIVE_DIAGONAL_NONNEG",
+      "PAPER10_POSITIVE_DIAGONAL_STRICT"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/23/root/ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX/PaperChronology/Paper10Section6PositiveDiagonal.lean"
+  },
+  {
+    "id": 760,
+    "attachment": 23,
+    "archive_chain": [
+      "23-ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX.zip"
+    ],
+    "member": "ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX/PaperChronology/Paper10Section6ShiftPoleAlignment.lean",
+    "sha256": "730218ac8e11d412a2663e23c70ebd034fe2f3195a11c29f8050037c17c79b36",
+    "bytes": 1432,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Mathlib.Tactic"
+    ],
+    "declarations": [
+      "PAPER10_DIFFERENTIAL_SHIFT_POLE_ALIGNMENT",
+      "PAPER10_DIFFERENTIAL_SHIFT_FINITE_COUPLING"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/23/root/ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX/PaperChronology/Paper10Section6ShiftPoleAlignment.lean"
+  },
+  {
+    "id": 761,
+    "attachment": 23,
+    "archive_chain": [
+      "23-ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX.zip"
+    ],
+    "member": "ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX/PaperChronology/Paper10Section8FiniteMass.lean",
+    "sha256": "ab082b2cd1eb3ba0b8402b4f2d81b42d02e8cbdb1445fcdda9122d45103ba8e1",
+    "bytes": 1136,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Mathlib.Tactic"
+    ],
+    "declarations": [
+      "PAPER10_SPECTRAL_MASS_HAS_LARGE_TERM"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/23/root/ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX/PaperChronology/Paper10Section8FiniteMass.lean"
+  },
+  {
+    "id": 762,
+    "attachment": 23,
+    "archive_chain": [
+      "23-ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX.zip"
+    ],
+    "member": "ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX/PaperChronology/Paper10Section8FinitePotentialIdentity.lean",
+    "sha256": "c05b31605f5df3229592ae5f479aee0fd7bcaa2bc6215a3449a41d34c68594f7",
+    "bytes": 2342,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Mathlib"
+    ],
+    "declarations": [
+      "PAPER10_FINITE_ROOT_SPECTRAL_PRODUCT_CONSERVATION",
+      "PAPER10_FINITE_LOG_POTENTIAL_CONSERVATION"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/23/root/ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX/PaperChronology/Paper10Section8FinitePotentialIdentity.lean"
+  },
+  {
+    "id": 763,
+    "attachment": 23,
+    "archive_chain": [
+      "23-ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX.zip"
+    ],
+    "member": "ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX/PaperChronology/Paper10Section8QuantitativeMassFraction.lean",
+    "sha256": "143ca2cb6a63518b3cf9a15a881407625ab340cd6a53a9bd23ad15329a7d7002",
+    "bytes": 2493,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChronology.Paper10Section8FiniteMass",
+      "Mathlib.Tactic"
+    ],
+    "declarations": [
+      "PAPER10_FINITE_MASS_HIGH_FRACTION"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/23/root/ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX/PaperChronology/Paper10Section8QuantitativeMassFraction.lean"
+  }
+]

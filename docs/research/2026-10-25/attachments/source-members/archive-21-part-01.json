@@ -1,0 +1,95 @@
+[
+  {
+    "id": 87,
+    "attachment": 7,
+    "archive_chain": [
+      "07-ZETA5_NATIVE_WITNESS_SEARCH_v0_1_0-2-.zip"
+    ],
+    "member": "ZETA5_NATIVE_WITNESS_SEARCH_v0_1_0/examples/r2_a1_L7_m2_n1.lean",
+    "sha256": "7e4cc635940108a6d179d29b3864d581bc9cd5a631618e11ccab22f871055705",
+    "bytes": 1603,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta5Euler.Native"
+    ],
+    "declarations": [
+      "targetValue",
+      "coefficients",
+      "eulerTerms",
+      "scale",
+      "zetaLowerNumerator",
+      "zetaUpperNumerator",
+      "polynomialLowerNumerator",
+      "polynomialUpperNumerator",
+      "requestedDenominator",
+      "cppCertifiedDenominator",
+      "orientation"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 88,
+    "attachment": 7,
+    "archive_chain": [
+      "07-ZETA5_NATIVE_WITNESS_SEARCH_v0_1_0-2-.zip"
+    ],
+    "member": "ZETA5_NATIVE_WITNESS_SEARCH_v0_1_0/examples/r2_a1_L7_m2_n2.lean",
+    "sha256": "200c0e134f25517b424b59e3afdee9c59653923c09d3b11aa2197b01dd40f3fb",
+    "bytes": 5680,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta5Euler.Native"
+    ],
+    "declarations": [
+      "targetValue",
+      "coefficients",
+      "eulerTerms",
+      "scale",
+      "zetaLowerNumerator",
+      "zetaUpperNumerator",
+      "polynomialLowerNumerator",
+      "polynomialUpperNumerator",
+      "requestedDenominator",
+      "cppCertifiedDenominator",
+      "orientation"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 89,
+    "attachment": 7,
+    "archive_chain": [
+      "07-ZETA5_NATIVE_WITNESS_SEARCH_v0_1_0-2-.zip"
+    ],
+    "member": "ZETA5_NATIVE_WITNESS_SEARCH_v0_1_0/examples/r2_a1_L7_m2_n3.lean",
+    "sha256": "aeb2d7a747b18bc3d3e7d447c089b3e5dba167edcfd2efa9251b1534ba7a2d1c",
+    "bytes": 18144,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta5Euler.Native"
+    ],
+    "declarations": [
+      "targetValue",
+      "coefficients",
+      "eulerTerms",
+      "scale",
+      "zetaLowerNumerator",
+      "zetaUpperNumerator",
+      "polynomialLowerNumerator",
+      "polynomialUpperNumerator",
+      "requestedDenominator",
+      "cppCertifiedDenominator",
+      "orientation"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  }
+]

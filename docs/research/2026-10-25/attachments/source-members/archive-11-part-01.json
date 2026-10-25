@@ -1,0 +1,1054 @@
+[
+  {
+    "id": 619,
+    "attachment": 19,
+    "archive_chain": [
+      "19-ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/PaperChronology/Audit.lean",
+    "sha256": "c39a2e209b5ba60e330545076cafe76dbab5645e4e7ee4ceb9c1c0c7427d1f24",
+    "bytes": 6147,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChronology.TenStageNativeChain",
+      "PaperChronology.Section3SignatureCounts",
+      "PaperChronology.Section3ScalarPencil",
+      "PaperChronology.Section6BetaCharacterParity",
+      "PaperChronology.Section2BasisCongruence",
+      "PaperChronology.Section2PolynomialBasisChange",
+      "PaperChronology.Section2LagrangeFactor",
+      "PaperChronology.Section3ScalarSpectralGap",
+      "PaperChronology.Section4RationalFloor",
+      "PaperChronology.Section6BetaResiduePositive",
+      "PaperChronology.Section4IntegerPolynomialEval",
+      "PaperChronology.Section4RootProductControl",
+      "PaperChronology.Section4FiniteTransfer",
+      "PaperChronology.InputChainOrder",
+      "PaperChronology.Section2MomentPoles"
+    ],
+    "declarations": [],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/19/root/ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/PaperChronology/Audit.lean"
+  },
+  {
+    "id": 620,
+    "attachment": 19,
+    "archive_chain": [
+      "19-ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/PaperChronology/CoordinateCongruenceAudit.lean",
+    "sha256": "1bfe2ea7eaf6c19cfd8c17873a2e719c6a92a8032d308b18e895daca2bd95d54",
+    "bytes": 1534,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChronology.Section2CoordinateCongruence"
+    ],
+    "declarations": [],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/19/root/ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/PaperChronology/CoordinateCongruenceAudit.lean"
+  },
+  {
+    "id": 621,
+    "attachment": 19,
+    "archive_chain": [
+      "19-ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/PaperChronology/CoordinateQuotientAudit.lean",
+    "sha256": "791b4ad38d16d536077c03fc0f9f546bca5c3a306cc2890414cfbad02c93320a",
+    "bytes": 1368,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChronology.Section2CoordinateQuotient"
+    ],
+    "declarations": [],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/19/root/ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/PaperChronology/CoordinateQuotientAudit.lean"
+  },
+  {
+    "id": 622,
+    "attachment": 19,
+    "archive_chain": [
+      "19-ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/PaperChronology/FiniteGramAudit.lean",
+    "sha256": "e51fccf3b47ce1fde2860906e1d356c20e82f6d70ee6a6c8746fb0566b3cd46a",
+    "bytes": 443,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChronology.Stage03FiniteGram"
+    ],
+    "declarations": [],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/19/root/ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/PaperChronology/FiniteGramAudit.lean"
+  },
+  {
+    "id": 623,
+    "attachment": 19,
+    "archive_chain": [
+      "19-ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/PaperChronology/FullRationalPullbackAudit.lean",
+    "sha256": "4d1ad9d1a678d5a8630da428db07aa82b58d02b745e876a8a2fa9125632bc584",
+    "bytes": 840,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChronology.Stage01FullRationalPullback"
+    ],
+    "declarations": [],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/19/root/ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/PaperChronology/FullRationalPullbackAudit.lean"
+  },
+  {
+    "id": 624,
+    "attachment": 19,
+    "archive_chain": [
+      "19-ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/PaperChronology/FunctionLevelPullbackAudit.lean",
+    "sha256": "d17ffe887c7b84f37325390c13efd039f7e95a264047130fcdb936a4320c2d1b",
+    "bytes": 1053,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChronology.Section2FunctionLevelPullback"
+    ],
+    "declarations": [],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/19/root/ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/PaperChronology/FunctionLevelPullbackAudit.lean"
+  },
+  {
+    "id": 625,
+    "attachment": 19,
+    "archive_chain": [
+      "19-ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/PaperChronology/InputChainOrder.lean",
+    "sha256": "c7c612f1c3d8d9d224328d2a57f3cae2eef03bf084c10a28eecde648d3a69250",
+    "bytes": 5439,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChronology.Section4FiniteTransfer",
+      "PaperChronology.Section6BetaResiduePositive"
+    ],
+    "declarations": [
+      "originalInputNumber",
+      "inputOrder",
+      "proofOrder",
+      "dependencies",
+      "rank",
+      "original_nodup",
+      "proof_nodup",
+      "proof_length",
+      "every_block_present",
+      "prerequisites_are_earlier",
+      "FiniteRootPacket",
+      "rational_outside_certified_disk"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/19/root/ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/PaperChronology/InputChainOrder.lean"
+  },
+  {
+    "id": 626,
+    "attachment": 19,
+    "archive_chain": [
+      "19-ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/PaperChronology/PolynomialTauAudit.lean",
+    "sha256": "bca38f63a33355c0fb9519f01c4e34f0fe8b72a065d322b0531656c4abd65b42",
+    "bytes": 902,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChronology.Stage01PolynomialTau",
+      "PaperChronology.TenStageNativeChain"
+    ],
+    "declarations": [],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/19/root/ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/PaperChronology/PolynomialTauAudit.lean"
+  },
+  {
+    "id": 627,
+    "attachment": 19,
+    "archive_chain": [
+      "19-ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/PaperChronology/Section2BasisCongruence.lean",
+    "sha256": "e124cf893e2df9cc3b42abaa978034380aa9782b46b8194a275e06e52dced45b",
+    "bytes": 984,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Mathlib"
+    ],
+    "declarations": [
+      "det_congruence",
+      "det_zero_iff",
+      "det_nonzero"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/19/root/ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/PaperChronology/Section2BasisCongruence.lean"
+  },
+  {
+    "id": 628,
+    "attachment": 19,
+    "archive_chain": [
+      "19-ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/PaperChronology/Section2CoordinateCongruence.lean",
+    "sha256": "b7a06ee4bc44b8e4f7e9d5f08befed54a89616c44181d7add891fa180334a221",
+    "bytes": 15863,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChronology.Section2FunctionLevelPullback"
+    ],
+    "declarations": [
+      "generatorSum",
+      "generatorSum_perm",
+      "generatorSum_moves",
+      "poleCoordinates",
+      "SameCoordinates",
+      "muPoly_as_sum",
+      "tauPoly_as_sum",
+      "muPoles_as_sum",
+      "tauPoleKernel",
+      "tauPoles_as_sum",
+      "polyValue_as_sum",
+      "polesValue_as_sum",
+      "expandedPoly_as_sum",
+      "expandedPoleKernel",
+      "expandedPoles_as_sum",
+      "muPolyTerms_respects_moves",
+      "tauPolyTerms_respects_moves",
+      "muPoleTerms_respects_moves",
+      "tauPoleTerms_respects_moves",
+      "polynomialValue_respects_moves",
+      "squarePoleValue_respects_moves",
+      "expandedPolynomialValue_respects_moves",
+      "expandedSquarePoleValue_respects_moves",
+      "finiteMu_respects_coordinates",
+      "finiteTau_respects_coordinates",
+      "rationalValue_respects_coordinates",
+      "expandedRationalValue_respects_coordinates",
+      "finite_presentation_quotient_bridge"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/19/root/ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/PaperChronology/Section2CoordinateCongruence.lean"
+  },
+  {
+    "id": 629,
+    "attachment": 19,
+    "archive_chain": [
+      "19-ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/PaperChronology/Section2CoordinateQuotient.lean",
+    "sha256": "cc40036b04888113b05af06ccaffec558523756be4882289b4f1055e7d982abb",
+    "bytes": 6560,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChronology.Section2CoordinateCongruence"
+    ],
+    "declarations": [
+      "coefficientMoves_refl",
+      "coordinate_refl",
+      "coordinate_symm",
+      "coordinate_trans",
+      "CoordinateQuotient",
+      "quotientOf",
+      "quotientMu",
+      "quotientTau",
+      "quotientValue",
+      "quotientExpanded",
+      "quotientMu_of",
+      "quotientTau_of",
+      "quotientValue_of",
+      "quotientExpanded_of",
+      "quotientOf_eq",
+      "quotientMomentPullback",
+      "quotientFunctionPullback",
+      "quotientFunctionAndMoment"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/19/root/ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/PaperChronology/Section2CoordinateQuotient.lean"
+  },
+  {
+    "id": 630,
+    "attachment": 19,
+    "archive_chain": [
+      "19-ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/PaperChronology/Section2FunctionLevelPullback.lean",
+    "sha256": "b5e662b61f6182839411ff02321304c8923e91d354e4eac1c989a921382356f9",
+    "bytes": 10600,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChronology.Stage01FullRationalPullback"
+    ],
+    "declarations": [
+      "oddQuotient",
+      "oddQuotient_division",
+      "squareDenom_ne_zero",
+      "symmetric_poles",
+      "square_pole_pointwise",
+      "polynomial_generator_pointwise",
+      "polynomialValue",
+      "expandedPolynomialValue",
+      "polynomial_terms_pointwise",
+      "squarePoleValue",
+      "expandedSquarePoleValue",
+      "AvoidSquarePoles",
+      "square_poles_pointwise",
+      "rationalValue",
+      "expandedRationalValue",
+      "finite_rational_function_pointwise",
+      "finite_function_and_moment_pullback"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/19/root/ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/PaperChronology/Section2FunctionLevelPullback.lean"
+  },
+  {
+    "id": 631,
+    "attachment": 19,
+    "archive_chain": [
+      "19-ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/PaperChronology/Section2LagrangeFactor.lean",
+    "sha256": "a1ea9ebf043ff44714f87c12dec9a3a6bfd4a3f0eeeeb85752bc9363a21608cb",
+    "bytes": 1320,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChronology.Section2BasisCongruence"
+    ],
+    "declarations": [
+      "diagonal_det_nonzero",
+      "lagrange_det_formula",
+      "lagrange_det_nonzero"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/19/root/ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/PaperChronology/Section2LagrangeFactor.lean"
+  },
+  {
+    "id": 632,
+    "attachment": 19,
+    "archive_chain": [
+      "19-ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/PaperChronology/Section2MomentPoles.lean",
+    "sha256": "edee9f2aed2d5b17cdecb648744814f9982f49ae17b30498ddcb61ce1a05a6a7",
+    "bytes": 7801,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Mathlib"
+    ],
+    "declarations": [
+      "harmonic",
+      "harmonic_succ",
+      "poleIndex",
+      "poleIndex_reflection",
+      "poleIndex_step_positive",
+      "poleIndex_step_negative",
+      "tauPole",
+      "tauPole_reflection",
+      "tauPole_zero",
+      "tauPole_minus_one",
+      "pole_step_positive",
+      "pole_step_negative",
+      "poleIndex_as_rational_positive",
+      "poleIndex_as_rational_negative",
+      "odd_neg_pow",
+      "tauPole_difference_odd",
+      "rationalPole",
+      "rationalPole_reflection",
+      "tauPoleSum",
+      "poleFunction",
+      "reflectPoleTerms",
+      "poleFunction_reflection",
+      "tauPoleSum_reflection"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/19/root/ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/PaperChronology/Section2MomentPoles.lean"
+  },
+  {
+    "id": 633,
+    "attachment": 19,
+    "archive_chain": [
+      "19-ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/PaperChronology/Section2PolynomialBasisChange.lean",
+    "sha256": "cadd83cddbcd76737e7c33ffce48aaabfe144434cd788f8b65e6d499608d7fc8",
+    "bytes": 1776,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChronology.Section2BasisCongruence"
+    ],
+    "declarations": [
+      "constantBasis",
+      "constantBasis_det",
+      "polynomial_pencil_change",
+      "polynomial_pencil_roots_iff"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/19/root/ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/PaperChronology/Section2PolynomialBasisChange.lean"
+  },
+  {
+    "id": 634,
+    "attachment": 19,
+    "archive_chain": [
+      "19-ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/PaperChronology/Section2PolynomialTau.lean",
+    "sha256": "e187484abc5536e296ad83c6b986094dcf340c56941676d2c39a59ce57eabecb",
+    "bytes": 9685,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Mathlib"
+    ],
+    "declarations": [
+      "muMonomial",
+      "bernoulli_binomial_sum",
+      "tauMonomial",
+      "tauMonomial_eq_choose",
+      "tauMonomial_binomial_convolution",
+      "pullback_identity_monomial",
+      "tau_reflection_monomial"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/19/root/ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/PaperChronology/Section2PolynomialTau.lean"
+  },
+  {
+    "id": 635,
+    "attachment": 19,
+    "archive_chain": [
+      "19-ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/PaperChronology/Section2SimplePolePullback.lean",
+    "sha256": "bfbf9d665b18222d1122c275492683a512ee082d79384cc794e50aa4a29a1826",
+    "bytes": 6991,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChronology.Section2PolynomialTau"
+    ],
+    "declarations": [
+      "harmonicWeight",
+      "harmonicWeight_zero",
+      "harmonicWeight_succ",
+      "muPolePoly",
+      "dIndex",
+      "dIndex_reflect",
+      "tauPolePoly",
+      "tauPolePoly_reflect",
+      "affinePoleLeft",
+      "affinePoleRight",
+      "pullback_identity_pole"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/19/root/ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/PaperChronology/Section2SimplePolePullback.lean"
+  },
+  {
+    "id": 636,
+    "attachment": 19,
+    "archive_chain": [
+      "19-ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/PaperChronology/Section3ScalarPencil.lean",
+    "sha256": "d599d6020706cf9a34fbe39b5e8654412be5487d907e72529cddf67e98b38a40",
+    "bytes": 1418,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Mathlib"
+    ],
+    "declarations": [
+      "scalar_root_equation",
+      "scalar_root_iff",
+      "scalar_root_distance"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/19/root/ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/PaperChronology/Section3ScalarPencil.lean"
+  },
+  {
+    "id": 637,
+    "attachment": 19,
+    "archive_chain": [
+      "19-ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/PaperChronology/Section3ScalarSpectralGap.lean",
+    "sha256": "58c0883de74153c8b08262cc8b975b7ff58eb7566d01d974968d71c0e33c57e7",
+    "bytes": 890,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChronology.Section3ScalarPencil"
+    ],
+    "declarations": [
+      "root_separation_from_spectral_bound"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/19/root/ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/PaperChronology/Section3ScalarSpectralGap.lean"
+  },
+  {
+    "id": 638,
+    "attachment": 19,
+    "archive_chain": [
+      "19-ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/PaperChronology/Section3SignatureCounts.lean",
+    "sha256": "d429795be33babd0b68c9b7924ef58276aed0a8ad3255ecda813b37a791a298f",
+    "bytes": 625,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Mathlib"
+    ],
+    "declarations": [
+      "nPos",
+      "nNeg",
+      "count_identity"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/19/root/ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/PaperChronology/Section3SignatureCounts.lean"
+  },
+  {
+    "id": 639,
+    "attachment": 19,
+    "archive_chain": [
+      "19-ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/PaperChronology/Section4FiniteTransfer.lean",
+    "sha256": "e7462773f28547fddd88d300cc45c7119efe5b8bab345fb38450bd840d7bb3b2",
+    "bytes": 3410,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChronology.Section4IntegerPolynomialEval",
+      "PaperChronology.Section4RootProductControl"
+    ],
+    "declarations": [
+      "finite_root_geometric_obstruction"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/19/root/ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/PaperChronology/Section4FiniteTransfer.lean"
+  },
+  {
+    "id": 640,
+    "attachment": 19,
+    "archive_chain": [
+      "19-ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/PaperChronology/Section4IntegerPolynomialEval.lean",
+    "sha256": "3403020f250d19bf26996ef04b6b0db65e716a1724647176b5ef5b02d6981499",
+    "bytes": 2863,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChronology.Section4RationalFloor"
+    ],
+    "declarations": [
+      "coeffEval",
+      "denominatorNumerator",
+      "denominator_identity",
+      "coeff_eval_nonzero_floor"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/19/root/ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/PaperChronology/Section4IntegerPolynomialEval.lean"
+  },
+  {
+    "id": 641,
+    "attachment": 19,
+    "archive_chain": [
+      "19-ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/PaperChronology/Section4RationalFloor.lean",
+    "sha256": "890db736fd7bfb5cbf0e5a0232a6b9672df90daadfe3684266c0a8788cf792e6",
+    "bytes": 1371,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Mathlib"
+    ],
+    "declarations": [
+      "nonzero_integer_cast_abs_ge_one",
+      "rational_value_denominator_floor"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/19/root/ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/PaperChronology/Section4RationalFloor.lean"
+  },
+  {
+    "id": 642,
+    "attachment": 19,
+    "archive_chain": [
+      "19-ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/PaperChronology/Section4RootProductControl.lean",
+    "sha256": "9a7348ef405509bf7002b7baecb35d9358a0641f1a880d7fdc3c2bb22102b7b6",
+    "bytes": 2862,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Mathlib"
+    ],
+    "declarations": [
+      "rootProduct",
+      "root_factor_control",
+      "rootProduct_control",
+      "rootProduct_nonzero",
+      "separated_roots_avoided"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/19/root/ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/PaperChronology/Section4RootProductControl.lean"
+  },
+  {
+    "id": 643,
+    "attachment": 19,
+    "archive_chain": [
+      "19-ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/PaperChronology/Section6BetaCharacterParity.lean",
+    "sha256": "65d8c4491f14f368126b87cd62945ec00f9d3ecc0eedb6fe7cd249b04fb40c7c",
+    "bytes": 1398,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Mathlib"
+    ],
+    "declarations": [
+      "raw_character_vandermonde_sign",
+      "normalized_character_vandermonde_sign"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/19/root/ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/PaperChronology/Section6BetaCharacterParity.lean"
+  },
+  {
+    "id": 644,
+    "attachment": 19,
+    "archive_chain": [
+      "19-ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/PaperChronology/Section6BetaResiduePositive.lean",
+    "sha256": "bfe1d15e65058b66921c7b1b629eabd42d2d41b28e8901cbd43184e8a05f0bfe",
+    "bytes": 725,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChronology.Section6BetaCharacterParity"
+    ],
+    "declarations": [
+      "normalized_residue_weight_positive"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/19/root/ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/PaperChronology/Section6BetaResiduePositive.lean"
+  },
+  {
+    "id": 645,
+    "attachment": 19,
+    "archive_chain": [
+      "19-ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/PaperChronology/Stage01FullRationalPullback.lean",
+    "sha256": "28e4a34478a0835084454a4ea79584db63ade8d28cdd0ae595d3cf0fd86a2b81",
+    "bytes": 5083,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChronology.Section2SimplePolePullback"
+    ],
+    "declarations": [
+      "PositiveSquarePole",
+      "FiniteRationalMoment",
+      "muPolyTerms",
+      "tauPullbackPolyTerms",
+      "polynomial_generators_pullback",
+      "muPoleTerms",
+      "tauPullbackPoleTerms",
+      "simple_pole_generators_pullback",
+      "muFiniteRationalMoment",
+      "tauPulledFiniteRationalMoment",
+      "finiteRationalMoment_pullback"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/19/root/ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/PaperChronology/Stage01FullRationalPullback.lean"
+  },
+  {
+    "id": 646,
+    "attachment": 19,
+    "archive_chain": [
+      "19-ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/PaperChronology/Stage01MomentAlgebra.lean",
+    "sha256": "393b9cf7cc480374cd7114dc0d31175093a2fcc61c555baa68dee35e44ceedc6",
+    "bytes": 1545,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChronology.Section2MomentPoles"
+    ],
+    "declarations": [
+      "pole_difference_all_nonzero",
+      "pole_two_step",
+      "pole_reflection_finite"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/19/root/ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/PaperChronology/Stage01MomentAlgebra.lean"
+  },
+  {
+    "id": 647,
+    "attachment": 19,
+    "archive_chain": [
+      "19-ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/PaperChronology/Stage01PolynomialTau.lean",
+    "sha256": "7a1fc7100b4290996c0476c5e52e38c437557f7a3e414f3fa8d75587406aaa57",
+    "bytes": 3712,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChronology.Section2PolynomialTau",
+      "PaperChronology.Stage01MomentAlgebra"
+    ],
+    "declarations": [
+      "tauPolynomialTerms",
+      "reflectedPolynomialTerms",
+      "polynomial_reflection_finite",
+      "RationalTauData",
+      "tauFinite",
+      "reflectedTauFinite",
+      "tau_finite_reflection"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/19/root/ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/PaperChronology/Stage01PolynomialTau.lean"
+  },
+  {
+    "id": 648,
+    "attachment": 19,
+    "archive_chain": [
+      "19-ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/PaperChronology/Stage02CanonicalBasis.lean",
+    "sha256": "cd98094dd3c85192fb961a61ec597ba5acf061474d1de288f6a81b2b613b1c7c",
+    "bytes": 1532,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChronology.Stage01MomentAlgebra",
+      "PaperChronology.Section2PolynomialBasisChange",
+      "PaperChronology.Section2LagrangeFactor"
+    ],
+    "declarations": [
+      "same_rational_zeros",
+      "PrimitiveContentTarget"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/19/root/ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/PaperChronology/Stage02CanonicalBasis.lean"
+  },
+  {
+    "id": 649,
+    "attachment": 19,
+    "archive_chain": [
+      "19-ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/PaperChronology/Stage03ActualGram.lean",
+    "sha256": "a952ce254b3d378646330c6ebe668f35ded66c2dcf9af89014d9252e0216fc09",
+    "bytes": 1216,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChronology.Stage05RootTransfer",
+      "PaperChronology.Section3SignatureCounts",
+      "PaperChronology.Section3ScalarSpectralGap"
+    ],
+    "declarations": [
+      "GramMomentTarget",
+      "scalar_gap"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/19/root/ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/PaperChronology/Stage03ActualGram.lean"
+  },
+  {
+    "id": 650,
+    "attachment": 19,
+    "archive_chain": [
+      "19-ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/PaperChronology/Stage03FiniteGram.lean",
+    "sha256": "0c260c246cb81b9a53d8465065ec79a713a249ef69cf72eb0a8396d6447ab63f",
+    "bytes": 2564,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChronology.Stage03ActualGram"
+    ],
+    "declarations": [
+      "finiteGramKernel",
+      "finiteGramKernel_symmetry",
+      "finiteGramKernel_diagonal_nonneg",
+      "finiteFeatureValue",
+      "finiteGramEnergy",
+      "finiteGramEnergy_nonneg"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/19/root/ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/PaperChronology/Stage03FiniteGram.lean"
+  },
+  {
+    "id": 651,
+    "attachment": 19,
+    "archive_chain": [
+      "19-ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/PaperChronology/Stage04PrincipalMinors.lean",
+    "sha256": "b5cd44cab1198e40f84ec66f06e8399d02720fe967e9c6982b46e3bc5fb91fce",
+    "bytes": 1207,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChronology.Stage03ActualGram"
+    ],
+    "declarations": [
+      "leadingPrincipalMinor",
+      "claimedDegree",
+      "RankLawTarget"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/19/root/ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/PaperChronology/Stage04PrincipalMinors.lean"
+  },
+  {
+    "id": 652,
+    "attachment": 19,
+    "archive_chain": [
+      "19-ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/PaperChronology/Stage05RootTransfer.lean",
+    "sha256": "b6c1e89c0f3449a8462bcd9303ecad5949a0c5d38429e8490906e826756d5819",
+    "bytes": 1093,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChronology.Stage02CanonicalBasis",
+      "PaperChronology.InputChainOrder"
+    ],
+    "declarations": [
+      "integer_outside_certified_disk"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/19/root/ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/PaperChronology/Stage05RootTransfer.lean"
+  },
+  {
+    "id": 653,
+    "attachment": 19,
+    "archive_chain": [
+      "19-ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/PaperChronology/Stage06ZetaFiveRates.lean",
+    "sha256": "a144fcda32e550df5c1e51fd395e2585b967b761dc39f07a94fe9ab77d2f9734",
+    "bytes": 1378,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChronology.Stage04PrincipalMinors",
+      "PaperChronology.Section4IntegerPolynomialEval"
+    ],
+    "declarations": [
+      "LinearDegreeBound",
+      "QuadraticSmallValues",
+      "ExponentialRootGap"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/19/root/ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/PaperChronology/Stage06ZetaFiveRates.lean"
+  },
+  {
+    "id": 654,
+    "attachment": 19,
+    "archive_chain": [
+      "19-ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/PaperChronology/Stage07MixedWeights.lean",
+    "sha256": "4571ddf81b9057d92055f2b453f95a54cd42c91e3e58f20b63b2767ddeae9a7b",
+    "bytes": 1078,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChronology.Stage08DeterminantRates"
+    ],
+    "declarations": [
+      "PositiveWeightSandwich",
+      "coupled_weight_positive"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/19/root/ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/PaperChronology/Stage07MixedWeights.lean"
+  },
+  {
+    "id": 655,
+    "attachment": 19,
+    "archive_chain": [
+      "19-ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/PaperChronology/Stage08DeterminantRates.lean",
+    "sha256": "1825d887f1fc8a3146de02b644d8b10ea4df91d2ab117fac002546be4a7ea44f",
+    "bytes": 976,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChronology.Stage06ZetaFiveRates"
+    ],
+    "declarations": [
+      "DeterminantRateWindow",
+      "ClosestRootCollapse"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/19/root/ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/PaperChronology/Stage08DeterminantRates.lean"
+  },
+  {
+    "id": 656,
+    "attachment": 19,
+    "archive_chain": [
+      "19-ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/PaperChronology/Stage09Beukers.lean",
+    "sha256": "6374857559ccd24e4e0e2fc9effc91192f4e80c6afb5549ae54bc316ef398eaa",
+    "bytes": 912,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChronology.Stage07MixedWeights"
+    ],
+    "declarations": [
+      "RationalPencil",
+      "FiniteTailCertificate"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/19/root/ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/PaperChronology/Stage09Beukers.lean"
+  },
+  {
+    "id": 657,
+    "attachment": 19,
+    "archive_chain": [
+      "19-ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/PaperChronology/Stage10BetaCouplings.lean",
+    "sha256": "88cdbb82adc3736637c8162579ec4f138682b2550f427b90072cb9e873a010d9",
+    "bytes": 904,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChronology.Stage09Beukers",
+      "PaperChronology.Section6BetaResiduePositive"
+    ],
+    "declarations": [
+      "oriented_beta_residue_positive"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/19/root/ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/PaperChronology/Stage10BetaCouplings.lean"
+  },
+  {
+    "id": 658,
+    "attachment": 19,
+    "archive_chain": [
+      "19-ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/PaperChronology/TenStageNativeChain.lean",
+    "sha256": "01bea4ebda0e0b9bbb69d40364a16247586e61c9697a39a2964f0a954a72e06b",
+    "bytes": 1123,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChronology.Stage10BetaCouplings"
+    ],
+    "declarations": [
+      "finite_certified_integer_exclusion"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/19/root/ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/PaperChronology/TenStageNativeChain.lean"
+  }
+]

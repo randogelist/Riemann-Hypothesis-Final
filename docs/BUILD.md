@@ -38,14 +38,60 @@ The default compiler is `%USERPROFILE%\.elan\toolchains\leanprover--lean4---v4.3
 
 `build-modules.txt` and `build-modules-full.txt` contain topologically ordered project module paths, one per line, with forward slashes and no `.lean` extension. Names must use letters, digits, underscores and `/`. Lines beginning with `#` are comments. Every plan must include a module whose name ends in `Audit`; each such module must print at least one actual axiom report using `#print axioms`.
 
+## Analytic equivalences and residual endpoint integration
+
+The recovered analytic source closures and the new residual/finite-program
+endpoints are included only in the full plan. Build them with the existing
+native Windows command:
+
+```bat
+run.cmd full
+```
+
+The default `run.cmd` and `run.cmd search` retain their core scopes. There is
+no separate proof runner, secondary cache, or installation step for these
+endpoints. `run.cmd`, `scripts/cache/Build.lean`, the Lean 4.33 pin, cache
+fingerprinting and axiom whitelist are unchanged.
+
+`ReciprocalAudit.lean` checks
+`SoloAdmission.ANALYTIC_ADMISSION_IFF_RH`, and
+`AnalyticPublicationAudit.lean` checks
+`SoloboloAdmission.slitODEAdmission_iff_RH`. Both explicit type annotations
+end in `_root_.RiemannHypothesis`; their 61 combined `#print axioms` commands
+cover the selected actual-function and equivalence declarations. The nine
+recovered mathematical modules and these two audits retain their staged
+source bytes. `AnalyticEndpointAudit.lean` adds 59 axiom targets for the remaining
+public helpers, the six recovered finite-program modules, and the new
+residual implications. It explicitly checks
+`FiniteProgram.nativeRH_of_uniformResidual` against native Mathlib RH and
+checks that the sole external condition unfolds to locally uniform convergence
+of the actual theta residual. The latter is a definitional type check, not a
+proof that the condition holds.
+
+All newly integrated sources have `NATIVE_COMPILATION=NOT_RUN` and
+`NATIVE_AXIOM_AUDIT=NOT_RUN`. The static integration record is
+[analytic-publication-static-audit.json](../provenance/analytic-publication-static-audit.json).
+Its static result is not a native build receipt. The original source comments
+are preserved; they do not establish a new compiled checkpoint. The existing
+warning-as-error flags can reject warnings in recovered sources and are not
+relaxed for this integration.
+
+A successful full build would check the displayed equivalences and
+conditional implications. It would not construct an analytic reciprocal,
+prove the uniform residual condition, derive actual calibration for a finite
+program, or exhibit an accepted finite RH witness. See
+[ACTUAL_CONDITION.md](ACTUAL_CONDITION.md) for the precise remaining condition
+and [RECOVERED_EQUIVALENCES.md](RECOVERED_EQUIVALENCES.md) for the source boundary.
+
 ## GP source integration
 
 `run.cmd full` builds the active modules listed in `build-modules-full.txt`,
 including the literal Mellin–Hilbert objects, native ξ compatibility, recovered
 KQ/GP/BKQR/SOLOBOLO construction, GP7 weight-seven modules and the generic
-master energy extraction. The full plan currently contains 89 modules; the
+master energy extraction. The full plan currently contains 109 modules; the
 manifest is the authoritative module inventory and order. The corresponding `RHFinal/GP/*Audit.lean` modules print the selected
-endpoint axiom dependencies. Their compilation, when successful, certifies
+GP endpoint axiom dependencies. The three analytic publication audits described
+above cover the newly integrated analytic and finite-program endpoints. Their compilation, when successful, certifies
 only their actual statements and visible hypotheses.
 
 The historical master files with an opaque custom RH and literature axioms,

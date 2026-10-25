@@ -1,0 +1,963 @@
+[
+  {
+    "id": 764,
+    "attachment": 24,
+    "archive_chain": [
+      "24-ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX/PaperChain/Audit.lean",
+    "sha256": "804f2600c1fac7a050d83d29a95372a2c3a77695017d28b7cb43f272ead1c788",
+    "bytes": 1386,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChain.Interfaces"
+    ],
+    "declarations": [],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/24/root/ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX/PaperChain/Audit.lean"
+  },
+  {
+    "id": 765,
+    "attachment": 24,
+    "archive_chain": [
+      "24-ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX/PaperChain/Character.lean",
+    "sha256": "7df891c63d756122962635e76e096a2cb9cee31f5920dc98b46a17d326c0bb55",
+    "bytes": 1303,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChain.Counting",
+      "Mathlib.Tactic.Ring",
+      "Mathlib.Tactic.Positivity"
+    ],
+    "declarations": [
+      "alternating_sign_cancel",
+      "gamma_pos_of_positive_weight",
+      "negative_valuation_not_zero"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/24/root/ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX/PaperChain/Character.lean"
+  },
+  {
+    "id": 766,
+    "attachment": 24,
+    "archive_chain": [
+      "24-ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX/PaperChain/Comparison.lean",
+    "sha256": "708c5cb38e444c2bb852ba04cff15a14e367896141706bb56bd6eb4e9121c22b",
+    "bytes": 4023,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChain.Spectral",
+      "Mathlib.Analysis.Complex.Exponential",
+      "Mathlib.Tactic.Positivity",
+      "Mathlib.Tactic.NormNum",
+      "Mathlib.Tactic.Linarith",
+      "Mathlib.Tactic.FieldSimp"
+    ],
+    "declarations": [
+      "product_comparison_of_sum_abs_le",
+      "comparisonRadius",
+      "comparisonRadius_pos",
+      "comparison_of_sum_le",
+      "perturbation_sum_le_of_radius",
+      "comparison_of_radius"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/24/root/ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX/PaperChain/Comparison.lean"
+  },
+  {
+    "id": 767,
+    "attachment": 24,
+    "archive_chain": [
+      "24-ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX/PaperChain/Core.lean",
+    "sha256": "d2d22d9704c30056c82f727130ea7016c4e0aaa71004215b28732e0abfd82a33",
+    "bytes": 2636,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Mathlib.Algebra.BigOperators.Intervals",
+      "Lean.Elab.Tactic.Omega",
+      "Mathlib.Tactic.Ring",
+      "Mathlib.Tactic.NormNum"
+    ],
+    "declarations": [
+      "harmonicWeight",
+      "harmonicWeight_succ",
+      "tauPositivePole",
+      "tauPositivePole_difference",
+      "tauNegativePole_difference",
+      "dIndex",
+      "dIndex_reflect",
+      "tauPole",
+      "tauPole_reflect",
+      "tauPole_reflection_with_sign"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/24/root/ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX/PaperChain/Core.lean"
+  },
+  {
+    "id": 768,
+    "attachment": 24,
+    "archive_chain": [
+      "24-ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX/PaperChain/Counting.lean",
+    "sha256": "c807fa135fa48a243fe4655ef33ae9cb0aae4f672502cd66d69ec72b8ee7e34a",
+    "bytes": 1763,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChain.Transfer",
+      "Mathlib.Analysis.SpecialFunctions.Log.Basic",
+      "Mathlib.Tactic.Linarith",
+      "Mathlib.Tactic.NormNum"
+    ],
+    "declarations": [
+      "fraction_from_two_level_bound",
+      "finite_potential_gap",
+      "printed_spectral_exponents",
+      "printed_determinant_bounds"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/24/root/ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX/PaperChain/Counting.lean"
+  },
+  {
+    "id": 769,
+    "attachment": 24,
+    "archive_chain": [
+      "24-ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX/PaperChain/FrozenSection2.lean",
+    "sha256": "0c24aae2d8c5a6e390647e0cd4bcf17ece12aea421e4479be9b2cfb3601a8ad2",
+    "bytes": 5414,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChain.Audit",
+      "Zetahyperbolic.Section2Checked"
+    ],
+    "declarations": [
+      "monomial_pullback",
+      "simple_pole_pullback",
+      "pole_reflection",
+      "pole_difference",
+      "primitive_basis_invariance",
+      "slope_factorization_and_nonsingularity",
+      "lagrange_coefficients"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/24/root/ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX/PaperChain/FrozenSection2.lean"
+  },
+  {
+    "id": 770,
+    "attachment": 24,
+    "archive_chain": [
+      "24-ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX/PaperChain/FrozenSection3AffineDegree.lean",
+    "sha256": "4b1caa5f46491577f7e8046ca85807cfd8ea41de46614c2419e70ee4b28a6e1e",
+    "bytes": 2887,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChain.FrozenSection3AffineEntries",
+      "Mathlib.LinearAlgebra.Matrix.Polynomial",
+      "Mathlib.Algebra.Polynomial.Degree.SmallDegree",
+      "Mathlib.Tactic"
+    ],
+    "declarations": [
+      "original_Delta_coeff_top",
+      "original_Delta_ne_zero",
+      "original_Delta_natDegree",
+      "original_Delta_leadingCoeff"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/24/root/ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX/PaperChain/FrozenSection3AffineDegree.lean"
+  },
+  {
+    "id": 771,
+    "attachment": 24,
+    "archive_chain": [
+      "24-ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX/PaperChain/FrozenSection3AffineEntries.lean",
+    "sha256": "03990e51df217193436c16cd873030053d869de53a5bd08f5d7d3aeeaa3c4a75",
+    "bytes": 2753,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChain.FrozenSection3Pencil",
+      "Mathlib.Algebra.Polynomial.Coeff",
+      "Mathlib.Tactic"
+    ],
+    "declarations": [
+      "rationalConstantMatrix",
+      "original_pencil_entry_affine",
+      "original_pencil_eq_X_smul_add"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/24/root/ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX/PaperChain/FrozenSection3AffineEntries.lean"
+  },
+  {
+    "id": 772,
+    "attachment": 24,
+    "archive_chain": [
+      "24-ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX/PaperChain/FrozenSection3AffineReal.lean",
+    "sha256": "40cc734bf9c358a355c9597458a4417e4f9b3121f4c25c6fefb167d946482a94",
+    "bytes": 2080,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChain.FrozenSection3AffineDegree",
+      "Mathlib.Tactic"
+    ],
+    "declarations": [
+      "original_entry_eval₂_affine",
+      "original_manuscriptGram_affine"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/24/root/ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX/PaperChain/FrozenSection3AffineReal.lean"
+  },
+  {
+    "id": 773,
+    "attachment": 24,
+    "archive_chain": [
+      "24-ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX/PaperChain/FrozenSection3Gram.lean",
+    "sha256": "44650179033451424afa5c7ceb93c58c21e294bb1193c03d5597ebafc037bc21",
+    "bytes": 8003,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChain.FrozenSection3Integrability",
+      "Mathlib.Algebra.Polynomial.OfFn",
+      "Mathlib.Algebra.Polynomial.Roots",
+      "Mathlib.LinearAlgebra.Matrix.PosDef",
+      "Mathlib.MeasureTheory.Integral.Bochner.Basic",
+      "Mathlib.MeasureTheory.Measure.Typeclasses.NullSingletonClass"
+    ],
+    "declarations": [
+      "momentMatrix",
+      "eval_ofFn_eq_sum",
+      "eval_ofFn_sq_eq_sum",
+      "integrable_eval_ofFn_sq",
+      "quadratic_eq_integral_sq",
+      "integral_polynomial_sq_pos",
+      "momentMatrix_posDef",
+      "actualMomentMatrix_posDef",
+      "actualMomentMatrix_det_ne_zero",
+      "manuscriptGramAt",
+      "EntryIdentityAt",
+      "manuscriptGramAt_posDef_of_entryIdentity",
+      "manuscriptGramAt_det_ne_zero_of_entryIdentity"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/24/root/ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX/PaperChain/FrozenSection3Gram.lean"
+  },
+  {
+    "id": 774,
+    "attachment": 24,
+    "archive_chain": [
+      "24-ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX/PaperChain/FrozenSection3Integrability.lean",
+    "sha256": "5af01defe15065966296b0cda29e62b4b589b0cea0efeadee6163b2c6bff2e7a",
+    "bytes": 9686,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChain.FrozenSection3Measure",
+      "Mathlib.Analysis.SpecialFunctions.Gamma.Basic",
+      "Mathlib.MeasureTheory.Integral.DominatedConvergence",
+      "Mathlib.Analysis.PSeries",
+      "Mathlib.Tactic"
+    ],
+    "declarations": [
+      "integral_pow_mul_exp",
+      "integrableOn_pow_mul_exp",
+      "momentTerm",
+      "momentCoefficient",
+      "momentTerm_integrable",
+      "integral_momentTerm",
+      "momentTerm_nonneg",
+      "evenPSeries",
+      "summable_evenPSeries",
+      "evenPSeries_pos",
+      "summable_integral_norm_momentTerm",
+      "integral_tsum_momentTerm",
+      "integrableOn_tsum_momentTerm",
+      "monomial_density_eq_tsum",
+      "integrableOn_monomial_density",
+      "integrableOn_polynomial_density",
+      "integrableOn_weight_moment",
+      "integrable_momentMeasure",
+      "integrable_pairwise_moment"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/24/root/ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX/PaperChain/FrozenSection3Integrability.lean"
+  },
+  {
+    "id": 775,
+    "attachment": 24,
+    "archive_chain": [
+      "24-ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX/PaperChain/FrozenSection3Kernel.lean",
+    "sha256": "55239babcc88e9e42df7bfce9f0669ce89844dde3cff9973cd7e152ac9df9f56",
+    "bytes": 4863,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChain.FrozenSection2"
+    ],
+    "declarations": [
+      "exponentialTerm",
+      "exponentialTerm_pos",
+      "summable_exponentialTerm",
+      "exponentialSeries_pos",
+      "boseDensity",
+      "boseDensity_pos",
+      "boseDensity_nonneg",
+      "denominatorRatio",
+      "denominatorRatio_pos",
+      "weight",
+      "weight_pos",
+      "weight_ne_zero",
+      "polynomial_square_integrand_pos"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/24/root/ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX/PaperChain/FrozenSection3Kernel.lean"
+  },
+  {
+    "id": 776,
+    "attachment": 24,
+    "archive_chain": [
+      "24-ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX/PaperChain/FrozenSection3Measure.lean",
+    "sha256": "74d7dab17430acf4cd00ee346bc501b95521b0d5c6118f4c75a5d5ddb5ce7b16",
+    "bytes": 6459,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChain.FrozenSection3Kernel",
+      "Mathlib.MeasureTheory.Measure.WithDensity",
+      "Mathlib.MeasureTheory.Constructions.Polish.Basic",
+      "Mathlib.MeasureTheory.Integral.Bochner.ContinuousLinearMap",
+      "Mathlib.Algebra.Polynomial.Roots"
+    ],
+    "declarations": [
+      "measurable_exponentialTerm",
+      "measurable_boseDensity",
+      "measurable_weight",
+      "weightedMeasure",
+      "weightedMeasure_nonzero",
+      "momentMeasure",
+      "momentMeasure_nonzero",
+      "integral_momentMeasure",
+      "integrable_momentMeasure_iff"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/24/root/ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX/PaperChain/FrozenSection3Measure.lean"
+  },
+  {
+    "id": 777,
+    "attachment": 24,
+    "archive_chain": [
+      "24-ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX/PaperChain/FrozenSection3Pencil.lean",
+    "sha256": "da5d9acd55bcb8b0813b5c643e88616ea4a42ea67f4241add71c5f32819c5429",
+    "bytes": 6537,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChain.FrozenSection3Gram",
+      "Mathlib.LinearAlgebra.Matrix.Determinant.Basic",
+      "Mathlib.Tactic"
+    ],
+    "declarations": [
+      "derivativeReal",
+      "manuscriptGramAt_symmetric",
+      "derivativeReal_symmetric",
+      "derivativeReal_entry",
+      "derivativeReal_det_ne_zero",
+      "momentMatrix_eq_BoseIntegrals",
+      "entryIdentityAt_iff_explicitBoseIntegrals",
+      "manuscriptGramAt_posDef_of_explicitBoseIntegrals",
+      "manuscriptGramAt_det_ne_zero_of_explicitBoseIntegrals"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/24/root/ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX/PaperChain/FrozenSection3Pencil.lean"
+  },
+  {
+    "id": 778,
+    "attachment": 24,
+    "archive_chain": [
+      "24-ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX/PaperChain/Interfaces.lean",
+    "sha256": "fe2c99b5e650c9275abe2ba19c08fff9103dc9ffa13457bec89cfaa775e6c864",
+    "bytes": 2984,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChain.Character"
+    ],
+    "declarations": [
+      "OriginalDeterminantLink",
+      "PrincipalMinorInputs",
+      "AnalyticRateInputs",
+      "MultiweightConeInputs",
+      "TwoVariableTailInput",
+      "BetaPencilInput"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/24/root/ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX/PaperChain/Interfaces.lean"
+  },
+  {
+    "id": 779,
+    "attachment": 24,
+    "archive_chain": [
+      "24-ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX/PaperChain/Spectral.lean",
+    "sha256": "c0c22b3ace21b7e71d8ab2060ef8d296c21eabd84da8dd3aa64358312a9dc9e7",
+    "bytes": 4350,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChain.Core",
+      "Mathlib.Data.Real.Basic",
+      "Mathlib.Algebra.Polynomial.DenomsClearable",
+      "Mathlib.Tactic.FieldSimp",
+      "Mathlib.Tactic.Linarith"
+    ],
+    "declarations": [
+      "linear_factor_eq_zero_iff",
+      "AffineFactorization",
+      "root",
+      "eval_center",
+      "center_ne_zero",
+      "eval_eq_zero_iff",
+      "eval_root",
+      "root_ne_center",
+      "root_distance",
+      "root_distance_lower_bound",
+      "eval_ne_zero_of_distance_lt"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/24/root/ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX/PaperChain/Spectral.lean"
+  },
+  {
+    "id": 780,
+    "attachment": 24,
+    "archive_chain": [
+      "24-ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX/PaperChain/Transfer.lean",
+    "sha256": "cca09607916b611e8cf0a8704bfdabfd7b311eef4ed9c7fe5519919d8ae2560c",
+    "bytes": 7124,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "PaperChain.Comparison",
+      "Mathlib.NumberTheory.Real.Irrational",
+      "Mathlib.Tactic.NormNum",
+      "Mathlib.Tactic.Linarith",
+      "Mathlib.Tactic.Positivity",
+      "Mathlib.Tactic.Ring",
+      "Mathlib.Tactic.FieldSimp"
+    ],
+    "declarations": [
+      "evalReal",
+      "cleared_eval_is_integer",
+      "polynomial_integer_squeeze",
+      "LocalComparison",
+      "Decay",
+      "IndexBudget",
+      "RationalMeasure",
+      "conditional_measure",
+      "RationalMeasure.irrational",
+      "conditional_irrational",
+      "paper_parameter_inequalities",
+      "paper_transfer_threshold",
+      "paper_decay_margin",
+      "local_comparison_from_normalized_spectral"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/24/root/ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX/PaperChain/Transfer.lean"
+  },
+  {
+    "id": 781,
+    "attachment": 24,
+    "archive_chain": [
+      "24-ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX/provenance/Section2Checked.lean",
+    "sha256": "97a3eebe510a69450ce92a8c880ed7341f90017d52748152e44786f8ea612822",
+    "bytes": 64808,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Mathlib",
+      "Zetahyperbolic.CoreLinearAlgebra",
+      "Zetahyperbolic.Section3Elementary"
+    ],
+    "declarations": [
+      "HankelParams",
+      "h",
+      "alpha",
+      "lam",
+      "h_pos",
+      "alpha_add_lam",
+      "D_poly",
+      "D_poly_zero",
+      "D_real",
+      "D_real_eq_eval₂",
+      "D_real_pos",
+      "D_real_ratio_pos",
+      "D_real_ne_zero",
+      "D_real_succ",
+      "D_real_mono",
+      "D_real_ge_one",
+      "harmonicWeight",
+      "harmonicWeight_zero",
+      "harmonicWeight_succ",
+      "muMonomial",
+      "muPolePoly",
+      "muPoleEval",
+      "RatMomentElem",
+      "muFunctionalPoly",
+      "coeff_C_mul_X_sub_C",
+      "muPolePoly_coeff_one",
+      "muFunctionalPoly_coeff_one",
+      "dIndex",
+      "dIndex_reflect",
+      "bernoulli_binomial_sum",
+      "tauMonomial",
+      "tauMonomial_eq_choose",
+      "tauMonomial_binomial_convolution",
+      "tauPolePoly",
+      "tauPolePoly_reflect",
+      "pullback_identity_monomial",
+      "affinePoleLeft",
+      "affinePoleRight",
+      "pullback_identity_pole",
+      "tau_reflection_pole",
+      "tau_reflection_monomial",
+      "tau_difference_pole",
+      "kernelNumerator",
+      "kernelNumerator_eval_tail_pole",
+      "KernelPartialFractionData",
+      "tailPoleFactors_pairwise_coprime",
+      "kernelNumerator_partial_fraction_exists",
+      "polynomial_eq_C_of_degree_lt_one",
+      "kernelPartialFractionData",
+      "kernelRatElem",
+      "kernelNumerator_partial_fraction",
+      "G_pencil",
+      "Delta_poly",
+      "ratContent",
+      "ratContent_pos",
+      "ratContent_eq_zero_iff",
+      "primitiveRationalPolynomial",
+      "P_prim",
+      "canonical_basis_invariance",
+      "D_tail",
+      "D_tail_eq_tailPolynomial",
+      "D_poly_factorization",
+      "D_poly_eq_denominatorPolynomial",
+      "kernelNumerator_eval_old_pole",
+      "kernelRatElem_poleRes_eq_prod",
+      "kernelRatElem_poleRes_old_zero",
+      "poleNat",
+      "poleNat_mem_tail",
+      "exists_poleNat_eq",
+      "poleNat_injective",
+      "poleIndexEquiv",
+      "poleNode",
+      "V_pole",
+      "poleNode_injective",
+      "V_pole_det_ne_zero",
+      "gammaWeight",
+      "gammaWeight_ne_zero",
+      "kernelResidue_weighted_eq_gamma",
+      "M_deriv",
+      "M_deriv_entry_eq_tail_residue_sum",
+      "M_deriv_entry_eq_gamma_sum",
+      "M_deriv_factorization",
+      "ratContent_C_mul",
+      "canonical_primitive_content_invariance",
+      "G_lagrange",
+      "G_lagrange_coeff_one",
+      "G_lagrange_coeff_one_diagonal",
+      "coeff_C_mul_X_sub_C_zero",
+      "muPolePoly_coeff_zero_of_one_lt",
+      "muFunctionalPoly_coeff_zero_of_one_lt",
+      "G_pencil_coeff_zero_of_one_lt",
+      "G_lagrange_coeff_zero_of_one_lt",
+      "G_lagrange_natDegree_le_one",
+      "G_lagrange_offdiag_natDegree_zero",
+      "G_lagrange_diagonal_affine",
+      "lagrange_pole_diagonalization",
+      "V_pole_det_formula",
+      "det_M_deriv_factorization",
+      "M_deriv_det_ne_zero"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/24/root/ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX/provenance/Section2Checked.lean"
+  },
+  {
+    "id": 782,
+    "attachment": 24,
+    "archive_chain": [
+      "24-ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX/provenance/Theorem_2_5_Lagrange_Pole_Diagonalization.lean",
+    "sha256": "4ab4ba8669d84d6878a58cc3503d31f96037e58721ce3296421a6195cf978a83",
+    "bytes": 14131,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Theorem_2_4_Canonical_Basis_Invariance",
+      "Mathlib.Algebra.Polynomial.BigOperators",
+      "Mathlib.Algebra.BigOperators.Intervals",
+      "Mathlib.LinearAlgebra.Vandermonde",
+      "Mathlib.LinearAlgebra.Matrix.Polynomial",
+      "Mathlib.Tactic.NormNum",
+      "Mathlib.Tactic.Linarith",
+      "Mathlib.Tactic.Ring"
+    ],
+    "declarations": [
+      "poleIndex",
+      "poleNode",
+      "poleWeight",
+      "poleVandermonde",
+      "poleIndex_mem",
+      "poleIndex_pos",
+      "poleNode_injective",
+      "D_eval_ne_zero_of_lt",
+      "tailD_derivative_eval",
+      "tailD_derivative_eval_ne_zero",
+      "poleWeight_ne_zero",
+      "sum_tail_eq_fin",
+      "rationalDerivativeMatrix",
+      "entryM_eq_sum_poleWeight",
+      "rationalDerivativeMatrix_factorization",
+      "rationalDerivativeMatrix_det",
+      "poleVandermonde_eq",
+      "rationalDerivativeMatrix_det_product",
+      "poleVandermonde_det_ne_zero",
+      "rationalDerivativeMatrix_det_ne_zero",
+      "derivativeMatrix_det_ne_zero",
+      "rationalConstantMatrix",
+      "pencil_eq_X_smul_add",
+      "delta_coeff_dimension",
+      "delta_ne_zero",
+      "delta_natDegree",
+      "delta_leadingCoeff",
+      "poleDiagonalPencil",
+      "poleConstantMatrix",
+      "pole_slope_diagonal",
+      "poleDiagonalPencil_eq",
+      "poleDiagonalPencil_off_diagonal",
+      "poleDiagonalPencil_diagonal",
+      "poleDiagonalRemainder",
+      "poleDiagonalPencil_diagonal_harmonic",
+      "theorem_2_5_lagrange_pole_diagonalization",
+      "theorem_2_4_constructed_for_manuscript"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/24/root/ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX/provenance/Theorem_2_5_Lagrange_Pole_Diagonalization.lean"
+  },
+  {
+    "id": 783,
+    "attachment": 24,
+    "archive_chain": [
+      "24-ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX/provenance/Theorem_3_1_Concrete_Moment_Realization.lean",
+    "sha256": "dadcabb037d690d321c82ce5564d7f154f7dd79284e574d0c77931e13019e50c",
+    "bytes": 7641,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Theorem_3_1_Hyperbolic_Moments",
+      "Theorem_3_1_Positive_Moment_Realization",
+      "Zetahyperbolic.Section2Checked",
+      "Mathlib.MeasureTheory.Integral.Bochner.ContinuousLinearMap"
+    ],
+    "declarations": [
+      "weightedDensity",
+      "weightedDensity_pos",
+      "measurable_weightedDensity",
+      "weightedMeasure",
+      "weightedMeasure_nonzero",
+      "momentMeasure",
+      "momentMeasure_nonzero",
+      "integral_momentMeasure",
+      "integrable_momentMeasure_iff",
+      "integrableOn_polynomial_density",
+      "integrableOn_weightedDensity_moment",
+      "realization"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/24/root/ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX/provenance/Theorem_3_1_Concrete_Moment_Realization.lean"
+  },
+  {
+    "id": 784,
+    "attachment": 24,
+    "archive_chain": [
+      "24-ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX/provenance/Theorem_3_1_Hyperbolic_Moments.lean",
+    "sha256": "649a92bfeaebfc3f49858cbbc024b7dec06a94e0156df5310e67a39741daec9d",
+    "bytes": 6755,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Theorem_3_1_Hyperbolic_Weight",
+      "Mathlib.Analysis.SpecialFunctions.Gamma.Basic",
+      "Mathlib.MeasureTheory.Integral.DominatedConvergence",
+      "Mathlib.NumberTheory.ZetaValues",
+      "Mathlib.Tactic"
+    ],
+    "declarations": [
+      "integral_pow_mul_exp",
+      "integrableOn_pow_mul_exp",
+      "momentTerm",
+      "momentCoefficient",
+      "momentTerm_integrable",
+      "integral_momentTerm",
+      "momentTerm_nonneg",
+      "summable_integral_norm_momentTerm",
+      "integral_tsum_momentTerm",
+      "integrableOn_tsum_momentTerm",
+      "monomial_density_eq_tsum",
+      "integrableOn_monomial_density",
+      "integral_monomial_density",
+      "zeta_even_bernoulli",
+      "integral_monomial_density_eq_monomialMoment"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/24/root/ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX/provenance/Theorem_3_1_Hyperbolic_Moments.lean"
+  },
+  {
+    "id": 785,
+    "attachment": 24,
+    "archive_chain": [
+      "24-ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX/provenance/Theorem_3_1_Hyperbolic_Weight.lean",
+    "sha256": "022fd5309135919ddb02767670e0f64830cc16176202add1422d6ff5d2a9ee64",
+    "bytes": 3744,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Definition_2_1_Order_s_Rational_Moment_Functional",
+      "Mathlib.Analysis.SpecialFunctions.Exp",
+      "Mathlib.Analysis.SpecialFunctions.Gamma.Basic",
+      "Mathlib.Analysis.SpecialFunctions.Gaussian.GaussianIntegral",
+      "Mathlib.MeasureTheory.Integral.DominatedConvergence",
+      "Mathlib.MeasureTheory.Constructions.Polish.Basic",
+      "Mathlib.MeasureTheory.Measure.WithDensity"
+    ],
+    "declarations": [
+      "exponentialTerm",
+      "density",
+      "exponentialTerm_pos",
+      "summable_exponentialTerm",
+      "exponentialSeries_pos",
+      "density_pos",
+      "density_nonneg",
+      "density_zero",
+      "measurable_exponentialTerm",
+      "measurable_density",
+      "baseMeasure",
+      "baseMeasure_nonzero"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/24/root/ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX/provenance/Theorem_3_1_Hyperbolic_Weight.lean"
+  },
+  {
+    "id": 786,
+    "attachment": 24,
+    "archive_chain": [
+      "24-ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX/provenance/Theorem_3_1_Universal_Hyperbolicity_And_Zero_Free_Disk.lean",
+    "sha256": "5623f9c75519e4b88bd8c41d39656e5290520a45cec956facfa76a5234a5ac2e",
+    "bytes": 16586,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Mathlib.Analysis.Matrix.Order",
+      "Theorem_2_4_Canonical_Basis_Invariance",
+      "Definition_2_1_Order_s_Rational_Moment_Functional",
+      "Mathlib.Algebra.Polynomial.BigOperators",
+      "Mathlib.Algebra.Polynomial.Degree.SmallDegree",
+      "Mathlib.LinearAlgebra.Complex.Module",
+      "Mathlib.LinearAlgebra.Matrix.Determinant.Basic",
+      "Mathlib.LinearAlgebra.Matrix.PosDef",
+      "Mathlib.LinearAlgebra.Matrix.Symmetric",
+      "Mathlib.Tactic.Ring"
+    ],
+    "declarations": [
+      "SymmetricAffinePencil",
+      "matrixAt",
+      "polynomialMatrix",
+      "detPolynomial",
+      "detValue",
+      "BasePositive",
+      "eval_detPolynomial",
+      "base_det_ne_zero_of_positive",
+      "center_nonvanishing_of_positive",
+      "numerator_symmetric",
+      "entryA_symmetric",
+      "entryM_symmetric",
+      "gram_symmetric",
+      "derivativeMatrix_symmetric",
+      "manuscriptPencil",
+      "manuscriptPencil_matrixAt",
+      "manuscriptPencil_polynomialMatrix",
+      "manuscriptPencil_detPolynomial",
+      "delta_eval_eq_det_gram",
+      "delta_nonzero_of_positive",
+      "spectralFactor",
+      "RootFactorization",
+      "linear_factor_eq_zero_iff",
+      "spectralFactor_ne_zero",
+      "natDegree_spectralFactor",
+      "root",
+      "eval_eq",
+      "center_nonvanishing",
+      "determinant_center_nonvanishing",
+      "polynomial_ne_zero",
+      "natDegree_eq",
+      "eval_eq_zero_iff",
+      "eval_root",
+      "root_ne_center",
+      "complex_root_location",
+      "complex_root_im_zero",
+      "root_distance",
+      "root_distance_lower_bound",
+      "eval_ne_zero_of_distance_lt",
+      "delta_real_natDegree",
+      "det_one_add_smul_of_hermitian",
+      "rootFactorization_nonempty_of_posDef",
+      "rootFactorizationOfPosDef",
+      "theorem_3_1_degree_of_posDef",
+      "theorem_3_1_hyperbolicity_of_posDef"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/24/root/ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX/provenance/Theorem_3_1_Universal_Hyperbolicity_And_Zero_Free_Disk.lean"
+  },
+  {
+    "id": 787,
+    "attachment": 24,
+    "archive_chain": [
+      "24-ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX.zip"
+    ],
+    "member": "ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX/provenance/Theorem_4_1_Spectral_Irrationality_Measure_Criterion.lean",
+    "sha256": "7a4e4762865d8346f9d8ba1b36099850fc31ef4ee452960ca16770dc4d2ffa92",
+    "bytes": 11867,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Theorem_3_1_Universal_Hyperbolicity_And_Zero_Free_Disk",
+      "Mathlib.Algebra.Polynomial.DenomsClearable",
+      "Mathlib.NumberTheory.Real.Irrational",
+      "Mathlib.Tactic.NormNum",
+      "Mathlib.Tactic.Linarith",
+      "Mathlib.Tactic.Positivity",
+      "Mathlib.Tactic.Ring",
+      "Mathlib.Tactic.FieldSimp",
+      "Mathlib.Analysis.Complex.Exponential"
+    ],
+    "declarations": [
+      "evalReal",
+      "cleared_eval_is_integer",
+      "polynomial_integer_squeeze",
+      "LocalComparison",
+      "Decay",
+      "IndexBudget",
+      "RationalMeasure",
+      "conditional_measure",
+      "RationalMeasure.irrational",
+      "conditional_irrational",
+      "paper_parameter_inequalities",
+      "paper_transfer_threshold",
+      "paper_decay_margin",
+      "product_comparison_of_sum_abs_le",
+      "comparisonRadius",
+      "comparisonRadius_pos",
+      "comparison_of_sum_le",
+      "perturbation_sum_le_of_radius",
+      "comparison_of_radius",
+      "normalized_comparison_of_radius",
+      "localComparison_of_spectral"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false,
+    "extracted_path": "publication_work/attachment_sources/24/root/ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX/provenance/Theorem_4_1_Spectral_Irrationality_Measure_Criterion.lean"
+  }
+]

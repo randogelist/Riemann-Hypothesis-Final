@@ -1,102 +1,102 @@
 # SOLOBOLO finite-witness frontier
 
-Target: a finite raw-data type `FiniteWitness`, one terminating concrete
-`check`, and independently proved theorems yielding
+The final research target is a finite raw-data type, one concrete terminating checker, and independently proved soundness and completeness:
 
 ```lean
 (∃ W : FiniteWitness, check W = true) ↔ _root_.RiemannHypothesis
 ```
 
-This is the research objective, not an established theorem in this repository.
-The current package is `v0_1_0_construction`. No new Lean compilation has been
-run, no complete RH witness exists here, and no proof tier is assigned.
+This finite-checker iff is **open**. The repository is `v0_1_0_construction`; native compilation and kernel axiom audits remain `NOT_RUN`. No accepted actual-RH witness or proof tier is assigned.
 
-## Route and order of work
+The recovered **analytic** endpoint is more complete: [slit-plane ODE admission](../SoloboloAdmission/NativeODE.lean) and [actual-J analytic reciprocal admission](../SoloAdmission/AnalyticInverse.lean) each have a source proof of equivalence with literal native RH. Their full project import chains are included in the full build. [RECOVERED_EQUIVALENCES.md](RECOVERED_EQUIVALENCES.md) records their exact statements and verification boundary.
 
-1. **Literal source.** Use `WitnessSolobolo.actualXi` and `actualTheta`, formed
-   from Mathlib's `completedRiemannZeta₀`. Prove regularity, square-descent and
-   real/complex compatibility in the required domains. The recovered KQ source
-   provides native ξ/slit-plane Θ calculus, and `KQEndpoints` transfers Θ
-   analyticity at positive anchors to the literal definitions. Nonvanishing
-   and the needed derivative/limit compatibility remain separate. Totalized division and `Complex.sqrt`
-   definitions alone do not establish those remaining facts.
-2. **Derived successor.** For `R = Θ′/Θ`, use
-   `dₙ(a) = (-1)ⁿ aⁿ⁺¹ R⁽ⁿ⁾(a)/n!`. Product differentiation gives
-   `dₙ₊₁ = dₙ - a dₙ′/(n+1)` under the stated differentiability hypotheses.
-   Derive the GP successor from a fixed GP realization, with differentiation
-   under its integral justified. The operator alone does not preserve positivity.
-3. **Finite induction input.** Produce a finite rational program/certificate
-   whose acceptance proves equality of the actual and GP base FUNCTIONS on
-   an open domain. An equality of values, finite jets or sampled points is
-   insufficient. The two sequences must use the same successor on that domain.
-4. **All-order transfer.** Functional base equality and the common derived
-   successor yield equality at every order. Then use the fixed positive GP
-   realization for positivity and shared-spectrum Cayley contraction.
-5. **Actual RH endpoint.** Prove either the actual Widder off-line-pole
-   explosion/divisor theorem and contradiction with uniform bounds, or the
-   actual complex-jet/Hurwitz route. Import its complete native Mathlib bridge.
-6. **Completeness.** For the iff target, additionally derive an accepted code
-   from RH. Soundness alone gives only the forward implication.
+## One explicit analytic condition, separate finite obligations
 
-## What the current code contributes
+[ACTUAL_CONDITION.md](ACTUAL_CONDITION.md) states the single actual-calibration condition chosen for the next implementation step. Its purpose is to derive actual slit-plane zero exclusion from a fixed finite rational program and universal analytic estimates. Calling this one condition does not make its all-domain content a finite Boolean check.
 
-- `FiniteWitness/`: ten unchanged SOLOBOLO modules, including raw rational
-  syntax, checked finite spectral layers, shared-spectrum contraction for all
-  power orders, and an all-layer telescoping model. These are source imports,
-  with native compilation pending. The telescope is a model, not actual ξ.
-- `RHFinal/Core/`: exact finite symbolic SOS checks and generic induction
-  equality. `RHFinal/Search.lean` performs bounded local candidate search.
-- `RHFinal/Actual/`: literal native RH target, source-derived differential
-  successor with explicit regularity premises, and named open analytic inputs.
-- `RHFinal/GP/`: the literal continuous Mellin–Hilbert definitions, imported
-  KQ/GP/BKQR actual ξ calculus and finite real Widder/Cayley identities, GP7
-  weight-seven identities, and generic master energy/Pascal induction.
-  [GP_CONSTRUCTION.md](GP_CONSTRUCTION.md) records the different normalizations
-  and exact import boundary. All integration sources await native verification.
+Three distinct claims must stay visible:
 
-Local SOS acceptance is useful algebraic evidence. It does not certify the
-unbounded actual ξ residual or discharge any open analytic input below.
+1. **Analytic transfer:** the stated residual condition excludes actual theta zeros on the slit plane and gives native RH. The generic residual proof derives this without assuming a limiting coefficient; the recovered zero-geometry endpoint completes the source argument.
+2. **Checker soundness:** a concrete terminating checker on finite raw data derives that condition. Universal convergence and actual-function equality cannot be appended to the certificate as unverified proof fields.
+3. **Finite completeness:** RH produces an accepted code for the same checker. An arbitrary analytic function or countable spectrum supplied under RH does not yet have a finite representation in the chosen language.
+
+An accepted code would prove RH only after soundness is established. Completeness is additionally required for the iff. No conjunction of these unfinished tasks is presented as a derived “single condition.”
+
+## Two routes for constructing the analytic input
+
+The direct residual route fixes a rational program and requires only that `Theta′ + A_n*Theta` tend locally uniformly to zero on the slit plane. Coefficient-limit existence and holomorphy are not assumed. Stagewise coefficient analyticity is derived from the emitted packets; the new generic source proof excludes finite-order zeros by convergence of residual derivatives. A finite prefix or pointwise numerical agreement cannot prove that global result. The exact condition is `SoloboloAdmission.ActualUniformResidualCondition G`, documented in [ACTUAL_CONDITION.md](ACTUAL_CONDITION.md).
+
+The positive-spectrum route targets an actual resolvent identity
+
+\[
+\frac{\Theta'(u)}{\Theta(u)}
+ = \sum_n\frac{\lambda_n}{1+u\lambda_n},\qquad
+u>0,\quad\lambda_n\ge0,\quad\sum_n\lambda_n<\infty.
+\]
+
+The recovered product sources already provide actual multiplicity-bearing zero occurrences, inverse-square summability and normalized theta factorization. Later `OriginTrace` source proves Θ(0)≠0 and removes the origin monomial. Under RH the complex zero scales become positive real scales αᵢ. The proposed spectrum is λᵢ=1/αᵢ, with countable zero-padding to a Nat sequence; no simple-zero or infinitude assumption is needed for a nonnegative diagonal.
+
+The [detailed product assessment](research/2026-10-25/rh-positive-product-assessment.md) identifies the remaining assembly: recenter the known affine product at each u>0, reuse its zero-centered logarithmic-derivative theorem, identify complex theta with the literal real-sqrt carrier and transport the sums to the Nat diagonal. The product support is retained as research evidence/strategy in this publication, not added wholesale to the active build. The positive-ray trace calibration adapter is not yet a completed Lean theorem. Even its completion would give RH→positive **infinite** actual realization, not RH→accepted finite code.
+
+## Derived induction and the central coefficient bridge
+
+For the direct jet, let R=Θ′/Θ and
+
+\[
+d_n(a)=\frac{(-1)^n a^{n+1}}{n!}R^{(n)}(a).
+\]
+
+Product differentiation yields `d_(n+1)=d_n−a*d_n′/(n+1)` under the stated regularity assumptions. [RHFinal.Actual.Successor](../RHFinal/Actual/Successor.lean) exposes that calculation. The recovered [direct/recursive Widder identification](../Bridge/XiWidderIdentification.lean) and [finite Cayley coefficient formula](../AllDepth/ActualXiRealRodriguesNormalization.lean) supply further all-depth identities on their stated actual regular domains. They do not establish positivity or the induction base merely by sharing a recurrence.
+
+For the exact base-function induction route, finite data must derive equality of actual and model **base functions on an open domain**. Equality at a point, a finite Taylor jet or sampled anchors is insufficient for all-order equality induction. Approximate transfer additionally needs an error estimate preserved by differentiation; uniform value error alone provides no such bound.
+
+The deeper central-coefficient strategy concerns a different object. For the normalized symmetric product Pₐ(r) with paired roots of sum `2a(1−2r)` and product `a²`, put hₐ=−Pₐ′/Pₐ. Its proposed coefficient identity is
+
+\[
+\frac{h_a^{(n)}(0)}{n!}
+ =\frac{(-1)^n(4a)^{n+1}}{(2n+1)!}
+   \left.\frac{d^{2n+1}}{dz^{2n+1}}
+     \bigl(z^{n+1}R(z)\bigr)\right|_{z=a}.
+\]
+
+The finite Cayley/binomial coefficient algebra is already implemented in source. The [written derivation](research/2026-10-25/coefficient-bridge-strategy.md) uses `r=t²/(1+t²)` and rational Cayley roots to avoid differentiating square-root branches. Finite Taylor factorization, the divided-power identity and an order-two analytic composition then give equality of the required coefficient. Exact arithmetic checks support its signs and constants; **the generic analytic coefficient passage and final actual Lean identity remain open**.
+
+This central product-log coefficient has derivative order 2n+1 and its displayed factorial normalization. The separate [anchor-1 direct-jet Bernstein-row strategy](research/2026-10-25/endpoint-strategy.md) uses derivatives of `g(u)=uΘ′/Θ` of order n+1. The two are not interchangeable. Proving the direct-row generating identity would not by itself prove the central product coefficient identity or its energy estimate.
+
+Likewise the remembered central BASE `4D² log Θ`, with D=a∂ₐ, differs from the direct BASE `aΘ′/Θ`. Equality of the central bases needs a normalization value to recover equality of the direct bases. A common name, recurrence, or finite coefficient example does not discharge this normalization step.
+
+## What the active sources contribute
+
+| Area | Source contribution | Remaining scope |
+|---|---|---|
+| `RHFinal/Core/` and `RHFinal/Search.lean` | Exact finite SOS checks, generic induction equality, terminating bounded local search | Search is a local algebraic diagnostic, not actual-RH admission |
+| `FiniteWitness/` | Rational syntax, checked finite spectral layers and shared-spectrum contraction | Model positivity does not imply actual calibration |
+| `RHFinal/Actual/` | Literal native target, derived successor and named actual-input contracts | Concrete finite-checker reduction remains open |
+| `AWPIRH/`, `AngularMaster/`, `SoloboloAdmission/` | Actual entire theta, native zero geometry and analytic slit-ODE iff | Must construct the admission and run native audits |
+| `FiveInduction/`, `SoloAdmission/` | Regularized actual J and analytic reciprocal iff | No reciprocal constructed without RH; no finite code extracted |
+| `RHFinal/GP/` and recovered KQ sources | Literal Mellin–Hilbert objects, actual ξ calculus, finite Cayley identities, GP7 and generic master induction | Integral/operator laws, actual calibration and analytic transfers retain their explicit obligations |
+
+[GP_CONSTRUCTION.md](GP_CONSTRUCTION.md) and [GP_MATH_REVIEW.md](GP_MATH_REVIEW.md) distinguish the continuous Mellin measure, finite rational GP models, GP7 weight-seven normalization and central/direct moment towers. The historical opaque-RH/literature-axiom master source stays archival.
 
 ## Execution subchapters
 
-| ID | Required result | Exit evidence |
+| ID | Required result | Current source boundary / exit evidence |
 |---|---|---|
-| S01 | Actual Θ regularity/nonvanishing on the chosen anchor domain | Native Lean proof and exact axiom audit |
-| S02 | Actual and GP derivative successors from their literal definitions | Both proof chains; no successor assumed as a certificate field |
-| G01 | Literal GP density, Mellin integral, logarithmic moments and completion gauge | Integral/derivative laws, nonvanishing and removable-value proofs |
-| G02 | Actual Hilbert vectors and heat/resolvent operators | L² membership, operator domains and calibration to the same ξ |
-| G03 | Finite real coefficients identify the regularized complex Cayley germ | Real/complex compatibility, convergence and the corrected r=0 extension |
-| B01 | Finite certificates imply a universal actual residual estimate | A concrete executable checker and proved actual-data soundness |
-| B02 | Residual contraction/limit implies functional BASE | Uniform/cofinal limit, normalization and uniqueness proofs |
-| T01 | BASE gives every actual moment the positive GP representation | Induction, domain closure and all regularity premises discharged |
-| R01 | Actual moment control implies native Mathlib RH | Actual divisor/pole or Hurwitz proof, with no proxy channel substitution |
-| C01 | RH implies an accepted finite certificate | Completeness for the same checker |
-| W01 | Concrete finite admission | Kernel-verified `check W = true` plus all preceding transfer theorems |
-
-The proposed STURMION residual approach is a candidate for B01/B02: finite
-rational GP resolvents and a symbolic all-level contraction certificate may
-yield a positive limiting representation. Existence, actual-ξ binding, and the
-contraction theorem are research obligations. The repository does not assume
-them. A finite prefix cannot stand in for them.
-
-The remembered identity involving `4D² log Θ` is a central-moment BASE; the
-direct-jet recurrence begins with `a Θ′/Θ`. These are distinct normalizations.
-Their relation and any change of moment tower must be proved explicitly before
-connecting the remembered central BASE to the direct-jet successor. Equality
-of the central bases also needs a normalization value to determine equality
-of the direct bases.
-
-The recovered GP source provides conditional curvature-to-common-moment and
-calibration-to-positivity transfer theorems. Their infinite functional
-hypotheses still belong to B01/B02 and T01; naming a structure a “witness”
-does not reduce them to finite data. The generic master model similarly
-assumes its all-order energy boundary. The original opaque RH/literature-axiom
-master endpoint is archival only.
+| S01 | Actual theta regularity and native zero correspondence | Recovered complete source chain; native build and axiom audit pending |
+| S02 | Actual/model derivative successors | Source calculations available with explicit regularity; transport exact carriers/domains |
+| A01 | Fixed-program actual analytic calibration | Prove the exact condition in [ACTUAL_CONDITION.md](ACTUAL_CONDITION.md) |
+| B01 | Finite certificates imply A01 | Concrete executable checker and independently proved soundness |
+| G01 | Literal GP integral, moment and completion-gauge laws | Integrability, differentiation, nonvanishing and removable-value proofs |
+| G02 | Actual Hilbert/operator realization | L² membership, operator domains and calibration to the same xi |
+| G03 | Actual central product-log coefficient identity | Implement the local rational-parameter finite-jet derivation and normalization transport |
+| P01 | RH gives calibrated positive summable actual spectrum | Assemble the recovered product, recentering, real-carrier and Nat-index adapters |
+| T01 | Functional BASE gives all actual moments their positive representation | Induction with domain closure and every regularity premise discharged |
+| R01 | Actual analytic admission gives native RH | Slit-ODE source endpoint available; alternative pole/Hurwitz routes retain their own inputs |
+| C01 | RH gives accepted finite code for the same checker | Finite-language completeness, not just an analytic existence theorem |
+| W01 | Concrete finite admission | Kernel-verified `check W=true` and all transfer theorems |
 
 ## Rejected shortcuts
 
-Do not use an always-accepting positivity checker, a checker calling RH,
-a zero-spectrum sample, or `∃ W, check W ∧ ∀ n, calibration W n` as the requested
-finite-checker equivalence. Do not derive radius exhaustion from a same-radius
-coefficient induction. Do not identify the proxy channel `1 + 4δ²` with a
-GP/Mellin channel without proving the analytic identification.
+An always-accepting positivity checker, a finite-spectrum model, a zero-spectrum sample or a certificate carrying an unverified all-order calibration theorem does not establish the requested finite equivalence. Neither a same-radius coefficient induction nor finitely many positive moments proves radius exhaustion. Do not identify the proxy channel `1+4δ²` with a GP/Mellin channel without its analytic identification.
+
+The executable, source and verification layers are tracked separately. `run.cmd full` is the intended native verification entry point; it has not been run for this integration. Source publication does not establish a successful Lean build, actual calibration, an accepted witness, RH or RH→GRH.

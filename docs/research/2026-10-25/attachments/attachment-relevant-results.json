@@ -1,0 +1,444 @@
+[
+  {
+    "attachment": 3,
+    "member": "ZETA3_WITNESS_TRUST_BOUNDARY_v0_1_6_FIX6/Zeta3Witness/Core.lean",
+    "sha256": "2be9294d9faf7dced6339874df865754674a9532081ca35746e71dfc52d82555",
+    "source_path": "publication_work/attachment_sources/03/nested1/ZETA3_WITNESS_TRUST_BOUNDARY_v0_1_6_FIX6/Zeta3Witness/Core.lean",
+    "new_to_prior_union": true,
+    "tracked_repo_paths": [],
+    "recommendation": "REFERENCE_CHECKER_PATTERN",
+    "exact_boundary": "Finite Boolean checker iff exact rational packet validity only; no actual analytic zeta bound or RH transfer.",
+    "declarations": [
+      {
+        "name": "checkRiesz_iff",
+        "line": 91,
+        "statement_text": "theorem checkRiesz_iff (p : RieszPacket) :\n    checkRiesz p = true \u2194 RieszValid p"
+      },
+      {
+        "name": "checkApery_iff",
+        "line": 177,
+        "statement_text": "theorem checkApery_iff (p : AperyPacket) :\n    checkApery p = true \u2194 AperyValid p"
+      }
+    ],
+    "discharges_actual_xi_calibration": false,
+    "discharges_rh_finite_checker_soundness": false,
+    "discharges_rh_finite_checker_completeness": false,
+    "discharges_rh_to_grh": false,
+    "native_verification_this_session": "NOT_RUN"
+  },
+  {
+    "attachment": 5,
+    "member": "CLASSIFIER_64_PI_BKQR_CALIBRATION_v0_5_2_FIX2/Classifier64/PiConditional.lean",
+    "sha256": "d6cb743362f5da82d84cb484afb7032157b8e6090a827405919d2477a0556346",
+    "source_path": "publication_work/attachment_sources/05/root/CLASSIFIER_64_PI_BKQR_CALIBRATION_v0_5_2_FIX2/Classifier64/PiConditional.lean",
+    "new_to_prior_union": true,
+    "tracked_repo_paths": [],
+    "recommendation": "REFERENCE_CALIBRATION_BOUNDARY",
+    "exact_boundary": "Requires PiAnalyticIdentification, all-n positive actual remainder, all-n actual upper envelope and PiSparseLock.",
+    "declarations": [
+      {
+        "name": "CLASSIFIER_64_PI_BKQR_FIXED",
+        "line": 57,
+        "statement_text": "theorem CLASSIFIER_64_PI_BKQR_FIXED\n    (hpi : PiAnalyticIdentification) (upper : \u2115 \u2192 \u211a)\n    (hpositive : \u2200 n : \u2115, 0 < Real.pi - (piPartial n : \u211d))\n    (hanalytic : \u2200 n : \u2115,\n      Real.pi - (piPartial n : \u211d) \u2264 (upper n : \u211d))\n    (hlock : PiSparseLock upper) : Irrational Real.pi"
+      }
+    ],
+    "discharges_actual_xi_calibration": false,
+    "discharges_rh_finite_checker_soundness": false,
+    "discharges_rh_finite_checker_completeness": false,
+    "discharges_rh_to_grh": false,
+    "native_verification_this_session": "NOT_RUN"
+  },
+  {
+    "attachment": 6,
+    "member": "GP_NATIVE_E_PI_v0_4_0/GPBKQRXY/RieszCore.lean",
+    "sha256": "e2fe9cd0a2a4ce3c3f1aaf95c6d249abb018d45d1e754c787536421c3f4f8121",
+    "source_path": "publication_work/attachment_sources/06/root/GP_NATIVE_E_PI_v0_4_0/GPBKQRXY/RieszCore.lean",
+    "new_to_prior_union": true,
+    "tracked_repo_paths": [],
+    "recommendation": "OPTIONAL_GENERIC_INDUCTION_TOOL",
+    "exact_boundary": "Universal invariant, rate-antitone, and contraction laws are separate proof premises; finite check does not prove them.",
+    "declarations": [
+      {
+        "name": "LockLaws",
+        "line": 46,
+        "statement_text": "structure LockLaws {width : \u2115} (S : EnvelopeSystem width) : Prop where\n  invariant : \u2200 c, Admissible S c \u2192 Admissible S (S.next c)\n  rate_antitone : \u2200 c, Admissible S c \u2192 S.rate (S.next c) \u2264 S.rate c\n  contracts : \u2200 c, Admissible S c \u2192 S.error (S.next c) \u2264 S.rate c * S.error c"
+      },
+      {
+        "name": "orbit_error_le",
+        "line": 72,
+        "statement_text": "theorem orbit_error_le {width : \u2115} (S : EnvelopeSystem width)\n    (L : LockLaws S) (c : Coordinates width) (hc : Admissible S c) (n : \u2115) :\n    S.error (orbit S c n) \u2264 S.rate c ^ n * S.error c"
+      }
+    ],
+    "discharges_actual_xi_calibration": false,
+    "discharges_rh_finite_checker_soundness": false,
+    "discharges_rh_finite_checker_completeness": false,
+    "discharges_rh_to_grh": false,
+    "native_verification_this_session": "NOT_RUN"
+  },
+  {
+    "attachment": 6,
+    "member": "GP_NATIVE_E_PI_v0_4_0/GPBKQRXY/RieszRepresentative.lean",
+    "sha256": "4eca7a528858af2e5dfac0a52530245afd56f75d64eb89d11f40f643ce62a5ba",
+    "source_path": "publication_work/attachment_sources/06/root/GP_NATIVE_E_PI_v0_4_0/GPBKQRXY/RieszRepresentative.lean",
+    "new_to_prior_union": true,
+    "tracked_repo_paths": [],
+    "recommendation": "OPTIONAL_GENERIC_INDUCTION_TOOL",
+    "exact_boundary": "Requires actual target interpretation and denominator positivity for every admissible state in addition to LockLaws and one accepted coordinate.",
+    "declarations": [
+      {
+        "name": "LinearLaws",
+        "line": 24,
+        "statement_text": "structure LinearLaws {width : \u2115} (x : \u211d)\n    (S : EnvelopeSystem width) (R : LinearReadout width) : Prop where\n  denominator_pos : \u2200 c, Admissible S c \u2192 0 < R.q c\n  interpretation : \u2200 c, Admissible S c \u2192\n    0 < (R.q c : \u211d) * x - (R.p c : \u211d) \u2227\n      (R.q c : \u211d) * x - (R.p c : \u211d) \u2264 (S.error c : \u211d)"
+      },
+      {
+        "name": "IRRATIONAL_OF_LINEAR_LOCK",
+        "line": 86,
+        "statement_text": "theorem IRRATIONAL_OF_LINEAR_LOCK {width : \u2115} (x : \u211d)\n    (S : EnvelopeSystem width) (R : LinearReadout width)\n    (L : LockLaws S) (H : LinearLaws x S R)\n    (c : Coordinates width) (hc : Admissible S c) : Irrational x"
+      }
+    ],
+    "discharges_actual_xi_calibration": false,
+    "discharges_rh_finite_checker_soundness": false,
+    "discharges_rh_finite_checker_completeness": false,
+    "discharges_rh_to_grh": false,
+    "native_verification_this_session": "NOT_RUN"
+  },
+  {
+    "attachment": 6,
+    "member": "GP_NATIVE_E_PI_v0_4_0/GPBKQRXY/NativeE.lean",
+    "sha256": "10118fe4bc5a557c1c05a832fd6aad5abd9bf9e2596d70a7b254b70c02ee97f7",
+    "source_path": "publication_work/attachment_sources/06/root/GP_NATIVE_E_PI_v0_4_0/GPBKQRXY/NativeE.lean",
+    "new_to_prior_union": true,
+    "tracked_repo_paths": [],
+    "recommendation": "REFERENCE_COMPLETE_TARGET_SPECIFIC_PATTERN",
+    "exact_boundary": "Source derives the laws and an accepted seed for Real.exp 1. No RH/xi instantiation.",
+    "declarations": [
+      {
+        "name": "lock",
+        "line": 95,
+        "statement_text": "theorem lock : LockLaws system"
+      },
+      {
+        "name": "linear_laws",
+        "line": 108,
+        "statement_text": "theorem linear_laws : LinearLaws (Real.exp 1) system readout"
+      },
+      {
+        "name": "seed_checks",
+        "line": 133,
+        "statement_text": "theorem seed_checks : representative.check seed = true"
+      },
+      {
+        "name": "NATIVE_E_IRRATIONAL_FROM_ONE_COORDINATE",
+        "line": 145,
+        "statement_text": "theorem NATIVE_E_IRRATIONAL_FROM_ONE_COORDINATE : Irrational (Real.exp 1)"
+      }
+    ],
+    "discharges_actual_xi_calibration": false,
+    "discharges_rh_finite_checker_soundness": false,
+    "discharges_rh_finite_checker_completeness": false,
+    "discharges_rh_to_grh": false,
+    "native_verification_this_session": "NOT_RUN"
+  },
+  {
+    "attachment": 6,
+    "member": "GP_NATIVE_E_PI_v0_4_0/GPBKQRXY/NativePiChecks.lean",
+    "sha256": "8f57ec9d39d8d2880e5dc15a20d578d572b6c9e457704f4a800e065162ae31fe",
+    "source_path": "publication_work/attachment_sources/06/root/GP_NATIVE_E_PI_v0_4_0/GPBKQRXY/NativePiChecks.lean",
+    "new_to_prior_union": true,
+    "tracked_repo_paths": [],
+    "recommendation": "REFERENCE_NEGATIVE_CALIBRATION_CONTROL",
+    "exact_boundary": "Proves rejection of the raw AWPI identification with native pi; blocks transferring that envelope merely by naming it pi.",
+    "declarations": [
+      {
+        "name": "raw_awpi_has_no_native_pi_linear_laws",
+        "line": 29,
+        "statement_text": "theorem raw_awpi_has_no_native_pi_linear_laws :\n    \u00ac LinearLaws Real.pi\n      (attachEncoding input rawEnvelope)\n      (partialSumReadout input)"
+      }
+    ],
+    "discharges_actual_xi_calibration": false,
+    "discharges_rh_finite_checker_soundness": false,
+    "discharges_rh_finite_checker_completeness": false,
+    "discharges_rh_to_grh": false,
+    "native_verification_this_session": "NOT_RUN"
+  },
+  {
+    "attachment": 13,
+    "member": "MAIN_CHAIN_LEAN_ONLY/MAIN_CHAIN.lean",
+    "sha256": "1e546592e4f3bba834adc1e6c504fabc29accf785f2fff2dff27cba691a9ba77",
+    "source_path": "publication_work/attachment_sources/13/root/MAIN_CHAIN_LEAN_ONLY/MAIN_CHAIN.lean",
+    "new_to_prior_union": true,
+    "tracked_repo_paths": [],
+    "recommendation": "OUTSIDE_RH_PROOF_GRAPH",
+    "exact_boundary": "Four remaining uniform premises: actual Gram positivity, primitive multiplier upper bound, archimedean upper bound, and actual spectral exponential bound. Target irrational zeta5, not RH.",
+    "declarations": [
+      {
+        "name": "MAIN_CHAIN_PRIMITIVE_FROM_GRAM",
+        "line": 99,
+        "statement_text": "theorem MAIN_CHAIN_PRIMITIVE_FROM_GRAM\n    (start : \u2115)\n    (gram : \u2200 n, start + 1 \u2264 n \u2192\n      (Real.gram (Real.mainParameters n) (Real.zeta 5)).PosDef)\n    (multiplier : MultiplierUpper (primitiveMainNormalization start))\n    (archimedean : ArchimedeanUpper (start + 1))\n    (bound : \u2200 n (hn : start + 1 \u2264 n) i,\n      |(mainRootFactorization (start + 1) gram n hn).beta i| \u2264\n        _root_.Real.exp ((Real.rhoPrinted : \u211d) * mainK n)) :\n    Irrational (riemannZeta 5).re"
+      }
+    ],
+    "discharges_actual_xi_calibration": false,
+    "discharges_rh_finite_checker_soundness": false,
+    "discharges_rh_finite_checker_completeness": false,
+    "discharges_rh_to_grh": false,
+    "native_verification_this_session": "NOT_RUN"
+  },
+  {
+    "attachment": 16,
+    "member": "RH_FIVE_INDUCTION_LEAN_v0_3_0/FiveInduction/ProjectionInput.lean",
+    "sha256": "ed6c288f738e97e1f4d506fda84ab1004019e7e1ee04d13c58a8168e17ee8dc2",
+    "source_path": "publication_work/attachment_sources/16/root/RH_FIVE_INDUCTION_LEAN_v0_3_0/FiveInduction/ProjectionInput.lean",
+    "new_to_prior_union": true,
+    "tracked_repo_paths": [
+      {
+        "repo": "Riemann-Hypothesis-Final",
+        "path": "research/upstream/five-induction-v030/FiveInduction/ProjectionInput.lean"
+      }
+    ],
+    "recommendation": "ALREADY_TRACKED",
+    "exact_boundary": "Radius at least one or all-order actual reciprocal readout identification with subexponential norm bound remains an explicit hypothesis.",
+    "declarations": [
+      {
+        "name": "RH_OF_RECIPROCAL_RADIUS",
+        "line": 138,
+        "statement_text": "theorem RH_OF_RECIPROCAL_RADIUS (hradius : 1 \u2264 reciprocalSeries.radius) :\n    RiemannHypothesis"
+      },
+      {
+        "name": "ProjectionXiRealization",
+        "line": 147,
+        "statement_text": "def ProjectionXiRealization (E : Type*) [NormedAddCommGroup E] [InnerProductSpace \u211d E] : Prop"
+      },
+      {
+        "name": "RH_OF_PROJECTION_REALIZATION",
+        "line": 175,
+        "statement_text": "theorem RH_OF_PROJECTION_REALIZATION\n    {E : Type*} [NormedAddCommGroup E] [InnerProductSpace \u211d E]\n    (h : ProjectionXiRealization E) : RiemannHypothesis"
+      }
+    ],
+    "discharges_actual_xi_calibration": false,
+    "discharges_rh_finite_checker_soundness": false,
+    "discharges_rh_finite_checker_completeness": false,
+    "discharges_rh_to_grh": false,
+    "native_verification_this_session": "NOT_RUN"
+  },
+  {
+    "attachment": 16,
+    "member": "RH_FIVE_INDUCTION_LEAN_v0_3_0/FiveInduction/HardyInduction.lean",
+    "sha256": "e67707aaab4cb3dd0267763f7a453cc6b658349232f2df7b9e6699dd300125e9",
+    "source_path": "publication_work/attachment_sources/16/root/RH_FIVE_INDUCTION_LEAN_v0_3_0/FiveInduction/HardyInduction.lean",
+    "new_to_prior_union": false,
+    "tracked_repo_paths": [
+      {
+        "repo": "Riemann-Hypothesis-Final",
+        "path": "research/upstream/five-induction-v030/FiveInduction/HardyInduction.lean"
+      }
+    ],
+    "recommendation": "ALREADY_TRACKED",
+    "exact_boundary": "Requires ActualHardyEnergy and universal radius successor; FiniteDiskCertificate itself is existential N plus forall complex points, not raw finite acceptance.",
+    "declarations": [
+      {
+        "name": "PrescribedRadiusStep",
+        "line": 38,
+        "statement_text": "def PrescribedRadiusStep : Prop"
+      },
+      {
+        "name": "RH_OF_PRESCRIBED_RADIUS_STEP",
+        "line": 68,
+        "statement_text": "theorem RH_OF_PRESCRIBED_RADIUS_STEP\n    (henergy : ActualHardyEnergy) (hstep : PrescribedRadiusStep) : RiemannHypothesis"
+      },
+      {
+        "name": "RH_IFF_PRESCRIBED_RADIUS_STEP",
+        "line": 72,
+        "statement_text": "theorem RH_IFF_PRESCRIBED_RADIUS_STEP (henergy : ActualHardyEnergy) :\n    RiemannHypothesis \u2194 PrescribedRadiusStep"
+      }
+    ],
+    "discharges_actual_xi_calibration": false,
+    "discharges_rh_finite_checker_soundness": false,
+    "discharges_rh_finite_checker_completeness": false,
+    "discharges_rh_to_grh": false,
+    "native_verification_this_session": "NOT_RUN"
+  },
+  {
+    "attachment": 19,
+    "member": "ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/PaperChronology/Stage03FiniteGram.lean",
+    "sha256": "0c260c246cb81b9a53d8465065ec79a713a249ef69cf72eb0a8396d6447ab63f",
+    "source_path": "publication_work/attachment_sources/19/root/ZETAHYPERBOLIC_PAPER45_TEN_STAGE_LEAN_v0_1_20_FINITE_GRAM_AUDIT/PaperChronology/Stage03FiniteGram.lean",
+    "new_to_prior_union": true,
+    "tracked_repo_paths": [],
+    "recommendation": "OPTIONAL_GENERIC_GRAM_TOOL",
+    "exact_boundary": "Requires finite weights nonnegative; proves arbitrary finite feature Gram energy nonnegative, no actual-xi calibration.",
+    "declarations": [
+      {
+        "name": "finiteGramEnergy_nonneg",
+        "line": 56,
+        "statement_text": "theorem finiteGramEnergy_nonneg {n h : \u2115}\n    (weights : Fin n \u2192 \u211d) (features : Fin n \u2192 Fin h \u2192 \u211d)\n    (hweights : \u2200 a, 0 \u2264 weights a) (u : Fin h \u2192 \u211d) :\n    0 \u2264 finiteGramEnergy weights features u"
+      }
+    ],
+    "discharges_actual_xi_calibration": false,
+    "discharges_rh_finite_checker_soundness": false,
+    "discharges_rh_finite_checker_completeness": false,
+    "discharges_rh_to_grh": false,
+    "native_verification_this_session": "NOT_RUN"
+  },
+  {
+    "attachment": 20,
+    "member": "ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/PaperChain/Stage03UnconditionalBridge.lean",
+    "sha256": "11bc9eca09794254bcf00bbb0cb7ba7701d09c72000295535a5dca4e41100ee3",
+    "source_path": "publication_work/attachment_sources/20/root/ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/PaperChain/Stage03UnconditionalBridge.lean",
+    "new_to_prior_union": true,
+    "tracked_repo_paths": [],
+    "recommendation": "SUBSTANTIVE_ODD_ZETA_CALIBRATION_NOT_RH",
+    "exact_boundary": "Source has only original Hankel parameter domain and k>=1; target finite determinant pencil at odd-zeta center. No actual xi-zero theorem.",
+    "declarations": [
+      {
+        "name": "stage03_original_gram_unconditional",
+        "line": 25,
+        "statement_text": "theorem stage03_original_gram_unconditional\n    (p : Zetahyperbolic.HankelParams) (k : \u2115) (hk : 1 \u2264 k) :\n    Zetahyperbolic.GramPositiveOriginal p k"
+      },
+      {
+        "name": "stage03_original_exact_zero_free_disk",
+        "line": 33,
+        "statement_text": "theorem stage03_original_exact_zero_free_disk\n    (p : Zetahyperbolic.HankelParams) (k : \u2115) (hk : 1 \u2264 k) :\n    \u2203 radius : \u211d, 0 < radius \u2227\n      (\u2200 z : \u2102, (Zetahyperbolic.Delta_poly p k).eval\u2082 (algebraMap \u211a \u2102) z = 0 \u2192\n        z.im = 0 \u2227\n        z \u2260 (ManuscriptChain.Real.zeta (2 * k + 1) : \u2102) \u2227\n        radius \u2264 \u2016z - (ManuscriptChain.Real.zeta (2 * k + 1) : \u2102)\u2016) \u2227\n      (\u2203 z : \u2102, (Zetahyperbolic.Delta_poly p k).eval\u2082 (algebraMap \u211a \u2102) z = 0 \u2227\n        \u2016z - (ManuscriptChain.Real.zeta (2 * k + 1) : \u2102)\u2016 = radius)"
+      },
+      {
+        "name": "stage03_unconditional_general_statement",
+        "line": 46,
+        "statement_text": "theorem stage03_unconditional_general_statement\n    (p : Zetahyperbolic.HankelParams) (k : \u2115) (hk : 1 \u2264 k) :\n    ManuscriptChain.General.GeneralStatement\n      (Zetahyperbolic.ManuscriptCompatibility.toParameters p k)"
+      }
+    ],
+    "discharges_actual_xi_calibration": false,
+    "discharges_rh_finite_checker_soundness": false,
+    "discharges_rh_finite_checker_completeness": false,
+    "discharges_rh_to_grh": false,
+    "native_verification_this_session": "NOT_RUN"
+  },
+  {
+    "attachment": 20,
+    "member": "ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/PaperChain/Stage05AdjacentDriftBridge.lean",
+    "sha256": "240b88567ba72680039684688507bef6bfbfeb7f7356a208d67183154860fe0c",
+    "source_path": "publication_work/attachment_sources/20/root/ZETAHYPERBOLIC_ANCHOR_CHAIN_10_STAGES_v0_1_6_CACHE_FIX1/PaperChain/Stage05AdjacentDriftBridge.lean",
+    "new_to_prior_union": true,
+    "tracked_repo_paths": [],
+    "recommendation": "OUTSIDE_RH_PROOF_GRAPH",
+    "exact_boundary": "Requires c>0 and forall n actual adjacent negative log drift. One named condition remains infinite and is not derived by a finite checker.",
+    "declarations": [
+      {
+        "name": "stage05_zeta5_irrational_if_adjacent_energy_drift",
+        "line": 33,
+        "statement_text": "theorem stage05_zeta5_irrational_if_adjacent_energy_drift\n    (c : \u211d) (hc : 0 < c)\n    (hstep : \u2200 n : \u2115,\n      AdjacentLogIncrement.affineEnergy 2 (n + 1) \u2264\n        AdjacentLogIncrement.affineEnergy 2 n -\n          c * (2 * (n : \u211d) + 3)) :\n    Irrational (Real.zeta 5)"
+      }
+    ],
+    "discharges_actual_xi_calibration": false,
+    "discharges_rh_finite_checker_soundness": false,
+    "discharges_rh_finite_checker_completeness": false,
+    "discharges_rh_to_grh": false,
+    "native_verification_this_session": "NOT_RUN"
+  },
+  {
+    "attachment": 23,
+    "member": "ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX/PaperChronology/Paper10Section8QuantitativeMassFraction.lean",
+    "sha256": "143ca2cb6a63518b3cf9a15a881407625ab340cd6a53a9bd23ad15329a7d7002",
+    "source_path": "publication_work/attachment_sources/23/root/ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_14_FINITE_MASS_FRACTION_FIX/PaperChronology/Paper10Section8QuantitativeMassFraction.lean",
+    "new_to_prior_union": true,
+    "tracked_repo_paths": [],
+    "recommendation": "OPTIONAL_GENERIC_FINITE_TOOL",
+    "exact_boundary": "Requires finite per-entry cap and lower average; no manuscript asymptotic or actual-xi spectral bound.",
+    "declarations": [
+      {
+        "name": "PAPER10_FINITE_MASS_HIGH_FRACTION",
+        "line": 19,
+        "statement_text": "theorem PAPER10_FINITE_MASS_HIGH_FRACTION\n    {n : \u2115} (a : Fin n \u2192 \u211d) (cap threshold mean : \u211d)\n    (hcap : \u2200 i, a i \u2264 cap)\n    (hmean : (n : \u211d) * mean \u2264 \u2211 i : Fin n, a i) :\n    (n : \u211d) * (mean - threshold) \u2264\n      ((Finset.univ.filter (fun i : Fin n => threshold \u2264 a i)).card : \u211d) *\n        (cap - threshold)"
+      }
+    ],
+    "discharges_actual_xi_calibration": false,
+    "discharges_rh_finite_checker_soundness": false,
+    "discharges_rh_finite_checker_completeness": false,
+    "discharges_rh_to_grh": false,
+    "native_verification_this_session": "NOT_RUN"
+  },
+  {
+    "attachment": 24,
+    "member": "ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX/PaperChain/FrozenSection3Pencil.lean",
+    "sha256": "da5d9acd55bcb8b0813b5c643e88616ea4a42ea67f4241add71c5f32819c5429",
+    "source_path": "publication_work/attachment_sources/24/root/ZETAHYPERBOLIC_10_STAGE_STITCH_v0_1_26_GOODWORKFLOWFRONTIER_TARGETED_COMMUTATIVITY_FIX/PaperChain/FrozenSection3Pencil.lean",
+    "new_to_prior_union": true,
+    "tracked_repo_paths": [],
+    "recommendation": "SUBSTANTIVE_ODD_ZETA_CONDITIONAL_BRIDGE_NOT_RH",
+    "exact_boundary": "Actual manuscript pencil positivity requires exact all-entry Bose integral identification as displayed; original matrix and moment matrix are not silently identified.",
+    "declarations": [
+      {
+        "name": "entryIdentityAt_iff_explicitBoseIntegrals",
+        "line": 89,
+        "statement_text": "theorem entryIdentityAt_iff_explicitBoseIntegrals\n    (p : Zetahyperbolic.HankelParams) (k : \u2115) (\u03be : \u211d) :\n    EntryIdentityAt p k \u03be \u2194\n      \u2200 i j : Fin p.h,\n        manuscriptGramAt p k \u03be i j =\n          \u222b y in Ioi (0 : \u211d),\n            y ^ (2 * (i.val + j.val)) * weight p k y"
+      },
+      {
+        "name": "manuscriptGramAt_posDef_of_explicitBoseIntegrals",
+        "line": 114,
+        "statement_text": "theorem manuscriptGramAt_posDef_of_explicitBoseIntegrals\n    (p : Zetahyperbolic.HankelParams) (k : \u2115) (\u03be : \u211d)\n    (h : \u2200 i j : Fin p.h,\n      manuscriptGramAt p k \u03be i j =\n        \u222b y in Ioi (0 : \u211d),\n          y ^ (2 * (i.val + j.val)) * weight p k y) :\n    (manuscriptGramAt p k \u03be).PosDef"
+      }
+    ],
+    "discharges_actual_xi_calibration": false,
+    "discharges_rh_finite_checker_soundness": false,
+    "discharges_rh_finite_checker_completeness": false,
+    "discharges_rh_to_grh": false,
+    "native_verification_this_session": "NOT_RUN"
+  },
+  {
+    "attachment": 25,
+    "member": "ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_16_WEIGHTED_MONOMIAL_GRAM/src/PaperChronology/Paper10Section3WeightedGram.lean",
+    "sha256": "ba4bac2c0f93831acd3e8d1f4596814b1e1de34398a8d915de903017888f51d5",
+    "source_path": "publication_work/attachment_sources/25/root/ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_16_WEIGHTED_MONOMIAL_GRAM/src/PaperChronology/Paper10Section3WeightedGram.lean",
+    "new_to_prior_union": true,
+    "tracked_repo_paths": [],
+    "recommendation": "SUBSTANTIVE_ODD_ZETA_CALIBRATION_NOT_RH",
+    "exact_boundary": "Admissible parameters: k>0,m>0,N>0,N<K. Derived weighted monomial integral for original odd-zeta rational pencil; latest source native-unverified.",
+    "declarations": [
+      {
+        "name": "weightedDensity_pos",
+        "line": 67,
+        "statement_text": "theorem weightedDensity_pos (p : Real.Parameters) {y : \u211d} (hy : 0 < y) :\n    0 < weightedDensity p y"
+      },
+      {
+        "name": "resolvedKernel_eq_weighted",
+        "line": 125,
+        "statement_text": "theorem resolvedKernel_eq_weighted (p : Real.Parameters) (i j : \u2115)\n    {y : \u211d} (hy : 0 < y) :\n    resolvedKernel p i j y * density p.k y =\n      y ^ (2 * (i + j)) * weightedDensity p y"
+      },
+      {
+        "name": "gram_eq_weighted_monomial_integral",
+        "line": 147,
+        "statement_text": "theorem gram_eq_weighted_monomial_integral (p : Real.Parameters)\n    (hp : Real.Admissible p) (i j : Fin p.h) :\n    Real.gram p (Real.zeta p.weight) i j =\n      \u222b y : \u211d in Ioi 0,\n        y ^ (2 * (i.val + j.val)) * weightedDensity p y"
+      }
+    ],
+    "discharges_actual_xi_calibration": false,
+    "discharges_rh_finite_checker_soundness": false,
+    "discharges_rh_finite_checker_completeness": false,
+    "discharges_rh_to_grh": false,
+    "native_verification_this_session": "NOT_RUN"
+  },
+  {
+    "attachment": 25,
+    "member": "ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_16_WEIGHTED_MONOMIAL_GRAM/src/PaperChronology/Paper10Section4SpectralBridge.lean",
+    "sha256": "dae0c1c2e8d8b5fcdb50b78e6ba15dcde88bbe5bd92cbf96791617028e7bc02b",
+    "source_path": "publication_work/attachment_sources/25/root/ZETA_HYPERBOLIC_PAPER10_CHAIN_FASTCORE_v0_2_16_WEIGHTED_MONOMIAL_GRAM/src/PaperChronology/Paper10Section4SpectralBridge.lean",
+    "new_to_prior_union": true,
+    "tracked_repo_paths": [],
+    "recommendation": "OUTSIDE_RH_PROOF_GRAPH",
+    "exact_boundary": "Structure assumes all-n real factorization and spectral bound; irrationality further assumes ScaleUpper and RationalIndexBudget. No RH endpoint.",
+    "declarations": [
+      {
+        "name": "SpectralPolynomialFamily",
+        "line": 28,
+        "statement_text": "structure SpectralPolynomialFamily (Q : \u2115 \u2192 Polynomial \u2124) (\u03be : \u211d)\n    (n\u2080 : \u2115) where\n  scale : \u2115 \u2192 \u211d\n  beta : (n : \u2115) \u2192 Fin (Q n).natDegree \u2192 \u211d\n  bound : \u2115 \u2192 \u211d\n  bound_pos : \u2200 n, n\u2080 \u2264 n \u2192 0 < bound n\n  scale_ne : \u2200 n, n\u2080 \u2264 n \u2192 scale n \u2260 0\n  beta_bounded : \u2200 n, n\u2080 \u2264 n \u2192 \u2200 i, |beta n i| \u2264 bound n\n  eval_factor : \u2200 n, n\u2080 \u2264 n \u2192 \u2200 x : \u211d,\n    evalIntPolynomialReal (Q n) x =\n      scale n * \u220f i, (1 + (x - \u03be) * beta n i)"
+      },
+      {
+        "name": "irrational",
+        "line": 144,
+        "statement_text": "theorem irrational {budget : \u2115 \u2192 \u211d} {\u03bc b\u2080 : \u2115}\n    (upper : F.ScaleUpper budget)\n    (index : RationalIndexBudget Q F.radius budget n\u2080 \u03bc b\u2080) :\n    Irrational \u03be"
+      }
+    ],
+    "discharges_actual_xi_calibration": false,
+    "discharges_rh_finite_checker_soundness": false,
+    "discharges_rh_finite_checker_completeness": false,
+    "discharges_rh_to_grh": false,
+    "native_verification_this_session": "NOT_RUN"
+  }
+]

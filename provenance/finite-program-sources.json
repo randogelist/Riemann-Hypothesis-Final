@@ -1,0 +1,54 @@
+{
+  "package": "SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_2_3_GOODWORKFLOW_CACHED_MATHLIB",
+  "native_status": "NOT_RUN",
+  "modules": [
+    {
+      "module": "SoloboloAdmission.RationalCheck",
+      "source_path": "reinference/new-solobolo-finite/SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_2_3_GOODWORKFLOW_CACHED_MATHLIB/SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_2_3_GOODWORKFLOW_CACHED_MATHLIB/SoloboloAdmission/RationalCheck.lean",
+      "active_path": "SoloboloAdmission/RationalCheck.lean",
+      "sha256": "a322bbc75df9a04118e2be6707ba3e4c76af44340bce74d19a9c06ca7f2cf659",
+      "byte_identical": true,
+      "archive_path": "research/upstream/recovered-analytic-20261025/SoloboloAdmission/RationalCheck.lean"
+    },
+    {
+      "module": "SoloboloAdmission.CayleyKernel",
+      "source_path": "reinference/new-solobolo-finite/SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_2_3_GOODWORKFLOW_CACHED_MATHLIB/SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_2_3_GOODWORKFLOW_CACHED_MATHLIB/SoloboloAdmission/CayleyKernel.lean",
+      "active_path": "SoloboloAdmission/CayleyKernel.lean",
+      "sha256": "ddd8858ffa36302be7d56871c7b7b12ac10a6f176cea7de481ad5fce24fa7b97",
+      "byte_identical": true,
+      "archive_path": "research/upstream/recovered-analytic-20261025/SoloboloAdmission/CayleyKernel.lean"
+    },
+    {
+      "module": "SoloboloAdmission.RationalPackets",
+      "source_path": "reinference/new-solobolo-finite/SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_2_3_GOODWORKFLOW_CACHED_MATHLIB/SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_2_3_GOODWORKFLOW_CACHED_MATHLIB/SoloboloAdmission/RationalPackets.lean",
+      "active_path": "SoloboloAdmission/RationalPackets.lean",
+      "sha256": "4d1e91259c15916f3ab0564f2a35ccfe268791b1e1a9c48421ab61ad3922216e",
+      "byte_identical": true,
+      "archive_path": "research/upstream/recovered-analytic-20261025/SoloboloAdmission/RationalPackets.lean"
+    },
+    {
+      "module": "SoloboloAdmission.FiniteProgram",
+      "source_path": "reinference/new-solobolo-finite/SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_2_3_GOODWORKFLOW_CACHED_MATHLIB/SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_2_3_GOODWORKFLOW_CACHED_MATHLIB/SoloboloAdmission/FiniteProgram.lean",
+      "active_path": "SoloboloAdmission/FiniteProgram.lean",
+      "sha256": "599ff9c4a8358d54645be9079c4fad7781cedc225086af2363414c619730f041",
+      "byte_identical": true,
+      "archive_path": "research/upstream/recovered-analytic-20261025/SoloboloAdmission/FiniteProgram.lean"
+    },
+    {
+      "module": "SoloboloAdmission.ResidualBudget",
+      "source_path": "reinference/new-solobolo-finite/SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_2_3_GOODWORKFLOW_CACHED_MATHLIB/SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_2_3_GOODWORKFLOW_CACHED_MATHLIB/SoloboloAdmission/ResidualBudget.lean",
+      "active_path": "SoloboloAdmission/ResidualBudget.lean",
+      "sha256": "7078a8299f0fc8d8fba6e53213654560630bc15d054da34b2421b7ce4e95bc27",
+      "byte_identical": true,
+      "archive_path": "research/upstream/recovered-analytic-20261025/SoloboloAdmission/ResidualBudget.lean"
+    },
+    {
+      "module": "SoloboloAdmission.ResidualLimits",
+      "source_path": "reinference/new-solobolo-finite/SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_2_3_GOODWORKFLOW_CACHED_MATHLIB/SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_2_3_GOODWORKFLOW_CACHED_MATHLIB/SoloboloAdmission/ResidualLimits.lean",
+      "active_path": "SoloboloAdmission/ResidualLimits.lean",
+      "sha256": "5868845b9c31b8023a8e74f6e0a5ebd56a5eef2c942a030819d896032b8ac458",
+      "byte_identical": true,
+      "archive_path": "research/upstream/recovered-analytic-20261025/SoloboloAdmission/ResidualLimits.lean"
+    }
+  ]
+}

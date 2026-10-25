@@ -56,3 +56,10 @@ These L-identifiers refer to the twelve numbered summaries in [LOCAL_CRITERIA.md
 | L03 — item 3: Actual regularized Cayley function nonvanishing | Disk coordinates and nonvanishing factors re-express right-half-plane zero exclusion. This identifies the classical mechanism, not an exact published theorem using this J. [RIEMANN1859](../LITERATURE.md#riemann1859) |
 | L04 — item 4: Scalar and positive-metric passivity | The gain 1+4(Re(s)−1/2)²≤1 is elementary zero rigidity; the admitted metric variants encode it. No actual GP/Mellin operator identification follows. [RIEMANN1859](../LITERATURE.md#riemann1859) |
 | L05 — item 5: One fixed seed and all depths | The scalar proxy criterion is classical zero rigidity with a seed test and ordinary induction. The globally admitted metric remains the substantive input. [RIEMANN1859](../LITERATURE.md#riemann1859) |
+
+## Recovered analytic supplement
+
+[A01 and A02](../RECOVERED_ANALYTIC.md) are standard analytic reciprocal and
+linear-ODE reformulations. They are indexed separately from this historical
+23-entry partition. Exact published wording was not located; no novelty claim
+or new native verification is implied.

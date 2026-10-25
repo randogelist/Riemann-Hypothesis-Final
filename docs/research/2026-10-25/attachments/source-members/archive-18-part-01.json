@@ -1,0 +1,399 @@
+[
+  {
+    "id": 45,
+    "attachment": 4,
+    "archive_chain": [
+      "04-ZETA3_R_HALF_UNCONDITIONAL_MAHLER_LEAN_v0_2_3_FASTCORE_FIX3-2-.zip"
+    ],
+    "member": "ZETA3_R_HALF_UNCONDITIONAL_MAHLER_LEAN_v0_2_3_FASTCORE_FIX3/MahlerScore/Core.lean",
+    "sha256": "e716e1a1a7eac2bcb8b5677e423bde7204cfbfe7b0b39251f4c3932941fd4d07",
+    "bytes": 2044,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Mathlib"
+    ],
+    "declarations": [
+      "height",
+      "evalInt",
+      "cost",
+      "loss",
+      "score",
+      "UnboundedScore",
+      "BoundedScore",
+      "score_eq_requested",
+      "cost_pos"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 46,
+    "attachment": 4,
+    "archive_chain": [
+      "04-ZETA3_R_HALF_UNCONDITIONAL_MAHLER_LEAN_v0_2_3_FASTCORE_FIX3-2-.zip"
+    ],
+    "member": "ZETA3_R_HALF_UNCONDITIONAL_MAHLER_LEAN_v0_2_3_FASTCORE_FIX3/Main.lean",
+    "sha256": "477b08a9aae4f35bd7efc0598b9b4bd21357ae63dedc7a67a7bda475e2dade81",
+    "bytes": 27,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta3Half.AuditFull"
+    ],
+    "declarations": [],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 47,
+    "attachment": 4,
+    "archive_chain": [
+      "04-ZETA3_R_HALF_UNCONDITIONAL_MAHLER_LEAN_v0_2_3_FASTCORE_FIX3-2-.zip"
+    ],
+    "member": "ZETA3_R_HALF_UNCONDITIONAL_MAHLER_LEAN_v0_2_3_FASTCORE_FIX3/OddRational/Audit.lean",
+    "sha256": "c62c2f1cac5f2ee26037ec555996edc720ae9ce249c23d06add8e35a503bf8a6",
+    "bytes": 1396,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "OddRational.Mahler"
+    ],
+    "declarations": [],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 48,
+    "attachment": 4,
+    "archive_chain": [
+      "04-ZETA3_R_HALF_UNCONDITIONAL_MAHLER_LEAN_v0_2_3_FASTCORE_FIX3-2-.zip"
+    ],
+    "member": "ZETA3_R_HALF_UNCONDITIONAL_MAHLER_LEAN_v0_2_3_FASTCORE_FIX3/OddRational/Core.lean",
+    "sha256": "4c6aa55dce9aaade8a91aa58e8dba60ca81b5b728f78fd3a598d44f1de30677f",
+    "bytes": 3352,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Mathlib"
+    ],
+    "declarations": [
+      "Radius",
+      "value",
+      "doubleValue",
+      "polyCompatible",
+      "power",
+      "value_pos",
+      "value_lt_four",
+      "power_mul_den",
+      "power_pos",
+      "doubleValue_eq_power",
+      "rTwo",
+      "rFiveHalves",
+      "rQuarter",
+      "rTwo_compatible",
+      "rTwo_power",
+      "rFiveHalves_compatible",
+      "rFiveHalves_power",
+      "rQuarter_not_compatible"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 49,
+    "attachment": 4,
+    "archive_chain": [
+      "04-ZETA3_R_HALF_UNCONDITIONAL_MAHLER_LEAN_v0_2_3_FASTCORE_FIX3-2-.zip"
+    ],
+    "member": "ZETA3_R_HALF_UNCONDITIONAL_MAHLER_LEAN_v0_2_3_FASTCORE_FIX3/OddRational/Geometry.lean",
+    "sha256": "eb99b83c86060b75175f3d2afffce848cadb6845b1db58a87e5a09fcf19aa659",
+    "bytes": 1779,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "OddRational.Core"
+    ],
+    "declarations": [
+      "Ray",
+      "Geometry",
+      "N",
+      "K",
+      "h",
+      "N_lt_K",
+      "N_le_K",
+      "h_pos",
+      "OddWeight",
+      "OddWeight.s",
+      "Index",
+      "Transition",
+      "previousStage",
+      "currentStage",
+      "degreeIncrement",
+      "degreeIncrement_pos"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 50,
+    "attachment": 4,
+    "archive_chain": [
+      "04-ZETA3_R_HALF_UNCONDITIONAL_MAHLER_LEAN_v0_2_3_FASTCORE_FIX3-2-.zip"
+    ],
+    "member": "ZETA3_R_HALF_UNCONDITIONAL_MAHLER_LEAN_v0_2_3_FASTCORE_FIX3/OddRational/Kernel.lean",
+    "sha256": "b4ee13bab571ef5411f23487f1e4ba440dd667414af564b48a2d75a82f4cfb68",
+    "bytes": 4445,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "OddRational.Geometry"
+    ],
+    "declarations": [
+      "dPoly",
+      "tailPoly",
+      "split_Icc",
+      "disjoint_Icc",
+      "dPoly_split",
+      "compatible_cancellation",
+      "KernelStamp",
+      "canonicalStamp",
+      "dReal",
+      "analyticKernel",
+      "integerKernel",
+      "analytic_eq_integer",
+      "polynomialKernelPair",
+      "cancelledKernelPair"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 51,
+    "attachment": 4,
+    "archive_chain": [
+      "04-ZETA3_R_HALF_UNCONDITIONAL_MAHLER_LEAN_v0_2_3_FASTCORE_FIX3-2-.zip"
+    ],
+    "member": "ZETA3_R_HALF_UNCONDITIONAL_MAHLER_LEAN_v0_2_3_FASTCORE_FIX3/OddRational/Mahler.lean",
+    "sha256": "6a7bd97010b7275a68f1b720526166873a42a9db5dc32f5202be5a01823d7ca8",
+    "bytes": 1334,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "OddRational.Kernel",
+      "MahlerScore.Core"
+    ],
+    "declarations": [
+      "zetaReal",
+      "FiniteMahlerCandidate",
+      "FiniteMahlerCandidate.score",
+      "FiniteMahlerCandidate.score_eq",
+      "FiniteMahlerAnchor",
+      "FiniteMahlerAnchor.certifies"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 52,
+    "attachment": 4,
+    "archive_chain": [
+      "04-ZETA3_R_HALF_UNCONDITIONAL_MAHLER_LEAN_v0_2_3_FASTCORE_FIX3-2-.zip"
+    ],
+    "member": "ZETA3_R_HALF_UNCONDITIONAL_MAHLER_LEAN_v0_2_3_FASTCORE_FIX3/Zeta3Half/Audit.lean",
+    "sha256": "174ea4376fb19826d2e95cfa0d29e5ded5aa3e4bc3e37bb827229bbb029085d4",
+    "bytes": 746,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta3Half.Mahler"
+    ],
+    "declarations": [],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 53,
+    "attachment": 4,
+    "archive_chain": [
+      "04-ZETA3_R_HALF_UNCONDITIONAL_MAHLER_LEAN_v0_2_3_FASTCORE_FIX3-2-.zip"
+    ],
+    "member": "ZETA3_R_HALF_UNCONDITIONAL_MAHLER_LEAN_v0_2_3_FASTCORE_FIX3/Zeta3Half/AuditFull.lean",
+    "sha256": "efe7760c34e38c995e8db93c04560fd77a0281d3ef170de374d956bce027745a",
+    "bytes": 343,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta3Half.Unconditional"
+    ],
+    "declarations": [],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 54,
+    "attachment": 4,
+    "archive_chain": [
+      "04-ZETA3_R_HALF_UNCONDITIONAL_MAHLER_LEAN_v0_2_3_FASTCORE_FIX3-2-.zip"
+    ],
+    "member": "ZETA3_R_HALF_UNCONDITIONAL_MAHLER_LEAN_v0_2_3_FASTCORE_FIX3/Zeta3Half/Determinant.lean",
+    "sha256": "9ba9cc5cb0b341381b74ad4cb1dcd62f9d7d0e79a39c4e560e0379eda0b744e7",
+    "bytes": 3545,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "OddRational.Mahler"
+    ],
+    "declarations": [
+      "pole2",
+      "pole3",
+      "g00",
+      "g01",
+      "g11",
+      "delta",
+      "delta_ident",
+      "Q",
+      "q_eval_real",
+      "q_coeff_zero",
+      "q_coeff_one",
+      "q_coeff_two",
+      "q_support_subset",
+      "q_natDegree",
+      "q_height",
+      "radius",
+      "ray",
+      "geometry",
+      "weight",
+      "idx",
+      "compatible",
+      "exponent_one",
+      "geometry_stamp"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 55,
+    "attachment": 4,
+    "archive_chain": [
+      "04-ZETA3_R_HALF_UNCONDITIONAL_MAHLER_LEAN_v0_2_3_FASTCORE_FIX3-2-.zip"
+    ],
+    "member": "ZETA3_R_HALF_UNCONDITIONAL_MAHLER_LEAN_v0_2_3_FASTCORE_FIX3/Zeta3Half/Enclosure.lean",
+    "sha256": "c887fcda586e38f0467ac7fa9ca4f51d9ee4ee0011e9a78517e6bc8230e88309",
+    "bytes": 1792,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta3Half.Determinant"
+    ],
+    "declarations": [
+      "lo",
+      "hi",
+      "Zeta3Window",
+      "f",
+      "q_window",
+      "q_bounds_of_classical_window"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 56,
+    "attachment": 4,
+    "archive_chain": [
+      "04-ZETA3_R_HALF_UNCONDITIONAL_MAHLER_LEAN_v0_2_3_FASTCORE_FIX3-2-.zip"
+    ],
+    "member": "ZETA3_R_HALF_UNCONDITIONAL_MAHLER_LEAN_v0_2_3_FASTCORE_FIX3/Zeta3Half/EulerTail.lean",
+    "sha256": "4046d106fac06638f8a6e7b6162f965768e199f43c68fcb0b85ff6afc606487d",
+    "bytes": 7834,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta3Half.Mahler"
+    ],
+    "declarations": [
+      "U",
+      "L",
+      "tailTerm",
+      "a",
+      "headEight",
+      "tailL",
+      "tailU",
+      "step",
+      "step_nat",
+      "partial_squeeze",
+      "inv_shift_tendsto",
+      "U_tendsto_zero",
+      "L_tendsto_zero",
+      "summable_real_zeta",
+      "summable_a",
+      "summable_tail",
+      "tail_enclosure",
+      "zeta_real_series",
+      "series_split",
+      "eight_term_arithmetic",
+      "zeta3_window_unconditional"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 57,
+    "attachment": 4,
+    "archive_chain": [
+      "04-ZETA3_R_HALF_UNCONDITIONAL_MAHLER_LEAN_v0_2_3_FASTCORE_FIX3-2-.zip"
+    ],
+    "member": "ZETA3_R_HALF_UNCONDITIONAL_MAHLER_LEAN_v0_2_3_FASTCORE_FIX3/Zeta3Half/Mahler.lean",
+    "sha256": "648f86906c546be36e5fe09e182c91dd31d0b7e134a3ccf6a332674df9f02eb9",
+    "bytes": 3299,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta3Half.Enclosure"
+    ],
+    "declarations": [
+      "log_two_lower",
+      "score_lower_of_window",
+      "admitFinite",
+      "actual_zeta3_endpoint",
+      "zeta3_r_half_finite_mahler"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  },
+  {
+    "id": 58,
+    "attachment": 4,
+    "archive_chain": [
+      "04-ZETA3_R_HALF_UNCONDITIONAL_MAHLER_LEAN_v0_2_3_FASTCORE_FIX3-2-.zip"
+    ],
+    "member": "ZETA3_R_HALF_UNCONDITIONAL_MAHLER_LEAN_v0_2_3_FASTCORE_FIX3/Zeta3Half/Unconditional.lean",
+    "sha256": "dbbaaec6d249f9659a865fc66b8196885f7032e97d3745b6cb8d90ebc7279d6b",
+    "bytes": 587,
+    "prior_union_matches": [],
+    "prior_union_occurrence_count": 0,
+    "tracked_repo_paths": [],
+    "imports": [
+      "Zeta3Half.EulerTail"
+    ],
+    "declarations": [
+      "zeta3_r_half_finite_mahler_unconditional",
+      "finiteMahlerUnconditional"
+    ],
+    "forbidden_tokens": [],
+    "rh_target_mentions": false
+  }
+]

@@ -1,0 +1,916 @@
+{
+  "schema_version": 1,
+  "endpoint": "SoloboloAdmission.slitODEAdmission_iff_RH",
+  "criterion": "Exists a holomorphic A on Complex.slitPlane with actual theta derivative + A*theta = 0 everywhere there",
+  "native_target": "_root_.RiemannHypothesis",
+  "new_math_hypotheses_in_endpoint": [],
+  "source_assembly": "Five original byte-identical files: upstream angular-v0.1.1-FIX1 four-file predecessor closure plus SOLOBOLO finite-v0.2.3 NativeODE",
+  "native_compilation": "NOT_RUN",
+  "native_axiom_audit": "NOT_RUN",
+  "source_closure_complete": true,
+  "project_source_count": 5,
+  "missing_tracked_source_hash_count": 4,
+  "already_tracked_hash_count": 1,
+  "active_hash_count": 0,
+  "local_repo_commit": "69ad4d6a66c5826d77013c33afeb40b7a1a90639",
+  "publication_coverage_basis": "git ls-files LOCAL checkout only",
+  "topological_modules": [
+    "AWPIRH.XiCore",
+    "AWPIRH.ThetaEntire",
+    "AngularMaster.ZeroGeometry",
+    "AWPIRH.AnalyticODE",
+    "SoloboloAdmission.NativeODE"
+  ],
+  "external_imports": [
+    "Mathlib",
+    "Mathlib.Analysis.Complex.RemovableSingularity",
+    "Mathlib.Analysis.Complex.SqrtDeriv",
+    "Mathlib.NumberTheory.LSeries.Nonvanishing",
+    "Mathlib.Tactic.FieldSimp",
+    "Mathlib.Tactic.FunProp",
+    "Mathlib.Tactic.Linarith",
+    "Mathlib.Tactic.NormNum",
+    "Mathlib.Tactic.Ring"
+  ],
+  "external_mathlib_source_or_binary_closure_bundled": false,
+  "toolchain": "leanprover/lean4:v4.33.0",
+  "mathlib_revision_pin": "MISSING_FROM_SOURCE_PACKAGE",
+  "forbidden_code_token_count": 0,
+  "public_decl_axiom_audit_targets": [
+    "AWPIRH.xi",
+    "AWPIRH.centeredXi",
+    "AWPIRH.NontrivialZero",
+    "AWPIRH.xi_differentiable",
+    "AWPIRH.xi_reflection",
+    "AWPIRH.centeredXi_differentiable",
+    "AWPIRH.centeredXi_even",
+    "AWPIRH.nontrivialZero_ne_zero",
+    "AWPIRH.gammaR_ne_zero_of_nontrivialZero",
+    "AWPIRH.completedZeta_zero_of_nontrivialZero",
+    "AWPIRH.xi_eq_completed",
+    "AWPIRH.xi_zero_of_nontrivialZero",
+    "AWPIRH.xi_ne_zero_of_one_le_re",
+    "AWPIRH.theta",
+    "AWPIRH.complex_sqrt_sq",
+    "AWPIRH.theta_square",
+    "AWPIRH.theta_one",
+    "AWPIRH.theta_one_ne_zero",
+    "AWPIRH.theta_zero_of_nontrivialZero",
+    "AWPIRH.sqrt_differentiableAt_one",
+    "AWPIRH.sqrt_continuousAt_zero",
+    "AWPIRH.normalizedSqrt",
+    "AWPIRH.normalizedSqrt_sq",
+    "AWPIRH.normalizedSqrt_differentiableAt",
+    "AWPIRH.theta_eq_normalizedSqrt",
+    "AWPIRH.theta_differentiableAt_of_ne_zero",
+    "AWPIRH.theta_continuousAt_zero",
+    "AWPIRH.theta_analyticAt_zero",
+    "AWPIRH.theta_differentiable",
+    "AWPIRH.theta_analyticAt",
+    "AWPIRH.theta_entire",
+    "AWPIRH.theta_continuous",
+    "AngularMaster.XiZerosCritical",
+    "AngularMaster.ThetaZerosNonpositive",
+    "AngularMaster.xi_zero_mem_critical_strip",
+    "AngularMaster.nontrivialZero_of_xi_zero",
+    "AngularMaster.xi_zero_iff_nontrivialZero",
+    "AngularMaster.xi_zero_conj",
+    "AngularMaster.theta_zero_conj",
+    "AngularMaster.native_RH_iff_xi_zeros_critical",
+    "AngularMaster.square_nonpositive_iff_re_zero",
+    "AngularMaster.xi_zeros_critical_iff_theta_zeros_nonpositive",
+    "AngularMaster.native_RH_iff_theta_zeros_nonpositive",
+    "AWPIRH.analytic_ode_nonvanishing",
+    "AWPIRH.analytic_local_ode_nonvanishing",
+    "SoloboloAdmission.SlitODEAdmission",
+    "SoloboloAdmission.entire_local_ode_nonvanishing",
+    "SoloboloAdmission.slitODE_of_rh",
+    "SoloboloAdmission.rh_of_slitODE",
+    "SoloboloAdmission.slitODEAdmission_iff_RH"
+  ],
+  "generated_audit_path": "strategy_deep/staged-analytic/slit-ode/AnalyticPublicationAudit.lean",
+  "modules": [
+    {
+      "module": "AWPIRH.XiCore",
+      "source_path": "/workspace/scratch/097e0b4d673f/inspected_equivalences/RH_MASTER_CLOSURE_ANGULAR_LEAN_v0_1_1_FIX1/RH_MASTER_CLOSURE_ANGULAR_LEAN_v0_1_1_FIX1/AWPIRH/XiCore.lean",
+      "staged_path": "strategy_deep/staged-analytic/slit-ode/AWPIRH/XiCore.lean",
+      "sha256": "6bda1a14b59a508811b9f9a8bff400ed824d86f366b2ddeecd728571be7fd9db",
+      "bytes": 4652,
+      "imports": [
+        "Mathlib.NumberTheory.LSeries.Nonvanishing",
+        "Mathlib.Analysis.Complex.SqrtDeriv",
+        "Mathlib.Analysis.Complex.RemovableSingularity",
+        "Mathlib.Tactic.FunProp",
+        "Mathlib.Tactic.FieldSimp",
+        "Mathlib.Tactic.NormNum",
+        "Mathlib.Tactic.Ring",
+        "Mathlib.Tactic.Linarith"
+      ],
+      "project_imports": [],
+      "external_imports": [
+        "Mathlib.NumberTheory.LSeries.Nonvanishing",
+        "Mathlib.Analysis.Complex.SqrtDeriv",
+        "Mathlib.Analysis.Complex.RemovableSingularity",
+        "Mathlib.Tactic.FunProp",
+        "Mathlib.Tactic.FieldSimp",
+        "Mathlib.Tactic.NormNum",
+        "Mathlib.Tactic.Ring",
+        "Mathlib.Tactic.Linarith"
+      ],
+      "unresolved_project_imports": [],
+      "tracked_identical_paths": [],
+      "active_identical_modules": [],
+      "forbidden_code_tokens": [],
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "AWPIRH.xi",
+          "line": 19
+        },
+        {
+          "kind": "def",
+          "name": "AWPIRH.centeredXi",
+          "line": 22
+        },
+        {
+          "kind": "def",
+          "name": "AWPIRH.NontrivialZero",
+          "line": 24
+        },
+        {
+          "kind": "theorem",
+          "name": "AWPIRH.xi_differentiable",
+          "line": 28
+        },
+        {
+          "kind": "theorem",
+          "name": "AWPIRH.xi_reflection",
+          "line": 35
+        },
+        {
+          "kind": "theorem",
+          "name": "AWPIRH.centeredXi_differentiable",
+          "line": 40
+        },
+        {
+          "kind": "theorem",
+          "name": "AWPIRH.centeredXi_even",
+          "line": 45
+        },
+        {
+          "kind": "theorem",
+          "name": "AWPIRH.nontrivialZero_ne_zero",
+          "line": 50
+        },
+        {
+          "kind": "theorem",
+          "name": "AWPIRH.gammaR_ne_zero_of_nontrivialZero",
+          "line": 56
+        },
+        {
+          "kind": "theorem",
+          "name": "AWPIRH.completedZeta_zero_of_nontrivialZero",
+          "line": 69
+        },
+        {
+          "kind": "theorem",
+          "name": "AWPIRH.xi_eq_completed",
+          "line": 79
+        },
+        {
+          "kind": "theorem",
+          "name": "AWPIRH.xi_zero_of_nontrivialZero",
+          "line": 87
+        },
+        {
+          "kind": "theorem",
+          "name": "AWPIRH.xi_ne_zero_of_one_le_re",
+          "line": 92
+        },
+        {
+          "kind": "def",
+          "name": "AWPIRH.theta",
+          "line": 113
+        },
+        {
+          "kind": "theorem",
+          "name": "AWPIRH.complex_sqrt_sq",
+          "line": 115
+        },
+        {
+          "kind": "theorem",
+          "name": "AWPIRH.theta_square",
+          "line": 118
+        },
+        {
+          "kind": "theorem",
+          "name": "AWPIRH.theta_one",
+          "line": 124
+        },
+        {
+          "kind": "theorem",
+          "name": "AWPIRH.theta_one_ne_zero",
+          "line": 128
+        },
+        {
+          "kind": "theorem",
+          "name": "AWPIRH.theta_zero_of_nontrivialZero",
+          "line": 133
+        }
+      ],
+      "historical_source_bound_receipts": [
+        {
+          "package": "RH_NATIVE_CANDIDATES_v0_1_1_MELLIN",
+          "prepare_member": "RH_REVIEW_BUNDLE_18679_14231_11714/snapshots/downloads/RH_NATIVE_CANDIDATES_v0_1_1_MELLIN/.audit-logs/session_29813_13872_29124/D009.prepare.log",
+          "prepare_sha256": "09d6e1955412f8a6018f3f83c808d8e03ec6fab78d4a7c7220b72d7a8ca9dc6f",
+          "reported_lean_exit_zero": true,
+          "reported_source_comparison_equal": true,
+          "source_sha256": "6bda1a14b59a508811b9f9a8bff400ed824d86f366b2ddeecd728571be7fd9db",
+          "live_snapshot_same_source_hash": true,
+          "evidence_grade": "HISTORICAL_LOG_LINKED_TO_INCLUDED_SOURCE_COPY",
+          "full_dependency_hash_binding_verified": false,
+          "native_replayed_this_session": false
+        },
+        {
+          "package": "RH_NATIVE_CANDIDATES_v0_1_1_MELLIN",
+          "prepare_member": "RH_REVIEW_BUNDLE_18679_14231_11714/snapshots/downloads/RH_NATIVE_CANDIDATES_v0_1_1_MELLIN/.audit-logs/session_26453_28669_10297/D009.prepare.log",
+          "prepare_sha256": "8f8c1c6bdb272cc8c6a40dc9a396f860ec0a9bb1362b63f3cde9b5f46db96d4b",
+          "reported_lean_exit_zero": true,
+          "reported_source_comparison_equal": true,
+          "source_sha256": "6bda1a14b59a508811b9f9a8bff400ed824d86f366b2ddeecd728571be7fd9db",
+          "live_snapshot_same_source_hash": true,
+          "evidence_grade": "HISTORICAL_LOG_LINKED_TO_INCLUDED_SOURCE_COPY",
+          "full_dependency_hash_binding_verified": false,
+          "native_replayed_this_session": false
+        },
+        {
+          "package": "RH_NATIVE_CANDIDATES_v0_1_1_MELLIN",
+          "prepare_member": "RH_REVIEW_BUNDLE_18679_14231_11714/snapshots/downloads/RH_NATIVE_CANDIDATES_v0_1_1_MELLIN/.audit-logs/session_18073_7467_12178/D009.prepare.log",
+          "prepare_sha256": "a0730fa26c4a609622801ab3a25f029964e9a5663e9a4012e50271ba5c888fc2",
+          "reported_lean_exit_zero": true,
+          "reported_source_comparison_equal": true,
+          "source_sha256": "6bda1a14b59a508811b9f9a8bff400ed824d86f366b2ddeecd728571be7fd9db",
+          "live_snapshot_same_source_hash": true,
+          "evidence_grade": "HISTORICAL_LOG_LINKED_TO_INCLUDED_SOURCE_COPY",
+          "full_dependency_hash_binding_verified": false,
+          "native_replayed_this_session": false
+        },
+        {
+          "package": "RH_NATIVE_CANDIDATES_v0_1_0",
+          "prepare_member": "RH_REVIEW_BUNDLE_18679_14231_11714/snapshots/downloads/RH_NATIVE_CANDIDATES_v0_1_0/.audit-logs/session_29583_10127_6449/D009.prepare.log",
+          "prepare_sha256": "737c8c733fc456de005b4c704c9a32da9c8b26a3147be9f0af853ec8d6aa7964",
+          "reported_lean_exit_zero": true,
+          "reported_source_comparison_equal": true,
+          "source_sha256": "6bda1a14b59a508811b9f9a8bff400ed824d86f366b2ddeecd728571be7fd9db",
+          "live_snapshot_same_source_hash": true,
+          "evidence_grade": "HISTORICAL_LOG_LINKED_TO_INCLUDED_SOURCE_COPY",
+          "full_dependency_hash_binding_verified": false,
+          "native_replayed_this_session": false
+        },
+        {
+          "package": "RH_NATIVE_CANDIDATES_v0_1_0",
+          "prepare_member": "RH_REVIEW_BUNDLE_18679_14231_11714/snapshots/downloads/RH_NATIVE_CANDIDATES_v0_1_0/.audit-logs/session_21030_17500_11463/D009.prepare.log",
+          "prepare_sha256": "d9c6a791276fa41eb051a21b27ecb783bed2e0143d1e2e4f6594af4399dd466c",
+          "reported_lean_exit_zero": true,
+          "reported_source_comparison_equal": true,
+          "source_sha256": "6bda1a14b59a508811b9f9a8bff400ed824d86f366b2ddeecd728571be7fd9db",
+          "live_snapshot_same_source_hash": true,
+          "evidence_grade": "HISTORICAL_LOG_LINKED_TO_INCLUDED_SOURCE_COPY",
+          "full_dependency_hash_binding_verified": false,
+          "native_replayed_this_session": false
+        }
+      ],
+      "source_occurrences": [
+        {
+          "occurrence_id": 87,
+          "archive_chain": [
+            "RH_REVIEW_BUNDLE_18679_14231_11714.zip"
+          ],
+          "member": "RH_REVIEW_BUNDLE_18679_14231_11714/snapshots/lean-native/QQRH_FULL_X_ANCHOR_LEAN_v0_1_0/AWPIRH/XiCore.lean",
+          "package": "QQRH_FULL_X_ANCHOR_LEAN_v0_1_0",
+          "family": "QQRH_FULL_X_ANCHOR_LEAN",
+          "source_kind": "snapshot",
+          "sha256": "6bda1a14b59a508811b9f9a8bff400ed824d86f366b2ddeecd728571be7fd9db",
+          "bytes": 4652,
+          "encoding": "utf-8-sig",
+          "corpus_path": "reinference/corpus/6bda1a14b59a508811b9f9a8bff400ed824d86f366b2ddeecd728571be7fd9db.lean",
+          "corpus_sha256": "6bda1a14b59a508811b9f9a8bff400ed824d86f366b2ddeecd728571be7fd9db"
+        },
+        {
+          "occurrence_id": 198,
+          "archive_chain": [
+            "RH_REVIEW_BUNDLE_18679_14231_11714.zip"
+          ],
+          "member": "RH_REVIEW_BUNDLE_18679_14231_11714/snapshots/lean-native/QQRH_FULL_X_ANCHOR_2_LEAN_v0_1_0/AWPIRH/XiCore.lean",
+          "package": "QQRH_FULL_X_ANCHOR_2_LEAN_v0_1_0",
+          "family": "QQRH_FULL_X_ANCHOR_2_LEAN",
+          "source_kind": "snapshot",
+          "sha256": "6bda1a14b59a508811b9f9a8bff400ed824d86f366b2ddeecd728571be7fd9db",
+          "bytes": 4652,
+          "encoding": "utf-8-sig",
+          "corpus_path": "reinference/corpus/6bda1a14b59a508811b9f9a8bff400ed824d86f366b2ddeecd728571be7fd9db.lean",
+          "corpus_sha256": "6bda1a14b59a508811b9f9a8bff400ed824d86f366b2ddeecd728571be7fd9db"
+        },
+        {
+          "occurrence_id": 1055,
+          "archive_chain": [
+            "RH_REVIEW_BUNDLE_18679_14231_11714.zip"
+          ],
+          "member": "RH_REVIEW_BUNDLE_18679_14231_11714/snapshots/downloads/TAYLORS_PRODIGY_LEAN_v0_2_0/AWPIRH/XiCore.lean",
+          "package": "TAYLORS_PRODIGY_LEAN_v0_2_0",
+          "family": "TAYLORS_PRODIGY_LEAN",
+          "source_kind": "snapshot",
+          "sha256": "6bda1a14b59a508811b9f9a8bff400ed824d86f366b2ddeecd728571be7fd9db",
+          "bytes": 4652,
+          "encoding": "utf-8-sig",
+          "corpus_path": "reinference/corpus/6bda1a14b59a508811b9f9a8bff400ed824d86f366b2ddeecd728571be7fd9db.lean",
+          "corpus_sha256": "6bda1a14b59a508811b9f9a8bff400ed824d86f366b2ddeecd728571be7fd9db"
+        }
+      ],
+      "coherent_archive_member": "RH_MASTER_CLOSURE_ANGULAR_LEAN_v0_1_1_FIX1/AWPIRH/XiCore.lean"
+    },
+    {
+      "module": "AWPIRH.ThetaEntire",
+      "source_path": "/workspace/scratch/097e0b4d673f/inspected_equivalences/RH_MASTER_CLOSURE_ANGULAR_LEAN_v0_1_1_FIX1/RH_MASTER_CLOSURE_ANGULAR_LEAN_v0_1_1_FIX1/AWPIRH/ThetaEntire.lean",
+      "staged_path": "strategy_deep/staged-analytic/slit-ode/AWPIRH/ThetaEntire.lean",
+      "sha256": "cb1f0838f2d90a1ba30e696afd05337e721ee7cc7e021a30ec28cdf2f810533b",
+      "bytes": 4727,
+      "imports": [
+        "AWPIRH.XiCore"
+      ],
+      "project_imports": [
+        "AWPIRH.XiCore"
+      ],
+      "external_imports": [],
+      "unresolved_project_imports": [],
+      "tracked_identical_paths": [],
+      "active_identical_modules": [],
+      "forbidden_code_tokens": [],
+      "declarations": [
+        {
+          "kind": "theorem",
+          "name": "AWPIRH.sqrt_differentiableAt_one",
+          "line": 20
+        },
+        {
+          "kind": "theorem",
+          "name": "AWPIRH.sqrt_continuousAt_zero",
+          "line": 33
+        },
+        {
+          "kind": "def",
+          "name": "AWPIRH.normalizedSqrt",
+          "line": 44
+        },
+        {
+          "kind": "theorem",
+          "name": "AWPIRH.normalizedSqrt_sq",
+          "line": 47
+        },
+        {
+          "kind": "theorem",
+          "name": "AWPIRH.normalizedSqrt_differentiableAt",
+          "line": 52
+        },
+        {
+          "kind": "theorem",
+          "name": "AWPIRH.theta_eq_normalizedSqrt",
+          "line": 74
+        },
+        {
+          "kind": "theorem",
+          "name": "AWPIRH.theta_differentiableAt_of_ne_zero",
+          "line": 79
+        },
+        {
+          "kind": "theorem",
+          "name": "AWPIRH.theta_continuousAt_zero",
+          "line": 88
+        },
+        {
+          "kind": "theorem",
+          "name": "AWPIRH.theta_analyticAt_zero",
+          "line": 93
+        },
+        {
+          "kind": "theorem",
+          "name": "AWPIRH.theta_differentiable",
+          "line": 99
+        },
+        {
+          "kind": "theorem",
+          "name": "AWPIRH.theta_analyticAt",
+          "line": 106
+        },
+        {
+          "kind": "theorem",
+          "name": "AWPIRH.theta_entire",
+          "line": 109
+        },
+        {
+          "kind": "theorem",
+          "name": "AWPIRH.theta_continuous",
+          "line": 113
+        }
+      ],
+      "historical_source_bound_receipts": [
+        {
+          "package": "RH_NATIVE_CANDIDATES_v0_1_1_MELLIN",
+          "prepare_member": "RH_REVIEW_BUNDLE_18679_14231_11714/snapshots/downloads/RH_NATIVE_CANDIDATES_v0_1_1_MELLIN/.audit-logs/session_29813_13872_29124/D010.prepare.log",
+          "prepare_sha256": "31a2bfb7b88e9dddebafa35a333a7db7f774fb710dbac0d81cbe2e73766f8aeb",
+          "reported_lean_exit_zero": true,
+          "reported_source_comparison_equal": true,
+          "source_sha256": "cb1f0838f2d90a1ba30e696afd05337e721ee7cc7e021a30ec28cdf2f810533b",
+          "live_snapshot_same_source_hash": true,
+          "evidence_grade": "HISTORICAL_LOG_LINKED_TO_INCLUDED_SOURCE_COPY",
+          "full_dependency_hash_binding_verified": false,
+          "native_replayed_this_session": false
+        },
+        {
+          "package": "RH_NATIVE_CANDIDATES_v0_1_1_MELLIN",
+          "prepare_member": "RH_REVIEW_BUNDLE_18679_14231_11714/snapshots/downloads/RH_NATIVE_CANDIDATES_v0_1_1_MELLIN/.audit-logs/session_26453_28669_10297/D010.prepare.log",
+          "prepare_sha256": "d91bd3901ed59b9b22c458ba52a120231074dfbc5f8bcc0d3e1a125e2e9d494c",
+          "reported_lean_exit_zero": true,
+          "reported_source_comparison_equal": true,
+          "source_sha256": "cb1f0838f2d90a1ba30e696afd05337e721ee7cc7e021a30ec28cdf2f810533b",
+          "live_snapshot_same_source_hash": true,
+          "evidence_grade": "HISTORICAL_LOG_LINKED_TO_INCLUDED_SOURCE_COPY",
+          "full_dependency_hash_binding_verified": false,
+          "native_replayed_this_session": false
+        },
+        {
+          "package": "RH_NATIVE_CANDIDATES_v0_1_1_MELLIN",
+          "prepare_member": "RH_REVIEW_BUNDLE_18679_14231_11714/snapshots/downloads/RH_NATIVE_CANDIDATES_v0_1_1_MELLIN/.audit-logs/session_18073_7467_12178/D010.prepare.log",
+          "prepare_sha256": "8999d9735270a404b0be9776966d0c8fdcf4d97ba7f667d9490f1662572acd8b",
+          "reported_lean_exit_zero": true,
+          "reported_source_comparison_equal": true,
+          "source_sha256": "cb1f0838f2d90a1ba30e696afd05337e721ee7cc7e021a30ec28cdf2f810533b",
+          "live_snapshot_same_source_hash": true,
+          "evidence_grade": "HISTORICAL_LOG_LINKED_TO_INCLUDED_SOURCE_COPY",
+          "full_dependency_hash_binding_verified": false,
+          "native_replayed_this_session": false
+        },
+        {
+          "package": "RH_NATIVE_CANDIDATES_v0_1_0",
+          "prepare_member": "RH_REVIEW_BUNDLE_18679_14231_11714/snapshots/downloads/RH_NATIVE_CANDIDATES_v0_1_0/.audit-logs/session_29583_10127_6449/D010.prepare.log",
+          "prepare_sha256": "f9ed775ab05cfc21e5f6a4c2c5820374b9129e26bc033e4d637d6c77290527d6",
+          "reported_lean_exit_zero": true,
+          "reported_source_comparison_equal": true,
+          "source_sha256": "cb1f0838f2d90a1ba30e696afd05337e721ee7cc7e021a30ec28cdf2f810533b",
+          "live_snapshot_same_source_hash": true,
+          "evidence_grade": "HISTORICAL_LOG_LINKED_TO_INCLUDED_SOURCE_COPY",
+          "full_dependency_hash_binding_verified": false,
+          "native_replayed_this_session": false
+        },
+        {
+          "package": "RH_NATIVE_CANDIDATES_v0_1_0",
+          "prepare_member": "RH_REVIEW_BUNDLE_18679_14231_11714/snapshots/downloads/RH_NATIVE_CANDIDATES_v0_1_0/.audit-logs/session_21030_17500_11463/D010.prepare.log",
+          "prepare_sha256": "77c82698da943199deb840e6503c5f1f523f9136081431afd80b456bda091cf1",
+          "reported_lean_exit_zero": true,
+          "reported_source_comparison_equal": true,
+          "source_sha256": "cb1f0838f2d90a1ba30e696afd05337e721ee7cc7e021a30ec28cdf2f810533b",
+          "live_snapshot_same_source_hash": true,
+          "evidence_grade": "HISTORICAL_LOG_LINKED_TO_INCLUDED_SOURCE_COPY",
+          "full_dependency_hash_binding_verified": false,
+          "native_replayed_this_session": false
+        }
+      ],
+      "source_occurrences": [
+        {
+          "occurrence_id": 86,
+          "archive_chain": [
+            "RH_REVIEW_BUNDLE_18679_14231_11714.zip"
+          ],
+          "member": "RH_REVIEW_BUNDLE_18679_14231_11714/snapshots/lean-native/QQRH_FULL_X_ANCHOR_LEAN_v0_1_0/AWPIRH/ThetaEntire.lean",
+          "package": "QQRH_FULL_X_ANCHOR_LEAN_v0_1_0",
+          "family": "QQRH_FULL_X_ANCHOR_LEAN",
+          "source_kind": "snapshot",
+          "sha256": "cb1f0838f2d90a1ba30e696afd05337e721ee7cc7e021a30ec28cdf2f810533b",
+          "bytes": 4727,
+          "encoding": "utf-8-sig",
+          "corpus_path": "reinference/corpus/cb1f0838f2d90a1ba30e696afd05337e721ee7cc7e021a30ec28cdf2f810533b.lean",
+          "corpus_sha256": "cb1f0838f2d90a1ba30e696afd05337e721ee7cc7e021a30ec28cdf2f810533b"
+        },
+        {
+          "occurrence_id": 197,
+          "archive_chain": [
+            "RH_REVIEW_BUNDLE_18679_14231_11714.zip"
+          ],
+          "member": "RH_REVIEW_BUNDLE_18679_14231_11714/snapshots/lean-native/QQRH_FULL_X_ANCHOR_2_LEAN_v0_1_0/AWPIRH/ThetaEntire.lean",
+          "package": "QQRH_FULL_X_ANCHOR_2_LEAN_v0_1_0",
+          "family": "QQRH_FULL_X_ANCHOR_2_LEAN",
+          "source_kind": "snapshot",
+          "sha256": "cb1f0838f2d90a1ba30e696afd05337e721ee7cc7e021a30ec28cdf2f810533b",
+          "bytes": 4727,
+          "encoding": "utf-8-sig",
+          "corpus_path": "reinference/corpus/cb1f0838f2d90a1ba30e696afd05337e721ee7cc7e021a30ec28cdf2f810533b.lean",
+          "corpus_sha256": "cb1f0838f2d90a1ba30e696afd05337e721ee7cc7e021a30ec28cdf2f810533b"
+        },
+        {
+          "occurrence_id": 1054,
+          "archive_chain": [
+            "RH_REVIEW_BUNDLE_18679_14231_11714.zip"
+          ],
+          "member": "RH_REVIEW_BUNDLE_18679_14231_11714/snapshots/downloads/TAYLORS_PRODIGY_LEAN_v0_2_0/AWPIRH/ThetaEntire.lean",
+          "package": "TAYLORS_PRODIGY_LEAN_v0_2_0",
+          "family": "TAYLORS_PRODIGY_LEAN",
+          "source_kind": "snapshot",
+          "sha256": "cb1f0838f2d90a1ba30e696afd05337e721ee7cc7e021a30ec28cdf2f810533b",
+          "bytes": 4727,
+          "encoding": "utf-8-sig",
+          "corpus_path": "reinference/corpus/cb1f0838f2d90a1ba30e696afd05337e721ee7cc7e021a30ec28cdf2f810533b.lean",
+          "corpus_sha256": "cb1f0838f2d90a1ba30e696afd05337e721ee7cc7e021a30ec28cdf2f810533b"
+        }
+      ],
+      "coherent_archive_member": "RH_MASTER_CLOSURE_ANGULAR_LEAN_v0_1_1_FIX1/AWPIRH/ThetaEntire.lean"
+    },
+    {
+      "module": "AngularMaster.ZeroGeometry",
+      "source_path": "/workspace/scratch/097e0b4d673f/inspected_equivalences/RH_MASTER_CLOSURE_ANGULAR_LEAN_v0_1_1_FIX1/RH_MASTER_CLOSURE_ANGULAR_LEAN_v0_1_1_FIX1/AngularMaster/ZeroGeometry.lean",
+      "staged_path": "strategy_deep/staged-analytic/slit-ode/AngularMaster/ZeroGeometry.lean",
+      "sha256": "a2a155d8584f3682c4a48f4b8f0c9fdd1473c25ed4934c448f5015a4647361df",
+      "bytes": 5387,
+      "imports": [
+        "AWPIRH.ThetaEntire"
+      ],
+      "project_imports": [
+        "AWPIRH.ThetaEntire"
+      ],
+      "external_imports": [],
+      "unresolved_project_imports": [],
+      "tracked_identical_paths": [
+        "research/upstream/rh-equivalences-corpus/a2a155d8584f3682c4a48f4b8f0c9fdd1473c25ed4934c448f5015a4647361df.lean"
+      ],
+      "active_identical_modules": [],
+      "forbidden_code_tokens": [],
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "AngularMaster.XiZerosCritical",
+          "line": 20
+        },
+        {
+          "kind": "def",
+          "name": "AngularMaster.ThetaZerosNonpositive",
+          "line": 24
+        },
+        {
+          "kind": "theorem",
+          "name": "AngularMaster.xi_zero_mem_critical_strip",
+          "line": 27
+        },
+        {
+          "kind": "theorem",
+          "name": "AngularMaster.nontrivialZero_of_xi_zero",
+          "line": 41
+        },
+        {
+          "kind": "theorem",
+          "name": "AngularMaster.xi_zero_iff_nontrivialZero",
+          "line": 66
+        },
+        {
+          "kind": "theorem",
+          "name": "AngularMaster.xi_zero_conj",
+          "line": 71
+        },
+        {
+          "kind": "theorem",
+          "name": "AngularMaster.theta_zero_conj",
+          "line": 87
+        },
+        {
+          "kind": "theorem",
+          "name": "AngularMaster.native_RH_iff_xi_zeros_critical",
+          "line": 97
+        },
+        {
+          "kind": "theorem",
+          "name": "AngularMaster.square_nonpositive_iff_re_zero",
+          "line": 107
+        },
+        {
+          "kind": "theorem",
+          "name": "AngularMaster.xi_zeros_critical_iff_theta_zeros_nonpositive",
+          "line": 129
+        },
+        {
+          "kind": "theorem",
+          "name": "AngularMaster.native_RH_iff_theta_zeros_nonpositive",
+          "line": 152
+        }
+      ],
+      "historical_source_bound_receipts": [
+        {
+          "package": "RH_NATIVE_CANDIDATES_v0_1_1_MELLIN",
+          "prepare_member": "RH_REVIEW_BUNDLE_18679_14231_11714/snapshots/downloads/RH_NATIVE_CANDIDATES_v0_1_1_MELLIN/.audit-logs/session_29813_13872_29124/D011.prepare.log",
+          "prepare_sha256": "115ddf5157ad0f29810ec5d512dca432b68e09d63eacec8f7153bd361c386f22",
+          "reported_lean_exit_zero": true,
+          "reported_source_comparison_equal": true,
+          "source_sha256": "a2a155d8584f3682c4a48f4b8f0c9fdd1473c25ed4934c448f5015a4647361df",
+          "live_snapshot_same_source_hash": true,
+          "evidence_grade": "HISTORICAL_LOG_LINKED_TO_INCLUDED_SOURCE_COPY",
+          "full_dependency_hash_binding_verified": false,
+          "native_replayed_this_session": false
+        },
+        {
+          "package": "RH_NATIVE_CANDIDATES_v0_1_1_MELLIN",
+          "prepare_member": "RH_REVIEW_BUNDLE_18679_14231_11714/snapshots/downloads/RH_NATIVE_CANDIDATES_v0_1_1_MELLIN/.audit-logs/session_26453_28669_10297/D011.prepare.log",
+          "prepare_sha256": "d62260d88fe297d24d870e464368078e90dfc4192b68139ad697ea3f661b952b",
+          "reported_lean_exit_zero": true,
+          "reported_source_comparison_equal": true,
+          "source_sha256": "a2a155d8584f3682c4a48f4b8f0c9fdd1473c25ed4934c448f5015a4647361df",
+          "live_snapshot_same_source_hash": true,
+          "evidence_grade": "HISTORICAL_LOG_LINKED_TO_INCLUDED_SOURCE_COPY",
+          "full_dependency_hash_binding_verified": false,
+          "native_replayed_this_session": false
+        },
+        {
+          "package": "RH_NATIVE_CANDIDATES_v0_1_1_MELLIN",
+          "prepare_member": "RH_REVIEW_BUNDLE_18679_14231_11714/snapshots/downloads/RH_NATIVE_CANDIDATES_v0_1_1_MELLIN/.audit-logs/session_18073_7467_12178/D011.prepare.log",
+          "prepare_sha256": "6f4c4155624b70a0906602e8de9e6bae6a01e13e21c3807bfdbc9ffa6d426c19",
+          "reported_lean_exit_zero": true,
+          "reported_source_comparison_equal": true,
+          "source_sha256": "a2a155d8584f3682c4a48f4b8f0c9fdd1473c25ed4934c448f5015a4647361df",
+          "live_snapshot_same_source_hash": true,
+          "evidence_grade": "HISTORICAL_LOG_LINKED_TO_INCLUDED_SOURCE_COPY",
+          "full_dependency_hash_binding_verified": false,
+          "native_replayed_this_session": false
+        },
+        {
+          "package": "RH_NATIVE_CANDIDATES_v0_1_0",
+          "prepare_member": "RH_REVIEW_BUNDLE_18679_14231_11714/snapshots/downloads/RH_NATIVE_CANDIDATES_v0_1_0/.audit-logs/session_29583_10127_6449/D011.prepare.log",
+          "prepare_sha256": "2c4c30fcf00cd8cbdfccae25f677d7995e4943c94900d33d666f23b5224f8b16",
+          "reported_lean_exit_zero": true,
+          "reported_source_comparison_equal": true,
+          "source_sha256": "a2a155d8584f3682c4a48f4b8f0c9fdd1473c25ed4934c448f5015a4647361df",
+          "live_snapshot_same_source_hash": true,
+          "evidence_grade": "HISTORICAL_LOG_LINKED_TO_INCLUDED_SOURCE_COPY",
+          "full_dependency_hash_binding_verified": false,
+          "native_replayed_this_session": false
+        },
+        {
+          "package": "RH_NATIVE_CANDIDATES_v0_1_0",
+          "prepare_member": "RH_REVIEW_BUNDLE_18679_14231_11714/snapshots/downloads/RH_NATIVE_CANDIDATES_v0_1_0/.audit-logs/session_21030_17500_11463/D011.prepare.log",
+          "prepare_sha256": "bbc719055244ba8561dde881ab8b2ffed3a2eae3ba264e96e210b2b0b37f7a16",
+          "reported_lean_exit_zero": true,
+          "reported_source_comparison_equal": true,
+          "source_sha256": "a2a155d8584f3682c4a48f4b8f0c9fdd1473c25ed4934c448f5015a4647361df",
+          "live_snapshot_same_source_hash": true,
+          "evidence_grade": "HISTORICAL_LOG_LINKED_TO_INCLUDED_SOURCE_COPY",
+          "full_dependency_hash_binding_verified": false,
+          "native_replayed_this_session": false
+        }
+      ],
+      "source_occurrences": [
+        {
+          "occurrence_id": 1067,
+          "archive_chain": [
+            "RH_REVIEW_BUNDLE_18679_14231_11714.zip"
+          ],
+          "member": "RH_REVIEW_BUNDLE_18679_14231_11714/snapshots/downloads/TAYLORS_PRODIGY_LEAN_v0_2_0/AngularMaster/ZeroGeometry.lean",
+          "package": "TAYLORS_PRODIGY_LEAN_v0_2_0",
+          "family": "TAYLORS_PRODIGY_LEAN",
+          "source_kind": "snapshot",
+          "sha256": "a2a155d8584f3682c4a48f4b8f0c9fdd1473c25ed4934c448f5015a4647361df",
+          "bytes": 5387,
+          "encoding": "utf-8-sig",
+          "corpus_path": "reinference/corpus/a2a155d8584f3682c4a48f4b8f0c9fdd1473c25ed4934c448f5015a4647361df.lean",
+          "corpus_sha256": "a2a155d8584f3682c4a48f4b8f0c9fdd1473c25ed4934c448f5015a4647361df"
+        },
+        {
+          "occurrence_id": 1099,
+          "archive_chain": [
+            "RH_REVIEW_BUNDLE_18679_14231_11714.zip"
+          ],
+          "member": "RH_REVIEW_BUNDLE_18679_14231_11714/snapshots/downloads/TAYLORS_PRODIGY_LEAN_v0_1_0/AngularMaster/ZeroGeometry.lean",
+          "package": "TAYLORS_PRODIGY_LEAN_v0_1_0",
+          "family": "TAYLORS_PRODIGY_LEAN",
+          "source_kind": "snapshot",
+          "sha256": "a2a155d8584f3682c4a48f4b8f0c9fdd1473c25ed4934c448f5015a4647361df",
+          "bytes": 5387,
+          "encoding": "utf-8-sig",
+          "corpus_path": "reinference/corpus/a2a155d8584f3682c4a48f4b8f0c9fdd1473c25ed4934c448f5015a4647361df.lean",
+          "corpus_sha256": "a2a155d8584f3682c4a48f4b8f0c9fdd1473c25ed4934c448f5015a4647361df"
+        },
+        {
+          "occurrence_id": 1197,
+          "archive_chain": [
+            "RH_REVIEW_BUNDLE_18679_14231_11714.zip"
+          ],
+          "member": "RH_REVIEW_BUNDLE_18679_14231_11714/snapshots/downloads/STIRLINGS_PRODIGY_LEAN_v0_2_0/AngularMaster/ZeroGeometry.lean",
+          "package": "STIRLINGS_PRODIGY_LEAN_v0_2_0",
+          "family": "STIRLINGS_PRODIGY_LEAN",
+          "source_kind": "snapshot",
+          "sha256": "a2a155d8584f3682c4a48f4b8f0c9fdd1473c25ed4934c448f5015a4647361df",
+          "bytes": 5387,
+          "encoding": "utf-8-sig",
+          "corpus_path": "reinference/corpus/a2a155d8584f3682c4a48f4b8f0c9fdd1473c25ed4934c448f5015a4647361df.lean",
+          "corpus_sha256": "a2a155d8584f3682c4a48f4b8f0c9fdd1473c25ed4934c448f5015a4647361df"
+        }
+      ],
+      "coherent_archive_member": "RH_MASTER_CLOSURE_ANGULAR_LEAN_v0_1_1_FIX1/AngularMaster/ZeroGeometry.lean"
+    },
+    {
+      "module": "AWPIRH.AnalyticODE",
+      "source_path": "/workspace/scratch/097e0b4d673f/inspected_equivalences/RH_MASTER_CLOSURE_ANGULAR_LEAN_v0_1_1_FIX1/RH_MASTER_CLOSURE_ANGULAR_LEAN_v0_1_1_FIX1/AWPIRH/AnalyticODE.lean",
+      "staged_path": "strategy_deep/staged-analytic/slit-ode/AWPIRH/AnalyticODE.lean",
+      "sha256": "625e10dd0e75ae6808560b9f7caff29fa6e43940c84dcaf9c6e22a6b9f3c9f8c",
+      "bytes": 2993,
+      "imports": [
+        "Mathlib"
+      ],
+      "project_imports": [],
+      "external_imports": [
+        "Mathlib"
+      ],
+      "unresolved_project_imports": [],
+      "tracked_identical_paths": [],
+      "active_identical_modules": [],
+      "forbidden_code_tokens": [],
+      "declarations": [
+        {
+          "kind": "theorem",
+          "name": "AWPIRH.analytic_ode_nonvanishing",
+          "line": 13
+        },
+        {
+          "kind": "theorem",
+          "name": "AWPIRH.analytic_local_ode_nonvanishing",
+          "line": 49
+        }
+      ],
+      "historical_source_bound_receipts": [],
+      "source_occurrences": [
+        {
+          "occurrence_id": 5071,
+          "archive_chain": [
+            "RH_REVIEW_BUNDLE_18679_14231_11714.zip"
+          ],
+          "member": "RH_REVIEW_BUNDLE_18679_14231_11714/snapshots/downloads/RH_NATIVE_SOLOBOLO_DIRECT_CUBIC_CAYLEY_LEAN_v0_2_1_FIX1/AWPIRH/AnalyticODE.lean",
+          "package": "RH_NATIVE_SOLOBOLO_DIRECT_CUBIC_CAYLEY_LEAN_v0_2_1_FIX1",
+          "family": "RH_NATIVE_SOLOBOLO_DIRECT_CUBIC_CAYLEY_LEAN",
+          "source_kind": "snapshot",
+          "sha256": "625e10dd0e75ae6808560b9f7caff29fa6e43940c84dcaf9c6e22a6b9f3c9f8c",
+          "bytes": 2993,
+          "encoding": "utf-8-sig",
+          "corpus_path": "reinference/corpus/625e10dd0e75ae6808560b9f7caff29fa6e43940c84dcaf9c6e22a6b9f3c9f8c.lean",
+          "corpus_sha256": "625e10dd0e75ae6808560b9f7caff29fa6e43940c84dcaf9c6e22a6b9f3c9f8c"
+        },
+        {
+          "occurrence_id": 5121,
+          "archive_chain": [
+            "RH_REVIEW_BUNDLE_18679_14231_11714.zip"
+          ],
+          "member": "RH_REVIEW_BUNDLE_18679_14231_11714/snapshots/downloads/RH_NATIVE_SOLOBOLO_DIRECT_CUBIC_CAYLEY_LEAN_v0_2_0/AWPIRH/AnalyticODE.lean",
+          "package": "RH_NATIVE_SOLOBOLO_DIRECT_CUBIC_CAYLEY_LEAN_v0_2_0",
+          "family": "RH_NATIVE_SOLOBOLO_DIRECT_CUBIC_CAYLEY_LEAN",
+          "source_kind": "snapshot",
+          "sha256": "625e10dd0e75ae6808560b9f7caff29fa6e43940c84dcaf9c6e22a6b9f3c9f8c",
+          "bytes": 2993,
+          "encoding": "utf-8-sig",
+          "corpus_path": "reinference/corpus/625e10dd0e75ae6808560b9f7caff29fa6e43940c84dcaf9c6e22a6b9f3c9f8c.lean",
+          "corpus_sha256": "625e10dd0e75ae6808560b9f7caff29fa6e43940c84dcaf9c6e22a6b9f3c9f8c"
+        },
+        {
+          "occurrence_id": 5898,
+          "archive_chain": [
+            "RH_REVIEW_BUNDLE_18679_14231_11714.zip"
+          ],
+          "member": "RH_REVIEW_BUNDLE_18679_14231_11714/snapshots/downloads/RH_NATIVE_SOLOBOLO_A_TIER_CAYLEY_RH_CLOSURE_v0_3_2_FIX2/AWPIRH/AnalyticODE.lean",
+          "package": "RH_NATIVE_SOLOBOLO_A_TIER_CAYLEY_RH_CLOSURE_v0_3_2_FIX2",
+          "family": "RH_NATIVE_SOLOBOLO_A_TIER_CAYLEY_RH_CLOSURE",
+          "source_kind": "snapshot",
+          "sha256": "625e10dd0e75ae6808560b9f7caff29fa6e43940c84dcaf9c6e22a6b9f3c9f8c",
+          "bytes": 2993,
+          "encoding": "utf-8-sig",
+          "corpus_path": "reinference/corpus/625e10dd0e75ae6808560b9f7caff29fa6e43940c84dcaf9c6e22a6b9f3c9f8c.lean",
+          "corpus_sha256": "625e10dd0e75ae6808560b9f7caff29fa6e43940c84dcaf9c6e22a6b9f3c9f8c"
+        }
+      ],
+      "coherent_archive_member": "RH_MASTER_CLOSURE_ANGULAR_LEAN_v0_1_1_FIX1/AWPIRH/AnalyticODE.lean"
+    },
+    {
+      "module": "SoloboloAdmission.NativeODE",
+      "source_path": "reinference/new-solobolo-finite/SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_2_3_GOODWORKFLOW_CACHED_MATHLIB/SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_2_3_GOODWORKFLOW_CACHED_MATHLIB/SoloboloAdmission/NativeODE.lean",
+      "staged_path": "strategy_deep/staged-analytic/slit-ode/SoloboloAdmission/NativeODE.lean",
+      "sha256": "554667603de88d116d8455b3db517ea6258ff91acf4c4a557a3da3be298f254e",
+      "bytes": 5050,
+      "imports": [
+        "AngularMaster.ZeroGeometry",
+        "AWPIRH.AnalyticODE",
+        "Mathlib"
+      ],
+      "project_imports": [
+        "AngularMaster.ZeroGeometry",
+        "AWPIRH.AnalyticODE"
+      ],
+      "external_imports": [
+        "Mathlib"
+      ],
+      "unresolved_project_imports": [],
+      "tracked_identical_paths": [],
+      "active_identical_modules": [],
+      "forbidden_code_tokens": [],
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "SoloboloAdmission.SlitODEAdmission",
+          "line": 24
+        },
+        {
+          "kind": "theorem",
+          "name": "SoloboloAdmission.entire_local_ode_nonvanishing",
+          "line": 34
+        },
+        {
+          "kind": "theorem",
+          "name": "SoloboloAdmission.slitODE_of_rh",
+          "line": 76
+        },
+        {
+          "kind": "theorem",
+          "name": "SoloboloAdmission.rh_of_slitODE",
+          "line": 96
+        },
+        {
+          "kind": "theorem",
+          "name": "SoloboloAdmission.slitODEAdmission_iff_RH",
+          "line": 123
+        }
+      ],
+      "historical_source_bound_receipts": [],
+      "source_occurrences": [
+        {
+          "occurrence_id": 1528,
+          "archive_chain": [
+            "SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_2_0.zip"
+          ],
+          "member": "SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_2_0/SoloboloAdmission/NativeODE.lean",
+          "package": "SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_2_0",
+          "family": "SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN",
+          "source_kind": "recent_library_archive",
+          "sha256": "554667603de88d116d8455b3db517ea6258ff91acf4c4a557a3da3be298f254e",
+          "bytes": 5050,
+          "encoding": "utf-8-sig",
+          "corpus_path": "reinference/corpus/554667603de88d116d8455b3db517ea6258ff91acf4c4a557a3da3be298f254e.lean",
+          "corpus_sha256": "554667603de88d116d8455b3db517ea6258ff91acf4c4a557a3da3be298f254e"
+        },
+        {
+          "occurrence_id": 1552,
+          "archive_chain": [
+            "SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_2_1_GOODWORKFLOWFRONTIER.zip"
+          ],
+          "member": "SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_2_1_GOODWORKFLOWFRONTIER/SoloboloAdmission/NativeODE.lean",
+          "package": "SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_2_1_GOODWORKFLOWFRONTIER",
+          "family": "SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN",
+          "source_kind": "recent_library_archive",
+          "sha256": "554667603de88d116d8455b3db517ea6258ff91acf4c4a557a3da3be298f254e",
+          "bytes": 5050,
+          "encoding": "utf-8-sig",
+          "corpus_path": "reinference/corpus/554667603de88d116d8455b3db517ea6258ff91acf4c4a557a3da3be298f254e.lean",
+          "corpus_sha256": "554667603de88d116d8455b3db517ea6258ff91acf4c4a557a3da3be298f254e"
+        },
+        {
+          "occurrence_id": 1578,
+          "archive_chain": [
+            "SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_2_2_CACHED_MATHLIB_FASTCORE.zip"
+          ],
+          "member": "SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_2_2_CACHED_MATHLIB_FASTCORE/SoloboloAdmission/NativeODE.lean",
+          "package": "SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_2_2_CACHED_MATHLIB_FASTCORE",
+          "family": "SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN",
+          "source_kind": "recent_library_archive",
+          "sha256": "554667603de88d116d8455b3db517ea6258ff91acf4c4a557a3da3be298f254e",
+          "bytes": 5050,
+          "encoding": "utf-8-sig",
+          "corpus_path": "reinference/corpus/554667603de88d116d8455b3db517ea6258ff91acf4c4a557a3da3be298f254e.lean",
+          "corpus_sha256": "554667603de88d116d8455b3db517ea6258ff91acf4c4a557a3da3be298f254e"
+        }
+      ],
+      "coherent_archive_member": "SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_2_3_GOODWORKFLOW_CACHED_MATHLIB/SoloboloAdmission/NativeODE.lean"
+    }
+  ],
+  "minimal_adaptation_option": {
+    "original_module_count": 5,
+    "candidate_reduced_module_count": 4,
+    "edit": "Remove unused import AWPIRH.AnalyticODE from NativeODE; Mathlib already imported explicitly",
+    "status": "SOURCE_INSPECTION_ONLY_NOT_EDITED_OR_NATIVE_VERIFIED"
+  },
+  "finite_witness_reduction": "OPEN_NOT_CLAIMED_BY_THIS_ANALYTIC_IFF",
+  "source_archives": [
+    {
+      "path": "equivalence_sources/Riemann-Hypothesis-Final/RH_REVIEW_BUNDLE_18679_14231_11714.zip",
+      "nested_member": "RH_REVIEW_BUNDLE_18679_14231_11714/archives/downloads/RH_MASTER_CLOSURE_ANGULAR_LEAN_v0_1_1_FIX1.zip",
+      "nested_sha256": "7aeccb874afca4b755432f6eca9a01ed2c76e0135c1f392fd3b24ee7322e8ba6",
+      "nested_bytes": 724151,
+      "outer_sha256": "b233c8d7468c3c484a6a90d318ba09d4e9a9586e744a980aa13bbcdf8301ed81"
+    },
+    {
+      "path": "reinfer_library_sources/SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_2_3_GOODWORKFLOW_CACHED_MATHLIB.zip",
+      "sha256": "dba41a5379ba967b9ae0a761c229d9f081905bec953a715576a8e8249c446753",
+      "bytes": 33597
+    }
+  ],
+  "generated_audit_sha256": "3c7ebec233dee2525d2e65b10430c55b72f19521062571236a8796fb4a7bc033",
+  "original_source_archive_members_verified": true
+}

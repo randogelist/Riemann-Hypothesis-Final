@@ -1,0 +1,63 @@
+{
+  "method": "Exact integer/Fraction polynomial algebra; not Lean checking",
+  "finite_checks": [
+    {
+      "n": 0,
+      "finite_cayley": "PASS",
+      "F_substitution": "PASS",
+      "Rodrigues_Leibniz": "PASS"
+    },
+    {
+      "n": 1,
+      "finite_cayley": "PASS",
+      "F_substitution": "PASS",
+      "Rodrigues_Leibniz": "PASS"
+    },
+    {
+      "n": 2,
+      "finite_cayley": "PASS",
+      "F_substitution": "PASS",
+      "Rodrigues_Leibniz": "PASS"
+    },
+    {
+      "n": 3,
+      "finite_cayley": "PASS",
+      "F_substitution": "PASS",
+      "Rodrigues_Leibniz": "PASS"
+    },
+    {
+      "n": 4,
+      "finite_cayley": "PASS",
+      "F_substitution": "PASS",
+      "Rodrigues_Leibniz": "PASS"
+    },
+    {
+      "n": 5,
+      "finite_cayley": "PASS",
+      "F_substitution": "PASS",
+      "Rodrigues_Leibniz": "PASS"
+    },
+    {
+      "n": 6,
+      "finite_cayley": "PASS",
+      "F_substitution": "PASS",
+      "Rodrigues_Leibniz": "PASS"
+    },
+    {
+      "n": 7,
+      "finite_cayley": "PASS",
+      "F_substitution": "PASS",
+      "Rodrigues_Leibniz": "PASS"
+    },
+    {
+      "n": 8,
+      "finite_cayley": "PASS",
+      "F_substitution": "PASS",
+      "Rodrigues_Leibniz": "PASS"
+    }
+  ],
+  "power_sum_coefficients": "PASS for 1<=k<=9 and 1<=m<=2k+2",
+  "n0": "4*a*(F+a*F1)",
+  "n1": "-16*a^2*(F1+a*F2+a^2*F3/6)",
+  "n2": "64*a^3*(F2/2+a*F3/2+a^2*F4/8+a^3*F5/120)"
+}

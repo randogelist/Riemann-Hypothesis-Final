@@ -1,0 +1,78 @@
+{
+  "originals": [
+    {
+      "module": "FiveInduction.ActualXi",
+      "active_path": "FiveInduction/ActualXi.lean",
+      "archive_path": "research/upstream/recovered-analytic-20261025/FiveInduction/ActualXi.lean",
+      "sha256": "4046240fce376b4f81b20db36dffcb1cfbad0a3819184c953beb9200976d20e3",
+      "bytes": 3128,
+      "native_compilation": "NOT_RUN"
+    },
+    {
+      "module": "FiveInduction.CayleyBridge",
+      "active_path": "FiveInduction/CayleyBridge.lean",
+      "archive_path": "research/upstream/recovered-analytic-20261025/FiveInduction/CayleyBridge.lean",
+      "sha256": "7f8e2dcaf147bf124ca20f8b5b07118e3cea5daaa53c7ae8b2a2e62c6b39d3dd",
+      "bytes": 3208,
+      "native_compilation": "NOT_RUN"
+    },
+    {
+      "module": "FiveInduction.HardyActual",
+      "active_path": "FiveInduction/HardyActual.lean",
+      "archive_path": "research/upstream/recovered-analytic-20261025/FiveInduction/HardyActual.lean",
+      "sha256": "2370ad37e95ba384dd4ac363a6e2246057446037f592d4cb0a99262cc8361c03",
+      "bytes": 6176,
+      "native_compilation": "NOT_RUN"
+    },
+    {
+      "module": "SoloAdmission.AnalyticInverse",
+      "active_path": "SoloAdmission/AnalyticInverse.lean",
+      "archive_path": "research/upstream/recovered-analytic-20261025/SoloAdmission/AnalyticInverse.lean",
+      "sha256": "153fb74cd3c7a940c7b5f2d21daaf45fe94e2369845abd0106c50f464745ef97",
+      "bytes": 2373,
+      "native_compilation": "NOT_RUN"
+    },
+    {
+      "module": "AWPIRH.XiCore",
+      "active_path": "AWPIRH/XiCore.lean",
+      "archive_path": "research/upstream/recovered-analytic-20261025/AWPIRH/XiCore.lean",
+      "sha256": "6bda1a14b59a508811b9f9a8bff400ed824d86f366b2ddeecd728571be7fd9db",
+      "bytes": 4652,
+      "native_compilation": "NOT_RUN"
+    },
+    {
+      "module": "AWPIRH.ThetaEntire",
+      "active_path": "AWPIRH/ThetaEntire.lean",
+      "archive_path": "research/upstream/recovered-analytic-20261025/AWPIRH/ThetaEntire.lean",
+      "sha256": "cb1f0838f2d90a1ba30e696afd05337e721ee7cc7e021a30ec28cdf2f810533b",
+      "bytes": 4727,
+      "native_compilation": "NOT_RUN"
+    },
+    {
+      "module": "AngularMaster.ZeroGeometry",
+      "active_path": "AngularMaster/ZeroGeometry.lean",
+      "archive_path": "research/upstream/recovered-analytic-20261025/AngularMaster/ZeroGeometry.lean",
+      "sha256": "a2a155d8584f3682c4a48f4b8f0c9fdd1473c25ed4934c448f5015a4647361df",
+      "bytes": 5387,
+      "native_compilation": "NOT_RUN"
+    },
+    {
+      "module": "AWPIRH.AnalyticODE",
+      "active_path": "AWPIRH/AnalyticODE.lean",
+      "archive_path": "research/upstream/recovered-analytic-20261025/AWPIRH/AnalyticODE.lean",
+      "sha256": "625e10dd0e75ae6808560b9f7caff29fa6e43940c84dcaf9c6e22a6b9f3c9f8c",
+      "bytes": 2993,
+      "native_compilation": "NOT_RUN"
+    },
+    {
+      "module": "SoloboloAdmission.NativeODE",
+      "active_path": "SoloboloAdmission/NativeODE.lean",
+      "archive_path": "research/upstream/recovered-analytic-20261025/SoloboloAdmission/NativeODE.lean",
+      "sha256": "554667603de88d116d8455b3db517ea6258ff91acf4c4a557a3da3be298f254e",
+      "bytes": 5050,
+      "native_compilation": "NOT_RUN"
+    }
+  ],
+  "native_compilation": "NOT_RUN",
+  "note": "Original bodies are byte-identical. Historical source closures are provenance, not native audit receipts."
+}

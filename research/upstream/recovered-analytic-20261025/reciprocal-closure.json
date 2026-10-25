@@ -1,0 +1,138 @@
+{
+  "scope": "SOURCE_ONLY_EXACT_LOCAL_IMPORT_CLOSURE",
+  "endpoint": "SoloAdmission.ANALYTIC_ADMISSION_IFF_RH",
+  "native_compilation": "NOT_RUN",
+  "native_axiom_audit": "NOT_RUN",
+  "local_repository_commit": "69ad4d6a66c5826d77013c33afeb40b7a1a90639",
+  "coverage_basis": "git ls-files of local checkout; not remote verification",
+  "source_package": "reinference/new-solobolo-finite/SOLOBOLO_FINITE_WITNESS_IFF_RH_GOODWORKFLOWFRONTIER_v0_4_1_CACHED_MATHLIB_FIX1/SOLOBOLO_FINITE_WITNESS_IFF_RH_GOODWORKFLOWFRONTIER_v0_4_1_CACHED_MATHLIB_FIX1",
+  "source_archive": {
+    "path": "reinfer_library_sources/SOLOBOLO_FINITE_WITNESS_IFF_RH_GOODWORKFLOWFRONTIER_v0_4_1_CACHED_MATHLIB_FIX1.zip",
+    "sha256": "d2c4465355f601704b89465dc856848d5f0dc9847aa7032a59afbe7f256f1e83",
+    "bytes": 60426
+  },
+  "lean_pin": "leanprover/lean4:v4.33.0",
+  "mathlib_revision_pin": "NOT_PROVIDED; source runner fingerprints the selected cached Mathlib.olean at runtime",
+  "original_runner_sha256": "ec9d0d7c5b5140749fe5a9a330f32382a0947d18028031eabd504236b12f0e09",
+  "local_module_count": 4,
+  "local_module_bytes": 14885,
+  "missing_local_imports": [],
+  "complete_local_proof_source_exists": true,
+  "byte_identical_tracked_module_count": 3,
+  "exact_missing_tracked_module_count": 1,
+  "active_exact_module_count": 0,
+  "topological_order": [
+    "FiveInduction.ActualXi",
+    "FiveInduction.CayleyBridge",
+    "FiveInduction.HardyActual",
+    "SoloAdmission.AnalyticInverse"
+  ],
+  "external_import_roots": [
+    "Mathlib.Analysis.Complex.CauchyIntegral",
+    "Mathlib.Analysis.Complex.TaylorSeries",
+    "Mathlib.Analysis.SpecialFunctions.Gamma.Deligne",
+    "Mathlib.NumberTheory.Harmonic.EulerMascheroni",
+    "Mathlib.NumberTheory.Harmonic.ZetaAsymp",
+    "Mathlib.NumberTheory.LSeries.RiemannZeta",
+    "Mathlib.Tactic"
+  ],
+  "external_closure_scope": "Mathlib transitive closure supplied by compatible external cached Mathlib; not reconstructed or verified here",
+  "modules": [
+    {
+      "module": "FiveInduction.ActualXi",
+      "relative_path": "FiveInduction/ActualXi.lean",
+      "source_path": "reinference/new-solobolo-finite/SOLOBOLO_FINITE_WITNESS_IFF_RH_GOODWORKFLOWFRONTIER_v0_4_1_CACHED_MATHLIB_FIX1/SOLOBOLO_FINITE_WITNESS_IFF_RH_GOODWORKFLOWFRONTIER_v0_4_1_CACHED_MATHLIB_FIX1/FiveInduction/ActualXi.lean",
+      "sha256": "4046240fce376b4f81b20db36dffcb1cfbad0a3819184c953beb9200976d20e3",
+      "bytes": 3128,
+      "imports": [
+        "Mathlib.NumberTheory.LSeries.RiemannZeta",
+        "Mathlib.Analysis.SpecialFunctions.Gamma.Deligne",
+        "Mathlib.Tactic"
+      ],
+      "tracked_identical_paths": [
+        "research/upstream/five-induction-v030/FiveInduction/ActualXi.lean"
+      ],
+      "active_identical_modules": [],
+      "forbidden_code_tokens": [],
+      "local_defined_rh": false
+    },
+    {
+      "module": "FiveInduction.CayleyBridge",
+      "relative_path": "FiveInduction/CayleyBridge.lean",
+      "source_path": "reinference/new-solobolo-finite/SOLOBOLO_FINITE_WITNESS_IFF_RH_GOODWORKFLOWFRONTIER_v0_4_1_CACHED_MATHLIB_FIX1/SOLOBOLO_FINITE_WITNESS_IFF_RH_GOODWORKFLOWFRONTIER_v0_4_1_CACHED_MATHLIB_FIX1/FiveInduction/CayleyBridge.lean",
+      "sha256": "7f8e2dcaf147bf124ca20f8b5b07118e3cea5daaa53c7ae8b2a2e62c6b39d3dd",
+      "bytes": 3208,
+      "imports": [
+        "FiveInduction.ActualXi",
+        "Mathlib.Analysis.Complex.CauchyIntegral"
+      ],
+      "tracked_identical_paths": [
+        "research/upstream/five-induction-v030/FiveInduction/CayleyBridge.lean"
+      ],
+      "active_identical_modules": [],
+      "forbidden_code_tokens": [],
+      "local_defined_rh": false
+    },
+    {
+      "module": "FiveInduction.HardyActual",
+      "relative_path": "FiveInduction/HardyActual.lean",
+      "source_path": "reinference/new-solobolo-finite/SOLOBOLO_FINITE_WITNESS_IFF_RH_GOODWORKFLOWFRONTIER_v0_4_1_CACHED_MATHLIB_FIX1/SOLOBOLO_FINITE_WITNESS_IFF_RH_GOODWORKFLOWFRONTIER_v0_4_1_CACHED_MATHLIB_FIX1/FiveInduction/HardyActual.lean",
+      "sha256": "2370ad37e95ba384dd4ac363a6e2246057446037f592d4cb0a99262cc8361c03",
+      "bytes": 6176,
+      "imports": [
+        "FiveInduction.CayleyBridge",
+        "Mathlib.Analysis.Complex.TaylorSeries",
+        "Mathlib.NumberTheory.Harmonic.EulerMascheroni",
+        "Mathlib.NumberTheory.Harmonic.ZetaAsymp"
+      ],
+      "tracked_identical_paths": [
+        "research/upstream/five-induction-v030/FiveInduction/HardyActual.lean"
+      ],
+      "active_identical_modules": [],
+      "forbidden_code_tokens": [],
+      "local_defined_rh": false
+    },
+    {
+      "module": "SoloAdmission.AnalyticInverse",
+      "relative_path": "SoloAdmission/AnalyticInverse.lean",
+      "source_path": "reinference/new-solobolo-finite/SOLOBOLO_FINITE_WITNESS_IFF_RH_GOODWORKFLOWFRONTIER_v0_4_1_CACHED_MATHLIB_FIX1/SOLOBOLO_FINITE_WITNESS_IFF_RH_GOODWORKFLOWFRONTIER_v0_4_1_CACHED_MATHLIB_FIX1/SoloAdmission/AnalyticInverse.lean",
+      "sha256": "153fb74cd3c7a940c7b5f2d21daaf45fe94e2369845abd0106c50f464745ef97",
+      "bytes": 2373,
+      "imports": [
+        "FiveInduction.HardyActual"
+      ],
+      "tracked_identical_paths": [],
+      "active_identical_modules": [],
+      "forbidden_code_tokens": [],
+      "local_defined_rh": false
+    }
+  ],
+  "source_scan_forbidden_token_count": 0,
+  "endpoint_extra_hypotheses": [],
+  "criterion_is_finite_raw_witness": false,
+  "open_hardy_energy_assumption_used_by_endpoint": false,
+  "visible_source_blockers": [],
+  "source_blocker_scope": "No definite namespace/import/axiom blocker identified in the four local source files; this is not elaboration or kernel verification.",
+  "endpoint_audit_targets": [
+    "SoloAdmission.ANALYTIC_ADMISSION_IFF_RH",
+    "SoloAdmission.ANALYTIC_ADMISSION_IMPLIES_RH",
+    "SoloAdmission.RH_IMPLIES_ANALYTIC_ADMISSION",
+    "SoloAdmission.ACTUAL_GP_CALIBRATION_IMP_RH"
+  ],
+  "binding_audit_targets": [
+    "FiveInduction.HardyActual.J_NONZERO_IFF_RH",
+    "FiveInduction.HardyActual.differentiableAt_J",
+    "FiveInduction.HardyActual.J_zero",
+    "FiveInduction.HardyActual.J_eq_zeta",
+    "FiveInduction.CayleyBridge.RH_OF_CAYLEY_NONZERO",
+    "FiveInduction.CayleyBridge.xi_one_sub",
+    "FiveInduction.ActualXi.xi_zero_of_nontrivial_zeta_zero"
+  ],
+  "staged_exact_sources": "strategy_deep/staged-analytic/reciprocal",
+  "staged_generated_files": [
+    "lean-toolchain",
+    "compile-order.txt",
+    "ReciprocalAudit.lean"
+  ],
+  "source_manifest_metadata_warning": "Original SOURCE_MANIFEST.json retains package v0_3_0 and 31 modules while v0_4_1 compile-order has 34; replace derived package inventory when publishing minimal closure."
+}

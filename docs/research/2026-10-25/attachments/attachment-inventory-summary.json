@@ -1,0 +1,246 @@
+{
+  "scope": "ATTACHMENTS_01_TO_25_ZIP_SOURCE_ONLY",
+  "native_compilation": "NOT_RUN",
+  "repo_scope": "GIT_TRACKED_FILES_ONLY",
+  "repo_heads": {
+    "Riemann-Hypothesis-Final": "69ad4d6a66c5826d77013c33afeb40b7a1a90639",
+    "Generalized-Dirichlet-L-Function-Hypothesis": "b9fadffe5f4430dc39c27813b69f1c704404626f"
+  },
+  "archive_occurrences": 26,
+  "lean_occurrences": 814,
+  "unique_lean_hashes": 545,
+  "unique_lean_hashes_new_to_prior_union": 535,
+  "unique_lean_hashes_absent_tracked_repos": 508,
+  "attachments": [
+    {
+      "attachment": 1,
+      "lean_occurrences": 18,
+      "unique_lean_hashes": 18,
+      "unique_hashes_new_to_prior_union": 18,
+      "unique_hashes_absent_tracked_repos": 18,
+      "rh_target_mention_occurrences": 0,
+      "static_forbidden_token_files": 0
+    },
+    {
+      "attachment": 2,
+      "lean_occurrences": 22,
+      "unique_lean_hashes": 22,
+      "unique_hashes_new_to_prior_union": 22,
+      "unique_hashes_absent_tracked_repos": 22,
+      "rh_target_mention_occurrences": 0,
+      "static_forbidden_token_files": 0
+    },
+    {
+      "attachment": 3,
+      "lean_occurrences": 5,
+      "unique_lean_hashes": 5,
+      "unique_hashes_new_to_prior_union": 5,
+      "unique_hashes_absent_tracked_repos": 5,
+      "rh_target_mention_occurrences": 0,
+      "static_forbidden_token_files": 0
+    },
+    {
+      "attachment": 4,
+      "lean_occurrences": 14,
+      "unique_lean_hashes": 14,
+      "unique_hashes_new_to_prior_union": 14,
+      "unique_hashes_absent_tracked_repos": 14,
+      "rh_target_mention_occurrences": 0,
+      "static_forbidden_token_files": 0
+    },
+    {
+      "attachment": 5,
+      "lean_occurrences": 15,
+      "unique_lean_hashes": 15,
+      "unique_hashes_new_to_prior_union": 15,
+      "unique_hashes_absent_tracked_repos": 15,
+      "rh_target_mention_occurrences": 5,
+      "static_forbidden_token_files": 0
+    },
+    {
+      "attachment": 6,
+      "lean_occurrences": 13,
+      "unique_lean_hashes": 13,
+      "unique_hashes_new_to_prior_union": 13,
+      "unique_hashes_absent_tracked_repos": 13,
+      "rh_target_mention_occurrences": 13,
+      "static_forbidden_token_files": 0
+    },
+    {
+      "attachment": 7,
+      "lean_occurrences": 3,
+      "unique_lean_hashes": 3,
+      "unique_hashes_new_to_prior_union": 3,
+      "unique_hashes_absent_tracked_repos": 3,
+      "rh_target_mention_occurrences": 0,
+      "static_forbidden_token_files": 0
+    },
+    {
+      "attachment": 8,
+      "lean_occurrences": 28,
+      "unique_lean_hashes": 28,
+      "unique_hashes_new_to_prior_union": 28,
+      "unique_hashes_absent_tracked_repos": 28,
+      "rh_target_mention_occurrences": 0,
+      "static_forbidden_token_files": 0
+    },
+    {
+      "attachment": 9,
+      "lean_occurrences": 22,
+      "unique_lean_hashes": 22,
+      "unique_hashes_new_to_prior_union": 22,
+      "unique_hashes_absent_tracked_repos": 22,
+      "rh_target_mention_occurrences": 0,
+      "static_forbidden_token_files": 0
+    },
+    {
+      "attachment": 10,
+      "lean_occurrences": 12,
+      "unique_lean_hashes": 12,
+      "unique_hashes_new_to_prior_union": 12,
+      "unique_hashes_absent_tracked_repos": 4,
+      "rh_target_mention_occurrences": 0,
+      "static_forbidden_token_files": 0
+    },
+    {
+      "attachment": 11,
+      "lean_occurrences": 24,
+      "unique_lean_hashes": 24,
+      "unique_hashes_new_to_prior_union": 24,
+      "unique_hashes_absent_tracked_repos": 24,
+      "rh_target_mention_occurrences": 0,
+      "static_forbidden_token_files": 0
+    },
+    {
+      "attachment": 12,
+      "lean_occurrences": 25,
+      "unique_lean_hashes": 25,
+      "unique_hashes_new_to_prior_union": 25,
+      "unique_hashes_absent_tracked_repos": 25,
+      "rh_target_mention_occurrences": 0,
+      "static_forbidden_token_files": 0
+    },
+    {
+      "attachment": 13,
+      "lean_occurrences": 11,
+      "unique_lean_hashes": 11,
+      "unique_hashes_new_to_prior_union": 11,
+      "unique_hashes_absent_tracked_repos": 11,
+      "rh_target_mention_occurrences": 0,
+      "static_forbidden_token_files": 0
+    },
+    {
+      "attachment": 14,
+      "lean_occurrences": 162,
+      "unique_lean_hashes": 133,
+      "unique_hashes_new_to_prior_union": 133,
+      "unique_hashes_absent_tracked_repos": 133,
+      "rh_target_mention_occurrences": 0,
+      "static_forbidden_token_files": 0
+    },
+    {
+      "attachment": 15,
+      "lean_occurrences": 60,
+      "unique_lean_hashes": 60,
+      "unique_hashes_new_to_prior_union": 60,
+      "unique_hashes_absent_tracked_repos": 60,
+      "rh_target_mention_occurrences": 0,
+      "static_forbidden_token_files": 0
+    },
+    {
+      "attachment": 16,
+      "lean_occurrences": 29,
+      "unique_lean_hashes": 29,
+      "unique_hashes_new_to_prior_union": 19,
+      "unique_hashes_absent_tracked_repos": 0,
+      "rh_target_mention_occurrences": 12,
+      "static_forbidden_token_files": 0
+    },
+    {
+      "attachment": 17,
+      "lean_occurrences": 102,
+      "unique_lean_hashes": 102,
+      "unique_hashes_new_to_prior_union": 102,
+      "unique_hashes_absent_tracked_repos": 102,
+      "rh_target_mention_occurrences": 0,
+      "static_forbidden_token_files": 1
+    },
+    {
+      "attachment": 18,
+      "lean_occurrences": 54,
+      "unique_lean_hashes": 54,
+      "unique_hashes_new_to_prior_union": 54,
+      "unique_hashes_absent_tracked_repos": 54,
+      "rh_target_mention_occurrences": 0,
+      "static_forbidden_token_files": 0
+    },
+    {
+      "attachment": 19,
+      "lean_occurrences": 40,
+      "unique_lean_hashes": 40,
+      "unique_hashes_new_to_prior_union": 40,
+      "unique_hashes_absent_tracked_repos": 40,
+      "rh_target_mention_occurrences": 0,
+      "static_forbidden_token_files": 0
+    },
+    {
+      "attachment": 20,
+      "lean_occurrences": 66,
+      "unique_lean_hashes": 66,
+      "unique_hashes_new_to_prior_union": 66,
+      "unique_hashes_absent_tracked_repos": 66,
+      "rh_target_mention_occurrences": 0,
+      "static_forbidden_token_files": 0
+    },
+    {
+      "attachment": 21,
+      "lean_occurrences": 0,
+      "unique_lean_hashes": 0,
+      "unique_hashes_new_to_prior_union": 0,
+      "unique_hashes_absent_tracked_repos": 0,
+      "rh_target_mention_occurrences": 0,
+      "static_forbidden_token_files": 0
+    },
+    {
+      "attachment": 22,
+      "lean_occurrences": 0,
+      "unique_lean_hashes": 0,
+      "unique_hashes_new_to_prior_union": 0,
+      "unique_hashes_absent_tracked_repos": 0,
+      "rh_target_mention_occurrences": 0,
+      "static_forbidden_token_files": 0
+    },
+    {
+      "attachment": 23,
+      "lean_occurrences": 39,
+      "unique_lean_hashes": 39,
+      "unique_hashes_new_to_prior_union": 39,
+      "unique_hashes_absent_tracked_repos": 39,
+      "rh_target_mention_occurrences": 0,
+      "static_forbidden_token_files": 0
+    },
+    {
+      "attachment": 24,
+      "lean_occurrences": 24,
+      "unique_lean_hashes": 24,
+      "unique_hashes_new_to_prior_union": 24,
+      "unique_hashes_absent_tracked_repos": 24,
+      "rh_target_mention_occurrences": 0,
+      "static_forbidden_token_files": 0
+    },
+    {
+      "attachment": 25,
+      "lean_occurrences": 26,
+      "unique_lean_hashes": 26,
+      "unique_hashes_new_to_prior_union": 26,
+      "unique_hashes_absent_tracked_repos": 26,
+      "rh_target_mention_occurrences": 0,
+      "static_forbidden_token_files": 0
+    }
+  ],
+  "excluded_manuscript": "26-Zetahyperbolic-3-1-1-.pdf",
+  "workflow": {
+    "path": "project_sources/27-YOU_ARE_GOODWORKFLOWFRONTIER_WORKFLOW_DEFINITION_v1_0_15.txt",
+    "sha256": "9cd05b3c8ef50fc1efab4760ccc5b08531ada72820aa76e8c8a67f32ffea017e"
+  }
+}

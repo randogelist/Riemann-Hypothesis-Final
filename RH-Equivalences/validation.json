@@ -24,6 +24,7 @@
     }
   },
   "supplementary_literature_items_checked": 12,
+  "recovered_analytic_supplement_checked": 2,
   "literature_review_certifies_novelty": false,
   "native_lean_compilation": "NOT_RUN",
   "native_axiom_audit": "NOT_RUN",
