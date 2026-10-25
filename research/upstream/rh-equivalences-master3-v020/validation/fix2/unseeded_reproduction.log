@@ -1,0 +1,3 @@
+MasterChain/KernelMass.lean:1:0: error: object file '/workspace/scratch/95e7f343fcc5/master3_fix2_work/unseeded/build/MasterChain/AnalyticBridges.olean' of module MasterChain.AnalyticBridges does not exist
+
+EXIT_CODE=1

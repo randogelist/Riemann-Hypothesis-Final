@@ -158,12 +158,12 @@
       "run.cmd": "eb35470ce952bfc6dbb2ea4d47edca32169f0c4e6d5708722bf7cf0d760da8f5",
       "scripts/cache/Build.lean": "8a67626f44614eaf3a686da39588f3ce553c83595185bc48ada92e9c67128c58",
       "docs/BUILD.md": "e7ba4887d78e7252777fbb63936f4abaab18556925542adac4ecca1b94c96def",
-      "scripts/static_audit.py": "e8a8c9780cb5cfef4ed4f5577dc43ea61c21ad9a2ab283745a8aafc5d45b6b23"
+      "scripts/static_audit.py": "427c7eb00656bf6ba5bc82f65100ba07f1b5881540b7d8aa5fef59f67273bf18"
     },
-    "upstream_hashes_verified": 266,
+    "upstream_hashes_verified": 393,
     "active_import_hashes_verified": 66,
     "original_input_hashes": {
-      "verified": 35,
+      "verified": 40,
       "not_available_in_checkout": []
     },
     "independent_arithmetic_regression": {

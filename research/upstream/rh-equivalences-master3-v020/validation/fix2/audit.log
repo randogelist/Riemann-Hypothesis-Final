@@ -1,0 +1,46 @@
+def MasterChain.MASTER_3 : Prop :=
+MasterChain.gpEnergy MasterChain.V = 0
+MasterChain.xiZeroSet_countable : MasterChain.xiZeroSet.Countable
+MasterChain.xiDivisorMeasure_sigmaFinite : MeasureTheory.SigmaFinite MasterChain.xiDivisorMeasure
+MasterChain.integral_laplace_kernel (d t : ℝ) (ht : 0 < t) :
+  ∫ (v : ℝ) in Set.Ioi 0, 2 * v * Real.exp (-t * v) * Real.sin (d * v / 2) ^ 2 = MasterChain.defectValue d t
+MasterChain.defect_integrable_of_second_moment
+  (hMoment : MeasureTheory.Integrable (fun s => (MasterChain.height s ^ 2)⁻¹) MasterChain.xiDivisorMeasure) :
+  MeasureTheory.Integrable MasterChain.defectKernel MasterChain.xiDivisorMeasure
+MasterChain.kernelMassIdentity_of_second_moment
+  (hMoment : MeasureTheory.Integrable (fun s => (MasterChain.height s ^ 2)⁻¹) MasterChain.xiDivisorMeasure) :
+  MasterChain.KernelMassIdentity
+MasterChain.density_integrable_of_second_moment
+  (hMoment : MeasureTheory.Integrable (fun s => (MasterChain.height s ^ 2)⁻¹) MasterChain.xiDivisorMeasure) :
+  MeasureTheory.Integrable MasterChain.A MasterChain.positiveLebesgue
+MasterChain.C_RR_eq_densityL2_norm_sq_of_second_moment
+  (hMoment : MeasureTheory.Integrable (fun s => (MasterChain.height s ^ 2)⁻¹) MasterChain.xiDivisorMeasure) :
+  MasterChain.C_RR = ‖MasterChain.densityL2 MasterChain.A_nonneg_ae ⋯‖ ^ 2
+MasterChain.scalarReadout_sq_le_C_RR_of_second_moment
+  (hMoment : MeasureTheory.Integrable (fun s => (MasterChain.height s ^ 2)⁻¹) MasterChain.xiDivisorMeasure) :
+  MasterChain.scalarReadout ^ 2 ≤ MasterChain.C_RR / 3
+MasterChain.C_RR_eq_defectAbove_of_finiteHeightOnLine {T : ℝ} (hLine : MasterChain.FiniteHeightOnLine T) :
+  MasterChain.C_RR = MasterChain.defectAbove T
+MasterChain.C_RR_le_tail_certificate_of_finiteHeightOnLine {T D Btail : ℝ} (hT : 0 < T)
+  (hLine : MasterChain.FiniteHeightOnLine T)
+  (hD : ∀ᵐ (s : ℂ) ∂MasterChain.xiDivisorMeasure, |MasterChain.displacement s| ≤ D)
+  (hMoment : MeasureTheory.Integrable (fun s => (MasterChain.height s ^ 2)⁻¹) MasterChain.xiDivisorMeasure)
+  (hB : MasterChain.c1Above T ≤ Btail) : MasterChain.C_RR ≤ 3 * D ^ 2 / T ^ 2 * Btail
+MasterChain.C_RR_le_dyadic_121_of_finiteHeightOnLine (hLine : MasterChain.FiniteHeightOnLine 3000000000000)
+  (hD : ∀ᵐ (s : ℂ) ∂MasterChain.xiDivisorMeasure, |MasterChain.displacement s| ≤ 1 / 2)
+  (hMoment : MeasureTheory.Integrable (fun s => (MasterChain.height s ^ 2)⁻¹) MasterChain.xiDivisorMeasure)
+  (hB : MasterChain.c1Above 3000000000000 ≤ 2854 / 10 ^ 15) : MasterChain.C_RR ≤ MasterChain.dyadicThreshold 121
+MasterChain.master_3_iff_all_dyadic_defect_bounds (h2 : MasterChain.MASTER_2) :
+  MasterChain.MASTER_3 ↔ ∀ (p : ℕ), MasterChain.C_RR ≤ MasterChain.dyadicThreshold p
+PROJECT_DECLARATIONS_AUDITED=277
+NATIVE_L2_SIGNATURE=ONE_EXPLICIT_MOMENT_INPUT
+DIVISOR_SIGMA_FINITE=PROVED_FOR_ACTUAL_XI
+SCALAR_LAPLACE_KERNEL=PROVED_WITH_CONVERGENCE
+KERNEL_MASS=PROVED_FROM_SECOND_MOMENT_INTEGRABILITY
+DENSITY_INTEGRABILITY=DERIVED_FROM_SECOND_MOMENT_INTEGRABILITY
+FINITE_HEIGHT_RULES=CONDITIONAL_INPUTS_EXPLICIT
+COMPUTATIONAL_PART=KERNEL_BRIDGE_AND_CERTIFICATE_RULES_PROVED
+NUMERICAL_RESULTS=EXTERNAL_ARB_ENCLOSURES_NOT_LEAN_VERIFIED
+ACTUAL_ANALYTIC_BRIDGES=PARTLY_DISCHARGED_REMAINING_INPUTS_EXPLICIT
+MASTER_3=UNPROVED_VANISHING_STATEMENT
+MASTER3_COMPUTATION_AXIOM_AUDIT=PASS

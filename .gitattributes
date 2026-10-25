@@ -5,3 +5,4 @@
 *.txt text eol=lf
 *.cmd text eol=crlf
 research/upstream/** -text
+RH-Equivalences/sources/** -text

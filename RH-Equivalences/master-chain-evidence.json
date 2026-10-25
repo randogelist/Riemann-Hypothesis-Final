@@ -1,0 +1,438 @@
+{
+  "audit_kind": "SOURCE_AND_INHERITED_RECEIPT_REVIEW_NOT_FRESH_COMPILATION",
+  "record_count": 8,
+  "records": [
+    {
+      "declaration": "MasterChain.master_3_iff_c1_eq_kappa",
+      "source_relative_path": "MasterChain/Chain.lean",
+      "source_sha256": "25cae26eedecc781684be6d68f3dca6c159600892a95fcf34fb50f13932ef7b5",
+      "line": 43,
+      "exact_statement": "theorem master_3_iff_c1_eq_kappa (h1 : MASTER_1) :\n    MASTER_3 ↔ c1 = kappa",
+      "id": "MASTER_CHAIN_EQ_01",
+      "archive": "RH_MASTER_CHAIN_LEAN_v0_1_0",
+      "archive_repository_root": "research/upstream/rh-equivalences-master-chain-v010",
+      "form": "conditional_actual_xi_equivalence",
+      "display_statement": "MASTER_3 ↔ c1 = kappa",
+      "explicit_hypotheses": [
+        "h1 : MASTER_1"
+      ],
+      "native_mathlib_rh_iff": false,
+      "finite_witness_reduction": false,
+      "evidence_status": "SOURCE_PRESENT_HISTORICAL_LINUX_PASS_HASH_MATCH",
+      "native_windows_status": "NOT_RUN_THIS_SESSION"
+    },
+    {
+      "declaration": "MasterChain.master_3_iff_defect_zero",
+      "source_relative_path": "MasterChain/Chain.lean",
+      "source_sha256": "25cae26eedecc781684be6d68f3dca6c159600892a95fcf34fb50f13932ef7b5",
+      "line": 49,
+      "exact_statement": "theorem master_3_iff_defect_zero (h2 : MASTER_2) : MASTER_3 ↔ C_RR = 0",
+      "id": "MASTER_CHAIN_EQ_02",
+      "archive": "RH_MASTER_CHAIN_LEAN_v0_1_0",
+      "archive_repository_root": "research/upstream/rh-equivalences-master-chain-v010",
+      "form": "conditional_actual_xi_equivalence",
+      "display_statement": "MASTER_3 ↔ C_RR = 0",
+      "explicit_hypotheses": [
+        "h2 : MASTER_2"
+      ],
+      "native_mathlib_rh_iff": false,
+      "finite_witness_reduction": false,
+      "evidence_status": "SOURCE_PRESENT_HISTORICAL_LINUX_PASS_HASH_MATCH",
+      "native_windows_status": "NOT_RUN_THIS_SESSION"
+    },
+    {
+      "declaration": "MasterChain.master_3_iff_mass_zero",
+      "source_relative_path": "MasterChain/Chain.lean",
+      "source_sha256": "25cae26eedecc781684be6d68f3dca6c159600892a95fcf34fb50f13932ef7b5",
+      "line": 53,
+      "exact_statement": "theorem master_3_iff_mass_zero (h2 : MASTER_2) : MASTER_3 ↔ densityMass = 0",
+      "id": "MASTER_CHAIN_EQ_03",
+      "archive": "RH_MASTER_CHAIN_LEAN_v0_1_0",
+      "archive_repository_root": "research/upstream/rh-equivalences-master-chain-v010",
+      "form": "conditional_actual_xi_equivalence",
+      "display_statement": "MASTER_3 ↔ densityMass = 0",
+      "explicit_hypotheses": [
+        "h2 : MASTER_2"
+      ],
+      "native_mathlib_rh_iff": false,
+      "finite_witness_reduction": false,
+      "evidence_status": "SOURCE_PRESENT_HISTORICAL_LINUX_PASS_HASH_MATCH",
+      "native_windows_status": "NOT_RUN_THIS_SESSION"
+    },
+    {
+      "declaration": "MasterChain.scalarReadout_zero_iff_mass_zero",
+      "source_relative_path": "MasterChain/Chain.lean",
+      "source_sha256": "25cae26eedecc781684be6d68f3dca6c159600892a95fcf34fb50f13932ef7b5",
+      "line": 61,
+      "exact_statement": "theorem scalarReadout_zero_iff_mass_zero\n    (hMass : Integrable A positiveLebesgue)\n    (hReadout : Integrable\n      (fun v : ℝ => Real.exp (-(3 : ℝ) * v / 2) * g v) positiveLebesgue) :\n    scalarReadout = 0 ↔ densityMass = 0",
+      "id": "MASTER_CHAIN_EQ_04",
+      "archive": "RH_MASTER_CHAIN_LEAN_v0_1_0",
+      "archive_repository_root": "research/upstream/rh-equivalences-master-chain-v010",
+      "form": "conditional_actual_xi_equivalence",
+      "display_statement": "scalarReadout = 0 ↔ densityMass = 0",
+      "explicit_hypotheses": [
+        "Integrable A positiveLebesgue",
+        "Integrable (fun v => exp(-3*v/2)*g v) positiveLebesgue"
+      ],
+      "native_mathlib_rh_iff": false,
+      "finite_witness_reduction": false,
+      "evidence_status": "SOURCE_PRESENT_HISTORICAL_LINUX_PASS_HASH_MATCH",
+      "native_windows_status": "NOT_RUN_THIS_SESSION"
+    },
+    {
+      "declaration": "MasterChain.master_3_iff_scalarReadout_zero",
+      "source_relative_path": "MasterChain/Chain.lean",
+      "source_sha256": "25cae26eedecc781684be6d68f3dca6c159600892a95fcf34fb50f13932ef7b5",
+      "line": 68,
+      "exact_statement": "theorem master_3_iff_scalarReadout_zero\n    (h2 : MASTER_2) (hInt : NativeIntegrability) :\n    MASTER_3 ↔ scalarReadout = 0",
+      "id": "MASTER_CHAIN_EQ_05",
+      "archive": "RH_MASTER_CHAIN_LEAN_v0_1_0",
+      "archive_repository_root": "research/upstream/rh-equivalences-master-chain-v010",
+      "form": "conditional_actual_xi_equivalence",
+      "display_statement": "MASTER_3 ↔ scalarReadout = 0",
+      "explicit_hypotheses": [
+        "h2 : MASTER_2",
+        "hInt : NativeIntegrability"
+      ],
+      "native_mathlib_rh_iff": false,
+      "finite_witness_reduction": false,
+      "evidence_status": "SOURCE_PRESENT_HISTORICAL_LINUX_PASS_HASH_MATCH",
+      "native_windows_status": "NOT_RUN_THIS_SESSION"
+    },
+    {
+      "declaration": "MasterChain.master_3_iff_V_one_zero",
+      "source_relative_path": "MasterChain/Chain.lean",
+      "source_sha256": "25cae26eedecc781684be6d68f3dca6c159600892a95fcf34fb50f13932ef7b5",
+      "line": 75,
+      "exact_statement": "theorem master_3_iff_V_one_zero\n    (h2 : MASTER_2) (hInt : NativeIntegrability) :\n    MASTER_3 ↔ V 1 = 0",
+      "id": "MASTER_CHAIN_EQ_06",
+      "archive": "RH_MASTER_CHAIN_LEAN_v0_1_0",
+      "archive_repository_root": "research/upstream/rh-equivalences-master-chain-v010",
+      "form": "conditional_actual_xi_equivalence",
+      "display_statement": "MASTER_3 ↔ V 1 = 0",
+      "explicit_hypotheses": [
+        "h2 : MASTER_2",
+        "hInt : NativeIntegrability"
+      ],
+      "native_mathlib_rh_iff": false,
+      "finite_witness_reduction": false,
+      "evidence_status": "SOURCE_PRESENT_HISTORICAL_LINUX_PASS_HASH_MATCH",
+      "native_windows_status": "NOT_RUN_THIS_SESSION"
+    },
+    {
+      "declaration": "MasterChain.master_3_iff_xiDensityVector_zero",
+      "source_relative_path": "MasterChain/Realization.lean",
+      "source_sha256": "a8ba9a81a5fc13e689356df37d4027f7e62b92fae1150996cb0810759e94c3a1",
+      "line": 28,
+      "exact_statement": "theorem master_3_iff_xiDensityVector_zero\n    (h2 : MASTER_2) (hMass : Integrable A positiveLebesgue) :\n    MASTER_3 ↔ xiDensityVector hMass = 0",
+      "id": "MASTER_CHAIN_EQ_07",
+      "archive": "RH_MASTER_CHAIN_LEAN_v0_1_0",
+      "archive_repository_root": "research/upstream/rh-equivalences-master-chain-v010",
+      "form": "conditional_actual_xi_equivalence",
+      "display_statement": "MASTER_3 ↔ xiDensityVector hMass = 0",
+      "explicit_hypotheses": [
+        "h2 : MASTER_2",
+        "hMass : Integrable A positiveLebesgue"
+      ],
+      "native_mathlib_rh_iff": false,
+      "finite_witness_reduction": false,
+      "evidence_status": "SOURCE_PRESENT_HISTORICAL_LINUX_PASS_HASH_MATCH",
+      "native_windows_status": "NOT_RUN_THIS_SESSION"
+    },
+    {
+      "id": "MASTER3_EQ_01",
+      "declaration": "MasterChain.master_3_iff_all_dyadic_defect_bounds",
+      "archive": "RH_MASTER3_COMPUTATION_LEAN_v0_2_0_FIX2",
+      "archive_repository_root": "research/upstream/rh-equivalences-master3-v020",
+      "source_relative_path": null,
+      "source_sha256": null,
+      "receipt_relative_path": "validation/fix2/audit.log",
+      "receipt_sha256": "0b7e4bfd66624979813efdade191ca239864aac674c7aff2847d8f2781407221",
+      "exact_statement": "MasterChain.master_3_iff_all_dyadic_defect_bounds (h2 : MasterChain.MASTER_2) :\n  MasterChain.MASTER_3 ↔ ∀ (p : ℕ), MasterChain.C_RR ≤ MasterChain.dyadicThreshold p",
+      "display_statement": "MASTER_3 ↔ ∀ p : ℕ, C_RR ≤ dyadicThreshold p",
+      "explicit_hypotheses": [
+        "h2 : MASTER_2"
+      ],
+      "form": "conditional_actual_xi_equivalence_printed_in_historical_receipt",
+      "native_mathlib_rh_iff": false,
+      "finite_witness_reduction": false,
+      "evidence_status": "RECEIPT_ONLY_DECLARATION_SOURCE_NOT_IN_PATCH",
+      "native_windows_status": "NOT_RUN_THIS_SESSION",
+      "caveat": "The equivalence is countably universal, not a finite checker. Exact dyadicThreshold definition and proof source are absent from this patch."
+    }
+  ],
+  "supporting_results": [
+    {
+      "declaration": "MasterChain.kernelMassIdentity_of_second_moment",
+      "source_relative_path": "MasterChain/KernelMass.lean",
+      "source_sha256": "61ee56f94b9c4c5a01521d763cc13f3b2223e218704e2a5f5b0fb0e7a9809552",
+      "line": 208,
+      "exact_statement": "theorem kernelMassIdentity_of_second_moment\n    (hMoment : Integrable (fun s : ℂ => (height s ^ 2)⁻¹) xiDivisorMeasure) :\n    KernelMassIdentity",
+      "explicit_hypotheses": [
+        "Integrable (fun s : ℂ => (height s ^ 2)⁻¹) xiDivisorMeasure"
+      ],
+      "archive": "RH_MASTER3_COMPUTATION_LEAN_v0_2_0_FIX2",
+      "archive_repository_root": "research/upstream/rh-equivalences-master3-v020",
+      "form": "conditional_supporting_bridge_not_rh_iff",
+      "evidence_status": "SOURCE_PRESENT_HISTORICAL_LINUX_PASS_HASH_MATCH_MISSING_BASELINE_IMPORTS"
+    },
+    {
+      "declaration": "MasterChain.density_integrable_of_second_moment",
+      "source_relative_path": "MasterChain/KernelMass.lean",
+      "source_sha256": "61ee56f94b9c4c5a01521d763cc13f3b2223e218704e2a5f5b0fb0e7a9809552",
+      "line": 214,
+      "exact_statement": "theorem density_integrable_of_second_moment\n    (hMoment : Integrable (fun s : ℂ => (height s ^ 2)⁻¹) xiDivisorMeasure) :\n    Integrable A positiveLebesgue",
+      "explicit_hypotheses": [
+        "Integrable (fun s : ℂ => (height s ^ 2)⁻¹) xiDivisorMeasure"
+      ],
+      "archive": "RH_MASTER3_COMPUTATION_LEAN_v0_2_0_FIX2",
+      "archive_repository_root": "research/upstream/rh-equivalences-master3-v020",
+      "form": "conditional_supporting_bridge_not_rh_iff",
+      "evidence_status": "SOURCE_PRESENT_HISTORICAL_LINUX_PASS_HASH_MATCH_MISSING_BASELINE_IMPORTS"
+    },
+    {
+      "declaration": "MasterChain.C_RR_eq_densityL2_norm_sq_of_second_moment",
+      "source_relative_path": "MasterChain/KernelMass.lean",
+      "source_sha256": "61ee56f94b9c4c5a01521d763cc13f3b2223e218704e2a5f5b0fb0e7a9809552",
+      "line": 230,
+      "exact_statement": "theorem C_RR_eq_densityL2_norm_sq_of_second_moment\n    (hMoment : Integrable (fun s : ℂ => (height s ^ 2)⁻¹) xiDivisorMeasure) :\n    C_RR = ‖densityL2 MasterChain.A_nonneg_ae (density_integrable_of_second_moment hMoment)‖ ^ 2",
+      "explicit_hypotheses": [
+        "Integrable (fun s : ℂ => (height s ^ 2)⁻¹) xiDivisorMeasure"
+      ],
+      "archive": "RH_MASTER3_COMPUTATION_LEAN_v0_2_0_FIX2",
+      "archive_repository_root": "research/upstream/rh-equivalences-master3-v020",
+      "form": "conditional_supporting_bridge_not_rh_iff",
+      "evidence_status": "SOURCE_PRESENT_HISTORICAL_LINUX_PASS_HASH_MATCH_MISSING_BASELINE_IMPORTS"
+    }
+  ],
+  "master_definitions": {
+    "MASTER_1": "c1 = kappa + gpEnergy V",
+    "MASTER_2": "GPAdmissible V ∧ ∃ b, IsL2BoundaryTrace V b ∧ C_RR = densityMass ∧ densityMass = boundaryEnergy b ∧ boundaryEnergy b = gpEnergy V",
+    "MASTER_3": "gpEnergy V = 0"
+  },
+  "native_integrability_fields": [
+    "xi_half_ne_zero",
+    "c1_integrable",
+    "defect_integrable",
+    "density_kernel_integrable (all positive v)",
+    "density_integrable",
+    "readout_integrable",
+    "laplace_integrable (all u in GPDomain)"
+  ],
+  "analytic_obligations": {
+    "TraceDecomposition": "c1 = kappa + C_RR; open in base",
+    "KernelMassIdentity": "C_RR = densityMass; reduced in patch to reciprocal-height second-moment integrability",
+    "LaplacePlancherel": "Hardy admissibility plus actual L2 boundary trace and mass/energy identities; open",
+    "MASTER_3": "Unproved zero-energy statement",
+    "RiemannHypothesis_binding": "No native RH iff declaration in these supplied source sets"
+  },
+  "receipt_checks": [
+    {
+      "archive": "RH_MASTER_CHAIN_LEAN_v0_1_0",
+      "source_hashes_matched": 13,
+      "decls_reported_audited": 109,
+      "platform": "Linux x86_64",
+      "compiler": "Lean 4.33.0",
+      "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+      "kernel_flag": "debug.skipKernelTC=false",
+      "native_windows_runner": "not executed in historical receipt"
+    },
+    {
+      "archive": "RH_MASTER3_COMPUTATION_LEAN_v0_2_0_FIX2",
+      "source_hashes_matched": 2,
+      "decls_reported_audited": 277,
+      "platform": "Linux x86_64",
+      "compiler": "Lean 4.33.0",
+      "kernel_flag": "debug.skipKernelTC=false",
+      "native_windows_runner": "not executed in historical receipt",
+      "incomplete_patch": true,
+      "missing_imports": [
+        "MasterChain.LaplaceKernel",
+        "MasterChain.DivisorCountability",
+        "MasterChain.FiniteHeightCertificates",
+        "Master3Computation"
+      ],
+      "receipt_reused_modules": 18
+    }
+  ],
+  "semantic_review": [
+    "Canonical actual xi and analytic multiplicity measure are used; the objects are not opaque freely chosen proxies.",
+    "No contradiction or normalization error found in source by inspection: defect equals 1/t²-(t²-d²)/(t²+d²)², consistent with scalar Laplace mass.",
+    "Total Bochner integrals and real sSup do not certify convergence; displayed integrability and GPAdmissible hypotheses must remain visible.",
+    "An iff with MASTER_3 is not an iff with native RiemannHypothesis absent an independently proved bridge.",
+    "The upper-half-plane actual divisor must be connected to all Mathlib nontrivial zeros, with real-axis/trivial-zero cases covered, before a native RH claim.",
+    "Historical Linux pass receipts are inherited evidence with matching source hashes; no new Lean or native Windows build was run.",
+    "Patch audit prints finite-height and dyadic criterion types but does not supply their source bodies. Do not reconstruct hidden proof claims from names alone.",
+    "No accepted finite witness or master vanishing theorem is supplied."
+  ],
+  "staged_files": [
+    {
+      "path": "research/upstream/rh-equivalences-master-chain-v010/lean-toolchain",
+      "source_path": "inspected_equivalences/RH_MASTER_CHAIN_LEAN_v0_1_0/RH_MASTER_CHAIN_LEAN_v0_1_0/lean-toolchain",
+      "sha256": "302cd63c54178885b89e669f33b38f12f4dd7ae7e5cac537b3203e3768d8fb2b",
+      "unchanged": true
+    },
+    {
+      "path": "research/upstream/rh-equivalences-master-chain-v010/mathlib-imports.txt",
+      "source_path": "inspected_equivalences/RH_MASTER_CHAIN_LEAN_v0_1_0/RH_MASTER_CHAIN_LEAN_v0_1_0/mathlib-imports.txt",
+      "sha256": "cc6d3d9a62231dad7083c69133c61a13f0c2e567cbea89bd9ac2ab6655ec7aa7",
+      "unchanged": true
+    },
+    {
+      "path": "research/upstream/rh-equivalences-master-chain-v010/MasterChain.lean",
+      "source_path": "inspected_equivalences/RH_MASTER_CHAIN_LEAN_v0_1_0/RH_MASTER_CHAIN_LEAN_v0_1_0/MasterChain.lean",
+      "sha256": "77827193bd75b08fe524e38e175e521030a906926dfd48c68c893547898b4a15",
+      "unchanged": true
+    },
+    {
+      "path": "research/upstream/rh-equivalences-master-chain-v010/Audit.lean",
+      "source_path": "inspected_equivalences/RH_MASTER_CHAIN_LEAN_v0_1_0/RH_MASTER_CHAIN_LEAN_v0_1_0/Audit.lean",
+      "sha256": "eae89a72b4c3a36e165cb78a9bbbfc8c44a76123ca93919823f87def43e7cdcb",
+      "unchanged": true
+    },
+    {
+      "path": "research/upstream/rh-equivalences-master-chain-v010/compile-order.txt",
+      "source_path": "inspected_equivalences/RH_MASTER_CHAIN_LEAN_v0_1_0/RH_MASTER_CHAIN_LEAN_v0_1_0/compile-order.txt",
+      "sha256": "6bae12901f9cf18f43f0c556636044b60edbeb920b1a91d53e465ca36048733f",
+      "unchanged": true
+    },
+    {
+      "path": "research/upstream/rh-equivalences-master-chain-v010/VALIDATION.md",
+      "source_path": "inspected_equivalences/RH_MASTER_CHAIN_LEAN_v0_1_0/RH_MASTER_CHAIN_LEAN_v0_1_0/VALIDATION.md",
+      "sha256": "59479a8a8dca87349f0408d88c9c7927e44e774d6fbb6f5d541c2ec66ac279d7",
+      "unchanged": true
+    },
+    {
+      "path": "research/upstream/rh-equivalences-master-chain-v010/README.md",
+      "source_path": "inspected_equivalences/RH_MASTER_CHAIN_LEAN_v0_1_0/RH_MASTER_CHAIN_LEAN_v0_1_0/README.md",
+      "sha256": "c5e1023095f5b1c41439f882763832fe6f6a07a43e9a5b42d585907180bdf292",
+      "unchanged": true
+    },
+    {
+      "path": "research/upstream/rh-equivalences-master-chain-v010/MasterChain/Chain.lean",
+      "source_path": "inspected_equivalences/RH_MASTER_CHAIN_LEAN_v0_1_0/RH_MASTER_CHAIN_LEAN_v0_1_0/MasterChain/Chain.lean",
+      "sha256": "25cae26eedecc781684be6d68f3dca6c159600892a95fcf34fb50f13932ef7b5",
+      "unchanged": true
+    },
+    {
+      "path": "research/upstream/rh-equivalences-master-chain-v010/MasterChain/Hardy.lean",
+      "source_path": "inspected_equivalences/RH_MASTER_CHAIN_LEAN_v0_1_0/RH_MASTER_CHAIN_LEAN_v0_1_0/MasterChain/Hardy.lean",
+      "sha256": "c5baa87692dfc2a775bf0255b1cd2d92b7e3c859ad8b051509a6951d4c120e2e",
+      "unchanged": true
+    },
+    {
+      "path": "research/upstream/rh-equivalences-master-chain-v010/MasterChain/PositiveReadout.lean",
+      "source_path": "inspected_equivalences/RH_MASTER_CHAIN_LEAN_v0_1_0/RH_MASTER_CHAIN_LEAN_v0_1_0/MasterChain/PositiveReadout.lean",
+      "sha256": "b5c9b30a050db4f4265c01964400861f07c71b8355b4f0e7a527e9ca7719249d",
+      "unchanged": true
+    },
+    {
+      "path": "research/upstream/rh-equivalences-master-chain-v010/MasterChain/Master2.lean",
+      "source_path": "inspected_equivalences/RH_MASTER_CHAIN_LEAN_v0_1_0/RH_MASTER_CHAIN_LEAN_v0_1_0/MasterChain/Master2.lean",
+      "sha256": "e5e552837c00008427e5b539fb020b9e67e785443bbaee8fbd314165482f5460",
+      "unchanged": true
+    },
+    {
+      "path": "research/upstream/rh-equivalences-master-chain-v010/MasterChain/Master1.lean",
+      "source_path": "inspected_equivalences/RH_MASTER_CHAIN_LEAN_v0_1_0/RH_MASTER_CHAIN_LEAN_v0_1_0/MasterChain/Master1.lean",
+      "sha256": "4acb3d7763b0cf541bc11183d6e7b3f4c939a41044e045e0fbcb67d5c6c497e4",
+      "unchanged": true
+    },
+    {
+      "path": "research/upstream/rh-equivalences-master-chain-v010/MasterChain/Realization.lean",
+      "source_path": "inspected_equivalences/RH_MASTER_CHAIN_LEAN_v0_1_0/RH_MASTER_CHAIN_LEAN_v0_1_0/MasterChain/Realization.lean",
+      "sha256": "a8ba9a81a5fc13e689356df37d4027f7e62b92fae1150996cb0810759e94c3a1",
+      "unchanged": true
+    },
+    {
+      "path": "research/upstream/rh-equivalences-master-chain-v010/MasterChain/Statements.lean",
+      "source_path": "inspected_equivalences/RH_MASTER_CHAIN_LEAN_v0_1_0/RH_MASTER_CHAIN_LEAN_v0_1_0/MasterChain/Statements.lean",
+      "sha256": "2ebd1e1d177cc22fa022860888c942d0da1df3e0ef9e670b7373ca81d169c4aa",
+      "unchanged": true
+    },
+    {
+      "path": "research/upstream/rh-equivalences-master-chain-v010/MasterChain/NativeObjects.lean",
+      "source_path": "inspected_equivalences/RH_MASTER_CHAIN_LEAN_v0_1_0/RH_MASTER_CHAIN_LEAN_v0_1_0/MasterChain/NativeObjects.lean",
+      "sha256": "4ddf9c1f540edf76c86f0dbbeb4c0f31f62ef2ae727363805a08f1aecc47d79c",
+      "unchanged": true
+    },
+    {
+      "path": "research/upstream/rh-equivalences-master-chain-v010/MasterChain/DensityL2.lean",
+      "source_path": "inspected_equivalences/RH_MASTER_CHAIN_LEAN_v0_1_0/RH_MASTER_CHAIN_LEAN_v0_1_0/MasterChain/DensityL2.lean",
+      "sha256": "a8c23918e254d07ed2bab58634b2c50dce42a3607f923c8dded23fa490d200dc",
+      "unchanged": true
+    },
+    {
+      "path": "research/upstream/rh-equivalences-master-chain-v010/MasterChain/Master3.lean",
+      "source_path": "inspected_equivalences/RH_MASTER_CHAIN_LEAN_v0_1_0/RH_MASTER_CHAIN_LEAN_v0_1_0/MasterChain/Master3.lean",
+      "sha256": "3e6779458b1c3a12d97dda92619e5406648b990ea0e4baf37e93a427954ff6c4",
+      "unchanged": true
+    },
+    {
+      "path": "research/upstream/rh-equivalences-master-chain-v010/MasterChain/AnalyticBridges.lean",
+      "source_path": "inspected_equivalences/RH_MASTER_CHAIN_LEAN_v0_1_0/RH_MASTER_CHAIN_LEAN_v0_1_0/MasterChain/AnalyticBridges.lean",
+      "sha256": "9d1a5f9f280f5e575d3061a1fa0037d5241bb55b7ed129f8915e988a5a6b67cb",
+      "unchanged": true
+    },
+    {
+      "path": "research/upstream/rh-equivalences-master-chain-v010/validation/audit.log",
+      "source_path": "inspected_equivalences/RH_MASTER_CHAIN_LEAN_v0_1_0/RH_MASTER_CHAIN_LEAN_v0_1_0/validation/audit.log",
+      "sha256": "ee296583d8c67029c9a77c5bcc4bb46eaf6e538f46988f3254eb78a74bffd283",
+      "unchanged": true
+    },
+    {
+      "path": "research/upstream/rh-equivalences-master-chain-v010/validation/result.json",
+      "source_path": "inspected_equivalences/RH_MASTER_CHAIN_LEAN_v0_1_0/RH_MASTER_CHAIN_LEAN_v0_1_0/validation/result.json",
+      "sha256": "5a792bdec7da8c29e5e678a331d75bc5326bf5fda1230e177bbdb7ba1a7a4470",
+      "unchanged": true
+    },
+    {
+      "path": "research/upstream/rh-equivalences-master-chain-v010/validation/build.log",
+      "source_path": "inspected_equivalences/RH_MASTER_CHAIN_LEAN_v0_1_0/RH_MASTER_CHAIN_LEAN_v0_1_0/validation/build.log",
+      "sha256": "d629210231a03925e1609cd990deb51abc7bd0d982af888bf11875629f4427e6",
+      "unchanged": true
+    },
+    {
+      "path": "research/upstream/rh-equivalences-master3-v020/Audit.lean",
+      "source_path": "inspected_equivalences/RH_MASTER3_COMPUTATION_LEAN_v0_2_0_FIX2/RH_MASTER3_COMPUTATION_LEAN_v0_2_0/Audit.lean",
+      "sha256": "6b3d0a0a69c5565a2c239687a06f7f0f5b28a662c9c74bbb8ef687bbbe2ea63c",
+      "unchanged": true
+    },
+    {
+      "path": "research/upstream/rh-equivalences-master3-v020/README_FIX2.md",
+      "source_path": "inspected_equivalences/RH_MASTER3_COMPUTATION_LEAN_v0_2_0_FIX2/RH_MASTER3_COMPUTATION_LEAN_v0_2_0/README_FIX2.md",
+      "sha256": "8ca78e43cbc9fd5eb5bfdb5170b523d1694d4cded4183e7f0c9761561b3bbd28",
+      "unchanged": true
+    },
+    {
+      "path": "research/upstream/rh-equivalences-master3-v020/MasterChain/KernelMass.lean",
+      "source_path": "inspected_equivalences/RH_MASTER3_COMPUTATION_LEAN_v0_2_0_FIX2/RH_MASTER3_COMPUTATION_LEAN_v0_2_0/MasterChain/KernelMass.lean",
+      "sha256": "61ee56f94b9c4c5a01521d763cc13f3b2223e218704e2a5f5b0fb0e7a9809552",
+      "unchanged": true
+    },
+    {
+      "path": "research/upstream/rh-equivalences-master3-v020/validation/fix2/unseeded_reproduction.log",
+      "source_path": "inspected_equivalences/RH_MASTER3_COMPUTATION_LEAN_v0_2_0_FIX2/RH_MASTER3_COMPUTATION_LEAN_v0_2_0/validation/fix2/unseeded_reproduction.log",
+      "sha256": "1b407c41e443c0dfeeeef307c51f108273b19ea566e3b5a152344c1e99f08c77",
+      "unchanged": true
+    },
+    {
+      "path": "research/upstream/rh-equivalences-master3-v020/validation/fix2/audit.log",
+      "source_path": "inspected_equivalences/RH_MASTER3_COMPUTATION_LEAN_v0_2_0_FIX2/RH_MASTER3_COMPUTATION_LEAN_v0_2_0/validation/fix2/audit.log",
+      "sha256": "0b7e4bfd66624979813efdade191ca239864aac674c7aff2847d8f2781407221",
+      "unchanged": true
+    },
+    {
+      "path": "research/upstream/rh-equivalences-master3-v020/validation/fix2/result.json",
+      "source_path": "inspected_equivalences/RH_MASTER3_COMPUTATION_LEAN_v0_2_0_FIX2/RH_MASTER3_COMPUTATION_LEAN_v0_2_0/validation/fix2/result.json",
+      "sha256": "7d69e7a7a8e155e23fbd61fde354b26f0b1969520c1f2a5f2bad7571a0621141",
+      "unchanged": true
+    },
+    {
+      "path": "research/upstream/rh-equivalences-master3-v020/validation/fix2/build.log",
+      "source_path": "inspected_equivalences/RH_MASTER3_COMPUTATION_LEAN_v0_2_0_FIX2/RH_MASTER3_COMPUTATION_LEAN_v0_2_0/validation/fix2/build.log",
+      "sha256": "62f56daec909751f45dfb3e40dd136d071d581a31de6bb614f30ef511052468a",
+      "unchanged": true
+    }
+  ]
+}

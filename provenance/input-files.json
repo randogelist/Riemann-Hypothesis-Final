@@ -213,5 +213,40 @@
     "bytes": 20924,
     "library_file_id": "libfile_0a16d9d190fc8191bd42942d8d4578d7",
     "role": "recovered GP source; native receipts not admitted"
+  },
+  {
+    "file": "AS_MANY_DISTINCTIVE_RH_EQUIVALENCES_AS_POSSIBLE.txt",
+    "sha256": "8316d28735a23aff004c1c9e2d30c7f601fecf379fe4990f5ded8dd0a0b527b6",
+    "bytes": 146423,
+    "library_file_id": "libfile_c262218d7cfc8191bd1156925092e41d",
+    "role": "recovered RH equivalence source/receipt; not an admitted native checkpoint"
+  },
+  {
+    "file": "RH_MASTER3_COMPUTATION_LEAN_v0_2_0_FIX2.zip",
+    "sha256": "660b98b184b5aabfd0e38d57964ab5bfa3eee45361e72e03bc2363c9c8e80895",
+    "bytes": 13100,
+    "library_file_id": "libfile_b9e4389ec62c8191bd2cb5cdc4ffb8ba",
+    "role": "recovered RH equivalence source/receipt; not an admitted native checkpoint"
+  },
+  {
+    "file": "RH_MASTER_CHAIN_LEAN_v0_1_0.zip",
+    "sha256": "795023ede458d7e3a42162a47369c072d14376e34cccdfc6439be8b444dfb49d",
+    "bytes": 22531,
+    "library_file_id": "libfile_b006488e7d6881919a825ad68ab7b6e5",
+    "role": "recovered RH equivalence source/receipt; not an admitted native checkpoint"
+  },
+  {
+    "file": "RH_MASTER_CLOSURE_ANGULAR_LEAN_v0_1_1_FIX1.zip",
+    "sha256": "7aeccb874afca4b755432f6eca9a01ed2c76e0135c1f392fd3b24ee7322e8ba6",
+    "bytes": 724151,
+    "library_file_id": "libfile_4adb5e8e5ab48191b5482ff147669321",
+    "role": "recovered RH equivalence source/receipt; not an admitted native checkpoint"
+  },
+  {
+    "file": "RH_REVIEW_BUNDLE_18679_14231_11714.zip",
+    "sha256": "b233c8d7468c3c484a6a90d318ba09d4e9a9586e744a980aa13bbcdf8301ed81",
+    "bytes": 91168560,
+    "library_file_id": "libfile_5d5e72b9bb8c81918d819d4b67d5c9b6",
+    "role": "recovered RH equivalence source/receipt; not an admitted native checkpoint"
   }
 ]

@@ -31,5 +31,19 @@
     "mellin_native_xi_factorization": "OPEN",
     "native_lean_build": "NOT_RUN",
     "full_plan_modules": 89
+  },
+  "rh_equivalences_collection": {
+    "directory": "RH-Equivalences",
+    "native_target_formulations": 41,
+    "native_criterion_groups": 22,
+    "opaque_model_formulations": 10,
+    "definition_records": 115,
+    "original_primary_hash_matches": 51,
+    "recovered_corpus_source_bodies": 97,
+    "local_RH_named_declarations": 115,
+    "local_RH_linked_auxiliary_declarations": 27,
+    "master_chain_auxiliary_equivalences": 8,
+    "native_compilation": "NOT_RUN",
+    "active_build_changed": false
   }
 }

@@ -1,0 +1,17 @@
+{
+  "kind": "STATIC_SOURCE_IDENTITY_ONLY_NOT_LEAN",
+  "status": "PASS",
+  "native_target_formulations": 41,
+  "opaque_model_formulations": 10,
+  "native_criterion_groups": 22,
+  "primary_source_hashes_matched": 51,
+  "definition_records": 115,
+  "recovered_source_bodies": 97,
+  "preserved_license_notices": 7,
+  "local_declaration_source_records_checked": 142,
+  "master_chain_auxiliary_records_checked": 8,
+  "native_lean_compilation": "NOT_RUN",
+  "native_axiom_audit": "NOT_RUN",
+  "rh_proved": false,
+  "errors": []
+}

@@ -1,0 +1,133 @@
+MODULE=MasterChain/NativeObjects.lean
+
+EXIT=0
+
+MODULE=MasterChain/PositiveReadout.lean
+
+EXIT=0
+
+MODULE=MasterChain/DensityL2.lean
+
+EXIT=0
+
+MODULE=MasterChain/Hardy.lean
+
+EXIT=0
+
+MODULE=MasterChain/Master1.lean
+
+EXIT=0
+
+MODULE=MasterChain/Master2.lean
+
+EXIT=0
+
+MODULE=MasterChain/Master3.lean
+
+EXIT=0
+
+MODULE=MasterChain/AnalyticBridges.lean
+
+EXIT=0
+
+MODULE=MasterChain/Statements.lean
+
+EXIT=0
+
+MODULE=MasterChain/Chain.lean
+
+EXIT=0
+
+MODULE=MasterChain/Realization.lean
+
+EXIT=0
+
+MODULE=MasterChain.lean
+
+EXIT=0
+
+MODULE=Audit.lean
+def MasterChain.MASTER_1 : Prop :=
+MasterChain.c1 = MasterChain.kappa + MasterChain.gpEnergy MasterChain.V
+def MasterChain.MASTER_2 : Prop :=
+MasterChain.GPAdmissible MasterChain.V ∧
+  ∃ b,
+    MasterChain.IsL2BoundaryTrace MasterChain.V b ∧
+      MasterChain.C_RR = MasterChain.densityMass ∧
+        MasterChain.densityMass = MasterChain.boundaryEnergy b ∧
+          MasterChain.boundaryEnergy b = MasterChain.gpEnergy MasterChain.V
+def MasterChain.MASTER_3 : Prop :=
+MasterChain.gpEnergy MasterChain.V = 0
+structure MasterChain.NativeIntegrability : Prop
+number of parameters: 0
+fields:
+  MasterChain.NativeIntegrability.xi_half_ne_zero : MasterChain.xi (1 / 2) ≠ 0
+  MasterChain.NativeIntegrability.c1_integrable : MeasureTheory.Integrable (fun s => 1 / MasterChain.height s ^ 2)
+      MasterChain.xiDivisorMeasure
+  MasterChain.NativeIntegrability.defect_integrable : MeasureTheory.Integrable MasterChain.defectKernel
+      MasterChain.xiDivisorMeasure
+  MasterChain.NativeIntegrability.density_kernel_integrable : ∀ (v : ℝ),
+      0 < v →
+        MeasureTheory.Integrable
+          (fun s => Real.exp (-MasterChain.height s * v) * Real.sin (MasterChain.displacement s * v / 2) ^ 2)
+          MasterChain.xiDivisorMeasure
+  MasterChain.NativeIntegrability.density_integrable : MeasureTheory.Integrable MasterChain.A
+      MasterChain.positiveLebesgue
+  MasterChain.NativeIntegrability.readout_integrable : MeasureTheory.Integrable
+      (fun v => Real.exp (-3 * v / 2) * MasterChain.g v) MasterChain.positiveLebesgue
+  MasterChain.NativeIntegrability.laplace_integrable : ∀ u ∈ MasterChain.GPDomain,
+      MeasureTheory.Integrable (fun v => Complex.exp (-(u + 1 / 2) * ↑v) * ↑(MasterChain.g v))
+        MasterChain.positiveLebesgue
+constructor:
+  MasterChain.NativeIntegrability.mk (xi_half_ne_zero : MasterChain.xi (1 / 2) ≠ 0)
+    (c1_integrable : MeasureTheory.Integrable (fun s => 1 / MasterChain.height s ^ 2) MasterChain.xiDivisorMeasure)
+    (defect_integrable : MeasureTheory.Integrable MasterChain.defectKernel MasterChain.xiDivisorMeasure)
+    (density_kernel_integrable :
+      ∀ (v : ℝ),
+        0 < v →
+          MeasureTheory.Integrable
+            (fun s => Real.exp (-MasterChain.height s * v) * Real.sin (MasterChain.displacement s * v / 2) ^ 2)
+            MasterChain.xiDivisorMeasure)
+    (density_integrable : MeasureTheory.Integrable MasterChain.A MasterChain.positiveLebesgue)
+    (readout_integrable :
+      MeasureTheory.Integrable (fun v => Real.exp (-3 * v / 2) * MasterChain.g v) MasterChain.positiveLebesgue)
+    (laplace_integrable :
+      ∀ u ∈ MasterChain.GPDomain,
+        MeasureTheory.Integrable (fun v => Complex.exp (-(u + 1 / 2) * ↑v) * ↑(MasterChain.g v))
+          MasterChain.positiveLebesgue) :
+    MasterChain.NativeIntegrability
+def MasterChain.TraceDecomposition : Prop :=
+MasterChain.c1 = MasterChain.kappa + MasterChain.C_RR
+def MasterChain.KernelMassIdentity : Prop :=
+MasterChain.C_RR = MasterChain.densityMass
+def MasterChain.LaplacePlancherel : Prop :=
+MasterChain.GPAdmissible MasterChain.V ∧
+  ∃ b,
+    MasterChain.IsL2BoundaryTrace MasterChain.V b ∧
+      MasterChain.densityMass = MasterChain.boundaryEnergy b ∧
+        MasterChain.boundaryEnergy b = MasterChain.gpEnergy MasterChain.V
+MasterChain.master_1_of_analytic_bridges (hTrace : MasterChain.TraceDecomposition)
+  (hKernel : MasterChain.KernelMassIdentity) (hLaplace : MasterChain.LaplacePlancherel) : MasterChain.MASTER_1
+MasterChain.master_2_of_analytic_bridges (hKernel : MasterChain.KernelMassIdentity)
+  (hLaplace : MasterChain.LaplacePlancherel) : MasterChain.MASTER_2
+MasterChain.master_chain_equivalences (h1 : MasterChain.MASTER_1) (h2 : MasterChain.MASTER_2)
+  (hInt : MasterChain.NativeIntegrability) :
+  (MasterChain.MASTER_3 ↔ MasterChain.c1 = MasterChain.kappa) ∧
+    (MasterChain.MASTER_3 ↔ MasterChain.C_RR = 0) ∧
+      (MasterChain.MASTER_3 ↔ MasterChain.densityMass = 0) ∧ (MasterChain.MASTER_3 ↔ MasterChain.V 1 = 0)
+MasterChain.xiDensityVector_norm_sq (hMass : MeasureTheory.Integrable MasterChain.A MasterChain.positiveLebesgue) :
+  ‖MasterChain.xiDensityVector hMass‖ ^ 2 = MasterChain.densityMass
+MasterChain.master_3_iff_xiDensityVector_zero (h2 : MasterChain.MASTER_2)
+  (hMass : MeasureTheory.Integrable MasterChain.A MasterChain.positiveLebesgue) :
+  MasterChain.MASTER_3 ↔ MasterChain.xiDensityVector hMass = 0
+PROJECT_DECLARATIONS_AUDITED=109
+MASTER_1=INDEPENDENT_ACTUAL_XI_STATEMENT
+MASTER_2=INDEPENDENT_ACTUAL_XI_STATEMENT
+MASTER_3=INDEPENDENT_UNPROVED_VANISHING_STATEMENT
+CHAIN=PROVED_WITH_EXPLICIT_HYPOTHESES
+DENSITY_L2_IDENTITY=PROVED_WITH_INTEGRABILITY
+ACTUAL_ANALYTIC_BRIDGES=EXPLICIT_NOT_DISCHARGED
+COMPUTATIONAL_PART=DEFERRED
+MASTER_CHAIN_AXIOM_AUDIT=PASS
+
+EXIT=0

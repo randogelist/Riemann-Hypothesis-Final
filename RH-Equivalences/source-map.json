@@ -1,0 +1,1155 @@
+{
+  "schema_version": 1,
+  "bundle": "RH_REVIEW_BUNDLE_18679_14231_11714.zip",
+  "bundle_sha256": "b233c8d7468c3c484a6a90d318ba09d4e9a9586e744a980aa13bbcdf8301ed81",
+  "scope": "Exact bodies for primary, alias, related and definition references in the historical catalogue; not a combined import closure.",
+  "native_compilation": "NOT_RUN",
+  "sources": [
+    {
+      "original_path": "snapshots/downloads/AWPI_PHI_RH_NATIVE_FINAL_FREEZE_20260918/AWPI/PhiRH/NativePassivityCore.lean",
+      "path": "research/upstream/rh-equivalences-corpus/e9dbacd7b75ea2fb2469f90503faa53f9608ba33984f2ec4a1120e08e1ba1d9d.lean",
+      "sha256": "e9dbacd7b75ea2fb2469f90503faa53f9608ba33984f2ec4a1120e08e1ba1d9d",
+      "bytes": 5516,
+      "referenced_lines": [
+        29
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/AWPI_PHI_RH_NATIVE_FINAL_FREEZE_20260918/AWPI/PhiRH/NativeRHAlgebraicWaist.lean",
+      "path": "research/upstream/rh-equivalences-corpus/015eac7c510201da0c7c50ea995cb7e748bf28c71190bb5f43030e117f76f4df.lean",
+      "sha256": "015eac7c510201da0c7c50ea995cb7e748bf28c71190bb5f43030e117f76f4df",
+      "bytes": 5371,
+      "referenced_lines": [
+        230
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/AWPI_PHI_RH_NATIVE_FINAL_FREEZE_20260918/AWPI/PhiRH/NativeRHExactWaist.lean",
+      "path": "research/upstream/rh-equivalences-corpus/b0b80b4872913e6da25b88146277f1216695987922b0c23be6940e7eb3ed7c1d.lean",
+      "sha256": "b0b80b4872913e6da25b88146277f1216695987922b0c23be6940e7eb3ed7c1d",
+      "bytes": 3780,
+      "referenced_lines": [
+        148,
+        159,
+        170
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/AWPI_PHI_RH_NATIVE_FINAL_FREEZE_20260918/AWPI/PhiRH/NativeRHFinal.lean",
+      "path": "research/upstream/rh-equivalences-corpus/2e99b591ea882f6f8e0362507aca7b2788b4db3c05aaa839d4b704a117983a9c.lean",
+      "sha256": "2e99b591ea882f6f8e0362507aca7b2788b4db3c05aaa839d4b704a117983a9c",
+      "bytes": 968,
+      "referenced_lines": [
+        16
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/CONSTRUCTIVE_RH_ACTUAL_GP_BKQR_GAP_LEAN_v0_3_0/ActualGPBKQRGap.lean",
+      "path": "research/upstream/rh-equivalences-corpus/d114fd783095587758f66a29792af2f60e8ecb8ab91afbb382a4aa283099d3a0.lean",
+      "sha256": "d114fd783095587758f66a29792af2f60e8ecb8ab91afbb382a4aa283099d3a0",
+      "bytes": 7331,
+      "referenced_lines": [
+        44,
+        174
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/CONSTRUCTIVE_RH_ACTUAL_GP_BKQR_GAP_LEAN_v0_3_0/ConstructiveWeakRH.lean",
+      "path": "research/upstream/rh-equivalences-corpus/b518a4d864e68ed137b733e0107f93450fe54face8553f8122e947515865920c.lean",
+      "sha256": "b518a4d864e68ed137b733e0107f93450fe54face8553f8122e947515865920c",
+      "bytes": 4138,
+      "referenced_lines": [
+        8
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/CONSTRUCTIVE_RH_ACTUAL_GP_BKQR_GAP_LEAN_v0_3_0/PointwiseCriticalLine.lean",
+      "path": "research/upstream/rh-equivalences-corpus/6ce0910b3ca287225054554dc55c4bd69df614bee6a71a204d0a75d6ed5a390a.lean",
+      "sha256": "6ce0910b3ca287225054554dc55c4bd69df614bee6a71a204d0a75d6ed5a390a",
+      "bytes": 4646,
+      "referenced_lines": [
+        8,
+        25,
+        29,
+        37,
+        105
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/GP_BKQR_A_TIER_ANCHORING_01_LEAN_v0_2_0_CONCRETE_CALIBRATION/Anchors/ConcreteXiKernelCalibration.lean",
+      "path": "research/upstream/rh-equivalences-corpus/b7c72a78e0b17cbd4bda56bc85656f0f0da4ed3b3047bdd1efe3bd297d321446.lean",
+      "sha256": "b7c72a78e0b17cbd4bda56bc85656f0f0da4ed3b3047bdd1efe3bd297d321446",
+      "bytes": 6331,
+      "referenced_lines": [
+        25,
+        94,
+        99,
+        141
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/GP_BKQR_A_TIER_ANCHORING_01_LEAN_v0_2_0_CONCRETE_CALIBRATION/Anchors/ConcreteXiKernelRH.lean",
+      "path": "research/upstream/rh-equivalences-corpus/a1f8c0b9a573e952495c1259d3ee2d5fbb3c6a477b2d8765cd4eae7bb7a434a4.lean",
+      "sha256": "a1f8c0b9a573e952495c1259d3ee2d5fbb3c6a477b2d8765cd4eae7bb7a434a4",
+      "bytes": 989,
+      "referenced_lines": [
+        12,
+        20
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/GP_BKQR_A_TIER_ANCHORING_01_LEAN_v0_2_0_CONCRETE_CALIBRATION/TierA/AlgebraicPascal.lean",
+      "path": "research/upstream/rh-equivalences-corpus/31329943233cc07a1bf5653b263fa7225ca70528b2f70838ddbd70f3d133fe07.lean",
+      "sha256": "31329943233cc07a1bf5653b263fa7225ca70528b2f70838ddbd70f3d133fe07",
+      "bytes": 5510,
+      "referenced_lines": [
+        73
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/GP_BKQR_A_TIER_ANCHORING_01_LEAN_v0_2_0_CONCRETE_CALIBRATION/TierA/FiniteKernel.lean",
+      "path": "research/upstream/rh-equivalences-corpus/cbcd766321a9b084fdd2cc2ab35551b00ef502bf1a6ffb53891d4b98cf1543c4.lean",
+      "sha256": "cbcd766321a9b084fdd2cc2ab35551b00ef502bf1a6ffb53891d4b98cf1543c4",
+      "bytes": 8898,
+      "referenced_lines": [
+        96
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/GP_BKQR_CAYLEY_RH_A_TIER_CLOSURE_LEAN_v0_4_2_FIX2/CayleyRHClosure.lean",
+      "path": "research/upstream/rh-equivalences-corpus/518c59f5f83e026919d8bf926bdd7848ea800084e915750923d2aabba4599331.lean",
+      "sha256": "518c59f5f83e026919d8bf926bdd7848ea800084e915750923d2aabba4599331",
+      "bytes": 6311,
+      "referenced_lines": [
+        78,
+        84,
+        106,
+        119
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/KQ_GP_BKQR_HILBERT_SOLOBOLO_ENDPOINTS_v0_1_3_FASTCORE_FIX1/GrandConditionalMerge/RI01NativeExplicitDeterminant.lean",
+      "path": "research/upstream/rh-equivalences-corpus/a064e7f8ef8bd824dad4728484c5d93d1b08eb161974ec1afdc0b798103aeda8.lean",
+      "sha256": "a064e7f8ef8bd824dad4728484c5d93d1b08eb161974ec1afdc0b798103aeda8",
+      "bytes": 5219,
+      "referenced_lines": [
+        71
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/RH_GIGGA_SMALL_O_EQUIVALENCE_LEAN_v0_2_0/AngularIntegral.lean",
+      "path": "research/upstream/rh-equivalences-corpus/8b47ffabfa07d1e6346665c5aa1a3fa102be916a8338512383ebaa51a5bb19c7.lean",
+      "sha256": "8b47ffabfa07d1e6346665c5aa1a3fa102be916a8338512383ebaa51a5bb19c7",
+      "bytes": 9927,
+      "referenced_lines": [
+        25
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/RH_GIGGA_SMALL_O_EQUIVALENCE_LEAN_v0_2_0/NativeClosure.lean",
+      "path": "research/upstream/rh-equivalences-corpus/2d0a232a00a60a203507e14230dd4db8430413e629cd0930dfe2e0d47a093883.lean",
+      "sha256": "2d0a232a00a60a203507e14230dd4db8430413e629cd0930dfe2e0d47a093883",
+      "bytes": 7693,
+      "referenced_lines": [
+        62,
+        67
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/RH_GIGGA_SMALL_O_EQUIVALENCE_LEAN_v0_2_0/RHSmallO.lean",
+      "path": "research/upstream/rh-equivalences-corpus/003da021c92bddd75d9da140e997c2a05b1dc0c8bd4273e142b5d8e42548ca27.lean",
+      "sha256": "003da021c92bddd75d9da140e997c2a05b1dc0c8bd4273e142b5d8e42548ca27",
+      "bytes": 2771,
+      "referenced_lines": [
+        28
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/RH_GIGGA_SMALL_O_EQUIVALENCE_LEAN_v0_2_0/RHSmallOEquivalence.lean",
+      "path": "research/upstream/rh-equivalences-corpus/58c678f9818d39b183b7bf3b2b7bec49c0b43b8766457e19dd09b93595ab7a1f.lean",
+      "sha256": "58c678f9818d39b183b7bf3b2b7bec49c0b43b8766457e19dd09b93595ab7a1f",
+      "bytes": 1395,
+      "referenced_lines": [
+        25,
+        29,
+        33
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/RH_GP_BKQR_GENERATED_MASTER_LEAN_v0_5_1_FIX1/Derivations/OurFrontierDerivation.lean",
+      "path": "research/upstream/rh-equivalences-corpus/bbf61252788453372ef2fcb32bcb195b9a5f94023de5ec2fcf2a89d1a2ade3bc.lean",
+      "sha256": "bbf61252788453372ef2fcb32bcb195b9a5f94023de5ec2fcf2a89d1a2ade3bc",
+      "bytes": 1104,
+      "referenced_lines": [
+        17
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5/Derivations/OurFrontierDerivation.lean",
+      "path": "research/upstream/rh-equivalences-corpus/a79e514748042f5b7559c0cc5e7dd27715e04d2fb1bf7842be3e54d7d13343a4.lean",
+      "sha256": "a79e514748042f5b7559c0cc5e7dd27715e04d2fb1bf7842be3e54d7d13343a4",
+      "bytes": 625,
+      "referenced_lines": [
+        14
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/RH_GP_BKQR_MINIMAL_ANCHOR_CHAIN_LEAN_v0_5_2_FIX2/Derivations/Minimal/RHChain.lean",
+      "path": "research/upstream/rh-equivalences-corpus/7989ffd956953e41e47a71e2dc7ca69169613f2c23f4996576ad025815328495.lean",
+      "sha256": "7989ffd956953e41e47a71e2dc7ca69169613f2c23f4996576ad025815328495",
+      "bytes": 1110,
+      "referenced_lines": [
+        27
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/RH_GP_BKQR_MINIMAL_ANCHOR_CHAIN_LEAN_v0_5_2_FIX2/Literature/Zhang2023.lean",
+      "path": "research/upstream/rh-equivalences-corpus/ef49e69d06211efb52b78b33ca632d056fbb139e378169a14bba81a67f387838.lean",
+      "sha256": "ef49e69d06211efb52b78b33ca632d056fbb139e378169a14bba81a67f387838",
+      "bytes": 2420,
+      "referenced_lines": [
+        69
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/RH_GP_BKQR_MINIMAL_ANCHOR_CHAIN_LEAN_v0_5_2_FIX2/Minimal/MinimalConstructionAnchor.lean",
+      "path": "research/upstream/rh-equivalences-corpus/3c902b3ff04f4651e0037ecbd65488b7ab127ed0e1db2256eb2ed7a71ac5d994.lean",
+      "sha256": "3c902b3ff04f4651e0037ecbd65488b7ab127ed0e1db2256eb2ed7a71ac5d994",
+      "bytes": 2416,
+      "referenced_lines": [
+        19,
+        72
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/RH_GP_BKQR_OPERATION_ZHANG_FIREWALL_LEAN_v0_4_3_FIX1/Derivations/BKQR/BKQRContraction.lean",
+      "path": "research/upstream/rh-equivalences-corpus/6f0a5692b720433a539d7133a6a02851dc0695ef59c8ac566c7aa0a25ded0dcd.lean",
+      "sha256": "6f0a5692b720433a539d7133a6a02851dc0695ef59c8ac566c7aa0a25ded0dcd",
+      "bytes": 3518,
+      "referenced_lines": [
+        87
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/RH_GP_BKQR_OPERATION_ZHANG_FIREWALL_LEAN_v0_4_3_FIX1/Derivations/Hopf/PascalHopf.lean",
+      "path": "research/upstream/rh-equivalences-corpus/883be0e54af620a458a45d99949badc156fd2edc683407fa1d264e49ab7c8d3d.lean",
+      "sha256": "883be0e54af620a458a45d99949badc156fd2edc683407fa1d264e49ab7c8d3d",
+      "bytes": 4730,
+      "referenced_lines": [
+        81,
+        133
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/RH_GP_BKQR_OPERATION_ZHANG_FIREWALL_LEAN_v0_4_3_FIX1/Derivations/LiteratureFrontierDerivation.lean",
+      "path": "research/upstream/rh-equivalences-corpus/c6f94965ddb1cf33e1e38273bbe3e51d36b036e26ef24cac0b41d6e9bc78d726.lean",
+      "sha256": "c6f94965ddb1cf33e1e38273bbe3e51d36b036e26ef24cac0b41d6e9bc78d726",
+      "bytes": 4016,
+      "referenced_lines": [
+        10,
+        14,
+        52,
+        62,
+        73
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/RH_GP_BKQR_OPERATION_ZHANG_FIREWALL_LEAN_v0_4_3_FIX1/Frontier/OurFrontier.lean",
+      "path": "research/upstream/rh-equivalences-corpus/4382041c3ff53a35f563a56c67c43f110e64866968a4d84776876e1584497656.lean",
+      "sha256": "4382041c3ff53a35f563a56c67c43f110e64866968a4d84776876e1584497656",
+      "bytes": 9905,
+      "referenced_lines": [
+        4,
+        15,
+        18,
+        41,
+        44,
+        48,
+        53,
+        57,
+        61,
+        84,
+        134,
+        155,
+        195,
+        252,
+        256,
+        264
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/RH_GP_BKQR_OPERATION_ZHANG_FIREWALL_LEAN_v0_4_3_FIX1/Literature/Agler1985.lean",
+      "path": "research/upstream/rh-equivalences-corpus/974ea3230e8316c7b34c962a132973fab2a4555267aa16603adfe57d6da758c9.lean",
+      "sha256": "974ea3230e8316c7b34c962a132973fab2a4555267aa16603adfe57d6da758c9",
+      "bytes": 636,
+      "referenced_lines": [
+        6,
+        18
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/RH_GP_BKQR_OPERATION_ZHANG_FIREWALL_LEAN_v0_4_3_FIX1/Literature/BergerGellarWallen.lean",
+      "path": "research/upstream/rh-equivalences-corpus/5dd2785a9e40078fedf1879f5eb1d39f75d5341cfe7becd17735453402846d58.lean",
+      "sha256": "5dd2785a9e40078fedf1879f5eb1d39f75d5341cfe7becd17735453402846d58",
+      "bytes": 688,
+      "referenced_lines": [
+        6,
+        18
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/RH_GP_BKQR_OPERATION_ZHANG_FIREWALL_LEAN_v0_4_3_FIX1/Literature/Sokal2020.lean",
+      "path": "research/upstream/rh-equivalences-corpus/d7e0411ca0b95f82777c66e280cb03c5112ca3320ee998b996e4b6a767e5fddf.lean",
+      "sha256": "d7e0411ca0b95f82777c66e280cb03c5112ca3320ee998b996e4b6a767e5fddf",
+      "bytes": 586,
+      "referenced_lines": [
+        6,
+        18
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/RH_GP_BKQR_OPERATION_ZHANG_FIREWALL_LEAN_v0_4_3_FIX1/Literature/Zhang2022.lean",
+      "path": "research/upstream/rh-equivalences-corpus/9183fc4417c7ec7792d8b470225483d5462f23286b655db812fe56fc32a52139.lean",
+      "sha256": "9183fc4417c7ec7792d8b470225483d5462f23286b655db812fe56fc32a52139",
+      "bytes": 2468,
+      "referenced_lines": [
+        28,
+        31,
+        47
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/RH_GP_BKQR_OPERATION_ZHANG_FIREWALL_LEAN_v0_4_3_FIX1/Literature/Zhang2023.lean",
+      "path": "research/upstream/rh-equivalences-corpus/f7f3f30179925f2ce7f640020cc452cfb18b4e18e055f0641e647fba98ea0ee9.lean",
+      "sha256": "f7f3f30179925f2ce7f640020cc452cfb18b4e18e055f0641e647fba98ea0ee9",
+      "bytes": 2157,
+      "referenced_lines": [
+        34
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/RH_GP_BKQR_OPERATION_ZHANG_FIREWALL_LEAN_v0_4_3_FIX1/Main.lean",
+      "path": "research/upstream/rh-equivalences-corpus/89fbb7a57af8d022502e9cb479107ffc13503e004a085a6b75640f35218063fa.lean",
+      "sha256": "89fbb7a57af8d022502e9cb479107ffc13503e004a085a6b75640f35218063fa",
+      "bytes": 9372,
+      "referenced_lines": [
+        24,
+        33,
+        63
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/RH_GP_EXACT_LEDGER_ADAPTER_LEAN_v0_1_0/RHGPNativeM7PaymentCertificate.lean",
+      "path": "research/upstream/rh-equivalences-corpus/a4c24e837aaa654bcac3f70c958785f69c2f77be478bd2481a65c64b558906a5.lean",
+      "sha256": "a4c24e837aaa654bcac3f70c958785f69c2f77be478bd2481a65c64b558906a5",
+      "bytes": 71140,
+      "referenced_lines": [
+        409,
+        573,
+        746,
+        886,
+        1030,
+        1161,
+        1327,
+        1455,
+        1589
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/RH_MASTER_ANGULAR_CLOSURE_LEAN_v0_1_0_FIX2/AngularRegularity/LogDerivative.lean",
+      "path": "research/upstream/rh-equivalences-corpus/4d274dc7c574860910f4d1e7145657398f84a14d17a7c1a9a4d07b6c47cdd6db.lean",
+      "sha256": "4d274dc7c574860910f4d1e7145657398f84a14d17a7c1a9a4d07b6c47cdd6db",
+      "bytes": 6406,
+      "referenced_lines": [
+        20
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/RH_MASTER_ANGULAR_CLOSURE_LEAN_v0_1_0_FIX2/RHMaster/AngularClosure.lean",
+      "path": "research/upstream/rh-equivalences-corpus/877e893ae983415adba18934897fe2d6b06fb9b513f5bdaa816a83f86a2a8b2f.lean",
+      "sha256": "877e893ae983415adba18934897fe2d6b06fb9b513f5bdaa816a83f86a2a8b2f",
+      "bytes": 4935,
+      "referenced_lines": [
+        41,
+        78,
+        106
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/RH_MASTER_ANGULAR_CLOSURE_LEAN_v0_1_0_FIX2/RHMaster/CayleyBridge.lean",
+      "path": "research/upstream/rh-equivalences-corpus/46c2eaa4eec1b1fdd5aff6b3c7fe42394e641f33b59e23850d16e401ea7cc3aa.lean",
+      "sha256": "46c2eaa4eec1b1fdd5aff6b3c7fe42394e641f33b59e23850d16e401ea7cc3aa",
+      "bytes": 4083,
+      "referenced_lines": [
+        52
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/RH_MASTER_ANGULAR_CLOSURE_LEAN_v0_1_0_FIX2/RHMaster/ClosureAtlas.lean",
+      "path": "research/upstream/rh-equivalences-corpus/25ede0796f1f7fab83155387a2d3b5acc01207d1c67096039dd11baf9964060b.lean",
+      "sha256": "25ede0796f1f7fab83155387a2d3b5acc01207d1c67096039dd11baf9964060b",
+      "bytes": 5575,
+      "referenced_lines": [
+        51
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/RH_MASTER_CLOSURE_ANGULAR_LEAN_v0_1_1_FIX1/AngularMaster/AngularCutoff.lean",
+      "path": "research/upstream/rh-equivalences-corpus/91ed83bfc2e204fc353eed6eb8b38d307afea123bf9735432ebc0bbfefcacd20.lean",
+      "sha256": "91ed83bfc2e204fc353eed6eb8b38d307afea123bf9735432ebc0bbfefcacd20",
+      "bytes": 5100,
+      "referenced_lines": [
+        75
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/RH_MASTER_CLOSURE_ANGULAR_LEAN_v0_1_1_FIX1/AngularMaster/QQRHGeometry.lean",
+      "path": "research/upstream/rh-equivalences-corpus/13f82914e544300589b55a873c0a92a3afd64cf8333c138729a8aabec1cd8df8.lean",
+      "sha256": "13f82914e544300589b55a873c0a92a3afd64cf8333c138729a8aabec1cd8df8",
+      "bytes": 4394,
+      "referenced_lines": [
+        19,
+        36
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/RH_MASTER_CLOSURE_ANGULAR_LEAN_v0_1_1_FIX1/CayleyGolPhi/ZeroEquivalence.lean",
+      "path": "research/upstream/rh-equivalences-corpus/c94d8b4542b0af93b02021acf8df9df7482cb60b1fc623c9d3fc625b1c26cc09.lean",
+      "sha256": "c94d8b4542b0af93b02021acf8df9df7482cb60b1fc623c9d3fc625b1c26cc09",
+      "bytes": 11677,
+      "referenced_lines": [
+        229,
+        274,
+        294
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/RH_MASTER_CLOSURE_ANGULAR_LEAN_v0_1_1_FIX1/RHMaster/ClosureAtlas.lean",
+      "path": "research/upstream/rh-equivalences-corpus/f2010c8b6f498f796de8bf22fbd341f732f5623a695afb7296f6131935987df0.lean",
+      "sha256": "f2010c8b6f498f796de8bf22fbd341f732f5623a695afb7296f6131935987df0",
+      "bytes": 2596,
+      "referenced_lines": [
+        41
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/RH_MASTER_CLOSURE_ANGULAR_LEAN_v0_1_1_FIX1/RHMaster/QQRHClosure.lean",
+      "path": "research/upstream/rh-equivalences-corpus/6af86a8b5a7f4b328726fa8cb72008e688fd563efc42d63261d2d8e0e294b3d1.lean",
+      "sha256": "6af86a8b5a7f4b328726fa8cb72008e688fd563efc42d63261d2d8e0e294b3d1",
+      "bytes": 3569,
+      "referenced_lines": [
+        14,
+        17,
+        20,
+        71,
+        74,
+        93
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/RH_MISTERPREMISE_LEAN_v0_1_0/MisterPremise/Cutoff.lean",
+      "path": "research/upstream/rh-equivalences-corpus/2a6b9f3b4f067a6fb93bfbb98d52e3afb2a7bb9b93f8a2ef874fa432cd293ced.lean",
+      "sha256": "2a6b9f3b4f067a6fb93bfbb98d52e3afb2a7bb9b93f8a2ef874fa432cd293ced",
+      "bytes": 4831,
+      "referenced_lines": [
+        10,
+        13,
+        18
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/RH_MISTERPREMISE_LEAN_v0_1_0/MisterPremise/Equivalence.lean",
+      "path": "research/upstream/rh-equivalences-corpus/de152a63887d7c95ce8c05208e5a611648774b282cc11c3ea3fbc7e54b255b81.lean",
+      "sha256": "de152a63887d7c95ce8c05208e5a611648774b282cc11c3ea3fbc7e54b255b81",
+      "bytes": 6042,
+      "referenced_lines": [
+        135,
+        139
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/RH_MISTERPREMISE_LEAN_v0_1_0/MisterPremise/Premise.lean",
+      "path": "research/upstream/rh-equivalences-corpus/8d7863859e67a4a6067cdd7e76583e5de18bfef82af47f44e2fbcedef3abbfa2.lean",
+      "sha256": "8d7863859e67a4a6067cdd7e76583e5de18bfef82af47f44e2fbcedef3abbfa2",
+      "bytes": 1630,
+      "referenced_lines": [
+        26
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/RH_NATIVE_CANDIDATES_v0_1_1_MELLIN/AngularMaster/Calculus.lean",
+      "path": "research/upstream/rh-equivalences-corpus/4d11fcd650f279c484bc008e3540ac5909f37bbf119466150763db7f44289488.lean",
+      "sha256": "4d11fcd650f279c484bc008e3540ac5909f37bbf119466150763db7f44289488",
+      "bytes": 14401,
+      "referenced_lines": [
+        35,
+        39,
+        43,
+        56,
+        60,
+        64,
+        69,
+        73,
+        77
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/RH_NATIVE_CANDIDATES_v0_1_1_MELLIN/AngularMaster/Chain.lean",
+      "path": "research/upstream/rh-equivalences-corpus/6a438ade860096372c31d9ea2656a10027e11eb65fc8e577379615b99b72dfa1.lean",
+      "sha256": "6a438ade860096372c31d9ea2656a10027e11eb65fc8e577379615b99b72dfa1",
+      "bytes": 7218,
+      "referenced_lines": [
+        38,
+        57,
+        66,
+        98,
+        103,
+        108
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/RH_NATIVE_CANDIDATES_v0_1_1_MELLIN/AngularMaster/RadialExtension.lean",
+      "path": "research/upstream/rh-equivalences-corpus/01f08b70a0f458d145ea73f24f41c2895746ec2a9d62cc43fca70e6d714317ff.lean",
+      "sha256": "01f08b70a0f458d145ea73f24f41c2895746ec2a9d62cc43fca70e6d714317ff",
+      "bytes": 4723,
+      "referenced_lines": [
+        17,
+        20
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/RH_NATIVE_CANDIDATES_v0_1_1_MELLIN/AngularMaster/ZeroGeometry.lean",
+      "path": "research/upstream/rh-equivalences-corpus/a2a155d8584f3682c4a48f4b8f0c9fdd1473c25ed4934c448f5015a4647361df.lean",
+      "sha256": "a2a155d8584f3682c4a48f4b8f0c9fdd1473c25ed4934c448f5015a4647361df",
+      "bytes": 5387,
+      "referenced_lines": [
+        97,
+        129,
+        152
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/RH_NATIVE_CANDIDATES_v0_1_1_MELLIN/Develop/NativeAngularResidualDevelopment.lean",
+      "path": "research/upstream/rh-equivalences-corpus/a8bf4702eebc50637f3d3da3923b0bc8f679c26e8b3ba5aa1c6f52d3afd18248.lean",
+      "sha256": "a8bf4702eebc50637f3d3da3923b0bc8f679c26e8b3ba5aa1c6f52d3afd18248",
+      "bytes": 14837,
+      "referenced_lines": [
+        75,
+        180,
+        304,
+        320
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/RH_NATIVE_CANDIDATES_v0_1_1_MELLIN/Develop/NativeEnergyBridge.lean",
+      "path": "research/upstream/rh-equivalences-corpus/48bafdf431fc3357f8710227353112932f94974790057271245225addcd36300.lean",
+      "sha256": "48bafdf431fc3357f8710227353112932f94974790057271245225addcd36300",
+      "bytes": 18681,
+      "referenced_lines": [
+        45,
+        50,
+        59,
+        393,
+        400
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/RH_NATIVE_CANDIDATES_v0_1_1_MELLIN/Develop/NativeRRBinding.lean",
+      "path": "research/upstream/rh-equivalences-corpus/9653ffc2a05cc7e4cbccbe3d138a9a859d2756a8a92cb83c15d5c77811e0ca63.lean",
+      "sha256": "9653ffc2a05cc7e4cbccbe3d138a9a859d2756a8a92cb83c15d5c77811e0ca63",
+      "bytes": 11476,
+      "referenced_lines": [
+        201,
+        204
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/RH_NATIVE_CANDIDATES_v0_1_1_MELLIN/PositivityPremise/Kernel.lean",
+      "path": "research/upstream/rh-equivalences-corpus/97eb8b3f62900fa4f06360876aa1b6ad7ef3344c642eac12a99ae09a34a39fc6.lean",
+      "sha256": "97eb8b3f62900fa4f06360876aa1b6ad7ef3344c642eac12a99ae09a34a39fc6",
+      "bytes": 3113,
+      "referenced_lines": [
+        14
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/RH_NATIVE_CANDIDATES_v0_1_1_MELLIN/PositivityPremise/LiteralZeta.lean",
+      "path": "research/upstream/rh-equivalences-corpus/14c9de048e3b7147dd7ae6a383e1f89986c65296b8ed3f8f47beb0ed34d33766.lean",
+      "sha256": "14c9de048e3b7147dd7ae6a383e1f89986c65296b8ed3f8f47beb0ed34d33766",
+      "bytes": 4841,
+      "referenced_lines": [
+        29,
+        39,
+        69,
+        73,
+        77,
+        86,
+        93,
+        101
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/RH_NATIVE_CANDIDATES_v0_1_1_MELLIN/PositivityPremise/Scalar.lean",
+      "path": "research/upstream/rh-equivalences-corpus/daa274755e6d185d18741404c897207202c6e986731e8f7c958c70d53170fcd0.lean",
+      "sha256": "daa274755e6d185d18741404c897207202c6e986731e8f7c958c70d53170fcd0",
+      "bytes": 1795,
+      "referenced_lines": [
+        15
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/RH_NATIVE_CANDIDATES_v0_1_1_MELLIN/PositivityPremise/Series.lean",
+      "path": "research/upstream/rh-equivalences-corpus/26c77c57da1af753186e8273e114073c97016e2430cd61df20282a4aca778801.lean",
+      "sha256": "26c77c57da1af753186e8273e114073c97016e2430cd61df20282a4aca778801",
+      "bytes": 5515,
+      "referenced_lines": [
+        19,
+        35,
+        36
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/RH_NATIVE_CANDIDATES_v0_1_1_MELLIN/RHMaster/AngularBridge.lean",
+      "path": "research/upstream/rh-equivalences-corpus/8717021731d80d28c228fdda18b1217524c5406fc7d2d17eae02fb212dd05d58.lean",
+      "sha256": "8717021731d80d28c228fdda18b1217524c5406fc7d2d17eae02fb212dd05d58",
+      "bytes": 7933,
+      "referenced_lines": [
+        45,
+        68,
+        74
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/RH_NATIVE_CANDIDATES_v0_1_1_MELLIN/RHMaster/AngularCoverage.lean",
+      "path": "research/upstream/rh-equivalences-corpus/f0ea18f9520141e144c78e6fd0705891597cce9325c8367fafd996b16a26dcd9.lean",
+      "sha256": "f0ea18f9520141e144c78e6fd0705891597cce9325c8367fafd996b16a26dcd9",
+      "bytes": 4399,
+      "referenced_lines": [
+        71,
+        90
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/RH_NATIVE_CANDIDATES_v0_1_1_MELLIN/RiemannHypothesis/Xi/RiemannHypothesisBridge.lean",
+      "path": "research/upstream/rh-equivalences-corpus/4dc024d08641c4e8f8da5da7ac6c67af29fae3ca2e74c249042bb5b5a0fa7c04.lean",
+      "sha256": "4dc024d08641c4e8f8da5da7ac6c67af29fae3ca2e74c249042bb5b5a0fa7c04",
+      "bytes": 17604,
+      "referenced_lines": [
+        399,
+        416
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/RH_NATIVE_CANDIDATES_v0_1_1_MELLIN/RiemannHypothesis/Xi/UnconditionalLagariasEquivalence.lean",
+      "path": "research/upstream/rh-equivalences-corpus/d1e3f6cb7a1a6f8200fe6cb53026b004855d4953272b2875de64c4d75a619275.lean",
+      "sha256": "d1e3f6cb7a1a6f8200fe6cb53026b004855d4953272b2875de64c4d75a619275",
+      "bytes": 4283,
+      "referenced_lines": [
+        67,
+        74,
+        82
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/RH_NATIVE_SOLOBOLO_A_TIER_SIGNED_BERNSTEIN_GROWTH_v0_18_2_FIX2/Bridge/SignedBernsteinGrowth.lean",
+      "path": "research/upstream/rh-equivalences-corpus/fe57ba9311c58f76bebf931840b7644a33f2714ceb99bcd7a82c3676319605b3.lean",
+      "sha256": "fe57ba9311c58f76bebf931840b7644a33f2714ceb99bcd7a82c3676319605b3",
+      "bytes": 10206,
+      "referenced_lines": [
+        217
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/RH_NATIVE_SOLOBOLO_LEAN_v0_18_3_EXPLICIT_ANALYTIC_COMP_ARGS/Derivations/OurFrontierDerivation.lean",
+      "path": "research/upstream/rh-equivalences-corpus/5b400cc2714084dd18c9609efb1eed730ae414c012f9d88250b90c7cf5ac26d5.lean",
+      "sha256": "5b400cc2714084dd18c9609efb1eed730ae414c012f9d88250b90c7cf5ac26d5",
+      "bytes": 1720,
+      "referenced_lines": [
+        28
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/RH_NATIVE_SOLOBOLO_MERGER04_FORWARD_CHANNEL_v0_3_3_FIX3/Bridge/USForwardChannel06.lean",
+      "path": "research/upstream/rh-equivalences-corpus/22e01726ed95b792012882a9d0f1472d0c4ac25ac0b5ddb4ee66a9e0c061cd06.lean",
+      "sha256": "22e01726ed95b792012882a9d0f1472d0c4ac25ac0b5ddb4ee66a9e0c061cd06",
+      "bytes": 2231,
+      "referenced_lines": [
+        37
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/RH_NATIVE_SOLOBOLO_MERGER04_LOCAL_POLE_v0_4_1_FIX1/Bridge/USForwardLocalPole07.lean",
+      "path": "research/upstream/rh-equivalences-corpus/98547e3a34358759159c74f4977716543700aa69ba4638c0104b4b6a3bef9b4b.lean",
+      "sha256": "98547e3a34358759159c74f4977716543700aa69ba4638c0104b4b6a3bef9b4b",
+      "bytes": 2500,
+      "referenced_lines": [
+        40
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/RH_NATIVE_SOLOBOLO_POINTWISE_BKQR_MOVING_GAUGE_v0_3_1_FIX1/Derivations/BKQR/PiMetricCofinality.lean",
+      "path": "research/upstream/rh-equivalences-corpus/13882f322204dfa84d5ea20af0333952629ab1ece90287c7d6c6835196cbdabc.lean",
+      "sha256": "13882f322204dfa84d5ea20af0333952629ab1ece90287c7d6c6835196cbdabc",
+      "bytes": 4648,
+      "referenced_lines": [
+        38,
+        80,
+        117
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/RH_NATIVE_SOLOBOLO_POINTWISE_BKQR_MOVING_GAUGE_v0_3_1_FIX1/Derivations/BKQR/StrictPiCofinality.lean",
+      "path": "research/upstream/rh-equivalences-corpus/b8b45eaf61586e4974232dc1e691618c135545a1e608e02b729e1231790f420a.lean",
+      "sha256": "b8b45eaf61586e4974232dc1e691618c135545a1e608e02b729e1231790f420a",
+      "bytes": 2473,
+      "referenced_lines": [
+        52
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/RH_NATIVE_SOLOBOLO_SIGNED_BERNSTEIN_LEAN_MERGER_03_MAINLINE/Core/ActualXiJet.lean",
+      "path": "research/upstream/rh-equivalences-corpus/09295fc8280d1d7c21a4d7fdc84ad4a34aa1aaa032aa970f5ee03e564808f42c.lean",
+      "sha256": "09295fc8280d1d7c21a4d7fdc84ad4a34aa1aaa032aa970f5ee03e564808f42c",
+      "bytes": 3050,
+      "referenced_lines": [
+        6
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/RH_NATIVE_SOLOBOLO_SIGNED_BERNSTEIN_LEAN_MERGER_03_MAINLINE/Derivations/ActualXiLedger.lean",
+      "path": "research/upstream/rh-equivalences-corpus/0b19c3562a404eb796d6498585375313698cd8c9b26c3fd08043577625763be6.lean",
+      "sha256": "0b19c3562a404eb796d6498585375313698cd8c9b26c3fd08043577625763be6",
+      "bytes": 2425,
+      "referenced_lines": [
+        38
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/RH_NATIVE_SOLOBOLO_SIGNED_BERNSTEIN_LEAN_MERGER_03_MAINLINE/Derivations/ActualXiWeakHilbert.lean",
+      "path": "research/upstream/rh-equivalences-corpus/73c1572e0de2eb1d0a1babc2000863252cf2cc9795d778c9ee3dcb8ccf6005a0.lean",
+      "sha256": "73c1572e0de2eb1d0a1babc2000863252cf2cc9795d778c9ee3dcb8ccf6005a0",
+      "bytes": 4025,
+      "referenced_lines": [
+        18,
+        39
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/RH_NATIVE_SOLOBOLO_SIGNED_BERNSTEIN_LEAN_MERGER_03_MAINLINE/Derivations/QuadraticEnergy.lean",
+      "path": "research/upstream/rh-equivalences-corpus/e66c7bb9f2ad285d414487109eba8a45b2205cd4d2e52675e3b48188d2ac1759.lean",
+      "sha256": "e66c7bb9f2ad285d414487109eba8a45b2205cd4d2e52675e3b48188d2ac1759",
+      "bytes": 6934,
+      "referenced_lines": [
+        146
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/RH_NATIVE_SOLOBOLO_SIGNED_BERNSTEIN_LEAN_MERGER_03_MAINLINE/Derivations/WeakDualCharacterization.lean",
+      "path": "research/upstream/rh-equivalences-corpus/961c70b89987b7e78ed11463d3f263a2dd8566e54048f802cb88c36f48ac8e0a.lean",
+      "sha256": "961c70b89987b7e78ed11463d3f263a2dd8566e54048f802cb88c36f48ac8e0a",
+      "bytes": 3453,
+      "referenced_lines": [
+        14,
+        78
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/RH_NATIVE_SOLOBOLO_SIGNED_BERNSTEIN_LEAN_MERGER_03_MAINLINE/Derivations/XiEndpointEquivalence.lean",
+      "path": "research/upstream/rh-equivalences-corpus/294372a1dc7f475a66ecc9a3e39ee0813a69cc08984b5f3d72ff414b8d913724.lean",
+      "sha256": "294372a1dc7f475a66ecc9a3e39ee0813a69cc08984b5f3d72ff414b8d913724",
+      "bytes": 5287,
+      "referenced_lines": [
+        71,
+        91,
+        111
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/RH_NATIVE_SOLOBOLO_SIGNED_BERNSTEIN_LEAN_MERGER_03_MAINLINE/Derivations/XiNativeEndpoint.lean",
+      "path": "research/upstream/rh-equivalences-corpus/2bab627060b6fc622829da5d6c39fc88011ff4fe0b60b36c9d179659477d6619.lean",
+      "sha256": "2bab627060b6fc622829da5d6c39fc88011ff4fe0b60b36c9d179659477d6619",
+      "bytes": 5668,
+      "referenced_lines": [
+        13,
+        110
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/RH_NATIVE_SOLOBOLO_US_IFF_RH_MERGER_04_v0_2_1_FIX1/Bridge/ActualWidderCore.lean",
+      "path": "research/upstream/rh-equivalences-corpus/a0db1f9d7126cd7e36c76ba457df7033e56243c0760702e0f33d5d4699ced4bb.lean",
+      "sha256": "a0db1f9d7126cd7e36c76ba457df7033e56243c0760702e0f33d5d4699ced4bb",
+      "bytes": 1625,
+      "referenced_lines": [
+        27,
+        44
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/RH_NATIVE_SOLOBOLO_US_IFF_RH_MERGER_04_v0_2_1_FIX1/Bridge/AllDepthWidderPositivity.lean",
+      "path": "research/upstream/rh-equivalences-corpus/89163b5577d49679590850ad761a6b872615ab0b06ae99549a0091f05b1bf81d.lean",
+      "sha256": "89163b5577d49679590850ad761a6b872615ab0b06ae99549a0091f05b1bf81d",
+      "bytes": 1942,
+      "referenced_lines": [
+        16
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/RH_NATIVE_SOLOBOLO_US_IFF_RH_MERGER_04_v0_2_1_FIX1/Bridge/USIffRH05.lean",
+      "path": "research/upstream/rh-equivalences-corpus/5d563869b07ce7e2d0f437c69330d7605dec3fe38c829e0c2a213d77b5c2629f.lean",
+      "sha256": "5d563869b07ce7e2d0f437c69330d7605dec3fe38c829e0c2a213d77b5c2629f",
+      "bytes": 2535,
+      "referenced_lines": [
+        32
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/RH_NATIVE_SOLOBOLO_US_IFF_RH_MERGER_04_v0_2_1_FIX1/Bridge/UniformDepthPositivityRH04.lean",
+      "path": "research/upstream/rh-equivalences-corpus/a2cfd9d637fd2b5ba18a8f1f8b21792be610f54a8a454d3a33171f22a11ebfa1.lean",
+      "sha256": "a2cfd9d637fd2b5ba18a8f1f8b21792be610f54a8a454d3a33171f22a11ebfa1",
+      "bytes": 1591,
+      "referenced_lines": [
+        7,
+        15
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/RH_NATIVE_SOLOBOLO_US_IFF_RH_MERGER_04_v0_2_1_FIX1/Bridge/WidderStieltjesGeometry.lean",
+      "path": "research/upstream/rh-equivalences-corpus/21e3bbf74b68d0b6466b6453f1de8a39e60b40f1eccf5c92bbe7d0750476fb3c.lean",
+      "sha256": "21e3bbf74b68d0b6466b6453f1de8a39e60b40f1eccf5c92bbe7d0750476fb3c",
+      "bytes": 2585,
+      "referenced_lines": [
+        63,
+        72
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/STIRLINGS_PRODIGY_LEAN_v0_2_0/StirlingsProdigy/Equivalence.lean",
+      "path": "research/upstream/rh-equivalences-corpus/2936d9b7c7b5bcc41ee50b608aff812b42b63fa163ea06f1e02a3336f82969e1.lean",
+      "sha256": "2936d9b7c7b5bcc41ee50b608aff812b42b63fa163ea06f1e02a3336f82969e1",
+      "bytes": 1679,
+      "referenced_lines": [
+        32,
+        37
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/STIRLINGS_PRODIGY_LEAN_v0_2_0/StirlingsProdigy/Local.lean",
+      "path": "research/upstream/rh-equivalences-corpus/d96c3185b575b5a0a79e63fb0bf79b5f93ce57615c21b4b0dbf6bf1a06c8e95c.lean",
+      "sha256": "d96c3185b575b5a0a79e63fb0bf79b5f93ce57615c21b4b0dbf6bf1a06c8e95c",
+      "bytes": 2667,
+      "referenced_lines": [
+        19
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/STIRLINGS_PRODIGY_LEAN_v0_2_0/StirlingsProdigy/LocalCalculus.lean",
+      "path": "research/upstream/rh-equivalences-corpus/8fe0a68690ac366178f671850c1592032e3ce1c571d3d21c5254ec808f7fb7b7.lean",
+      "sha256": "8fe0a68690ac366178f671850c1592032e3ce1c571d3d21c5254ec808f7fb7b7",
+      "bytes": 2787,
+      "referenced_lines": [
+        23
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/TAYLORS_PRODIGY_LEAN_v0_2_0/TaylorProdigy/Equivalence.lean",
+      "path": "research/upstream/rh-equivalences-corpus/12ec9f59b7445c05e8a57593d07ea98e28b04a910c1b9c120e401e3e812e319e.lean",
+      "sha256": "12ec9f59b7445c05e8a57593d07ea98e28b04a910c1b9c120e401e3e812e319e",
+      "bytes": 456,
+      "referenced_lines": [
+        9
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/TAYLORS_PRODIGY_LEAN_v0_2_0/TaylorProdigy/Objects.lean",
+      "path": "research/upstream/rh-equivalences-corpus/17d16a624b3e1a90f1769c307fe95953c712cc57acf140d82d18c60582caa265.lean",
+      "sha256": "17d16a624b3e1a90f1769c307fe95953c712cc57acf140d82d18c60582caa265",
+      "bytes": 5496,
+      "referenced_lines": [
+        30,
+        33,
+        115
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/awpi_phi_rh_lean_dyadic_scale_v0_1_8_run_20260918_182436_414/awpi_phi_rh_lean_dyadic_scale_v0_1_8/AWPI/PhiRH/DyadicScale.lean",
+      "path": "research/upstream/rh-equivalences-corpus/91b95fa61cb63cc1e218bf8f96e8e582f8aa8a7a8601510d6cf1749c07077495.lean",
+      "sha256": "91b95fa61cb63cc1e218bf8f96e8e582f8aa8a7a8601510d6cf1749c07077495",
+      "bytes": 4494,
+      "referenced_lines": [
+        13
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/awpi_phi_rh_lean_dyadic_scale_v0_1_8_run_20260918_182436_414/awpi_phi_rh_lean_dyadic_scale_v0_1_8/AWPI/PhiRH/NativeRHGlobalNormalForm.lean",
+      "path": "research/upstream/rh-equivalences-corpus/4f77a537f64cc04e72e137c86708a192d1f339b572984b574f97e027ae7fd17d.lean",
+      "sha256": "4f77a537f64cc04e72e137c86708a192d1f339b572984b574f97e027ae7fd17d",
+      "bytes": 1632,
+      "referenced_lines": [
+        21,
+        34
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/awpi_phi_rh_lean_dyadic_scale_v0_1_8_run_20260918_182436_414/awpi_phi_rh_lean_dyadic_scale_v0_1_8/AWPI/PhiRH/NativeRHOneSidedReflection.lean",
+      "path": "research/upstream/rh-equivalences-corpus/eefd03d3776ebc9fd7380566653003b1156ab69141f9a538368773338e778596.lean",
+      "sha256": "eefd03d3776ebc9fd7380566653003b1156ab69141f9a538368773338e778596",
+      "bytes": 5839,
+      "referenced_lines": [
+        154,
+        209
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/awpi_phi_rh_lean_factorization_frontier_v0_2_12_native16_run_20260918_204106_782/awpi_phi_rh_lean_factorization_frontier_v0_2_12_native16/AWPI/PhiRH/FactorizationFrontier.lean",
+      "path": "research/upstream/rh-equivalences-corpus/30bf20868e466c50fe22e5d59b57ec5d523898fe0857516fd43e096c0ade7781.lean",
+      "sha256": "30bf20868e466c50fe22e5d59b57ec5d523898fe0857516fd43e096c0ade7781",
+      "bytes": 7114,
+      "referenced_lines": [
+        94,
+        138
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/awpi_phi_rh_lean_minimal_frontier_v0_2_17_native16_run_20260919_101403_208/awpi_phi_rh_lean_minimal_frontier_v0_2_17_native16/AWPI/PhiRH/MinimalFrontier.lean",
+      "path": "research/upstream/rh-equivalences-corpus/39a6698156fb9de6c5b7433610ab38f4c8769cf3f2b855c4cd885c964b3cb59e.lean",
+      "sha256": "39a6698156fb9de6c5b7433610ab38f4c8769cf3f2b855c4cd885c964b3cb59e",
+      "bytes": 2002,
+      "referenced_lines": [
+        39
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/awpi_phi_rh_lean_minimal_frontier_v0_2_17_native16_run_20260919_101403_208/awpi_phi_rh_lean_minimal_frontier_v0_2_17_native16/AWPI/PhiRH/ScalarConcreteFrontier.lean",
+      "path": "research/upstream/rh-equivalences-corpus/d6f3d22436cc774152ef94800f9f5fbcbacf34cce0b0b2792dd8cce9bd4cec71.lean",
+      "sha256": "d6f3d22436cc774152ef94800f9f5fbcbacf34cce0b0b2792dd8cce9bd4cec71",
+      "bytes": 4255,
+      "referenced_lines": [
+        87
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/awpi_phi_rh_lean_scalar_frontier_v0_2_16_native16_run_20260919_100223_134/awpi_phi_rh_lean_scalar_frontier_v0_2_16_native16/AWPI/PhiRH/HistoricalSourceStandaloneClean.lean",
+      "path": "research/upstream/rh-equivalences-corpus/655fff1004fdfd4fed378b41cd03fb2cf49758ea9657ace91062b751533a0c92.lean",
+      "sha256": "655fff1004fdfd4fed378b41cd03fb2cf49758ea9657ace91062b751533a0c92",
+      "bytes": 12633,
+      "referenced_lines": [
+        70,
+        205,
+        290
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/awpi_phi_rh_lean_scalar_frontier_v0_2_16_native16_run_20260919_100223_134/awpi_phi_rh_lean_scalar_frontier_v0_2_16_native16/AWPI/PhiRH/RawConcreteFrontier.lean",
+      "path": "research/upstream/rh-equivalences-corpus/0cf503df297a115c62b5fb274b4567b56ec93592f1c1e1b607b9ae23ae7b3a3f.lean",
+      "sha256": "0cf503df297a115c62b5fb274b4567b56ec93592f1c1e1b607b9ae23ae7b3a3f",
+      "bytes": 3707,
+      "referenced_lines": [
+        59,
+        81
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/awpi_phi_rh_lean_scalar_frontier_v0_2_16_native16_run_20260919_100223_134/awpi_phi_rh_lean_scalar_frontier_v0_2_16_native16/AWPI/PhiRH/SingleConcreteFrontier.lean",
+      "path": "research/upstream/rh-equivalences-corpus/f03f029e135258710e00b4f1ab7d9a8d397182827473dba770707d55496391e2.lean",
+      "sha256": "f03f029e135258710e00b4f1ab7d9a8d397182827473dba770707d55496391e2",
+      "bytes": 6872,
+      "referenced_lines": [
+        18,
+        164
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/downloads/awpi_phi_rh_lean_scalar_frontier_v0_2_16_native16_run_20260919_100223_134/awpi_phi_rh_lean_scalar_frontier_v0_2_16_native16/AWPI/PhiRH/TailDecayDisassembly.lean",
+      "path": "research/upstream/rh-equivalences-corpus/6c3235a029582cb6d5bfbf6838cce889e8035ab400b703c5a29dcdef34455def.lean",
+      "sha256": "6c3235a029582cb6d5bfbf6838cce889e8035ab400b703c5a29dcdef34455def",
+      "bytes": 16527,
+      "referenced_lines": [
+        13
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/lean-native/awpi_phi_rh_lean_sieved_v0_1_1/AWPI/PhiRH/CanonicalOneSidedTail.lean",
+      "path": "research/upstream/rh-equivalences-corpus/f5e6948f3afef9d09d3316387ad111fa4edafe9e1389086a85981b5ba636aff3.lean",
+      "sha256": "f5e6948f3afef9d09d3316387ad111fa4edafe9e1389086a85981b5ba636aff3",
+      "bytes": 6328,
+      "referenced_lines": [
+        19,
+        25,
+        152
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/lean-native/awpi_phi_rh_lean_sieved_v0_1_1/AWPI/PhiRH/Core.lean",
+      "path": "research/upstream/rh-equivalences-corpus/eeaf46a7f04b59b5a9144646f22b50003d1510f68436f942dce44556a937ac50.lean",
+      "sha256": "eeaf46a7f04b59b5a9144646f22b50003d1510f68436f942dce44556a937ac50",
+      "bytes": 6332,
+      "referenced_lines": [
+        60,
+        66,
+        76,
+        87,
+        131
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/lean-native/awpi_phi_rh_lean_sieved_v0_1_1/AWPI/PhiRH/LiteralModel.lean",
+      "path": "research/upstream/rh-equivalences-corpus/497d1eac96c9f33acb0867a0033e3e8bff5123162f7222bc4901549929b9bd7b.lean",
+      "sha256": "497d1eac96c9f33acb0867a0033e3e8bff5123162f7222bc4901549929b9bd7b",
+      "bytes": 7370,
+      "referenced_lines": [
+        166
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    },
+    {
+      "original_path": "snapshots/lean-native/awpi_phi_rh_lean_sieved_v0_1_1/AWPI/PhiRH/ScalarConcreteFrontier.lean",
+      "path": "research/upstream/rh-equivalences-corpus/caab68732cd28164148492b1fc68689e2761e886ddcf3ad6731399882735d44a.lean",
+      "sha256": "caab68732cd28164148492b1fc68689e2761e886ddcf3ad6731399882735d44a",
+      "bytes": 4130,
+      "referenced_lines": [
+        11,
+        93
+      ],
+      "status": "ARCHIVAL_SOURCE_BODY_NOT_ACTIVE_BUILD"
+    }
+  ],
+  "license_notices": [
+    {
+      "original_path": "snapshots/downloads/RH_MISTERPREMISE_LEAN_v0_1_0/THIRD_PARTY_LICENSES/RiemannHypothesis-Apache-2.0.txt",
+      "path": "research/upstream/rh-equivalences-corpus/licenses/cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30.txt",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes": 11358
+    },
+    {
+      "original_path": "snapshots/downloads/RH_MASTER_CLOSURE_ANGULAR_LEAN_v0_1_1_FIX1/THIRD_PARTY_LICENSES/RiemannHypothesis-Apache-2.0.txt",
+      "path": "research/upstream/rh-equivalences-corpus/licenses/cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30.txt",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes": 11358
+    },
+    {
+      "original_path": "snapshots/downloads/RH_MASTER_ANGULAR_CLOSURE_LEAN_v0_1_0_FIX2/provenance/qqrh/source_36/THIRD_PARTY_SOURCES.json",
+      "path": "research/upstream/rh-equivalences-corpus/licenses/7b4966725c969869beb98a6593f476d059dc182594651440568ecd8d458506cc.txt",
+      "sha256": "7b4966725c969869beb98a6593f476d059dc182594651440568ecd8d458506cc",
+      "bytes": 3721
+    },
+    {
+      "original_path": "snapshots/downloads/RH_MASTER_ANGULAR_CLOSURE_LEAN_v0_1_0_FIX2/provenance/qqrh/source_36/THIRD_PARTY_LICENSES/RiemannHypothesis-Apache-2.0.txt",
+      "path": "research/upstream/rh-equivalences-corpus/licenses/cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30.txt",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes": 11358
+    },
+    {
+      "original_path": "snapshots/downloads/RH_MASTER_ANGULAR_CLOSURE_LEAN_v0_1_0_FIX2/provenance/qqrh/source_34/THIRD_PARTY_SOURCES.json",
+      "path": "research/upstream/rh-equivalences-corpus/licenses/7b4966725c969869beb98a6593f476d059dc182594651440568ecd8d458506cc.txt",
+      "sha256": "7b4966725c969869beb98a6593f476d059dc182594651440568ecd8d458506cc",
+      "bytes": 3721
+    },
+    {
+      "original_path": "snapshots/downloads/RH_MASTER_ANGULAR_CLOSURE_LEAN_v0_1_0_FIX2/provenance/qqrh/source_34/THIRD_PARTY_LICENSES/RiemannHypothesis-Apache-2.0.txt",
+      "path": "research/upstream/rh-equivalences-corpus/licenses/cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30.txt",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes": 11358
+    },
+    {
+      "original_path": "snapshots/downloads/RH_GIGGA_SMALL_O_EQUIVALENCE_LEAN_v0_2_0/THIRD_PARTY_LICENSES/RiemannHypothesis-Apache-2.0.txt",
+      "path": "research/upstream/rh-equivalences-corpus/licenses/cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30.txt",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes": 11358
+    }
+  ]
+}

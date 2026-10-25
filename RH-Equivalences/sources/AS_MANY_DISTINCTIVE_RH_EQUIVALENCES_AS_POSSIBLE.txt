@@ -1,0 +1,2445 @@
+AS MANY DISTINCTIVE RH EQUIVALENCES AS POSSIBLE
+Source catalogue • first edition • 2026-10-21
+
+41 native-target formulations, organized into 22 criterion groups;
+10 additional opaque-model formulations, kept in a separate section.
+Of the 41 native-target formulations: 35 have no extra theorem hypotheses,
+2 are parameterized by positive choices, and 4 retain analytic/model interfaces.
+These are formulation counts, not 51 independent mathematical mechanisms.
+Catalogue labels E01–E41 are separate from the project candidate IDs N01–N03.
+
+PURPOSE AND EVIDENCE
+This file gathers explicit iff declarations from the supplied project sources.
+Each entry gives its mathematical criterion, precise target class, hypotheses,
+Lean declaration, and bundle-relative source location. Renamings are aliases;
+useful algebraic representations share one criterion group.
+The compiler freeze is respected: no Lean, Lake, project runner, or audit was run.
+A source proof body is evidence of an implemented argument, not a fresh kernel check.
+“No extra theorem hypotheses” describes the declaration signature. It does not
+claim that every transitive dependency was recompiled or independently axiom-audited.
+Snapshots are versioned separately. Equal names across snapshots do not establish
+equal definitions or compatible imports. This catalogue is not a combined Lean module.
+
+Corpus: RH_REVIEW_BUNDLE_18679_14231_11714.zip
+Bundle SHA256: b233c8d7468c3c484a6a90d318ba09d4e9a9586e744a980aa13bbcdf8301ed81
+Discovery: 11,808 Lean source copies, 1,607 distinct snapshot bodies, and 125
+additional distinct Lean bodies recovered from nested ZIP archives. The scan found
+815 iff declaration candidates in snapshots; selected entries were inspected.
+This is a broad catalogue of this corpus, not an exhaustive survey of all RH literature.
+Source references below are relative to the extracted bundle root.
+
+NORMALIZATION AND TARGET RULES
+Native RH means Mathlib _root_.RiemannHypothesis, with trivial zeros and s=1
+handled by its actual zero predicate. A project-local Prop named RiemannHypothesis
+is classified separately unless an actual native identification is supplied.
+The standard entire completion is ξ(s)=(1+s(s−1)completedRiemannZeta₀(s))/2.
+Ξ(z)=ξ(1/2+i z); Θ(z)=ξ(1/2+sqrt(z)), with evenness providing the descent.
+Raw s(s−1)Λ(s), entire 2ξ(s), and ξ(s) must not be silently interchanged at s=0,1.
+Definitions from the cited snapshot govern every entry, including normalization.
+In the angular criteria, r is a theta-plane radius. For the small-o criterion,
+the source cutoff is exactly ‖actualPairZero i‖≤1/r with real representatives;
+their norm is the critical-line ordinate. Do not replace that cutoff by 1/√r.
+
+NATIVE CRITERION INDEX
+E01–E04: Actual zero geometry
+  E01  Completed xi zeros lie on the critical line
+  E02  Critical-line pullback has only real zeros
+  E03  Theta zeros lie on the nonpositive real axis
+  E04  Right-half-plane nonvanishing of the literal entire xi
+E05–E06: Logarithmic-derivative signs
+  E05  Strict Lagarias logarithmic-derivative positivity
+  E06  Strict anti-Herglotz sign of the xi pullback
+E07–E08: Analytic continuation and the ODE germ
+  E07  Analytic extension of the actual logarithmic-derivative germ
+  E08  Analytic first-order ODE coefficient matching the xi germ
+E09–E11: Cayley loss, transmission and energy
+  E09  Zero Cayley loss at every nontrivial zeta zero
+  E10  Cayley transmission saturates at every nontrivial zero
+  E11  Unit-state Cayley energy is preserved at every nontrivial zero
+E12–E14: Angular derivative and regular logarithmic slope
+  E12  Nonnegative within-derivative on the closed angular interval
+  E13  Nonnegative ordinary angular slope on every open semicircle
+  E14  Nonnegative Euler logarithmic slope on the regular locus
+E15: Angular endpoint minimum
+  E15  Left endpoint minimizes the angular derivative and has nonnegative derivative
+E16–E17: Regularized logarithmic flux
+  E16  Positive-normalizer logarithmic flux master
+  E17  Logarithmic flux master with the actual theta normalizer
+E18–E19: Residual angular regions
+  E18  Slope positivity on the remaining rectangular angular region
+  E19  Slope positivity on the smaller curved residual region
+E20–E21: Wedge exhaustion
+  E20  Zero exclusion in every positive-slope wedge
+  E21  Zero exclusion for a cofinal collection of slopes
+E22: Slope-dependent angular certificates
+  E22  Angular positivity certificates for every slope cutoff
+E23–E24: Actual RR defect
+  E23  Vanishing actual RR defect
+  E24  All-height inverse-square upper bound on the full actual defect
+E25–E26: RR central-curvature identification
+  E25  Inverse-height mass equals actual central xi curvature
+  E26  All-height decay of the central curvature defect
+E27: Angular small-o asymptotic
+  E27  Angular integral remainder is little-o of radius
+E28: Relative derivative bound
+  E28  Finite radius-dependent relative derivative bound on the residual interval
+E29: Finite-rate angular propagation
+  E29  Locally integrable finite-rate control along the angle
+E30: Local first-order increments
+  E30  Arbitrarily small negative linear error in local forward increments
+E31–E35: Dyadic contraction and passivity
+  E31  Canonical exact two-sided passivity
+  E32  Literal reciprocal dyadic contraction
+  E33  One-sided dyadic contraction, with reflection
+  E34  Canonical exact one-sided passivity
+  E35  Pointwise GP/BKQR one-sided passivity
+E36–E37: Exact defect controlled by KQ tails
+  E36  Canonical exact-to-KQ-tail upper bounds
+  E37  Raw terminal-Phi cell bound / actual KQ limit core
+E38: Finite-energy factorization
+  E38  Existence of a one-sided finite-energy factorization
+E39: Telescoping negative-square sources
+  E39  Existence of a telescoping negative-square source
+E40: Calibrated two-sided constructor
+  E40  Existential two-sided constructor under calibrated background
+E41: Cofinal uniform Widder positivity
+  E41  Cofinal uniform positivity of the frozen raw-xi Widder tower
+
+OPAQUE-MODEL INDEX — NOT COUNTED AS NATIVE RH EQUIVALENCES
+  M01  Zhang-normalized Hausdorff finite-difference positivity
+  M02  Zhang complete-monotonicity hierarchy
+  M03  Wall continued-fraction admissibility
+  M04  Subnormality of the canonical weighted shift
+  M05  Complete hypercontractivity of the canonical shift
+  M06  Positive Pascal-Hopf realization
+  M07  Natural-valued BKQR energy lattice
+  M08  Positive-stage finite-jet approximation
+  M09  Commuting two-branch energy source
+  M10  Finite positive-kernel approximation of the abstract Xi coefficient sequence
+
+PART I — NATIVE-TARGET IFF DECLARATIONS
+
+GROUP: Actual zero geometry
+============================================================================
+E01  Completed xi zeros lie on the critical line
+NATIVE TARGET / NO EXTRA THEOREM HYPOTHESES
+
+Criterion (equivalent to its stated RH target):
+∀s∈ℂ, ξ(s)=0 ⇒ Re(s)=1/2
+
+Additional hypotheses:
+  None in this declaration.
+
+Lean: AngularMaster.native_RH_iff_xi_zeros_critical
+    theorem native_RH_iff_xi_zeros_critical :
+        _root_.RiemannHypothesis ↔ XiZerosCritical
+Source: snapshots/downloads/RH_NATIVE_CANDIDATES_v0_1_1_MELLIN/AngularMaster/ZeroGeometry.lean:97
+Source SHA256: a2a155d8584f3682c4a48f4b8f0c9fdd1473c25ed4934c448f5015a4647361df
+Note: ξ(s)=(1+s(s−1)completedRiemannZeta₀(s))/2. EntireXi uses the algebraically equal normalization (s(s−1)completedRiemannZeta₀(s))/2+1/2. Θ(z)=ξ(1/2+Complex.sqrt(z)); evenness supplies the entire descent.
+Aliases / closely matching source versions:
+  OverflowResidueRH.riemannHypothesis_iff_entireRiemannXi_zeros_on_critical_line [snapshots/downloads/RH_NATIVE_CANDIDATES_v0_1_1_MELLIN/RiemannHypothesis/Xi/RiemannHypothesisBridge.lean:399]
+    Same criterion in another algebraically identical normalization.
+  CayleyGolPhi.GOLPHI_RH_IFF_MATHLIB_RH [snapshots/downloads/RH_MASTER_CLOSURE_ANGULAR_LEAN_v0_1_1_FIX1/CayleyGolPhi/ZeroEquivalence.lean:274]
+    GolPhiRiemannHypothesis := ∀s, completedGolPhiS1(s)=0 ∧ 0<Re(s)<1 ⇒ Re(s)=1/2. completedGolPhiS1 is definitionally xi; grouping as normalization/zero-predicate alias.
+  CayleyGolPhi.CENTERED_GOLPHI_RH_IFF_MATHLIB_RH [snapshots/downloads/RH_MASTER_CLOSURE_ANGULAR_LEAN_v0_1_1_FIX1/CayleyGolPhi/ZeroEquivalence.lean:294]
+    CenteredGolPhiRiemannHypothesis := ∀s, NontrivialGolPhiZero(s) ⇒ Re(s−1/2)=0. Same criterion, not a separate analytic equivalence.
+
+============================================================================
+E02  Critical-line pullback has only real zeros
+NATIVE TARGET / NO EXTRA THEOREM HYPOTHESES
+
+Criterion (equivalent to its stated RH target):
+∀z∈ℂ, Ξ(z)=0 ⇒ Im(z)=0
+
+Additional hypotheses:
+  None in this declaration.
+
+Lean: OverflowResidueRH.riemannHypothesis_iff_entireXiPullback_zeros_real
+    theorem riemannHypothesis_iff_entireXiPullback_zeros_real :
+        RiemannHypothesis ↔
+          ∀ z : ℂ, EntireXiPullback z = 0 → z.im = 0
+Source: snapshots/downloads/RH_NATIVE_CANDIDATES_v0_1_1_MELLIN/RiemannHypothesis/Xi/RiemannHypothesisBridge.lean:416
+Source SHA256: 4dc024d08641c4e8f8da5da7ac6c67af29fae3ca2e74c249042bb5b5a0fa7c04
+Note: ξ(s)=(1+s(s−1)completedRiemannZeta₀(s))/2. EntireXi uses the algebraically equal normalization (s(s−1)completedRiemannZeta₀(s))/2+1/2. Θ(z)=ξ(1/2+Complex.sqrt(z)); evenness supplies the entire descent. Ξ(z)=ξ(1/2+i z).
+Note: Exact change of variable; native RH endpoint, no auxiliary analytic assumptions.
+
+============================================================================
+E03  Theta zeros lie on the nonpositive real axis
+NATIVE TARGET / NO EXTRA THEOREM HYPOTHESES
+
+Criterion (equivalent to its stated RH target):
+∀z∈ℂ, Θ(z)=0 ⇒ Im(z)=0 ∧ Re(z)≤0
+
+Additional hypotheses:
+  None in this declaration.
+
+Lean: AngularMaster.native_RH_iff_theta_zeros_nonpositive
+    theorem native_RH_iff_theta_zeros_nonpositive :
+        _root_.RiemannHypothesis ↔ ThetaZerosNonpositive
+Source: snapshots/downloads/RH_NATIVE_CANDIDATES_v0_1_1_MELLIN/AngularMaster/ZeroGeometry.lean:152
+Source SHA256: a2a155d8584f3682c4a48f4b8f0c9fdd1473c25ed4934c448f5015a4647361df
+Note: ξ(s)=(1+s(s−1)completedRiemannZeta₀(s))/2. EntireXi uses the algebraically equal normalization (s(s−1)completedRiemannZeta₀(s))/2+1/2. Θ(z)=ξ(1/2+Complex.sqrt(z)); evenness supplies the entire descent.
+Aliases / closely matching source versions:
+  AngularMaster.xi_zeros_critical_iff_theta_zeros_nonpositive [snapshots/downloads/RH_NATIVE_CANDIDATES_v0_1_1_MELLIN/AngularMaster/ZeroGeometry.lean:129]
+    Direct equivalence of two native zero-location predicates, then composed with native RH.
+
+============================================================================
+E04  Right-half-plane nonvanishing of the literal entire xi
+NATIVE TARGET / NO EXTRA THEOREM HYPOTHESES
+
+Criterion (equivalent to its stated RH target):
+For every complex z with Re(z)>1/2, xiEntire(z) != 0.
+
+Additional hypotheses:
+  None in this declaration.
+
+Lean: NativeSolobolo.SignedBernstein.AnalyticClosure.XI_RIGHT_NONVANISHING_IFF_NATIVE_RH
+    theorem XI_RIGHT_NONVANISHING_IFF_NATIVE_RH :
+        (∀ z ∈ xiRightHalfPlane, xiEntire z ≠ 0) ↔ _root_.RiemannHypothesis
+Source: snapshots/downloads/RH_NATIVE_SOLOBOLO_SIGNED_BERNSTEIN_LEAN_MERGER_03_MAINLINE/Derivations/XiEndpointEquivalence.lean:71
+Source SHA256: 294372a1dc7f475a66ecc9a3e39ee0813a69cc08984b5f3d72ff414b8d913724
+Definition evidence: D001, D002
+
+
+GROUP: Logarithmic-derivative signs
+============================================================================
+E05  Strict Lagarias logarithmic-derivative positivity
+NATIVE TARGET / NO EXTRA THEOREM HYPOTHESES
+
+Criterion (equivalent to its stated RH target):
+∀s with Re(s)>1/2, ξ(s)≠0 and Re(ξ′(s)/ξ(s))>0
+
+Additional hypotheses:
+  None in this declaration.
+
+Lean: OverflowResidueRH.riemannHypothesis_iff_entireXi_lagariasPositivity_unconditional
+    theorem riemannHypothesis_iff_entireXi_lagariasPositivity_unconditional :
+        RiemannHypothesis ↔ EntireXi.LagariasPositivity
+Source: snapshots/downloads/RH_NATIVE_CANDIDATES_v0_1_1_MELLIN/RiemannHypothesis/Xi/UnconditionalLagariasEquivalence.lean:82
+Source SHA256: d1e3f6cb7a1a6f8200fe6cb53026b004855d4953272b2875de64c4d75a619275
+Note: ξ(s)=(1+s(s−1)completedRiemannZeta₀(s))/2. EntireXi uses the algebraically equal normalization (s(s−1)completedRiemannZeta₀(s))/2+1/2. Θ(z)=ξ(1/2+Complex.sqrt(z)); evenness supplies the entire descent.
+Note: Full locally supplied dependency closure: 55 source files, no missing local imports, no active custom axiom/sorry/admit tokens after comment stripping. This is a source audit, not a kernel axiom check.
+Aliases / closely matching source versions:
+  OverflowResidueRH.riemannHypothesis_iff_entireXi_rightHalfPlaneStrictLogDerivSign_unconditional [snapshots/downloads/RH_NATIVE_CANDIDATES_v0_1_1_MELLIN/RiemannHypothesis/Xi/UnconditionalLagariasEquivalence.lean:74]
+    Totalized quotient version: strict positivity already forces denominator nonzero. Grouped instead of counted twice.
+
+============================================================================
+E06  Strict anti-Herglotz sign of the xi pullback
+NATIVE TARGET / NO EXTRA THEOREM HYPOTHESES
+
+Criterion (equivalent to its stated RH target):
+∀z with Im(z)>0, Im(Ξ′(z)/Ξ(z))<0
+
+Additional hypotheses:
+  None in this declaration.
+
+Lean: OverflowResidueRH.riemannHypothesis_iff_entireXiPullback_strictAntiHerglotz_unconditional
+    theorem riemannHypothesis_iff_entireXiPullback_strictAntiHerglotz_unconditional :
+        RiemannHypothesis ↔ EntireXiPullback.StrictAntiHerglotzSign
+Source: snapshots/downloads/RH_NATIVE_CANDIDATES_v0_1_1_MELLIN/RiemannHypothesis/Xi/UnconditionalLagariasEquivalence.lean:67
+Source SHA256: d1e3f6cb7a1a6f8200fe6cb53026b004855d4953272b2875de64c4d75a619275
+Note: ξ(s)=(1+s(s−1)completedRiemannZeta₀(s))/2. EntireXi uses the algebraically equal normalization (s(s−1)completedRiemannZeta₀(s))/2+1/2. Θ(z)=ξ(1/2+Complex.sqrt(z)); evenness supplies the entire descent. Ξ(z)=ξ(1/2+i z). StrictAntiHerglotzUHP R := ∀z,0<Im(z)→Im(R(z))<0.
+Note: Coordinate-transformed sign criterion; actual native entire xi, no supplied factorization or growth hypothesis remains in this declaration.
+
+
+GROUP: Analytic continuation and the ODE germ
+============================================================================
+E07  Analytic extension of the actual logarithmic-derivative germ
+NATIVE TARGET / NO EXTRA THEOREM HYPOTHESES
+
+Criterion (equivalent to its stated RH target):
+There exists p analytic on Re(z)>1/2 whose germ at z=1 equals xiEntire'/xiEntire.
+
+Additional hypotheses:
+  None in this declaration.
+
+Lean: NativeSolobolo.SignedBernstein.AnalyticClosure.XI_LOG_DERIVATIVE_EXTENSION_IFF_NATIVE_RH
+    theorem XI_LOG_DERIVATIVE_EXTENSION_IFF_NATIVE_RH :
+        ActualXiLogDerivativeExtension ↔ _root_.RiemannHypothesis
+Source: snapshots/downloads/RH_NATIVE_SOLOBOLO_SIGNED_BERNSTEIN_LEAN_MERGER_03_MAINLINE/Derivations/XiEndpointEquivalence.lean:91
+Source SHA256: 294372a1dc7f475a66ecc9a3e39ee0813a69cc08984b5f3d72ff414b8d913724
+Definition evidence: D003
+Note: The analytic extension is the criterion on one side of the iff, not an additional assumed bridge.
+Note: Source explicitly says this is not the unfinished equivalence for ActualWeakEnergyBound.
+
+============================================================================
+E08  Analytic first-order ODE coefficient matching the xi germ
+NATIVE TARGET / NO EXTRA THEOREM HYPOTHESES
+
+Criterion (equivalent to its stated RH target):
+There exists p analytic on Re(z)>1/2 such that xiEntire'=p*xiEntire in a neighborhood of z=1.
+
+Additional hypotheses:
+  None in this declaration.
+
+Lean: NativeSolobolo.SignedBernstein.AnalyticClosure.XI_ODE_GERM_IFF_NATIVE_RH
+    theorem XI_ODE_GERM_IFF_NATIVE_RH :
+        (∃ p : ℂ → ℂ,
+          AnalyticOnNhd ℂ p xiRightHalfPlane ∧
+          deriv xiEntire =ᶠ[𝓝 (1 : ℂ)] (fun z : ℂ => p z * xiEntire z)) ↔
+          _root_.RiemannHypothesis
+Source: snapshots/downloads/RH_NATIVE_SOLOBOLO_SIGNED_BERNSTEIN_LEAN_MERGER_03_MAINLINE/Derivations/XiEndpointEquivalence.lean:111
+Source SHA256: 294372a1dc7f475a66ecc9a3e39ee0813a69cc08984b5f3d72ff414b8d913724
+Note: The local ODE identity concerns a whole germ, not equality at the single point 1.
+Note: Closely related to logarithmic-derivative extension, but its denominator-free criterion is a distinct explicit declaration.
+
+
+GROUP: Cayley loss, transmission and energy
+============================================================================
+E09  Zero Cayley loss at every nontrivial zeta zero
+NATIVE TARGET / NO EXTRA THEOREM HYPOTHESES
+
+Criterion (equivalent to its stated RH target):
+∀ρ, NontrivialZetaZero(ρ) ⇒ ((g(Reρ)−1)/(g(Reρ)+1))²=0
+
+Additional hypotheses:
+  None in this declaration.
+
+Lean: CayleyRHAClosure.ZETA_CAYLEY_ZERO_LOSS_IFF_MATHLIB_RH
+    theorem ZETA_CAYLEY_ZERO_LOSS_IFF_MATHLIB_RH :
+        ZetaCayleyZeroLoss ↔ _root_.RiemannHypothesis
+Source: snapshots/downloads/GP_BKQR_CAYLEY_RH_A_TIER_CLOSURE_LEAN_v0_4_2_FIX2/CayleyRHClosure.lean:84
+Source SHA256: 518c59f5f83e026919d8bf926bdd7848ea800084e915750923d2aabba4599331
+Note: g(σ)=exp(log(2)·(2σ−1)); q(σ)=(g(σ)−1)/(g(σ)+1); d(σ)=q(σ)^2; c(σ)=1−d(σ); scalarEnergy(x)=x²; cayleyStep(σ,x)=sqrt(c(σ))·x. This is a constructed scalar scale-gain model, not the theta logarithmic-derivative observable.
+Note: Exact algebraic re-encoding of critical-line zero location. Nonnegativity of loss alone supplies no equality-to-zero.
+Aliases / closely matching source versions:
+  CayleyRHAClosure.GOLPHI_CAYLEY_ZERO_LOSS_IFF_MATHLIB_RH [snapshots/downloads/GP_BKQR_CAYLEY_RH_A_TIER_CLOSURE_LEAN_v0_4_2_FIX2/CayleyRHClosure.lean:78]
+    Same zero-loss criterion using the equivalent completed-GolPhi zero predicate.
+
+============================================================================
+E10  Cayley transmission saturates at every nontrivial zero
+NATIVE TARGET / NO EXTRA THEOREM HYPOTHESES
+
+Criterion (equivalent to its stated RH target):
+∀ρ, NontrivialGolPhiZero(ρ) ⇒ c(Reρ)=1
+
+Additional hypotheses:
+  None in this declaration.
+
+Lean: CayleyRHAClosure.GOLPHI_CAYLEY_SATURATION_IFF_MATHLIB_RH
+    theorem GOLPHI_CAYLEY_SATURATION_IFF_MATHLIB_RH :
+        GolPhiCayleySaturation ↔ _root_.RiemannHypothesis
+Source: snapshots/downloads/GP_BKQR_CAYLEY_RH_A_TIER_CLOSURE_LEAN_v0_4_2_FIX2/CayleyRHClosure.lean:106
+Source SHA256: 518c59f5f83e026919d8bf926bdd7848ea800084e915750923d2aabba4599331
+Note: g(σ)=exp(log(2)·(2σ−1)); q(σ)=(g(σ)−1)/(g(σ)+1); d(σ)=q(σ)^2; c(σ)=1−d(σ); scalarEnergy(x)=x²; cayleyStep(σ,x)=sqrt(c(σ))·x. This is a constructed scalar scale-gain model, not the theta logarithmic-derivative observable.
+Note: Same algebraic family as zero Cayley loss; retained as a distinct source object/representation, not an independent analytic bridge.
+
+============================================================================
+E11  Unit-state Cayley energy is preserved at every nontrivial zero
+NATIVE TARGET / NO EXTRA THEOREM HYPOTHESES
+
+Criterion (equivalent to its stated RH target):
+∀ρ, NontrivialGolPhiZero(ρ) ⇒ scalarEnergy(cayleyStep(Reρ,1))=scalarEnergy(1)
+
+Additional hypotheses:
+  None in this declaration.
+
+Lean: CayleyRHAClosure.GOLPHI_CAYLEY_UNIT_ENERGY_PRESERVATION_IFF_MATHLIB_RH
+    theorem GOLPHI_CAYLEY_UNIT_ENERGY_PRESERVATION_IFF_MATHLIB_RH :
+        GolPhiCayleyUnitEnergyPreservation ↔ _root_.RiemannHypothesis
+Source: snapshots/downloads/GP_BKQR_CAYLEY_RH_A_TIER_CLOSURE_LEAN_v0_4_2_FIX2/CayleyRHClosure.lean:119
+Source SHA256: 518c59f5f83e026919d8bf926bdd7848ea800084e915750923d2aabba4599331
+Note: g(σ)=exp(log(2)·(2σ−1)); q(σ)=(g(σ)−1)/(g(σ)+1); d(σ)=q(σ)^2; c(σ)=1−d(σ); scalarEnergy(x)=x²; cayleyStep(σ,x)=sqrt(c(σ))·x. This is a constructed scalar scale-gain model, not the theta logarithmic-derivative observable.
+Note: Concrete scalar energy realization of the same saturation family. Does not assert a native GP Hilbert moment identification.
+
+
+GROUP: Angular derivative and regular logarithmic slope
+============================================================================
+E12  Nonnegative within-derivative on the closed angular interval
+NATIVE TARGET / NO EXTRA THEOREM HYPOTHESES
+
+Criterion (equivalent to its stated RH target):
+∀r>0, ∀x∈[−1,1], derivWithin(P(r,·),[−1,1],x)≥0. z(r,x)=r(x+i√(1−x²)); P(r,x)=|AWPIRH.theta(z(r,x))|².
+
+Additional hypotheses:
+  None in this declaration.
+
+Lean: RHMaster.native_RH_iff_actualDerivativeNonnegative
+    theorem native_RH_iff_actualDerivativeNonnegative :
+        _root_.RiemannHypothesis ↔
+          AngularMaster.DerivativeNonnegative AngularMaster.actualProfile
+Source: snapshots/downloads/RH_MASTER_ANGULAR_CLOSURE_LEAN_v0_1_0_FIX2/RHMaster/CayleyBridge.lean:52
+Source SHA256: 46c2eaa4eec1b1fdd5aff6b3c7fe42394e641f33b59e23850d16e401ea7cc3aa
+Definition evidence: D004, D005
+Note: Includes one-sided endpoint derivative convention; interior ordinary derivative is a separate equivalent criterion.
+
+============================================================================
+E13  Nonnegative ordinary angular slope on every open semicircle
+NATIVE TARGET / NO EXTRA THEOREM HYPOTHESES
+
+Criterion (equivalent to its stated RH target):
+∀r>0, ∀−1<x<1, ∂xP(r,x)≥0. z(r,x)=r(x+i√(1−x²)); P(r,x)=|AWPIRH.theta(z(r,x))|².
+
+Additional hypotheses:
+  None in this declaration.
+
+Lean: RHMaster.native_RH_iff_actualAngularSlope_nonnegative
+    theorem native_RH_iff_actualAngularSlope_nonnegative :
+        _root_.RiemannHypothesis ↔
+          ∀ r : ℝ, 0 < r → ∀ x ∈ Ioo (-1 : ℝ) 1,
+            0 ≤ AngularRegularity.actualAngularSlope r x
+Source: snapshots/downloads/RH_NATIVE_CANDIDATES_v0_1_1_MELLIN/RHMaster/AngularBridge.lean:74
+Source SHA256: 8717021731d80d28c228fdda18b1217524c5406fc7d2d17eae02fb212dd05d58
+Definition evidence: D006
+Note: GlobalAngularNonnegative in the separate framework version is the same ordinary derivative criterion under the source identity between profiles; grouped as an alias.
+Aliases / closely matching source versions:
+  native_RH_iff_actualInteriorSlopeNonnegative [snapshots/downloads/RH_NATIVE_CANDIDATES_v0_1_1_MELLIN/RHMaster/AngularBridge.lean:68]
+  native_RH_iff_globalAngularNonnegative [snapshots/downloads/RH_MASTER_ANGULAR_CLOSURE_LEAN_v0_1_0_FIX2/RHMaster/AngularClosure.lean:78]
+
+============================================================================
+E14  Nonnegative Euler logarithmic slope on the regular locus
+NATIVE TARGET / NO EXTRA THEOREM HYPOTHESES
+
+Criterion (equivalent to its stated RH target):
+∀r>0, −1<x<1, theta(z(r,x))≠0 ⇒ Im(z(r,x) theta′(z(r,x))/theta(z(r,x)))≥0.
+
+Additional hypotheses:
+  None in this declaration.
+
+Lean: RHMaster.native_RH_iff_globalRegularLogSlopeNonnegative
+    theorem native_RH_iff_globalRegularLogSlopeNonnegative :
+        _root_.RiemannHypothesis ↔ GlobalRegularLogSlopeNonnegative
+Source: snapshots/downloads/RH_MASTER_ANGULAR_CLOSURE_LEAN_v0_1_0_FIX2/RHMaster/AngularClosure.lean:106
+Source SHA256: 877e893ae983415adba18934897fe2d6b06fb9b513f5bdaa816a83f86a2a8b2f
+Definition evidence: D007, D008
+Note: Only the nonzero locus is quantified. The source proves the division-free angular slope vanishes at actual zeros.
+
+
+GROUP: Angular endpoint minimum
+============================================================================
+E15  Left endpoint minimizes the angular derivative and has nonnegative derivative
+NATIVE TARGET / NO EXTRA THEOREM HYPOTHESES
+
+Criterion (equivalent to its stated RH target):
+∀r>0, ∀x∈[−1,1], D_xP(r,−1)≤D_xP(r,x), and ∀r>0, D_xP(r,−1)≥0. D is the within-derivative. z(r,x)=r(x+i√(1−x²)); P(r,x)=|AWPIRH.theta(z(r,x))|².
+
+Additional hypotheses:
+  None in this declaration.
+
+Lean: AngularMaster.native_RH_iff_actual_profileMaster
+    theorem native_RH_iff_actual_profileMaster :
+        _root_.RiemannHypothesis ↔ ProfileMaster actualProfile
+Source: snapshots/downloads/RH_NATIVE_CANDIDATES_v0_1_1_MELLIN/AngularMaster/Chain.lean:38
+Source SHA256: 6a438ade860096372c31d9ea2656a10027e11eb65fc8e577379615b99b72dfa1
+Definition evidence: D009, D010, D011
+Note: v0_3_0 chain has no hproduct argument; older v0_2_0 proof required ActualProductBridge.
+Aliases / closely matching source versions:
+  RH_iff_Sub_1_and_Sub_2 [snapshots/downloads/RH_NATIVE_CANDIDATES_v0_1_1_MELLIN/AngularMaster/Chain.lean:108]
+
+
+GROUP: Regularized logarithmic flux
+============================================================================
+E16  Positive-normalizer logarithmic flux master
+NATIVE TARGET / POSITIVE PARAMETER CONDITIONS
+
+Criterion (equivalent to its stated RH target):
+For fixed ε>0 and S(r)>0 at every r>0, set L=log(1+εP/S²), J=exp(L) D_xL. For all r>0,x∈[−1,1], J(r,−1)≤J(r,x) and J(r,−1)≥0.
+
+Additional hypotheses:
+  {ε : ℝ} {S : ℝ → ℝ}
+  hε : 0 < ε
+  hS : ∀ r, 0 < r → 0 < S r
+
+Lean: AngularMaster.native_RH_iff_actual_logMaster
+    theorem native_RH_iff_actual_logMaster
+        {ε : ℝ} {S : ℝ → ℝ} (hε : 0 < ε) (hS : NormalizerPositive S) :
+        _root_.RiemannHypothesis ↔ LogMaster ε S actualProfile
+Source: snapshots/downloads/RH_NATIVE_CANDIDATES_v0_1_1_MELLIN/AngularMaster/Chain.lean:57
+Source SHA256: 6a438ade860096372c31d9ea2656a10027e11eb65fc8e577379615b99b72dfa1
+Definition evidence: D012, D013, D014, D015
+Note: The positive normalizer condition is explicit; no independent regularity hypothesis at the endpoint.
+
+============================================================================
+E17  Logarithmic flux master with the actual theta normalizer
+NATIVE TARGET / POSITIVE PARAMETER CONDITIONS
+
+Criterion (equivalent to its stated RH target):
+Same logarithmic flux minimum/nonnegativity criterion with S(r)=|AWPIRH.theta(r)| and fixed ε>0.
+
+Additional hypotheses:
+  {ε : ℝ}
+  hε : 0 < ε
+
+Lean: AngularMaster.native_RH_iff_frozenLogMaster
+    theorem native_RH_iff_frozenLogMaster
+        {ε : ℝ} (hε : 0 < ε) :
+        _root_.RiemannHypothesis ↔ frozenLogMaster ε
+Source: snapshots/downloads/RH_NATIVE_CANDIDATES_v0_1_1_MELLIN/AngularMaster/Chain.lean:66
+Source SHA256: 6a438ade860096372c31d9ea2656a10027e11eb65fc8e577379615b99b72dfa1
+Definition evidence: D016, D017
+Note: No separate nonvanishing hypothesis on theta(r). ε=1/2 is a special case, not another distinct criterion. frozenLogMaster_epsilon_invariant identifies all positive ε.
+Note: Uses the literal actual normalizer, whose positivity is not an external assumption in this theorem.
+Aliases / closely matching source versions:
+  FROZEN_RH_MASTER_EQUIVALENCE [snapshots/downloads/RH_NATIVE_CANDIDATES_v0_1_1_MELLIN/AngularMaster/Chain.lean:98]
+  RH_iff_Master [snapshots/downloads/RH_NATIVE_CANDIDATES_v0_1_1_MELLIN/AngularMaster/Chain.lean:103]
+
+
+GROUP: Residual angular regions
+============================================================================
+E18  Slope positivity on the remaining rectangular angular region
+NATIVE TARGET / NO EXTRA THEOREM HYPOTHESES
+
+Criterion (equivalent to its stated RH target):
+∀r>255/7, ∀−1<x≤−84/85, ∂xP(r,x)≥0.
+
+Additional hypotheses:
+  None in this declaration.
+
+Lean: RHMaster.native_RH_iff_angularResidualNonnegative
+    theorem native_RH_iff_angularResidualNonnegative :
+        _root_.RiemannHypothesis ↔ AngularResidualNonnegative
+Source: snapshots/downloads/RH_NATIVE_CANDIDATES_v0_1_1_MELLIN/RHMaster/AngularCoverage.lean:90
+Source SHA256: f0ea18f9520141e144c78e6fd0705891597cce9325c8367fafd996b16a26dcd9
+Definition evidence: D018
+Note: The strict endpoint variant x<−84/85 is grouped here: endpoint positivity has separately been proved by continuity. Known radius slab and sector are already discharged.
+Aliases / closely matching source versions:
+  native_RH_iff_strictAngularResidual [snapshots/downloads/RH_NATIVE_CANDIDATES_v0_1_1_MELLIN/Develop/NativeAngularResidualDevelopment.lean:75]
+  RH_MASTER_EQUIVALENCE [snapshots/downloads/RH_MASTER_CLOSURE_ANGULAR_LEAN_v0_1_1_FIX1/RHMaster/ClosureAtlas.lean:41]
+
+============================================================================
+E19  Slope positivity on the smaller curved residual region
+NATIVE TARGET / NO EXTRA THEOREM HYPOTHESES
+
+Criterion (equivalent to its stated RH target):
+∀r>255/7, ∀x: −1<x<−84/85 and x≤−1+(84/167)/r ⇒ ∂xP(r,x)≥0.
+
+Additional hypotheses:
+  None in this declaration.
+
+Lean: NativeAngularResidualDevelopment.native_RH_iff_curvedAngularResidual
+    theorem native_RH_iff_curvedAngularResidual :
+        _root_.RiemannHypothesis ↔ CurvedAngularResidualNonnegative
+Source: snapshots/downloads/RH_NATIVE_CANDIDATES_v0_1_1_MELLIN/Develop/NativeAngularResidualDevelopment.lean:320
+Source SHA256: a8bf4702eebc50637f3d3da3923b0bc8f679c26e8b3ba5aa1c6f52d3afd18248
+Definition evidence: D019, D020
+Note: Accepted D155 audit log in focus_three_bridges_3595_19799_1630 lines27–30; source remains an equivalence, not a proof of the residual sign.
+Note: The extra radius-dependent curved bound removes an additional proved angular region.
+
+
+GROUP: Wedge exhaustion
+============================================================================
+E20  Zero exclusion in every positive-slope wedge
+NATIVE TARGET / NO EXTRA THEOREM HYPOTHESES
+
+Criterion (equivalent to its stated RH target):
+∀m>0, ∀s with 0<Re(s)<1 and |Im(s)|<m|Re(s)−1/2|, ζ(s)≠0.
+
+Additional hypotheses:
+  None in this declaration.
+
+Lean: RHMaster.rh_iff_allSlopeQQRH
+    theorem rh_iff_allSlopeQQRH : _root_.RiemannHypothesis ↔ AllSlopeQQRH
+Source: snapshots/downloads/RH_MASTER_CLOSURE_ANGULAR_LEAN_v0_1_1_FIX1/RHMaster/QQRHClosure.lean:71
+Source SHA256: 6af86a8b5a7f4b328726fa8cb72008e688fd563efc42d63261d2d8e0e294b3d1
+Definition evidence: D021, D022, D023
+Note: Coverage is over every positive wedge slope; a fixed slope is insufficient.
+
+============================================================================
+E21  Zero exclusion for a cofinal collection of slopes
+NATIVE TARGET / NO EXTRA THEOREM HYPOTHESES
+
+Criterion (equivalent to its stated RH target):
+∀M>0, ∃m≥M, QQRH(m).
+
+Additional hypotheses:
+  None in this declaration.
+
+Lean: RHMaster.rh_iff_cofinalSlopeQQRH
+    theorem rh_iff_cofinalSlopeQQRH : _root_.RiemannHypothesis ↔ CofinalSlopeQQRH
+Source: snapshots/downloads/RH_MASTER_CLOSURE_ANGULAR_LEAN_v0_1_1_FIX1/RHMaster/QQRHClosure.lean:74
+Source SHA256: 6af86a8b5a7f4b328726fa8cb72008e688fd563efc42d63261d2d8e0e294b3d1
+Definition evidence: D024
+Note: Old CofinalQQRH uses ∀M∈ℝ,∃m>M. These two cofinal conventions are grouped; no duplicate count.
+Note: Existential unbounded family rather than quantifying every slope.
+Aliases / closely matching source versions:
+  native_RH_iff_cofinal_QQRH [snapshots/downloads/RH_MASTER_ANGULAR_CLOSURE_LEAN_v0_1_0_FIX2/RHMaster/ClosureAtlas.lean:51]
+
+
+GROUP: Slope-dependent angular certificates
+============================================================================
+E22  Angular positivity certificates for every slope cutoff
+NATIVE TARGET / NO EXTRA THEOREM HYPOTHESES
+
+Criterion (equivalent to its stated RH target):
+∀m>0, ∀r>0, ∀(1−m²)/(1+m²)<x<1, D_xP(r,x)≥0.
+
+Additional hypotheses:
+  None in this declaration.
+
+Lean: RHMaster.rh_iff_allSlopePositivity
+    theorem rh_iff_allSlopePositivity :
+        _root_.RiemannHypothesis ↔ AllSlopePositivity
+Source: snapshots/downloads/RH_MASTER_CLOSURE_ANGULAR_LEAN_v0_1_1_FIX1/RHMaster/QQRHClosure.lean:93
+Source SHA256: 6af86a8b5a7f4b328726fa8cb72008e688fd563efc42d63261d2d8e0e294b3d1
+Definition evidence: D025, D026
+Note: Positive-slope angular certificate family, before transferring to wedge zero exclusion.
+
+
+GROUP: Actual RR defect
+============================================================================
+E23  Vanishing actual RR defect
+NATIVE TARGET / NO EXTRA THEOREM HYPOTHESES
+
+Criterion (equivalent to its stated RH target):
+C=Σ_occ δ²(3γ²+δ²)/(γ²(γ²+δ²)²)=0; positive-height canonical occurrences retain analytic multiplicity.
+
+Additional hypotheses:
+  None in this declaration.
+
+Lean: NativeRRBinding.actual_defect_zero_iff_nativeRH
+    theorem actual_defect_zero_iff_nativeRH : actualData.C = 0 ↔ _root_.RiemannHypothesis
+Source: snapshots/downloads/RH_NATIVE_CANDIDATES_v0_1_1_MELLIN/Develop/NativeRRBinding.lean:201
+Source SHA256: 9653ffc2a05cc7e4cbccbe3d138a9a859d2756a8a92cb83c15d5c77811e0ca63
+Definition evidence: D027, D028
+Note: ActualData and actualBinding are constructed, not theorem arguments. Accepted D156 native-equivalence dependency audit: focus_three_bridges_3595_19799_1630/D156.log lines23–26. Current source matches that session snapshot byte-for-byte.
+
+============================================================================
+E24  All-height inverse-square upper bound on the full actual defect
+NATIVE TARGET / NO EXTRA THEOREM HYPOTHESES
+
+Criterion (equivalent to its stated RH target):
+∀T≥1, 0≤C and C≤3 c1/(4T²), with actualData and c1=Σ_occ 1/γ².
+
+Additional hypotheses:
+  None in this declaration.
+
+Lean: NativeRRBinding.actual_all_height_bound_iff_nativeRH
+    theorem actual_all_height_bound_iff_nativeRH :
+        PositivityPremise.PositivityPremise actualData.C actualData.c1 ↔
+          _root_.RiemannHypothesis
+Source: snapshots/downloads/RH_NATIVE_CANDIDATES_v0_1_1_MELLIN/Develop/NativeRRBinding.lean:204
+Source SHA256: 9653ffc2a05cc7e4cbccbe3d138a9a859d2756a8a92cb83c15d5c77811e0ca63
+Definition evidence: D029, D030
+Note: The source theorem is in the accepted D156 module. Tail≤bound alone is not this all-height bound on full C.
+
+
+GROUP: RR central-curvature identification
+============================================================================
+E25  Inverse-height mass equals actual central xi curvature
+NATIVE TARGET / ADDITIONAL INTERFACE HYPOTHESES
+
+Criterion (equivalent to its stated RH target):
+c1 = Re[canonicalXi″(1/2)/(2 canonicalXi(1/2))].
+
+Additional hypotheses:
+  {ι : Type*} {D : ZeroData ι}
+  B : ZetaBinding D
+  htrace : TraceIdentification D (centerCurvature = D.trace)
+
+Lean: PositivityPremise.CENTRAL_CURVATURE_EQUALITY_IFF_RH
+    theorem CENTRAL_CURVATURE_EQUALITY_IFF_RH {ι : Type*} {D : ZeroData ι}
+        (B : ZetaBinding D) (htrace : TraceIdentification D) :
+        D.c1 = centerCurvature ↔ RiemannHypothesis
+Source: snapshots/downloads/RH_NATIVE_CANDIDATES_v0_1_1_MELLIN/PositivityPremise/LiteralZeta.lean:93
+Source SHA256: 14c9de048e3b7147dd7ae6a383e1f89986c65296b8ed3f8f47beb0ed34d33766
+Definition evidence: D031, D032, D033
+Note: The trace identification is an explicit hypothesis; do not silently specialize it to actualData as an established theorem.
+
+============================================================================
+E26  All-height decay of the central curvature defect
+NATIVE TARGET / ADDITIONAL INTERFACE HYPOTHESES
+
+Criterion (equivalent to its stated RH target):
+∀T≥1, 0≤c1−centerCurvature≤3 c1/(4T²).
+
+Additional hypotheses:
+  {ι : Type*} {D : ZeroData ι}
+  B : ZetaBinding D
+  htrace : TraceIdentification D
+
+Lean: PositivityPremise.CURVATURE_POSITIVITY_PREMISE_IFF_RH
+    theorem CURVATURE_POSITIVITY_PREMISE_IFF_RH {ι : Type*} {D : ZeroData ι}
+        (B : ZetaBinding D) (htrace : TraceIdentification D) :
+        PositivityPremise (D.c1 - centerCurvature) D.c1 ↔ RiemannHypothesis
+Source: snapshots/downloads/RH_NATIVE_CANDIDATES_v0_1_1_MELLIN/PositivityPremise/LiteralZeta.lean:86
+Source SHA256: 14c9de048e3b7147dd7ae6a383e1f89986c65296b8ed3f8f47beb0ed34d33766
+Definition evidence: D029
+Note: CanonicalZetaBinding strengthens B with injectivity and exact multiplicity but does not create a different scalar criterion; recorded as an alias with stronger assumptions.
+Aliases / closely matching source versions:
+  CANONICAL_POSITIVITY_PREMISE_IFF_RH [snapshots/downloads/RH_NATIVE_CANDIDATES_v0_1_1_MELLIN/PositivityPremise/LiteralZeta.lean:101]
+
+
+GROUP: Angular small-o asymptotic
+============================================================================
+E27  Angular integral remainder is little-o of radius
+NATIVE TARGET / NO EXTRA THEOREM HYPOTHESES
+
+Criterion (equivalent to its stated RH target):
+I(r)−πr S(r)=o(r) as r→0+, where I(r)=∫_{−1}^{1} (∂xP/P)√(1−x²) dx, and S(r) is the actual multiplicity-bearing critical-line cutoff at height 1/r.
+
+Additional hypotheses:
+  None in this declaration.
+
+Lean: RHSmallO.rh_iff_angular_integral_isLittleO
+    theorem rh_iff_angular_integral_isLittleO :
+        _root_.RiemannHypothesis ↔
+          (fun r : ℝ => AngularMaster.angularI r - Real.pi * r * criticalLineCutoff r)
+            =o[𝓝[>] 0] (fun r : ℝ => r)
+Source: snapshots/downloads/RH_GIGGA_SMALL_O_EQUIVALENCE_LEAN_v0_2_0/RHSmallOEquivalence.lean:33
+Source SHA256: 58c678f9818d39b183b7bf3b2b7bec49c0b43b8766457e19dd09b93595ab7a1f
+Definition evidence: D034, D035, D036, D037
+Note: No extra origin-trace or normalized-integral hypothesis in the final equivalence. The ordinary unnormalized limit I→0 is unconditional and is not this criterion.
+Aliases / closely matching source versions:
+  small_o_iff_RH [snapshots/downloads/RH_GIGGA_SMALL_O_EQUIVALENCE_LEAN_v0_2_0/RHSmallOEquivalence.lean:25]
+  rh_iff_small_o [snapshots/downloads/RH_GIGGA_SMALL_O_EQUIVALENCE_LEAN_v0_2_0/RHSmallOEquivalence.lean:29]
+
+
+GROUP: Relative derivative bound
+============================================================================
+E28  Finite radius-dependent relative derivative bound on the residual interval
+NATIVE TARGET / NO EXTRA THEOREM HYPOTHESES
+
+Criterion (equivalent to its stated RH target):
+∀r>255/7, ∃M>0, ∀−1<x≤−κ(r), A(r,x)>0 ⇒ (1+x)∂xA(r,x)≤M A(r,x); A=∂xP and κ(r)=inf_{R≥85/2} ((R−1/2)(R²+r²)/(2rR²)).
+
+Additional hypotheses:
+  None in this declaration.
+
+Lean: MisterPremise.MISTERPREMISE_iff_RiemannHypothesis
+    theorem MISTERPREMISE_iff_RiemannHypothesis :
+        MISTERPREMISE ↔ _root_.RiemannHypothesis
+Source: snapshots/downloads/RH_MISTERPREMISE_LEAN_v0_1_0/MisterPremise/Equivalence.lean:135
+Source SHA256: de152a63887d7c95ce8c05208e5a611648774b282cc11c3ea3fbc7e54b255b81
+Definition evidence: D038, D039, D040, D041
+Note: The finite constant may depend on r; it is uniform only in x on this interval. No global radius-independent constant or simple-zero assumption.
+Aliases / closely matching source versions:
+  RiemannHypothesis_iff_MISTERPREMISE [snapshots/downloads/RH_MISTERPREMISE_LEAN_v0_1_0/MisterPremise/Equivalence.lean:139]
+
+
+GROUP: Finite-rate angular propagation
+============================================================================
+E29  Locally integrable finite-rate control along the angle
+NATIVE TARGET / NO EXTRA THEOREM HYPOTHESES
+
+Criterion (equivalent to its stated RH target):
+∀r>0, ∃rate:ℝ→ℝ, rate is interval-integrable on [0,b] for every 0<b<π, rate≥0 on (0,π), and F(r,θ)>0 ⇒ ∂θF(r,θ)≥−rate(θ)F(r,θ), where F(r,θ)=∂xP(r,cosθ).
+
+Additional hypotheses:
+  None in this declaration.
+
+Lean: TaylorsProdigy.TAYLORS_PRODIGY_PREMISE_iff_RH
+    theorem TAYLORS_PRODIGY_PREMISE_iff_RH :
+        TAYLORS_PRODIGY_PREMISE ↔ _root_.RiemannHypothesis
+Source: snapshots/downloads/TAYLORS_PRODIGY_LEAN_v0_2_0/TaylorProdigy/Equivalence.lean:9
+Source SHA256: 12ec9f59b7445c05e8a57593d07ea98e28b04a910c1b9c120e401e3e812e319e
+Definition evidence: D042, D043, D044
+Note: Namespace is TaylorsProdigy (plural), import module is TaylorProdigy.Equivalence (singular). v0_2_0 contains the converse for the unchanged premise.
+
+
+GROUP: Local first-order increments
+============================================================================
+E30  Arbitrarily small negative linear error in local forward increments
+NATIVE TARGET / NO EXTRA THEOREM HYPOTHESES
+
+Criterion (equivalent to its stated RH target):
+∀r>0,−1<x<1,∀ε>0,∃η>0,∀0<h<η with x+h≤1: P(r,x+h)−P(r,x)≥−εh.
+
+Additional hypotheses:
+  None in this declaration.
+
+Lean: StirlingsProdigy.STIRLINGS_PRODIGY_LOCAL_IFF_RH
+    theorem STIRLINGS_PRODIGY_LOCAL_IFF_RH :
+        STIRLINGS_PRODIGY_LOCAL ↔ _root_.RiemannHypothesis
+Source: snapshots/downloads/STIRLINGS_PRODIGY_LEAN_v0_2_0/StirlingsProdigy/Equivalence.lean:32
+Source SHA256: 2936d9b7c7b5bcc41ee50b608aff812b42b63fa163ea06f1e02a3336f82969e1
+Definition evidence: D045, D046
+Note: Only the separately named LOCAL criterion has a converse. The original global affine STIRLINGS_PRODIGY remains sufficient only.
+Aliases / closely matching source versions:
+  RH_IFF_STIRLINGS_PRODIGY_LOCAL [snapshots/downloads/STIRLINGS_PRODIGY_LEAN_v0_2_0/StirlingsProdigy/Equivalence.lean:37]
+
+
+GROUP: Dyadic contraction and passivity
+============================================================================
+E31  Canonical exact two-sided passivity
+NATIVE TARGET / NO EXTRA THEOREM HYPOTHESES
+
+Criterion (equivalent to its stated RH target):
+For every PhiZero phiEta rho, D_+(rho) ≤ 0 and D_-(rho) ≤ 0, where D_±=(g_±−1)E_±, g_+=scale2(2(Re rho−1/2)), g_−=scale2(−2(Re rho−1/2)), and E_± are canonicalModel exact energies.
+
+Additional hypotheses:
+  None in this declaration.
+
+Lean: AWPI.PhiRH.NativeRHExactWaist.CANONICAL_TWO_DEFECT_SIGNS_IFF_MATHLIB_RH
+    theorem CANONICAL_TWO_DEFECT_SIGNS_IFF_MATHLIB_RH :
+        CanonicalTwoDefectSigns ↔
+          RiemannHypothesis
+Source: snapshots/downloads/AWPI_PHI_RH_NATIVE_FINAL_FREEZE_20260918/AWPI/PhiRH/NativeRHExactWaist.lean:170
+Source SHA256: b0b80b4872913e6da25b88146277f1216695987922b0c23be6940e7eb3ed7c1d
+Definition evidence: D047, D048
+Note: Gain bounds g_±≤1 and centered bounds c≤0≤c are algebraic normal forms of this entry, not extra independent mechanisms.
+Aliases / closely matching source versions:
+  AWPI.PhiRH.NativeRHExactWaist.EXACT_TWO_SIDED_PASSIVITY_IFF_MATHLIB_RH [snapshots/downloads/AWPI_PHI_RH_NATIVE_FINAL_FREEZE_20260918/AWPI/PhiRH/NativeRHExactWaist.lean:148]
+  AWPI.PhiRH.NativeRHFinal.RH_IFF_CANONICAL_GAIN_BOUNDS [snapshots/downloads/AWPI_PHI_RH_NATIVE_FINAL_FREEZE_20260918/AWPI/PhiRH/NativeRHFinal.lean:16]
+  AWPI.PhiRH.NativeRHAlgebraicWaist.CENTERED_BOUNDS_IFF_MATHLIB_RH [snapshots/downloads/AWPI_PHI_RH_NATIVE_FINAL_FREEZE_20260918/AWPI/PhiRH/NativeRHAlgebraicWaist.lean:230]
+
+============================================================================
+E32  Literal reciprocal dyadic contraction
+NATIVE TARGET / NO EXTRA THEOREM HYPOTHESES
+
+Criterion (equivalent to its stated RH target):
+For every PhiZero phiEta rho, 2^{2(Re rho−1/2)}≤1 and 2^{−2(Re rho−1/2)}≤1.
+
+Additional hypotheses:
+  None in this declaration.
+
+Lean: AWPI.PhiRH.NativeRHGlobalNormalForm.GLOBAL_LITERAL_DYADIC_CONTRACTION_IFF_MATHLIB_RH
+    theorem GLOBAL_LITERAL_DYADIC_CONTRACTION_IFF_MATHLIB_RH :
+        GlobalLiteralDyadicContraction ↔
+          RiemannHypothesis
+Source: snapshots/downloads/awpi_phi_rh_lean_dyadic_scale_v0_1_8_run_20260918_182436_414/awpi_phi_rh_lean_dyadic_scale_v0_1_8/AWPI/PhiRH/NativeRHGlobalNormalForm.lean:34
+Source SHA256: 4f77a537f64cc04e72e137c86708a192d1f339b572984b574f97e027ae7fd17d
+Definition evidence: D049, D050
+Note: Fully expanded gain normal form of AWPI01; retain as a useful explicit formula but do not count as a separate research mechanism.
+Note: dyadicScale a is defined as Real.exp(a * Real.log 2), the literal exponential representation of 2^a.
+
+============================================================================
+E33  One-sided dyadic contraction, with reflection
+NATIVE TARGET / NO EXTRA THEOREM HYPOTHESES
+
+Criterion (equivalent to its stated RH target):
+For every PhiZero phiEta rho, 2^{2(Re rho−1/2)}≤1. Equivalently the reverse-sign contraction holds at every zero. The equivalent native-zeta version is ScalarDyadicCore: every NontrivialZetaZero has the plus gain ≤1.
+
+Additional hypotheses:
+  None in this declaration.
+
+Lean: AWPI.PhiRH.NativeRHOneSidedReflection.GLOBAL_PLUS_DYADIC_CONTRACTION_IFF_MATHLIB_RH
+    theorem GLOBAL_PLUS_DYADIC_CONTRACTION_IFF_MATHLIB_RH :
+        GlobalPlusDyadicContraction ↔
+          RiemannHypothesis
+Source: snapshots/downloads/awpi_phi_rh_lean_dyadic_scale_v0_1_8_run_20260918_182436_414/awpi_phi_rh_lean_dyadic_scale_v0_1_8/AWPI/PhiRH/NativeRHOneSidedReflection.lean:154
+Source SHA256: eefd03d3776ebc9fd7380566653003b1156ab69141f9a538368773338e778596
+Note: The one-sided reduction uses the genuine functional-equation reflection rho↦1−rho. MinimalRHFrontier is simply ∀ nontrivial zeros, Re rho≤1/2. Group plus/minus and scalar/minimal names together.
+Aliases / closely matching source versions:
+  AWPI.PhiRH.NativeRHOneSidedReflection.GLOBAL_MINUS_DYADIC_CONTRACTION_IFF_MATHLIB_RH [snapshots/downloads/awpi_phi_rh_lean_dyadic_scale_v0_1_8_run_20260918_182436_414/awpi_phi_rh_lean_dyadic_scale_v0_1_8/AWPI/PhiRH/NativeRHOneSidedReflection.lean:209]
+  AWPI.PhiRH.ScalarConcreteFrontier.scalarDyadicCore_iff_mathlibRH [snapshots/downloads/awpi_phi_rh_lean_minimal_frontier_v0_2_17_native16_run_20260919_101403_208/awpi_phi_rh_lean_minimal_frontier_v0_2_17_native16/AWPI/PhiRH/ScalarConcreteFrontier.lean:87]
+  AWPI.PhiRH.MinimalFrontier.minimalRHFrontier_iff_mathlibRH [snapshots/downloads/awpi_phi_rh_lean_minimal_frontier_v0_2_17_native16_run_20260919_101403_208/awpi_phi_rh_lean_minimal_frontier_v0_2_17_native16/AWPI/PhiRH/MinimalFrontier.lean:39]
+
+============================================================================
+E34  Canonical exact one-sided passivity
+NATIVE TARGET / NO EXTRA THEOREM HYPOTHESES
+
+Criterion (equivalent to its stated RH target):
+For every NontrivialZetaZero rho, canonicalPlusExactDefect rho≤0, with defect (2^{2(Re rho−1/2)}−1)·canonicalPlusJet(rho)^2.
+
+Additional hypotheses:
+  None in this declaration.
+
+Lean: AWPI.PhiRH.ScalarConcreteFrontier.plusPassivityCore_iff_RiemannHypothesis
+    theorem plusPassivityCore_iff_RiemannHypothesis :
+        PlusPassivityCore ↔ RiemannHypothesis
+Source: snapshots/lean-native/awpi_phi_rh_lean_sieved_v0_1_1/AWPI/PhiRH/ScalarConcreteFrontier.lean:93
+Source SHA256: caab68732cd28164148492b1fc68689e2761e886ddcf3ad6731399882735d44a
+Definition evidence: D051, D052
+Note: Positive canonical jet square and reflection reduce this to AWPI03. A useful energy expression, not a separate mathematical mechanism.
+
+============================================================================
+E35  Pointwise GP/BKQR one-sided passivity
+NATIVE TARGET / NO EXTRA THEOREM HYPOTHESES
+
+Criterion (equivalent to its stated RH target):
+For every literal nontrivial zeta zero rho, there exists c>0 with (2^(2*(Re rho-1/2))-1)*c^2 <= 0. Reflection of zeta zeros yields the critical-line conclusion.
+
+Additional hypotheses:
+  None in this declaration.
+
+Lean: ConstructiveCriticalLine.actualPointwiseGPBKQRPlusPassivity_iff_riemannHypothesis
+    theorem actualPointwiseGPBKQRPlusPassivity_iff_riemannHypothesis :
+        ActualPointwiseGPBKQRPlusPassivity ↔ RiemannHypothesis
+Source: snapshots/downloads/CONSTRUCTIVE_RH_ACTUAL_GP_BKQR_GAP_LEAN_v0_3_0/ActualGPBKQRGap.lean:44
+Source SHA256: d114fd783095587758f66a29792af2f60e8ecb8ab91afbb382a4aa283099d3a0
+Definition evidence: D053, D054, D055, D056, D057, D058
+Note: Proof of both directions is present. Project imports Mathlib.NumberTheory.LSeries.Nonvanishing and derives reflection; no project axiom/opaque/sorry/admit occurrences were found in this package by static search. This criterion is exactly the universal one-sided real-part inequality; the independent operator intertwining construction is a separate sufficient input.
+
+
+GROUP: Exact defect controlled by KQ tails
+============================================================================
+E36  Canonical exact-to-KQ-tail upper bounds
+NATIVE TARGET / NO EXTRA THEOREM HYPOTHESES
+
+Criterion (equivalent to its stated RH target):
+For all n∈ℕ and all NontrivialZetaZero rho, canonicalPlusExactDefect(rho) ≤ canonicalKQPlusSource(n,Re rho,Im rho)^2.
+
+Additional hypotheses:
+  None in this declaration.
+
+Lean: AWPI.PhiRH.CanonicalOneSidedTail.canonicalPlusExactTailUpper_iff_RiemannHypothesis
+    theorem canonicalPlusExactTailUpper_iff_RiemannHypothesis :
+        CanonicalPlusExactTailUpper ↔ RiemannHypothesis
+Source: snapshots/lean-native/awpi_phi_rh_lean_sieved_v0_1_1/AWPI/PhiRH/CanonicalOneSidedTail.lean:152
+Source SHA256: f5e6948f3afef9d09d3316387ad111fa4edafe9e1389086a85981b5ba636aff3
+Definition evidence: D059
+Note: canonicalTransverseJet is defined to be rhoNorm2(rho)·shiftedPhiNorm2(canonicalPhiS1,rho); binding scales are defined to be 1. This is a concrete model choice, not an equality with an independently defined historical analytic jet.
+Note: The source proves canonical KQ tail decay and jet activity; letting the squared tail become arbitrarily small gives passivity. Conversely RH makes the defect zero.
+
+============================================================================
+E37  Raw terminal-Phi cell bound / actual KQ limit core
+NATIVE TARGET / NO EXTRA THEOREM HYPOTHESES
+
+Criterion (equivalent to its stated RH target):
+For all n and nontrivial zeros rho=σ+iτ: (2^{2(σ−1/2)}−1)(σ²+τ²)² ≤ [cos(τ log 2)·phiCellRe(n,1,σ,τ)+sin(τ log 2)·phiCellIm(n,1,σ,τ)]². Here phiCellRe(n,u,σ,τ)=4(−1)^n(2n+u+1)^{−σ}cos(τ log(2n+u+1)), and phiCellIm has the corresponding negative sine.
+
+Additional hypotheses:
+  None in this declaration.
+
+Lean: AWPI.PhiRH.RawConcreteFrontier.rawActualPlusKQFrontier_iff_mathlibRH
+    theorem rawActualPlusKQFrontier_iff_mathlibRH :
+        RawActualPlusKQFrontier ↔ RiemannHypothesis
+Source: snapshots/downloads/awpi_phi_rh_lean_scalar_frontier_v0_2_16_native16_run_20260919_100223_134/awpi_phi_rh_lean_scalar_frontier_v0_2_16_native16/AWPI/PhiRH/RawConcreteFrontier.lean:81
+Source SHA256: 0cf503df297a115c62b5fb274b4567b56ec93592f1c1e1b607b9ae23ae7b3a3f
+Definition evidence: D060, D061, D062
+Note: ActualPlusKQLimitCore and RawActualPlusKQFrontier are proved equivalent by exact source formula exposure. This is the explicit older audited normalization of the same tail-bound mechanism as AWPI05; do not silently identify their jets across snapshots.
+Aliases / closely matching source versions:
+  AWPI.PhiRH.SingleConcreteFrontier.actualPlusKQLimitCore_iff_mathlibRH [snapshots/downloads/awpi_phi_rh_lean_scalar_frontier_v0_2_16_native16_run_20260919_100223_134/awpi_phi_rh_lean_scalar_frontier_v0_2_16_native16/AWPI/PhiRH/SingleConcreteFrontier.lean:164]
+
+
+GROUP: Finite-energy factorization
+============================================================================
+E38  Existence of a one-sided finite-energy factorization
+NATIVE TARGET / NO EXTRA THEOREM HYPOTHESES
+
+Criterion (equivalent to its stated RH target):
+There exist finite energies F_n(rho), tails T_n(rho), and a scalar remainder r_n such that at every nontrivial zero: E=F_n+T_n; (g−1)F_n≤0; (g−1)T_n≤r_n; and ∀ε>0 ∃n, r_n≤ε. Here E is the canonical plus-jet square and g=2^{2(Re rho−1/2)}.
+
+Additional hypotheses:
+  None in this declaration.
+
+Lean: AWPI.PhiRH.FactorizationFrontier.existsCanonicalPlusFactorization_iff_mathlibRH
+    theorem existsCanonicalPlusFactorization_iff_mathlibRH :
+        ExistsCanonicalPlusFactorization ↔ RiemannHypothesis
+Source: snapshots/downloads/awpi_phi_rh_lean_factorization_frontier_v0_2_12_native16_run_20260918_204106_782/awpi_phi_rh_lean_factorization_frontier_v0_2_12_native16/AWPI/PhiRH/FactorizationFrontier.lean:138
+Source SHA256: 30bf20868e466c50fe22e5d59b57ec5d523898fe0857516fd43e096c0ade7781
+Definition evidence: D063
+Note: No nonnegativity, prescribed approximation process, or Tendsto condition on F,T,r is included in this definition. The same r_n works at all zeros. Its arbitrarily-small-from-above condition is weaker than asserting convergence.
+Note: Forward: exact defect splits into finite defect plus tail defect and is ≤r_n; force ≤0 then use reflection. Reverse: choose F_n=E,T_n=0,r_n=0 under RH.
+
+
+GROUP: Telescoping negative-square sources
+============================================================================
+E39  Existence of a telescoping negative-square source
+NATIVE TARGET / NO EXTRA THEOREM HYPOTHESES
+
+Criterion (equivalent to its stated RH target):
+There exist F_n(rho), T_n(rho), scalar r_n, and cells b_n(rho) with E=F_n+T_n, b_0=0, (g−1)F_n=∑_{k<n}(−b_{k+1}²+b_k²), (g−1)T_n≤r_n, and ∀ε>0 ∃n, r_n≤ε, at every nontrivial zero.
+
+Additional hypotheses:
+  None in this declaration.
+
+Lean: AWPI.PhiRH.HistoricalSourceStandaloneClean.existsHistoricalPlusPointwiseSource_iff_mathlibRH
+    theorem existsHistoricalPlusPointwiseSource_iff_mathlibRH :
+        ExistsHistoricalPlusPointwiseSource ↔ RiemannHypothesis
+Source: snapshots/downloads/awpi_phi_rh_lean_scalar_frontier_v0_2_16_native16_run_20260919_100223_134/awpi_phi_rh_lean_scalar_frontier_v0_2_16_native16/AWPI/PhiRH/HistoricalSourceStandaloneClean.lean:290
+Source SHA256: 655fff1004fdfd4fed378b41cd03fb2cf49758ea9657ace91062b751533a0c92
+Definition evidence: D064, D065
+Note: Retain this as a structured certificate form of AWPI07; the extra source form supplies a mechanism for finite passivity, not an independent verification that the source exists.
+Note: The source record has exactly five fields. Cells and finite/tail energies are existentially free; they are not fixed by a pre-existing analytic construction.
+Note: Telescoping gives finite defect −b_n²≤0, then the tail argument gives passivity. Reverse RH uses zero finite energy, the whole energy as tail, zero cells and zero remainder.
+
+
+GROUP: Calibrated two-sided constructor
+============================================================================
+E40  Existential two-sided constructor under calibrated background
+NATIVE TARGET / ADDITIONAL INTERFACE HYPOTHESES
+
+Criterion (equivalent to its stated RH target):
+Constructor(literalZetaModel) ↔ native RH, for a model whose zero predicate and real part are literally those of zeta. Constructor asks for finite defects and square functions, negative-square identities, and exact-defect ≤ finite-defect + squared-tail bounds on both sides.
+
+Additional hypotheses:
+  Arbitrary Jet type; state : ℂ→Jet; energies : Jet→ℝ; scale2 : ℝ→ℝ; two tail sources : ℕ→ℂ→ℝ; sourceFormula : Prop.
+  NormalizedDyadicMultiplierFacts: sourceFormula plus positive strip imply simultaneous arbitrarily small squared tails.
+  Scale2Facts: scale2(0)=1 and StrictMono scale2.
+  Background: sourceFormula holds; zeros lie in the positive strip; both exact energies are strictly positive at zeros; both critical-line gains equal 1.
+
+Lean: AWPI.PhiRH.LiteralModel.literalModel_constructorIffMathlibRHUnderBackground
+    theorem literalModel_constructorIffMathlibRHUnderBackground
+        {Jet : Type v}
+        (state : ℂ → Jet)
+        (energyPlus energyMinus : Jet → ℝ)
+        (scale2 : ℝ → ℝ)
+        (plusTailSource minusTailSource : ℕ → ℂ → ℝ)
+        (sourceFormula : Prop)
+        (v23 : NormalizedDyadicMultiplierFacts
+          (literalZetaModel Jet state energyPlus energyMinus scale2
+            plusTailSource minusTailSource sourceFormula))
+        (scaleFacts : Scale2Facts
+          (literalZetaModel Jet state energyPlus energyMinus scale2
+            plusTailSource minusTailSource sourceFormula))
+        (hB : Background
+          (literalZetaModel Jet state energyPlus energyMinus scale2
+            plusTailSource minusTailSource sourceFormula)) :
+        Constructor
+          (literalZetaModel Jet state energyPlus energyMinus scale2
+            plusTailSource minusTailSource sourceFormula) ↔
+          RiemannHypothesis
+Source: snapshots/lean-native/awpi_phi_rh_lean_sieved_v0_1_1/AWPI/PhiRH/LiteralModel.lean:166
+Source SHA256: 497d1eac96c9f33acb0867a0033e3e8bff5123162f7222bc4901549929b9bd7b
+Definition evidence: D066, D067, D068, D069, D070
+
+
+GROUP: Cofinal uniform Widder positivity
+============================================================================
+E41  Cofinal uniform positivity of the frozen raw-xi Widder tower
+NATIVE TARGET / ADDITIONAL INTERFACE HYPOTHESES
+
+Criterion (equivalent to its stated RH target):
+For every K there is N>=K such that actualWidderMoment(a,N)>=0 for every a>0.
+
+Additional hypotheses:
+  hDown : ActualWidderDownwardPositivity
+    Uniform positivity at depth n+1 implies uniform positivity at n for every n.
+  hStieltjes : ActualWidderStieltjesSlitExclusion
+    All-depth positivity implies every nontrivial zeta-zero centered square lies outside the slit plane.
+  hReverse : RHImpliesAllDepthWidderPositive
+    Mathlib RH implies all-depth positivity of this actual tower.
+
+Lean: NativeSoloboloContinuant.US_IFF_MATHLIB_RH_05
+    theorem US_IFF_MATHLIB_RH_05
+        (hDown : ActualWidderDownwardPositivity)
+        (hStieltjes : ActualWidderStieltjesSlitExclusion)
+        (hReverse : RHImpliesAllDepthWidderPositive) :
+        US ↔ RiemannHypothesis
+Source: snapshots/downloads/RH_NATIVE_SOLOBOLO_US_IFF_RH_MERGER_04_v0_2_1_FIX1/Bridge/USIffRH05.lean:32
+Source SHA256: 5d563869b07ce7e2d0f437c69330d7605dec3fe38c829e0c2a213d77b5c2629f
+Definition evidence: D074, D075, D076, D077
+Note: This theorem is an equivalence architecture with three unprovided analytic interfaces.
+Note: The source tower uses the frozen literal rawXi=s(s-1)*completedRiemannZeta s, not the regularized entire xi at s=0,1.
+Note: US_IFF_PPC_05 and US_RH_PPC_EQUIVALENCE_ATLAS_05 are aliases/combination statements and not counted as new criteria.
+
+PART II — OPAQUE-MODEL IFF DECLARATIONS
+Here RHGPBKQR.RiemannHypothesis is an opaque project proposition.
+Literature anchors are explicit axioms in these snapshots. They are recorded
+as source architecture, not independently verified mathematical literature claims.
+ActualXi-named wrappers do not alone identify the abstract coefficients with ξ.
+============================================================================
+M01  Zhang-normalized Hausdorff finite-difference positivity
+OPAQUE MODEL / LITERATURE-AXIOM TARGET
+
+Criterion (equivalent to its stated RH target):
+For the abstract integer sequence c=ZhangNormalizedCoeff, every signed finite difference (-1)^k Delta^k c_n is nonnegative.
+
+Additional hypotheses:
+  RHGPBKQR.Literature.Zhang2023.ZHANG2023_FRONTIER_ANCHOR : Zhang2023LiteraturePackage (axiom), whose rhIffHausdorff field supplies the RH equivalence.
+  RHGPBKQR.RiemannHypothesis is a bodyless opaque Prop, not Mathlib _root_.RiemannHypothesis. ZhangNormalizedCoeff is defined from opaque ZhangCenteredXiCoeff, ReducedXiLogJetOf and ZhangScaleNormalize. No source-level identification of these objects with the actual analytic Xi data is supplied by the declarations cited here.
+
+Lean: RHGPBKQR.Derivations.RH_IFF_HAUSDORFF
+    theorem RH_IFF_HAUSDORFF : RiemannHypothesis ↔ HausdorffPositive
+Source: snapshots/downloads/RH_GP_BKQR_OPERATION_ZHANG_FIREWALL_LEAN_v0_4_3_FIX1/Derivations/LiteratureFrontierDerivation.lean:10
+Source SHA256: c6f94965ddb1cf33e1e38273bbe3e51d36b036e26ef24cac0b41d6e9bc78d726
+Definition evidence: D078, D079, D080, D081, D082
+
+============================================================================
+M02  Zhang complete-monotonicity hierarchy
+OPAQUE MODEL / LITERATURE-AXIOM TARGET
+
+Criterion (equivalent to its stated RH target):
+The source comments describe existence of a derivative order m such that all G_k^(m) are completely monotone on (0,infinity); formally the entire criterion is the opaque Prop Zhang2022CompleteMonotonicityHierarchy.
+
+Additional hypotheses:
+  RHGPBKQR.Literature.Zhang2022.ZHANG2022_FRONTIER_ANCHOR : Zhang2022LiteraturePackage (axiom); rhIffCompleteMonotonicity field.
+  RHGPBKQR.RiemannHypothesis is a bodyless opaque Prop, not Mathlib _root_.RiemannHypothesis. ZhangNormalizedCoeff is defined from opaque ZhangCenteredXiCoeff, ReducedXiLogJetOf and ZhangScaleNormalize. No source-level identification of these objects with the actual analytic Xi data is supplied by the declarations cited here.
+
+Lean: RHGPBKQR.Derivations.RH_IFF_ZHANG2022_COMPLETE_MONOTONICITY
+    theorem RH_IFF_ZHANG2022_COMPLETE_MONOTONICITY :
+        RiemannHypothesis ↔ Zhang2022CompleteMonotonicityHierarchy
+Source: snapshots/downloads/RH_GP_BKQR_OPERATION_ZHANG_FIREWALL_LEAN_v0_4_3_FIX1/Derivations/LiteratureFrontierDerivation.lean:14
+Source SHA256: c6f94965ddb1cf33e1e38273bbe3e51d36b036e26ef24cac0b41d6e9bc78d726
+Definition evidence: D083, D084
+Note: No formula defining G_k^(m), complete monotonicity, or its link to actual Xi is encoded in this opaque criterion. Comment-only mathematical interpretation is not counted as a formal definition.
+
+============================================================================
+M03  Wall continued-fraction admissibility
+OPAQUE MODEL / LITERATURE-AXIOM TARGET
+
+Criterion (equivalent to its stated RH target):
+Wall/Sokal admissibility of the normalized Hausdorff continued fraction; represented only by opaque WallAdmissible.
+
+Additional hypotheses:
+  RHGPBKQR.Literature.Zhang2023.ZHANG2023_FRONTIER_ANCHOR : Zhang2023LiteraturePackage (axiom), whose rhIffHausdorff field supplies the RH equivalence.
+  RHGPBKQR.RiemannHypothesis is a bodyless opaque Prop, not Mathlib _root_.RiemannHypothesis. ZhangNormalizedCoeff is defined from opaque ZhangCenteredXiCoeff, ReducedXiLogJetOf and ZhangScaleNormalize. No source-level identification of these objects with the actual analytic Xi data is supplied by the declarations cited here.
+  RHGPBKQR.Literature.Sokal2020.HAUSDORFF_IFF_WALL_ANCHOR : HausdorffPositive <-> WallAdmissible (axiom).
+
+Lean: RHGPBKQR.Derivations.RH_IFF_WALL
+    theorem RH_IFF_WALL : RiemannHypothesis ↔ WallAdmissible
+Source: snapshots/downloads/RH_GP_BKQR_OPERATION_ZHANG_FIREWALL_LEAN_v0_4_3_FIX1/Derivations/LiteratureFrontierDerivation.lean:52
+Source SHA256: c6f94965ddb1cf33e1e38273bbe3e51d36b036e26ef24cac0b41d6e9bc78d726
+Definition evidence: D085
+Note: A named opaque literature node, not an implemented continued fraction.
+
+============================================================================
+M04  Subnormality of the canonical weighted shift
+OPAQUE MODEL / LITERATURE-AXIOM TARGET
+
+Criterion (equivalent to its stated RH target):
+Subnormality of the canonical weighted shift; represented only by opaque WeightedShiftSubnormal.
+
+Additional hypotheses:
+  RHGPBKQR.Literature.Zhang2023.ZHANG2023_FRONTIER_ANCHOR : Zhang2023LiteraturePackage (axiom), whose rhIffHausdorff field supplies the RH equivalence.
+  RHGPBKQR.RiemannHypothesis is a bodyless opaque Prop, not Mathlib _root_.RiemannHypothesis. ZhangNormalizedCoeff is defined from opaque ZhangCenteredXiCoeff, ReducedXiLogJetOf and ZhangScaleNormalize. No source-level identification of these objects with the actual analytic Xi data is supplied by the declarations cited here.
+  RHGPBKQR.Literature.BergerGellarWallen.HAUSDORFF_IFF_WEIGHTED_SHIFT_SUBNORMAL_ANCHOR (axiom).
+
+Lean: RHGPBKQR.Derivations.RH_IFF_WEIGHTED_SHIFT_SUBNORMAL
+    theorem RH_IFF_WEIGHTED_SHIFT_SUBNORMAL :
+        RiemannHypothesis ↔ WeightedShiftSubnormal
+Source: snapshots/downloads/RH_GP_BKQR_OPERATION_ZHANG_FIREWALL_LEAN_v0_4_3_FIX1/Derivations/LiteratureFrontierDerivation.lean:62
+Source SHA256: c6f94965ddb1cf33e1e38273bbe3e51d36b036e26ef24cac0b41d6e9bc78d726
+Definition evidence: D086
+Note: No actual weighted shift or subnormality predicate is defined at this literature node.
+
+============================================================================
+M05  Complete hypercontractivity of the canonical shift
+OPAQUE MODEL / LITERATURE-AXIOM TARGET
+
+Criterion (equivalent to its stated RH target):
+Complete hypercontractivity of the canonical weighted shift; represented only by opaque WeightedShiftCompletelyHypercontractive.
+
+Additional hypotheses:
+  RHGPBKQR.Literature.Zhang2023.ZHANG2023_FRONTIER_ANCHOR : Zhang2023LiteraturePackage (axiom), whose rhIffHausdorff field supplies the RH equivalence.
+  RHGPBKQR.RiemannHypothesis is a bodyless opaque Prop, not Mathlib _root_.RiemannHypothesis. ZhangNormalizedCoeff is defined from opaque ZhangCenteredXiCoeff, ReducedXiLogJetOf and ZhangScaleNormalize. No source-level identification of these objects with the actual analytic Xi data is supplied by the declarations cited here.
+  RHGPBKQR.Literature.BergerGellarWallen.HAUSDORFF_IFF_WEIGHTED_SHIFT_SUBNORMAL_ANCHOR (axiom).
+  RHGPBKQR.Literature.Agler1985.COMPLETE_HYPERCONTRACTIVE_IFF_SUBNORMAL_ANCHOR (axiom).
+
+Lean: RHGPBKQR.Derivations.RH_IFF_COMPLETE_HYPERCONTRACTIVITY
+    theorem RH_IFF_COMPLETE_HYPERCONTRACTIVITY :
+        RiemannHypothesis ↔ WeightedShiftCompletelyHypercontractive
+Source: snapshots/downloads/RH_GP_BKQR_OPERATION_ZHANG_FIREWALL_LEAN_v0_4_3_FIX1/Derivations/LiteratureFrontierDerivation.lean:73
+Source SHA256: c6f94965ddb1cf33e1e38273bbe3e51d36b036e26ef24cac0b41d6e9bc78d726
+Definition evidence: D087
+Note: The full complete-hypercontractivity definition and operator hypotheses are not encoded at this opaque literature node.
+
+============================================================================
+M06  Positive Pascal-Hopf realization
+OPAQUE MODEL / LITERATURE-AXIOM TARGET
+
+Criterion (equivalent to its stated RH target):
+There exists an integer lattice v(n,k)>=0 with v(n,0)=c_n and v(n,k)=v(n+1,k)+v(n,k+1), for the canonical GP/Zhang coefficient sequence.
+
+Additional hypotheses:
+  RHGPBKQR.Literature.Zhang2023.ZHANG2023_FRONTIER_ANCHOR : Zhang2023LiteraturePackage (axiom), whose rhIffHausdorff field supplies the RH equivalence.
+  RHGPBKQR.RiemannHypothesis is a bodyless opaque Prop, not Mathlib _root_.RiemannHypothesis. ZhangNormalizedCoeff is defined from opaque ZhangCenteredXiCoeff, ReducedXiLogJetOf and ZhangScaleNormalize. No source-level identification of these objects with the actual analytic Xi data is supplied by the declarations cited here.
+
+Lean: RHGPBKQR.RH_IFF_PASCAL_HOPF_ANCHOR
+    theorem RH_IFF_PASCAL_HOPF_ANCHOR :
+        RiemannHypothesis ↔ PascalHopfAnchor
+Source: snapshots/downloads/RH_GP_BKQR_OPERATION_ZHANG_FIREWALL_LEAN_v0_4_3_FIX1/Main.lean:24
+Source SHA256: 89fbb7a57af8d022502e9cb479107ffc13503e004a085a6b75640f35218063fa
+Definition evidence: D088, D089
+Note: The core equivalence with finite-difference positivity is proved constructively. Hopf here denotes this algebraic Pascal splitting; it does not assert a topological Hopf fibration or a Hilbert realization.
+
+============================================================================
+M07  Natural-valued BKQR energy lattice
+OPAQUE MODEL / LITERATURE-AXIOM TARGET
+
+Criterion (equivalent to its stated RH target):
+There exists E:Nat x Nat -> Nat with Int.ofNat(E(n,0))=c_n and E(n,k)=E(n+1,k)+E(n,k+1).
+
+Additional hypotheses:
+  RHGPBKQR.Literature.Zhang2023.ZHANG2023_FRONTIER_ANCHOR : Zhang2023LiteraturePackage (axiom), whose rhIffHausdorff field supplies the RH equivalence.
+  RHGPBKQR.RiemannHypothesis is a bodyless opaque Prop, not Mathlib _root_.RiemannHypothesis. ZhangNormalizedCoeff is defined from opaque ZhangCenteredXiCoeff, ReducedXiLogJetOf and ZhangScaleNormalize. No source-level identification of these objects with the actual analytic Xi data is supplied by the declarations cited here.
+
+Lean: RHGPBKQR.RH_IFF_BKQR_ENERGY_ANCHOR
+    theorem RH_IFF_BKQR_ENERGY_ANCHOR :
+        RiemannHypothesis ↔ BKQREnergyAnchor
+Source: snapshots/downloads/RH_GP_BKQR_OPERATION_ZHANG_FIREWALL_LEAN_v0_4_3_FIX1/Main.lean:33
+Source SHA256: 89fbb7a57af8d022502e9cb479107ffc13503e004a085a6b75640f35218063fa
+Definition evidence: D090, D091
+Note: BKQRGramData and BKQRContractionData are merely abbreviations of this energy lattice. No genuine inner-product space, operator norm, or topological completeness is supplied by this criterion.
+
+============================================================================
+M08  Positive-stage finite-jet approximation
+OPAQUE MODEL / LITERATURE-AXIOM TARGET
+
+Criterion (equivalent to its stated RH target):
+There are stage sequences c_Y and nonnegative integer energies for every signed difference, and for each finite cutoff the target coefficients agree EXACTLY with c_Y at every sufficiently large stage.
+
+Additional hypotheses:
+  RHGPBKQR.Literature.Zhang2023.ZHANG2023_FRONTIER_ANCHOR : Zhang2023LiteraturePackage (axiom), whose rhIffHausdorff field supplies the RH equivalence.
+  RHGPBKQR.RiemannHypothesis is a bodyless opaque Prop, not Mathlib _root_.RiemannHypothesis. ZhangNormalizedCoeff is defined from opaque ZhangCenteredXiCoeff, ReducedXiLogJetOf and ZhangScaleNormalize. No source-level identification of these objects with the actual analytic Xi data is supplied by the declarations cited here.
+
+Lean: RHGPBKQR.RH_IFF_BKQR_TRACE_RESOLVENT_APPROX_ANCHOR
+    theorem RH_IFF_BKQR_TRACE_RESOLVENT_APPROX_ANCHOR :
+        RiemannHypothesis ↔ BKQRTraceResolventApproxAnchor
+Source: snapshots/downloads/RH_GP_BKQR_OPERATION_ZHANG_FIREWALL_LEAN_v0_4_3_FIX1/Main.lean:63
+Source SHA256: 89fbb7a57af8d022502e9cb479107ffc13503e004a085a6b75640f35218063fa
+Definition evidence: D092, D093
+Note: Despite trace-resolvent wording, the formal statement contains no matrices, resolvents, finite rank, measures, or analytic convergence. finiteJet is eventual exact equality on finite coefficient windows. Reverse construction uses the constant stage sequence.
+
+============================================================================
+M09  Commuting two-branch energy source
+OPAQUE MODEL / LITERATURE-AXIOM TARGET
+
+Criterion (equivalent to its stated RH target):
+There exists a type Q, energy e:Q->Nat, base state omega and commuting maps L,R, with e(x)=e(Lx)+e(Rx) and Int.ofNat(e(L^n omega))=c_n for every n.
+
+Additional hypotheses:
+  RHGPBKQR.Literature.Zhang2023.RH_IFF_HAUSDORFF_ANCHOR : RiemannHypothesis <-> HausdorffPositive (direct axiom in this version).
+  RHGPBKQR.RiemannHypothesis is a bodyless opaque Prop, not Mathlib _root_.RiemannHypothesis. ZhangNormalizedCoeff is defined from opaque ZhangCenteredXiCoeff, ReducedXiLogJetOf and ZhangScaleNormalize. No source-level identification of these objects with the actual analytic Xi data is supplied by the declarations cited here.
+
+Lean: RHGPBKQR.Derivations.Minimal.RH_IFF_MINIMAL_CONSTRUCTION_ANCHOR
+    theorem RH_IFF_MINIMAL_CONSTRUCTION_ANCHOR :
+        RiemannHypothesis ↔ MinimalConstructionAnchor
+Source: snapshots/downloads/RH_GP_BKQR_MINIMAL_ANCHOR_CHAIN_LEAN_v0_5_2_FIX2/Derivations/Minimal/RHChain.lean:27
+Source SHA256: 7989ffd956953e41e47a71e2dc7ca69169613f2c23f4996576ad025815328495
+Definition evidence: D094, D095
+Note: The reverse construction takes Q=Nat x Nat and the signed Hausdorff cells as energy. The arbitrary energy named normSq has no asserted norm or scalar-product laws. This is stronger structural packaging of the lattice, not an analytically identified GP/BKQR space.
+
+============================================================================
+M10  Finite positive-kernel approximation of the abstract Xi coefficient sequence
+OPAQUE MODEL / LITERATURE-AXIOM TARGET
+
+Criterion (equivalent to its stated RH target):
+For each cutoff, sufficiently late finite probability kernels with nodes in [0,1] and real feature vectors have weighted moments sum_i w_i*x_i^n*f_i^2 exactly equal to the target integer coefficients, for every n up to that cutoff.
+
+Additional hypotheses:
+  RHGPBKQR.Literature.Zhang2023.ZHANG2023_FRONTIER_ANCHOR : Zhang2023LiteraturePackage (axiom), whose rhIffHausdorff field supplies the RH equivalence.
+  RHGPBKQR.RiemannHypothesis is a bodyless opaque Prop, not Mathlib _root_.RiemannHypothesis. ZhangNormalizedCoeff is defined from opaque ZhangCenteredXiCoeff, ReducedXiLogJetOf and ZhangScaleNormalize. No source-level identification of these objects with the actual analytic Xi data is supplied by the declarations cited here.
+  Explicit binder hRealize : TruncatedHausdorffFiniteKernelRealization, defined as HausdorffPositive -> ActualXiFiniteKernelApproxAnchor; reverse finite realization is an input, not proved here.
+
+Lean: GPBKQRAnchoring01.RH_IFF_ACTUAL_XI_CONCRETE_PACKAGE
+    theorem RH_IFF_ACTUAL_XI_CONCRETE_PACKAGE
+        (hRealize : TruncatedHausdorffFiniteKernelRealization) :
+        RHGPBKQR.RiemannHypothesis ↔ ActualXiConcreteTierAPackage
+Source: snapshots/downloads/GP_BKQR_A_TIER_ANCHORING_01_LEAN_v0_2_0_CONCRETE_CALIBRATION/Anchors/ConcreteXiKernelRH.lean:20
+Source SHA256: a1f8c0b9a573e952495c1259d3ee2d5fbb3c6a477b2d8765cd4eae7bb7a434a4
+Definition evidence: D096, D097, D098, D099, D100, D101
+Note: The concrete finite kernel itself is implemented, but target c remains abstract ZhangNormalizedCoeff and RH remains opaque RHGPBKQR.RiemannHypothesis. ActualCompletedGolPhiXiBinding is an additional unconditional field, not an identification of c with native Xi coefficients. Forward implication requires no hRealize; the iff does.
+
+
+PART III — RELATED EQUIVALENCES, NOT ADDITIONAL RH CRITERIA
+These are useful bridge components. Their validity does not by itself provide
+the missing identification, sign, growth bound or continuation needed for RH.
+
+Actual Cayley observable failure detects completed-xi zeros
+Lean: CayleyGolPhi.ACTUAL_CAYLEY_OBSERVABLE_NONE_IFF_COMPLETED_GOLPHI_ZERO
+    theorem ACTUAL_CAYLEY_OBSERVABLE_NONE_IFF_COMPLETED_GOLPHI_ZERO
+        (a r : ℝ) :
+        actualCayleyObservable a r = none ↔
+          completedGolPhiS1
+              ((1 / 2 : ℂ) + Complex.sqrt (cayleyPointPlus a r)) = 0 ∨
+          completedGolPhiS1
+              ((1 / 2 : ℂ) + Complex.sqrt (cayleyPointMinus a r)) = 0
+Source: snapshots/downloads/RH_MASTER_CLOSURE_ANGULAR_LEAN_v0_1_1_FIX1/CayleyGolPhi/ZeroEquivalence.lean:229
+Input: a r : ℝ; no positivity or interior-radius hypothesis in the theorem
+Note: Local zero detector only. Native RH link is through GOLPHI_RH_IFF_MATHLIB_RH and its exact zero predicate; this theorem is not itself a global observable-totality iff RH statement.
+
+Explicit actual theta determinant vanishes exactly at either root
+Lean: GrandConditionalMerge.RI01_EXPLICIT_ACTUAL_DET_ZERO_IFF
+    theorem RI01_EXPLICIT_ACTUAL_DET_ZERO_IFF (a r : ℂ) :
+        ri01ActualCayleyDeterminant a r = 0 ↔
+          NativeSolobolo.mathlibSlitTheta (ri01CayleyRootPlus a r) = 0 ∨
+          NativeSolobolo.mathlibSlitTheta (ri01CayleyRootMinus a r) = 0
+Source: snapshots/downloads/KQ_GP_BKQR_HILBERT_SOLOBOLO_ENDPOINTS_v0_1_3_FASTCORE_FIX1/GrandConditionalMerge/RI01NativeExplicitDeterminant.lean:71
+Input: a r : ℂ; no further binders
+Note: Local product zero equivalence, not an RH equivalence. ActualPole.lean:21,25 identifies Merger02 xi/theta by rfl. H3ActualZero.lean:60 links actual off-critical zeros with nonzero imaginary part to a real Cayley determinant zero. Full-disk determinant/Widder ODE and native coefficient calibration remain separate inputs.
+
+Weak-energy boundedness and summability
+Sup_M sum_{k<=M} w_k L_k(xiJet)^2 < infinity iff sum_k w_k L_k(xiJet)^2 converges.
+Lean: NativeSolobolo.SignedBernstein.ACTUAL_WEAK_ENERGY_BOUND_IFF_SUMMABLE
+    theorem ACTUAL_WEAK_ENERGY_BOUND_IFF_SUMMABLE :
+        ActualWeakEnergyBound ↔ ActualWeakEnergySummable
+Source: snapshots/downloads/RH_NATIVE_SOLOBOLO_SIGNED_BERNSTEIN_LEAN_MERGER_03_MAINLINE/Derivations/ActualXiWeakHilbert.lean:18
+Note: No theorem in this family supplies the missing weak-energy/row-energy-to-RH equivalence. Do not count as an RH iff.
+
+Weak-energy bound and existence of the prescribed l2 vector
+Weak-energy boundedness iff an element u of WeakHilbert has every coordinate sqrt(w_k)*L_k(xiJet).
+Lean: NativeSolobolo.SignedBernstein.ACTUAL_WEAK_ENERGY_IFF_HILBERT_VECTOR_EXISTS
+    theorem ACTUAL_WEAK_ENERGY_IFF_HILBERT_VECTOR_EXISTS :
+        ActualWeakEnergyBound ↔
+          ∃ u : WeakHilbert, ∀ k, u k = weakCoordinate xiJet k
+Source: snapshots/downloads/RH_NATIVE_SOLOBOLO_SIGNED_BERNSTEIN_LEAN_MERGER_03_MAINLINE/Derivations/ActualXiWeakHilbert.lean:39
+Note: No theorem in this family supplies the missing weak-energy/row-energy-to-RH equivalence. Do not count as an RH iff.
+
+Weak-energy bound and bounded functional recovering the actual jet
+Weak-energy boundedness iff a continuous real linear functional L on WeakHilbert satisfies L(monomialProbe n)=xiJet n for every n.
+Lean: NativeSolobolo.SignedBernstein.ACTUAL_US_IFF_BOUNDED_JET_FUNCTIONAL
+    theorem ACTUAL_US_IFF_BOUNDED_JET_FUNCTIONAL :
+        ActualWeakEnergyBound ↔
+          ∃ L : WeakHilbert →L[ℝ] ℝ,
+            ∀ n : ℕ, L (monomialProbe n) = xiJet n
+Source: snapshots/downloads/RH_NATIVE_SOLOBOLO_SIGNED_BERNSTEIN_LEAN_MERGER_03_MAINLINE/Derivations/WeakDualCharacterization.lean:78
+Note: No theorem in this family supplies the missing weak-energy/row-energy-to-RH equivalence. Do not count as an RH iff.
+
+Weak-energy bound and bounded functional recovering Legendre modes
+For any sequence s (specialize s=xiJet), weak-energy boundedness iff a continuous linear functional matches every Legendre mode.
+Lean: NativeSolobolo.SignedBernstein.WEAK_BOUND_IFF_BOUNDED_LEGENDRE_FUNCTIONAL
+    theorem WEAK_BOUND_IFF_BOUNDED_LEGENDRE_FUNCTIONAL (s : ℕ → ℝ) :
+        WeakEnergyBound s ↔
+          ∃ L : WeakHilbert →L[ℝ] ℝ,
+            ∀ k : ℕ, L (legendreProbe k) = legendreMode s k
+Source: snapshots/downloads/RH_NATIVE_SOLOBOLO_SIGNED_BERNSTEIN_LEAN_MERGER_03_MAINLINE/Derivations/WeakDualCharacterization.lean:14
+Note: No theorem in this family supplies the missing weak-energy/row-energy-to-RH equivalence. Do not count as an RH iff.
+
+Uniform signed-Bernstein row mass and cumulative cancellation
+Uniform boundedness of actual row total variations iff the nonnegative refinement-cancellation series is summable.
+Lean: NativeSolobolo.SignedBernstein.ACTUAL_XI_BUDGET_IFF_CANCELLATION_SUMMABLE
+    theorem ACTUAL_XI_BUDGET_IFF_CANCELLATION_SUMMABLE :
+        ActualUniformRowBound ↔ ActualCancellationSummable
+Source: snapshots/downloads/RH_NATIVE_SOLOBOLO_SIGNED_BERNSTEIN_LEAN_MERGER_03_MAINLINE/Derivations/ActualXiLedger.lean:38
+Note: No theorem in this family supplies the missing weak-energy/row-energy-to-RH equivalence. Do not count as an RH iff.
+
+Quadratic Bernstein energy and summable energy increments
+For any input sequence s (specialize s=xiJet), uniform quadratic-energy boundedness iff its nonnegative increment series is summable.
+Lean: NativeSolobolo.SignedBernstein.ENERGY_BOUND_IFF_INCREMENT_SUMMABLE
+    theorem ENERGY_BOUND_IFF_INCREMENT_SUMMABLE (s : ℕ → ℝ) :
+        UniformEnergyBound s ↔ Summable (rowEnergyIncrement s)
+Source: snapshots/downloads/RH_NATIVE_SOLOBOLO_SIGNED_BERNSTEIN_LEAN_MERGER_03_MAINLINE/Derivations/QuadraticEnergy.lean:146
+Note: No theorem in this family supplies the missing weak-energy/row-energy-to-RH equivalence. Do not count as an RH iff.
+
+Raw normalized Widder variation versus cumulative-increment growth
+Subexponential growth of 1+2*cumulative Bernstein variation increment at every a>0 iff subexponential growth of the full signed-Bernstein row variation.
+Lean: NativeSoloboloContinuant.ACTUAL_CANCELLATION_SUBEXPONENTIAL_IFF_VARIATION_SUBEXPONENTIAL
+    theorem ACTUAL_CANCELLATION_SUBEXPONENTIAL_IFF_VARIATION_SUBEXPONENTIAL :
+        ActualCancellationSubexponential ↔ ActualBernsteinVariationSubexponential
+Source: snapshots/downloads/RH_NATIVE_SOLOBOLO_A_TIER_SIGNED_BERNSTEIN_GROWTH_v0_18_2_FIX2/Bridge/SignedBernsteinGrowth.lean:217
+Note: Definition of subexponential is: for every q>1, eventually v_N <= q^N.
+Note: This is an exact variation-ledger reformulation; no RH converse is proved here.
+
+Native Mellin energy versus xi energy
+US_AWPI iff subexponential Bernstein energy of xiCoefficients.
+Lean: NativeEnergyBridge.native_energy_iff_xi_energy
+    theorem native_energy_iff_xi_energy :
+        AWPIRH.US_AWPI ↔ AWPIRH.SubexponentialEnergy xiCoefficients
+Source: snapshots/downloads/RH_NATIVE_CANDIDATES_v0_1_1_MELLIN/Develop/NativeEnergyBridge.lean:45
+Note: The imported Mellin bridge supplies the nativeXi germ identification.
+Note: An RH implication additionally requires product-coefficient identification; this file supplies no RH-to-energy converse.
+
+Native energy versus xi row variation
+US_AWPI iff log(1+rowVariation(xiCoefficients,N))/N tends to zero.
+Lean: NativeEnergyBridge.native_energy_iff_xi_variation
+    theorem native_energy_iff_xi_variation :
+        AWPIRH.US_AWPI ↔
+          Tendsto (fun N : ℕ => Real.log (1 + rowVariation xiCoefficients N) / (N : ℝ))
+            atTop (𝓝 0)
+Source: snapshots/downloads/RH_NATIVE_CANDIDATES_v0_1_1_MELLIN/Develop/NativeEnergyBridge.lean:393
+Note: The imported Mellin bridge supplies the nativeXi germ identification.
+Note: An RH implication additionally requires product-coefficient identification; this file supplies no RH-to-energy converse.
+
+Native energy versus total negative-cell mass
+US_AWPI iff log(1+nativeWidder(0,0)+2*nativeNegativeMass(N))/N tends to zero.
+Lean: NativeEnergyBridge.native_energy_iff_negative_mass
+    theorem native_energy_iff_negative_mass :
+        AWPIRH.US_AWPI ↔
+          Tendsto (fun N : ℕ =>
+            Real.log (1 + (AWPIRH.nativeWidder 0 0 + 2 * nativeNegativeMass N)) / (N : ℝ))
+            atTop (𝓝 0)
+Source: snapshots/downloads/RH_NATIVE_CANDIDATES_v0_1_1_MELLIN/Develop/NativeEnergyBridge.lean:400
+Note: The imported Mellin bridge supplies the nativeXi germ identification.
+Note: An RH implication additionally requires product-coefficient identification; this file supplies no RH-to-energy converse.
+
+Native versus xi product-coefficient identity
+NativeProductCoefficientIdentity iff XiWidderProductCoefficientIdentity.
+Lean: NativeEnergyBridge.native_product_identity_iff_xi_product_identity
+    theorem native_product_identity_iff_xi_product_identity :
+        AWPIRH.NativeProductCoefficientIdentity ↔
+          AWPIRH.XiWidderProductCoefficientIdentity
+Source: snapshots/downloads/RH_NATIVE_CANDIDATES_v0_1_1_MELLIN/Develop/NativeEnergyBridge.lean:50
+Note: The imported Mellin bridge supplies the nativeXi germ identification.
+Note: An RH implication additionally requires product-coefficient identification; this file supplies no RH-to-energy converse.
+
+Hausdorff positivity iff positive Pascal lattice
+For every integer sequence c, signed finite-difference positivity iff existence of a positive Pascal table.
+Lean: RHGPBKQR.Derivations.Hopf.SEQUENCE_HAUSDORFF_IFF_POSITIVE_PASCAL
+    theorem SEQUENCE_HAUSDORFF_IFF_POSITIVE_PASCAL
+        {c : Nat → Int} :
+        SequenceHausdorffPositive c ↔ Nonempty (PositivePascalHopfData c)
+Source: snapshots/downloads/RH_GP_BKQR_OPERATION_ZHANG_FIREWALL_LEAN_v0_4_3_FIX1/Derivations/Hopf/PascalHopf.lean:81
+Note: No literature equivalence axiom is used by the proof body. Only attaching the distinguished sequence to opaque RH uses Zhang.
+
+Hausdorff positivity iff natural-valued energy lattice
+For every integer sequence c, signed finite-difference positivity iff existence of a natural-valued Pascal energy lattice.
+Lean: RHGPBKQR.Derivations.Hopf.SEQUENCE_HAUSDORFF_IFF_BKQR_ENERGY
+    theorem SEQUENCE_HAUSDORFF_IFF_BKQR_ENERGY
+        {c : Nat → Int} :
+        SequenceHausdorffPositive c ↔ Nonempty (BKQREnergyData c)
+Source: snapshots/downloads/RH_GP_BKQR_OPERATION_ZHANG_FIREWALL_LEAN_v0_4_3_FIX1/Derivations/Hopf/PascalHopf.lean:133
+Note: No literature equivalence axiom is used by the proof body. Only attaching the distinguished sequence to opaque RH uses Zhang.
+
+Hausdorff positivity iff positive-stage eventual finite-jet equality
+For every integer sequence c, signed finite-difference positivity iff positive stage sequences eventually agree on each finite coefficient window.
+Lean: RHGPBKQR.Derivations.BKQR.SEQUENCE_HAUSDORFF_IFF_TRACE_RESOLVENT_APPROX
+    theorem SEQUENCE_HAUSDORFF_IFF_TRACE_RESOLVENT_APPROX
+        {c : Nat → Int} :
+        SequenceHausdorffPositive c ↔ Nonempty (BKQRTraceResolventApproxData c)
+Source: snapshots/downloads/RH_GP_BKQR_OPERATION_ZHANG_FIREWALL_LEAN_v0_4_3_FIX1/Derivations/BKQR/BKQRContraction.lean:87
+Note: No literature equivalence axiom is used by the proof body. Only attaching the distinguished sequence to opaque RH uses Zhang.
+
+Cofinal BKQR depths iff all metric depths
+For every eta in [0,pi), existence of an admissible xi in [eta,pi) iff admissibility at every eta in [0,pi).
+Lean: NativeSolobolo.Derivations.BKQR.BKQR_PI_IFF_METRIC_PI
+    theorem BKQR_PI_IFF_METRIC_PI
+        {P : ℝ → Prop}
+        (hdown : DownwardClosedOnNonnegative P) :
+        BKQRPiApprox P ↔ MetricPi P
+Source: snapshots/downloads/RH_NATIVE_SOLOBOLO_POINTWISE_BKQR_MOVING_GAUGE_v0_3_1_FIX1/Derivations/BKQR/PiMetricCofinality.lean:38
+Input: hdown : DownwardClosedOnNonnegative P
+Note: Order/cofinality theorem only. It gives no endpoint pi certificate, no existence of the cofinal bounds, and no independently derived actual-GP regularity bridge.
+
+Strictly deeper BKQR depths iff all metric depths
+For each eta<pi an admissible xi with eta<xi<pi iff every depth below pi is admissible.
+Lean: NativeSolobolo.Derivations.BKQR.STRICT_BKQR_PI_IFF_METRIC_PI
+    theorem STRICT_BKQR_PI_IFF_METRIC_PI
+        {P : ℝ → Prop}
+        (hdown : DownwardClosedOnNonnegative P) :
+        StrictBKQRPiApprox P ↔ MetricPi P
+Source: snapshots/downloads/RH_NATIVE_SOLOBOLO_POINTWISE_BKQR_MOVING_GAUGE_v0_3_1_FIX1/Derivations/BKQR/StrictPiCofinality.lean:52
+Input: hdown : DownwardClosedOnNonnegative P
+Note: Order/cofinality theorem only. It gives no endpoint pi certificate, no existence of the cofinal bounds, and no independently derived actual-GP regularity bridge.
+
+Cofinal uniform energy bounds iff uniform bounds at each sub-pi depth
+Cofinal eta for which sup_N E_N(eta)<infinity iff this bound holds separately at every eta<pi.
+Lean: NativeSolobolo.Derivations.BKQR.BKQR_PI_ENERGY_IFF_METRIC_PI_ENERGY
+    theorem BKQR_PI_ENERGY_IFF_METRIC_PI_ENERGY
+        {energy : Nat → ℝ → ℝ}
+        (hmono : EnergyMonotoneInDepth energy) :
+        BKQRPiEnergyFrontier energy ↔ MetricPiEnergy energy
+Source: snapshots/downloads/RH_NATIVE_SOLOBOLO_POINTWISE_BKQR_MOVING_GAUGE_v0_3_1_FIX1/Derivations/BKQR/PiMetricCofinality.lean:80
+Input: hmono : EnergyMonotoneInDepth energy
+Note: Order/cofinality theorem only. It gives no endpoint pi certificate, no existence of the cofinal bounds, and no independently derived actual-GP regularity bridge.
+
+PART IV — ONE-WAY SUFFICIENT RESULTS, EXCLUDED FROM THE IFF COUNT
+The hypotheses below are mathematical inputs, not conclusions obtained here.
+
+Xi energy and product coefficients imply native RH
+SubexponentialEnergy(xiCoefficients) together with XiWidderProductCoefficientIdentity implies native RH.
+Lean: NativeEnergyBridge.nativeRH_of_xi_energy_and_product
+    theorem nativeRH_of_xi_energy_and_product
+        (hEnergy : AWPIRH.SubexponentialEnergy xiCoefficients)
+        (hProduct : AWPIRH.XiWidderProductCoefficientIdentity) :
+        _root_.RiemannHypothesis
+Source: snapshots/downloads/RH_NATIVE_CANDIDATES_v0_1_1_MELLIN/Develop/NativeEnergyBridge.lean:59
+Input: hEnergy : AWPIRH.SubexponentialEnergy xiCoefficients
+Input: hProduct : AWPIRH.XiWidderProductCoefficientIdentity
+Note: NativeMellinBridge is an imported source proof.
+Note: nativeRH_of_variation_and_product is the exact equivalent-energy reformulation, not another distinct RH equivalence.
+
+Frozen uniform positivity through a direct xi channel
+Frozen cofinal uniform-depth positivity implies native RH given conversion of any RH failure to actual direct-channel peak data.
+Lean: Merger04.ForwardChannel.FROZEN_US_IMPLIES_RH_FROM_DIRECT_CHANNEL
+    theorem FROZEN_US_IMPLIES_RH_FROM_DIRECT_CHANNEL
+        (hchannel : ActualOffLineDirectChannelAnalysis)
+        (hUS : NativeSoloboloContinuant.ActualCofinalUniformDepthPositive) :
+        _root_.RiemannHypothesis
+Source: snapshots/downloads/RH_NATIVE_SOLOBOLO_MERGER04_FORWARD_CHANNEL_v0_3_3_FIX3/Bridge/USForwardChannel06.lean:37
+Input: {"name": "hchannel", "definition": {"path": "RH_NATIVE_SOLOBOLO_MERGER04_FORWARD_CHANNEL_v0_3_3_FIX3/Bridge/USForwardChannel06.lean", "line": 16, "exact_declaration_binders": "def ActualOffLineDirectChannelAnalysis : Prop", "sha256": "22e01726ed95b792012882a9d0f1472d0c4ac25ac0b5ddb4ee66a9e0c061cd06", "exact_definition": "def ActualOffLineDirectChannelAnalysis : Prop :=\n  ¬ _root_.RiemannHypothesis →\n    ∃ P : ChannelPeakData xiWidderDirect,\n      P.baseAnchor ∈ xiRegularAnchors"}}
+Input: hUS : NativeSoloboloContinuant.ActualCofinalUniformDepthPositive
+Note: The endpoint-safe profile migration and direct/recursive transport do not prove hchannel.
+
+Frozen uniform positivity through local pole dominance
+Frozen cofinal uniform-depth positivity implies native RH given eventual direct-Widder negativity forced by every actual xi interior simple pole.
+Lean: Merger04.ForwardLocalPole.FROZEN_US_IMPLIES_RH_FROM_LOCAL_POLE
+    theorem FROZEN_US_IMPLIES_RH_FROM_LOCAL_POLE
+        (hlocal : ActualLocalPoleForcesDirectNegativity)
+        (hUS : NativeSoloboloContinuant.ActualCofinalUniformDepthPositive) :
+        _root_.RiemannHypothesis
+Source: snapshots/downloads/RH_NATIVE_SOLOBOLO_MERGER04_LOCAL_POLE_v0_4_1_FIX1/Bridge/USForwardLocalPole07.lean:40
+Input: {"name": "hlocal", "definition": {"path": "RH_NATIVE_SOLOBOLO_MERGER04_LOCAL_POLE_v0_4_1_FIX1/Bridge/USForwardLocalPole07.lean", "line": 16, "exact_declaration_binders": "def ActualLocalPoleForcesDirectNegativity : Prop", "sha256": "98547e3a34358759159c74f4977716543700aa69ba4638c0104b4b6a3bef9b4b", "exact_definition": "def ActualLocalPoleForcesDirectNegativity : Prop :=\n  ∀ P : ActualXiInteriorSimplePole,\n    ∃ K : ℕ, ∀ n : ℕ, K ≤ n →\n      ∃ a : ℝ, a ∈ xiRegularAnchors ∧ xiWidderDirect a n < 0"}}
+Input: hUS : NativeSoloboloContinuant.ActualCofinalUniformDepthPositive
+
+Common-moment reconstruction excludes a model off-line zero
+Existence of GP and BKQR Cayley models with all scalar moments equal and global reconstruction implies model RH.
+Lean: NativeSolobolo.Derivations.ACTUAL_CAYLEY_AND_COMMON_MOMENT_FRONTIER_IMPLIES_RH
+    theorem ACTUAL_CAYLEY_AND_COMMON_MOMENT_FRONTIER_IMPLIES_RH
+        {Scalar BKVec : Type}
+        (T : CenteredThetaData)
+        (QBKQR : ScalarProductGeometry Scalar BKVec)
+        (hOur : GPBKQRCommonMomentFrontier (actualThetaCayleyObservable T) QBKQR) :
+        RiemannHypothesis T.geometry
+Source: snapshots/downloads/RH_NATIVE_SOLOBOLO_LEAN_v0_18_3_EXPLICIT_ANALYTIC_COMP_ARGS/Derivations/OurFrontierDerivation.lean:28
+Input: T : CenteredThetaData
+Input: QBKQR : ScalarProductGeometry Scalar BKVec
+Input: hOur : GPBKQRCommonMomentFrontier (actualThetaCayleyObservable T) QBKQR
+Note: The target here is a parameterized model proposition, not definitionally Mathlib RH.
+Note: The GP model reconstruct field itself asserts a finite actual observable at every interior radius; no native model construction is supplied.
+
+Actual GP state intertwining with a fixed contraction
+A fixed energy-contractive map Q and nonzero state assignment at every nontrivial zero satisfy E(Q state(rho))=2^(2*(Re rho-1/2))*E(state(rho)).
+Lean: ConstructiveCriticalLine.riemannHypothesis_of_actualGPIntertwiningGap
+    theorem riemannHypothesis_of_actualGPIntertwiningGap
+        {Q : PiBKQRContraction}
+        {gpState : ℂ → GPBKQRState}
+        (hgap : ActualGPIntertwiningGap Q gpState) :
+        RiemannHypothesis
+Source: snapshots/downloads/CONSTRUCTIVE_RH_ACTUAL_GP_BKQR_GAP_LEAN_v0_3_0/ActualGPBKQRGap.lean:174
+Input: Implicit Q : PiBKQRContraction and gpState : Complex -> Real x Real.
+Input: hgap : ActualGPIntertwiningGap Q gpState, providing nonzero state and exact gain intertwining at every nontrivial zero.
+Note: No reverse implication is asserted for an arbitrary fixed Q and gpState. The source does not supply the actual state assignment/intertwining.
+
+Finite-kernel calibration implies abstract RH
+The concrete finite kernel package implies opaque RH without assuming the reverse truncated-realization statement.
+Lean: GPBKQRAnchoring01.ACTUAL_XI_CONCRETE_PACKAGE_IMPLIES_RH
+    theorem ACTUAL_XI_CONCRETE_PACKAGE_IMPLIES_RH :
+        ActualXiConcreteTierAPackage → RHGPBKQR.RiemannHypothesis
+Source: snapshots/downloads/GP_BKQR_A_TIER_ANCHORING_01_LEAN_v0_2_0_CONCRETE_CALIBRATION/Anchors/ConcreteXiKernelRH.lean:12
+Input: RHGPBKQR.Literature.Zhang2023.ZHANG2023_FRONTIER_ANCHOR : Zhang2023LiteraturePackage (axiom), whose rhIffHausdorff field supplies the RH equivalence.
+Input: RHGPBKQR.RiemannHypothesis is a bodyless opaque Prop, not Mathlib _root_.RiemannHypothesis. ZhangNormalizedCoeff is defined from opaque ZhangCenteredXiCoeff, ReducedXiLogJetOf and ZhangScaleNormalize. No source-level identification of these objects with the actual analytic Xi data is supplied by the declarations cited here.
+Note: One direction of gp_model_finite_probability_kernels; not a second RH criterion.
+
+Master object realization
+Existence of the package-specific OurFrontier realizes a natural-valued energy lattice with the canonical GP moment boundary.
+Lean: RHGPBKQR.Derivations.OUR_FRONTIER_TO_RH
+    theorem OUR_FRONTIER_TO_RH : OurFrontier → RiemannHypothesis
+Source: snapshots/downloads/RH_GP_BKQR_MASTER_OBJECT_LEAN_v0_5_0_FIX5/Derivations/OurFrontierDerivation.lean:14
+Input: Zhang RH_IFF_HAUSDORFF_ANCHOR research axiom.
+Input: RHGPBKQR.RiemannHypothesis is a bodyless opaque Prop, not Mathlib _root_.RiemannHypothesis. ZhangNormalizedCoeff is defined from opaque ZhangCenteredXiCoeff, ReducedXiLogJetOf and ZhangScaleNormalize. No source-level identification of these objects with the actual analytic Xi data is supplied by the declarations cited here.
+Note: Only the forward implication is present at this version; do not promote it to iff because a later minimal object has a proved reverse construction.
+
+Generated master-source realization
+Existence of the package-specific OurFrontier realizes a natural-valued energy lattice with the canonical GP moment boundary.
+Lean: RHGPBKQR.Derivations.OUR_FRONTIER_TO_RH
+    theorem OUR_FRONTIER_TO_RH : OurFrontier → RiemannHypothesis
+Source: snapshots/downloads/RH_GP_BKQR_GENERATED_MASTER_LEAN_v0_5_1_FIX1/Derivations/OurFrontierDerivation.lean:17
+Input: Zhang RH_IFF_HAUSDORFF_ANCHOR research axiom.
+Input: RHGPBKQR.RiemannHypothesis is a bodyless opaque Prop, not Mathlib _root_.RiemannHypothesis. ZhangNormalizedCoeff is defined from opaque ZhangCenteredXiCoeff, ReducedXiLogJetOf and ZhangScaleNormalize. No source-level identification of these objects with the actual analytic Xi data is supplied by the declarations cited here.
+Note: Only the forward implication is present at this version; do not promote it to iff because a later minimal object has a proved reverse construction.
+
+Cofinal energy bounds transferred to actual regularity
+Depth-monotone finite energies, cofinal uniform bounds, an energy-to-regularity bridge and a non-RH obstruction imply centered RH.
+Lean: NativeSolobolo.Derivations.BKQR.BKQR_PI_ENERGY_BRIDGES_IMPLY_RH
+    theorem BKQR_PI_ENERGY_BRIDGES_IMPLY_RH
+        (T : CenteredThetaData)
+        {energy : Nat → ℝ → ℝ}
+        (hmono : EnergyMonotoneInDepth energy)
+        (hPi : BKQRPiEnergyFrontier energy)
+        (B : BKQRToActualMetricBridge energy)
+        (O : ActualMetricPiObstruction T B.regularAt) :
+        RiemannHypothesis T.geometry
+Source: snapshots/downloads/RH_NATIVE_SOLOBOLO_POINTWISE_BKQR_MOVING_GAUGE_v0_3_1_FIX1/Derivations/BKQR/PiMetricCofinality.lean:117
+Input: T : CenteredThetaData
+Input: hmono : EnergyMonotoneInDepth energy
+Input: hPi : BKQRPiEnergyFrontier energy
+Input: B : BKQRToActualMetricBridge energy
+Input: O : ActualMetricPiObstruction T B.regularAt
+Note: Target is NativeSolobolo.RiemannHypothesis T.geometry, not automatically native Mathlib RH. The analytic transfer and obstruction are explicit record inputs.
+
+Exact opening-reserve ledger
+Xi analytic pointwise continuation/safe-reality/heat-jet package together with NativeGPBKQRLedgerPackage implies native RH.
+Lean: RHGPNativeReserveReduction.ACTUAL_XI_PLUS_NATIVE_LEDGER_IMPLIES_MATHLIB_RH
+    theorem ACTUAL_XI_PLUS_NATIVE_LEDGER_IMPLIES_MATHLIB_RH
+        {HeatZero : ℝ → ℝ → ℝ → Prop}
+        {safeThreshold : ℝ}
+        {EscapeEvent : ℝ → ℝ → Prop}
+        (hXi : XiAnalyticPointwisePackage
+          ActualNontrivialZero HeatZero safeThreshold EscapeEvent)
+        (hNative : NativeGPBKQRLedgerPackage ActualNontrivialZero HeatZero) :
+        RiemannHypothesis
+Source: snapshots/downloads/RH_GP_EXACT_LEDGER_ADAPTER_LEAN_v0_1_0/RHGPNativeM7PaymentCertificate.lean:409
+Input: Explicit hXi : XiAnalyticPointwisePackage ActualNontrivialZero HeatZero safeThreshold EscapeEvent.
+Input: Explicit GP/BKQR package NativeGPBKQRLedgerPackage for every pointwise heat branch and collision opening.
+Note: No converse is proved. The source constructs reductions between budget/storage/payment hypotheses; it does not construct the actual Xi/heat or GP/BKQR input packages. Generic theorem bodies are present. These rows are excluded from the RH-iff count.
+
+Field positive-excess budget
+Xi analytic pointwise continuation/safe-reality/heat-jet package together with NativeFieldPositiveExcessPackage implies native RH.
+Lean: RHGPNativeReserveReduction.ACTUAL_XI_PLUS_FIELD_POSITIVE_EXCESS_IMPLIES_MATHLIB_RH
+    theorem ACTUAL_XI_PLUS_FIELD_POSITIVE_EXCESS_IMPLIES_MATHLIB_RH
+        {HeatZero : ℝ → ℝ → ℝ → Prop}
+        {safeThreshold : ℝ}
+        {EscapeEvent : ℝ → ℝ → Prop}
+        (hXi : XiAnalyticPointwisePackage
+          ActualNontrivialZero HeatZero safeThreshold EscapeEvent)
+        (hField : NativeFieldPositiveExcessPackage ActualNontrivialZero HeatZero) :
+        RiemannHypothesis
+Source: snapshots/downloads/RH_GP_EXACT_LEDGER_ADAPTER_LEAN_v0_1_0/RHGPNativeM7PaymentCertificate.lean:573
+Input: Explicit hXi : XiAnalyticPointwisePackage ActualNontrivialZero HeatZero safeThreshold EscapeEvent.
+Input: Explicit GP/BKQR package NativeFieldPositiveExcessPackage for every pointwise heat branch and collision opening.
+Note: No converse is proved. The source constructs reductions between budget/storage/payment hypotheses; it does not construct the actual Xi/heat or GP/BKQR input packages. Generic theorem bodies are present. These rows are excluded from the RH-iff count.
+
+Field capacity budget
+Xi analytic pointwise continuation/safe-reality/heat-jet package together with NativeFieldCapacityPackage implies native RH.
+Lean: RHGPNativeReserveReduction.ACTUAL_XI_PLUS_FIELD_CAPACITY_IMPLIES_MATHLIB_RH
+    theorem ACTUAL_XI_PLUS_FIELD_CAPACITY_IMPLIES_MATHLIB_RH
+        {HeatZero : ℝ → ℝ → ℝ → Prop}
+        {safeThreshold : ℝ}
+        {EscapeEvent : ℝ → ℝ → Prop}
+        (hXi : XiAnalyticPointwisePackage
+          ActualNontrivialZero HeatZero safeThreshold EscapeEvent)
+        (hCapacity : NativeFieldCapacityPackage ActualNontrivialZero HeatZero) :
+        RiemannHypothesis
+Source: snapshots/downloads/RH_GP_EXACT_LEDGER_ADAPTER_LEAN_v0_1_0/RHGPNativeM7PaymentCertificate.lean:746
+Input: Explicit hXi : XiAnalyticPointwisePackage ActualNontrivialZero HeatZero safeThreshold EscapeEvent.
+Input: Explicit GP/BKQR package NativeFieldCapacityPackage for every pointwise heat branch and collision opening.
+Note: No converse is proved. The source constructs reductions between budget/storage/payment hypotheses; it does not construct the actual Xi/heat or GP/BKQR input packages. Generic theorem bodies are present. These rows are excluded from the RH-iff count.
+
+Global nonrecyclable storage
+Xi analytic pointwise continuation/safe-reality/heat-jet package together with NativeFieldGlobalStoragePackage implies native RH.
+Lean: RHGPNativeReserveReduction.ACTUAL_XI_PLUS_GLOBAL_STORAGE_IMPLIES_MATHLIB_RH
+    theorem ACTUAL_XI_PLUS_GLOBAL_STORAGE_IMPLIES_MATHLIB_RH
+        {HeatZero : ℝ → ℝ → ℝ → Prop}
+        {safeThreshold : ℝ}
+        {EscapeEvent : ℝ → ℝ → Prop}
+        (hXi : XiAnalyticPointwisePackage
+          ActualNontrivialZero HeatZero safeThreshold EscapeEvent)
+        (hStorage : NativeFieldGlobalStoragePackage ActualNontrivialZero HeatZero) :
+        RiemannHypothesis
+Source: snapshots/downloads/RH_GP_EXACT_LEDGER_ADAPTER_LEAN_v0_1_0/RHGPNativeM7PaymentCertificate.lean:886
+Input: Explicit hXi : XiAnalyticPointwisePackage ActualNontrivialZero HeatZero safeThreshold EscapeEvent.
+Input: Explicit GP/BKQR package NativeFieldGlobalStoragePackage for every pointwise heat branch and collision opening.
+Note: No converse is proved. The source constructs reductions between budget/storage/payment hypotheses; it does not construct the actual Xi/heat or GP/BKQR input packages. Generic theorem bodies are present. These rows are excluded from the RH-iff count.
+
+Canonical excess storage
+Xi analytic pointwise continuation/safe-reality/heat-jet package together with NativeFieldCanonicalExcessStoragePackage implies native RH.
+Lean: RHGPNativeReserveReduction.ACTUAL_XI_PLUS_CANONICAL_EXCESS_STORAGE_IMPLIES_MATHLIB_RH
+    theorem ACTUAL_XI_PLUS_CANONICAL_EXCESS_STORAGE_IMPLIES_MATHLIB_RH
+        {HeatZero : ℝ → ℝ → ℝ → Prop}
+        {safeThreshold : ℝ}
+        {EscapeEvent : ℝ → ℝ → Prop}
+        (hXi : XiAnalyticPointwisePackage
+          ActualNontrivialZero HeatZero safeThreshold EscapeEvent)
+        (hCanonical : NativeFieldCanonicalExcessStoragePackage
+          ActualNontrivialZero HeatZero) :
+        RiemannHypothesis
+Source: snapshots/downloads/RH_GP_EXACT_LEDGER_ADAPTER_LEAN_v0_1_0/RHGPNativeM7PaymentCertificate.lean:1030
+Input: Explicit hXi : XiAnalyticPointwisePackage ActualNontrivialZero HeatZero safeThreshold EscapeEvent.
+Input: Explicit GP/BKQR package NativeFieldCanonicalExcessStoragePackage for every pointwise heat branch and collision opening.
+Note: No converse is proved. The source constructs reductions between budget/storage/payment hypotheses; it does not construct the actual Xi/heat or GP/BKQR input packages. Generic theorem bodies are present. These rows are excluded from the RH-iff count.
+
+Canonical reserve positive-variation budget
+Xi analytic pointwise continuation/safe-reality/heat-jet package together with NativeCanonicalReserveVariationPackage implies native RH.
+Lean: RHGPNativeReserveReduction.ACTUAL_XI_PLUS_CANONICAL_RESERVE_VARIATION_IMPLIES_MATHLIB_RH
+    theorem ACTUAL_XI_PLUS_CANONICAL_RESERVE_VARIATION_IMPLIES_MATHLIB_RH
+        {HeatZero : ℝ → ℝ → ℝ → Prop}
+        {safeThreshold : ℝ}
+        {EscapeEvent : ℝ → ℝ → Prop}
+        (hXi : XiAnalyticPointwisePackage
+          ActualNontrivialZero HeatZero safeThreshold EscapeEvent)
+        (hVariation : NativeCanonicalReserveVariationPackage
+          ActualNontrivialZero HeatZero) :
+        RiemannHypothesis
+Source: snapshots/downloads/RH_GP_EXACT_LEDGER_ADAPTER_LEAN_v0_1_0/RHGPNativeM7PaymentCertificate.lean:1161
+Input: Explicit hXi : XiAnalyticPointwisePackage ActualNontrivialZero HeatZero safeThreshold EscapeEvent.
+Input: Explicit GP/BKQR package NativeCanonicalReserveVariationPackage for every pointwise heat branch and collision opening.
+Note: No converse is proved. The source constructs reductions between budget/storage/payment hypotheses; it does not construct the actual Xi/heat or GP/BKQR input packages. Generic theorem bodies are present. These rows are excluded from the RH-iff count.
+
+Canonical reserve storage potential
+Xi analytic pointwise continuation/safe-reality/heat-jet package together with NativeCanonicalReserveStoragePotentialPackage implies native RH.
+Lean: RHGPNativeReserveReduction.ACTUAL_XI_PLUS_STORAGE_POTENTIAL_IMPLIES_MATHLIB_RH
+    theorem ACTUAL_XI_PLUS_STORAGE_POTENTIAL_IMPLIES_MATHLIB_RH
+        {HeatZero : ℝ → ℝ → ℝ → Prop}
+        {safeThreshold : ℝ}
+        {EscapeEvent : ℝ → ℝ → Prop}
+        (hXi : XiAnalyticPointwisePackage
+          ActualNontrivialZero HeatZero safeThreshold EscapeEvent)
+        (hStorage : NativeCanonicalReserveStoragePotentialPackage
+          ActualNontrivialZero HeatZero) :
+        RiemannHypothesis
+Source: snapshots/downloads/RH_GP_EXACT_LEDGER_ADAPTER_LEAN_v0_1_0/RHGPNativeM7PaymentCertificate.lean:1327
+Input: Explicit hXi : XiAnalyticPointwisePackage ActualNontrivialZero HeatZero safeThreshold EscapeEvent.
+Input: Explicit GP/BKQR package NativeCanonicalReserveStoragePotentialPackage for every pointwise heat branch and collision opening.
+Note: No converse is proved. The source constructs reductions between budget/storage/payment hypotheses; it does not construct the actual Xi/heat or GP/BKQR input packages. Generic theorem bodies are present. These rows are excluded from the RH-iff count.
+
+Local nonrecyclable storage law
+Xi analytic pointwise continuation/safe-reality/heat-jet package together with NativeLocalStorageLawPackage implies native RH.
+Lean: RHGPNativeReserveReduction.ACTUAL_XI_PLUS_LOCAL_STORAGE_LAW_IMPLIES_MATHLIB_RH
+    theorem ACTUAL_XI_PLUS_LOCAL_STORAGE_LAW_IMPLIES_MATHLIB_RH
+        {HeatZero : ℝ → ℝ → ℝ → Prop}
+        {safeThreshold : ℝ}
+        {EscapeEvent : ℝ → ℝ → Prop}
+        (hXi : XiAnalyticPointwisePackage
+          ActualNontrivialZero HeatZero safeThreshold EscapeEvent)
+        (hLocal : NativeLocalStorageLawPackage
+          ActualNontrivialZero HeatZero) :
+        RiemannHypothesis
+Source: snapshots/downloads/RH_GP_EXACT_LEDGER_ADAPTER_LEAN_v0_1_0/RHGPNativeM7PaymentCertificate.lean:1455
+Input: Explicit hXi : XiAnalyticPointwisePackage ActualNontrivialZero HeatZero safeThreshold EscapeEvent.
+Input: Explicit GP/BKQR package NativeLocalStorageLawPackage for every pointwise heat branch and collision opening.
+Note: No converse is proved. The source constructs reductions between budget/storage/payment hypotheses; it does not construct the actual Xi/heat or GP/BKQR input packages. Generic theorem bodies are present. These rows are excluded from the RH-iff count.
+
+Local M7/BKQR one-step payment
+Xi analytic pointwise continuation/safe-reality/heat-jet package together with NativeM7BKQROneStepPaymentPackage implies native RH.
+Lean: RHGPNativeReserveReduction.ACTUAL_XI_PLUS_M7_BKQR_PAYMENT_IMPLIES_MATHLIB_RH
+    theorem ACTUAL_XI_PLUS_M7_BKQR_PAYMENT_IMPLIES_MATHLIB_RH
+        {HeatZero : ℝ → ℝ → ℝ → Prop}
+        {safeThreshold : ℝ}
+        {EscapeEvent : ℝ → ℝ → Prop}
+        (hXi : XiAnalyticPointwisePackage
+          ActualNontrivialZero HeatZero safeThreshold EscapeEvent)
+        (hM7 : NativeM7BKQROneStepPaymentPackage
+          ActualNontrivialZero HeatZero) :
+        RiemannHypothesis
+Source: snapshots/downloads/RH_GP_EXACT_LEDGER_ADAPTER_LEAN_v0_1_0/RHGPNativeM7PaymentCertificate.lean:1589
+Input: Explicit hXi : XiAnalyticPointwisePackage ActualNontrivialZero HeatZero safeThreshold EscapeEvent.
+Input: Explicit GP/BKQR package NativeM7BKQROneStepPaymentPackage for every pointwise heat branch and collision opening.
+Note: No converse is proved. The source constructs reductions between budget/storage/payment hypotheses; it does not construct the actual Xi/heat or GP/BKQR input packages. Generic theorem bodies are present. These rows are excluded from the RH-iff count.
+
+PART V — THE RR SCALAR-PRODUCT FORMULATION
+Derived mathematical reformulation; no native GP identification is claimed.
+For each actual upper-half-plane zero occurrence j put δ_j=Re(ρ_j)−1/2 and
+γ_j=Im(ρ_j)>0. Keep multiplicity either as repeated occurrences (m_j=1) or
+as positive weights m_j; do not use both conventions simultaneously.
+Assume the source mass summability Σ_j m_j/γ_j²<∞. On the disjoint union of
+the positive t-axes define dν(j,t)=m_j t exp(−γ_j t)dt, A(j,t)=exp(iδ_j t), B=1.
+Both A and B lie in L²(ν), since |A|=|B|=1 and ν(total)=Σ_j m_j/γ_j².
+For each j, direct integration gives
+    ∫₀∞ t e^(−γ_j t)(1−cos(δ_j t)) dt
+    = 1/γ_j² − (γ_j²−δ_j²)/(γ_j²+δ_j²)²
+    = δ_j²(3γ_j²+δ_j²)/(γ_j²(γ_j²+δ_j²)²).
+Tonelli applied to the nonnegative integrand and |e^(iδt)−1|²=2(1−cos δt) gives
+    C = (1/2) ||A−B||²_{L²(ν)}.
+    C=0 ⇔ A=B ν-almost everywhere ⇔ every δ_j=0.
+For δ_j≠0 the continuous nonnegative integrand is positive on a nonempty
+interval, so its integral is strictly positive. This proves the last implication.
+Using the actual-zero coverage in E23/E24, this
+gives the same RH criterion as actual RR defect zero, not a new independent test.
+Also C≤0 ⇔ C=0 because C≥0. Project candidate N03 asks precisely for C≤0.
+To identify this L² space with the historical GP scalar product still requires
+an explicit isometry / equality of the actual objects and normalization.
+Equality at one anchor does not establish equality of all moments or a germ.
+This formulation still uses actual zero data; it does not supply a zero-free
+algorithm for computing C or proving its vanishing.
+
+PART VI — DUPLICATES, NORMALIZATION AND MISSING IDENTIFICATIONS
+• ξ-zero, Θ-zero, GolPhi and centered-GolPhi location names share the same
+  zero geometry after their stated changes of variables; aliases are grouped.
+• Cayley loss=0, transmission=1 and unit-state energy preservation belong to
+  one scalar gain model. They do not independently construct a GP Hilbert space.
+• AWPI gain contraction and passivity share one mechanism. The native pointwise
+  GP/BKQR passivity criterion uses an existential positive scalar carrier; its
+  name alone does not assert an actual operator intertwining theorem.
+• Canonical AWPI jets are controlled source specializations. An independently
+  defined historical analytic jet needs its own identification theorem.
+• Project candidate N01 energy equivalences change the form of its remaining growth estimate.
+  They do not establish that estimate or the missing product-coefficient identity.
+• The RR tail bound controls the tail. To conclude C=0, an all-height bound on
+  the full C is required; the nonnegative prefix cannot simply be discarded.
+• The original global Stirling premise is sufficient only in the surveyed source;
+  the separately named LOCAL premise is the iff criterion listed here.
+• Positive Pascal/Hopf splitting is an algebraic identity. Do not substitute
+  topological completeness, a Hopf fibration, or analytic continuation for it.
+• Cofinal depth propagation is a generic equivalence under its monotonicity
+  assumptions. Existence of admissible cofinal depths is a separate input.
+• Historic GP/BKQR common-moment records contain moment equality/reconstruction
+  as fields. Their conditional implications do not construct those fields.
+
+PART VII — EXACT DEFINITIONS AND INTERFACE EVIDENCE
+
+D001  
+Source: snapshots/downloads/RH_NATIVE_SOLOBOLO_SIGNED_BERNSTEIN_LEAN_MERGER_03_MAINLINE/Core/ActualXiJet.lean:6
+    noncomputable def xiEntire (s : ℂ) : ℂ :=
+      (1 + s * (s - 1) * completedRiemannZeta₀ s) / 2
+
+D002  
+Source: snapshots/downloads/RH_NATIVE_SOLOBOLO_SIGNED_BERNSTEIN_LEAN_MERGER_03_MAINLINE/Derivations/XiNativeEndpoint.lean:13
+    def xiRightHalfPlane : Set ℂ := {z : ℂ | (1 / 2 : ℝ) < z.re}
+
+D003  
+Source: snapshots/downloads/RH_NATIVE_SOLOBOLO_SIGNED_BERNSTEIN_LEAN_MERGER_03_MAINLINE/Derivations/XiNativeEndpoint.lean:110
+    def ActualXiLogDerivativeExtension : Prop :=
+      ∃ p : ℂ → ℂ,
+        AnalyticOnNhd ℂ p xiRightHalfPlane ∧
+        p =ᶠ[𝓝 (1 : ℂ)] (fun z : ℂ => deriv xiEntire z / xiEntire z)
+
+D004  DerivativeNonnegative
+Source: snapshots/downloads/RH_NATIVE_CANDIDATES_v0_1_1_MELLIN/AngularMaster/Calculus.lean:60
+    def DerivativeNonnegative (P : ℝ → ℝ → ℝ) : Prop :=
+      ∀ r, 0 < r → ∀ x ∈ angularInterval, 0 ≤ angularDerivative P r x
+
+D005  angularDerivative
+Source: snapshots/downloads/RH_NATIVE_CANDIDATES_v0_1_1_MELLIN/AngularMaster/Calculus.lean:35
+    def angularDerivative (P : ℝ → ℝ → ℝ) (r x : ℝ) : ℝ :=
+      derivWithin (P r) angularInterval x
+
+D006  ActualInteriorSlopeNonnegative
+Source: snapshots/downloads/RH_NATIVE_CANDIDATES_v0_1_1_MELLIN/RHMaster/AngularBridge.lean:45
+    def ActualInteriorSlopeNonnegative : Prop :=
+      ∀ r : ℝ, 0 < r → ∀ x ∈ Ioo (-1 : ℝ) 1,
+        0 ≤ AngularRegularity.actualAngularSlope r x
+
+D007  GlobalRegularLogSlopeNonnegative
+Source: snapshots/downloads/RH_MASTER_ANGULAR_CLOSURE_LEAN_v0_1_0_FIX2/RHMaster/AngularClosure.lean:41
+    def GlobalRegularLogSlopeNonnegative : Prop :=
+      ∀ r : ℝ, 0 < r → ∀ x ∈ Set.Ioo (-1 : ℝ) 1,
+        AWPIRH.theta (AngularRegularity.circlePoint r x) ≠ 0 →
+          0 ≤ AngularRegularity.logSlope AWPIRH.theta r x
+
+D008  logSlope
+Source: snapshots/downloads/RH_MASTER_ANGULAR_CLOSURE_LEAN_v0_1_0_FIX2/AngularRegularity/LogDerivative.lean:20
+    def logSlope (f : ℂ → ℂ) (r x : ℝ) : ℝ :=
+      (circlePoint r x * deriv f (circlePoint r x) /
+        f (circlePoint r x)).im
+
+D009  ProfileMaster
+Source: snapshots/downloads/RH_NATIVE_CANDIDATES_v0_1_1_MELLIN/AngularMaster/Calculus.lean:73
+    def ProfileMaster (P : ℝ → ℝ → ℝ) : Prop :=
+      AngularMinimum P ∧ BoundaryNonnegative P
+
+D010  AngularMinimum
+Source: snapshots/downloads/RH_NATIVE_CANDIDATES_v0_1_1_MELLIN/AngularMaster/Calculus.lean:64
+    def AngularMinimum (P : ℝ → ℝ → ℝ) : Prop :=
+      ∀ r, 0 < r → ∀ x ∈ angularInterval,
+        angularDerivative P r (-1) ≤ angularDerivative P r x
+
+D011  BoundaryNonnegative
+Source: snapshots/downloads/RH_NATIVE_CANDIDATES_v0_1_1_MELLIN/AngularMaster/Calculus.lean:69
+    def BoundaryNonnegative (P : ℝ → ℝ → ℝ) : Prop :=
+      ∀ r, 0 < r → 0 ≤ angularDerivative P r (-1)
+
+D012  LogMaster
+Source: snapshots/downloads/RH_NATIVE_CANDIDATES_v0_1_1_MELLIN/AngularMaster/Calculus.lean:77
+    def LogMaster (ε : ℝ) (S : ℝ → ℝ) (P : ℝ → ℝ → ℝ) : Prop :=
+      ∀ r, 0 < r → ∀ x ∈ angularInterval,
+        masterFlux ε S P r (-1) ≤ masterFlux ε S P r x ∧
+        0 ≤ masterFlux ε S P r (-1)
+
+D013  masterLog
+Source: snapshots/downloads/RH_NATIVE_CANDIDATES_v0_1_1_MELLIN/AngularMaster/Calculus.lean:39
+    def masterLog (ε : ℝ) (S : ℝ → ℝ) (P : ℝ → ℝ → ℝ) (r x : ℝ) : ℝ :=
+      Real.log (1 + ε * P r x / (S r) ^ 2)
+
+D014  masterFlux
+Source: snapshots/downloads/RH_NATIVE_CANDIDATES_v0_1_1_MELLIN/AngularMaster/Calculus.lean:43
+    def masterFlux (ε : ℝ) (S : ℝ → ℝ) (P : ℝ → ℝ → ℝ) (r x : ℝ) : ℝ :=
+      Real.exp (masterLog ε S P r x) *
+        derivWithin (masterLog ε S P r) angularInterval x
+
+D015  NormalizerPositive
+Source: snapshots/downloads/RH_NATIVE_CANDIDATES_v0_1_1_MELLIN/AngularMaster/Calculus.lean:56
+    def NormalizerPositive (S : ℝ → ℝ) : Prop :=
+      ∀ r, 0 < r → 0 < S r
+
+D016  frozenNormalizer
+Source: snapshots/downloads/RH_NATIVE_CANDIDATES_v0_1_1_MELLIN/AngularMaster/RadialExtension.lean:17
+    def frozenNormalizer (r : ℝ) : ℝ := ‖AWPIRH.theta (r : ℂ)‖
+
+D017  frozenLogMaster
+Source: snapshots/downloads/RH_NATIVE_CANDIDATES_v0_1_1_MELLIN/AngularMaster/RadialExtension.lean:20
+    def frozenLogMaster (ε : ℝ) : Prop := LogMaster ε frozenNormalizer actualProfile
+
+D018  AngularResidualNonnegative
+Source: snapshots/downloads/RH_NATIVE_CANDIDATES_v0_1_1_MELLIN/RHMaster/AngularCoverage.lean:71
+    def AngularResidualNonnegative : Prop :=
+      ∀ r : ℝ, (255 / 7 : ℝ) < r → ∀ x ∈ Ioo (-1 : ℝ) 1,
+        x ≤ -(84 / 85 : ℝ) → 0 ≤ AngularRegularity.actualAngularSlope r x
+
+D019  CurvedAngularResidualNonnegative
+Source: snapshots/downloads/RH_NATIVE_CANDIDATES_v0_1_1_MELLIN/Develop/NativeAngularResidualDevelopment.lean:304
+    def CurvedAngularResidualNonnegative : Prop :=
+      ∀ r : ℝ, (255 / 7 : ℝ) < r → ∀ x : ℝ,
+        -1 < x → x < -(84 / 85 : ℝ) → x ≤ curvedCutoff r →
+          0 ≤ AngularRegularity.actualAngularSlope r x
+
+D020  curvedCutoff
+Source: snapshots/downloads/RH_NATIVE_CANDIDATES_v0_1_1_MELLIN/Develop/NativeAngularResidualDevelopment.lean:180
+    def curvedCutoff (r : ℝ) : ℝ := -1 + (84 / 167) / r
+
+D021  AllSlopeQQRH
+Source: snapshots/downloads/RH_MASTER_CLOSURE_ANGULAR_LEAN_v0_1_1_FIX1/RHMaster/QQRHClosure.lean:14
+    def AllSlopeQQRH : Prop :=
+      ∀ m : ℝ, 0 < m → AngularMaster.QQRH m
+
+D022  QQRH
+Source: snapshots/downloads/RH_MASTER_CLOSURE_ANGULAR_LEAN_v0_1_1_FIX1/AngularMaster/QQRHGeometry.lean:36
+    def QQRH (m : ℝ) : Prop :=
+      ∀ s : ℂ, 0 < s.re → s.re < 1 →
+        |s.im| < m * |s.re - 1 / 2| → riemannZeta s ≠ 0
+
+D023  slopeCutoff
+Source: snapshots/downloads/RH_MASTER_CLOSURE_ANGULAR_LEAN_v0_1_1_FIX1/AngularMaster/QQRHGeometry.lean:19
+    def slopeCutoff (m : ℝ) : ℝ := (1 - m ^ 2) / (1 + m ^ 2)
+
+D024  CofinalSlopeQQRH
+Source: snapshots/downloads/RH_MASTER_CLOSURE_ANGULAR_LEAN_v0_1_1_FIX1/RHMaster/QQRHClosure.lean:17
+    def CofinalSlopeQQRH : Prop :=
+      ∀ M : ℝ, 0 < M → ∃ m : ℝ, M ≤ m ∧ AngularMaster.QQRH m
+
+D025  AllSlopePositivity
+Source: snapshots/downloads/RH_MASTER_CLOSURE_ANGULAR_LEAN_v0_1_1_FIX1/RHMaster/QQRHClosure.lean:20
+    def AllSlopePositivity : Prop :=
+      ∀ m : ℝ, 0 < m →
+        AngularMaster.CutoffDerivativeNonnegative (AngularMaster.slopeCutoff m)
+
+D026  CutoffDerivativeNonnegative
+Source: snapshots/downloads/RH_MASTER_CLOSURE_ANGULAR_LEAN_v0_1_1_FIX1/AngularMaster/AngularCutoff.lean:75
+    def CutoffDerivativeNonnegative (a : ℝ) : Prop :=
+      ∀ r : ℝ, 0 < r → ∀ x ∈ Ioo a 1,
+        0 ≤ angularDerivative actualProfile r x
+
+D027  defect
+Source: snapshots/downloads/RH_NATIVE_CANDIDATES_v0_1_1_MELLIN/PositivityPremise/Kernel.lean:14
+    def defect (m delta gamma : ℝ) : ℝ :=
+      m * delta ^ 2 * (3 * gamma ^ 2 + delta ^ 2) /
+        (gamma ^ 2 * (gamma ^ 2 + delta ^ 2) ^ 2)
+
+D028  C
+Source: snapshots/downloads/RH_NATIVE_CANDIDATES_v0_1_1_MELLIN/PositivityPremise/Series.lean:36
+    def C : ℝ := ∑' i, D.contribution i
+    def traceTerm (i : ι) : ℝ :=
+      (D.multiplicity i : ℝ) * (D.gamma i ^ 2 - D.delta i ^ 2) /
+        (D.gamma i ^ 2 + D.delta i ^ 2) ^ 2
+    def trace : ℝ := ∑' i, D.traceTerm i
+    def OnLine : Prop := ∀ i, D.delta i = 0
+
+D029  PositivityPremise
+Source: snapshots/downloads/RH_NATIVE_CANDIDATES_v0_1_1_MELLIN/PositivityPremise/Scalar.lean:15
+    def PositivityPremise (C c1 : ℝ) : Prop :=
+      ∀ T : ℝ, 1 ≤ T → 0 ≤ C ∧ C ≤ 3 * c1 / (4 * T ^ 2)
+
+D030  c1
+Source: snapshots/downloads/RH_NATIVE_CANDIDATES_v0_1_1_MELLIN/PositivityPremise/Series.lean:35
+    def c1 : ℝ := ∑' i, D.mass i
+    def C : ℝ := ∑' i, D.contribution i
+    def traceTerm (i : ι) : ℝ :=
+      (D.multiplicity i : ℝ) * (D.gamma i ^ 2 - D.delta i ^ 2) /
+        (D.gamma i ^ 2 + D.delta i ^ 2) ^ 2
+    def trace : ℝ := ∑' i, D.traceTerm i
+    def OnLine : Prop := ∀ i, D.delta i = 0
+
+D031  canonicalXi
+Source: snapshots/downloads/RH_NATIVE_CANDIDATES_v0_1_1_MELLIN/PositivityPremise/LiteralZeta.lean:69
+    def canonicalXi (s : ℂ) : ℂ :=
+      (1 + s * (s - 1) * completedRiemannZeta₀ s) / 2
+
+D032  centerCurvature
+Source: snapshots/downloads/RH_NATIVE_CANDIDATES_v0_1_1_MELLIN/PositivityPremise/LiteralZeta.lean:73
+    def centerCurvature : ℝ :=
+      (deriv (deriv canonicalXi) (1 / 2) / (2 * canonicalXi (1 / 2))).re
+
+D033  TraceIdentification
+Source: snapshots/downloads/RH_NATIVE_CANDIDATES_v0_1_1_MELLIN/PositivityPremise/LiteralZeta.lean:77
+    def TraceIdentification {ι : Type*} (D : ZeroData ι) : Prop :=
+      centerCurvature = D.trace
+
+D034  SmallOPremise
+Source: snapshots/downloads/RH_GIGGA_SMALL_O_EQUIVALENCE_LEAN_v0_2_0/RHSmallO.lean:28
+    def SmallOPremise : Prop :=
+      (fun r : ℝ => I r - Real.pi * r * criticalLineCutoff r)
+        =o[𝓝[>] 0] (fun r : ℝ => r)
+
+D035  angularI
+Source: snapshots/downloads/RH_GIGGA_SMALL_O_EQUIVALENCE_LEAN_v0_2_0/AngularIntegral.lean:25
+    def angularI (r : ℝ) : ℝ :=
+      ∫ x in (-1 : ℝ)..1,
+        (deriv (actualProfile r) x / actualProfile r x) * Real.sqrt (1 - x ^ 2)
+
+D036  criticalLineCutoffTerm
+Source: snapshots/downloads/RH_GIGGA_SMALL_O_EQUIVALENCE_LEAN_v0_2_0/NativeClosure.lean:62
+    def criticalLineCutoffTerm (r : ℝ) (i : SpectralIndex) : ℝ := by
+      classical
+      exact if (actualPairZero i).im = 0 ∧ ‖actualPairZero i‖ ≤ 1 / r
+        then spectralWeight i else 0
+
+D037  criticalLineCutoff
+Source: snapshots/downloads/RH_GIGGA_SMALL_O_EQUIVALENCE_LEAN_v0_2_0/NativeClosure.lean:67
+    def criticalLineCutoff (r : ℝ) : ℝ :=
+      ∑' i : SpectralIndex, criticalLineCutoffTerm r i
+
+D038  MISTERPREMISE
+Source: snapshots/downloads/RH_MISTERPREMISE_LEAN_v0_1_0/MisterPremise/Premise.lean:26
+    def MISTERPREMISE : Prop :=
+      ∀ r : ℝ, (255 / 7 : ℝ) < r →
+        ∃ M : ℝ, 0 < M ∧ ∀ x ∈ Set.Ioc (-1 : ℝ) (-kappa r),
+          0 < A r x → (1 + x) * deriv (A r) x ≤ M * A r x
+
+D039  factorThreshold
+Source: snapshots/downloads/RH_MISTERPREMISE_LEAN_v0_1_0/MisterPremise/Cutoff.lean:10
+    def factorThreshold (r R : ℝ) : ℝ :=
+      (R - 1 / 2) * (R ^ 2 + r ^ 2) / (2 * r * R ^ 2)
+
+D040  thresholdValues
+Source: snapshots/downloads/RH_MISTERPREMISE_LEAN_v0_1_0/MisterPremise/Cutoff.lean:13
+    def thresholdValues (r : ℝ) : Set ℝ :=
+      {v | ∃ R : ℝ, (85 / 2 : ℝ) ≤ R ∧ v = factorThreshold r R}
+
+D041  kappa
+Source: snapshots/downloads/RH_MISTERPREMISE_LEAN_v0_1_0/MisterPremise/Cutoff.lean:18
+    def kappa (r : ℝ) : ℝ := sInf (thresholdValues r)
+
+D042  TAYLORS_PRODIGY_PREMISE
+Source: snapshots/downloads/TAYLORS_PRODIGY_LEAN_v0_2_0/TaylorProdigy/Objects.lean:115
+    def TAYLORS_PRODIGY_PREMISE : Prop :=
+      ∀ r : ℝ, 0 < r → ∃ rate : ℝ → ℝ,
+        (∀ b : ℝ, 0 < b → b < Real.pi → IntervalIntegrable rate volume 0 b) ∧
+        (∀ θ ∈ Ioo (0 : ℝ) Real.pi, 0 ≤ rate θ) ∧
+        ∀ θ ∈ Ioo (0 : ℝ) Real.pi,
+          0 < F r θ → -rate θ * F r θ ≤ deriv (F r) θ
+
+D043  H
+Source: snapshots/downloads/TAYLORS_PRODIGY_LEAN_v0_2_0/TaylorProdigy/Objects.lean:30
+    def H (r x : ℝ) : ℝ := deriv (AngularMaster.actualProfile r) x
+
+D044  F
+Source: snapshots/downloads/TAYLORS_PRODIGY_LEAN_v0_2_0/TaylorProdigy/Objects.lean:33
+    def F (r θ : ℝ) : ℝ := H r (Real.cos θ)
+
+D045  STIRLINGS_PRODIGY_LOCAL
+Source: snapshots/downloads/STIRLINGS_PRODIGY_LEAN_v0_2_0/StirlingsProdigy/Local.lean:19
+    def STIRLINGS_PRODIGY_LOCAL : Prop :=
+      ∀ r : ℝ, 0 < r → ∀ x : ℝ, -1 < x → x < 1 →
+        LocalFirstOrderAt (AngularMaster.actualProfile r) x
+
+D046  LocalFirstOrderAt
+Source: snapshots/downloads/STIRLINGS_PRODIGY_LEAN_v0_2_0/StirlingsProdigy/LocalCalculus.lean:23
+    def LocalFirstOrderAt (f : ℝ → ℝ) (x : ℝ) : Prop :=
+      ∀ ε : ℝ, 0 < ε → ∃ η : ℝ, 0 < η ∧
+        ∀ h : ℝ, 0 < h → h < η → x + h ≤ 1 →
+          -ε * h ≤ f (x + h) - f x
+
+D047  CanonicalTwoDefectSigns
+Source: snapshots/downloads/AWPI_PHI_RH_NATIVE_FINAL_FREEZE_20260918/AWPI/PhiRH/NativeRHExactWaist.lean:159
+    def CanonicalTwoDefectSigns : Prop :=
+      ∀ rho : ℂ,
+        PhiZero phiEta rho →
+          canonicalModel.exactPlusDefect rho ≤ 0 ∧
+          canonicalModel.exactMinusDefect rho ≤ 0
+
+D048  canonicalModel
+Source: snapshots/downloads/AWPI_PHI_RH_NATIVE_FINAL_FREEZE_20260918/AWPI/PhiRH/NativePassivityCore.lean:29
+    noncomputable def canonicalModel :=
+      PhiActualModel
+        phiEta
+        (literalShiftedPhiValue phiEta)
+        canonicalTransverseJet
+        canonicalBindingScale
+        canonicalBindingScale
+        concreteKQPlusSource
+        concreteKQMinusSource
+
+D049  GlobalLiteralDyadicContraction
+Source: snapshots/downloads/awpi_phi_rh_lean_dyadic_scale_v0_1_8_run_20260918_182436_414/awpi_phi_rh_lean_dyadic_scale_v0_1_8/AWPI/PhiRH/NativeRHGlobalNormalForm.lean:21
+    def GlobalLiteralDyadicContraction : Prop :=
+      ∀ rho : ℂ,
+        PhiZero phiEta rho →
+          dyadicScale
+              (2 * (rho.re - (1 / 2 : ℝ))) ≤ 1 ∧
+          dyadicScale
+              (-2 * (rho.re - (1 / 2 : ℝ))) ≤ 1
+
+D050  dyadicScale
+Source: snapshots/downloads/awpi_phi_rh_lean_dyadic_scale_v0_1_8_run_20260918_182436_414/awpi_phi_rh_lean_dyadic_scale_v0_1_8/AWPI/PhiRH/DyadicScale.lean:13
+    noncomputable def dyadicScale (a : ℝ) : ℝ :=
+      Real.exp (a * Real.log 2)
+
+D051  PlusPassivityCore
+Source: snapshots/lean-native/awpi_phi_rh_lean_sieved_v0_1_1/AWPI/PhiRH/ScalarConcreteFrontier.lean:11
+    def PlusPassivityCore : Prop :=
+      ∀ rho : ℂ, NontrivialZetaZero rho →
+        CanonicalOneSidedTail.canonicalPlusExactDefect rho ≤ 0
+
+D052  canonicalPlusExactDefect
+Source: snapshots/lean-native/awpi_phi_rh_lean_sieved_v0_1_1/AWPI/PhiRH/CanonicalOneSidedTail.lean:19
+    noncomputable def canonicalPlusExactDefect (rho : ℂ) : ℝ :=
+      scale2 (2 * (rho.re - (1 / 2 : ℝ))) * (canonicalPlusJet rho) ^ 2 -
+        (canonicalPlusJet rho) ^ 2
+
+D053  ActualPointwiseGPBKQRPlusPassivity
+Source: snapshots/downloads/CONSTRUCTIVE_RH_ACTUAL_GP_BKQR_GAP_LEAN_v0_3_0/PointwiseCriticalLine.lean:105
+    def ActualPointwiseGPBKQRPlusPassivity : Prop :=
+      ∀ rho : ℂ, NontrivialZetaZero rho → PointwiseGPBKQRPlusPassivityAt rho
+
+D054  PointwiseGPBKQRPlusPassivityAt
+Source: snapshots/downloads/CONSTRUCTIVE_RH_ACTUAL_GP_BKQR_GAP_LEAN_v0_3_0/PointwiseCriticalLine.lean:37
+    def PointwiseGPBKQRPlusPassivityAt (rho : ℂ) : Prop :=
+      ∃ carrier : ℝ, 0 < carrier ∧ plusDefect rho carrier ≤ 0
+
+D055  plusDefect
+Source: snapshots/downloads/CONSTRUCTIVE_RH_ACTUAL_GP_BKQR_GAP_LEAN_v0_3_0/PointwiseCriticalLine.lean:29
+    noncomputable def plusDefect (rho : ℂ) (carrier : ℝ) : ℝ :=
+      forwardGain rho * carrier ^ 2 - carrier ^ 2
+
+D056  forwardGain
+Source: snapshots/downloads/CONSTRUCTIVE_RH_ACTUAL_GP_BKQR_GAP_LEAN_v0_3_0/PointwiseCriticalLine.lean:25
+    noncomputable def forwardGain (rho : ℂ) : ℝ :=
+      scale2 (2 * centered rho)
+
+D057  scale2
+Source: snapshots/downloads/CONSTRUCTIVE_RH_ACTUAL_GP_BKQR_GAP_LEAN_v0_3_0/PointwiseCriticalLine.lean:8
+    noncomputable def scale2 (a : ℝ) : ℝ := Real.rpow 2 a
+
+D058  NontrivialZetaZero
+Source: snapshots/downloads/CONSTRUCTIVE_RH_ACTUAL_GP_BKQR_GAP_LEAN_v0_3_0/ConstructiveWeakRH.lean:8
+    def NontrivialZetaZero (rho : ℂ) : Prop :=
+      riemannZeta rho = 0 ∧
+        (¬ ∃ n : ℕ, rho = -2 * ((n : ℂ) + 1)) ∧
+        rho ≠ 1
+
+D059  CanonicalPlusExactTailUpper
+Source: snapshots/lean-native/awpi_phi_rh_lean_sieved_v0_1_1/AWPI/PhiRH/CanonicalOneSidedTail.lean:25
+    def CanonicalPlusExactTailUpper : Prop :=
+      ∀ (n : ℕ) (rho : ℂ), NontrivialZetaZero rho →
+        canonicalPlusExactDefect rho ≤
+          canonicalKQPlusSource n rho.re rho.im *
+            canonicalKQPlusSource n rho.re rho.im
+
+D060  RawActualPlusKQFrontier
+Source: snapshots/downloads/awpi_phi_rh_lean_scalar_frontier_v0_2_16_native16_run_20260919_100223_134/awpi_phi_rh_lean_scalar_frontier_v0_2_16_native16/AWPI/PhiRH/RawConcreteFrontier.lean:59
+    def RawActualPlusKQFrontier : Prop :=
+      ∀ (n : ℕ) (rho : ℂ), NontrivialZetaZero rho →
+        scale2 (2 * (rho.re - (1 / 2 : ℝ))) * (rhoNorm2 rho) ^ 2 -
+            (rhoNorm2 rho) ^ 2 ≤
+          (Real.cos (dyadicPhase rho.im) * phiCellRe n 1 rho.re rho.im +
+            Real.sin (dyadicPhase rho.im) * phiCellIm n 1 rho.re rho.im) ^ 2
+
+D061  ActualPlusKQLimitCore
+Source: snapshots/downloads/awpi_phi_rh_lean_scalar_frontier_v0_2_16_native16_run_20260919_100223_134/awpi_phi_rh_lean_scalar_frontier_v0_2_16_native16/AWPI/PhiRH/SingleConcreteFrontier.lean:18
+    def ActualPlusKQLimitCore : Prop :=
+      ∀ (n : ℕ) (rho : ℂ), NontrivialZetaZero rho →
+        plusExactDefect canonicalPlusJetScale canonicalTransverseJet rho ≤
+          actualKQPlusSource n rho.re rho.im *
+            actualKQPlusSource n rho.re rho.im
+
+D062  altSign, phiBase, phiKernelRe/Im, phiCellRe/Im
+Source: snapshots/downloads/awpi_phi_rh_lean_scalar_frontier_v0_2_16_native16_run_20260919_100223_134/awpi_phi_rh_lean_scalar_frontier_v0_2_16_native16/AWPI/PhiRH/TailDecayDisassembly.lean:13
+    def altSign : ℕ → ℝ
+      | 0 => 1
+      | n + 1 => - altSign n
+
+D063  ExistsCanonicalPlusFactorization
+Source: snapshots/downloads/awpi_phi_rh_lean_factorization_frontier_v0_2_12_native16_run_20260918_204106_782/awpi_phi_rh_lean_factorization_frontier_v0_2_12_native16/AWPI/PhiRH/FactorizationFrontier.lean:94
+    def ExistsCanonicalPlusFactorization : Prop :=
+      ∃ (finitePlusEnergy plusTailEnergy : ℕ → ℂ → ℝ)
+        (uniformRemainder : ℕ → ℝ),
+          PlusEnergySplit finitePlusEnergy plusTailEnergy ∧
+          FinitePlusPassivity finitePlusEnergy ∧
+          PlusTailControl plusTailEnergy uniformRemainder ∧
+          UniformRemainderArbitrarilySmall uniformRemainder
+
+D064  HistoricalPlusPointwiseSource
+Source: snapshots/downloads/awpi_phi_rh_lean_scalar_frontier_v0_2_16_native16_run_20260919_100223_134/awpi_phi_rh_lean_scalar_frontier_v0_2_16_native16/AWPI/PhiRH/HistoricalSourceStandaloneClean.lean:70
+    def HistoricalPlusPointwiseSource
+        (finitePlusEnergy plusTailEnergy : ℕ → ℂ → ℝ)
+        (uniformRemainder : ℕ → ℝ)
+        (plusCell : ℕ → ℂ → ℝ) : Prop :=
+      PlusEnergySplit finitePlusEnergy plusTailEnergy ∧
+      (∀ rho : ℂ, NontrivialZetaZero rho → plusCell 0 rho = 0) ∧
+      (∀ (n : ℕ) (rho : ℂ), NontrivialZetaZero rho →
+        finitePlusDefect finitePlusEnergy n rho =
+          scalarPrefixSum n (fun k => plusLocalFlux plusCell k rho)) ∧
+      PlusTailControl plusTailEnergy uniformRemainder ∧
+      UniformRemainderArbitrarilySmall uniformRemainder
+
+D065  ExistsHistoricalPlusPointwiseSource
+Source: snapshots/downloads/awpi_phi_rh_lean_scalar_frontier_v0_2_16_native16_run_20260919_100223_134/awpi_phi_rh_lean_scalar_frontier_v0_2_16_native16/AWPI/PhiRH/HistoricalSourceStandaloneClean.lean:205
+    def ExistsHistoricalPlusPointwiseSource : Prop :=
+      ∃ (finitePlusEnergy plusTailEnergy : ℕ → ℂ → ℝ)
+        (uniformRemainder : ℕ → ℝ)
+        (plusCell : ℕ → ℂ → ℝ),
+          HistoricalPlusPointwiseSource
+            finitePlusEnergy plusTailEnergy uniformRemainder plusCell
+
+D066  Scale2Facts
+Source: snapshots/lean-native/awpi_phi_rh_lean_sieved_v0_1_1/AWPI/PhiRH/Core.lean:60
+    structure Scale2Facts {Point : Type u} {Jet : Type v} (M : Model Point Jet) : Prop where
+      PHIRH242_SCALE2_AT_ZERO : M.scale2 0 = 1
+      PHIRH243_SCALE2_STRICTLY_INCREASING : StrictMono M.scale2
+
+D067  NormalizedDyadicMultiplierFacts
+Source: snapshots/lean-native/awpi_phi_rh_lean_sieved_v0_1_1/AWPI/PhiRH/Core.lean:66
+    structure NormalizedDyadicMultiplierFacts
+        {Point : Type u} {Jet : Type v} (M : Model Point Jet) : Prop where
+      PHIRH233_NORMALIZED_DYADIC_MULTIPLIER_SOURCE_GIVES_TAIL_DECAY :
+        M.sourceFormula →
+        (∀ rho : Point, M.isZero rho → M.positiveStrip rho) →
+        ∀ (rho : Point) (eps : ℝ),
+          M.isZero rho → 0 < eps →
+          ∃ n : ℕ, M.plusTail n rho ≤ eps ∧ M.minusTail n rho ≤ eps
+
+D068  Background
+Source: snapshots/lean-native/awpi_phi_rh_lean_sieved_v0_1_1/AWPI/PhiRH/Core.lean:76
+    structure Background {Point : Type u} {Jet : Type v} (M : Model Point Jet) : Prop where
+      normalizedSourceFormula : M.sourceFormula
+      zeroInPositiveStrip : ∀ rho : Point, M.isZero rho → M.positiveStrip rho
+      exactPlusActive : ∀ rho : Point, M.isZero rho → 0 < M.exactPlusEnergy rho
+      exactMinusActive : ∀ rho : Point, M.isZero rho → 0 < M.exactMinusEnergy rho
+      criticalLineForwardGainOne :
+        ∀ rho : Point, M.criticalLine rho → M.gainPlus rho = 1
+      criticalLineBackwardGainOne :
+        ∀ rho : Point, M.criticalLine rho → M.gainMinus rho = 1
+
+D069  SourceConstructor
+Source: snapshots/lean-native/awpi_phi_rh_lean_sieved_v0_1_1/AWPI/PhiRH/Core.lean:87
+    structure SourceConstructor
+        {Point : Type u} {Jet : Type v} (M : Model Point Jet)
+        (finitePlusDefect finiteMinusDefect
+          finitePlusSquare finiteMinusSquare : ℕ → Point → ℝ) : Prop where
+      normalizedSourceFormula : M.sourceFormula
+      zeroInPositiveStrip : ∀ rho : Point, M.isZero rho → M.positiveStrip rho
+      exactPlusActive : ∀ rho : Point, M.isZero rho → 0 < M.exactPlusEnergy rho
+      exactMinusActive : ∀ rho : Point, M.isZero rho → 0 < M.exactMinusEnergy rho
+      finitePlusNegativeSquare :
+        ∀ (n : ℕ) (rho : Point), M.isZero rho →
+          finitePlusDefect n rho = -(finitePlusSquare n rho) ^ 2
+      finiteMinusNegativeSquare :
+        ∀ (n : ℕ) (rho : Point), M.isZero rho →
+          finiteMinusDefect n rho = -(finiteMinusSquare n rho) ^ 2
+      plusToLimitTailUpper :
+        ∀ (n : ℕ) (rho : Point), M.isZero rho →
+          M.exactPlusDefect rho ≤ finitePlusDefect n rho + M.plusTail n rho
+      minusToLimitTailUpper :
+        ∀ (n : ℕ) (rho : Point), M.isZero rho →
+          M.exactMinusDefect rho ≤ finiteMinusDefect n rho + M.minusTail n rho
+
+D070  Constructor
+Source: snapshots/lean-native/awpi_phi_rh_lean_sieved_v0_1_1/AWPI/PhiRH/Core.lean:131
+    def Constructor {Point : Type u} {Jet : Type v} (M : Model Point Jet) : Prop :=
+      ∃ finitePlusDefect finiteMinusDefect
+          finitePlusSquare finiteMinusSquare : ℕ → Point → ℝ,
+        SourceConstructor M
+          finitePlusDefect finiteMinusDefect
+          finitePlusSquare finiteMinusSquare
+
+D071  
+Source: snapshots/downloads/RH_NATIVE_SOLOBOLO_US_IFF_RH_MERGER_04_v0_2_1_FIX1/Bridge/AllDepthWidderPositivity.lean:16
+    def ActualWidderDownwardPositivity : Prop :=
+      ∀ n : Nat,
+        ActualUniformDepthPositive (n + 1) →
+          ActualUniformDepthPositive n
+
+D072  
+Source: snapshots/downloads/RH_NATIVE_SOLOBOLO_US_IFF_RH_MERGER_04_v0_2_1_FIX1/Bridge/WidderStieltjesGeometry.lean:63
+    def ActualWidderStieltjesSlitExclusion : Prop :=
+      ActualAllDepthWidderPositive → ActualSlitZeroFree
+
+D073  
+Source: snapshots/downloads/RH_NATIVE_SOLOBOLO_US_IFF_RH_MERGER_04_v0_2_1_FIX1/Bridge/WidderStieltjesGeometry.lean:72
+    def RHImpliesAllDepthWidderPositive : Prop :=
+      RiemannHypothesis → ActualAllDepthWidderPositive
+
+D074  
+Source: snapshots/downloads/RH_NATIVE_SOLOBOLO_US_IFF_RH_MERGER_04_v0_2_1_FIX1/Bridge/UniformDepthPositivityRH04.lean:7
+    def ActualUniformDepthPositive (N : Nat) : Prop :=
+      ∀ a : ℝ, 0 < a → 0 ≤ actualWidderMoment a N
+
+D075  
+Source: snapshots/downloads/RH_NATIVE_SOLOBOLO_US_IFF_RH_MERGER_04_v0_2_1_FIX1/Bridge/UniformDepthPositivityRH04.lean:15
+    def ActualCofinalUniformDepthPositive : Prop :=
+      ∀ K : Nat, ActualUniformDepthPositiveBeyond K
+
+D076  
+Source: snapshots/downloads/RH_NATIVE_SOLOBOLO_US_IFF_RH_MERGER_04_v0_2_1_FIX1/Bridge/ActualWidderCore.lean:27
+    noncomputable def actualXi (s : ℂ) : ℂ :=
+      s * (s - 1) * completedRiemannZeta s
+
+D077  
+Source: snapshots/downloads/RH_NATIVE_SOLOBOLO_US_IFF_RH_MERGER_04_v0_2_1_FIX1/Bridge/ActualWidderCore.lean:44
+    noncomputable def actualWidderMoment (a : ℝ) (n : Nat) : ℝ :=
+      widderTower actualWidderBase n a
+
+D078  HausdorffPositive
+Source: snapshots/downloads/RH_GP_BKQR_OPERATION_ZHANG_FIREWALL_LEAN_v0_4_3_FIX1/Frontier/OurFrontier.lean:61
+    def HausdorffPositive : Prop :=
+      SequenceHausdorffPositive ZhangNormalizedCoeff
+
+D079  SequenceHausdorffPositive
+Source: snapshots/downloads/RH_GP_BKQR_OPERATION_ZHANG_FIREWALL_LEAN_v0_4_3_FIX1/Frontier/OurFrontier.lean:57
+    def SequenceHausdorffPositive (c : Nat → Int) : Prop :=
+      ∀ n k : Nat, IntNonnegative (HausdorffDiff c n k)
+
+D080  HausdorffDiff
+Source: snapshots/downloads/RH_GP_BKQR_OPERATION_ZHANG_FIREWALL_LEAN_v0_4_3_FIX1/Frontier/OurFrontier.lean:48
+    def HausdorffDiff (c : Nat → Int) : Nat → Nat → Int
+      | n, 0 => c n
+      | n, k + 1 => HausdorffDiff c n k - HausdorffDiff c (n + 1) k
+
+D081  IntNonnegative
+Source: snapshots/downloads/RH_GP_BKQR_OPERATION_ZHANG_FIREWALL_LEAN_v0_4_3_FIX1/Frontier/OurFrontier.lean:53
+    def IntNonnegative (z : Int) : Prop :=
+      ∃ m : Nat, z = Int.ofNat m
+
+D082  ZhangNormalizedCoeff
+Source: snapshots/downloads/RH_GP_BKQR_OPERATION_ZHANG_FIREWALL_LEAN_v0_4_3_FIX1/Frontier/OurFrontier.lean:44
+    def ZhangNormalizedCoeff : Nat → Int :=
+      ZhangScaleNormalize ZhangRawMomentCoeff
+
+D083  Zhang2022CompleteMonotonicityHierarchy
+Source: snapshots/downloads/RH_GP_BKQR_OPERATION_ZHANG_FIREWALL_LEAN_v0_4_3_FIX1/Literature/Zhang2022.lean:28
+    opaque Zhang2022CompleteMonotonicityHierarchy : Prop
+
+D084  Zhang2022LiteraturePackage
+Source: snapshots/downloads/RH_GP_BKQR_OPERATION_ZHANG_FIREWALL_LEAN_v0_4_3_FIX1/Literature/Zhang2022.lean:31
+    structure Zhang2022LiteraturePackage : Prop where
+      xiSquareRootEntireIdentity : Zhang2022XiSquareRootEntireIdentity
+      cmOperatorIdentity : Zhang2022CMOperatorIdentity
+      resolventLaplaceIdentity : Zhang2022ResolventLaplaceIdentity
+      rhIffCompleteMonotonicity :
+        RiemannHypothesis ↔ Zhang2022CompleteMonotonicityHierarchy
+
+D085  WallAdmissible
+Source: snapshots/downloads/RH_GP_BKQR_OPERATION_ZHANG_FIREWALL_LEAN_v0_4_3_FIX1/Literature/Sokal2020.lean:6
+    opaque WallAdmissible : Prop
+
+D086  WeightedShiftSubnormal
+Source: snapshots/downloads/RH_GP_BKQR_OPERATION_ZHANG_FIREWALL_LEAN_v0_4_3_FIX1/Literature/BergerGellarWallen.lean:6
+    opaque WeightedShiftSubnormal : Prop
+
+D087  WeightedShiftCompletelyHypercontractive
+Source: snapshots/downloads/RH_GP_BKQR_OPERATION_ZHANG_FIREWALL_LEAN_v0_4_3_FIX1/Literature/Agler1985.lean:6
+    opaque WeightedShiftCompletelyHypercontractive : Prop
+
+D088  PascalHopfAnchor
+Source: snapshots/downloads/RH_GP_BKQR_OPERATION_ZHANG_FIREWALL_LEAN_v0_4_3_FIX1/Frontier/OurFrontier.lean:252
+    def PascalHopfAnchor : Prop :=
+      Nonempty (PositivePascalHopfData CanonicalGPNormalizedCoeff)
+
+D089  PositivePascalHopfData
+Source: snapshots/downloads/RH_GP_BKQR_OPERATION_ZHANG_FIREWALL_LEAN_v0_4_3_FIX1/Frontier/OurFrontier.lean:134
+    structure PositivePascalHopfData (c : Nat → Int) where
+      value : Nat → Nat → Int
+      boundary : ∀ n : Nat, value n 0 = c n
+      split : ∀ n k : Nat, value n k = value (n + 1) k + value n (k + 1)
+      positive : ∀ n k : Nat, IntNonnegative (value n k)
+
+D090  BKQREnergyAnchor
+Source: snapshots/downloads/RH_GP_BKQR_OPERATION_ZHANG_FIREWALL_LEAN_v0_4_3_FIX1/Frontier/OurFrontier.lean:256
+    def BKQREnergyAnchor : Prop :=
+      Nonempty (BKQREnergyData CanonicalGPNormalizedCoeff)
+
+D091  BKQREnergyData
+Source: snapshots/downloads/RH_GP_BKQR_OPERATION_ZHANG_FIREWALL_LEAN_v0_4_3_FIX1/Frontier/OurFrontier.lean:155
+    structure BKQREnergyData (c : Nat → Int) where
+      energy : Nat → Nat → Nat
+      boundary : ∀ n : Nat, Int.ofNat (energy n 0) = c n
+      split : ∀ n k : Nat,
+        energy n k = energy (n + 1) k + energy n (k + 1)
+
+D092  BKQRTraceResolventApproxAnchor
+Source: snapshots/downloads/RH_GP_BKQR_OPERATION_ZHANG_FIREWALL_LEAN_v0_4_3_FIX1/Frontier/OurFrontier.lean:264
+    def BKQRTraceResolventApproxAnchor : Prop :=
+      Nonempty (BKQRTraceResolventApproxData CanonicalGPNormalizedCoeff)
+
+D093  BKQRTraceResolventApproxData
+Source: snapshots/downloads/RH_GP_BKQR_OPERATION_ZHANG_FIREWALL_LEAN_v0_4_3_FIX1/Frontier/OurFrontier.lean:195
+    structure BKQRTraceResolventApproxData (c : Nat → Int) where
+      coeff : Nat → Nat → Int
+      energy : Nat → Nat → Nat → Nat
+      stageSquare : ∀ Y n k : Nat,
+        HausdorffDiff (coeff Y) n k = Int.ofNat (energy Y n k)
+      finiteJet : ∀ cutoff : Nat, ∃ Y0 : Nat,
+        ∀ Y : Nat, Y0 ≤ Y → ∀ n : Nat, n ≤ cutoff → coeff Y n = c n
+
+D094  MinimalConstructionSource
+Source: snapshots/downloads/RH_GP_BKQR_MINIMAL_ANCHOR_CHAIN_LEAN_v0_5_2_FIX2/Minimal/MinimalConstructionAnchor.lean:19
+    structure MinimalConstructionSource where
+      Q : Type
+      normSq : Q → Nat
+      omega : Q
+      left : Q → Q
+      right : Q → Q
+      commute : ∀ x : Q, left (right x) = right (left x)
+      pythagoras : ∀ x : Q,
+        normSq x = normSq (left x) + normSq (right x)
+      momentBoundary : ∀ n : Nat,
+        Int.ofNat (normSq (iterateOp left n omega)) =
+          CanonicalGPNormalizedCoeff n
+
+D095  MinimalConstructionAnchor
+Source: snapshots/downloads/RH_GP_BKQR_MINIMAL_ANCHOR_CHAIN_LEAN_v0_5_2_FIX2/Minimal/MinimalConstructionAnchor.lean:72
+    def MinimalConstructionAnchor : Prop :=
+      Nonempty MinimalConstructionSource
+
+D096  XiFiniteKernelApproxData
+Source: snapshots/downloads/GP_BKQR_A_TIER_ANCHORING_01_LEAN_v0_2_0_CONCRETE_CALIBRATION/Anchors/ConcreteXiKernelCalibration.lean:25
+    structure XiFiniteKernelApproxData (c : ℕ → ℤ) where
+      dim : ℕ → ℕ
+      model : ∀ Y : ℕ, FiniteProbability (dim Y)
+      state : ∀ Y : ℕ, Fin (dim Y) → ℝ
+      finiteJet : ∀ cutoff : ℕ, ∃ Y0 : ℕ,
+        ∀ Y : ℕ, Y0 ≤ Y → ∀ n : ℕ, n ≤ cutoff →
+          weightedMoment (model Y) (state Y) n = (c n : ℝ)
+
+D097  ActualXiFiniteKernelApproxAnchor
+Source: snapshots/downloads/GP_BKQR_A_TIER_ANCHORING_01_LEAN_v0_2_0_CONCRETE_CALIBRATION/Anchors/ConcreteXiKernelCalibration.lean:94
+    def ActualXiFiniteKernelApproxAnchor : Prop :=
+      Nonempty (XiFiniteKernelApproxData ZhangNormalizedCoeff)
+
+D098  ActualXiConcreteTierAPackage
+Source: snapshots/downloads/GP_BKQR_A_TIER_ANCHORING_01_LEAN_v0_2_0_CONCRETE_CALIBRATION/Anchors/ConcreteXiKernelCalibration.lean:99
+    structure ActualXiConcreteTierAPackage : Prop where
+      tierA : TierAFiveIdentityPackage
+      actualXi : ActualCompletedGolPhiXiBinding
+      calibration : ActualXiFiniteKernelApproxAnchor
+
+D099  TruncatedHausdorffFiniteKernelRealization
+Source: snapshots/downloads/GP_BKQR_A_TIER_ANCHORING_01_LEAN_v0_2_0_CONCRETE_CALIBRATION/Anchors/ConcreteXiKernelCalibration.lean:141
+    def TruncatedHausdorffFiniteKernelRealization : Prop :=
+      HausdorffPositive → ActualXiFiniteKernelApproxAnchor
+
+D100  FiniteProbability
+Source: snapshots/downloads/GP_BKQR_A_TIER_ANCHORING_01_LEAN_v0_2_0_CONCRETE_CALIBRATION/TierA/AlgebraicPascal.lean:73
+    structure FiniteProbability (d : ℕ) where
+      node : Fin d → UnitInterval
+      weight : Fin d → ℝ
+      weight_nonneg : ∀ i, 0 ≤ weight i
+      weight_sum : ∑ i, weight i = 1
+
+D101  weightedMoment
+Source: snapshots/downloads/GP_BKQR_A_TIER_ANCHORING_01_LEAN_v0_2_0_CONCRETE_CALIBRATION/TierA/FiniteKernel.lean:96
+    def weightedMoment {d : ℕ} (P : FiniteProbability d)
+        (f : Fin d → ℝ) (n : ℕ) : ℝ :=
+      weightedEnergy P f n 0
+
+D102  PositivityPremise.ZeroData
+Source: snapshots/downloads/RH_NATIVE_CANDIDATES_v0_1_1_MELLIN/PositivityPremise/Series.lean:19
+    structure ZeroData (ι : Type*) where
+      multiplicity : ι → ℕ
+      delta : ι → ℝ
+      gamma : ι → ℝ
+      multiplicity_pos : ∀ i, 0 < multiplicity i
+      gamma_pos : ∀ i, 0 < gamma i
+      strip : ∀ i, delta i ^ 2 ≤ (1 / 4 : ℝ)
+      summable_mass : Summable (fun i => (multiplicity i : ℝ) / gamma i ^ 2)
+      summable_defect : Summable (fun i => defect (multiplicity i) (delta i) (gamma i))
+
+D103  PositivityPremise.ZetaBinding
+Source: snapshots/downloads/RH_NATIVE_CANDIDATES_v0_1_1_MELLIN/PositivityPremise/LiteralZeta.lean:29
+    structure ZetaBinding {ι : Type*} (D : ZeroData ι) where
+      rho : ι → ℂ
+      sound : ∀ i, NontrivialZetaZero (rho i)
+      gamma_eq : ∀ i, D.gamma i = (rho i).im
+      delta_eq : ∀ i, D.delta i = (rho i).re - 1 / 2
+      complete : ∀ s, NontrivialZetaZero s → ∃ i, s = rho i ∨ s = star (rho i)
+
+D104  PositivityPremise.CanonicalZetaBinding
+Source: snapshots/downloads/RH_NATIVE_CANDIDATES_v0_1_1_MELLIN/PositivityPremise/LiteralZeta.lean:39
+    structure CanonicalZetaBinding {ι : Type*} (D : ZeroData ι) extends ZetaBinding D where
+      injective : Function.Injective rho
+      multiplicity_eq : ∀ i, D.multiplicity i = analyticOrderNatAt riemannZeta (rho i)
+
+D105  ZHANG2023_FRONTIER_ANCHOR
+Source: snapshots/downloads/RH_GP_BKQR_OPERATION_ZHANG_FIREWALL_LEAN_v0_4_3_FIX1/Literature/Zhang2023.lean:34
+    axiom ZHANG2023_FRONTIER_ANCHOR : Zhang2023LiteraturePackage
+
+D106  ZHANG2022_FRONTIER_ANCHOR
+Source: snapshots/downloads/RH_GP_BKQR_OPERATION_ZHANG_FIREWALL_LEAN_v0_4_3_FIX1/Literature/Zhang2022.lean:47
+    axiom ZHANG2022_FRONTIER_ANCHOR : Zhang2022LiteraturePackage
+
+D107  HAUSDORFF_IFF_WALL_ANCHOR
+Source: snapshots/downloads/RH_GP_BKQR_OPERATION_ZHANG_FIREWALL_LEAN_v0_4_3_FIX1/Literature/Sokal2020.lean:18
+    axiom HAUSDORFF_IFF_WALL_ANCHOR :
+        HausdorffPositive ↔ WallAdmissible
+
+D108  HAUSDORFF_IFF_WEIGHTED_SHIFT_SUBNORMAL_ANCHOR
+Source: snapshots/downloads/RH_GP_BKQR_OPERATION_ZHANG_FIREWALL_LEAN_v0_4_3_FIX1/Literature/BergerGellarWallen.lean:18
+    axiom HAUSDORFF_IFF_WEIGHTED_SHIFT_SUBNORMAL_ANCHOR :
+        HausdorffPositive ↔ WeightedShiftSubnormal
+
+D109  COMPLETE_HYPERCONTRACTIVE_IFF_SUBNORMAL_ANCHOR
+Source: snapshots/downloads/RH_GP_BKQR_OPERATION_ZHANG_FIREWALL_LEAN_v0_4_3_FIX1/Literature/Agler1985.lean:18
+    axiom COMPLETE_HYPERCONTRACTIVE_IFF_SUBNORMAL_ANCHOR :
+        WeightedShiftCompletelyHypercontractive ↔ WeightedShiftSubnormal
+
+D110  RH_IFF_HAUSDORFF_ANCHOR
+Source: snapshots/downloads/RH_GP_BKQR_MINIMAL_ANCHOR_CHAIN_LEAN_v0_5_2_FIX2/Literature/Zhang2023.lean:69
+    axiom RH_IFF_HAUSDORFF_ANCHOR :
+        RiemannHypothesis ↔ HausdorffPositive
+
+D111  RiemannHypothesis
+Source: snapshots/downloads/RH_GP_BKQR_OPERATION_ZHANG_FIREWALL_LEAN_v0_4_3_FIX1/Frontier/OurFrontier.lean:4
+    opaque RiemannHypothesis : Prop
+
+D112  ReducedXiLogJetOf
+Source: snapshots/downloads/RH_GP_BKQR_OPERATION_ZHANG_FIREWALL_LEAN_v0_4_3_FIX1/Frontier/OurFrontier.lean:15
+    opaque ReducedXiLogJetOf : (Nat → Int) → (Nat → Int)
+
+D113  ZhangCenteredXiCoeff
+Source: snapshots/downloads/RH_GP_BKQR_OPERATION_ZHANG_FIREWALL_LEAN_v0_4_3_FIX1/Frontier/OurFrontier.lean:18
+    opaque ZhangCenteredXiCoeff : Nat → Int
+
+D114  ZhangScaleNormalize
+Source: snapshots/downloads/RH_GP_BKQR_OPERATION_ZHANG_FIREWALL_LEAN_v0_4_3_FIX1/Frontier/OurFrontier.lean:41
+    opaque ZhangScaleNormalize : (Nat → Int) → (Nat → Int)
+
+D115  CanonicalGPNormalizedCoeff
+Source: snapshots/downloads/RH_GP_BKQR_OPERATION_ZHANG_FIREWALL_LEAN_v0_4_3_FIX1/Frontier/OurFrontier.lean:84
+    def CanonicalGPNormalizedCoeff : Nat → Int :=
+      ZhangScaleNormalize CanonicalGPRawMoment
+
+END OF FIRST SOURCE CATALOGUE
+Next formal merge: choose one snapshot/toolchain family; retain the exact
+native target; identify analytic objects before composing criteria; keep all
+unproved inputs visible in theorem types. This file performs no compilation.

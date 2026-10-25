@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "lean_version": "4.33.0",
+  "platform": "Linux x86_64",
+  "unseeded_namespace_failure": "reproduced",
+  "reused_modules_copied_and_byte_compared": 18,
+  "source_modules_recompiled": 3,
+  "audit_recompiled": true,
+  "project_declarations_audited": 277,
+  "kernel_checking": "debug.skipKernelTC=false",
+  "windows_runner": "statically reviewed, not executed here",
+  "source_sha256": {
+    "Audit.lean": "6b3d0a0a69c5565a2c239687a06f7f0f5b28a662c9c74bbb8ef687bbbe2ea63c",
+    "MasterChain/KernelMass.lean": "61ee56f94b9c4c5a01521d763cc13f3b2223e218704e2a5f5b0fb0e7a9809552"
+  }
+}

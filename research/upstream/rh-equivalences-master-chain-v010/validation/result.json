@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "compiler": "Lean 4.33.0",
+  "compiler_commit": "d8b18978322de05a8f3dba51ef03cf5461676c17",
+  "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+  "platform": "Linux x86_64",
+  "kernel_checking": "debug.skipKernelTC=false",
+  "project_modules": 12,
+  "project_declarations_audited": 109,
+  "audit": "allowlist: propext, Classical.choice, Quot.sound",
+  "master_1": "independent proposition; conditional derivation",
+  "master_2": "independent proposition; conditional derivation",
+  "master_3": "unproved proposition",
+  "numerics": "deferred",
+  "native_windows_runner": "included; not executed on Linux",
+  "source_sha256": {
+    "Audit.lean": "eae89a72b4c3a36e165cb78a9bbbfc8c44a76123ca93919823f87def43e7cdcb",
+    "MasterChain/AnalyticBridges.lean": "9d1a5f9f280f5e575d3061a1fa0037d5241bb55b7ed129f8915e988a5a6b67cb",
+    "MasterChain/Chain.lean": "25cae26eedecc781684be6d68f3dca6c159600892a95fcf34fb50f13932ef7b5",
+    "MasterChain/DensityL2.lean": "a8c23918e254d07ed2bab58634b2c50dce42a3607f923c8dded23fa490d200dc",
+    "MasterChain/Hardy.lean": "c5baa87692dfc2a775bf0255b1cd2d92b7e3c859ad8b051509a6951d4c120e2e",
+    "MasterChain/Master1.lean": "4acb3d7763b0cf541bc11183d6e7b3f4c939a41044e045e0fbcb67d5c6c497e4",
+    "MasterChain/Master2.lean": "e5e552837c00008427e5b539fb020b9e67e785443bbaee8fbd314165482f5460",
+    "MasterChain/Master3.lean": "3e6779458b1c3a12d97dda92619e5406648b990ea0e4baf37e93a427954ff6c4",
+    "MasterChain/NativeObjects.lean": "4ddf9c1f540edf76c86f0dbbeb4c0f31f62ef2ae727363805a08f1aecc47d79c",
+    "MasterChain/PositiveReadout.lean": "b5c9b30a050db4f4265c01964400861f07c71b8355b4f0e7a527e9ca7719249d",
+    "MasterChain/Realization.lean": "a8ba9a81a5fc13e689356df37d4027f7e62b92fae1150996cb0810759e94c3a1",
+    "MasterChain/Statements.lean": "2ebd1e1d177cc22fa022860888c942d0da1df3e0ef9e670b7373ca81d169c4aa",
+    "MasterChain.lean": "77827193bd75b08fe524e38e175e521030a906926dfd48c68c893547898b4a15"
+  }
+}

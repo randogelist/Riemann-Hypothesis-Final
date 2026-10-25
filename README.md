@@ -31,6 +31,7 @@ are open obligations; the diagram states the target route.
 | `RHFinal/Actual/` | Actual ξ/native RH definitions, differential successor and open inputs |
 | `RHFinal/GP/` | Literal Mellin–Hilbert objects, native ξ binding, KQ/GP/BKQR endpoints, GP7 and generic master extraction |
 | `docs/GP_CONSTRUCTION.md` | GP layers, exact normalizations, source scope and remaining finite-input obligations |
+| [`RH-Equivalences/`](RH-Equivalences/README.md) | 41 native-target RH formulations, 10 separate model formulations, exact source bodies and newer local criteria |
 | `docs/FRONTIER.md` | Ordered analytic and finite-reduction work plan |
 | `docs/SOURCE_AUDIT.md`, `docs/SOLOBOLO_AUDIT.md` | Source scope and unresolved assumptions |
 | `provenance/` | SHA-256 input inventory and unchanged-import manifests |

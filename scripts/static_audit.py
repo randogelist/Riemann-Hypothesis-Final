@@ -252,7 +252,8 @@ def main() -> int:
     for entry in inputs:
         require(bool(re.fullmatch(r'[0-9a-f]{64}', entry['sha256'])), 'Malformed input digest')
         matches = [ROOT.parent / folder / entry['file'] for folder in
-                   ['project_sources', 'solobolo_sources', 'gp_sources/Riemann-Hypothesis-Final']]
+                   ['project_sources', 'solobolo_sources', 'gp_sources/Riemann-Hypothesis-Final',
+                    'equivalence_sources/Riemann-Hypothesis-Final']]
         present = next((p for p in matches if p.is_file()), None)
         if present:
             require(digest(present) == entry['sha256'], f'Input hash mismatch: {entry["file"]}')
