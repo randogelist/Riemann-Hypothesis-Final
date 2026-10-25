@@ -12,6 +12,7 @@ The exact review bundle has now been recovered. [source-map.json](source-map.jso
 
 ## Reading the catalogue
 
+- Browse the provenance split in [Identified by Literature](Identified-by-Literature/README.md) and [Potentially novel](Potentially-novel/README.md). These are literature assessments, separate from the verification status below; the original criteria and identifiers are unchanged.
 - Native-target entries are E01–E41. The criterion and its extra hypotheses must be read together; an equivalence does not prove its criterion.
 - M01–M10 target an opaque project RH proposition and retain literature axioms. They are kept outside the native-target count.
 - Aliases and algebraic reformulations stay in their original groups. Same-named declarations across snapshots are not silently identified.

@@ -1,0 +1,1017 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-10-25",
+  "title": "Literature provenance of the RH-equivalence collection",
+  "catalogue_sha256": "1c370a9fd649db6cb87192164951dea4a40f2e3be1fcfbe8166b8eef99872bb9",
+  "scope": "All 51 primary catalogue formulations, plus twelve separately indexed local summaries and the master-chain auxiliaries.",
+  "policy": {
+    "Identified by Literature": "Direct published criteria, explicitly explained standard reformulations of classical criteria, and separately marked literature-inspired opaque models. This does not claim that every project formula or name occurs verbatim in a paper.",
+    "Potentially novel": "The exact project formulation or construction has unresolved literature priority in a focused search. Classical ingredients, elementary variants and conditional interfaces are identified explicitly. This is not a claim of substantive novelty or correctness.",
+    "independence": "Neither category certifies Lean compilation, an axiom audit, RH, a new proof mechanism, or a finite accepted RH witness.",
+    "method": "Compare exact source criteria and hypotheses with primary papers. Bibliographic matches, coordinate/analytic reductions, and project-specific candidates are distinguished. Absence of an exact match in this limited review does not establish priority."
+  },
+  "novelty_established": false,
+  "native_lean_compilation": "NOT_RUN",
+  "native_axiom_audit": "NOT_RUN",
+  "rh_proved": false,
+  "categories": [
+    {
+      "name": "Identified by Literature",
+      "path": "Identified-by-Literature/README.md",
+      "counts": {
+        "native_target": 18,
+        "opaque_model": 5,
+        "total": 23
+      }
+    },
+    {
+      "name": "Potentially novel",
+      "path": "Potentially-novel/README.md",
+      "counts": {
+        "native_target": 23,
+        "opaque_model": 5,
+        "total": 28
+      }
+    }
+  ],
+  "entries": [
+    {
+      "id": "E01",
+      "category": "Identified by Literature",
+      "relationship": "classical_completed_xi_zero_formulation",
+      "basis": "The completed-xi zero formulation of classical RH, with modern notation.",
+      "reference_ids": [
+        "RIEMANN1859"
+      ],
+      "exact_published_formulation_found": true,
+      "novelty_claim": false,
+      "classification_is_inference": false,
+      "title": "Completed xi zeros lie on the critical line",
+      "catalogue_link": "CATALOG.md#e01",
+      "novelty_established": false
+    },
+    {
+      "id": "E02",
+      "category": "Identified by Literature",
+      "relationship": "direct_classical_centered_zero_formulation",
+      "basis": "Riemann uses s=1/2+it and the real-zero formulation of the centered xi function.",
+      "reference_ids": [
+        "RIEMANN1859"
+      ],
+      "exact_published_formulation_found": true,
+      "novelty_claim": false,
+      "classification_is_inference": false,
+      "title": "Critical-line pullback has only real zeros",
+      "catalogue_link": "CATALOG.md#e02",
+      "novelty_established": false
+    },
+    {
+      "id": "E03",
+      "category": "Identified by Literature",
+      "relationship": "elementary_coordinate_reformulation",
+      "basis": "Squaring s−1/2 maps critical-line zeros to the nonpositive real axis; evenness makes the square descent well-defined.",
+      "reference_ids": [
+        "RIEMANN1859"
+      ],
+      "exact_published_formulation_found": false,
+      "novelty_claim": false,
+      "classification_is_inference": true,
+      "qualification": "Classical reformulation identified by explicit mathematical reduction; the exact project wording/name was not located as a separately published criterion. This is not evidence of novelty.",
+      "title": "Theta zeros lie on the nonpositive real axis",
+      "catalogue_link": "CATALOG.md#e03",
+      "novelty_established": false
+    },
+    {
+      "id": "E04",
+      "category": "Identified by Literature",
+      "relationship": "functional_equation_reformulation",
+      "basis": "Reflection s↦1−s turns exclusion of all xi zeros in Re(s)>1/2 into the critical-line assertion.",
+      "reference_ids": [
+        "RIEMANN1859"
+      ],
+      "exact_published_formulation_found": false,
+      "novelty_claim": false,
+      "classification_is_inference": true,
+      "qualification": "Classical reformulation identified by explicit mathematical reduction; the exact project wording/name was not located as a separately published criterion. This is not evidence of novelty.",
+      "title": "Right-half-plane nonvanishing of the literal entire xi",
+      "catalogue_link": "CATALOG.md#e04",
+      "novelty_established": false
+    },
+    {
+      "id": "E05",
+      "category": "Identified by Literature",
+      "relationship": "direct_published_logarithmic_derivative_criterion",
+      "basis": "Lagarias §1 equation (1.5) states this strict positivity equivalence; the conventional quotient requires nonvanishing.",
+      "reference_ids": [
+        "LAGARIAS1999",
+        "LAGARIAS_PUBLICATIONS"
+      ],
+      "exact_published_formulation_found": true,
+      "novelty_claim": false,
+      "classification_is_inference": false,
+      "title": "Strict Lagarias logarithmic-derivative positivity",
+      "catalogue_link": "CATALOG.md#e05",
+      "novelty_established": false
+    },
+    {
+      "id": "E06",
+      "category": "Identified by Literature",
+      "relationship": "coordinate_and_reflection_reformulation_of_E05",
+      "basis": "Set s=1/2+iz and use ξ(s)=ξ(1−s); the chain rule converts E05 to the negative imaginary-part sign.",
+      "reference_ids": [
+        "LAGARIAS1999",
+        "RIEMANN1859"
+      ],
+      "exact_published_formulation_found": false,
+      "novelty_claim": false,
+      "classification_is_inference": true,
+      "qualification": "Classical reformulation identified by explicit mathematical reduction; the exact project wording/name was not located as a separately published criterion. This is not evidence of novelty.",
+      "title": "Strict anti-Herglotz sign of the xi pullback",
+      "catalogue_link": "CATALOG.md#e06",
+      "novelty_established": false
+    },
+    {
+      "id": "E07",
+      "category": "Identified by Literature",
+      "relationship": "standard_holomorphic_reformulation_of_E04",
+      "basis": "A holomorphic extension of the logarithmic-derivative germ cannot retain a pole at a xi zero. The converse uses ξ′/ξ itself.",
+      "reference_ids": [
+        "LAGARIAS1999",
+        "RIEMANN1859"
+      ],
+      "exact_published_formulation_found": false,
+      "novelty_claim": false,
+      "classification_is_inference": true,
+      "qualification": "Classical reformulation identified by explicit mathematical reduction; the exact project wording/name was not located as a separately published criterion. This is not evidence of novelty.",
+      "required_detail": "The input requires equality of analytic germs and a coefficient analytic on the connected half-plane; a finite value or finite Taylor jet does not supply it.",
+      "title": "Analytic extension of the actual logarithmic-derivative germ",
+      "catalogue_link": "CATALOG.md#e07",
+      "novelty_established": false
+    },
+    {
+      "id": "E08",
+      "category": "Identified by Literature",
+      "relationship": "standard_ODE_reformulation_of_E04",
+      "basis": "The identity theorem extends ξ′=pξ from the germ; a finite-order zero contradicts that equation by comparing vanishing orders.",
+      "reference_ids": [
+        "LAGARIAS1999",
+        "RIEMANN1859"
+      ],
+      "exact_published_formulation_found": false,
+      "novelty_claim": false,
+      "classification_is_inference": true,
+      "qualification": "Classical reformulation identified by explicit mathematical reduction; the exact project wording/name was not located as a separately published criterion. This is not evidence of novelty.",
+      "required_detail": "The input requires equality of analytic germs and a coefficient analytic on the connected half-plane; a finite value or finite Taylor jet does not supply it.",
+      "title": "Analytic first-order ODE coefficient matching the xi germ",
+      "catalogue_link": "CATALOG.md#e08",
+      "novelty_established": false
+    },
+    {
+      "id": "E09",
+      "category": "Identified by Literature",
+      "relationship": "elementary_scalar_reformulation",
+      "basis": "For positive g=2^(2σ−1), ((g−1)/(g+1))²=0 exactly when σ=1/2.",
+      "reference_ids": [
+        "RIEMANN1859"
+      ],
+      "exact_published_formulation_found": false,
+      "novelty_claim": false,
+      "classification_is_inference": true,
+      "qualification": "Classical reformulation identified by explicit mathematical reduction; the exact project wording/name was not located as a separately published criterion. This is not evidence of novelty.",
+      "title": "Zero Cayley loss at every nontrivial zeta zero",
+      "catalogue_link": "CATALOG.md#e09",
+      "novelty_established": false
+    },
+    {
+      "id": "E10",
+      "category": "Identified by Literature",
+      "relationship": "elementary_scalar_reformulation_of_E09",
+      "basis": "Since c=1−q², transmission saturation c=1 is exactly zero loss q²=0.",
+      "reference_ids": [
+        "RIEMANN1859"
+      ],
+      "exact_published_formulation_found": false,
+      "novelty_claim": false,
+      "classification_is_inference": true,
+      "qualification": "Classical reformulation identified by explicit mathematical reduction; the exact project wording/name was not located as a separately published criterion. This is not evidence of novelty.",
+      "title": "Cayley transmission saturates at every nontrivial zero",
+      "catalogue_link": "CATALOG.md#e10",
+      "novelty_established": false
+    },
+    {
+      "id": "E11",
+      "category": "Identified by Literature",
+      "relationship": "elementary_energy_reformulation_of_E10",
+      "basis": "For g>0 the transmission c is positive, and the unit-state squared energy after the sqrt(c) step equals c.",
+      "reference_ids": [
+        "RIEMANN1859"
+      ],
+      "exact_published_formulation_found": false,
+      "novelty_claim": false,
+      "classification_is_inference": true,
+      "qualification": "Classical reformulation identified by explicit mathematical reduction; the exact project wording/name was not located as a separately published criterion. This is not evidence of novelty.",
+      "title": "Unit-state Cayley energy is preserved at every nontrivial zero",
+      "catalogue_link": "CATALOG.md#e11",
+      "novelty_established": false
+    },
+    {
+      "id": "E12",
+      "category": "Potentially novel",
+      "relationship": "Bespoke angular specialization of classical entire-product positivity",
+      "basis": "The closed-interval within-derivative of |theta(r(x+i sqrt(1-x²)))|² was not located as an exact published RH criterion. Standard negative-real-zero product arguments are classical. Sondow–Dumitrescu concern horizontal lines in the xi plane, not these circles.",
+      "reference_ids": [
+        "SD2010",
+        "MSZ2014",
+        "SUN2024"
+      ],
+      "title": "Nonnegative within-derivative on the closed angular interval",
+      "catalogue_link": "CATALOG.md#e12",
+      "novelty_established": false
+    },
+    {
+      "id": "E13",
+      "category": "Potentially novel",
+      "relationship": "Interior derivative version of E12",
+      "basis": "No exact angular-semicircle criterion located. Passing from a smooth profile’s monotonicity to a nonnegative interior derivative is elementary analysis; this is not evidence of a separate new mechanism.",
+      "reference_ids": [
+        "SD2010",
+        "MSZ2014"
+      ],
+      "title": "Nonnegative ordinary angular slope on every open semicircle",
+      "catalogue_link": "CATALOG.md#e13",
+      "novelty_established": false
+    },
+    {
+      "id": "E14",
+      "category": "Potentially novel",
+      "relationship": "Logarithmic-derivative restatement of angular profile positivity",
+      "basis": "No exact regular-locus condition Im(z theta′/theta)≥0 was located. The chain-rule relation to E13 and logarithmic-derivative pole arguments are classical. The cited horizontal xi criteria do not state this angular Euler derivative.",
+      "reference_ids": [
+        "SD2010",
+        "MSZ2014"
+      ],
+      "title": "Nonnegative Euler logarithmic slope on the regular locus",
+      "catalogue_link": "CATALOG.md#e14",
+      "novelty_established": false
+    },
+    {
+      "id": "E15",
+      "category": "Potentially novel",
+      "relationship": "Endpoint minimum strengthening from real-negative-zero products",
+      "basis": "No exact derivative-minimum-at-x=-1 plus endpoint sign criterion located. Convexity/positivity of products of affine positive factors is standard; the particular theta profile and endpoint packaging are the unlocated formulation.",
+      "reference_ids": [
+        "SD2010"
+      ],
+      "title": "Left endpoint minimizes the angular derivative and has nonnegative derivative",
+      "catalogue_link": "CATALOG.md#e15",
+      "novelty_established": false
+    },
+    {
+      "id": "E16",
+      "category": "Potentially novel",
+      "relationship": "Elementary positive rescaling of E15",
+      "basis": "For fixed r and positive normalizer, exp(L) D_x L=(epsilon/S(r)²) D_x P. Thus the flux condition repackages E15. No exact publication located; this row should not imply independent substantive novelty of logarithmic flux.",
+      "reference_ids": [
+        "SD2010"
+      ],
+      "title": "Positive-normalizer logarithmic flux master",
+      "catalogue_link": "CATALOG.md#e16",
+      "novelty_established": false
+    },
+    {
+      "id": "E17",
+      "category": "Potentially novel",
+      "relationship": "Actual-normalizer specialization of E16",
+      "basis": "No exact theta-normalized flux criterion located. It specializes the same chain-rule rescaling; treatment of possible normalizer zeros belongs to the project’s exact formulation.",
+      "reference_ids": [
+        "SD2010"
+      ],
+      "title": "Logarithmic flux master with the actual theta normalizer",
+      "catalogue_link": "CATALOG.md#e17",
+      "novelty_established": false
+    },
+    {
+      "id": "E18",
+      "category": "Potentially novel",
+      "relationship": "Project-specific residual-region reduction",
+      "basis": "No exact criterion with r>255/7 and -1<x≤-84/85 located. Published horizontal restrictions do not establish this angular residual rectangle. The zero-location/product mechanism behind the reduction remains classical.",
+      "reference_ids": [
+        "SD2010",
+        "MSZ2014"
+      ],
+      "title": "Slope positivity on the remaining rectangular angular region",
+      "catalogue_link": "CATALOG.md#e18",
+      "novelty_established": false
+    },
+    {
+      "id": "E19",
+      "category": "Potentially novel",
+      "relationship": "Project-specific curved residual-region reduction",
+      "basis": "No exact region x≤-1+(84/167)/r with r>255/7 located. This specific numerical geometry is distinct from the domains of the cited horizontal criteria.",
+      "reference_ids": [
+        "SD2010",
+        "MSZ2014"
+      ],
+      "title": "Slope positivity on the smaller curved residual region",
+      "catalogue_link": "CATALOG.md#e19",
+      "novelty_established": false
+    },
+    {
+      "id": "E20",
+      "category": "Identified by Literature",
+      "relationship": "elementary_wedge_exhaustion_reformulation",
+      "basis": "Every off-line zero lies in a wedge with slope m>|Imρ|/|Reρ−1/2|; all slopes exhaust the off-line strip.",
+      "reference_ids": [
+        "RIEMANN1859"
+      ],
+      "exact_published_formulation_found": false,
+      "novelty_claim": false,
+      "classification_is_inference": true,
+      "qualification": "Classical reformulation identified by explicit mathematical reduction; the exact project wording/name was not located as a separately published criterion. This is not evidence of novelty.",
+      "title": "Zero exclusion in every positive-slope wedge",
+      "catalogue_link": "CATALOG.md#e20",
+      "novelty_established": false
+    },
+    {
+      "id": "E21",
+      "category": "Identified by Literature",
+      "relationship": "elementary_cofinal_exhaustion_reformulation",
+      "basis": "An unbounded set of slopes already supplies a wedge containing each fixed off-line zero.",
+      "reference_ids": [
+        "RIEMANN1859"
+      ],
+      "exact_published_formulation_found": false,
+      "novelty_claim": false,
+      "classification_is_inference": true,
+      "qualification": "Classical reformulation identified by explicit mathematical reduction; the exact project wording/name was not located as a separately published criterion. This is not evidence of novelty.",
+      "title": "Zero exclusion for a cofinal collection of slopes",
+      "catalogue_link": "CATALOG.md#e21",
+      "novelty_established": false
+    },
+    {
+      "id": "E22",
+      "category": "Potentially novel",
+      "relationship": "Exhaustion reformulation of E13",
+      "basis": "As m ranges over positive reals, cutoffs (1-m²)/(1+m²) exhaust (-1,1). The all-cutoff condition is an elementary reparametrization of angular derivative positivity; no exact published formulation located.",
+      "reference_ids": [
+        "SD2010"
+      ],
+      "title": "Angular positivity certificates for every slope cutoff",
+      "catalogue_link": "CATALOG.md#e22",
+      "novelty_established": false
+    },
+    {
+      "id": "E23",
+      "category": "Potentially novel",
+      "relationship": "Centered positive zero-displacement defect built from classical reciprocal-zero identities",
+      "basis": "No exact published criterion using this rational kernel was located. Each summand is nonnegative and vanishes exactly when delta=0, so the vanishing mechanism is elementary. Gun–Murty–Rath give a related reciprocal-modulus-sum RH criterion with different weights and center.",
+      "reference_ids": [
+        "GMR2018",
+        "ADR2026",
+        "VOR2003"
+      ],
+      "title": "Vanishing actual RR defect",
+      "catalogue_link": "CATALOG.md#e23",
+      "novelty_established": false
+    },
+    {
+      "id": "E24",
+      "category": "Potentially novel",
+      "relationship": "Constant-defect decay wrapper around E23",
+      "basis": "No exact all-height bound C≤3c1/(4T²) located. C is the fixed full defect, not a truncated tail; finiteness of c1 and T→infinity force C=0. This standard limiting argument should not be presented as an independently new asymptotic principle.",
+      "reference_ids": [
+        "GMR2018",
+        "BISS2018"
+      ],
+      "title": "All-height inverse-square upper bound on the full actual defect",
+      "catalogue_link": "CATALOG.md#e24",
+      "novelty_established": false
+    },
+    {
+      "id": "E25",
+      "category": "Potentially novel",
+      "relationship": "Exact iff not located; forward central-curvature identity is classical",
+      "basis": "Known centered secondary-zeta identities use alpha=-i(rho-1/2)=gamma-i delta. Under RH the sum of gamma^-2 over positive-height occurrences equals xi″(1/2)/(2xi(1/2)). The exact converse comparing real-ordinate mass to curvature was not located. Their difference is the elementary positive kernel in E23. Preserve the declaration’s ZetaBinding and TraceIdentification hypotheses.",
+      "reference_ids": [
+        "KAW2024",
+        "ADR2026",
+        "VOR2003",
+        "GMR2018",
+        "BISS2018"
+      ],
+      "title": "Inverse-height mass equals actual central xi curvature",
+      "catalogue_link": "CATALOG.md#e25",
+      "novelty_established": false
+    },
+    {
+      "id": "E26",
+      "category": "Potentially novel",
+      "relationship": "E25 plus the constant-defect decay reformulation of E24",
+      "basis": "No exact primary match located. The additional all-height bound on c1-centerCurvature forces that fixed defect to vanish by a standard limit; preserve both ZetaBinding and TraceIdentification.",
+      "reference_ids": [
+        "KAW2024",
+        "ADR2026",
+        "BISS2018"
+      ],
+      "title": "All-height decay of the central curvature defect",
+      "catalogue_link": "CATALOG.md#e26",
+      "novelty_established": false
+    },
+    {
+      "id": "E27",
+      "category": "Potentially novel",
+      "relationship": "Bespoke angular integral and critical-line cutoff asymptotic",
+      "basis": "No exact small-radius little-o remainder with this integral and multiplicity-bearing cutoff located. Classical integral RH criteria exist, but the Balazard–Saias–Yor integral and its truncation rate use log|zeta| on the critical line and are not this angular integral. Standard asymptotics and zero-sum identities should not be called novel.",
+      "reference_ids": [
+        "BLM2014"
+      ],
+      "title": "Angular integral remainder is little-o of radius",
+      "catalogue_link": "CATALOG.md#e27",
+      "novelty_established": false
+    },
+    {
+      "id": "E28",
+      "category": "Potentially novel",
+      "relationship": "Weighted differential continuation applied to the project residual domain",
+      "basis": "No exact radius-dependent (1+x)A′≤MA criterion with the infimum kappa(r) located. Nonvanishing by integrating a relative derivative bound is standard differential-inequality reasoning; the RH profile/domain specialization is the unlocated part.",
+      "reference_ids": [
+        "GRON1919"
+      ],
+      "title": "Finite radius-dependent relative derivative bound on the residual interval",
+      "catalogue_link": "CATALOG.md#e28",
+      "novelty_established": false
+    },
+    {
+      "id": "E29",
+      "category": "Potentially novel",
+      "relationship": "Locally integrable differential-rate reformulation",
+      "basis": "No exact angular F criterion located. Positivity preservation from F′≥-rate F with locally integrable nonnegative rate is the classical integrating-factor/Gronwall mechanism. The application to this theta profile is the potentially new formulation.",
+      "reference_ids": [
+        "GRON1919"
+      ],
+      "title": "Locally integrable finite-rate control along the angle",
+      "catalogue_link": "CATALOG.md#e29",
+      "novelty_established": false
+    },
+    {
+      "id": "E30",
+      "category": "Potentially novel",
+      "relationship": "Elementary local difference-quotient reformulation of E13",
+      "basis": "For a differentiable profile the quantified increment bound is exactly nonnegative derivative. No exact published RH statement located; the epsilon-eta calculus reformulation is standard and should not count as independent substantive novelty.",
+      "reference_ids": [
+        "SD2010",
+        "MSZ2014"
+      ],
+      "title": "Arbitrarily small negative linear error in local forward increments",
+      "catalogue_link": "CATALOG.md#e30",
+      "novelty_established": false
+    },
+    {
+      "id": "E31",
+      "category": "Identified by Literature",
+      "relationship": "elementary_positive_factor_reformulation",
+      "basis": "Cancel the strictly positive canonical energies in D±=(g±−1)E±; reciprocal gain bounds force Reρ=1/2.",
+      "reference_ids": [
+        "RIEMANN1859"
+      ],
+      "exact_published_formulation_found": false,
+      "novelty_claim": false,
+      "classification_is_inference": true,
+      "qualification": "Classical reformulation identified by explicit mathematical reduction; the exact project wording/name was not located as a separately published criterion. This is not evidence of novelty.",
+      "required_detail": "Strict positivity/nonvanishing of the energy or square factor must remain justified; nonnegativity alone does not permit cancellation.",
+      "title": "Canonical exact two-sided passivity",
+      "catalogue_link": "CATALOG.md#e31",
+      "novelty_established": false
+    },
+    {
+      "id": "E32",
+      "category": "Identified by Literature",
+      "relationship": "elementary_exponential_reformulation",
+      "basis": "For real c, both 2^(2c)≤1 and 2^(−2c)≤1 hold exactly when c=0.",
+      "reference_ids": [
+        "RIEMANN1859"
+      ],
+      "exact_published_formulation_found": false,
+      "novelty_claim": false,
+      "classification_is_inference": true,
+      "qualification": "Classical reformulation identified by explicit mathematical reduction; the exact project wording/name was not located as a separately published criterion. This is not evidence of novelty.",
+      "title": "Literal reciprocal dyadic contraction",
+      "catalogue_link": "CATALOG.md#e32",
+      "novelty_established": false
+    },
+    {
+      "id": "E33",
+      "category": "Identified by Literature",
+      "relationship": "elementary_one_sided_reflection_reformulation",
+      "basis": "One-sided dyadic contraction means Reρ≤1/2; applying it to 1−ρ gives the reverse inequality.",
+      "reference_ids": [
+        "RIEMANN1859"
+      ],
+      "exact_published_formulation_found": false,
+      "novelty_claim": false,
+      "classification_is_inference": true,
+      "qualification": "Classical reformulation identified by explicit mathematical reduction; the exact project wording/name was not located as a separately published criterion. This is not evidence of novelty.",
+      "title": "One-sided dyadic contraction, with reflection",
+      "catalogue_link": "CATALOG.md#e33",
+      "novelty_established": false
+    },
+    {
+      "id": "E34",
+      "category": "Identified by Literature",
+      "relationship": "elementary_positive_factor_reformulation_of_E33",
+      "basis": "Cancel the strictly positive canonical jet square, then use E33 and the functional equation.",
+      "reference_ids": [
+        "RIEMANN1859"
+      ],
+      "exact_published_formulation_found": false,
+      "novelty_claim": false,
+      "classification_is_inference": true,
+      "qualification": "Classical reformulation identified by explicit mathematical reduction; the exact project wording/name was not located as a separately published criterion. This is not evidence of novelty.",
+      "required_detail": "Strict positivity/nonvanishing of the energy or square factor must remain justified; nonnegativity alone does not permit cancellation.",
+      "title": "Canonical exact one-sided passivity",
+      "catalogue_link": "CATALOG.md#e34",
+      "novelty_established": false
+    },
+    {
+      "id": "E35",
+      "category": "Identified by Literature",
+      "relationship": "elementary_existential_scalar_reformulation_of_E33",
+      "basis": "Existence of c>0 with (g−1)c²≤0 is equivalent to g≤1; the reverse implication takes c=1.",
+      "reference_ids": [
+        "RIEMANN1859"
+      ],
+      "exact_published_formulation_found": false,
+      "novelty_claim": false,
+      "classification_is_inference": true,
+      "qualification": "Classical reformulation identified by explicit mathematical reduction; the exact project wording/name was not located as a separately published criterion. This is not evidence of novelty.",
+      "required_detail": "The existential scalar formulation does not itself construct a GP/BKQR Hilbert operator or intertwining map.",
+      "title": "Pointwise GP/BKQR one-sided passivity",
+      "catalogue_link": "CATALOG.md#e35",
+      "novelty_established": false
+    },
+    {
+      "id": "E36",
+      "category": "Potentially novel",
+      "relationship": "Project-specific KQ-tail reformulation; no exact primary-literature match located.",
+      "basis": "The fixed canonical defect is bounded by every vanishing squared KQ tail. The source uses a chosen algebraic transverse jet and unit binding scales. This is a native-target equivalence in source, but not an identified historical analytic-jet theorem; the potentially novel label applies only to this formulation, without a priority claim.",
+      "reference_ids": [],
+      "title": "Canonical exact-to-KQ-tail upper bounds",
+      "catalogue_link": "CATALOG.md#e36",
+      "novelty_established": false
+    },
+    {
+      "id": "E37",
+      "category": "Potentially novel",
+      "relationship": "Project-specific explicit terminal-cell version of the same tail-bound mechanism.",
+      "basis": "The displayed trigonometric terminal-Phi cell and one-sided dyadic defect were not matched to a primary published RH criterion. It is closely related to E36 and should not be advertised as an independent mechanism merely because the formula is expanded.",
+      "reference_ids": [],
+      "title": "Raw terminal-Phi cell bound / actual KQ limit core",
+      "catalogue_link": "CATALOG.md#e37",
+      "novelty_established": false
+    },
+    {
+      "id": "E38",
+      "category": "Potentially novel",
+      "relationship": "Project-specific existential certificate packaging of one-sided passivity.",
+      "basis": "No exact published counterpart was located. F,T,r are existentially free; no nonnegative energies, specified approximation scheme or convergence of r is required. The reverse takes F=E,T=r=0 under RH. Novelty, if any, is packaging; the existence predicate is not a constructed finite witness.",
+      "reference_ids": [],
+      "title": "Existence of a one-sided finite-energy factorization",
+      "catalogue_link": "CATALOG.md#e38",
+      "novelty_established": false
+    },
+    {
+      "id": "E39",
+      "category": "Potentially novel",
+      "relationship": "Project-specific telescoping certificate form of E38.",
+      "basis": "No exact primary-literature match was located. The finite defect is a telescoping negative-square sum with freely existential cells; the tail is bounded by an arbitrarily small remainder. Treat as a structured variant of E38, not an independent analytical construction or proof that a source exists.",
+      "reference_ids": [],
+      "title": "Existence of a telescoping negative-square source",
+      "catalogue_link": "CATALOG.md#e39",
+      "novelty_established": false
+    },
+    {
+      "id": "E40",
+      "category": "Potentially novel",
+      "relationship": "Project-specific conditional constructor framework.",
+      "basis": "The exact theorem has model parameters and NormalizedDyadicMultiplierFacts, Scale2Facts and Background assumptions. No primary published match was located for this Constructor package. The native zero predicate is genuine, but the required calibration, positive energies and tail-smallness facts are hypotheses, not established by the constructor equivalence.",
+      "reference_ids": [],
+      "title": "Existential two-sided constructor under calibrated background",
+      "catalogue_link": "CATALOG.md#e40",
+      "novelty_established": false
+    },
+    {
+      "id": "E41",
+      "category": "Potentially novel",
+      "relationship": "Project-specific cofinal-depth specialization of established Widder/Stieltjes theory.",
+      "basis": "Classical Widder positivity and Stieltjes representation supply background, but no exact published match was established for the frozen rawXi tower and cofinal US. Its iff explicitly assumes downward positivity, Stieltjes slit exclusion and RH-to-all-depth positivity. The raw completion at s=0,1 is not the repaired entire xi used by newer active sources. Do not call the underlying Widder hierarchy new.",
+      "reference_ids": [
+        "BONDESSON_SIMON2016"
+      ],
+      "title": "Cofinal uniform positivity of the frozen raw-xi Widder tower",
+      "catalogue_link": "CATALOG.md#e41",
+      "novelty_established": false
+    },
+    {
+      "id": "M01",
+      "category": "Identified by Literature",
+      "relationship": "Identifiable Zhang/Hausdorff criterion family; exact formal match unverified.",
+      "basis": "Zhang’s Corollary 6 gives actual Xi-derived real moments and finite-difference RH conditions. Here the coefficient sequence has integer type and opaque origins, and RH is an opaque Prop; ZHANG2023_FRONTIER_ANCHOR supplies the iff as an axiom. Literature attribution is provenance, not verification of this normalization or native RH.",
+      "reference_ids": [
+        "ZHANG2023"
+      ],
+      "title": "Zhang-normalized Hausdorff finite-difference positivity",
+      "catalogue_link": "CATALOG.md#m01",
+      "novelty_established": false
+    },
+    {
+      "id": "M02",
+      "category": "Identified by Literature",
+      "relationship": "Identifiable Zhang complete-monotonicity hierarchy; comment-level match only.",
+      "basis": "Zhang’s Corollary 4 matches the stated intended hierarchy. The local criterion itself is opaque, with no encoded G_k^(m) or complete-monotonicity definition, and the iff comes from ZHANG2022_FRONTIER_ANCHOR. Classify as literature-inspired model provenance, not a new theorem or verified native match.",
+      "reference_ids": [
+        "ZHANG2022"
+      ],
+      "title": "Zhang complete-monotonicity hierarchy",
+      "catalogue_link": "CATALOG.md#m02",
+      "novelty_established": false
+    },
+    {
+      "id": "M03",
+      "category": "Identified by Literature",
+      "relationship": "Classical Wall–Sokal Hausdorff continued-fraction mechanism; opaque application.",
+      "basis": "Sokal gives the explicit g_i∈[0,1] continued-fraction characterization. Local WallAdmissible is opaque and the Hausdorff-to-Wall bridge is axiomatized, in addition to the Zhang RH anchor. The canonical coefficients and exact admissibility definition are not verified against the paper.",
+      "reference_ids": [
+        "SOKAL2020",
+        "ZHANG2023"
+      ],
+      "title": "Wall continued-fraction admissibility",
+      "catalogue_link": "CATALOG.md#m03",
+      "novelty_established": false
+    },
+    {
+      "id": "M04",
+      "category": "Identified by Literature",
+      "relationship": "Classical Berger/Gellar–Wallen moment/subnormality mechanism; exact shift unspecified.",
+      "basis": "A properly normalized contractive weighted shift has a Hausdorff moment description. The project supplies no concrete shift or subnormality definition, and assumes its Hausdorff bridge as an axiom. Weight positivity, normalization and support/boundedness must be matched before asserting exact literature correspondence.",
+      "reference_ids": [
+        "GELLAR_WALLEN1970",
+        "ZHANG2023"
+      ],
+      "title": "Subnormality of the canonical weighted shift",
+      "catalogue_link": "CATALOG.md#m04",
+      "novelty_established": false
+    },
+    {
+      "id": "M05",
+      "category": "Identified by Literature",
+      "relationship": "Classical Agler complete-hypercontractivity mechanism; convention and model match unresolved.",
+      "basis": "The local bridge is an axiom between opaque propositions. Agler’s `T*^k T^k` convention concerns subnormal contractions of the same T; formulations using `T^k T*^k` concern the adjoint. Since the project defines neither, an exact operator-orientation claim is unsupported. Mark as literature-inspired provenance, not validated equivalence and not a definitive adjoint error.",
+      "reference_ids": [
+        "AGLER1985"
+      ],
+      "title": "Complete hypercontractivity of the canonical shift",
+      "catalogue_link": "CATALOG.md#m05",
+      "novelty_established": false
+    },
+    {
+      "id": "M06",
+      "category": "Potentially novel",
+      "relationship": "Bespoke integer Pascal-splitting presentation of classical Hausdorff positivity.",
+      "basis": "No exact published PascalHopfAnchor criterion was located. The lattice recurrence is the elementary signed-difference identity, so novelty is at most formal presentation. Hopf does not mean a topological Hopf fibration or Hilbert realization here. The RH link still rests on opaque coefficients/RH and the Zhang axiom.",
+      "reference_ids": [
+        "ZHANG2023",
+        "SOKAL2020"
+      ],
+      "title": "Positive Pascal-Hopf realization",
+      "catalogue_link": "CATALOG.md#m06",
+      "novelty_established": false
+    },
+    {
+      "id": "M07",
+      "category": "Potentially novel",
+      "relationship": "Bespoke natural-number encoding of the M06 lattice.",
+      "basis": "No exact published BKQREnergyAnchor was located. Taking nonnegative integer cells as Nat energy recodes the signed-difference condition; Gram/contraction aliases add no inner-product or operator laws. Treat this as a possible new implementation/package name, not a new Hausdorff criterion or native RH equivalence.",
+      "reference_ids": [
+        "ZHANG2023"
+      ],
+      "title": "Natural-valued BKQR energy lattice",
+      "catalogue_link": "CATALOG.md#m07",
+      "novelty_established": false
+    },
+    {
+      "id": "M08",
+      "category": "Potentially novel",
+      "relationship": "Bespoke eventual-exact finite-window presentation; no genuine trace/resolvent object.",
+      "basis": "No exact published named criterion was located. The reverse uses a constant stage sequence; finiteJet is eventual exact equality on each finite coefficient window. There are no actual resolvents, finite-rank matrices or analytic convergence in the proposition. The opaque Zhang anchor remains its RH input.",
+      "reference_ids": [
+        "ZHANG2023"
+      ],
+      "title": "Positive-stage finite-jet approximation",
+      "catalogue_link": "CATALOG.md#m08",
+      "novelty_established": false
+    },
+    {
+      "id": "M09",
+      "category": "Potentially novel",
+      "relationship": "Bespoke commuting energy-source presentation of the Pascal lattice.",
+      "basis": "No exact published MinimalConstructionAnchor was located. The reverse chooses Q=Nat×Nat, and normSq is an arbitrary Nat-valued energy lacking norm laws. Its positive binary splitting is an algebraic packaging of finite-difference positivity; it is not an identified GP Hilbert/operator construction. The RH link is an axiom.",
+      "reference_ids": [
+        "ZHANG2023",
+        "SOKAL2020"
+      ],
+      "title": "Commuting two-branch energy source",
+      "catalogue_link": "CATALOG.md#m09",
+      "novelty_established": false
+    },
+    {
+      "id": "M10",
+      "category": "Potentially novel",
+      "relationship": "Project-specific abstract-RH package with a classical finite positive-moment ingredient",
+      "basis": "Tchakaloff identifies the finite positive quadrature ingredient, not the complete named RH package. The exact package has unresolved priority; the classical realization theorem itself is not new. Here hRealize remains an explicit premise, the sequence and RH remain opaque, and the Zhang bridge is axiomatized.",
+      "reference_ids": [
+        "BAYER_TEICHMANN2006",
+        "ZHANG2023"
+      ],
+      "title": "Finite positive-kernel approximation of the abstract Xi coefficient sequence",
+      "catalogue_link": "CATALOG.md#m10",
+      "novelty_established": false
+    }
+  ],
+  "supplementary_entries": [
+    {
+      "id": "L01",
+      "local_criteria_item": 1,
+      "title": "Native zero rigidity",
+      "category": "Identified by Literature",
+      "basis": "Direct normalization of classical RH using actual nontrivial zeta zeros.",
+      "reference_ids": [
+        "RIEMANN1859"
+      ],
+      "novelty_established": false
+    },
+    {
+      "id": "L02",
+      "local_criteria_item": 2,
+      "title": "SOLOBOLO shifted-axis geometry",
+      "category": "Identified by Literature",
+      "basis": "An algebraic coordinate change: s(s−1) lies on the stated real ray exactly for a critical-line zero. The SOLOBOLO name is project-specific.",
+      "reference_ids": [
+        "RIEMANN1859"
+      ],
+      "novelty_established": false
+    },
+    {
+      "id": "L03",
+      "local_criteria_item": 3,
+      "title": "Actual regularized Cayley function nonvanishing",
+      "category": "Identified by Literature",
+      "basis": "Disk coordinates and nonvanishing factors re-express right-half-plane zero exclusion. This identifies the classical mechanism, not an exact published theorem using this J.",
+      "reference_ids": [
+        "RIEMANN1859"
+      ],
+      "novelty_established": false
+    },
+    {
+      "id": "L04",
+      "local_criteria_item": 4,
+      "title": "Scalar and positive-metric passivity",
+      "category": "Identified by Literature",
+      "basis": "The gain 1+4(Re(s)−1/2)²≤1 is elementary zero rigidity; the admitted metric variants encode it. No actual GP/Mellin operator identification follows.",
+      "reference_ids": [
+        "RIEMANN1859"
+      ],
+      "novelty_established": false
+    },
+    {
+      "id": "L05",
+      "local_criteria_item": 5,
+      "title": "One fixed seed and all depths",
+      "category": "Identified by Literature",
+      "basis": "The scalar proxy criterion is classical zero rigidity with a seed test and ordinary induction. The globally admitted metric remains the substantive input.",
+      "reference_ids": [
+        "RIEMANN1859"
+      ],
+      "novelty_established": false
+    },
+    {
+      "id": "L06",
+      "local_criteria_item": 6,
+      "title": "Finite metric code plus global calibration",
+      "category": "Potentially novel",
+      "basis": "Exact checker/calibration packaging has unresolved priority. Rational positivity alone does not check NativeCalibrated, and the genuine checker iff retains soundness and completeness premises.",
+      "reference_ids": [],
+      "novelty_established": false
+    },
+    {
+      "id": "L07",
+      "local_criteria_item": 7,
+      "title": "Actual Hardy disk exhaustion",
+      "category": "Potentially novel",
+      "basis": "Exact J/energy/defect packaging has unresolved priority. ActualHardyEnergy and positivity on whole compact disks remain hypotheses; the finite integer is not a finite Boolean test.",
+      "reference_ids": [],
+      "novelty_established": false
+    },
+    {
+      "id": "L08",
+      "local_criteria_item": 8,
+      "title": "Prescribed-radius successor",
+      "category": "Potentially novel",
+      "basis": "A project-specific reformulation of the preceding conditional disk criterion. Ordinary induction is classical; the radius-enlargement premise is still required.",
+      "reference_ids": [],
+      "novelty_established": false
+    },
+    {
+      "id": "L09",
+      "local_criteria_item": 9,
+      "title": "Actual Widder control versus off-line explosion",
+      "category": "Potentially novel",
+      "basis": "Project-specific conditional sufficient criterion using classical moment-transform ideas. All-order calibration and off-line explosion remain explicit inputs; this is not a proved iff.",
+      "reference_ids": [
+        "BONDESSON_SIMON2016"
+      ],
+      "novelty_established": false
+    },
+    {
+      "id": "L10",
+      "local_criteria_item": 10,
+      "title": "Cofinal actual moments, central cells and finite trace limits",
+      "category": "Potentially novel",
+      "basis": "Exact KQ/SOLOBOLO realization and source interfaces have unresolved priority. Channel analysis and finite-trace convergence remain required inputs to one-way implications.",
+      "reference_ids": [
+        "BONDESSON_SIMON2016",
+        "ZHANG2023"
+      ],
+      "novelty_established": false
+    },
+    {
+      "id": "L11",
+      "local_criteria_item": 11,
+      "title": "Finite-rate semantic admissions",
+      "category": "Potentially novel",
+      "basis": "Exact rational-packet packaging has unresolved priority. An all-index semantic bound and a custom RH/source interface remain; no native Mathlib RH equivalence is supplied here.",
+      "reference_ids": [],
+      "novelty_established": false
+    },
+    {
+      "id": "L12",
+      "local_criteria_item": 12,
+      "title": "Centered zero geometry and subexponential moments",
+      "category": "Potentially novel",
+      "basis": "Project-specific conditional moment/pole packaging; the growth-versus-pole argument is standard. Actual-zero coverage and analytic hypotheses are retained, and these are sufficient implications.",
+      "reference_ids": [
+        "BONDESSON_SIMON2016"
+      ],
+      "novelty_established": false
+    }
+  ],
+  "master_chain": {
+    "category": "Potentially novel",
+    "auxiliary_records": 8,
+    "native_RH_equivalences": false,
+    "source": "MASTER_CHAIN.md",
+    "novelty_established": false,
+    "basis": "Exact project packaging has unresolved priority. Scalar, integral and Hilbert-space mechanisms are standard; MASTER_1, MASTER_2 and integrability remain explicit hypotheses."
+  },
+  "references": [
+    {
+      "id": "RIEMANN1859",
+      "citation": "Bernhard Riemann, Ueber die Anzahl der Primzahlen unter einer gegebenen Grösse, Monatsberichte der Berliner Akademie, November 1859. English translation by D. R. Wilkins.",
+      "url": "https://www.maths.tcd.ie/pub/HistMath/People/Riemann/Zeta/EZeta.pdf",
+      "locator": "PDF pp. 3–4: centered xi and real-zero hypothesis; PDF pp. 2–3: functional equation.",
+      "scope": "Primary founding paper. Supplies the classical zero-location criterion and reflection. It does not use the project QQRH, AWPI, GP/BKQR, Cayley-loss or dyadic-passivity terminology."
+    },
+    {
+      "id": "LAGARIAS1999",
+      "citation": "Jeffrey C. Lagarias, On a positivity property of the Riemann ξ-function, Acta Arithmetica 89 (1999), no. 3, 217–234. DOI: 10.4064/aa-89-3-217-234.",
+      "url": "https://websites.umich.edu/~lagarias/doc/positivity.pdf",
+      "locator": "Author preprint §1, equation (1.5), PDF page 2; logarithmic-derivative expansion (1.9), PDF page 3.",
+      "scope": "Directly states RH equivalence with Re(ξ′/ξ)>0 on Re(s)>1/2, described there as a known fact. Supports E05, not a priority claim that Lagarias originated it. Other entries use explicitly identified transformations."
+    },
+    {
+      "id": "LAGARIAS_PUBLICATIONS",
+      "citation": "Jeffrey C. Lagarias, author publications list, 1999 section.",
+      "url": "https://websites.umich.edu/~lagarias/papers.html",
+      "locator": "1999: On a positivity property of the Riemann xi function.",
+      "scope": "Primary author bibliography confirms publication details; author-hosted PDFs are preprints and may differ from final journal versions."
+    },
+    {
+      "id": "SD2010",
+      "citation": "Jonathan Sondow and Cristian Dumitrescu, A monotonicity property of Riemann’s xi function and a reformulation of the Riemann Hypothesis, Periodica Mathematica Hungarica 60 (2010), 37–40.",
+      "url": "https://arxiv.org/abs/1005.1104",
+      "locator": "Theorem 1 and Corollary 1; DOI 10.1007/s10998-010-1037-3",
+      "scope": "Known horizontal modulus monotonicity and zero-free half-plane equivalence; related mechanism, not an exact angular-circle criterion."
+    },
+    {
+      "id": "MSZ2014",
+      "citation": "Yuri Matiyasevich, Filip Saidak and Peter Zvengrowski, Horizontal Monotonicity of the Modulus of the Riemann Zeta Function and Related Functions, Acta Arithmetica 166 (2014), 189–200.",
+      "url": "https://arxiv.org/html/1205.2773v1",
+      "locator": "Introduction and section 2; DOI 10.4064/aa166-2-4",
+      "scope": "Horizontal modulus/logarithmic-derivative inequalities for zeta, eta and xi; not theta semicircle derivatives."
+    },
+    {
+      "id": "SUN2024",
+      "citation": "Wei Sun, Modulus representation of the Riemann xi function and polynomial inequalities equivalent to the Riemann hypothesis, arXiv:2404.06642v3 (2024).",
+      "url": "https://arxiv.org/html/2404.06642v3",
+      "locator": "Theorems 1.2 and 1.3; section 3, equation 3.5",
+      "scope": "Near-match checked and excluded: polynomials approximate a horizontal derivative of the modulus representation, not the project angular derivative or its residual regions."
+    },
+    {
+      "id": "GRON1919",
+      "citation": "T. H. Gronwall, Note on the Derivatives with Respect to a Parameter of the Solutions of a System of Differential Equations, Annals of Mathematics 20 (1919), 292–296.",
+      "url": "https://www.jstor.org/stable/1967124",
+      "locator": "DOI 10.2307/1967124",
+      "scope": "Classical differential/integral inequality mechanism only; contains no asserted exact RH criterion E28 or E29."
+    },
+    {
+      "id": "BLM2014",
+      "citation": "H. M. Bui, S. J. Lester and M. B. Milinovich, On Balazard, Saias, and Yor’s equivalence to the Riemann Hypothesis, Journal of Mathematical Analysis and Applications 409 (2014), 244–253.",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0022247X13006215",
+      "locator": "Introduction, equations 1.1–1.2 and Theorem 1.1; DOI 10.1016/j.jmaa.2013.06.063",
+      "scope": "Primary paper studying the classical critical-line log|zeta| integral and its truncation rate. Different integral and asymptotic parameter from E27; not an exact match."
+    },
+    {
+      "id": "ADR2026",
+      "citation": "J. Arias de Reyna, Riemann and the logarithmic derivatives of zeta, arXiv:2605.27552v1 (2026).",
+      "url": "https://arxiv.org/html/2605.27552v1",
+      "locator": "Section 2, Theorems 1 and 3",
+      "scope": "Explicitly does not assume RH; defines potentially complex centered zeros alpha and the product/reciprocal-square identity with multiplicities. Establishes normalization antecedents, not the exact E23–E26 iff statements."
+    },
+    {
+      "id": "KAW2024",
+      "citation": "Artur Kawalec, On the series expansion of the secondary zeta function, arXiv:2403.15741v1 (2024).",
+      "url": "https://arxiv.org/html/2403.15741v1",
+      "locator": "Introduction, equations 1, 4 and 7",
+      "scope": "Assumes RH. Equation 4 at m=1 gives the forward curvature equality using xi′(1/2)=0; does not establish the converse."
+    },
+    {
+      "id": "VOR2003",
+      "citation": "André Voros, Zeta functions for the Riemann zeros, Annales de l’Institut Fourier 53 (2003), 665–699.",
+      "url": "https://aif.centre-mersenne.org/articles/10.5802/aif.1955/",
+      "locator": "DOI 10.5802/aif.1955; centered secondary-zeta special values",
+      "scope": "Earlier primary treatment of secondary-zeta identities; no exact real-ordinate-defect equivalence established by this review."
+    },
+    {
+      "id": "BISS2018",
+      "citation": "Andriy Bondarenko, Aleksandar Ivić, Eero Saksman and Kristian Seip, On certain sums over ordinates of zeta-zeros II, arXiv:1808.01763 (2018).",
+      "url": "https://arxiv.org/pdf/1808.01763",
+      "locator": "Section 1, definition of G(s)",
+      "scope": "Defines the real-ordinate sum with multiplicities without assuming RH and gives absolute convergence for Re(s)>1; distinguishes c1=G(2) from a complex-centered-zero secondary zeta."
+    },
+    {
+      "id": "GMR2018",
+      "citation": "Sanoli Gun, M. Ram Murty and Purusottam Rath, Transcendental sums related to the zeros of zeta functions, Mathematika 64 (2018), 875–897.",
+      "url": "https://arxiv.org/pdf/1807.11201",
+      "locator": "Introduction, pages 4–5; DOI 10.1112/S0025579318000293",
+      "scope": "Proves the related criterion RH iff sum over all rho of |rho|^-2 equals 2+EulerGamma-log(4pi). A substantive positive-discrepancy antecedent, with different center and weights from E23/E25."
+    },
+    {
+      "id": "ZHANG2023",
+      "citation": "Ruiming Zhang, An Application of Hausdorff Moment Problem, arXiv:2303.09396v6 (2023).",
+      "url": "https://arxiv.org/pdf/2303.09396",
+      "locator": "Theorem 2, equations (2.9)–(2.11); Corollary 6, equations (3.7)–(3.10); Remark 5, equation (2.21).",
+      "scope": "Actual real Xi logarithmic-derivative moments and signed finite-difference RH criterion. Does not identify the project opaque integer sequence, its scale normalization, or opaque RH proposition."
+    },
+    {
+      "id": "ZHANG2022",
+      "citation": "Ruiming Zhang, On Certain Genus 0 Entire Functions, arXiv:2206.05104v8 (submitted 2022, revised 2023).",
+      "url": "https://arxiv.org/pdf/2206.05104",
+      "locator": "Theorem 1, equations (1.7)–(1.9); RH specialization Corollary 4, equation (3.12), pp. 10–11.",
+      "scope": "Existence of derivative order m such that the displayed xi-derived hierarchy is completely monotone for every k. The project comment matches the intended family; its opaque proposition contains no such formula."
+    },
+    {
+      "id": "SOKAL2020",
+      "citation": "Alan D. Sokal, Wall’s continued-fraction characterization of Hausdorff moment sequences: A conceptual proof, Proc. Amer. Math. Soc. 148 (2020), 2111–2116; arXiv:1903.12455v2.",
+      "url": "https://arxiv.org/pdf/1903.12455",
+      "locator": "Page 2, equation (2), and accompanying iff statement; proof on following pages.",
+      "scope": "Real Hausdorff moment sequences are characterized by c≥0 and g_i in [0,1] in a specified formal continued fraction. No RH statement, no opaque WallAdmissible interpretation."
+    },
+    {
+      "id": "GELLAR_WALLEN1970",
+      "citation": "R. Gellar and L. J. Wallen, Subnormal Weighted Shifts and the Halmos–Bram Criterion, Proc. Japan Acad. 46 (1970), 375–378, DOI 10.3792/pja/1195520357.",
+      "url": "https://www.jstage.jst.go.jp/article/pjab1945/46/4/46_4_375/_pdf/-char/en",
+      "locator": "Section 2 theorem and corollary, p.376: after spectral-radius normalization r(W)=1, subnormality iff the squared weight-product sequence is Hausdorff.",
+      "scope": "Classical weighted-shift/moment representation mechanism. Matching a normalized Hausdorff sequence requires an explicitly defined shift, positive moments/weights and the contraction/support normalization. These are absent at the project opaque node."
+    },
+    {
+      "id": "AGLER1985",
+      "citation": "Jim Agler, Hypercontractions and subnormality, Journal of Operator Theory 13 (1985), 203–217.",
+      "url": "https://jot.theta.ro/jot/archive/1985-013-002/1985-013-002-001.pdf",
+      "locator": "Theorem 3.1, p. 212; operator-difference convention in the preceding definitions and proof.",
+      "scope": "Under the T*^k T^k difference convention, complete hypercontractivity characterizes subnormal contractions of T. Under the opposite T^k T*^k convention the statement concerns T*. The opaque project nodes specify neither orientation nor contractivity, so the imported iff is not thereby validated."
+    },
+    {
+      "id": "BONDESSON_SIMON2016",
+      "citation": "Lennart Bondesson and Thomas Simon, Stieltjes functions of finite order and hyperbolic monotonicity, arXiv:1604.05267.",
+      "url": "https://arxiv.org/pdf/1604.05267",
+      "locator": "Introduction, equations (3)–(4) and the Stieltjes hierarchy; Theorem 1, equation (5).",
+      "scope": "Finite-order Widder/Stieltjes inequalities and positive integral representations. Background for E41 and local Widder routes; does not establish their particular raw-xi normalization, cofinal-depth downward implication, or native Lean analytic interfaces."
+    },
+    {
+      "id": "BAYER_TEICHMANN2006",
+      "citation": "Christian Bayer and Josef Teichmann, The proof of Tchakaloff’s theorem, Proc. Amer. Math. Soc. 134 (2006), 3035–3040; arXiv:math/0502473.",
+      "url": "https://people.math.ethz.ch/~jteichma/tchakaloff120405.pdf",
+      "locator": "Definition 1 and the existence theorem for positive cubature matching a prescribed finite polynomial degree.",
+      "scope": "Positive finite atomic realization of each finite moment window. Supplies the classical mathematical ingredient behind M10, not a Lean proof of hRealize or an identification of the opaque Xi/RH objects."
+    }
+  ]
+}

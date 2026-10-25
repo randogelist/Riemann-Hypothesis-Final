@@ -4,6 +4,12 @@ These eight records are additional source/receipt evidence, outside the 41
 native-RH catalogue entries. No theorem in the recovered packages identifies
 `MASTER_3` with `_root_.RiemannHypothesis`. The exact hypotheses are retained.
 
+The exact project packaging is indexed under
+[Potentially novel](Potentially-novel/README.md#master-chain-auxiliaries), with
+priority unresolved. Its scalar, integral and Hilbert-space identities use
+standard mathematics; this label does not turn these auxiliary statements into
+native RH equivalences.
+
 | Statement | Required inputs | Source/evidence |
 |---|---|---|
 | `MASTER_3 ↔ c1 = kappa` | `h1 : MASTER_1` | [MasterChain.master_3_iff_c1_eq_kappa](../research/upstream/rh-equivalences-master-chain-v010/MasterChain/Chain.lean) |

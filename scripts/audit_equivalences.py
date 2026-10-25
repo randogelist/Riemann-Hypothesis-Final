@@ -88,6 +88,64 @@ for entry in master['records']:
     require(entry['native_mathlib_rh_iff'] is False,
             f"{entry['id']}: master auxiliary incorrectly promoted to native RH")
 
+# Literature provenance is independent of native verification. The two views
+# must partition the original 51 formulations without losing or duplicating IDs.
+literature = json.loads((FOLDER / 'literature-classification.json').read_text())
+categories = {x['name']: x for x in literature['categories']}
+require(set(categories) == {'Identified by Literature', 'Potentially novel'},
+        'Expected the two requested literature categories')
+require(literature['catalogue_sha256'] == hashlib.sha256(
+    (FOLDER / 'catalog.json').read_bytes()).hexdigest(), 'Classification catalogue hash is stale')
+require(literature['novelty_established'] is False, 'Literature review must not certify novelty')
+classified = literature['entries']
+original_ids = {x['id'] for x in native + models}
+require(len(classified) == len(original_ids), 'Wrong number of classified entries')
+require({x['id'] for x in classified} == original_ids, 'Classification omits or adds catalogue IDs')
+references = {x['id']: x for x in literature['references']}
+require(len(references) == len(literature['references']), 'Duplicate literature reference IDs')
+bibliography = (FOLDER / 'LITERATURE.md').read_text()
+catalogue_markdown = (FOLDER / 'CATALOG.md').read_text()
+for ref in references.values():
+    require(ref['url'].startswith('https://'), f"{ref['id']}: expected primary-source URL")
+    require(bool(ref['citation'].strip()) and bool(ref['scope'].strip()),
+            f"{ref['id']}: missing bibliography or scope")
+    require(f'<a id="{ref["id"].lower()}"></a>' in bibliography,
+            f"{ref['id']}: bibliography anchor missing")
+for entry in classified:
+    require(entry['category'] in categories, f"{entry['id']}: unknown literature category")
+    require(bool(entry['basis'].strip()) and bool(entry['relationship'].strip()),
+            f"{entry['id']}: missing classification rationale")
+    require(set(entry['reference_ids']) <= references.keys(),
+            f"{entry['id']}: unknown literature reference")
+    if entry['category'] == 'Identified by Literature':
+        require(bool(entry['reference_ids']), f"{entry['id']}: literature label lacks reference")
+    require(entry['novelty_established'] is False, f"{entry['id']}: unsupported priority claim")
+    require(f'<a id="{entry["id"].lower()}"></a>' in catalogue_markdown,
+            f"{entry['id']}: catalogue anchor missing")
+literature_counts = {}
+for name, category in categories.items():
+    selected = [x for x in classified if x['category'] == name]
+    view = FOLDER / category['path']
+    require(view.is_file(), f'Missing category view: {view}')
+    if view.is_file():
+        visible_ids = re.findall(r'^\| \[(E\d{2}|M\d{2})\]', view.read_text(), re.M)
+        require(visible_ids == [x['id'] for x in selected],
+                f'{name}: view and classification IDs differ')
+    counts = {'native_target': sum(x['id'].startswith('E') for x in selected),
+              'opaque_model': sum(x['id'].startswith('M') for x in selected),
+              'total': len(selected)}
+    require(category['counts'] == counts, f'{name}: stale formulation counts')
+    literature_counts[name] = counts
+supplementary = literature['supplementary_entries']
+require([x['id'] for x in supplementary] == [f'L{i:02}' for i in range(1, 13)],
+        'Expected twelve selected local criteria, separately counted')
+for entry in supplementary:
+    require(entry['category'] in categories, f"{entry['id']}: unknown supplementary category")
+    require(entry['local_criteria_item'] == int(entry['id'][1:]),
+            f"{entry['id']}: mismatched LOCAL_CRITERIA item")
+    require(set(entry['reference_ids']) <= references.keys(),
+            f"{entry['id']}: unknown supplementary reference")
+
 # Check relative Markdown file links in this collection. Fragment targets are
 # navigational labels; source identity is validated independently above.
 for doc in FOLDER.rglob('*.md'):
@@ -111,6 +169,10 @@ report = {
     'preserved_license_notices': len(mapping['license_notices']),
     'local_declaration_source_records_checked': len(local_entries),
     'master_chain_auxiliary_records_checked': len(master['records']),
+    'literature_classification_entries_checked': len(classified),
+    'literature_category_counts': literature_counts,
+    'supplementary_literature_items_checked': len(supplementary),
+    'literature_review_certifies_novelty': False,
     'native_lean_compilation': 'NOT_RUN',
     'native_axiom_audit': 'NOT_RUN',
     'rh_proved': False,

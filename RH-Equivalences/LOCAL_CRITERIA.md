@@ -11,6 +11,11 @@ signature, enclosing variables, source path, line and SHA-256, with 125 supporti
 predicate definitions and 27 additional directly linked auxiliary results.
 The original archive files remain outside the active build.
 
+The twelve selected items below also appear in the supplementary sections of
+[Identified by Literature](Identified-by-Literature/README.md) and
+[Potentially novel](Potentially-novel/README.md). That split concerns mathematical
+provenance, not whether an implication is an equivalence or has been compiled.
+
 ## Literal native RH equivalences
 
 These targets are Mathlib's actual `RiemannHypothesis`. An equivalence supplies

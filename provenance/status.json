@@ -44,6 +44,24 @@
     "local_RH_linked_auxiliary_declarations": 27,
     "master_chain_auxiliary_equivalences": 8,
     "native_compilation": "NOT_RUN",
-    "active_build_changed": false
+    "active_build_changed": false,
+    "literature_classification": {
+      "review_date": "2026-10-25",
+      "path": "RH-Equivalences/literature-classification.json",
+      "category_counts": {
+        "Identified by Literature": {
+          "native_target": 18,
+          "opaque_model": 5,
+          "total": 23
+        },
+        "Potentially novel": {
+          "native_target": 23,
+          "opaque_model": 5,
+          "total": 28
+        }
+      },
+      "novelty_established": false,
+      "independent_of_native_verification": true
+    }
   }
 }

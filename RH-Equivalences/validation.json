@@ -10,6 +10,21 @@
   "preserved_license_notices": 7,
   "local_declaration_source_records_checked": 142,
   "master_chain_auxiliary_records_checked": 8,
+  "literature_classification_entries_checked": 51,
+  "literature_category_counts": {
+    "Identified by Literature": {
+      "native_target": 18,
+      "opaque_model": 5,
+      "total": 23
+    },
+    "Potentially novel": {
+      "native_target": 23,
+      "opaque_model": 5,
+      "total": 28
+    }
+  },
+  "supplementary_literature_items_checked": 12,
+  "literature_review_certifies_novelty": false,
   "native_lean_compilation": "NOT_RUN",
   "native_axiom_audit": "NOT_RUN",
   "rh_proved": false,

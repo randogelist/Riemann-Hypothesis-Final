@@ -24,6 +24,17 @@ it is not a count of independent proof mechanisms.
 | Cofinal uniform Widder positivity | E41 |
 | Opaque GP/BKQR/Hausdorff/shift models | M01–M10, separate from native RH |
 
+## Literature provenance
+
+| Group | Native-target | Opaque-model | Total |
+|---|---:|---:|---:|
+| [Identified by Literature](Identified-by-Literature/README.md) | 18 | 5 | 23 |
+| [Potentially novel](Potentially-novel/README.md) | 23 | 5 | 28 |
+
+“Identified by Literature” distinguishes direct published criteria from standard reformulations and literature-inspired models. “Potentially novel” is a provisional label for exact project formulations whose priority remains unresolved; it does not certify novelty. Neither category changes proof or Lean verification status.
+
+Each entry has a classification rationale and primary references where applicable. See the [literature and review policy](LITERATURE.md) and [classification data](literature-classification.json). The twelve selected local summaries and eight master-chain auxiliaries are indexed separately, without increasing the 51-entry count.
+
 ## Source and verification boundary
 
 All 51 primary declaration source files were recovered from the original
