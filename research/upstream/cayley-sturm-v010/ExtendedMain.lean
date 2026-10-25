@@ -1,0 +1,39 @@
+import Bridge.CofinalEndpoint
+import FiniteWitness.AnchorTransport
+import FiniteWitness.NativeXiNormalization
+
+/-! v0.3 cofinal actual xi program / algebra proof inventory. -/
+
+#check WitnessSolobolo.actualXi_at_zero
+#check WitnessSolobolo.actualXi_at_one
+#check WitnessSolobolo.actualXi_one_sub
+#check WitnessSolobolo.actualXi_centered_even
+#check WitnessSolobolo.CofinalComplexCalibration
+#check WitnessSolobolo.allDepthComplexCalibration_implies_cofinal
+#check WitnessSolobolo.cofinalCalibration_actual_im_eq_zero
+#check WitnessSolobolo.cofinalCalibration_actual_re_nonneg
+#check WitnessSolobolo.cofinalComplexLayer_actual_coefficient_consequences
+#check WitnessSolobolo.anchorDenom_pos
+#check WitnessSolobolo.anchorTransport_unit_interval
+#check WitnessSolobolo.anchorTransport_self
+#check WitnessSolobolo.anchorTransport_comp
+#check WitnessSolobolo.anchorTransport_cayley_unit_interval
+#check WitnessSolobolo.transportedCayleyTrace_step
+#check WitnessSolobolo.RationalJetRectangle
+#check WitnessSolobolo.checkJetRectangle
+#check WitnessSolobolo.checkJetRectangle_sound
+#check WitnessSolobolo.RatProgram.eval
+#check WitnessSolobolo.JetBoxProgram
+#check WitnessSolobolo.checkGeneratedJetLayer
+#check WitnessSolobolo.checkGeneratedJetLayer_sound
+#check WitnessSolobolo.verified_cofinal_boxes_to_calibration
+#check WitnessSolobolo.COFINAL_COMPLEX_HURWITZ_FRONTIER
+#check WitnessSolobolo.FINITE_PROGRAM_CHECKER_SOUNDNESS
+#check WitnessSolobolo.CONDITIONAL_NATIVE_RH_OF_FINITE_PROGRAM
+
+#print axioms WitnessSolobolo.checkJetRectangle_sound
+#print axioms WitnessSolobolo.cofinalCalibration_actual_im_eq_zero
+#print axioms WitnessSolobolo.cofinalComplexLayer_actual_coefficient_consequences
+#print axioms WitnessSolobolo.anchorTransport_comp
+#print axioms WitnessSolobolo.verified_cofinal_boxes_to_calibration
+#print axioms WitnessSolobolo.CONDITIONAL_NATIVE_RH_OF_FINITE_PROGRAM

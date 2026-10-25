@@ -1,0 +1,92 @@
+{
+  "audit_kind": "STATIC_ONLY_NOT_LEAN",
+  "status": "PASS",
+  "lean_compilation": "NOT_RUN",
+  "native_axiom_audit": "NOT_RUN",
+  "rh_proved": false,
+  "checks": {
+    "plan_module_counts": {
+      "core": 6,
+      "full": 20
+    },
+    "new_theorems_audit_coverage": {
+      "declarations": [
+        "RHFinal.Actual.actualDirectJet_succ_of_hasDerivAt",
+        "RHFinal.Actual.directJet_succ_of_hasDerivAt",
+        "RHFinal.Actual.hasDerivAt_directJet",
+        "RHFinal.Actual.nativeRH_iff_zero_rigidity",
+        "RHFinal.Actual.nativeRH_of_finite_input_reduction",
+        "RHFinal.Actual.nativeRH_of_momentControl",
+        "RHFinal.Polynomial.eval_add",
+        "RHFinal.Polynomial.eval_mul",
+        "RHFinal.Polynomial.eval_scale",
+        "RHFinal.Polynomial.eval_sumSquares",
+        "RHFinal.checkLocal_sound",
+        "RHFinal.checked_base_identity",
+        "RHFinal.checked_transition_identity",
+        "RHFinal.diagnosticAccepted",
+        "RHFinal.diagnosticRejected",
+        "RHFinal.diagnosticSearchFinds",
+        "RHFinal.firstAccepted_sound",
+        "RHFinal.searchLocal_sound",
+        "RHFinal.sharedTransition_eq",
+        "RHFinal.transfer_of_finite_base_soundness",
+        "RHFinal.transfer_property_of_sharedTransition"
+      ],
+      "count": 21,
+      "missing": []
+    },
+    "active_source_sha256": {
+      "RHFinal/Core/Polynomial.lean": "45d891b0ac7bd3652c5bacac04994d9778c6df0fc5636c0b98082a4fbd6e2acc",
+      "RHFinal/Core/LocalWitness.lean": "acf099245de653085a65bb4e35a8bff5757e04573e9007bc32dd062f6d5e8667",
+      "RHFinal/Core/Induction.lean": "7ecc5fd1750a1a9fb8310a1f05bb75a8788802db6279ee261ed836de378ff522",
+      "RHFinal/Core/BoundedSearch.lean": "1f5d08bfc132e091c506616d25ce860de0d43c19b1a335e376600c50a3df87da",
+      "RHFinal/Search.lean": "9d0c40585b30125d34ddd4e41ef4d0237985f1bed654d6b7e47950e7c3d15c86",
+      "RHFinal/Audit.lean": "d72f3aed3249364336906632ed99fa5a6d33f431c13780f3c1d59f6e5e73f203",
+      "FiniteWitness/NativeXi.lean": "9c24dbaf286b679af1f6a44688b4b0a5a81b0f3464f9eef51f9927d45b0f4997",
+      "FiniteWitness/GPMoments.lean": "625bcbed3a7c22ee748b844a6d498159a4edb2c28ba39e2bcfffcb0c90e826ad",
+      "FiniteWitness/FiniteSpectrum.lean": "0e122288deb076b29280ceb5ca66ab49b0e83b9aaf083a2f601a378e34f5b22c",
+      "FiniteWitness/TraceInduction.lean": "45e6bb6e95da3d101cc129608a0c71f73c51432613d352ca79cd4add9233ee74",
+      "FiniteWitness/FiniteLayers.lean": "cd9454f0a0f70e6e72ac2e2badc40b1d8c5a40009d01f6456a60f5a4ba627e13",
+      "FiniteWitness/FiniteDebit.lean": "fe43b319789332751f1261154dc5fa9556dde4a7932cc80ce06c817994aee3c9",
+      "FiniteWitness/PositiveSyntax.lean": "249586c89273b036b013a59fb0448aa282c91a5dc50cf21f5118c8ac2896e867",
+      "FiniteWitness/TelescopicSpectrum.lean": "f7f58da87765ab90fbbdaac546d4f4bd443bcaaff9a2f3e1b3d10ff6921938f7",
+      "FiniteWitness/GramFactor.lean": "fc4a256207529d520d3100e336259188df583001248ae1e805cfdd7828e942d9",
+      "FiniteWitness/UniversalRecurrence.lean": "628e1731b41eb7bb440c97d8e12a4ffe5dbf533ce900e39ed6cd603345773c85",
+      "RHFinal/Actual/NativeRH.lean": "d24dd5882e0aa5ed6b572ac9ef2a79928aff4df1850e2346b53a31b81be62dc6",
+      "RHFinal/Actual/Successor.lean": "517a06365e6dcfd5e0f948fb98598c483a88bc2d4e3daaf69ba2351f9d945f97",
+      "RHFinal/Actual/Frontier.lean": "63e353cfaadc753359a507d2661c4b38279f6dc1be587225d18849449f753db8",
+      "RHFinal/Actual/Audit.lean": "20040297157d9e7a0d46d5806f6e2828234e948a9ab266e303fc976f535cb9ac"
+    },
+    "reviewed_tooling_sha256": {
+      "run.cmd": "eb35470ce952bfc6dbb2ea4d47edca32169f0c4e6d5708722bf7cf0d760da8f5",
+      "scripts/cache/Build.lean": "8a67626f44614eaf3a686da39588f3ce553c83595185bc48ada92e9c67128c58",
+      "docs/BUILD.md": "6db2b7f8965995d75ea95eea8916fcb5664dc18a4ccef8560d25dacdbba390d9",
+      "scripts/static_audit.py": "b00c999ffc9b1b664ea173f3535f1f945b78f4c9d54ce8d502776caa1d862ea4"
+    },
+    "upstream_hashes_verified": 152,
+    "active_import_hashes_verified": 10,
+    "original_input_hashes": {
+      "verified": 30,
+      "not_available_in_checkout": []
+    },
+    "independent_arithmetic_regression": {
+      "kind": "INDEPENDENT_PYTHON_EXACT_INTEGER_CHECK_NOT_LEAN",
+      "candidate_count": 81,
+      "accepted_count": 4,
+      "first_accepted": [
+        [
+          -1,
+          -1
+        ],
+        [
+          0,
+          -1
+        ]
+      ],
+      "corrupt_packets_rejected": 4,
+      "actual_xi_or_rh_witness_tested": false
+    }
+  },
+  "errors": []
+}

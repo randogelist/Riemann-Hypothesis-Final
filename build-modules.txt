@@ -1,0 +1,6 @@
+RHFinal/Core/Polynomial
+RHFinal/Core/LocalWitness
+RHFinal/Core/Induction
+RHFinal/Core/BoundedSearch
+RHFinal/Search
+RHFinal/Audit

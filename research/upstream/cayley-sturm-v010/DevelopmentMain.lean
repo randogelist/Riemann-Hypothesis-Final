@@ -1,0 +1,26 @@
+import Bridge.DevelopedEndpoint
+
+/-! v0.2 expanded proof check manifest. -/
+
+#check WitnessSolobolo.scalar_cayley_debit
+#check WitnessSolobolo.cayleyPowerTrace_debit
+#check WitnessSolobolo.cayleyPowerTrace_antitone
+#check WitnessSolobolo.cayleyPowerTrace_telescope
+#check WitnessSolobolo.PosTerm.check_sound
+#check WitnessSolobolo.checkAlgebra_sound
+#check WitnessSolobolo.checkTelescopic_sound
+#check WitnessSolobolo.checkGram_sound
+#check WitnessSolobolo.checkGPHankelFactor_sound
+#check WitnessSolobolo.gramSquareEnergy_nonneg
+#check WitnessSolobolo.telescopicBase_sum
+#check WitnessSolobolo.telescopicWitness_allLevelContractive
+#check WitnessSolobolo.checked_telescopic_all_depth_debit
+#check WitnessSolobolo.universal_successor_propagation
+#check WitnessSolobolo.halving_successor_bound
+#check WitnessSolobolo.AllDepthComplexCalibration
+#check WitnessSolobolo.complexCalibration_implies_real
+#check WitnessSolobolo.ACTUAL_XI_COMPLEX_CALIBRATION_FRONTIER
+#check WitnessSolobolo.COMPLEX_HURWITZ_FRONTIER
+#check WitnessSolobolo.FULL_COMPLEX_CHECKER_SOUNDNESS
+#check WitnessSolobolo.NATIVE_RH_OF_CALIBRATED_FINITE_LAYER
+#check WitnessSolobolo.NATIVE_RH_OF_FINITE_CHECKER

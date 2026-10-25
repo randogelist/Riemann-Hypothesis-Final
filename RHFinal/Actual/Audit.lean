@@ -1,0 +1,15 @@
+import FiniteWitness.UniversalRecurrence
+import RHFinal.Actual.Frontier
+
+#print axioms WitnessSolobolo.checkSeed_sound
+#print axioms WitnessSolobolo.checked_seed_cayley_induction
+#print axioms WitnessSolobolo.PosTerm.check_sound
+#print axioms WitnessSolobolo.checkAlgebra_sound
+#print axioms WitnessSolobolo.telescopicWitness_allLevelContractive
+#print axioms WitnessSolobolo.checked_telescopic_all_depth_debit
+#print axioms RHFinal.Actual.nativeRH_iff_zero_rigidity
+#print axioms RHFinal.Actual.hasDerivAt_directJet
+#print axioms RHFinal.Actual.directJet_succ_of_hasDerivAt
+#print axioms RHFinal.Actual.actualDirectJet_succ_of_hasDerivAt
+#print axioms RHFinal.Actual.nativeRH_of_momentControl
+#print axioms RHFinal.Actual.nativeRH_of_finite_input_reduction

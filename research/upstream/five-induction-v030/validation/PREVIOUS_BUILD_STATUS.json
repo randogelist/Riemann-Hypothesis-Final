@@ -1,0 +1,158 @@
+{
+  "package": "RH_FIVE_INDUCTION_LEAN_v0_2_0",
+  "lean_version": "Lean (version 4.33.0, x86_64-unknown-linux-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)",
+  "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+  "fresh_source_only_build": true,
+  "modules": [
+    {
+      "module": "FiveInduction/ActualXi",
+      "exit_code": 0,
+      "warnings": 0,
+      "seconds": 2.566
+    },
+    {
+      "module": "FiveInduction/Sturm",
+      "exit_code": 0,
+      "warnings": 0,
+      "seconds": 2.314
+    },
+    {
+      "module": "FiveInduction/Differential",
+      "exit_code": 0,
+      "warnings": 0,
+      "seconds": 5.02
+    },
+    {
+      "module": "FiveInduction/LimitTransfer",
+      "exit_code": 0,
+      "warnings": 0,
+      "seconds": 2.536
+    },
+    {
+      "module": "FiveInduction/Applications",
+      "exit_code": 0,
+      "warnings": 0,
+      "seconds": 4.433
+    },
+    {
+      "module": "FiveInduction/CayleyBridge",
+      "exit_code": 0,
+      "warnings": 0,
+      "seconds": 2.673
+    },
+    {
+      "module": "FiveInduction/DiskTransfer",
+      "exit_code": 0,
+      "warnings": 0,
+      "seconds": 2.519
+    },
+    {
+      "module": "FiveInduction/SOS",
+      "exit_code": 0,
+      "warnings": 0,
+      "seconds": 2.284
+    },
+    {
+      "module": "FiveInduction/Projection",
+      "exit_code": 0,
+      "warnings": 0,
+      "seconds": 2.238
+    },
+    {
+      "module": "FiveInduction/Schur",
+      "exit_code": 0,
+      "warnings": 0,
+      "seconds": 2.716
+    },
+    {
+      "module": "FiveInduction/MainChain",
+      "exit_code": 0,
+      "warnings": 0,
+      "seconds": 4.174
+    },
+    {
+      "module": "FiveInduction/SOSGeometry",
+      "exit_code": 0,
+      "warnings": 0,
+      "seconds": 3.901
+    },
+    {
+      "module": "FiveInduction/SOSInput",
+      "exit_code": 0,
+      "warnings": 0,
+      "seconds": 2.996
+    },
+    {
+      "module": "FiveInduction/ProjectionRadius",
+      "exit_code": 0,
+      "warnings": 0,
+      "seconds": 2.38
+    },
+    {
+      "module": "FiveInduction/ProjectionConvolution",
+      "exit_code": 0,
+      "warnings": 0,
+      "seconds": 2.527
+    },
+    {
+      "module": "FiveInduction/ProjectionInput",
+      "exit_code": 0,
+      "warnings": 0,
+      "seconds": 2.858
+    },
+    {
+      "module": "FiveInduction/SchurInput",
+      "exit_code": 0,
+      "warnings": 0,
+      "seconds": 2.434
+    },
+    {
+      "module": "FiveInduction/NormalizedInputs",
+      "exit_code": 0,
+      "warnings": 0,
+      "seconds": 4.827
+    },
+    {
+      "module": "FiveInduction/InputChain",
+      "exit_code": 0,
+      "warnings": 0,
+      "seconds": 4.144
+    },
+    {
+      "module": "Main",
+      "exit_code": 0,
+      "warnings": 0,
+      "seconds": 4.002
+    },
+    {
+      "module": "Audit",
+      "exit_code": 0,
+      "warnings": 0,
+      "seconds": 3.83
+    }
+  ],
+  "module_count": 21,
+  "audited_theorem_count": 190,
+  "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "custom_axioms": 0,
+  "placeholder_proofs": 0,
+  "warnings": 0,
+  "five_concrete_inductions": "PASS",
+  "five_explicit_input_definitions": "PASS",
+  "five_conditional_RH_endpoints": "PASS",
+  "actual_xi_identifications": "PASS",
+  "reciprocal_finite_recurrence_identification": "PASS",
+  "fixed_calibration_equivalences": "PASS",
+  "SOS_realization": "OPEN",
+  "Projection_realization": "OPEN",
+  "Schur_realization": "OPEN",
+  "Sturm_realization": "OPEN",
+  "Differential_realization": "OPEN",
+  "unconditional_RH": "NOT_CLAIMED",
+  "Windows_v0_2_0_replay": "NOT_RUN_HERE",
+  "previous_Windows_v0_1_0_FIX1_replay": "USER_LOG_PASS_11_MODULES_95_AUDITS"
+}

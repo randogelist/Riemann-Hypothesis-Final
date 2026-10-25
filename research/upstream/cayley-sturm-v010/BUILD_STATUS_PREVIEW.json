@@ -1,0 +1,24 @@
+{
+  "bundle": "SOLOBOLO_CAYLEY_STURM_RH_FORWARD_v0_1_0",
+  "lean_version": "4.33.0",
+  "base": "WITNESS_SOLOBOLO_NATIVE_LEAN_v0_5_0",
+  "inherited_lean_files_byte_identical": 34,
+  "new_lean_files": 8,
+  "new_modules": [
+    "RHForward/CayleyReal.lean",
+    "RHForward/NativeZeros.lean",
+    "RHForward/AtomicMoments.lean",
+    "RHForward/GramSturm.lean",
+    "RHForward/RationalChecker.lean",
+    "RHForward/FiniteSturm.lean",
+    "RHForward/Boundary.lean",
+    "RHForwardMain.lean"
+  ],
+  "compiler_authority": "USER_WINDOWS_NATIVE_ONLY",
+  "assistant_compilation": "NOT_RUN",
+  "native_RH": "ASSUMED_IN_FORWARD_THEOREMS",
+  "finite_native_zero_consequences": "SOURCE_WRITTEN_PASSES_PENDING",
+  "actual_xi_infinite_divisor_bridge": "OPEN",
+  "full_finite_witness_RH": "OPEN",
+  "witness_ready": false
+}

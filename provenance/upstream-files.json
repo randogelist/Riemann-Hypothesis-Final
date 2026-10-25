@@ -1,0 +1,762 @@
+[
+  {
+    "path": "research/upstream/cayley-sturm-v010/Main.lean",
+    "sha256": "377cf3c31ff06c0fc604cb6d6b716a3ddfd4e67776b4f73e040b5b49f757caae",
+    "upstream": "SOLOBOLO_CAYLEY_STURM_RH_FORWARD_v0_1_0"
+  },
+  {
+    "path": "research/upstream/cayley-sturm-v010/README_RH_FORWARD.md",
+    "sha256": "fd02f69a8b44dc937701bad695bdef31141a2b6330a1d67dc86549a307b17d79",
+    "upstream": "SOLOBOLO_CAYLEY_STURM_RH_FORWARD_v0_1_0"
+  },
+  {
+    "path": "research/upstream/cayley-sturm-v010/ANALYTIC_PROOF_NOTE.md",
+    "sha256": "82a753da584ddaad421d5c4f7511896b31e779a15ef3b2ffba81705e6e19160a",
+    "upstream": "SOLOBOLO_CAYLEY_STURM_RH_FORWARD_v0_1_0"
+  },
+  {
+    "path": "research/upstream/cayley-sturm-v010/WitnessMainV05.lean",
+    "sha256": "43b4158ce68f6a97f4ce0f060eea74a8f1ac11db68d4b042ef809702a04aa13b",
+    "upstream": "SOLOBOLO_CAYLEY_STURM_RH_FORWARD_v0_1_0"
+  },
+  {
+    "path": "research/upstream/cayley-sturm-v010/DeepMain.lean",
+    "sha256": "731af9aa84d0f189ad14ed3256d027077040102d909658df3517869dedfd2278",
+    "upstream": "SOLOBOLO_CAYLEY_STURM_RH_FORWARD_v0_1_0"
+  },
+  {
+    "path": "research/upstream/cayley-sturm-v010/SOURCE_SHA256.txt",
+    "sha256": "7867f27be513798440c842744e6f2b6e77777e081aa4cd0700e4cbdb8c59c686",
+    "upstream": "SOLOBOLO_CAYLEY_STURM_RH_FORWARD_v0_1_0"
+  },
+  {
+    "path": "research/upstream/cayley-sturm-v010/RHForwardMain.lean",
+    "sha256": "a0bca203104ce98bc7bab391432097bfdafe02a6f68eebbcf55c6078f0538a2e",
+    "upstream": "SOLOBOLO_CAYLEY_STURM_RH_FORWARD_v0_1_0"
+  },
+  {
+    "path": "research/upstream/cayley-sturm-v010/DevelopmentMain.lean",
+    "sha256": "8e8dafe2c3156105308939384bead151b1fe94183ddc9e122039f03f0b3492d6",
+    "upstream": "SOLOBOLO_CAYLEY_STURM_RH_FORWARD_v0_1_0"
+  },
+  {
+    "path": "research/upstream/cayley-sturm-v010/ExtendedMain.lean",
+    "sha256": "394913a1e0e217b78f1602245758ca9c0f8e1b7c579737300fd3ee1bbb6dfb2d",
+    "upstream": "SOLOBOLO_CAYLEY_STURM_RH_FORWARD_v0_1_0"
+  },
+  {
+    "path": "research/upstream/cayley-sturm-v010/FROZEN_SHA256.json",
+    "sha256": "53f1d93fbfb5e8d1a8033623a5d49197bee881727bbb14bb6ef72be097d04cc1",
+    "upstream": "SOLOBOLO_CAYLEY_STURM_RH_FORWARD_v0_1_0"
+  },
+  {
+    "path": "research/upstream/cayley-sturm-v010/STATUS.md",
+    "sha256": "660c00fc624f8928ff9d66016246e2d12a7e02b4c73ab930ca87f99a35458128",
+    "upstream": "SOLOBOLO_CAYLEY_STURM_RH_FORWARD_v0_1_0"
+  },
+  {
+    "path": "research/upstream/cayley-sturm-v010/BUILD_STATUS_PREVIEW.json",
+    "sha256": "4e321d747d1ebbdc871339e959f86b3e8d2b256b9da600bcd67c78d8f7b5c944",
+    "upstream": "SOLOBOLO_CAYLEY_STURM_RH_FORWARD_v0_1_0"
+  },
+  {
+    "path": "research/upstream/cayley-sturm-v010/README.md",
+    "sha256": "a592f64fda7f6e2367b72fd04adb3e656cb9abe6342de9a716081fc911718da2",
+    "upstream": "SOLOBOLO_CAYLEY_STURM_RH_FORWARD_v0_1_0"
+  },
+  {
+    "path": "research/upstream/cayley-sturm-v010/RHForward/Boundary.lean",
+    "sha256": "6514a6a3aac1d36759c621fc0b163ca2037266d49fd97442873c3cb58a6e5dd4",
+    "upstream": "SOLOBOLO_CAYLEY_STURM_RH_FORWARD_v0_1_0"
+  },
+  {
+    "path": "research/upstream/cayley-sturm-v010/RHForward/GramSturm.lean",
+    "sha256": "03a134c51bfd3869409494939b324dd5225b8c5e7b014f05b2b899ac95ad088a",
+    "upstream": "SOLOBOLO_CAYLEY_STURM_RH_FORWARD_v0_1_0"
+  },
+  {
+    "path": "research/upstream/cayley-sturm-v010/RHForward/AtomicMoments.lean",
+    "sha256": "63f826742557562834caca83446bca02c3db82075100e4f39a03a0d66ea51811",
+    "upstream": "SOLOBOLO_CAYLEY_STURM_RH_FORWARD_v0_1_0"
+  },
+  {
+    "path": "research/upstream/cayley-sturm-v010/RHForward/CayleyReal.lean",
+    "sha256": "1f57f559de9b69a80f43a07ff09311c54f388b21edd3b428a7d859db661474d2",
+    "upstream": "SOLOBOLO_CAYLEY_STURM_RH_FORWARD_v0_1_0"
+  },
+  {
+    "path": "research/upstream/cayley-sturm-v010/RHForward/NativeZeros.lean",
+    "sha256": "662662bb4292b546cadf43d9f8955ed93cdfef350dd0e499371638e736d1847c",
+    "upstream": "SOLOBOLO_CAYLEY_STURM_RH_FORWARD_v0_1_0"
+  },
+  {
+    "path": "research/upstream/cayley-sturm-v010/RHForward/RationalChecker.lean",
+    "sha256": "3598ede6cab340918031d61107140b00b3264fccc2f5aac09b3c8d456810ef2d",
+    "upstream": "SOLOBOLO_CAYLEY_STURM_RH_FORWARD_v0_1_0"
+  },
+  {
+    "path": "research/upstream/cayley-sturm-v010/RHForward/FiniteSturm.lean",
+    "sha256": "ca9e9d99c2cf17c544b4c96decf303cdae4147ffe757a368a73b741297d065cb",
+    "upstream": "SOLOBOLO_CAYLEY_STURM_RH_FORWARD_v0_1_0"
+  },
+  {
+    "path": "research/upstream/cayley-sturm-v010/Bridge/DevelopedEndpoint.lean",
+    "sha256": "70ac1c41b3452bd0e394727444ec5123c08387edcdc02b4a9980456e678fed65",
+    "upstream": "SOLOBOLO_CAYLEY_STURM_RH_FORWARD_v0_1_0"
+  },
+  {
+    "path": "research/upstream/cayley-sturm-v010/Bridge/NativeWidderTrace.lean",
+    "sha256": "9c3e2e0cdd26b78c11f0d546cb92f96235a14822ee5d9fef24d599ecb7de0f80",
+    "upstream": "SOLOBOLO_CAYLEY_STURM_RH_FORWARD_v0_1_0"
+  },
+  {
+    "path": "research/upstream/cayley-sturm-v010/Bridge/ActualTraceEndpoint.lean",
+    "sha256": "5e4b78c971f2008afb053a70e5ab7b6577afbe300e5c8fdf3e5dba6e850be823",
+    "upstream": "SOLOBOLO_CAYLEY_STURM_RH_FORWARD_v0_1_0"
+  },
+  {
+    "path": "research/upstream/cayley-sturm-v010/Bridge/CofinalEndpoint.lean",
+    "sha256": "ac4d6aefa105803cf7cf523bfc78c9260e3694a2cd405f0b8ecfe143e8b36a73",
+    "upstream": "SOLOBOLO_CAYLEY_STURM_RH_FORWARD_v0_1_0"
+  },
+  {
+    "path": "research/upstream/cayley-sturm-v010/Bridge/NativeEndpoint.lean",
+    "sha256": "a3ddd4eff90f7fe10ecd1e7f53a2d66220780c379ad33f9c7426794a252545c2",
+    "upstream": "SOLOBOLO_CAYLEY_STURM_RH_FORWARD_v0_1_0"
+  },
+  {
+    "path": "research/upstream/cayley-sturm-v010/Bridge/AllAnchorTraceEndpoint.lean",
+    "sha256": "4c5f3d141eb03c2f64baa56a4dbc1775e8d77e1f9db413174572d5282f8318db",
+    "upstream": "SOLOBOLO_CAYLEY_STURM_RH_FORWARD_v0_1_0"
+  },
+  {
+    "path": "research/upstream/cayley-sturm-v010/FiniteWitness/PositiveSyntax.lean",
+    "sha256": "249586c89273b036b013a59fb0448aa282c91a5dc50cf21f5118c8ac2896e867",
+    "upstream": "SOLOBOLO_CAYLEY_STURM_RH_FORWARD_v0_1_0"
+  },
+  {
+    "path": "research/upstream/cayley-sturm-v010/FiniteWitness/SharpAnchorMass.lean",
+    "sha256": "25fbf7e6b094e928059aa261166d0e209c33da501d06aba7deebaeb55531b781",
+    "upstream": "SOLOBOLO_CAYLEY_STURM_RH_FORWARD_v0_1_0"
+  },
+  {
+    "path": "research/upstream/cayley-sturm-v010/FiniteWitness/AllAnchorDebit.lean",
+    "sha256": "66bf0f015a21cc36da2459ed55df982d04ccc8ed370cfe75cb14e0865f441797",
+    "upstream": "SOLOBOLO_CAYLEY_STURM_RH_FORWARD_v0_1_0"
+  },
+  {
+    "path": "research/upstream/cayley-sturm-v010/FiniteWitness/UniformCayleyMass.lean",
+    "sha256": "ca2f01dc9752c2926ed9346ac2a7b16f0c3d93b6377986a2c506d186d7a52a93",
+    "upstream": "SOLOBOLO_CAYLEY_STURM_RH_FORWARD_v0_1_0"
+  },
+  {
+    "path": "research/upstream/cayley-sturm-v010/FiniteWitness/MatchedAmplification.lean",
+    "sha256": "5580f993a13607be506270350764264f6d3be1518b4c6b9c32fd07942c83a738",
+    "upstream": "SOLOBOLO_CAYLEY_STURM_RH_FORWARD_v0_1_0"
+  },
+  {
+    "path": "research/upstream/cayley-sturm-v010/FiniteWitness/GPMoments.lean",
+    "sha256": "625bcbed3a7c22ee748b844a6d498159a4edb2c28ba39e2bcfffcb0c90e826ad",
+    "upstream": "SOLOBOLO_CAYLEY_STURM_RH_FORWARD_v0_1_0"
+  },
+  {
+    "path": "research/upstream/cayley-sturm-v010/FiniteWitness/FiniteSpectrum.lean",
+    "sha256": "0e122288deb076b29280ceb5ca66ab49b0e83b9aaf083a2f601a378e34f5b22c",
+    "upstream": "SOLOBOLO_CAYLEY_STURM_RH_FORWARD_v0_1_0"
+  },
+  {
+    "path": "research/upstream/cayley-sturm-v010/FiniteWitness/TraceInduction.lean",
+    "sha256": "45e6bb6e95da3d101cc129608a0c71f73c51432613d352ca79cd4add9233ee74",
+    "upstream": "SOLOBOLO_CAYLEY_STURM_RH_FORWARD_v0_1_0"
+  },
+  {
+    "path": "research/upstream/cayley-sturm-v010/FiniteWitness/UniversalRecurrence.lean",
+    "sha256": "628e1731b41eb7bb440c97d8e12a4ffe5dbf533ce900e39ed6cd603345773c85",
+    "upstream": "SOLOBOLO_CAYLEY_STURM_RH_FORWARD_v0_1_0"
+  },
+  {
+    "path": "research/upstream/cayley-sturm-v010/FiniteWitness/NativeXiNormalization.lean",
+    "sha256": "a7a0b157dc2eb0c83da004ccfb0b38b0b155705fc6afda2f1b3cf5ee08900789",
+    "upstream": "SOLOBOLO_CAYLEY_STURM_RH_FORWARD_v0_1_0"
+  },
+  {
+    "path": "research/upstream/cayley-sturm-v010/FiniteWitness/ComplexCalibration.lean",
+    "sha256": "c40cf66a236967e2adaf49a43796cfbc2054a0c20a7454175bb09df654737738",
+    "upstream": "SOLOBOLO_CAYLEY_STURM_RH_FORWARD_v0_1_0"
+  },
+  {
+    "path": "research/upstream/cayley-sturm-v010/FiniteWitness/RationalJetEnclosure.lean",
+    "sha256": "26955aefb681a77859c8dc66a1377d7dde1143c82054035e5edff7898f36817b",
+    "upstream": "SOLOBOLO_CAYLEY_STURM_RH_FORWARD_v0_1_0"
+  },
+  {
+    "path": "research/upstream/cayley-sturm-v010/FiniteWitness/BernsteinSolobolo.lean",
+    "sha256": "e609f40fd3bb34219a7291d4d62cb7f2e8e2810008e93ab93857bd86fc108c99",
+    "upstream": "SOLOBOLO_CAYLEY_STURM_RH_FORWARD_v0_1_0"
+  },
+  {
+    "path": "research/upstream/cayley-sturm-v010/FiniteWitness/AllAnchorMass.lean",
+    "sha256": "7eeb1170e0972e9c9157810a7f3bc2c191e796e00dd651f866d294573c405b46",
+    "upstream": "SOLOBOLO_CAYLEY_STURM_RH_FORWARD_v0_1_0"
+  },
+  {
+    "path": "research/upstream/cayley-sturm-v010/FiniteWitness/CofinalCalibration.lean",
+    "sha256": "dd0925854d6b002ed41f9159454ed37173dd7a7ac60cf3dfce56e84218e67ed2",
+    "upstream": "SOLOBOLO_CAYLEY_STURM_RH_FORWARD_v0_1_0"
+  },
+  {
+    "path": "research/upstream/cayley-sturm-v010/FiniteWitness/GramFactor.lean",
+    "sha256": "fc4a256207529d520d3100e336259188df583001248ae1e805cfdd7828e942d9",
+    "upstream": "SOLOBOLO_CAYLEY_STURM_RH_FORWARD_v0_1_0"
+  },
+  {
+    "path": "research/upstream/cayley-sturm-v010/FiniteWitness/RealAnchorMass.lean",
+    "sha256": "05dde2dbc6c06e65ca3006cbced306e5d4a29a2a91ca209ac38d5aca35cc8d04",
+    "upstream": "SOLOBOLO_CAYLEY_STURM_RH_FORWARD_v0_1_0"
+  },
+  {
+    "path": "research/upstream/cayley-sturm-v010/FiniteWitness/NativeXi.lean",
+    "sha256": "9c24dbaf286b679af1f6a44688b4b0a5a81b0f3464f9eef51f9927d45b0f4997",
+    "upstream": "SOLOBOLO_CAYLEY_STURM_RH_FORWARD_v0_1_0"
+  },
+  {
+    "path": "research/upstream/cayley-sturm-v010/FiniteWitness/FiniteLayers.lean",
+    "sha256": "cd9454f0a0f70e6e72ac2e2badc40b1d8c5a40009d01f6456a60f5a4ba627e13",
+    "upstream": "SOLOBOLO_CAYLEY_STURM_RH_FORWARD_v0_1_0"
+  },
+  {
+    "path": "research/upstream/cayley-sturm-v010/FiniteWitness/CheckedDebitBudget.lean",
+    "sha256": "05b76978b6f17a19ffe429503005c3360456b452fbcfdc93fe2ecbf5879f7d3b",
+    "upstream": "SOLOBOLO_CAYLEY_STURM_RH_FORWARD_v0_1_0"
+  },
+  {
+    "path": "research/upstream/cayley-sturm-v010/FiniteWitness/AnchorTransport.lean",
+    "sha256": "c47682ec74c9b088ac9e75898750163ff828f525f6d301d7be1b9dedab201eb1",
+    "upstream": "SOLOBOLO_CAYLEY_STURM_RH_FORWARD_v0_1_0"
+  },
+  {
+    "path": "research/upstream/cayley-sturm-v010/FiniteWitness/TelescopicSpectrum.lean",
+    "sha256": "f7f58da87765ab90fbbdaac546d4f4bd443bcaaff9a2f3e1b3d10ff6921938f7",
+    "upstream": "SOLOBOLO_CAYLEY_STURM_RH_FORWARD_v0_1_0"
+  },
+  {
+    "path": "research/upstream/cayley-sturm-v010/FiniteWitness/FiniteDebit.lean",
+    "sha256": "fe43b319789332751f1261154dc5fa9556dde4a7932cc80ce06c817994aee3c9",
+    "upstream": "SOLOBOLO_CAYLEY_STURM_RH_FORWARD_v0_1_0"
+  },
+  {
+    "path": "research/upstream/native-rh-v061/SOURCE_MANIFEST.txt",
+    "sha256": "1de4ae430c03e90de0cf483d875322e496431a486cc6c35e99101e3a0051ca87",
+    "upstream": "RH_SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_6_1_GOODWORKFLOW_CACHED_MATHLIB_FIX1"
+  },
+  {
+    "path": "research/upstream/native-rh-v061/GOODWORKFLOWFRONTIER_COMPARISON.md",
+    "sha256": "f6c097377f237b5f26968ce282cf85f153d22a6bafbe934cea49e94b19ab0e17",
+    "upstream": "RH_SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_6_1_GOODWORKFLOW_CACHED_MATHLIB_FIX1"
+  },
+  {
+    "path": "research/upstream/native-rh-v061/CHECKPOINT.txt",
+    "sha256": "2e7890b751bc6ab376a124cf2534fe8653648afb102e82a432ccbae39e18c173",
+    "upstream": "RH_SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_6_1_GOODWORKFLOW_CACHED_MATHLIB_FIX1"
+  },
+  {
+    "path": "research/upstream/native-rh-v061/README.md",
+    "sha256": "233ba60222d6f5ced3e9ef6ac61c0299e0e0455506695cedb994f9e5de6f4004",
+    "upstream": "RH_SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_6_1_GOODWORKFLOW_CACHED_MATHLIB_FIX1"
+  },
+  {
+    "path": "research/upstream/native-rh-v061/src/RHAdmission/Main.lean",
+    "sha256": "6e85473bcc6e74d99864ca551eb84aad49382c9d4d4218fea8f70f1da40dcd56",
+    "upstream": "RH_SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_6_1_GOODWORKFLOW_CACHED_MATHLIB_FIX1"
+  },
+  {
+    "path": "research/upstream/native-rh-v061/src/RHAdmission/GatedVerifierBarrier.lean",
+    "sha256": "d6d7f789dbcd3dafb9980ef9d4c35e28a5b20af1dd15c57e44d7374ca77af2f2",
+    "upstream": "RH_SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_6_1_GOODWORKFLOW_CACHED_MATHLIB_FIX1"
+  },
+  {
+    "path": "research/upstream/native-rh-v061/src/RHAdmission/GoodWorkflowReinferenceAudit.lean",
+    "sha256": "bcffc2ac2750b381aee0436ff24909a2740b1b5e51613af3dd28eaa6b2816bf0",
+    "upstream": "RH_SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_6_1_GOODWORKFLOW_CACHED_MATHLIB_FIX1"
+  },
+  {
+    "path": "research/upstream/native-rh-v061/src/RHAdmission/Downstream.lean",
+    "sha256": "20d6c0bf2cc6765cd22bfd175c1c050b22452c9e489b886a1ee06c9b1748cf8e",
+    "upstream": "RH_SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_6_1_GOODWORKFLOW_CACHED_MATHLIB_FIX1"
+  },
+  {
+    "path": "research/upstream/native-rh-v061/src/RHAdmission/FiniteMetricCode.lean",
+    "sha256": "26b3a30e6e25e36a9b75fbf380b644446ec92f05a3cf6f4ae514a23469920c39",
+    "upstream": "RH_SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_6_1_GOODWORKFLOW_CACHED_MATHLIB_FIX1"
+  },
+  {
+    "path": "research/upstream/native-rh-v061/src/RHAdmission/CrossInferenceAudit.lean",
+    "sha256": "1834f71e4845291b1d3dc8877d19d5e7e383d011e68d718260292752c2f24d4f",
+    "upstream": "RH_SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_6_1_GOODWORKFLOW_CACHED_MATHLIB_FIX1"
+  },
+  {
+    "path": "research/upstream/native-rh-v061/src/RHAdmission/Equivalence.lean",
+    "sha256": "b18dcd158c3ed851412382ac8daede3156c324d08e6e3004fe7c6225aa23f496",
+    "upstream": "RH_SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_6_1_GOODWORKFLOW_CACHED_MATHLIB_FIX1"
+  },
+  {
+    "path": "research/upstream/native-rh-v061/src/RHAdmission/ShiftedAxis.lean",
+    "sha256": "6c7ec4f4ebd3ba8f412c51e0366f8514b13d75eb51268dca1ee86370c2b8eb41",
+    "upstream": "RH_SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_6_1_GOODWORKFLOW_CACHED_MATHLIB_FIX1"
+  },
+  {
+    "path": "research/upstream/native-rh-v061/src/RHAdmission/Audit.lean",
+    "sha256": "7b8178a36814e26e725ca2c9662a5b0faaf77025a2ba4782007cf14c260ada9a",
+    "upstream": "RH_SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_6_1_GOODWORKFLOW_CACHED_MATHLIB_FIX1"
+  },
+  {
+    "path": "research/upstream/native-rh-v061/src/RHAdmission/GeneralMetric.lean",
+    "sha256": "3def6d794c9b11317ae0c82ef6f069e8fa14ed5fdfe978ea29171f26a17e6215",
+    "upstream": "RH_SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_6_1_GOODWORKFLOW_CACHED_MATHLIB_FIX1"
+  },
+  {
+    "path": "research/upstream/native-rh-v061/src/RHAdmission/FiniteWitnessFinalAudit.lean",
+    "sha256": "5e8e44f11fa9d888a0c708d35a082ddc0636a19dda761a7fc4fc289475397767",
+    "upstream": "RH_SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_6_1_GOODWORKFLOW_CACHED_MATHLIB_FIX1"
+  },
+  {
+    "path": "research/upstream/native-rh-v061/src/RHAdmission/GoodWorkflowFinalAudit.lean",
+    "sha256": "4d8be106806dc0b33542a4c0a09c802dae40683346c3d88600ff1713ec8202cc",
+    "upstream": "RH_SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_6_1_GOODWORKFLOW_CACHED_MATHLIB_FIX1"
+  },
+  {
+    "path": "research/upstream/native-rh-v061/src/RHAdmission/FinitePrefixBarrier.lean",
+    "sha256": "3492764335f9b7ead1db005015eb825a06d13fd654e29d117d31cb0794a3fc4b",
+    "upstream": "RH_SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_6_1_GOODWORKFLOW_CACHED_MATHLIB_FIX1"
+  },
+  {
+    "path": "research/upstream/native-rh-v061/src/RHAdmission/AllDepthAdmission.lean",
+    "sha256": "b0e94a3c5e9bc39cc4e7b6193a0b014bc4af3b9cfdf5ca1eb44a4b6fd560bed8",
+    "upstream": "RH_SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_6_1_GOODWORKFLOW_CACHED_MATHLIB_FIX1"
+  },
+  {
+    "path": "research/upstream/native-rh-v061/src/RHAdmission/FiniteGateNoShortcut.lean",
+    "sha256": "5fca36e7e53e849cc3d691f45d59d4f92bb90c2efb0bc7fb5f31369265680730",
+    "upstream": "RH_SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_6_1_GOODWORKFLOW_CACHED_MATHLIB_FIX1"
+  },
+  {
+    "path": "research/upstream/native-rh-v061/src/RHAdmission/TowerTransport.lean",
+    "sha256": "0be2d6852302f16add7a6e6e80f8f018d38535f7d2ae49adbda018d72db76a0c",
+    "upstream": "RH_SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_6_1_GOODWORKFLOW_CACHED_MATHLIB_FIX1"
+  },
+  {
+    "path": "research/upstream/native-rh-v061/src/RHAdmission/FinalChain.lean",
+    "sha256": "d6dc865a938a2ff833391cfa07c6ad4b57f75747080fd6358a12388e60428499",
+    "upstream": "RH_SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_6_1_GOODWORKFLOW_CACHED_MATHLIB_FIX1"
+  },
+  {
+    "path": "research/upstream/native-rh-v061/src/RHAdmission/PositiveSeedDefect.lean",
+    "sha256": "07db1db1ed268d208b2be961f4f87f3d51a63cc4f7e1d7550d41cf3c65f75f62",
+    "upstream": "RH_SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_6_1_GOODWORKFLOW_CACHED_MATHLIB_FIX1"
+  },
+  {
+    "path": "research/upstream/native-rh-v061/src/RHAdmission/KreinChannel.lean",
+    "sha256": "69a68b7029ee905ffc86a353fcd718b4245d56593028d8aaf7c7a38fba61df95",
+    "upstream": "RH_SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_6_1_GOODWORKFLOW_CACHED_MATHLIB_FIX1"
+  },
+  {
+    "path": "research/upstream/native-rh-v061/src/RHAdmission/ScalarCriterion.lean",
+    "sha256": "aa52941235cf0e719735769d71b71981016f9ffcb0bc6d1417c6bfe0812359bc",
+    "upstream": "RH_SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_6_1_GOODWORKFLOW_CACHED_MATHLIB_FIX1"
+  },
+  {
+    "path": "research/upstream/native-rh-v061/src/RHAdmission/PositiveMetric.lean",
+    "sha256": "39fdf0f2b6878808a70ddd736e2389391582715a18111ae2e2fd96bb99046cec",
+    "upstream": "RH_SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_6_1_GOODWORKFLOW_CACHED_MATHLIB_FIX1"
+  },
+  {
+    "path": "research/upstream/native-rh-v061/src/RHAdmission/Induction.lean",
+    "sha256": "badc18db408151a58fb5f9ff0d237a01b0c47b310b32e4198dd1ff4a701997a9",
+    "upstream": "RH_SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_6_1_GOODWORKFLOW_CACHED_MATHLIB_FIX1"
+  },
+  {
+    "path": "research/upstream/native-rh-v061/src/RHAdmission/FinalAudit.lean",
+    "sha256": "4ede6b39d22e85e24dbb6516343285091a3eba49dc5aaa04b1aa9986a26009ea",
+    "upstream": "RH_SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_6_1_GOODWORKFLOW_CACHED_MATHLIB_FIX1"
+  },
+  {
+    "path": "research/upstream/native-rh-v061/src/RHAdmission/FiniteNativePort.lean",
+    "sha256": "94ab40c7730007b69e91f3171ee48e3ea2c823ec3c9feed991901ad5a86043df",
+    "upstream": "RH_SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_6_1_GOODWORKFLOW_CACHED_MATHLIB_FIX1"
+  },
+  {
+    "path": "research/upstream/native-rh-v061/src/RHAdmission/FiniteVerifierContract.lean",
+    "sha256": "2e663c910accbac94f66024945e490038999e6620d35b0f78447ac671616c518",
+    "upstream": "RH_SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_6_1_GOODWORKFLOW_CACHED_MATHLIB_FIX1"
+  },
+  {
+    "path": "research/upstream/native-rh-v061/src/RHAdmission/SeedAdmission.lean",
+    "sha256": "59e4f4ca13b06d25d412e76432e83251e0c2a2ad8e81482b1c1a7a498e46fe4d",
+    "upstream": "RH_SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_6_1_GOODWORKFLOW_CACHED_MATHLIB_FIX1"
+  },
+  {
+    "path": "research/upstream/native-rh-v061/src/RHAdmission/GatedFiniteVerifier.lean",
+    "sha256": "dddc93fc4015aee62a2013c33d4917df0ae0a8f117424ddfeeb9c3058c38b41b",
+    "upstream": "RH_SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_6_1_GOODWORKFLOW_CACHED_MATHLIB_FIX1"
+  },
+  {
+    "path": "research/upstream/native-rh-v061/src/RHAdmission/SeedAllDepth.lean",
+    "sha256": "b80cf135184d94b53726782e88f2f984ac1d86f67986f8be197b8270eb38ae93",
+    "upstream": "RH_SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_6_1_GOODWORKFLOW_CACHED_MATHLIB_FIX1"
+  },
+  {
+    "path": "research/upstream/native-rh-v061/src/RHAdmission/FiniteVerifierBarrier.lean",
+    "sha256": "46badf899fc683562c7b4c1c68ec8f2ca22d77e3b036dde1ca6c52a657fd8609",
+    "upstream": "RH_SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_6_1_GOODWORKFLOW_CACHED_MATHLIB_FIX1"
+  },
+  {
+    "path": "research/upstream/native-rh-v061/src/RHAdmission/NativeZeros.lean",
+    "sha256": "d85d030d551e290b3f51cf3851888ec1213fa11c02090be2a3c6efbad702cfa0",
+    "upstream": "RH_SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_6_1_GOODWORKFLOW_CACHED_MATHLIB_FIX1"
+  },
+  {
+    "path": "research/upstream/finite-rate-v041/CACHE_FIX_AUDIT.txt",
+    "sha256": "04df5d1ce14e7e4b9eadba4ef2120097e00c4401f170270c7f9d86201d7eb0c2",
+    "upstream": "SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_4_1_GOODWORKFLOWFRONTIER_CACHED_MATHLIB"
+  },
+  {
+    "path": "research/upstream/finite-rate-v041/STATIC_AUDIT.txt",
+    "sha256": "1e7f490f3cc30f94a27f70815d6ef5c6ddfb26fc03a0869ea7dffef1ec3ebf5c",
+    "upstream": "SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_4_1_GOODWORKFLOWFRONTIER_CACHED_MATHLIB"
+  },
+  {
+    "path": "research/upstream/finite-rate-v041/README.txt",
+    "sha256": "dec7d15022b7d15e91f3894b7752e7f9bc7de08d56560ef3e1b0d559b4eaa71a",
+    "upstream": "SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_4_1_GOODWORKFLOWFRONTIER_CACHED_MATHLIB"
+  },
+  {
+    "path": "research/upstream/finite-rate-v041/GOODWORKFLOWFRONTIER_COMPARISON.md",
+    "sha256": "bbb1e992969ab7a399d4d7315a56031ecd30998a8b0e01dec02bd22934950702",
+    "upstream": "SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_4_1_GOODWORKFLOWFRONTIER_CACHED_MATHLIB"
+  },
+  {
+    "path": "research/upstream/finite-rate-v041/SOURCE_SHA256.txt",
+    "sha256": "b020e50cbcaccbfd762fa222173f62966b3f484213f0474d152501d0aa1f6110",
+    "upstream": "SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_4_1_GOODWORKFLOWFRONTIER_CACHED_MATHLIB"
+  },
+  {
+    "path": "research/upstream/finite-rate-v041/PROOF_LEDGER.md",
+    "sha256": "3585df153561c6695684d51c67b80e0c2084702a103f01298003751c54368f40",
+    "upstream": "SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_4_1_GOODWORKFLOWFRONTIER_CACHED_MATHLIB"
+  },
+  {
+    "path": "research/upstream/finite-rate-v041/Solobolo/QuarterContraction.lean",
+    "sha256": "e7bb6980d67c5636e45673965321b370992a72d9aaa2d9cb7ebaf233ea493554",
+    "upstream": "SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_4_1_GOODWORKFLOWFRONTIER_CACHED_MATHLIB"
+  },
+  {
+    "path": "research/upstream/finite-rate-v041/Solobolo/EventualAdmission.lean",
+    "sha256": "ceae0817b42ddcdb42064241e7618df44712633ad9c1af8ea7edd18f7f2c6eac",
+    "upstream": "SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_4_1_GOODWORKFLOWFRONTIER_CACHED_MATHLIB"
+  },
+  {
+    "path": "research/upstream/finite-rate-v041/Solobolo/MainChainV10.lean",
+    "sha256": "7944087a2388669280ce9779ee0f1beb039903d2c4de820e8110ea1446e6368f",
+    "upstream": "SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_4_1_GOODWORKFLOWFRONTIER_CACHED_MATHLIB"
+  },
+  {
+    "path": "research/upstream/finite-rate-v041/Solobolo/MainChainV13.lean",
+    "sha256": "af92c40e4f10709342dab57ebef8ccb4c252318958d963a175eaa0dd12813050",
+    "upstream": "SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_4_1_GOODWORKFLOWFRONTIER_CACHED_MATHLIB"
+  },
+  {
+    "path": "research/upstream/finite-rate-v041/Solobolo/LeanProofAudit.lean",
+    "sha256": "c934f6848d698220ebfeb3419ef301044898e9b7f31a70f62b122040a98c7d0f",
+    "upstream": "SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_4_1_GOODWORKFLOWFRONTIER_CACHED_MATHLIB"
+  },
+  {
+    "path": "research/upstream/finite-rate-v041/Solobolo/MomentDifference.lean",
+    "sha256": "422b20ab1f6bd48655c339664346ee8fa2bbd0877e336ec35ba6d5b3db401429",
+    "upstream": "SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_4_1_GOODWORKFLOWFRONTIER_CACHED_MATHLIB"
+  },
+  {
+    "path": "research/upstream/finite-rate-v041/Solobolo/FiniteCheckerContract.lean",
+    "sha256": "1e31ab82dceee044ed77a355190546adbd65a8365000cbfbd2398576a50f0165",
+    "upstream": "SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_4_1_GOODWORKFLOWFRONTIER_CACHED_MATHLIB"
+  },
+  {
+    "path": "research/upstream/finite-rate-v041/Solobolo/GeometricAdmission.lean",
+    "sha256": "ce5280cd46f3cf2a0a43b354e7b53a693d948d1001a36db3eaf5ad4dafef3550",
+    "upstream": "SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_4_1_GOODWORKFLOWFRONTIER_CACHED_MATHLIB"
+  },
+  {
+    "path": "research/upstream/finite-rate-v041/Solobolo/FinitePrefixObstruction.lean",
+    "sha256": "479eeab926af8547a93babbbc25bfa5754b76b904bd28aa4b9aa1b190d53c796",
+    "upstream": "SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_4_1_GOODWORKFLOWFRONTIER_CACHED_MATHLIB"
+  },
+  {
+    "path": "research/upstream/finite-rate-v041/Solobolo/OffLinePairPositivity.lean",
+    "sha256": "5d933bd87f5638eaf57ded4ca646d9c44f3085cea12db6701ba45b210c6e7b44",
+    "upstream": "SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_4_1_GOODWORKFLOWFRONTIER_CACHED_MATHLIB"
+  },
+  {
+    "path": "research/upstream/finite-rate-v041/Solobolo/FiniteRateActualInterface.lean",
+    "sha256": "a0cb218f728d75ed1370d795e9fca12f070650ce562bf64c53d1be4d5b41cd29",
+    "upstream": "SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_4_1_GOODWORKFLOWFRONTIER_CACHED_MATHLIB"
+  },
+  {
+    "path": "research/upstream/finite-rate-v041/Solobolo/FiniteStartAdmission.lean",
+    "sha256": "75b878449f7c9c3313e0622fc6ae74629a7f659b3c3c12e4224507d1ecdd1fce",
+    "upstream": "SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_4_1_GOODWORKFLOWFRONTIER_CACHED_MATHLIB"
+  },
+  {
+    "path": "research/upstream/finite-rate-v041/Solobolo/FiniteRateSyntax.lean",
+    "sha256": "2bc08d45ddbf6881310ffb437df58b93ff7e031bb2ee224b30ecb3cd03579230",
+    "upstream": "SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_4_1_GOODWORKFLOWFRONTIER_CACHED_MATHLIB"
+  },
+  {
+    "path": "research/upstream/finite-rate-v041/Solobolo/ActualRHInterface.lean",
+    "sha256": "18bf3a2c8f0badb061dd73c6be22f4bed873f0ab061b81f5d6d7f253dc1ab040",
+    "upstream": "SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_4_1_GOODWORKFLOWFRONTIER_CACHED_MATHLIB"
+  },
+  {
+    "path": "research/upstream/finite-rate-v041/Solobolo/ScalarAdmission.lean",
+    "sha256": "46331e0b2a068b70445e36737ed8c6522e73ae326b7e7577ab1357fe3433c6a4",
+    "upstream": "SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_4_1_GOODWORKFLOWFRONTIER_CACHED_MATHLIB"
+  },
+  {
+    "path": "research/upstream/finite-rate-v041/Solobolo/MainChainV12.lean",
+    "sha256": "9c3054843a1063783d847668c2b60737a1518705b819da0ba07e654782eff41a",
+    "upstream": "SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_4_1_GOODWORKFLOWFRONTIER_CACHED_MATHLIB"
+  },
+  {
+    "path": "research/upstream/finite-rate-v041/Solobolo/MainChainV9.lean",
+    "sha256": "911f2bf22b6b7c4251f08cb385210e8e56493542ff9cf756960ae36d9d08615a",
+    "upstream": "SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_4_1_GOODWORKFLOWFRONTIER_CACHED_MATHLIB"
+  },
+  {
+    "path": "research/upstream/finite-rate-v041/Solobolo/ActualRHNormalForm.lean",
+    "sha256": "fb8ac82c511803ca5159c70c7044534f205a6c0d396ecbb15d8bd35a1c5681d4",
+    "upstream": "SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_4_1_GOODWORKFLOWFRONTIER_CACHED_MATHLIB"
+  },
+  {
+    "path": "research/upstream/finite-rate-v041/Solobolo/FiniteRateBoundary.lean",
+    "sha256": "9f9e2f59a4cccf6ba8240eaa0a190825ff239466534db75b5cd666524aae254f",
+    "upstream": "SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_4_1_GOODWORKFLOWFRONTIER_CACHED_MATHLIB"
+  },
+  {
+    "path": "research/upstream/finite-rate-v041/Solobolo/FiniteRateInduction.lean",
+    "sha256": "7f45e35672ba08752c9ad2edcc9fe070978b6424a2d2acda7806c854542749c0",
+    "upstream": "SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_4_1_GOODWORKFLOWFRONTIER_CACHED_MATHLIB"
+  },
+  {
+    "path": "research/upstream/finite-rate-v041/Solobolo/MainChainV11.lean",
+    "sha256": "4fe5e30b50ea94af8d7f96e605231ba1cf44e6478eb18ee67156022ba9a0ed98",
+    "upstream": "SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_4_1_GOODWORKFLOWFRONTIER_CACHED_MATHLIB"
+  },
+  {
+    "path": "research/upstream/finite-rate-v041/Solobolo/RationalBudgetClosed.lean",
+    "sha256": "8259f9e3e0058f3865a07b33ecb34072d56a6b850b79df46bada6b543f726d6f",
+    "upstream": "SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_4_1_GOODWORKFLOWFRONTIER_CACHED_MATHLIB"
+  },
+  {
+    "path": "research/upstream/finite-rate-v041/Solobolo/FiniteRateEquivalence.lean",
+    "sha256": "c14ea602d5fac8a7c891319f2342db7a07bc6520629bc9c88f000db836ffec8b",
+    "upstream": "SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_4_1_GOODWORKFLOWFRONTIER_CACHED_MATHLIB"
+  },
+  {
+    "path": "research/upstream/finite-rate-v041/Solobolo/TailObstruction.lean",
+    "sha256": "38dfd0420e8676da92a6cb01e2fbb0eed6c01d6855232ad9315a0a4c16a30ba5",
+    "upstream": "SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_4_1_GOODWORKFLOWFRONTIER_CACHED_MATHLIB"
+  },
+  {
+    "path": "research/upstream/finite-rate-v041/Solobolo/ScalarProfile.lean",
+    "sha256": "beaab2fb4d927c27e6681da1a07aff9ac51a0309aa4782ee4c1c909df516a372",
+    "upstream": "SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_4_1_GOODWORKFLOWFRONTIER_CACHED_MATHLIB"
+  },
+  {
+    "path": "research/upstream/finite-rate-v041/Solobolo/CayleyContraction.lean",
+    "sha256": "da1065f9ed58e720e08dc8aff1667a98a0d690ec1d17fde831f39818dfbab58e",
+    "upstream": "SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_4_1_GOODWORKFLOWFRONTIER_CACHED_MATHLIB"
+  },
+  {
+    "path": "research/upstream/finite-rate-v041/Solobolo/FiniteContractionModel.lean",
+    "sha256": "c0b6cfea3e9288cdf2f43d25763165c562ef3803b804a57ab7bb78d0325447cb",
+    "upstream": "SOLOBOLO_FINITE_WITNESS_IFF_RH_LEAN_v0_4_1_GOODWORKFLOWFRONTIER_CACHED_MATHLIB"
+  },
+  {
+    "path": "research/upstream/five-induction-v030/Main.lean",
+    "sha256": "ccdc19bf4a5e2e910d147ff1434635c4f6cdefa4dcdd76b157178cd0d1f3d702",
+    "upstream": "16-RH_FIVE_INDUCTION_LEAN_v0_3_0-1-"
+  },
+  {
+    "path": "research/upstream/five-induction-v030/Audit.lean",
+    "sha256": "de1450cb45e9b78aa1ccf9754ae9a66e9442bbb1e24b208ef8a320074c84e42c",
+    "upstream": "16-RH_FIVE_INDUCTION_LEAN_v0_3_0-1-"
+  },
+  {
+    "path": "research/upstream/five-induction-v030/STATUS.txt",
+    "sha256": "48a498ffd654bb2b053d4ee5c5d842ea72bd492675f17fbfa4f971365affe8de",
+    "upstream": "16-RH_FIVE_INDUCTION_LEAN_v0_3_0-1-"
+  },
+  {
+    "path": "research/upstream/five-induction-v030/README.md",
+    "sha256": "f3a98f33d8ae317b68130d75faa6cf9f08ef5ece8449053372069ff902a19c38",
+    "upstream": "16-RH_FIVE_INDUCTION_LEAN_v0_3_0-1-"
+  },
+  {
+    "path": "research/upstream/five-induction-v030/FiveInduction/Schur.lean",
+    "sha256": "8525c8ac5d8b2242e131152f261ed48cbb94089466525e926d64352b6319e05d",
+    "upstream": "16-RH_FIVE_INDUCTION_LEAN_v0_3_0-1-"
+  },
+  {
+    "path": "research/upstream/five-induction-v030/FiveInduction/Applications.lean",
+    "sha256": "6e2f2611429e2bb2968c2cec75acc6d754aff891825ec61fcd54e890e21f2b8e",
+    "upstream": "16-RH_FIVE_INDUCTION_LEAN_v0_3_0-1-"
+  },
+  {
+    "path": "research/upstream/five-induction-v030/FiveInduction/ProjectionRadius.lean",
+    "sha256": "d71aed7ad816eda68f8f4cbffee53a42cfb604ec9da23ab4380fbe305516b58a",
+    "upstream": "16-RH_FIVE_INDUCTION_LEAN_v0_3_0-1-"
+  },
+  {
+    "path": "research/upstream/five-induction-v030/FiveInduction/ActualXi.lean",
+    "sha256": "4046240fce376b4f81b20db36dffcb1cfbad0a3819184c953beb9200976d20e3",
+    "upstream": "16-RH_FIVE_INDUCTION_LEAN_v0_3_0-1-"
+  },
+  {
+    "path": "research/upstream/five-induction-v030/FiveInduction/ProjectionInput.lean",
+    "sha256": "ed6c288f738e97e1f4d506fda84ab1004019e7e1ee04d13c58a8168e17ee8dc2",
+    "upstream": "16-RH_FIVE_INDUCTION_LEAN_v0_3_0-1-"
+  },
+  {
+    "path": "research/upstream/five-induction-v030/FiveInduction/SOS.lean",
+    "sha256": "f72b6b0b7b9fe897a5f76ec43ab3865dec3cb0ff0661b35e55d9427cbbedf3da",
+    "upstream": "16-RH_FIVE_INDUCTION_LEAN_v0_3_0-1-"
+  },
+  {
+    "path": "research/upstream/five-induction-v030/FiveInduction/NormalizedInputs.lean",
+    "sha256": "44094c1316ab9b887755e55bdb32798a21770ef285636b81b203d2682a2ab4f8",
+    "upstream": "16-RH_FIVE_INDUCTION_LEAN_v0_3_0-1-"
+  },
+  {
+    "path": "research/upstream/five-induction-v030/FiveInduction/InputChain.lean",
+    "sha256": "420c077b4099c96b72c2e09b8451e1669d6f53c00e8fdf6120ac5883d9bdfc24",
+    "upstream": "16-RH_FIVE_INDUCTION_LEAN_v0_3_0-1-"
+  },
+  {
+    "path": "research/upstream/five-induction-v030/FiveInduction/HardyConstants.lean",
+    "sha256": "8f748dedc766d3d89d4f9e08017f8b52a5383a042d807d4c4143085726392bc4",
+    "upstream": "16-RH_FIVE_INDUCTION_LEAN_v0_3_0-1-"
+  },
+  {
+    "path": "research/upstream/five-induction-v030/FiveInduction/SOSGeometry.lean",
+    "sha256": "8d715aeb9500fac77f87c7d3e6dd92934fee1293eef894637513e95c915f9f41",
+    "upstream": "16-RH_FIVE_INDUCTION_LEAN_v0_3_0-1-"
+  },
+  {
+    "path": "research/upstream/five-induction-v030/FiveInduction/HardyDefect.lean",
+    "sha256": "b9c4637cecf21e9b7ce37ae095563aabbda6fd3738915d48fad65ed0d964c112",
+    "upstream": "16-RH_FIVE_INDUCTION_LEAN_v0_3_0-1-"
+  },
+  {
+    "path": "research/upstream/five-induction-v030/FiveInduction/HardyInduction.lean",
+    "sha256": "e67707aaab4cb3dd0267763f7a453cc6b658349232f2df7b9e6699dd300125e9",
+    "upstream": "16-RH_FIVE_INDUCTION_LEAN_v0_3_0-1-"
+  },
+  {
+    "path": "research/upstream/five-induction-v030/FiveInduction/HardySeed.lean",
+    "sha256": "55eb4d25a28dcb27e1f952bfc665fe7acbff0362998f97cc1d88a45775358fae",
+    "upstream": "16-RH_FIVE_INDUCTION_LEAN_v0_3_0-1-"
+  },
+  {
+    "path": "research/upstream/five-induction-v030/FiveInduction/HardyCompleteness.lean",
+    "sha256": "2a2fea4113f60cdcc6ce8ee3694e3f2e26ee59edd217832ba4f9112f340f9815",
+    "upstream": "16-RH_FIVE_INDUCTION_LEAN_v0_3_0-1-"
+  },
+  {
+    "path": "research/upstream/five-induction-v030/FiveInduction/SchurInput.lean",
+    "sha256": "43162220f175e57ab05f0849e757b8da3366ba37fbea0bf449c5f6bda6184caa",
+    "upstream": "16-RH_FIVE_INDUCTION_LEAN_v0_3_0-1-"
+  },
+  {
+    "path": "research/upstream/five-induction-v030/FiveInduction/Sturm.lean",
+    "sha256": "9c3ac9eaf44ce100ab66b0a9d08e41e6aeff71c2610537455a0ec6ef65af07d4",
+    "upstream": "16-RH_FIVE_INDUCTION_LEAN_v0_3_0-1-"
+  },
+  {
+    "path": "research/upstream/five-induction-v030/FiveInduction/HardyTail.lean",
+    "sha256": "71d9a73a01a738efe8838d6cad05189f00914ddc3a9be4852718fa220411f410",
+    "upstream": "16-RH_FIVE_INDUCTION_LEAN_v0_3_0-1-"
+  },
+  {
+    "path": "research/upstream/five-induction-v030/FiveInduction/LimitTransfer.lean",
+    "sha256": "5016acef5b1d1dddcdaa61a005d680b58cb01c9724274d53494bdc164d333798",
+    "upstream": "16-RH_FIVE_INDUCTION_LEAN_v0_3_0-1-"
+  },
+  {
+    "path": "research/upstream/five-induction-v030/FiveInduction/ProjectionConvolution.lean",
+    "sha256": "972e040ddcb518caa0f0f3cd915959ac2bb5ad6c93ce329ea118372e4d89c359",
+    "upstream": "16-RH_FIVE_INDUCTION_LEAN_v0_3_0-1-"
+  },
+  {
+    "path": "research/upstream/five-induction-v030/FiveInduction/SOSInput.lean",
+    "sha256": "8065bc19abec8f33f9752276106616552f6a102ad6f37cfff10341052c3a5152",
+    "upstream": "16-RH_FIVE_INDUCTION_LEAN_v0_3_0-1-"
+  },
+  {
+    "path": "research/upstream/five-induction-v030/FiveInduction/HardyEndpoint.lean",
+    "sha256": "b0b10654cdf7a65fd5c6fbc78cc2fbf2db424fcd7d2fa1ca09480ac436ff4f58",
+    "upstream": "16-RH_FIVE_INDUCTION_LEAN_v0_3_0-1-"
+  },
+  {
+    "path": "research/upstream/five-induction-v030/FiveInduction/DiskTransfer.lean",
+    "sha256": "11b29c2f1f82224aeb2470b25027500a7b48909df0eedb8f181a9381444c3b9a",
+    "upstream": "16-RH_FIVE_INDUCTION_LEAN_v0_3_0-1-"
+  },
+  {
+    "path": "research/upstream/five-induction-v030/FiveInduction/CayleyBridge.lean",
+    "sha256": "7f8e2dcaf147bf124ca20f8b5b07118e3cea5daaa53c7ae8b2a2e62c6b39d3dd",
+    "upstream": "16-RH_FIVE_INDUCTION_LEAN_v0_3_0-1-"
+  },
+  {
+    "path": "research/upstream/five-induction-v030/FiveInduction/HardyActual.lean",
+    "sha256": "2370ad37e95ba384dd4ac363a6e2246057446037f592d4cb0a99262cc8361c03",
+    "upstream": "16-RH_FIVE_INDUCTION_LEAN_v0_3_0-1-"
+  },
+  {
+    "path": "research/upstream/five-induction-v030/FiveInduction/Projection.lean",
+    "sha256": "87020c6b726094fa54bb4c8f3c0f0a23dc366914c55d99b359a7c9a30d3142ba",
+    "upstream": "16-RH_FIVE_INDUCTION_LEAN_v0_3_0-1-"
+  },
+  {
+    "path": "research/upstream/five-induction-v030/FiveInduction/MainChain.lean",
+    "sha256": "600b991629a49982f27897a794ba8facfe871b987c74e971f215bd259677409b",
+    "upstream": "16-RH_FIVE_INDUCTION_LEAN_v0_3_0-1-"
+  },
+  {
+    "path": "research/upstream/five-induction-v030/FiveInduction/Differential.lean",
+    "sha256": "bc28664d0d724c9e44c6629be867cec6a4ca450fdd97104b8365d45b274c45df",
+    "upstream": "16-RH_FIVE_INDUCTION_LEAN_v0_3_0-1-"
+  },
+  {
+    "path": "research/upstream/five-induction-v030/validation/SOURCE_SHA256.txt",
+    "sha256": "3fe4f919b7667eb1a595822bad1d2b8bec429b8d5e157f66a3c0b12a613b4502",
+    "upstream": "16-RH_FIVE_INDUCTION_LEAN_v0_3_0-1-"
+  },
+  {
+    "path": "research/upstream/five-induction-v030/validation/COMPILE_ORDER.json",
+    "sha256": "67c58ee870dd4c892c0fa98a4af15215e74161c3deb4f82381b7ad224e659a70",
+    "upstream": "16-RH_FIVE_INDUCTION_LEAN_v0_3_0-1-"
+  },
+  {
+    "path": "research/upstream/five-induction-v030/validation/AUDITED_THEOREMS.txt",
+    "sha256": "3f22ef644f27acc1194e77086ca46363088d38cf9e202d984b4c437b253eb804",
+    "upstream": "16-RH_FIVE_INDUCTION_LEAN_v0_3_0-1-"
+  },
+  {
+    "path": "research/upstream/five-induction-v030/validation/BUILD_STATUS.json",
+    "sha256": "84512b450dcc817c917544da908404703264bd89d5bf7fdbd2395ee58c24315b",
+    "upstream": "16-RH_FIVE_INDUCTION_LEAN_v0_3_0-1-"
+  },
+  {
+    "path": "research/upstream/five-induction-v030/validation/PREVIOUS_BUILD_STATUS.json",
+    "sha256": "0abfa8af2ef3573f8825bcbd262089e80d6024785f4be1f75964392ccab1d9af",
+    "upstream": "16-RH_FIVE_INDUCTION_LEAN_v0_3_0-1-"
+  }
+]

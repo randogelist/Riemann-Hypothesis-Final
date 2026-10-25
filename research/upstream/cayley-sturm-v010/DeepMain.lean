@@ -1,0 +1,24 @@
+import Bridge.AllAnchorTraceEndpoint
+
+/-! New proof and assumption audit for the v0.4 finite-spectral layer. -/
+
+#check WitnessSolobolo.bernsteinCentral_eq_cayleyTrace
+#check WitnessSolobolo.checked_bernsteinRow_nonneg
+#check WitnessSolobolo.power_succ_le_self_of_unit
+#check WitnessSolobolo.cayleyTrace_uniform_mass
+#check WitnessSolobolo.telescopic_cayleyTrace_le_four
+#check WitnessSolobolo.anchorDenom_harmonic_floor
+#check WitnessSolobolo.anchorTransport_le_mass_scale
+#check WitnessSolobolo.allAnchorCayleyPowerTrace_bound
+#check WitnessSolobolo.checked_telescopic_allAnchor_bound
+#check WitnessSolobolo.FINITE_ALGEBRA_WITNESS_ALL_ANCHOR_TRACE
+#check WitnessSolobolo.FINITE_WITNESS_XI_CALIBRATION_FRONTIER
+#check WitnessSolobolo.NATIVE_RH_OF_CALIBRATED_FINITE_PROGRAM
+
+#print axioms WitnessSolobolo.bernsteinCentral_eq_cayleyTrace
+#print axioms WitnessSolobolo.cayleyTrace_uniform_mass
+#print axioms WitnessSolobolo.anchorDenom_harmonic_floor
+#print axioms WitnessSolobolo.anchorTransport_le_mass_scale
+#print axioms WitnessSolobolo.checked_telescopic_allAnchor_bound
+#print axioms WitnessSolobolo.FINITE_ALGEBRA_WITNESS_ALL_ANCHOR_TRACE
+#print axioms WitnessSolobolo.NATIVE_RH_OF_CALIBRATED_FINITE_PROGRAM

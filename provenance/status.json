@@ -1,0 +1,24 @@
+{
+  "version": "v0_1_0_construction",
+  "workflow": "YOU_ARE_GOODWORKFLOWFRONTIER",
+  "work_modes": [
+    "A_TIER_PLANNING",
+    "A_TIER_EXECUTION"
+  ],
+  "native_lean_version": "4.33.0",
+  "native_build": "NOT_RUN",
+  "native_axiom_audit": "NOT_RUN",
+  "local_checker_scope": "symbolic finite SOS identities only",
+  "actual_xi_calibration": "OPEN",
+  "global_actual_checker": "NOT_IMPLEMENTED",
+  "finite_witness_soundness": "OPEN",
+  "finite_witness_completeness": "OPEN",
+  "accepted_rh_witness": null,
+  "finite_witness_iff_native_rh": "OPEN",
+  "rh_proved": false,
+  "lean_ready": false,
+  "proof_tier": null,
+  "github_creation": "USER_CREATED",
+  "repository_url": "https://github.com/randogelist/Riemann-Hypothesis-Final",
+  "repository_visibility": "public"
+}
