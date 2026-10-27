@@ -26,6 +26,14 @@ from a concrete finite check remains open. The shared-spectrum induction
 and GP constructions supply useful algebra and candidate representations,
 with their actual-function bindings kept explicit.
 
+## Hilbert-vector anchor paper
+
+[Read the detailed paper (PDF)](RH_Hilbert_Vector_Anchor_v1_0_construction.pdf) · [Editable LaTeX source](docs/papers/RH_Hilbert_Vector_Anchor_v1_0_construction.tex)
+
+**Hilbert-Vector Resolvents and the Riemann Hypothesis: A detailed analytic seed criterion** (27 October 2026, 17 pages).
+The paper derives the fixed positive-operator norm and Gram identities, proves the precisely stated analytic seed equivalence with actual RH on paper, and treats the origin normalization, converse zero-product construction, all-order moment criterion, and finite-dimensional obstruction.
+It is **B-Tier derivation**: unconditional seed existence and finite-checker soundness/completeness remain open; no Lean compilation or axiom audit was run for this paper.
+
 ## Contents
 
 | Location | Purpose |

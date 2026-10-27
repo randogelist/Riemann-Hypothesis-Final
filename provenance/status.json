@@ -63,5 +63,22 @@
       "novelty_established": false,
       "independent_of_native_verification": true
     }
+  },
+  "hilbert_vector_paper": {
+    "version": "v1_0_construction",
+    "date": "2026-10-27",
+    "mode": "B_TIER_DERIVATION",
+    "pdf": "RH_Hilbert_Vector_Anchor_v1_0_construction.pdf",
+    "source": "docs/papers/RH_Hilbert_Vector_Anchor_v1_0_construction.tex",
+    "pages": 17,
+    "source_review_base_commit": "362d9f8aeaaf9479cc27ceb6b63bdb7456267990",
+    "result": "ON_PAPER_ANALYTIC_EQUIVALENCE_RH_IFF_EXPLICIT_FIXED_POSITIVE_RESOLVENT_SEED",
+    "original_legacy_seed_definition": "NOT_RECOVERED",
+    "unconditional_seed_existence": "OPEN",
+    "finite_witness_iff_RH": "OPEN",
+    "native_build": "NOT_RUN",
+    "native_axiom_audit": "NOT_RUN",
+    "pdf_sha256": "4543f5b0c5f27db69c7db4f8a107066742713a683ac3ea2de2e0c3ab88b4bc6f",
+    "source_sha256": "660f595739b03b24f6597edcd9cad6eaacc00f47018981d3885cf6e20b85b553"
   }
 }

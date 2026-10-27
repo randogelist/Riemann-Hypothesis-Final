@@ -1,0 +1,1256 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage[margin=25mm,headheight=15pt]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,longtable,array,enumitem,xcolor}
+\usepackage{fancyhdr,titlesec,multicol}
+\usepackage[most]{tcolorbox}
+\usepackage{xurl}
+\usepackage{hyperref}
+\definecolor{ink}{HTML}{142A43}
+\definecolor{linkblue}{HTML}{234F75}
+\definecolor{pale}{HTML}{F1F5F8}
+\hypersetup{colorlinks=true,linkcolor=linkblue,citecolor=linkblue,urlcolor=linkblue,
+  pdftitle={Hilbert-Vector Resolvents and the Riemann Hypothesis},
+  pdfauthor={Riemann-Hypothesis-Final project research note},
+  pdfsubject={Detailed on-paper analytic seed criterion; no unconditional RH or Lean certification},
+  pdfkeywords={Riemann hypothesis, xi function, Hilbert space, resolvent, positive operator, finite witness}}
+\urlstyle{same}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\textsc{Hilbert-vector RH anchor}}
+\fancyhead[R]{\small Analytic construction}
+\fancyfoot[L]{\footnotesize 27 October 2026 \enspace | \enspace v1.0}
+\fancyfoot[R]{\small\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\titleformat{\section}{\large\bfseries\color{ink}}{\thesection}{0.65em}{}
+\titleformat{\subsection}{\normalsize\bfseries\color{ink}}{\thesubsection}{0.65em}{}
+\setlength{\parskip}{4pt}
+\setlength{\parindent}{0pt}
+\setlist{topsep=4pt,itemsep=3pt,parsep=0pt}
+\setcounter{tocdepth}{1}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\C}{\mathbb C}
+\newcommand{\R}{\mathbb R}
+\newcommand{\N}{\mathbb N}
+\newcommand{\HH}{\mathcal H}
+\newcommand{\BB}{\mathcal B}
+\newcommand{\id}{I}
+\newcommand{\ip}[2]{\langle #1,#2\rangle}
+\newcommand{\norm}[1]{\lVert #1\rVert}
+\newcommand{\RH}{\mathrm{RH}}
+\newcommand{\HSeed}{\mathsf{HSeed}_{\Theta}}
+\newcommand{\DSeed}{\mathsf{DSeed}_{\Theta}}
+\newcommand{\MSeed}{\mathsf{MSeed}_{\Theta}}
+\newcommand{\dd}{\,\mathrm d}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\Repart}{Re}
+\DeclareMathOperator{\Impart}{Im}
+\newtcolorbox{scopebox}{colback=pale,colframe=ink!35,boxrule=0.4pt,arc=0pt,
+  left=9pt,right=9pt,top=6pt,bottom=6pt,breakable}
+\newcommand{\reposha}{\texttt{362d9f8aeaaf9479cc27ceb6b63bdb7456267990}}
+\begin{document}
+\begin{center}
+{\small\sffamily\color{linkblue} SOLOBOLO \enspace / \enspace RIEMANN-HYPOTHESIS-FINAL}\par
+\vspace{9pt}
+{\LARGE\bfseries\color{ink} Hilbert-Vector Resolvents\par
+and the Riemann Hypothesis}\par
+\vspace{7pt}
+{\large A detailed analytic seed criterion}\par
+\vspace{9pt}
+{\small Project research note \enspace | \enspace 27 October 2026}\par
+{\small Version 1.0 \enspace | \enspace B-Tier derivation \enspace | \enspace construction}
+\end{center}
+\vspace{5pt}
+\begin{abstract}
+We give a precise, self-contained analytic formulation of a Hilbert-vector
+anchor for the Riemann hypothesis. Let $\Theta$ be the entire function
+determined by $\Theta(w^2)=\xi(\tfrac12+w)$, and put
+$L(a)=\Theta'(a)/\Theta(a)$ for $a\geq0$. We prove that RH is equivalent
+to the existence of one Hilbert space, one bounded nonnegative self-adjoint
+operator $K$, and one fixed vector $v$ such that
+$\frac{\mathrm d}{\mathrm da}(aL(a))=\norm{(I+aK)^{-1}v}^2$
+on a nonempty positive interval. The derivation includes the resolvent
+calculus, its divided-difference Gram kernel, and the analytic continuation
+that excludes zeros off the negative real axis. A possible $C/a$ ambiguity
+is removed using $\Theta(0)\ne0$, rather than suppressed by an unstated
+normalization. The reverse implication constructs a positive diagonal
+operator from the zero product under RH, with multiplicities counted
+correctly. We also develop the spectral-measure and all-order moment
+formulations, explain basepoint shifts, and prove that no exactly calibrated
+finite-dimensional model can suffice. The result is an analytic equivalence;
+it does not construct the required seed unconditionally or produce an
+accepted finite witness.
+\end{abstract}
+\begin{scopebox}
+\small\textbf{Evidence and scope.} Every proof in this note is an on-paper
+derivation. No Lean compiler or axiom audit was run. The seed predicates
+below are defined explicitly here; they are not asserted to be recovered
+field-for-field definitions of a legacy \texttt{HasSeed} declaration.
+The repository's finite-checker target remains open. Classical background
+is cited, and no novelty or unconditional proof of RH is claimed.
+\end{scopebox}
+\vspace{5pt}
+\section*{Contents}
+\begin{multicols}{2}
+\small\setlength{\parskip}{0pt}
+\makeatletter\@starttoc{toc}\makeatother
+\end{multicols}
+\clearpage
+
+\section[Assertion and scope]{The exact assertion and its role}\label{sec:assertion}
+
+The starting point is the family of identities
+\begin{equation}\label{eq:anchor-intro}
+R_a=(I+aK)^{-1},\qquad
+\frac{\mathrm d}{\mathrm da}\bigl(aL(a)\bigr)=\norm{R_av}^{2},\qquad
+V_a=2\sqrt a\,R_av.
+\end{equation}
+Their significance depends on their quantifiers. The operator and vector
+must be the \emph{same} for every parameter in the interval, and the scalar
+$L$ must come from the actual completed Riemann zeta function. An arbitrary
+nonnegative scalar function can be represented as a squared norm by
+allowing its vector to vary freely. Such a pointwise representation contains
+none of the resolvent compatibility used below.
+
+We fix the standard completion
+\begin{equation}\label{eq:xi}
+\xi(s)=\tfrac12s(s-1)\pi^{-s/2}\Gamma(s/2)\zeta(s),
+\end{equation}
+with the removable values understood. The symmetry $\xi(s)=\xi(1-s)$
+and normalization are classical \cite{dlmf-reflection}. Section~\ref{sec:theta}
+defines $\Theta$ without choosing a square-root branch and proves that
+$L$ is a well-defined real analytic function on $[0,\infty)$.
+
+\begin{definition}[Calibrated Hilbert seed]\label{def:hseed}
+The assertion $\HSeed$ means that there exist a complex Hilbert space
+$\HH$, an operator $K\in\BB(\HH)$, a vector $v\in\HH$, and real numbers
+$0<\alpha<\beta<\infty$ such that
+\begin{equation}\label{eq:seed-hypotheses}
+K=K^*,\qquad \ip{x}{Kx}\geq0\quad(x\in\HH),
+\end{equation}
+and, for every $a\in(\alpha,\beta)$,
+\begin{equation}\label{eq:hseed}
+L(a)=\ip{v}{(I+aK)^{-1}v}.
+\end{equation}
+The inner product is conjugate-linear in its first slot and linear in its
+second slot. In particular, the complex extension
+$z\mapsto\ip{v}{(I+zK)^{-1}v}$ is holomorphic where the inverse exists.
+\end{definition}
+
+\begin{definition}[Differential Hilbert seed]\label{def:dseed}
+The assertion $\DSeed$ has the same existential data and operator
+hypotheses as Definition~\ref{def:hseed}, but replaces
+\eqref{eq:hseed} by
+\begin{equation}\label{eq:dseed}
+\frac{\mathrm d}{\mathrm da}\bigl(aL(a)\bigr)
+=\norm{(I+aK)^{-1}v}^{2}
+\quad\text{for every }a\in(\alpha,\beta).
+\end{equation}
+This is an exact functional identity on an interval, not a test at finitely
+many sample points.
+\end{definition}
+
+\begin{theorem}[Main analytic criterion]\label{thm:main}
+For the actual $\Theta$ associated with \eqref{eq:xi},
+\begin{equation}\label{eq:main}
+\RH\quad\Longleftrightarrow\quad\HSeed
+\quad\Longleftrightarrow\quad\DSeed.
+\end{equation}
+If either seed identity holds on one nonempty positive interval, its
+calibration extends to every $a\geq0$ for the same $K$ and $v$.
+Under RH, a seed can be chosen on $\ell^2(\N;\C)$ with $K$ positive,
+compact and trace class. In that realization,
+\begin{equation}\label{eq:normalization-intro}
+\Tr K=\norm v^2=\frac{\xi''(1/2)}{2\xi(1/2)}.
+\end{equation}
+\end{theorem}
+
+Sections~\ref{sec:resolvent}--\ref{sec:forward} prove the forward and
+differential implications without assuming RH or a positive zero product.
+Section~\ref{sec:converse} proves the converse under RH. The theorem is
+a criterion: the existential seed assertion carries the mathematical
+difficulty of RH. No independently constructed seed is supplied here.
+
+There are two different questions behind this note. The analytic question
+asks exactly what a fixed positive resolvent identity implies. The finite
+question asks whether a terminating checker on finite raw data can certify
+such an identity, and whether RH guarantees an accepted input to that same
+checker. The second question does not follow merely by naming the first
+one a seed. Section~\ref{sec:finite} makes this distinction precise.
+
+\section[Entire function and zero geometry]{The actual entire function and its zero geometry}\label{sec:theta}
+
+\subsection{Square descent without a branch choice}
+
+Put $E(w)=\xi(\tfrac12+w)$. This is entire, and the functional equation
+makes it even. Its Taylor series has the form
+\begin{equation}\label{eq:theta-series}
+E(w)=\sum_{n=0}^{\infty}c_nw^{2n},\qquad
+c_n=\frac{\xi^{(2n)}(1/2)}{(2n)!}.
+\end{equation}
+Define
+\begin{equation}\label{eq:theta-definition}
+\Theta(z)=\sum_{n=0}^{\infty}c_nz^n.
+\end{equation}
+The series has infinite radius of convergence. Indeed, for any $r>0$,
+the absolute convergence of \eqref{eq:theta-series} at a point with
+$|w|=\sqrt r$ gives $\sum_n|c_n|r^n<\infty$.
+Consequently
+\begin{equation}\label{eq:square-descent}
+\Theta(w^2)=\xi(\tfrac12+w)\qquad(w\in\C).
+\end{equation}
+The shorthand $\Theta(z)=\xi(\tfrac12+\sqrt z)$ therefore has a
+single-valued meaning: the two square roots give the same value. The branch
+cut introduced later belongs to the resolvent domain, not to $\Theta$.
+
+Complex conjugation preserves $\xi$, as follows first on its defining
+real domain and then by analytic continuation. Thus the coefficients
+$c_n$ are real, and
+$\Theta(\overline z)=\overline{\Theta(z)}$.
+
+\subsection{Positivity on the real positive axis}
+
+For completeness, the nonvanishing needed to define $L$ can be checked
+without RH. For $0<s<1$, the alternating-series formula
+\cite[Eq.~25.2.3]{dlmf-series} gives
+\begin{equation}\label{eq:eta}
+\zeta(s)=\frac{\eta(s)}{1-2^{1-s}},\qquad
+\eta(s)=\sum_{n=1}^{\infty}(-1)^{n-1}n^{-s}>0.
+\end{equation}
+The strict inequality follows by grouping consecutive terms:
+$(2j-1)^{-s}-(2j)^{-s}>0$. The even partial sums converge to the same
+alternating-series limit and already their first pair is positive.
+The denominator in \eqref{eq:eta} is negative, so $\zeta(s)<0$.
+Since $s(s-1)<0$ and the remaining factors in \eqref{eq:xi} are positive,
+$\xi(s)>0$ on $(0,1)$. For $s>1$, every factor in \eqref{eq:xi}
+is positive, and the removable value at $s=1$ is $1/2$.
+Applying this with $s=1/2+\sqrt a$ proves
+\begin{equation}\label{eq:theta-positive}
+\Theta(a)>0\quad(a\geq0),\qquad\Theta(0)=\xi(1/2)>0.
+\end{equation}
+
+It follows that
+\begin{equation}\label{eq:L}
+L(a)=\frac{\Theta'(a)}{\Theta(a)}\in\R\qquad(a\geq0)
+\end{equation}
+is real analytic, including at zero. On this axis it equals the recovered
+quantity $\Repart(\Theta'(a)/\Theta(a))$; taking the real part loses no
+information there. It would not be legitimate to make that replacement
+for arbitrary complex $z$.
+
+Expanding at zero gives the exact normalization
+\begin{equation}\label{eq:kappa}
+\kappa:=L(0)=\frac{\Theta'(0)}{\Theta(0)}
+=\frac{\xi''(1/2)}{2\xi(1/2)}.
+\end{equation}
+No numerical approximation to $\kappa$ is needed in any proof below.
+
+\subsection{The critical line becomes the negative real axis}
+
+The zeros of $\xi$ are exactly the nontrivial zeros of $\zeta$; the
+standard zero symmetry and the meaning of RH are recalled in
+\cite{dlmf-zeros}. If $\rho=1/2+w$ is such a zero, then
+$z=w^2$ is a zero of $\Theta$, and conversely every zero of $\Theta$
+arises this way by \eqref{eq:square-descent}.
+
+For $w=x+iy$,
+\begin{equation}\label{eq:square-real}
+w^2=(x^2-y^2)+2ixy.
+\end{equation}
+If $w^2$ is real and nonpositive, then $xy=0$ and $x^2-y^2\leq0$.
+If $y=0$, these imply $x=0$; if $y\ne0$, the equality $xy=0$ again
+implies $x=0$. Conversely $x=0$ gives $w^2=-y^2\leq0$.
+Since $\Theta(0)\ne0$, its zeros never correspond to $w=0$.
+We have therefore proved
+\begin{proposition}[Exact zero geometry]\label{prop:geometry}
+\begin{equation}\label{eq:rh-geometry}
+\RH\quad\Longleftrightarrow\quad
+\bigl(\Theta(z)=0\ \Longrightarrow\ z\in(-\infty,0)\bigr).
+\end{equation}
+\end{proposition}
+This elementary change of variables is the final geometric step of the
+forward proof. It refers to the actual $\xi$ and $\Theta$ throughout.
+
+\section[Fixed-vector resolvent calculus]{Resolvent calculus with one fixed vector}\label{sec:resolvent}
+
+Fix a complex Hilbert space $\HH$, a bounded nonnegative self-adjoint
+operator $K$, and a vector $v$. For $a\geq0$, set
+\begin{equation}\label{eq:Rfg}
+R_a=(I+aK)^{-1},\qquad f(a)=\ip v{R_av},\qquad g(a)=af(a).
+\end{equation}
+At this stage $f$ is a model scalar function; equality with the actual
+$L$ has not been assumed.
+
+\subsection{Invertibility, self-adjointness and commutation}
+
+For every $x\in\HH$, positivity and Cauchy--Schwarz imply
+\[
+\norm x^2\leq\ip x{(I+aK)x}\leq\norm x\,\norm{(I+aK)x}.
+\]
+Thus $I+aK$ is bounded below by $1$. Its range is closed. Its orthogonal
+complement is the kernel of its adjoint, which equals its own kernel
+because the operator is self-adjoint. The lower bound makes that kernel
+zero, so the range is also dense and hence is all of $\HH$.
+It follows that
+\begin{equation}\label{eq:Rbounds}
+\norm{R_a}\leq1,\qquad R_a^*=R_a,\qquad R_a\geq0.
+\end{equation}
+For the last inequality write $y=(I+aK)x$ and observe that
+$\ip y{R_ay}=\ip{(I+aK)x}x\geq0$.
+The operator $K$ commutes with $I+aK$ and therefore with its inverse.
+The operators $R_a$ and $R_b$ also commute.
+
+\begin{lemma}[Two resolvent identities]\label{lem:resolvents}
+For $a,b\geq0$,
+\begin{align}
+R_a-R_b&=(b-a)R_aKR_b,\label{eq:first-resolvent}\\
+aR_a-bR_b&=(a-b)R_aR_b.\label{eq:second-resolvent}
+\end{align}
+\end{lemma}
+\begin{proof}
+For the first identity, multiply out
+$R_a[(I+bK)-(I+aK)]R_b$.
+For the second, the same calculation with
+$a(I+bK)-b(I+aK)=(a-b)I$ gives the result.
+Both formulas also hold when $a=b$, with both sides then zero.
+\end{proof}
+
+\subsection{Differentiation in operator norm}
+
+From \eqref{eq:first-resolvent},
+\[
+\frac{R_{a+h}-R_a}{h}=-R_{a+h}KR_a.
+\]
+Continuity of inversion, or the same identity and local boundedness, shows
+that the right side tends in operator norm to $-R_aKR_a$.
+Since $K$ commutes with $R_a$,
+\begin{equation}\label{eq:Rprime}
+R'_a=-KR_a^2.
+\end{equation}
+Repeated differentiation yields
+\begin{equation}\label{eq:Rderivatives}
+R_a^{(n)}=(-1)^n n!K^nR_a^{n+1}\qquad(n\geq0).
+\end{equation}
+One can verify the induction directly: differentiating $R_a^{n+1}$
+produces $n+1$ identical commuting terms
+$-KR_a^{n+2}$.
+Applying the continuous linear functional $T\mapsto\ip v{Tv}$ gives
+\begin{equation}\label{eq:fderivatives}
+(-1)^n f^{(n)}(a)=n!\ip v{K^nR_a^{n+1}v}\geq0.
+\end{equation}
+The last operator is positive, for example by the bounded self-adjoint
+functional calculus \cite{williams}. Thus $f$ is completely monotone.
+This consequence alone will not characterize a calibrated seed.
+
+\subsection{The norm-square identity}
+
+The identity $(I+aK)R_a=I$ implies
+$R_a=R_a^2+aKR_a^2$. Consequently
+\begin{align}
+g'(a)&=f(a)+af'(a)\notag\\
+&=\ip v{(R_a-aKR_a^2)v}\notag\\
+&=\ip v{R_a^2v}=\norm{R_av}^2.\label{eq:norm-square}
+\end{align}
+This proves the central algebraic formula, including its exact coefficient.
+It involves $af(a)$, not $f(a)$ alone and not an unspecified change of
+basepoint. Differentiating further gives
+\begin{equation}\label{eq:gderivatives}
+(-1)^n g^{(n+1)}(a)
+=(n+1)!\ip v{K^nR_a^{n+2}v}\geq0\qquad(n\geq0).
+\end{equation}
+In particular $g$ is increasing and concave on the positive axis.
+If $v\ne0$, then $R_av\ne0$ and $g'(a)>0$.
+
+\section[The Gram kernel]{The Gram kernel and its exact normalization}\label{sec:gram}
+
+Define $V_a=2\sqrt a\,R_av$ for $a>0$.
+Taking the scalar product of \eqref{eq:second-resolvent} with $v$
+and using self-adjointness gives, for $a\ne b$,
+\begin{equation}\label{eq:unscaled-gram}
+\frac{g(a)-g(b)}{a-b}
+=\ip v{R_aR_bv}=\ip{R_av}{R_bv}.
+\end{equation}
+Hence
+\begin{equation}\label{eq:gram}
+\ip{V_a}{V_b}
+=4\sqrt{ab}\,\frac{af(a)-bf(b)}{a-b}\qquad(a,b>0,\ a\ne b).
+\end{equation}
+If the calibration $f=L$ holds, this is precisely the recovered
+Hilbert-vector Gram identity.
+
+\begin{proposition}[Diagonal and positivity]\label{prop:gram}
+The divided-difference kernel
+\begin{equation}\label{eq:kernel}
+\mathcal K_g(a,b)=
+\begin{cases}
+\dfrac{g(a)-g(b)}{a-b},&a\ne b,\\[5pt]
+g'(a),&a=b
+\end{cases}
+\end{equation}
+is positive semidefinite. More precisely, for any finite collection
+$a_1,\ldots,a_m>0$ and complex numbers $c_1,\ldots,c_m$,
+\begin{equation}\label{eq:gram-psd}
+\sum_{i,j=1}^m\overline{c_i}c_j\mathcal K_g(a_i,a_j)
+=\norm{\sum_{j=1}^m c_jR_{a_j}v}^2\geq0.
+\end{equation}
+The diagonal extension of \eqref{eq:gram} is
+\begin{equation}\label{eq:gram-diagonal}
+\norm{V_a}^2=4a\,g'(a)=4a\,\norm{R_av}^2.
+\end{equation}
+\end{proposition}
+\begin{proof}
+Equation~\eqref{eq:unscaled-gram} gives all off-diagonal entries, while
+\eqref{eq:norm-square} gives the diagonal. Expanding the displayed squared
+norm proves \eqref{eq:gram-psd}; multiplication by the factors
+$2\sqrt{a_i}$ gives the scaled Gram matrix.
+\end{proof}
+
+For two distinct parameters, the determinant condition is the concrete inequality
+\begin{equation}\label{eq:two-point}
+\left|\frac{g(a)-g(b)}{a-b}\right|^2\leq g'(a)g'(b).
+\end{equation}
+It is a necessary condition tying different points together. Positivity of
+$g'$ at every individual point does not imply it.
+
+\begin{example}[Even strong scalar positivity is insufficient]\label{ex:scalar}
+Let $\widetilde g(a)=1-e^{-a}$ and
+$\widetilde f(a)=(1-e^{-a})/a$ for $a>0$.
+Then $\widetilde g'>0$, $\widetilde g''<0$, and
+\[
+\widetilde f(a)=\int_0^1 e^{-at}\dd t,\qquad
+(-1)^n\widetilde f^{(n)}(a)=\int_0^1t^ne^{-at}\dd t>0.
+\]
+Nevertheless, writing $d=a-b\ne0$, the off-diagonal divided difference is
+\[
+\mathcal K_{\widetilde g}(a,b)
+=e^{-(a+b)/2}\frac{\sinh(d/2)}{d/2}.
+\]
+The determinant of the corresponding two-by-two matrix equals
+\begin{equation}\label{eq:counterexample-det}
+e^{-a-b}\left[1-
+\left(\frac{\sinh(d/2)}{d/2}\right)^2\right]<0.
+\end{equation}
+The strict inequality follows from $|\sinh x|>|x|$ for nonzero real $x$,
+which follows by integrating $\cosh t>1$ away from zero.
+Thus these scalar monotonicity conditions cannot be substituted for the
+fixed-resolvent structure.
+\end{example}
+
+\section[Holomorphic model]{Holomorphic extension of the model}\label{sec:analytic}
+
+Choose a real number $M>\norm K$ with $M>0$, and set
+\begin{equation}\label{eq:domain}
+D_M=\C\setminus(-\infty,-1/M].
+\end{equation}
+This open connected domain contains zero and the entire positive real
+axis. The bounded self-adjoint spectral theorem puts $\sigma(K)$ in
+$[0,M]$ \cite{williams}. For $z\in D_M$ and $t\in[0,M]$, the number
+$1+zt$ is nonzero. Indeed, a zero would require $t>0$ and
+$z=-1/t\leq-1/M$. The functional calculus therefore defines
+\begin{equation}\label{eq:complex-model}
+R_z=(I+zK)^{-1},\qquad F(z)=\ip v{R_zv}\qquad(z\in D_M).
+\end{equation}
+
+\begin{lemma}[Norm-holomorphic resolvent]\label{lem:holomorphic}
+The maps $z\mapsto R_z$ and $z\mapsto F(z)$ are holomorphic on $D_M$.
+\end{lemma}
+\begin{proof}
+Fix $z_0\in D_M$. For sufficiently small $h$,
+$\norm{hKR_{z_0}}<1$ and
+\begin{align*}
+I+(z_0+h)K&=(I+z_0K)(I+hKR_{z_0}),\\
+R_{z_0+h}&=R_{z_0}\sum_{n=0}^{\infty}(-hKR_{z_0})^n.
+\end{align*}
+The series converges in operator norm on a neighborhood of $h=0$, so
+it is a norm-convergent local power series. The scalar functional
+$T\mapsto\ip v{Tv}$ is continuous and complex linear under the convention
+in Definition~\ref{def:hseed}, and applying it proves the scalar assertion.
+\end{proof}
+
+It is useful to retain zero in $D_M$. A cut at $(-\infty,0]$ would still
+suffice for the normalized seed-to-RH argument, but it would hide the
+evaluation at zero that removes the integration constant in the
+differential seed. Boundedness of $K$ supplies a genuine neighborhood of
+zero on which the resolvent is analytic.
+
+The spectral theorem also gives a scalar measure. If $E_K$ is the
+projection-valued spectral measure, define
+\begin{equation}\label{eq:measure}
+\mu(B)=\ip v{E_K(B)v}\qquad(B\text{ Borel in }[0,M]).
+\end{equation}
+It is a finite positive measure, with total mass $\norm v^2$, and
+\begin{equation}\label{eq:measure-resolvent}
+F(z)=\int_{[0,M]}\frac{1}{1+zt}\dd\mu(t).
+\end{equation}
+For a compact $C\subset D_M$, the continuous function $|1+zt|$ has a
+strictly positive minimum on $C\times[0,M]$. This bounds every fixed
+derivative of the integrand by an integrable constant. Thus
+\begin{equation}\label{eq:measure-derivatives}
+F^{(n)}(z)=(-1)^n n!\int_{[0,M]}
+\frac{t^n}{(1+zt)^{n+1}}\dd\mu(t).
+\end{equation}
+This justifies the integral differentiations directly and independently
+checks the operator formulas of Section~\ref{sec:resolvent}.
+
+\section[Transfer to RH]{The analytic transfer to RH}\label{sec:forward}
+
+\subsection{Exact calibration on an interval is enough}
+
+\begin{theorem}[Normalized seed implies RH]\label{thm:forward}
+If $\HSeed$ holds, then $\RH$ holds. For its fixed seed data,
+$F(a)=L(a)$ for all $a\geq0$.
+\end{theorem}
+\begin{proof}
+On the interval in Definition~\ref{def:hseed}, the calibration and
+$\Theta(a)>0$ imply
+\[
+\Theta'(a)-F(a)\Theta(a)=0.
+\]
+The function
+\begin{equation}\label{eq:division-free}
+G(z)=\Theta'(z)-F(z)\Theta(z)
+\end{equation}
+is holomorphic on $D_M$. Its zeros have an accumulation point there,
+so the identity theorem gives
+\begin{equation}\label{eq:ode}
+\Theta'(z)=F(z)\Theta(z)\qquad(z\in D_M).
+\end{equation}
+This passage does not assume that $\Theta$ is zero-free on $D_M$.
+The expression \eqref{eq:division-free} has no division by $\Theta$.
+
+Suppose, for a contradiction, that $\Theta$ has a zero $z_0\in D_M$.
+Since $\Theta(0)>0$, it is not identically zero. Its zero at $z_0$ has
+some finite order $m\geq1$, so near $z_0$,
+\[
+\Theta(z)=(z-z_0)^m h(z),\qquad h(z_0)\ne0,
+\]
+where $h$ is holomorphic. Substituting in \eqref{eq:ode} and cancelling
+$(z-z_0)^{m-1}$ off $z_0$ gives
+\[
+mh(z)+(z-z_0)h'(z)=(z-z_0)F(z)h(z).
+\]
+Both sides are continuous at $z_0$; evaluation there yields
+$mh(z_0)=0$, a contradiction.
+Therefore every zero of $\Theta$ lies outside $D_M$, hence in
+$(-\infty,-1/M]\subset(-\infty,0)$.
+Proposition~\ref{prop:geometry} gives RH. Finally, restricting
+\eqref{eq:ode} to $a\geq0$ and dividing by the already known positive
+$\Theta(a)$ proves $F(a)=L(a)$ everywhere on that ray.
+\end{proof}
+
+The proof uses neither a preselected logarithm of $\Theta$ on the cut
+plane nor an RH-dependent product. Choosing a global logarithm before
+proving zero-freeness would conceal the central difficulty. The
+division-free ODE avoids that issue.
+
+\subsection{The integration constant is real and must be treated}
+
+Suppose only the differential identity \eqref{eq:dseed} holds. From
+\eqref{eq:norm-square},
+\[
+\frac{\mathrm d}{\mathrm da}\bigl(aL(a)-af(a)\bigr)=0
+\quad(a\in(\alpha,\beta)).
+\]
+The ordinary mean value theorem on subintervals shows that
+\begin{equation}\label{eq:gauge}
+a\bigl(L(a)-F(a)\bigr)=C,
+\qquad L(a)=F(a)+\frac Ca
+\end{equation}
+for a constant $C\in\R$. Neither the derivative identity nor the
+off-diagonal Gram identity alone detects this constant: adding $C$ to
+$aL(a)$ changes neither its derivative nor its divided differences.
+
+For an arbitrary function on an interval bounded away from zero, one
+would need a normalization value to set $C=0$. The actual entire
+$\Theta$ supplies a stronger analytic normalization.
+
+\begin{theorem}[Differential seed and normalized seed agree]\label{thm:normalization}
+For the actual $\Theta$, $\DSeed\Longleftrightarrow\HSeed$.
+The same operator and vector can be used in both directions.
+\end{theorem}
+\begin{proof}
+If $\HSeed$ holds, differentiating $aL(a)=af(a)$ and using
+\eqref{eq:norm-square} gives $\DSeed$.
+Conversely assume $\DSeed$ and let $C$ be the constant in
+\eqref{eq:gauge}. Consider
+\begin{equation}\label{eq:Q}
+Q(z)=z\Theta'(z)-\bigl(zF(z)+C\bigr)\Theta(z).
+\end{equation}
+This is holomorphic on all of $D_M$, including zero. By
+\eqref{eq:gauge}, it vanishes on $(\alpha,\beta)$, so the identity
+theorem gives $Q=0$ throughout $D_M$. At zero,
+\[
+0=Q(0)=-C\Theta(0).
+\]
+Equation~\eqref{eq:theta-positive} therefore forces $C=0$.
+It follows that $z(\Theta'-F\Theta)=0$ on $D_M$. Away from zero
+we may divide by $z$, and continuity supplies the equality at zero.
+Thus \eqref{eq:ode} holds, and positive-ray division by $\Theta(a)$
+gives the normalized calibration. In particular $\HSeed$ holds.
+\end{proof}
+
+\begin{corollary}[The recovered norm-square identity is an RH criterion]
+For a fixed bounded nonnegative self-adjoint $K$ and fixed $v$,
+the identity \eqref{eq:dseed} on any nonempty positive interval
+implies RH. No extra origin-normalization premise is needed beyond
+the established facts about the actual $\Theta$.
+\end{corollary}
+
+The qualifier ``actual'' is essential. If one replaced $\Theta$ by
+$z^m\Theta$ with $m>0$, its logarithmic derivative would acquire
+$m/z$, and the derivative of $aL$ would not see that origin factor.
+The known value $\Theta(0)\ne0$ is precisely what rules out this
+ambiguity here.
+
+\section[Converse under RH]{The converse: constructing a seed under RH}\label{sec:converse}
+
+\subsection{Why the product has no exponential ambiguity}
+
+We use two classical facts about entire functions. The completed
+$\xi$ has order at most $1$; a direct growth argument from the theta
+integral is given in \cite{garrett}. Hadamard factorization and its
+zero-summability consequence are stated in
+\cite[Theorems~3.7 and 3.11]{mcmullen}.
+To see exactly how these apply, write
+$M_E(r)=\max_{|w|=r}|E(w)|$ and define $M_\Theta$ similarly.
+The map $w\mapsto w^2$ maps the circle of radius $\sqrt r$ onto the
+circle of radius $r$, so
+\begin{equation}\label{eq:order-halving}
+M_\Theta(r)=M_E(\sqrt r).
+\end{equation}
+A bound $|E(w)|\leq C_\varepsilon
+\exp(C_\varepsilon |w|^{1+\varepsilon})$ therefore puts the order
+of $\Theta$ at most $1/2$. Only the strict inequality ``order less
+than $1$'' is needed below.
+
+For an entire function of order less than $1$, nonzero at zero,
+Hadamard factorization has genus zero and a constant exponential factor.
+Its nonzero zeros $z_n$, repeated by multiplicity, satisfy
+$\sum_n|z_n|^{-1}<\infty$. Hence
+\begin{equation}\label{eq:general-product}
+\Theta(z)=\Theta(0)\prod_n\left(1-\frac z{z_n}\right).
+\end{equation}
+There is no factor $e^{bz}$ with $b\ne0$: the polynomial in the
+Hadamard exponential has degree at most the order, hence degree zero.
+There is also no origin monomial because $\Theta(0)\ne0$.
+
+\subsection{Zero pairs and multiplicity}
+
+Assume RH. Enumerate the positive ordinates of the nontrivial zeros
+as $\gamma_1,\gamma_2,\ldots$, repeating each according to its
+multiplicity. There are infinitely many zeros, with no finite
+accumulation point \cite{dlmf-zeros}. We can arrange
+$0<\gamma_1\leq\gamma_2\leq\cdots$ with $\gamma_n\to\infty$.
+The two points $w=\pm i\gamma$ are the preimages of
+$z=-\gamma^2$. Since the derivative of $w\mapsto w^2$ is nonzero
+at either preimage, a zero of multiplicity $m$ at either point
+corresponds to a zero of multiplicity $m$ of $\Theta$.
+It does \emph{not} become a zero of multiplicity $2m$.
+Equation~\eqref{eq:general-product} becomes
+\begin{equation}\label{eq:rh-product}
+\Theta(z)=\Theta(0)\prod_{n=1}^{\infty}
+\left(1+\frac z{\gamma_n^2}\right),\qquad
+\sum_{n=1}^{\infty}\frac1{\gamma_n^2}<\infty.
+\end{equation}
+Thus one positive/negative pair contributes one factor for each
+occurrence of its multiplicity.
+
+\subsection{Logarithmic differentiation with convergence controlled}
+
+Fix a compact set disjoint from the negative zero set, and enclose it
+in $|z|\leq r$. For all sufficiently large $n$,
+$\gamma_n^2>2r$ and
+\[
+\left|\frac1{z+\gamma_n^2}\right|\leq\frac2{\gamma_n^2}.
+\]
+The right side is summable by \eqref{eq:rh-product}. Finite initial
+factors have no zeros on the chosen compact set. Locally uniform
+convergence of the product and its logarithmic derivatives therefore
+justifies
+\begin{equation}\label{eq:rh-log-derivative}
+\frac{\Theta'(z)}{\Theta(z)}
+=\sum_{n=1}^{\infty}\frac1{z+\gamma_n^2}
+\end{equation}
+away from the zeros. In particular this identity holds at every
+$a\geq0$.
+
+\begin{proposition}[Diagonal realization under RH]\label{prop:diagonal}
+Let $\HH=\ell^2(\N;\C)$, and define
+\begin{equation}\label{eq:diagonal-data}
+(Kx)_n=\gamma_n^{-2}x_n,\qquad v_n=\gamma_n^{-1}.
+\end{equation}
+Then $K$ is bounded, self-adjoint, nonnegative, compact and trace
+class; $v\in\HH$; and
+\begin{equation}\label{eq:diagonal-calibration}
+\ip v{(I+aK)^{-1}v}=L(a)\qquad(a\geq0).
+\end{equation}
+\end{proposition}
+\begin{proof}
+The positive ordinates have a positive minimum: a sequence tending to
+zero would give an accumulation of zeros at $1/2$, contradicting
+$\xi(1/2)>0$. Hence the diagonal entries of $K$ are bounded.
+They are positive real numbers and tend to zero, which gives
+self-adjointness, positivity and compactness. Their sum is finite
+by \eqref{eq:rh-product}, so the positive diagonal operator is trace
+class. The same sum equals $\sum_n|v_n|^2$, proving $v\in\HH$.
+Finally,
+\[
+\ip v{(I+aK)^{-1}v}
+=\sum_n\frac{\gamma_n^{-2}}{1+a\gamma_n^{-2}}
+=\sum_n\frac1{a+\gamma_n^2}=L(a),
+\]
+using \eqref{eq:rh-log-derivative}.
+\end{proof}
+
+This proves $\RH\Rightarrow\HSeed$, completing
+Theorem~\ref{thm:main}. Taking $a=0$ gives the normalization
+\begin{equation}\label{eq:trace-norm}
+\Tr K=\norm v^2=\sum_n\gamma_n^{-2}
+=L(0)=\frac{\xi''(1/2)}{2\xi(1/2)}.
+\end{equation}
+For an arbitrary calibrated representation, $\norm v^2=L(0)$ still
+holds. The equality with $\Tr K$ is asserted only for the particular
+diagonal construction just given; arbitrary invisible operator components
+need not have that trace.
+
+If one prefers distinct positive ordinates $\gamma_j$ with multiplicities
+$m_j$, the equivalent scalar model uses
+$K_{jj}=\gamma_j^{-2}$ and $v_j=\sqrt{m_j}/\gamma_j$.
+Neither version assumes that zeta zeros are simple. In the repeated
+model, the vector need not be cyclic when an eigenvalue is repeated.
+No cyclicity assumption is needed for the argument.
+
+\section[Spectral measures and moments]{Spectral measures, moments and exact reconstruction}\label{sec:moments}
+
+\subsection{A scalar measure formulation}
+
+Define $\MSeed$ to mean that for some $M>0$ and finite positive
+Borel measure $\mu$ on $[0,M]$,
+\begin{equation}\label{eq:mseed}
+L(a)=\int_{[0,M]}\frac1{1+at}\dd\mu(t)
+\end{equation}
+on a nonempty positive interval.
+Section~\ref{sec:analytic} proves $\HSeed\Rightarrow\MSeed$.
+Conversely, given \eqref{eq:mseed}, take
+\[
+\HH=L^2([0,M],\mu),\qquad(Ku)(t)=tu(t),\qquad v(t)=1.
+\]
+Finite mass makes $v$ square integrable, while multiplication by $t$
+is bounded, nonnegative and self-adjoint. Its scalar resolvent is
+exactly \eqref{eq:mseed}. Therefore
+\begin{equation}\label{eq:measure-iff}
+\MSeed\quad\Longleftrightarrow\quad\HSeed
+\quad\Longleftrightarrow\quad\RH.
+\end{equation}
+
+The word ``finite'' in \emph{finite measure} means finite total mass.
+It does not mean finite support, a finite list of rational numbers, or
+a finite-checker witness. Under RH the measure is
+\begin{equation}\label{eq:rh-measure}
+\mu=\sum_n\gamma_n^{-2}\delta_{\gamma_n^{-2}},\qquad
+\mu([0,M])=\kappa.
+\end{equation}
+This differs from the zero-counting measure
+$\sum_n\delta_{\gamma_n^2}$, which has infinite total mass. The
+reciprocal variable and the weights are essential to the normalization.
+
+\subsection{Moments and positive finite sections}
+
+For any fixed positive operator model, put
+\begin{equation}\label{eq:moments}
+m_n=\ip v{K^nv}=\int_{[0,M]}t^n\dd\mu(t)\qquad(n\geq0).
+\end{equation}
+If $|z|M<1$, the Neumann series converges uniformly in the spectral
+variable and gives
+\begin{equation}\label{eq:moment-series}
+F(z)=\sum_{n=0}^{\infty}(-1)^nm_nz^n,
+\qquad0\leq m_n\leq M^n m_0.
+\end{equation}
+The remainder after degree $N$ has the exact form
+\begin{equation}\label{eq:moment-remainder}
+F(z)-\sum_{n=0}^N(-1)^nm_nz^n
+=(-z)^{N+1}\int\frac{t^{N+1}}{1+zt}\dd\mu(t),
+\end{equation}
+and consequently
+\begin{equation}\label{eq:moment-bound}
+\left|F(z)-\sum_{n=0}^N(-1)^nm_nz^n\right|
+\leq\frac{m_0(M|z|)^{N+1}}{1-M|z|}.
+\end{equation}
+For a calibrated model,
+\begin{equation}\label{eq:actual-moments}
+m_n=\frac{(-1)^n}{n!}L^{(n)}(0).
+\end{equation}
+This is an all-orders identity for actual derivatives.
+
+For a polynomial $p(t)=\sum_i c_it^i$, positivity of $\mu$ gives
+\begin{align}
+\sum_{i,j}\overline{c_i}c_jm_{i+j}&\geq0,\label{eq:H0}\\
+\sum_{i,j}\overline{c_i}c_jm_{i+j+1}&\geq0,\label{eq:H1}\\
+\sum_{i,j}\overline{c_i}c_j
+\bigl(M^2m_{i+j}-m_{i+j+2}\bigr)&\geq0.\label{eq:H2}
+\end{align}
+These are the integrals of $|p|^2$, $t|p|^2$ and
+$(M^2-t^2)|p|^2$. Every finite matrix in this hierarchy is positive
+semidefinite. The following converse records exactly what an
+\emph{all-orders} moment construction can accomplish.
+
+\begin{theorem}[Bounded positive moment reconstruction]\label{thm:gns}
+Let $(m_n)_{n\geq0}$ be a real sequence and $M>0$.
+Suppose \eqref{eq:H0}--\eqref{eq:H2} hold for every finite coefficient
+list. Then there exist a Hilbert space, a bounded nonnegative
+self-adjoint operator $K$ with $\norm K\leq M$, and a vector $v$
+such that $m_n=\ip v{K^nv}$ for all $n$.
+\end{theorem}
+\begin{proof}
+Define a complex linear functional $\ell$ on polynomials by
+$\ell(t^n)=m_n$, and a sesquilinear form by
+$\ip pq_0=\ell(\overline p\,q)$, where conjugation acts on coefficients
+and $t$ is real. Condition~\eqref{eq:H0} makes this form positive
+semidefinite, hence it satisfies Cauchy--Schwarz. Quotient the polynomial
+space by the vectors of zero seminorm and complete to a Hilbert space
+$\HH$.
+
+Multiplication by $t$ is well defined on the quotient: by
+\eqref{eq:H2},
+\[
+\norm{tp}_0^2=\ell(t^2|p|^2)\leq M^2\ell(|p|^2)=M^2\norm p_0^2.
+\]
+Thus it sends every null vector to a null vector and is bounded by
+$M$. It extends to an everywhere defined bounded operator $K$ on
+$\HH$. Since
+$\ell(\overline{tp}\,q)=\ell(\overline p\,tq)$, it is symmetric
+on a dense subspace and hence self-adjoint after extension.
+Condition~\eqref{eq:H1} gives
+$\ip{[p]}{K[p]}=\ell(t|p|^2)\geq0$; continuity makes $K$ positive
+on all of $\HH$. Let $v=[1]$. Then $K^nv=[t^n]$ and
+$\ip v{K^nv}=\ell(t^n)=m_n$, as required.
+\end{proof}
+
+\begin{corollary}[An all-order actual-jet criterion]\label{cor:moment-criterion}
+Define $m_n$ by \eqref{eq:actual-moments}. RH is equivalent to the
+existence of $M>0$ such that \eqref{eq:H0}--\eqref{eq:H2} hold
+for every finite coefficient list.
+\end{corollary}
+\begin{proof}
+Under RH, the diagonal seed supplies these inequalities.
+Conversely, Theorem~\ref{thm:gns} constructs $K,v$ with the specified
+moments. The resolvent has Taylor series \eqref{eq:moment-series}.
+The actual $L$ is analytic near zero and has exactly the same Taylor
+coefficients. They therefore agree on a common disk of positive radius,
+and in particular on a positive open interval. This is $\HSeed$,
+which implies RH.
+\end{proof}
+
+The quantifier ``for every finite coefficient list'' ranges over
+unbounded degrees. Checking finitely many matrices does not establish
+this corollary. A finite certificate would have to derive the entire
+hierarchy by an independently proved uniform mechanism.
+
+\subsection{What is determined by calibration}
+
+If two compactly supported finite positive measures represent the same
+actual $L$ on an interval, analytic continuation gives equality near
+zero. Their moments consequently agree. View both on a common compact
+interval containing their supports. Polynomials are dense in the
+continuous functions on that interval, and equality of integrals for
+polynomials extends, by the total-mass bound, to all continuous functions.
+Uniqueness of finite Borel measures then gives equality of the two measures.
+Thus the scalar spectral measure seen by $v$ is determined. This does
+not identify every operator on the ambient Hilbert space: an orthogonal
+summand invisible to $v$ leaves all the scalar identities unchanged.
+
+\section[Shifts and truncations]{Basepoint shifts and finite truncations}\label{sec:shifts}
+
+\subsection{Two different shifted vectors}
+
+Fix $a_0\geq0$, and abbreviate $R_0=(I+a_0K)^{-1}$ in this
+subsection only. Set
+\begin{equation}\label{eq:shift-data}
+B=KR_0,\qquad w=R_0^{1/2}v,\qquad u=R_0v.
+\end{equation}
+These two vectors have different purposes. For $t=a-a_0$ with
+$a\geq0$,
+\[
+I+aK=(I+a_0K)(I+tB).
+\]
+All the displayed operators commute. Therefore
+\begin{equation}\label{eq:f-shift}
+f(a_0+t)=\ip w{(I+tB)^{-1}w}.
+\end{equation}
+The functional calculus gives
+$0\leq B\leq M(1+a_0M)^{-1}I$ whenever $0\leq K\leq MI$.
+In particular the local shifted inverse is analytic at $t=0$.
+
+On the other hand, \eqref{eq:second-resolvent} gives
+\begin{equation}\label{eq:g-shift}
+g(a_0+t)-g(a_0)
+=t\ip u{(I+tB)^{-1}u}.
+\end{equation}
+To verify this, write
+$aR_a-a_0R_0=tR_aR_0$ and
+$R_a=(I+tB)^{-1}R_0$, then take the scalar product with $v$.
+Differentiating \eqref{eq:g-shift} gives
+\begin{equation}\label{eq:shift-derivative}
+g'(a_0+t)=\norm{(I+tB)^{-1}u}^2.
+\end{equation}
+The additive value $g(a_0)$ and the distinction $w\ne u$ in general
+must be retained. Merely replacing $a$ by $a-a_0$ in part of a
+formula changes the mathematical condition.
+
+\subsection{What finite diagonal truncations do prove}
+
+Under RH, use the repeated-ordinate model from
+Proposition~\ref{prop:diagonal}, and truncate after $N$ entries:
+\[
+F_N(z)=\sum_{n=1}^N\frac1{z+\gamma_n^2},\qquad
+S_N=\sum_{n>N}\gamma_n^{-2}.
+\]
+For every $a\geq0$,
+\begin{equation}\label{eq:positive-tail}
+0\leq L(a)-F_N(a)\leq S_N.
+\end{equation}
+To state a bound on a whole disk, define the tail directly by
+\[
+T_N(z)=\sum_{n>N}\frac1{z+\gamma_n^2}.
+\]
+If $\gamma_{N+1}^2>2r$, this series is holomorphic on a neighborhood
+of $|z|\leq r$. Away from the initial poles it equals $F-F_N$;
+at a shared pole among the first $N$ terms, it is the holomorphic
+extension of that difference after cancellation. Thus, on the entire disk,
+\begin{equation}\label{eq:complex-tail}
+|T_N(z)|\leq2S_N.
+\end{equation}
+For each derivative order $j\geq0$, the same argument gives
+\begin{equation}\label{eq:derivative-tail}
+|T_N^{(j)}(z)|
+\leq j!\,2^{j+1}\sum_{n>N}\gamma_n^{-2j-2}.
+\end{equation}
+These estimates follow term by term from the convergent series and
+its displayed denominator bounds. They show what a tail certificate
+would need to control, including its dependence on derivative order.
+
+The construction here assumes RH to identify the positive spectrum.
+It is consequently not an unconditional finite computation proving RH.
+Even a uniform small error does not imply exact equality; a uniform
+error bound for values alone does not automatically supply an error
+bound for all derivatives on the same domain.
+
+\section[Finite matrices and witnesses]{Why a finite matrix is not the finite witness}\label{sec:finite}
+
+\subsection{An obstruction to exact finite-dimensional calibration}
+
+\begin{proposition}[Finite visible spectrum is impossible]\label{prop:finite-obstruction}
+There is no exactly calibrated seed for the actual $\Theta$ whose
+scalar spectral measure has finite support. In particular, no
+finite-dimensional or finite-rank operator can supply an exact seed.
+\end{proposition}
+\begin{proof}
+A finitely supported spectral measure makes
+$F(z)=\sum_{j=1}^q c_j/(1+\lambda_jz)$ rational, with a possible
+constant term when $\lambda_j=0$. Write $F=p/q_0$ for polynomials,
+where $q_0$ is not identically zero. Exact interval calibration implies
+that the entire function
+\[
+q_0(z)\Theta'(z)-p(z)\Theta(z)
+\]
+vanishes on an interval and therefore vanishes on all of $\C$.
+At any zero $z_0$ of $\Theta$ with $q_0(z_0)\ne0$, the local
+ODE $\Theta'=(p/q_0)\Theta$ contradicts the finite-order zero
+argument of Theorem~\ref{thm:forward}. Thus every zero of $\Theta$
+would have to be among the finitely many roots of $q_0$.
+But $\xi$ has infinitely many distinct zeros, and the two-to-one
+square map can identify only opposite pairs. Hence $\Theta$ has
+infinitely many distinct zeros, a contradiction.
+
+If $K$ is finite rank, its nonzero spectral values form a finite set;
+its kernel can contribute only the additional spectral point zero.
+Its scalar spectral measure is therefore finitely supported, so the
+same argument applies.
+\end{proof}
+
+This obstruction does not prohibit a finite description of an
+infinite-dimensional operator or a finite certificate for an infinite
+analytic argument. It rules out the narrower proposal that a finite
+positive matrix by itself can reproduce the full actual logarithmic
+derivative exactly on an interval.
+
+\subsection{The two missing checker theorems}
+
+The project's requested finite endpoint is
+\begin{equation}\label{eq:finite-goal}
+\bigl(\exists W:\mathsf{FiniteWitness},\ \mathsf{check}(W)=\mathsf{true}\bigr)
+\quad\Longleftrightarrow\quad\RH.
+\end{equation}
+The witness must consist of finite raw data and the checker must
+terminate. The analytic seed defined in this paper is not such a
+witness type: it quantifies over a Hilbert space, an operator, a vector,
+and an exact interval identity.
+
+A route through Theorem~\ref{thm:main} would require the following
+separate statements for one specified checker:
+\begin{align}
+\mathsf{check}(W)=\mathsf{true}&\ \Longrightarrow\ \HSeed,
+&&\text{for every finite }W;\label{eq:soundness}\\
+\RH&\ \Longrightarrow\ \exists W,\ \mathsf{check}(W)=\mathsf{true}.
+&&\label{eq:completeness}
+\end{align}
+Equation~\eqref{eq:soundness} is actual-function soundness. It must
+derive calibration, not receive an unverified calibration proof as a
+field of the purported raw witness. Equation~\eqref{eq:completeness}
+is finite-language completeness. Constructing a countable spectrum
+from all zeros under RH proves an analytic existence statement; it
+does not extract an accepted finite code in an independently fixed
+language.
+
+Finite moment matrices, finite Gram matrices and finite truncations
+are legitimate components of a possible certificate design. To yield
+\eqref{eq:soundness}, they need a theorem extending the verified finite
+information to the uniform analytic assertion. The all-order moment
+criterion in Corollary~\ref{cor:moment-criterion} specifies one precise
+target for such an extension. No such finite reduction is established
+by the present note.
+
+\subsection{Finite jets cannot replace a functional identity}
+
+There is a direct mathematical reason for the distinction. Fix a
+real anchor $a_*>0$ and an integer $N\geq0$. The functions
+\[
+L(z)\quad\text{and}\quad L(z)+\varepsilon(z-a_*)^{N+1}
+\]
+have identical derivatives through order $N$ at $a_*$ for every
+$\varepsilon$, but are different analytic functions when
+$\varepsilon\ne0$. Finitely many samples can likewise be preserved by
+adding a nonzero polynomial vanishing at all sample points.
+The identity theorem requires a set with an accumulation point in
+the analytic domain, or equivalent exact all-order germ information.
+A finite initial jet is neither of these.
+
+\section[Repository and evidence]{Connection with the repository and proof obligations}\label{sec:repository}
+
+This note was prepared against the public repository
+\texttt{randogelist/Riemann-Hypothesis-Final} at the source revision
+\begin{center}\small\reposha.\end{center}
+The inspected source records an analytic slit-plane admission
+\cite{repo-ode}:
+\begin{equation}\label{eq:repo-admission}
+\exists A\text{ holomorphic on }\C\setminus(-\infty,0],\qquad
+\Theta'+A\Theta=0\text{ there}.
+\end{equation}
+The source declaration
+\nolinkurl{SoloboloAdmission.slitODEAdmission_iff_RH}
+has literal target \texttt{\_root\_.RiemannHypothesis}.
+The resolvent transfer in this paper supplies the coefficient
+$A=-F$ on that domain, because the smaller slit plane is contained
+in $D_M$. The sign is negative: the paper writes $\Theta'=F\Theta$,
+whereas the source admission writes $\Theta'+A\Theta=0$.
+
+The source zero-geometry declaration
+\nolinkurl{AngularMaster.native_RH_iff_theta_zeros_nonpositive}
+matches Proposition~\ref{prop:geometry}, allowing nonpositive real
+zeros before origin nonvanishing is supplied \cite{repo-geometry}.
+The repository's positive-product assessment uses the normalization
+$\sum_n\lambda_n/(1+a\lambda_n)$ with
+$\lambda_n=\gamma_n^{-2}$, consistent with
+\eqref{eq:diagonal-calibration} \cite{repo-product}.
+
+The particular legacy archive name
+\nolinkurl{RH_SOLOBOLO_SEED_v0_1_0.zip} and the named
+\texttt{NativeOperatorSeed} sources were not recovered in the inspected
+repository tree or targeted searches. Accordingly, Definitions
+\ref{def:hseed} and \ref{def:dseed} are explicit mathematical
+formulations supplied by this paper. No claim is made that their
+fields are textually identical to an unrecovered legacy declaration.
+
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.19\textwidth}>{\raggedright\arraybackslash}p{0.47\textwidth}>{\raggedright\arraybackslash}p{0.27\textwidth}@{}}
+\toprule
+\textbf{Layer}&\textbf{Statement or construction}&\textbf{Evidence in this note}\\
+\midrule
+\endhead
+Resolvent algebra&Norm-square identity and all-parameter Gram formula&On-paper proofs, Sections~3--4\\
+\addlinespace
+Analytic transfer&Exact normalized or differential seed implies actual RH&On-paper proofs, Sections~5--6\\
+\addlinespace
+Converse&RH gives the positive countable diagonal seed&On-paper proof from classical factorization, Section~7\\
+\addlinespace
+Moment route&All-order positivity with one support bound gives a seed&On-paper reconstruction, Section~8\\
+\addlinespace
+Legacy seed&Exact \texttt{SeedOn}/\texttt{HasSeed} implementation&Not recovered or certified here\\
+\addlinespace
+Lean verification&Compilation and exact endpoint axiom audit&Not run; no new formal certification\\
+\addlinespace
+Finite checker&Actual soundness, finite completeness, accepted witness&Open; not constructed here\\
+\bottomrule
+\end{longtable}
+
+The repository's inspected status records native build and axiom audit
+as \texttt{NOT\_RUN}, actual calibration as \texttt{OPEN}, and
+finite-witness soundness and completeness as \texttt{OPEN}
+\cite{repo-status}. Publication of this paper does not change those
+statuses. A later formalization must connect the exact definitions,
+complex derivative, domains, spectral constructions and zero geometry
+to the actual native declarations; familiar theorem names are not a
+substitute for that transport.
+
+\section{Conclusion}\label{sec:conclusion}
+
+The recovered Hilbert-vector anchor has a complete and coherent
+on-paper analytic formulation. Its central scalar identity is
+\[
+\frac{\mathrm d}{\mathrm da}\left(a\frac{\Theta'(a)}{\Theta(a)}\right)
+=\norm{(I+aK)^{-1}v}^2,
+\]
+where $K$ and $v$ are fixed, $K$ is bounded and nonnegative
+self-adjoint, and the identity is exact on a positive interval.
+The proof proceeds through a holomorphic resolvent, an explicitly
+removed integration constant, and a division-free analytic ODE.
+The zero-order contradiction then yields the critical-line statement.
+
+Conversely RH supplies a diagonal seed through the genus-zero
+product of the entire square-descended function. This gives the
+analytic equivalence \eqref{eq:main}, the Gram identity, and the
+normalization \eqref{eq:trace-norm}. It does not construct the seed
+without RH. The unresolved constructive task is to derive one of
+these exact analytic inputs from independently verifiable data;
+the further finite-checker equivalence requires both
+\eqref{eq:soundness} and \eqref{eq:completeness}.
+
+\appendix
+\section[Real Hilbert spaces]{Real Hilbert spaces and the holomorphic convention}\label{app:real}
+
+The recovered anchor may be expressed on a real Hilbert space.
+That does not obstruct the complex-analytic proof. If $H$ is real,
+form $H_\C=H\oplus iH$ with
+\begin{align*}
+\ip{x+iy}{u+iw}_{\C}
+&=(x,u)_H+(y,w)_H\\
+&\quad+i\bigl((x,w)_H-(y,u)_H\bigr).
+\end{align*}
+This inner product is conjugate-linear in the first slot and linear
+in the second. A real bounded self-adjoint nonnegative $K$ extends
+by $K_\C(x+iy)=Kx+iKy$. Its norm is unchanged, because
+\[
+\norm{K_\C(x+iy)}^2=\norm{Kx}^2+\norm{Ky}^2
+\leq\norm K^2(\norm x^2+\norm y^2),
+\]
+and restriction to real vectors gives the reverse norm inequality.
+Self-adjointness follows by expanding the inner product. Positivity
+follows from
+\[
+\ip{x+iy}{K_\C(x+iy)}=(x,Kx)_H+(y,Ky)_H\geq0,
+\]
+since the imaginary cross terms cancel by symmetry.
+For real $a\geq0$, the inverse extends the real inverse, so every
+real scalar calibration and norm identity is preserved. Thus the
+complex theorem applies to the real Hilbert version as well.
+
+If an alternative convention makes the inner product linear in the
+first slot, the scalar holomorphic expression should instead be
+$\ip{R_zv}{v}$. With the convention fixed in this paper, it is
+$\ip v{R_zv}$. Mixing these conventions would turn a holomorphic
+function into an anti-holomorphic one and invalidate the identity-theorem
+step.
+
+\section[Proof dependencies]{A compact proof dependency ledger}\label{app:ledger}
+
+The forward implication has the following dependencies, each proved
+or cited at its point of use:
+\begin{enumerate}[label=\textbf{F\arabic*.},leftmargin=2.8em]
+\item The actual $\Theta$ is entire and $\Theta(0)>0$.
+\item Fixed bounded positive $K$ gives a holomorphic resolvent on
+      $D_M$, a connected domain containing zero and the positive ray.
+\item Exact interval calibration gives $\Theta'=F\Theta$ by the
+      identity theorem. For differential calibration, first remove
+      $C$ using $Q(0)=-C\Theta(0)$.
+\item A nonzero entire solution of that ODE has no zero where its
+      coefficient is holomorphic, by the finite-order contradiction.
+\item Negative-real-axis confinement of $\Theta$ zeros is equivalent
+      to the critical-line condition for actual $\xi$ zeros.
+\end{enumerate}
+Only the converse uses RH:
+\begin{enumerate}[label=\textbf{R\arabic*.},leftmargin=2.8em]
+\item RH places the zeros of $\Theta$ at $-\gamma_n^2$.
+\item The order bound and Hadamard factorization give
+      $\Theta/\Theta(0)=\prod_n(1+z/\gamma_n^2)$ and summability.
+\item Uniformly convergent logarithmic differentiation gives
+      $L(a)=\sum_n(a+\gamma_n^2)^{-1}$.
+\item The explicit diagonal $K$ and square-summable $v$ realize this
+      scalar function and hence both seed conditions.
+\end{enumerate}
+The all-order moment criterion reconstructs the forward input through
+Theorem~\ref{thm:gns}. It does not remove an infinite quantifier by
+itself. Neither direction in this ledger uses a finite accepted
+witness, and neither is reported as a Lean-verified endpoint.
+
+\begin{thebibliography}{99}
+\small
+\bibitem{dlmf-reflection}
+NIST Digital Library of Mathematical Functions,
+\emph{Section 25.4: Reflection Formulas}, especially Eqs.~25.4.3--25.4.4.
+\url{https://dlmf.nist.gov/25.4}. Accessed 27 October 2026.
+
+\bibitem{dlmf-series}
+NIST Digital Library of Mathematical Functions,
+\emph{Section 25.2: Definition and Expansions}, especially Eq.~25.2.3.
+\url{https://dlmf.nist.gov/25.2}. Accessed 27 October 2026.
+
+\bibitem{dlmf-zeros}
+NIST Digital Library of Mathematical Functions,
+\emph{Section 25.10: Zeros}, subsection (i).
+\url{https://dlmf.nist.gov/25.10}. Accessed 27 October 2026.
+
+\bibitem{garrett}
+Paul Garrett, \emph{Riemann-Hadamard product for $\zeta(s)$},
+24 October 2021, pp.~1--2 (growth of the completed entire function).
+\url{https://www-users.cse.umn.edu/~garrett/m/number_theory/riemann_hadamard_product.pdf}.
+
+\bibitem{mcmullen}
+C. McMullen, \emph{Advanced Complex Analysis}, Harvard Math 213a
+course notes, 22 January 2017. Theorems~3.7 and 3.11,
+printed pp.~43--44 (Hadamard factorization and zero summability).
+\url{https://people.math.harvard.edu/~ctm/home/text/class/harvard/213a/10/html/home/course/course.pdf}.
+
+\bibitem{williams}
+Dana P. Williams, \emph{Lecture Notes on the Spectral Theorem},
+10 August 2018, Sections~2, 4 and 5 (bounded spectral calculus and
+spectral measures).
+\url{https://math.dartmouth.edu/~dana/bookspapers/ln-spec-thm.pdf}.
+
+\bibitem{repo-ode}
+Riemann-Hypothesis-Final project, \texttt{SoloboloAdmission/NativeODE.lean},
+source revision \texttt{362d9f8}. Exact source of
+\texttt{slitODEAdmission\_iff\_RH}; native audit not run in this note.
+\href{https://github.com/randogelist/Riemann-Hypothesis-Final/blob/362d9f8aeaaf9479cc27ceb6b63bdb7456267990/SoloboloAdmission/NativeODE.lean}{Pinned repository source}.
+
+\bibitem{repo-geometry}
+Riemann-Hypothesis-Final project, \texttt{AngularMaster/ZeroGeometry.lean},
+source revision \texttt{362d9f8}.
+\href{https://github.com/randogelist/Riemann-Hypothesis-Final/blob/362d9f8aeaaf9479cc27ceb6b63bdb7456267990/AngularMaster/ZeroGeometry.lean}{Pinned repository source}.
+
+\bibitem{repo-product}
+Riemann-Hypothesis-Final project,
+\emph{RH positive-product assessment}, 25 October 2026,
+source revision \texttt{362d9f8}.
+\href{https://github.com/randogelist/Riemann-Hypothesis-Final/blob/362d9f8aeaaf9479cc27ceb6b63bdb7456267990/docs/research/2026-10-25/rh-positive-product-assessment.md}{Pinned research assessment}.
+
+\bibitem{repo-status}
+Riemann-Hypothesis-Final project, \texttt{provenance/status.json},
+\texttt{docs/BUILD.md}, and \texttt{docs/FRONTIER.md},
+source revision \texttt{362d9f8}. Source evidence and open finite
+calibration obligations.
+\href{https://github.com/randogelist/Riemann-Hypothesis-Final/blob/362d9f8aeaaf9479cc27ceb6b63bdb7456267990/provenance/status.json}{Pinned status record}.
+\end{thebibliography}
+\end{document}
