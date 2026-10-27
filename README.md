@@ -28,11 +28,15 @@ with their actual-function bindings kept explicit.
 
 ## Hilbert-vector anchor paper
 
-[Read the detailed paper (PDF)](RH_Hilbert_Vector_Anchor_v1_0_construction.pdf) · [Editable LaTeX source](docs/papers/RH_Hilbert_Vector_Anchor_v1_0_construction.tex)
+[Read the revised paper (PDF)](RH_Hilbert_Vector_Anchor_v1_1_construction.pdf) · [Editable LaTeX source](docs/papers/RH_Hilbert_Vector_Anchor_v1_1_construction.tex)
 
-**Hilbert-Vector Resolvents and the Riemann Hypothesis: A detailed analytic seed criterion** (27 October 2026, 17 pages).
-The paper derives the fixed positive-operator norm and Gram identities, proves the precisely stated analytic seed equivalence with actual RH on paper, and treats the origin normalization, converse zero-product construction, all-order moment criterion, and finite-dimensional obstruction.
-It is **B-Tier derivation**: unconditional seed existence and finite-checker soundness/completeness remain open; no Lean compilation or axiom audit was run for this paper.
+**Hilbert-Vector Resolvents and the Riemann Hypothesis: A detailed analytic seed criterion** (version 1.1, 27 October 2026, 29 pages).
+The paper derives the fixed positive-operator norm and Gram identities, the precisely stated analytic seed equivalence with actual RH, the converse zero-product construction, and the all-order moment criterion.
+
+**New in version 1.1:** Section 10 derives the Hyperbolic Zeta Bose/Hurwitz identities, constructs bounded positive comparison resolvents, and proves why these fixed integral models cannot equal the actual logarithmic derivative directly. It then gives an exact hyperbolic-tangent Mellin identity for actual ξ, the transformation from its Taylor coefficients to the required moments, and a positive determinant construction obtained by squaring the signed hyperbolic pencils. An all-order coefficient-limit theorem proves that exact convergence of those models to the actual coefficients would construct the Hilbert seed and imply RH. **That convergence remains open.**
+
+This is **B-Tier derivation**: no unconditional seed, finite checker witness, or proof of RH is claimed; native Lean compilation and axiom audits remain `NOT_RUN`.
+[Previous version 1.0 (PDF)](RH_Hilbert_Vector_Anchor_v1_0_construction.pdf) remains available.
 
 ## Contents
 

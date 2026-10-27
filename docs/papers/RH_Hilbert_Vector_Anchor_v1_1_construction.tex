@@ -1,0 +1,2202 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage[margin=25mm,headheight=15pt]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,longtable,array,enumitem,xcolor}
+\usepackage{fancyhdr,titlesec,multicol}
+\usepackage[most]{tcolorbox}
+\usepackage{xurl}
+\usepackage{hyperref}
+\definecolor{ink}{HTML}{142A43}
+\definecolor{linkblue}{HTML}{234F75}
+\definecolor{pale}{HTML}{F1F5F8}
+\hypersetup{colorlinks=true,linkcolor=linkblue,citecolor=linkblue,urlcolor=linkblue,
+  pdftitle={Hilbert-Vector Resolvents and the Riemann Hypothesis},
+  pdfauthor={Riemann-Hypothesis-Final project research note},
+  pdfsubject={Detailed on-paper analytic seed criterion; no unconditional RH or Lean certification},
+  pdfkeywords={Riemann hypothesis, xi function, Hilbert space, resolvent, Hyperbolic Zeta, positive determinant, finite witness}}
+\urlstyle{same}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\textsc{Hilbert-vector RH anchor}}
+\fancyhead[R]{\small Analytic construction}
+\fancyfoot[L]{\footnotesize 27 October 2026 \enspace | \enspace v1.1}
+\fancyfoot[R]{\small\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\titleformat{\section}{\large\bfseries\color{ink}}{\thesection}{0.65em}{}
+\titleformat{\subsection}{\normalsize\bfseries\color{ink}}{\thesubsection}{0.65em}{}
+\setlength{\parskip}{4pt}
+\setlength{\parindent}{0pt}
+\setlist{topsep=4pt,itemsep=3pt,parsep=0pt}
+\setcounter{tocdepth}{1}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\C}{\mathbb C}
+\newcommand{\R}{\mathbb R}
+\newcommand{\N}{\mathbb N}
+\newcommand{\HH}{\mathcal H}
+\newcommand{\BB}{\mathcal B}
+\newcommand{\id}{I}
+\newcommand{\ip}[2]{\langle #1,#2\rangle}
+\newcommand{\norm}[1]{\lVert #1\rVert}
+\newcommand{\RH}{\mathrm{RH}}
+\newcommand{\HSeed}{\mathsf{HSeed}_{\Theta}}
+\newcommand{\DSeed}{\mathsf{DSeed}_{\Theta}}
+\newcommand{\MSeed}{\mathsf{MSeed}_{\Theta}}
+\newcommand{\dd}{\,\mathrm d}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\Repart}{Re}
+\DeclareMathOperator{\Impart}{Im}
+\newtcolorbox{scopebox}{colback=pale,colframe=ink!35,boxrule=0.4pt,arc=0pt,
+  left=9pt,right=9pt,top=6pt,bottom=6pt,breakable}
+\newcommand{\reposha}{\texttt{362d9f8aeaaf9479cc27ceb6b63bdb7456267990}}
+\begin{document}
+\begin{center}
+{\small\sffamily\color{linkblue} SOLOBOLO \enspace / \enspace RIEMANN-HYPOTHESIS-FINAL}\par
+\vspace{9pt}
+{\LARGE\bfseries\color{ink} Hilbert-Vector Resolvents\par
+and the Riemann Hypothesis}\par
+\vspace{7pt}
+{\large A detailed analytic seed criterion}\par
+\vspace{9pt}
+{\small Project research note \enspace | \enspace 27 October 2026}\par
+{\small Version 1.1 \enspace | \enspace B-Tier derivation \enspace | \enspace construction}
+\end{center}
+\vspace{5pt}
+\begin{abstract}
+We give a precise, self-contained analytic formulation of a Hilbert-vector
+anchor for the Riemann hypothesis. Let $\Theta$ be the entire function
+determined by $\Theta(w^2)=\xi(\tfrac12+w)$, and put
+$L(a)=\Theta'(a)/\Theta(a)$ for $a\geq0$. We prove that RH is equivalent
+to the existence of one Hilbert space, one bounded nonnegative self-adjoint
+operator $K$, and one fixed vector $v$ such that
+$\frac{\mathrm d}{\mathrm da}(aL(a))=\norm{(I+aK)^{-1}v}^2$
+on a nonempty positive interval. The derivation includes the resolvent
+calculus, its divided-difference Gram kernel, and the analytic continuation
+that excludes zeros off the negative real axis. A possible $C/a$ ambiguity
+is removed using $\Theta(0)\ne0$, rather than suppressed by an unstated
+normalization. The reverse implication constructs a positive diagonal
+operator from the zero product under RH, with multiplicities counted
+correctly. We also develop the spectral-measure and all-order moment
+formulations, explain basepoint shifts, and prove that no exactly calibrated
+finite-dimensional model can suffice. The result is an analytic equivalence;
+it does not construct the required seed unconditionally or produce an
+accepted finite witness. Hyperbolic zeta identities additionally give
+explicit comparison models and a conditional determinant-limit route
+to the actual seed.
+\end{abstract}
+\begin{scopebox}
+\small\textbf{Evidence and scope.} Every proof in this note is an on-paper
+derivation. No Lean compiler or axiom audit was run. The seed predicates
+below are defined explicitly here; they are not asserted to be recovered
+field-for-field definitions of a legacy \texttt{HasSeed} declaration.
+The repository's finite-checker target remains open. Classical background
+is cited, and no novelty or unconditional proof of RH is claimed.
+\end{scopebox}
+\vspace{5pt}
+\section*{Contents}
+\begin{multicols}{2}
+\small\setlength{\parskip}{0pt}
+\makeatletter\@starttoc{toc}\makeatother
+\end{multicols}
+\clearpage
+
+\section[Assertion and scope]{The exact assertion and its role}\label{sec:assertion}
+
+The starting point is the family of identities
+\begin{equation}\label{eq:anchor-intro}
+R_a=(I+aK)^{-1},\qquad
+\frac{\mathrm d}{\mathrm da}\bigl(aL(a)\bigr)=\norm{R_av}^{2},\qquad
+V_a=2\sqrt a\,R_av.
+\end{equation}
+Their significance depends on their quantifiers. The operator and vector
+must be the \emph{same} for every parameter in the interval, and the scalar
+$L$ must come from the actual completed Riemann zeta function. An arbitrary
+nonnegative scalar function can be represented as a squared norm by
+allowing its vector to vary freely. Such a pointwise representation contains
+none of the resolvent compatibility used below.
+
+We fix the standard completion
+\begin{equation}\label{eq:xi}
+\xi(s)=\tfrac12s(s-1)\pi^{-s/2}\Gamma(s/2)\zeta(s),
+\end{equation}
+with the removable values understood. The symmetry $\xi(s)=\xi(1-s)$
+and normalization are classical \cite{dlmf-reflection}. Section~\ref{sec:theta}
+defines $\Theta$ without choosing a square-root branch and proves that
+$L$ is a well-defined real analytic function on $[0,\infty)$.
+
+\begin{definition}[Calibrated Hilbert seed]\label{def:hseed}
+The assertion $\HSeed$ means that there exist a complex Hilbert space
+$\HH$, an operator $K\in\BB(\HH)$, a vector $v\in\HH$, and real numbers
+$0<\alpha<\beta<\infty$ such that
+\begin{equation}\label{eq:seed-hypotheses}
+K=K^*,\qquad \ip{x}{Kx}\geq0\quad(x\in\HH),
+\end{equation}
+and, for every $a\in(\alpha,\beta)$,
+\begin{equation}\label{eq:hseed}
+L(a)=\ip{v}{(I+aK)^{-1}v}.
+\end{equation}
+The inner product is conjugate-linear in its first slot and linear in its
+second slot. In particular, the complex extension
+$z\mapsto\ip{v}{(I+zK)^{-1}v}$ is holomorphic where the inverse exists.
+\end{definition}
+
+\begin{definition}[Differential Hilbert seed]\label{def:dseed}
+The assertion $\DSeed$ has the same existential data and operator
+hypotheses as Definition~\ref{def:hseed}, but replaces
+\eqref{eq:hseed} by
+\begin{equation}\label{eq:dseed}
+\frac{\mathrm d}{\mathrm da}\bigl(aL(a)\bigr)
+=\norm{(I+aK)^{-1}v}^{2}
+\quad\text{for every }a\in(\alpha,\beta).
+\end{equation}
+This is an exact functional identity on an interval, not a test at finitely
+many sample points.
+\end{definition}
+
+\begin{theorem}[Main analytic criterion]\label{thm:main}
+For the actual $\Theta$ associated with \eqref{eq:xi},
+\begin{equation}\label{eq:main}
+\RH\quad\Longleftrightarrow\quad\HSeed
+\quad\Longleftrightarrow\quad\DSeed.
+\end{equation}
+If either seed identity holds on one nonempty positive interval, its
+calibration extends to every $a\geq0$ for the same $K$ and $v$.
+Under RH, a seed can be chosen on $\ell^2(\N;\C)$ with $K$ positive,
+compact and trace class. In that realization,
+\begin{equation}\label{eq:normalization-intro}
+\Tr K=\norm v^2=\frac{\xi''(1/2)}{2\xi(1/2)}.
+\end{equation}
+\end{theorem}
+
+Sections~\ref{sec:resolvent}--\ref{sec:forward} prove the forward and
+differential implications without assuming RH or a positive zero product.
+Section~\ref{sec:converse} proves the converse under RH. The theorem is
+a criterion: the existential seed assertion carries the mathematical
+difficulty of RH. No independently constructed seed is supplied here.
+
+There are two different questions behind this note. The analytic question
+asks exactly what a fixed positive resolvent identity implies. The finite
+question asks whether a terminating checker on finite raw data can certify
+such an identity, and whether RH guarantees an accepted input to that same
+checker. The second question does not follow merely by naming the first
+one a seed. Section~\ref{sec:finite} makes this distinction precise.
+
+\section[Entire function and zero geometry]{The actual entire function and its zero geometry}\label{sec:theta}
+
+\subsection{Square descent without a branch choice}
+
+Put $E(w)=\xi(\tfrac12+w)$. This is entire, and the functional equation
+makes it even. Its Taylor series has the form
+\begin{equation}\label{eq:theta-series}
+E(w)=\sum_{n=0}^{\infty}c_nw^{2n},\qquad
+c_n=\frac{\xi^{(2n)}(1/2)}{(2n)!}.
+\end{equation}
+Define
+\begin{equation}\label{eq:theta-definition}
+\Theta(z)=\sum_{n=0}^{\infty}c_nz^n.
+\end{equation}
+The series has infinite radius of convergence. Indeed, for any $r>0$,
+the absolute convergence of \eqref{eq:theta-series} at a point with
+$|w|=\sqrt r$ gives $\sum_n|c_n|r^n<\infty$.
+Consequently
+\begin{equation}\label{eq:square-descent}
+\Theta(w^2)=\xi(\tfrac12+w)\qquad(w\in\C).
+\end{equation}
+The shorthand $\Theta(z)=\xi(\tfrac12+\sqrt z)$ therefore has a
+single-valued meaning: the two square roots give the same value. The branch
+cut introduced later belongs to the resolvent domain, not to $\Theta$.
+
+Complex conjugation preserves $\xi$, as follows first on its defining
+real domain and then by analytic continuation. Thus the coefficients
+$c_n$ are real, and
+$\Theta(\overline z)=\overline{\Theta(z)}$.
+
+\subsection{Positivity on the real positive axis}
+
+For completeness, the nonvanishing needed to define $L$ can be checked
+without RH. For $0<s<1$, the alternating-series formula
+\cite[Eq.~25.2.3]{dlmf-series} gives
+\begin{equation}\label{eq:eta}
+\zeta(s)=\frac{\eta(s)}{1-2^{1-s}},\qquad
+\eta(s)=\sum_{n=1}^{\infty}(-1)^{n-1}n^{-s}>0.
+\end{equation}
+The strict inequality follows by grouping consecutive terms:
+$(2j-1)^{-s}-(2j)^{-s}>0$. The even partial sums converge to the same
+alternating-series limit and already their first pair is positive.
+The denominator in \eqref{eq:eta} is negative, so $\zeta(s)<0$.
+Since $s(s-1)<0$ and the remaining factors in \eqref{eq:xi} are positive,
+$\xi(s)>0$ on $(0,1)$. For $s>1$, every factor in \eqref{eq:xi}
+is positive, and the removable value at $s=1$ is $1/2$.
+Applying this with $s=1/2+\sqrt a$ proves
+\begin{equation}\label{eq:theta-positive}
+\Theta(a)>0\quad(a\geq0),\qquad\Theta(0)=\xi(1/2)>0.
+\end{equation}
+
+It follows that
+\begin{equation}\label{eq:L}
+L(a)=\frac{\Theta'(a)}{\Theta(a)}\in\R\qquad(a\geq0)
+\end{equation}
+is real analytic, including at zero. On this axis it equals the recovered
+quantity $\Repart(\Theta'(a)/\Theta(a))$; taking the real part loses no
+information there. It would not be legitimate to make that replacement
+for arbitrary complex $z$.
+
+Expanding at zero gives the exact normalization
+\begin{equation}\label{eq:kappa}
+\kappa:=L(0)=\frac{\Theta'(0)}{\Theta(0)}
+=\frac{\xi''(1/2)}{2\xi(1/2)}.
+\end{equation}
+No numerical approximation to $\kappa$ is needed in any proof below.
+
+\subsection{The critical line becomes the negative real axis}
+
+The zeros of $\xi$ are exactly the nontrivial zeros of $\zeta$; the
+standard zero symmetry and the meaning of RH are recalled in
+\cite{dlmf-zeros}. If $\rho=1/2+w$ is such a zero, then
+$z=w^2$ is a zero of $\Theta$, and conversely every zero of $\Theta$
+arises this way by \eqref{eq:square-descent}.
+
+For $w=x+iy$,
+\begin{equation}\label{eq:square-real}
+w^2=(x^2-y^2)+2ixy.
+\end{equation}
+If $w^2$ is real and nonpositive, then $xy=0$ and $x^2-y^2\leq0$.
+If $y=0$, these imply $x=0$; if $y\ne0$, the equality $xy=0$ again
+implies $x=0$. Conversely $x=0$ gives $w^2=-y^2\leq0$.
+Since $\Theta(0)\ne0$, its zeros never correspond to $w=0$.
+We have therefore proved
+\begin{proposition}[Exact zero geometry]\label{prop:geometry}
+\begin{equation}\label{eq:rh-geometry}
+\RH\quad\Longleftrightarrow\quad
+\bigl(\Theta(z)=0\ \Longrightarrow\ z\in(-\infty,0)\bigr).
+\end{equation}
+\end{proposition}
+This elementary change of variables is the final geometric step of the
+forward proof. It refers to the actual $\xi$ and $\Theta$ throughout.
+
+\section[Fixed-vector resolvent calculus]{Resolvent calculus with one fixed vector}\label{sec:resolvent}
+
+Fix a complex Hilbert space $\HH$, a bounded nonnegative self-adjoint
+operator $K$, and a vector $v$. For $a\geq0$, set
+\begin{equation}\label{eq:Rfg}
+R_a=(I+aK)^{-1},\qquad f(a)=\ip v{R_av},\qquad g(a)=af(a).
+\end{equation}
+At this stage $f$ is a model scalar function; equality with the actual
+$L$ has not been assumed.
+
+\subsection{Invertibility, self-adjointness and commutation}
+
+For every $x\in\HH$, positivity and Cauchy--Schwarz imply
+\[
+\norm x^2\leq\ip x{(I+aK)x}\leq\norm x\,\norm{(I+aK)x}.
+\]
+Thus $I+aK$ is bounded below by $1$. Its range is closed. Its orthogonal
+complement is the kernel of its adjoint, which equals its own kernel
+because the operator is self-adjoint. The lower bound makes that kernel
+zero, so the range is also dense and hence is all of $\HH$.
+It follows that
+\begin{equation}\label{eq:Rbounds}
+\norm{R_a}\leq1,\qquad R_a^*=R_a,\qquad R_a\geq0.
+\end{equation}
+For the last inequality write $y=(I+aK)x$ and observe that
+$\ip y{R_ay}=\ip{(I+aK)x}x\geq0$.
+The operator $K$ commutes with $I+aK$ and therefore with its inverse.
+The operators $R_a$ and $R_b$ also commute.
+
+\begin{lemma}[Two resolvent identities]\label{lem:resolvents}
+For $a,b\geq0$,
+\begin{align}
+R_a-R_b&=(b-a)R_aKR_b,\label{eq:first-resolvent}\\
+aR_a-bR_b&=(a-b)R_aR_b.\label{eq:second-resolvent}
+\end{align}
+\end{lemma}
+\begin{proof}
+For the first identity, multiply out
+$R_a[(I+bK)-(I+aK)]R_b$.
+For the second, the same calculation with
+$a(I+bK)-b(I+aK)=(a-b)I$ gives the result.
+Both formulas also hold when $a=b$, with both sides then zero.
+\end{proof}
+
+\subsection{Differentiation in operator norm}
+
+From \eqref{eq:first-resolvent},
+\[
+\frac{R_{a+h}-R_a}{h}=-R_{a+h}KR_a.
+\]
+Continuity of inversion, or the same identity and local boundedness, shows
+that the right side tends in operator norm to $-R_aKR_a$.
+Since $K$ commutes with $R_a$,
+\begin{equation}\label{eq:Rprime}
+R'_a=-KR_a^2.
+\end{equation}
+Repeated differentiation yields
+\begin{equation}\label{eq:Rderivatives}
+R_a^{(n)}=(-1)^n n!K^nR_a^{n+1}\qquad(n\geq0).
+\end{equation}
+One can verify the induction directly: differentiating $R_a^{n+1}$
+produces $n+1$ identical commuting terms
+$-KR_a^{n+2}$.
+Applying the continuous linear functional $T\mapsto\ip v{Tv}$ gives
+\begin{equation}\label{eq:fderivatives}
+(-1)^n f^{(n)}(a)=n!\ip v{K^nR_a^{n+1}v}\geq0.
+\end{equation}
+The last operator is positive, for example by the bounded self-adjoint
+functional calculus \cite{williams}. Thus $f$ is completely monotone.
+This consequence alone will not characterize a calibrated seed.
+
+\subsection{The norm-square identity}
+
+The identity $(I+aK)R_a=I$ implies
+$R_a=R_a^2+aKR_a^2$. Consequently
+\begin{align}
+g'(a)&=f(a)+af'(a)\notag\\
+&=\ip v{(R_a-aKR_a^2)v}\notag\\
+&=\ip v{R_a^2v}=\norm{R_av}^2.\label{eq:norm-square}
+\end{align}
+This proves the central algebraic formula, including its exact coefficient.
+It involves $af(a)$, not $f(a)$ alone and not an unspecified change of
+basepoint. Differentiating further gives
+\begin{equation}\label{eq:gderivatives}
+(-1)^n g^{(n+1)}(a)
+=(n+1)!\ip v{K^nR_a^{n+2}v}\geq0\qquad(n\geq0).
+\end{equation}
+In particular $g$ is increasing and concave on the positive axis.
+If $v\ne0$, then $R_av\ne0$ and $g'(a)>0$.
+
+\section[The Gram kernel]{The Gram kernel and its exact normalization}\label{sec:gram}
+
+Define $V_a=2\sqrt a\,R_av$ for $a>0$.
+Taking the scalar product of \eqref{eq:second-resolvent} with $v$
+and using self-adjointness gives, for $a\ne b$,
+\begin{equation}\label{eq:unscaled-gram}
+\frac{g(a)-g(b)}{a-b}
+=\ip v{R_aR_bv}=\ip{R_av}{R_bv}.
+\end{equation}
+Hence
+\begin{equation}\label{eq:gram}
+\ip{V_a}{V_b}
+=4\sqrt{ab}\,\frac{af(a)-bf(b)}{a-b}\qquad(a,b>0,\ a\ne b).
+\end{equation}
+If the calibration $f=L$ holds, this is precisely the recovered
+Hilbert-vector Gram identity.
+
+\begin{proposition}[Diagonal and positivity]\label{prop:gram}
+The divided-difference kernel
+\begin{equation}\label{eq:kernel}
+\mathcal K_g(a,b)=
+\begin{cases}
+\dfrac{g(a)-g(b)}{a-b},&a\ne b,\\[5pt]
+g'(a),&a=b
+\end{cases}
+\end{equation}
+is positive semidefinite. More precisely, for any finite collection
+$a_1,\ldots,a_m>0$ and complex numbers $c_1,\ldots,c_m$,
+\begin{equation}\label{eq:gram-psd}
+\sum_{i,j=1}^m\overline{c_i}c_j\mathcal K_g(a_i,a_j)
+=\norm{\sum_{j=1}^m c_jR_{a_j}v}^2\geq0.
+\end{equation}
+The diagonal extension of \eqref{eq:gram} is
+\begin{equation}\label{eq:gram-diagonal}
+\norm{V_a}^2=4a\,g'(a)=4a\,\norm{R_av}^2.
+\end{equation}
+\end{proposition}
+\begin{proof}
+Equation~\eqref{eq:unscaled-gram} gives all off-diagonal entries, while
+\eqref{eq:norm-square} gives the diagonal. Expanding the displayed squared
+norm proves \eqref{eq:gram-psd}; multiplication by the factors
+$2\sqrt{a_i}$ gives the scaled Gram matrix.
+\end{proof}
+
+For two distinct parameters, the determinant condition is the concrete inequality
+\begin{equation}\label{eq:two-point}
+\left|\frac{g(a)-g(b)}{a-b}\right|^2\leq g'(a)g'(b).
+\end{equation}
+It is a necessary condition tying different points together. Positivity of
+$g'$ at every individual point does not imply it.
+
+\begin{example}[Even strong scalar positivity is insufficient]\label{ex:scalar}
+Let $\widetilde g(a)=1-e^{-a}$ and
+$\widetilde f(a)=(1-e^{-a})/a$ for $a>0$.
+Then $\widetilde g'>0$, $\widetilde g''<0$, and
+\[
+\widetilde f(a)=\int_0^1 e^{-at}\dd t,\qquad
+(-1)^n\widetilde f^{(n)}(a)=\int_0^1t^ne^{-at}\dd t>0.
+\]
+Nevertheless, writing $d=a-b\ne0$, the off-diagonal divided difference is
+\[
+\mathcal K_{\widetilde g}(a,b)
+=e^{-(a+b)/2}\frac{\sinh(d/2)}{d/2}.
+\]
+The determinant of the corresponding two-by-two matrix equals
+\begin{equation}\label{eq:counterexample-det}
+e^{-a-b}\left[1-
+\left(\frac{\sinh(d/2)}{d/2}\right)^2\right]<0.
+\end{equation}
+The strict inequality follows from $|\sinh x|>|x|$ for nonzero real $x$,
+which follows by integrating $\cosh t>1$ away from zero.
+Thus these scalar monotonicity conditions cannot be substituted for the
+fixed-resolvent structure.
+\end{example}
+
+\section[Holomorphic model]{Holomorphic extension of the model}\label{sec:analytic}
+
+Choose a real number $M>\norm K$ with $M>0$, and set
+\begin{equation}\label{eq:domain}
+D_M=\C\setminus(-\infty,-1/M].
+\end{equation}
+This open connected domain contains zero and the entire positive real
+axis. The bounded self-adjoint spectral theorem puts $\sigma(K)$ in
+$[0,M]$ \cite{williams}. For $z\in D_M$ and $t\in[0,M]$, the number
+$1+zt$ is nonzero. Indeed, a zero would require $t>0$ and
+$z=-1/t\leq-1/M$. The functional calculus therefore defines
+\begin{equation}\label{eq:complex-model}
+R_z=(I+zK)^{-1},\qquad F(z)=\ip v{R_zv}\qquad(z\in D_M).
+\end{equation}
+
+\begin{lemma}[Norm-holomorphic resolvent]\label{lem:holomorphic}
+The maps $z\mapsto R_z$ and $z\mapsto F(z)$ are holomorphic on $D_M$.
+\end{lemma}
+\begin{proof}
+Fix $z_0\in D_M$. For sufficiently small $h$,
+$\norm{hKR_{z_0}}<1$ and
+\begin{align*}
+I+(z_0+h)K&=(I+z_0K)(I+hKR_{z_0}),\\
+R_{z_0+h}&=R_{z_0}\sum_{n=0}^{\infty}(-hKR_{z_0})^n.
+\end{align*}
+The series converges in operator norm on a neighborhood of $h=0$, so
+it is a norm-convergent local power series. The scalar functional
+$T\mapsto\ip v{Tv}$ is continuous and complex linear under the convention
+in Definition~\ref{def:hseed}, and applying it proves the scalar assertion.
+\end{proof}
+
+It is useful to retain zero in $D_M$. A cut at $(-\infty,0]$ would still
+suffice for the normalized seed-to-RH argument, but it would hide the
+evaluation at zero that removes the integration constant in the
+differential seed. Boundedness of $K$ supplies a genuine neighborhood of
+zero on which the resolvent is analytic.
+
+The spectral theorem also gives a scalar measure. If $E_K$ is the
+projection-valued spectral measure, define
+\begin{equation}\label{eq:measure}
+\mu(B)=\ip v{E_K(B)v}\qquad(B\text{ Borel in }[0,M]).
+\end{equation}
+It is a finite positive measure, with total mass $\norm v^2$, and
+\begin{equation}\label{eq:measure-resolvent}
+F(z)=\int_{[0,M]}\frac{1}{1+zt}\dd\mu(t).
+\end{equation}
+For a compact $C\subset D_M$, the continuous function $|1+zt|$ has a
+strictly positive minimum on $C\times[0,M]$. This bounds every fixed
+derivative of the integrand by an integrable constant. Thus
+\begin{equation}\label{eq:measure-derivatives}
+F^{(n)}(z)=(-1)^n n!\int_{[0,M]}
+\frac{t^n}{(1+zt)^{n+1}}\dd\mu(t).
+\end{equation}
+This justifies the integral differentiations directly and independently
+checks the operator formulas of Section~\ref{sec:resolvent}.
+
+\section[Transfer to RH]{The analytic transfer to RH}\label{sec:forward}
+
+\subsection{Exact calibration on an interval is enough}
+
+\begin{theorem}[Normalized seed implies RH]\label{thm:forward}
+If $\HSeed$ holds, then $\RH$ holds. For its fixed seed data,
+$F(a)=L(a)$ for all $a\geq0$.
+\end{theorem}
+\begin{proof}
+On the interval in Definition~\ref{def:hseed}, the calibration and
+$\Theta(a)>0$ imply
+\[
+\Theta'(a)-F(a)\Theta(a)=0.
+\]
+The function
+\begin{equation}\label{eq:division-free}
+G(z)=\Theta'(z)-F(z)\Theta(z)
+\end{equation}
+is holomorphic on $D_M$. Its zeros have an accumulation point there,
+so the identity theorem gives
+\begin{equation}\label{eq:ode}
+\Theta'(z)=F(z)\Theta(z)\qquad(z\in D_M).
+\end{equation}
+This passage does not assume that $\Theta$ is zero-free on $D_M$.
+The expression \eqref{eq:division-free} has no division by $\Theta$.
+
+Suppose, for a contradiction, that $\Theta$ has a zero $z_0\in D_M$.
+Since $\Theta(0)>0$, it is not identically zero. Its zero at $z_0$ has
+some finite order $m\geq1$, so near $z_0$,
+\[
+\Theta(z)=(z-z_0)^m h(z),\qquad h(z_0)\ne0,
+\]
+where $h$ is holomorphic. Substituting in \eqref{eq:ode} and cancelling
+$(z-z_0)^{m-1}$ off $z_0$ gives
+\[
+mh(z)+(z-z_0)h'(z)=(z-z_0)F(z)h(z).
+\]
+Both sides are continuous at $z_0$; evaluation there yields
+$mh(z_0)=0$, a contradiction.
+Therefore every zero of $\Theta$ lies outside $D_M$, hence in
+$(-\infty,-1/M]\subset(-\infty,0)$.
+Proposition~\ref{prop:geometry} gives RH. Finally, restricting
+\eqref{eq:ode} to $a\geq0$ and dividing by the already known positive
+$\Theta(a)$ proves $F(a)=L(a)$ everywhere on that ray.
+\end{proof}
+
+The proof uses neither a preselected logarithm of $\Theta$ on the cut
+plane nor an RH-dependent product. Choosing a global logarithm before
+proving zero-freeness would conceal the central difficulty. The
+division-free ODE avoids that issue.
+
+\subsection{The integration constant is real and must be treated}
+
+Suppose only the differential identity \eqref{eq:dseed} holds. From
+\eqref{eq:norm-square},
+\[
+\frac{\mathrm d}{\mathrm da}\bigl(aL(a)-af(a)\bigr)=0
+\quad(a\in(\alpha,\beta)).
+\]
+The ordinary mean value theorem on subintervals shows that
+\begin{equation}\label{eq:gauge}
+a\bigl(L(a)-F(a)\bigr)=C,
+\qquad L(a)=F(a)+\frac Ca
+\end{equation}
+for a constant $C\in\R$. Neither the derivative identity nor the
+off-diagonal Gram identity alone detects this constant: adding $C$ to
+$aL(a)$ changes neither its derivative nor its divided differences.
+
+For an arbitrary function on an interval bounded away from zero, one
+would need a normalization value to set $C=0$. The actual entire
+$\Theta$ supplies a stronger analytic normalization.
+
+\begin{theorem}[Differential seed and normalized seed agree]\label{thm:normalization}
+For the actual $\Theta$, $\DSeed\Longleftrightarrow\HSeed$.
+The same operator and vector can be used in both directions.
+\end{theorem}
+\begin{proof}
+If $\HSeed$ holds, differentiating $aL(a)=af(a)$ and using
+\eqref{eq:norm-square} gives $\DSeed$.
+Conversely assume $\DSeed$ and let $C$ be the constant in
+\eqref{eq:gauge}. Consider
+\begin{equation}\label{eq:Q}
+Q(z)=z\Theta'(z)-\bigl(zF(z)+C\bigr)\Theta(z).
+\end{equation}
+This is holomorphic on all of $D_M$, including zero. By
+\eqref{eq:gauge}, it vanishes on $(\alpha,\beta)$, so the identity
+theorem gives $Q=0$ throughout $D_M$. At zero,
+\[
+0=Q(0)=-C\Theta(0).
+\]
+Equation~\eqref{eq:theta-positive} therefore forces $C=0$.
+It follows that $z(\Theta'-F\Theta)=0$ on $D_M$. Away from zero
+we may divide by $z$, and continuity supplies the equality at zero.
+Thus \eqref{eq:ode} holds, and positive-ray division by $\Theta(a)$
+gives the normalized calibration. In particular $\HSeed$ holds.
+\end{proof}
+
+\begin{corollary}[The recovered norm-square identity is an RH criterion]
+For a fixed bounded nonnegative self-adjoint $K$ and fixed $v$,
+the identity \eqref{eq:dseed} on any nonempty positive interval
+implies RH. No extra origin-normalization premise is needed beyond
+the established facts about the actual $\Theta$.
+\end{corollary}
+
+The qualifier ``actual'' is essential. If one replaced $\Theta$ by
+$z^m\Theta$ with $m>0$, its logarithmic derivative would acquire
+$m/z$, and the derivative of $aL$ would not see that origin factor.
+The known value $\Theta(0)\ne0$ is precisely what rules out this
+ambiguity here.
+
+\section[Converse under RH]{The converse: constructing a seed under RH}\label{sec:converse}
+
+\subsection{Why the product has no exponential ambiguity}
+
+We use two classical facts about entire functions. The completed
+$\xi$ has order at most $1$; a direct growth argument from the theta
+integral is given in \cite{garrett}. Hadamard factorization and its
+zero-summability consequence are stated in
+\cite[Theorems~3.7 and 3.11]{mcmullen}.
+To see exactly how these apply, write
+$M_E(r)=\max_{|w|=r}|E(w)|$ and define $M_\Theta$ similarly.
+The map $w\mapsto w^2$ maps the circle of radius $\sqrt r$ onto the
+circle of radius $r$, so
+\begin{equation}\label{eq:order-halving}
+M_\Theta(r)=M_E(\sqrt r).
+\end{equation}
+A bound $|E(w)|\leq C_\varepsilon
+\exp(C_\varepsilon |w|^{1+\varepsilon})$ therefore puts the order
+of $\Theta$ at most $1/2$. Only the strict inequality ``order less
+than $1$'' is needed below.
+
+For an entire function of order less than $1$, nonzero at zero,
+Hadamard factorization has genus zero and a constant exponential factor.
+Its nonzero zeros $z_n$, repeated by multiplicity, satisfy
+$\sum_n|z_n|^{-1}<\infty$. Hence
+\begin{equation}\label{eq:general-product}
+\Theta(z)=\Theta(0)\prod_n\left(1-\frac z{z_n}\right).
+\end{equation}
+There is no factor $e^{bz}$ with $b\ne0$: the polynomial in the
+Hadamard exponential has degree at most the order, hence degree zero.
+There is also no origin monomial because $\Theta(0)\ne0$.
+
+\subsection{Zero pairs and multiplicity}
+
+Assume RH. Enumerate the positive ordinates of the nontrivial zeros
+as $\gamma_1,\gamma_2,\ldots$, repeating each according to its
+multiplicity. There are infinitely many zeros, with no finite
+accumulation point \cite{dlmf-zeros}. We can arrange
+$0<\gamma_1\leq\gamma_2\leq\cdots$ with $\gamma_n\to\infty$.
+The two points $w=\pm i\gamma$ are the preimages of
+$z=-\gamma^2$. Since the derivative of $w\mapsto w^2$ is nonzero
+at either preimage, a zero of multiplicity $m$ at either point
+corresponds to a zero of multiplicity $m$ of $\Theta$.
+It does \emph{not} become a zero of multiplicity $2m$.
+Equation~\eqref{eq:general-product} becomes
+\begin{equation}\label{eq:rh-product}
+\Theta(z)=\Theta(0)\prod_{n=1}^{\infty}
+\left(1+\frac z{\gamma_n^2}\right),\qquad
+\sum_{n=1}^{\infty}\frac1{\gamma_n^2}<\infty.
+\end{equation}
+Thus one positive/negative pair contributes one factor for each
+occurrence of its multiplicity.
+
+\subsection{Logarithmic differentiation with convergence controlled}
+
+Fix a compact set disjoint from the negative zero set, and enclose it
+in $|z|\leq r$. For all sufficiently large $n$,
+$\gamma_n^2>2r$ and
+\[
+\left|\frac1{z+\gamma_n^2}\right|\leq\frac2{\gamma_n^2}.
+\]
+The right side is summable by \eqref{eq:rh-product}. Finite initial
+factors have no zeros on the chosen compact set. Locally uniform
+convergence of the product and its logarithmic derivatives therefore
+justifies
+\begin{equation}\label{eq:rh-log-derivative}
+\frac{\Theta'(z)}{\Theta(z)}
+=\sum_{n=1}^{\infty}\frac1{z+\gamma_n^2}
+\end{equation}
+away from the zeros. In particular this identity holds at every
+$a\geq0$.
+
+\begin{proposition}[Diagonal realization under RH]\label{prop:diagonal}
+Let $\HH=\ell^2(\N;\C)$, and define
+\begin{equation}\label{eq:diagonal-data}
+(Kx)_n=\gamma_n^{-2}x_n,\qquad v_n=\gamma_n^{-1}.
+\end{equation}
+Then $K$ is bounded, self-adjoint, nonnegative, compact and trace
+class; $v\in\HH$; and
+\begin{equation}\label{eq:diagonal-calibration}
+\ip v{(I+aK)^{-1}v}=L(a)\qquad(a\geq0).
+\end{equation}
+\end{proposition}
+\begin{proof}
+The positive ordinates have a positive minimum: a sequence tending to
+zero would give an accumulation of zeros at $1/2$, contradicting
+$\xi(1/2)>0$. Hence the diagonal entries of $K$ are bounded.
+They are positive real numbers and tend to zero, which gives
+self-adjointness, positivity and compactness. Their sum is finite
+by \eqref{eq:rh-product}, so the positive diagonal operator is trace
+class. The same sum equals $\sum_n|v_n|^2$, proving $v\in\HH$.
+Finally,
+\[
+\ip v{(I+aK)^{-1}v}
+=\sum_n\frac{\gamma_n^{-2}}{1+a\gamma_n^{-2}}
+=\sum_n\frac1{a+\gamma_n^2}=L(a),
+\]
+using \eqref{eq:rh-log-derivative}.
+\end{proof}
+
+This proves $\RH\Rightarrow\HSeed$, completing
+Theorem~\ref{thm:main}. Taking $a=0$ gives the normalization
+\begin{equation}\label{eq:trace-norm}
+\Tr K=\norm v^2=\sum_n\gamma_n^{-2}
+=L(0)=\frac{\xi''(1/2)}{2\xi(1/2)}.
+\end{equation}
+For an arbitrary calibrated representation, $\norm v^2=L(0)$ still
+holds. The equality with $\Tr K$ is asserted only for the particular
+diagonal construction just given; arbitrary invisible operator components
+need not have that trace.
+
+If one prefers distinct positive ordinates $\gamma_j$ with multiplicities
+$m_j$, the equivalent scalar model uses
+$K_{jj}=\gamma_j^{-2}$ and $v_j=\sqrt{m_j}/\gamma_j$.
+Neither version assumes that zeta zeros are simple. In the repeated
+model, the vector need not be cyclic when an eigenvalue is repeated.
+No cyclicity assumption is needed for the argument.
+
+\section[Spectral measures and moments]{Spectral measures, moments and exact reconstruction}\label{sec:moments}
+
+\subsection{A scalar measure formulation}
+
+Define $\MSeed$ to mean that for some $M>0$ and finite positive
+Borel measure $\mu$ on $[0,M]$,
+\begin{equation}\label{eq:mseed}
+L(a)=\int_{[0,M]}\frac1{1+at}\dd\mu(t)
+\end{equation}
+on a nonempty positive interval.
+Section~\ref{sec:analytic} proves $\HSeed\Rightarrow\MSeed$.
+Conversely, given \eqref{eq:mseed}, take
+\[
+\HH=L^2([0,M],\mu),\qquad(Ku)(t)=tu(t),\qquad v(t)=1.
+\]
+Finite mass makes $v$ square integrable, while multiplication by $t$
+is bounded, nonnegative and self-adjoint. Its scalar resolvent is
+exactly \eqref{eq:mseed}. Therefore
+\begin{equation}\label{eq:measure-iff}
+\MSeed\quad\Longleftrightarrow\quad\HSeed
+\quad\Longleftrightarrow\quad\RH.
+\end{equation}
+
+The word ``finite'' in \emph{finite measure} means finite total mass.
+It does not mean finite support, a finite list of rational numbers, or
+a finite-checker witness. Under RH the measure is
+\begin{equation}\label{eq:rh-measure}
+\mu=\sum_n\gamma_n^{-2}\delta_{\gamma_n^{-2}},\qquad
+\mu([0,M])=\kappa.
+\end{equation}
+This differs from the zero-counting measure
+$\sum_n\delta_{\gamma_n^2}$, which has infinite total mass. The
+reciprocal variable and the weights are essential to the normalization.
+
+\subsection{Moments and positive finite sections}
+
+For any fixed positive operator model, put
+\begin{equation}\label{eq:moments}
+m_n=\ip v{K^nv}=\int_{[0,M]}t^n\dd\mu(t)\qquad(n\geq0).
+\end{equation}
+If $|z|M<1$, the Neumann series converges uniformly in the spectral
+variable and gives
+\begin{equation}\label{eq:moment-series}
+F(z)=\sum_{n=0}^{\infty}(-1)^nm_nz^n,
+\qquad0\leq m_n\leq M^n m_0.
+\end{equation}
+The remainder after degree $N$ has the exact form
+\begin{equation}\label{eq:moment-remainder}
+F(z)-\sum_{n=0}^N(-1)^nm_nz^n
+=(-z)^{N+1}\int\frac{t^{N+1}}{1+zt}\dd\mu(t),
+\end{equation}
+and consequently
+\begin{equation}\label{eq:moment-bound}
+\left|F(z)-\sum_{n=0}^N(-1)^nm_nz^n\right|
+\leq\frac{m_0(M|z|)^{N+1}}{1-M|z|}.
+\end{equation}
+For a calibrated model,
+\begin{equation}\label{eq:actual-moments}
+m_n=\frac{(-1)^n}{n!}L^{(n)}(0).
+\end{equation}
+This is an all-orders identity for actual derivatives.
+
+For a polynomial $p(t)=\sum_i c_it^i$, positivity of $\mu$ gives
+\begin{align}
+\sum_{i,j}\overline{c_i}c_jm_{i+j}&\geq0,\label{eq:H0}\\
+\sum_{i,j}\overline{c_i}c_jm_{i+j+1}&\geq0,\label{eq:H1}\\
+\sum_{i,j}\overline{c_i}c_j
+\bigl(M^2m_{i+j}-m_{i+j+2}\bigr)&\geq0.\label{eq:H2}
+\end{align}
+These are the integrals of $|p|^2$, $t|p|^2$ and
+$(M^2-t^2)|p|^2$. Every finite matrix in this hierarchy is positive
+semidefinite. The following converse records exactly what an
+\emph{all-orders} moment construction can accomplish.
+
+\begin{theorem}[Bounded positive moment reconstruction]\label{thm:gns}
+Let $(m_n)_{n\geq0}$ be a real sequence and $M>0$.
+Suppose \eqref{eq:H0}--\eqref{eq:H2} hold for every finite coefficient
+list. Then there exist a Hilbert space, a bounded nonnegative
+self-adjoint operator $K$ with $\norm K\leq M$, and a vector $v$
+such that $m_n=\ip v{K^nv}$ for all $n$.
+\end{theorem}
+\begin{proof}
+Define a complex linear functional $\ell$ on polynomials by
+$\ell(t^n)=m_n$, and a sesquilinear form by
+$\ip pq_0=\ell(\overline p\,q)$, where conjugation acts on coefficients
+and $t$ is real. Condition~\eqref{eq:H0} makes this form positive
+semidefinite, hence it satisfies Cauchy--Schwarz. Quotient the polynomial
+space by the vectors of zero seminorm and complete to a Hilbert space
+$\HH$.
+
+Multiplication by $t$ is well defined on the quotient: by
+\eqref{eq:H2},
+\[
+\norm{tp}_0^2=\ell(t^2|p|^2)\leq M^2\ell(|p|^2)=M^2\norm p_0^2.
+\]
+Thus it sends every null vector to a null vector and is bounded by
+$M$. It extends to an everywhere defined bounded operator $K$ on
+$\HH$. Since
+$\ell(\overline{tp}\,q)=\ell(\overline p\,tq)$, it is symmetric
+on a dense subspace and hence self-adjoint after extension.
+Condition~\eqref{eq:H1} gives
+$\ip{[p]}{K[p]}=\ell(t|p|^2)\geq0$; continuity makes $K$ positive
+on all of $\HH$. Let $v=[1]$. Then $K^nv=[t^n]$ and
+$\ip v{K^nv}=\ell(t^n)=m_n$, as required.
+\end{proof}
+
+\begin{corollary}[An all-order actual-jet criterion]\label{cor:moment-criterion}
+Define $m_n$ by \eqref{eq:actual-moments}. RH is equivalent to the
+existence of $M>0$ such that \eqref{eq:H0}--\eqref{eq:H2} hold
+for every finite coefficient list.
+\end{corollary}
+\begin{proof}
+Under RH, the diagonal seed supplies these inequalities.
+Conversely, Theorem~\ref{thm:gns} constructs $K,v$ with the specified
+moments. The resolvent has Taylor series \eqref{eq:moment-series}.
+The actual $L$ is analytic near zero and has exactly the same Taylor
+coefficients. They therefore agree on a common disk of positive radius,
+and in particular on a positive open interval. This is $\HSeed$,
+which implies RH.
+\end{proof}
+
+The quantifier ``for every finite coefficient list'' ranges over
+unbounded degrees. Checking finitely many matrices does not establish
+this corollary. A finite certificate would have to derive the entire
+hierarchy by an independently proved uniform mechanism.
+
+\subsection{What is determined by calibration}
+
+If two compactly supported finite positive measures represent the same
+actual $L$ on an interval, analytic continuation gives equality near
+zero. Their moments consequently agree. View both on a common compact
+interval containing their supports. Polynomials are dense in the
+continuous functions on that interval, and equality of integrals for
+polynomials extends, by the total-mass bound, to all continuous functions.
+Uniqueness of finite Borel measures then gives equality of the two measures.
+Thus the scalar spectral measure seen by $v$ is determined. This does
+not identify every operator on the ambient Hilbert space: an orthogonal
+summand invisible to $v$ leaves all the scalar identities unchanged.
+
+\section[Shifts and truncations]{Basepoint shifts and finite truncations}\label{sec:shifts}
+
+\subsection{Two different shifted vectors}
+
+Fix $a_0\geq0$, and abbreviate $R_0=(I+a_0K)^{-1}$ in this
+subsection only. Set
+\begin{equation}\label{eq:shift-data}
+B=KR_0,\qquad w=R_0^{1/2}v,\qquad u=R_0v.
+\end{equation}
+These two vectors have different purposes. For $t=a-a_0$ with
+$a\geq0$,
+\[
+I+aK=(I+a_0K)(I+tB).
+\]
+All the displayed operators commute. Therefore
+\begin{equation}\label{eq:f-shift}
+f(a_0+t)=\ip w{(I+tB)^{-1}w}.
+\end{equation}
+The functional calculus gives
+$0\leq B\leq M(1+a_0M)^{-1}I$ whenever $0\leq K\leq MI$.
+In particular the local shifted inverse is analytic at $t=0$.
+
+On the other hand, \eqref{eq:second-resolvent} gives
+\begin{equation}\label{eq:g-shift}
+g(a_0+t)-g(a_0)
+=t\ip u{(I+tB)^{-1}u}.
+\end{equation}
+To verify this, write
+$aR_a-a_0R_0=tR_aR_0$ and
+$R_a=(I+tB)^{-1}R_0$, then take the scalar product with $v$.
+Differentiating \eqref{eq:g-shift} gives
+\begin{equation}\label{eq:shift-derivative}
+g'(a_0+t)=\norm{(I+tB)^{-1}u}^2.
+\end{equation}
+The additive value $g(a_0)$ and the distinction $w\ne u$ in general
+must be retained. Merely replacing $a$ by $a-a_0$ in part of a
+formula changes the mathematical condition.
+
+\subsection{What finite diagonal truncations do prove}
+
+Under RH, use the repeated-ordinate model from
+Proposition~\ref{prop:diagonal}, and truncate after $N$ entries:
+\[
+F_N(z)=\sum_{n=1}^N\frac1{z+\gamma_n^2},\qquad
+S_N=\sum_{n>N}\gamma_n^{-2}.
+\]
+For every $a\geq0$,
+\begin{equation}\label{eq:positive-tail}
+0\leq L(a)-F_N(a)\leq S_N.
+\end{equation}
+To state a bound on a whole disk, define the tail directly by
+\[
+T_N(z)=\sum_{n>N}\frac1{z+\gamma_n^2}.
+\]
+If $\gamma_{N+1}^2>2r$, this series is holomorphic on a neighborhood
+of $|z|\leq r$. Away from the initial poles it equals $F-F_N$;
+at a shared pole among the first $N$ terms, it is the holomorphic
+extension of that difference after cancellation. Thus, on the entire disk,
+\begin{equation}\label{eq:complex-tail}
+|T_N(z)|\leq2S_N.
+\end{equation}
+For each derivative order $j\geq0$, the same argument gives
+\begin{equation}\label{eq:derivative-tail}
+|T_N^{(j)}(z)|
+\leq j!\,2^{j+1}\sum_{n>N}\gamma_n^{-2j-2}.
+\end{equation}
+These estimates follow term by term from the convergent series and
+its displayed denominator bounds. They show what a tail certificate
+would need to control, including its dependence on derivative order.
+
+The construction here assumes RH to identify the positive spectrum.
+It is consequently not an unconditional finite computation proving RH.
+Even a uniform small error does not imply exact equality; a uniform
+error bound for values alone does not automatically supply an error
+bound for all derivatives on the same domain.
+
+\section[Hyperbolic zeta connections]{Hyperbolic zeta identities and the actual-seed transfer}\label{sec:hyperbolic}
+
+The hyperbolic zeta identities provide explicit positive measures from
+which the operator calculus of Section~\ref{sec:resolvent} can be
+constructed. This section makes that connection precise, including the
+normalization of the odd-zeta formulas. It also identifies a limitation:
+the resulting model functions have a different large-parameter behavior
+from the actual $L$. Their positivity is useful structural information,
+but these particular models cannot themselves be its exact calibration.
+We then derive an actual-$\xi$ Mellin identity and a conditional
+coefficient-limit theorem for positive determinant models obtained
+from the project's signed pencils. The limit condition is stated as
+an open analytic obligation.
+
+The source identities below are traced to the manuscript
+\cite{hyp-manuscript} and repository revision \texttt{b56c810}
+\cite{hyp-weight,hyp-moments,hyp-pole,hyp-gram,hyp-signs}.
+Only the displayed identities are used, with proofs or explicit
+classical inputs supplied here. Source inspection is separate from
+native compilation and axiom auditing.
+
+\subsection{A positive weight and its Mellin moments}
+
+For an integer $k\geq0$, set
+\begin{equation}\label{hyp-weight-def}
+B(x)=\frac1{e^x-1},\qquad
+\omega_k(y)=\frac{2(2\pi)^{2k}}{(2k)!}
+y^{2k+1}B^{(2k)}(2\pi y),\qquad y>0.
+\end{equation}
+Here $B^{(2k)}$ denotes differentiation with respect to the argument of
+$B$, not with respect to $y$. This distinction determines the factor
+$(2\pi)^{2k}$. The weights and their moment identities are the relevant
+positive-measure objects in the hyperbolic zeta development
+\cite{hyp-weight,hyp-moments}. If a continuous weight parameter
+$s>1$ is used, the coefficient extending these weights is
+$2(2\pi)^{s-1}/\Gamma(s)$. The printed continuous coefficient
+$(2\pi)^s/(2\Gamma(s))$ differs by $\pi/2$; the repository records
+this correction explicitly \cite{hyp-normalization}.
+
+\begin{proposition}[Positivity and exact moments]\label{hyp-moment-prop}
+The function $\omega_k$ is strictly positive, tends to $1/\pi$ at zero,
+and defines a finite measure on $(0,\infty)$. For every real $q>-1$,
+\begin{equation}\label{hyp-mellin}
+\int_0^\infty y^q\omega_k(y)\dd y
+=\frac{2\Gamma(q+2k+2)\zeta(q+2)}
+{(2k)!(2\pi)^{q+2}}.
+\end{equation}
+In particular,
+\begin{equation}\label{hyp-mass}
+\int_0^\infty\omega_k(y)\dd y=\frac{2k+1}{12}.
+\end{equation}
+\end{proposition}
+\begin{proof}
+The geometric series and its locally uniformly convergent derivatives
+give
+\[
+B^{(2k)}(x)=\sum_{n=1}^{\infty}n^{2k}e^{-nx}>0\qquad(x>0).
+\]
+The Laurent expansion $B(x)=x^{-1}-1/2+O(x)$, with its analytic
+remainder near zero, shows
+$B^{(2k)}(x)\sim(2k)!x^{-2k-1}$. Substitution in
+\eqref{hyp-weight-def} gives $\omega_k(y)\to1/\pi$.
+At infinity the differentiated geometric series is $O(e^{-x})$,
+so the weight has exponential decay times a polynomial.
+
+For the exact value, Tonelli's theorem applies because every summand is
+nonnegative. The gamma integral then yields
+\begin{align*}
+\int_0^\infty y^q\omega_k(y)\dd y
+&=\frac{2(2\pi)^{2k}}{(2k)!}
+\sum_{n\geq1}n^{2k}
+\frac{\Gamma(q+2k+2)}{(2\pi n)^{q+2k+2}}\\
+&=\frac{2\Gamma(q+2k+2)}{(2k)!(2\pi)^{q+2}}
+\sum_{n\geq1}n^{-q-2}.
+\end{align*}
+The last series converges precisely in the stated real range. Taking
+$q=0$ and using $\zeta(2)=\pi^2/6$ proves \eqref{hyp-mass}.
+\end{proof}
+
+Thus polynomial Gram matrices have exact entries involving even and odd
+zeta values. Their positivity alone does not make multiplication by $y$
+or $y^2$ bounded: the measure has unbounded support. The next construction
+supplies the bounded operator required by the seed framework.
+For instance, the even moments $b_j=\int y^{2j}\omega_k(y)\dd y$
+satisfy
+\begin{equation}\label{hyp-raw-ratio}
+\frac{b_{j+1}}{b_j}
+=\frac{(2k+2j+3)(2k+2j+2)}{4\pi^2}
+\frac{\zeta(2j+4)}{\zeta(2j+2)}\longrightarrow\infty.
+\end{equation}
+Thus no fixed finite support bound can be read into the raw moment
+sequence. Positivity and bounded support are different requirements in
+the reconstruction theorem. Here the support is made compact by an
+explicit change of spectral variable, whose effect on the vector and
+measure must also be included.
+
+\subsection{Compactification and the fixed Hilbert vector}
+
+Put
+\begin{equation}\label{hyp-compactification}
+t(y)=\frac1{1+y^2},\qquad
+\HH_k=L^2((0,\infty),\omega_k(y)\dd y),\qquad
+(K_ku)(y)=t(y)u(y),\qquad v_k(y)=\sqrt{t(y)}.
+\end{equation}
+Then $K_k$ is nonnegative and self-adjoint, with $\norm{K_k}=1$.
+Indeed, $0<t(y)<1$, and values arbitrarily close to $1$ occur on
+sets of positive measure. Also $v_k\in\HH_k$ by
+\eqref{hyp-mass}. Its scalar resolvent is
+\begin{equation}\label{hyp-resolvent}
+F_k(a)=\ip{v_k}{(I+aK_k)^{-1}v_k}
+=\int_0^\infty\frac{\omega_k(y)}{a+1+y^2}\dd y,
+\qquad a>-1.
+\end{equation}
+In particular, $\norm{v_k}^2=F_k(0)$; it is not the total mass in
+\eqref{hyp-mass}.
+The factor $\sqrt{t(y)}$ in the vector is essential to this
+normalization: its square supplies the numerator $t(y)$ in
+$t(y)/(1+at(y))=(a+1+y^2)^{-1}$. All parameters consequently use
+one operator and one vector, exactly as required in the seed definitions.
+The construction is infinite dimensional, despite the single integer
+parameter specifying the density.
+
+Define the finite measure $\nu_k$ on $[0,1]$ by
+\[
+\int\varphi(t)\dd\nu_k(t)
+=\int_0^\infty t(y)\varphi(t(y))\omega_k(y)\dd y.
+\]
+Its moments are
+\begin{equation}\label{hyp-compact-moments}
+q_n^{(k)}=\int_0^1t^n\dd\nu_k(t)
+=\int_0^\infty\frac{\omega_k(y)}{(1+y^2)^{n+1}}\dd y,
+\qquad
+F_k(a)=\sum_{n\geq0}(-1)^nq_n^{(k)}a^n\quad(|a|<1).
+\end{equation}
+The series follows from a uniformly convergent geometric series on
+$0\leq t\leq1$. For every polynomial $p(t)=\sum_i c_it^i$,
+integration of $|p|^2$, $t|p|^2$, $(1-t)|p|^2$ and
+$(1-t^2)|p|^2$ proves positivity of all finite sections of
+\begin{equation}\label{hyp-psd}
+(q_{i+j}^{(k)}),\quad(q_{i+j+1}^{(k)}),\quad
+(q_{i+j}^{(k)}-q_{i+j+1}^{(k)}),\quad
+(q_{i+j}^{(k)}-q_{i+j+2}^{(k)}).
+\end{equation}
+These are all-order identities for this explicitly defined model.
+They make no identification with the actual moments
+$(-1)^nL^{(n)}(0)/n!$.
+There is also the full compact-moment difference identity
+\begin{equation}\label{hyp-hausdorff}
+\sum_{j=0}^{r}(-1)^j\binom rj q_{n+j}^{(k)}
+=\int_0^1 t^n(1-t)^r\dd\nu_k(t)\geq0
+\qquad(n,r\geq0).
+\end{equation}
+For a nonzero polynomial, each quadratic form in
+\eqref{hyp-psd} is strictly positive: its integrand is positive
+except at finitely many roots and possibly the endpoints, and the
+transformed measure gives positive mass to every open subinterval
+of $(0,1)$.
+
+The compact moments should not be obtained by formally expanding
+$(1+y^2)^{-1}$ into powers of $y^2$ and integrating term by term.
+That geometric series does not converge throughout the original
+unbounded support. Formula~\eqref{hyp-compact-moments}, or the
+Hurwitz calculation below, supplies a justified route instead.
+
+With $R_{k,a}=(I+aK_k)^{-1}$ and $g_k(a)=aF_k(a)$,
+the general resolvent calculation gives the explicit formulas
+\begin{align}
+g_k'(a)
+&=\norm{R_{k,a}v_k}^2
+=\int_0^\infty\frac{(1+y^2)\omega_k(y)}{(a+1+y^2)^2}\dd y,
+\label{hyp-energy}\\
+\frac{g_k(a)-g_k(b)}{a-b}
+&=\ip{R_{k,a}v_k}{R_{k,b}v_k}
+=\int_0^\infty
+\frac{(1+y^2)\omega_k(y)}{(a+1+y^2)(b+1+y^2)}\dd y.
+\label{hyp-gram}
+\end{align}
+The second formula is for distinct nonnegative $a,b$ and extends
+diagonally by the first. Multiplication by $4\sqrt{ab}$ produces
+the Gram identity for $2\sqrt a\,R_{k,a}v_k$.
+
+\subsection{The Hurwitz identity and its endpoint normalization}
+
+\begin{proposition}[Real-parameter odd-zeta resolvent]\label{hyp-hurwitz-prop}
+For $k\geq1$, $a>-1$, and $z=\sqrt{1+a}>0$,
+\begin{equation}\label{hyp-hurwitz}
+F_k(a)=z^{2k}\zeta(2k+1,z)-\frac1{2z}-\frac1{2k}.
+\end{equation}
+For $k=0$,
+\begin{equation}\label{hyp-digamma}
+F_0(a)=\log z-\frac1{2z}-\psi(z).
+\end{equation}
+\end{proposition}
+\begin{proof}
+Binet's digamma formula \cite{dlmf-binet} states that, for real $z>0$,
+\begin{equation}\label{hyp-binet-base}
+h(z):=\log z-\frac1{2z}-\psi(z)
+=2\int_0^\infty\frac{yB(2\pi y)}{y^2+z^2}\dd y.
+\end{equation}
+This immediately proves the case $k=0$. For $k\geq1$, use
+$\partial_y^{2k}B(2\pi y)=(2\pi)^{2k}B^{(2k)}(2\pi y)$
+and integrate by parts $2k$ times:
+\[
+F_k(z^2-1)=\frac2{(2k)!}\int_0^\infty B(2\pi y)
+\partial_y^{2k}\!\left(\frac{y^{2k+1}}{y^2+z^2}\right)\dd y.
+\]
+Every boundary term vanishes. At zero, the product of the relevant
+derivatives is $O(y)$: the rational factor has a zero of order
+$2k+1$, whereas $\partial_y^jB(2\pi y)=O(y^{-j-1})$.
+At infinity the exponential decay dominates the polynomial factors.
+
+Polynomial division gives
+\[
+\frac{y^{2k+1}}{y^2+z^2}
+=P_{2k-1}(y)+(-z^2)^k\frac{y}{y^2+z^2}.
+\]
+The polynomial disappears after $2k$ differentiations. From
+$y/(y^2+z^2)=\tfrac12((y+iz)^{-1}+(y-iz)^{-1})$ one obtains
+\[
+\partial_y^{2k}\frac{y}{y^2+z^2}
+=(-1)^k\partial_z^{2k}\frac{y}{y^2+z^2}.
+\]
+On compact positive $z$-intervals these integral derivatives are dominated
+near zero and at infinity. Consequently
+\begin{equation}\label{hyp-binet-differentiated}
+F_k(z^2-1)=\frac{z^{2k}}{(2k)!}h^{(2k)}(z).
+\end{equation}
+More explicitly, every fixed $z$-derivative of
+$y/(y^2+z^2)$ is $O(y)$ near $y=0$, uniformly when $z$ stays
+away from zero. Multiplication by $B(2\pi y)=O(y^{-1})$
+therefore gives a locally integrable uniform bound. At infinity,
+the Bose factor supplies exponential domination. This verifies the
+exchange of differentiation and integration used in
+\eqref{hyp-binet-differentiated}.
+Finally,
+$\psi^{(2k)}(z)=-(2k)!\zeta(2k+1,z)$
+\cite{dlmf-hurwitz}; differentiating the logarithm and reciprocal in
+$h$ supplies respectively $-1/(2k)$ and $-1/(2z)$ after multiplication
+by $z^{2k}/(2k)!$. This proves \eqref{hyp-hurwitz}.
+\end{proof}
+
+Taking values and first derivatives at $a=0$ gives
+\begin{align}
+q_0^{(k)}&=\zeta(2k+1)-\frac12-\frac1{2k},\notag\\
+q_1^{(k)}&=\frac{2k+1}{2}\zeta(2k+2)
+-k\zeta(2k+1)-\frac14\qquad(k\geq1).
+\label{hyp-first-moments}
+\end{align}
+For $k=0$ the corresponding values are
+$q_0^{(0)}=\gamma-1/2$ and
+$q_1^{(0)}=\zeta(2)/2-3/4$, where $\gamma$ is Euler's constant.
+The differentiation uses $\partial_a=(2z)^{-1}\partial_z$ and
+$\partial_z\zeta(s,z)=-s\zeta(s+1,z)$. For $k\geq1$, repetition
+expresses every fixed compact moment through finitely many adjacent zeta values and
+rational constants. The integral formulas guarantee, independently of
+any cancellation in those expressions, that
+$q_0^{(k)}>q_1^{(k)}>q_2^{(k)}>\cdots>0$.
+This gives exact positivity identities suitable for comparing proposed
+moment constructions, without supplying the actual $\Theta$ jets.
+
+The integer-parameter versions must retain their endpoint convention
+\cite{hyp-pole}. For $k\geq1$, $N\geq1$, and $s=2k+1$,
+\begin{align}
+F_k(N^2-1)
+&=N^{2k}\left(\zeta(s)-\sum_{n=1}^{N-1}n^{-s}\right)
+-\frac1{2N}-\frac1{2k}\notag\\
+&=N^{2k}\left(\zeta(s)-\sum_{n=1}^{N}n^{-s}\right)
++\frac1{2N}-\frac1{2k}.
+\label{hyp-integer-endpoint}
+\end{align}
+Including the $N$th summand changes the sign of the displayed
+$1/(2N)$ contribution. At $N=1$, either version recovers
+the value of $q_0^{(k)}$ in \eqref{hyp-first-moments}.
+
+\subsection{An exact Bose term in the actual logarithmic derivative}
+
+There is a direct identity involving the actual completed zeta function.
+Let $a>1/4$ and $s=1/2+\sqrt a$, so $s>1$. Logarithmic
+differentiation of \eqref{eq:xi}, Binet's formula, and the convergent
+von Mangoldt series \cite{dlmf-binet,dlmf-mangoldt} give
+\begin{align}
+2\sqrt a\,L(a)
+={}&\frac1{2s}+\frac1{s-1}+\frac12\log\frac{s}{2\pi}\notag\\
+&-\int_0^\infty
+\frac{y\dd y}{(y^2+s^2/4)(e^{2\pi y}-1)}
+-\sum_{n=2}^{\infty}\Lambda(n)n^{-s}.
+\label{hyp-actual-binet}
+\end{align}
+Indeed, before substitution the gamma contribution is
+$\tfrac12\psi(s/2)$ and the elementary contribution includes $1/s$.
+The complete starting identity is
+\[
+\frac{\xi'(s)}{\xi(s)}
+=\frac1s+\frac1{s-1}-\frac12\log\pi
++\frac12\psi(s/2)+\frac{\zeta'(s)}{\zeta(s)}.
+\]
+Binet contributes $-1/(2s)$, leaving the coefficient $1/(2s)$
+in \eqref{hyp-actual-binet}. The same Bose kernel therefore occurs
+in the actual function, but together with the logarithmic, rational,
+and prime contributions. The positivity of one integral does not
+establish a positive-resolvent representation of their complete sum.
+
+\begin{proposition}[Asymptotic obstruction to direct calibration]
+\label{hyp-obstruction}
+No $F_k$ equals the actual $L$ on a nonempty open positive interval.
+More generally, this remains impossible for a finite sum
+$G(a)=\sum_{j=1}^{J}c_jF_{k_j}(d_ja+e_j)$ with
+$c_j,d_j>0$ and $e_j\geq0$.
+\end{proposition}
+\begin{proof}
+Dominated convergence in \eqref{hyp-resolvent} gives
+\begin{equation}\label{hyp-model-asymptotic}
+\lim_{a\to\infty}aF_k(a)=\frac{2k+1}{12},\qquad
+\lim_{a\to\infty}aG(a)=
+\sum_{j=1}^{J}\frac{c_j(2k_j+1)}{12d_j}<\infty.
+\end{equation}
+For the actual function, the integral in \eqref{hyp-actual-binet}
+is bounded by $1/(6s^2)$, using
+$\int_0^\infty yB(2\pi y)\dd y=1/24$.
+The prime sum is exponentially small as $s\to\infty$:
+for $s\geq4$ it is bounded by
+$2^{-s/2}\sum_{n\geq2}(\log n)n^{-2}$.
+The remaining rational terms are $O(s^{-1})$. Since
+$s=1/2+\sqrt a$, it follows that
+\begin{equation}\label{hyp-actual-asymptotic}
+L(a)=\frac{\log a}{8\sqrt a}
+-\frac{\log(2\pi)}{4\sqrt a}+O(a^{-1}),
+\qquad aL(a)\longrightarrow+\infty.
+\end{equation}
+Both $G$ and $L$ are real analytic throughout $(0,\infty)$.
+Equality on an open subinterval would imply equality on that connected
+ray, contradicting \eqref{hyp-model-asymptotic} and
+\eqref{hyp-actual-asymptotic}.
+\end{proof}
+
+This obstruction is consistent with the abstract Hilbert-seed theorem.
+A finite compact spectral measure need not have a finite reciprocal
+moment. For the present models, however,
+\begin{equation}\label{hyp-reciprocal-moment}
+\int_{(0,1]}\frac1t\dd\nu_k(t)
+=\int_0^\infty\omega_k(y)\dd y=\frac{2k+1}{12}.
+\end{equation}
+This extra integrability is exactly what makes $aF_k(a)$ tend to
+a finite limit. Under RH, the canonical measure in
+\eqref{eq:rh-measure} instead has reciprocal moment
+$\sum_n1=\infty$, although its total mass is finite. Thus one
+cannot reject all bounded positive operators from
+Proposition~\ref{hyp-obstruction}. The result rejects this particular
+specific Bose multiplication construction and its stated finite combinations.
+It identifies a concrete property that a different construction would
+have to change.
+
+Similarly, the positive matrices in \eqref{hyp-psd} can serve as exact
+examples for checking normalization, shifts and proposed reconstruction
+lemmas. Their proofs work uniformly in degree because a specific positive
+measure was supplied first. Transferring that conclusion to the actual
+jets would require a theorem equating the entire moment sequences, not
+agreement of several low-order entries or a numerical fit on an interval.
+
+The usable conclusion is precise: the hyperbolic identities supply
+explicit positive models, exact moment hierarchies, and a Bose integral
+inside the actual calibration problem. The bounded compactification
+above does not solve that problem. Any further construction must account
+for the full expression \eqref{hyp-actual-binet}, including the growth
+in \eqref{hyp-actual-asymptotic}, before it can satisfy $\HSeed$.
+
+
+\subsection{From hyperbolic source identities to the actual logarithmic moments}
+\label{hyp-sec:actual-moments}
+
+The useful connection begins with an identity for the actual completed
+function, rather than with a positive model chosen independently of it.
+Write $B(x)=(e^x-1)^{-1}$ for $x>0$. Elementary cancellation gives the
+positive density
+\begin{equation}\label{hyp-eq:fermi-density}
+h(x):=4B(2x)-8B(4x)
+=\frac{4}{e^{2x}+1}=2(1-\tanh x)>0.
+\end{equation}
+Thus a difference of two Bose kernels is exactly a positive Fermi,
+or hyperbolic-tangent, kernel. Its positivity follows after the
+cancellation; the two separate terms should not be treated as a
+positive-measure decomposition.
+
+Define the Mellin integral
+\begin{equation}\label{hyp-eq:mellin}
+I(s)=\int_0^\infty x^{s-1}h(x)\,\mathrm dx
+=2^{2-s}\Gamma(s)(1-2^{1-s})\zeta(s),
+\qquad \Re s>0.
+\end{equation}
+Here the expression at $s=1$ is removable, with $I(1)=2\log2$.
+For $\Re s>1$, expand
+$(e^{2x}+1)^{-1}=\sum_{k\geq1}(-1)^{k-1}e^{-2kx}$.
+Absolute convergence after integration permits termwise use of the
+gamma integral and gives
+$I(s)=2^{2-s}\Gamma(s)\sum_{k\geq1}(-1)^{k-1}k^{-s}$.
+Separating even and odd terms proves \eqref{hyp-eq:mellin} there.
+Both sides continue holomorphically to $\Re s>0$: on the integral
+side, $h(x)=O(1)$ at zero and $h(x)=O(e^{-2x})$ at infinity;
+on the function side, the factor $1-2^{1-s}$ removes the pole of
+$\zeta$ at $1$. The identity theorem gives the claimed domain.
+This is the scaled Fermi integral in \cite[Eq.~25.5.3]{dlmf-fermi}.
+
+The same density is obtained from the explicitly defined two-variable measure
+\begin{equation}\label{hyp-eq:gp-pushforward}
+q(r)=\frac{r}{e^r-1},\qquad d(r)=-q'(r)>0,\qquad
+\mathrm d\mu(r,y)=2d(r)\,\mathrm dr\,\frac{\mathrm dy}{y},
+\quad \frac14\leq y\leq\frac12,
+\end{equation}
+by pushing forward under $x=ry$. Indeed its density is
+\[
+2\int_{1/4}^{1/2}d(x/y)\,\frac{\mathrm dy}{y^2}
+=\frac2x\bigl(q(2x)-q(4x)\bigr)=h(x).
+\]
+For completeness, $d(r)>0$ because
+$-q'(r)=[e^r(r-1)+1]/(e^r-1)^2$, and the numerator vanishes at
+zero and has derivative $re^r>0$. This calculation gives an exact
+one-variable realization of the source layer. In particular its total
+mass is $I(1)=2\log2$, and the original two-variable integral of
+$(ry)^{s-1}$ is precisely $I(s)$. Tonelli's theorem applies first to
+nonnegative integrands; absolute integrability then gives the same
+change of variables for the complex Mellin integrands used here.
+
+The gamma duplication formula \cite{dlmf-duplication} simplifies the
+normalizing factor to
+\begin{equation}\label{hyp-eq:A}
+A(s)=\frac{s(s-1)\pi^{(1-s)/2}}
+{4\Gamma((s+1)/2)(1-2^{1-s})},
+\qquad \xi(s)=A(s)I(s).
+\end{equation}
+The equality holds in a complex neighborhood of $s=1/2$, which is
+the domain needed here. The denominator is nonzero there, and
+$A$ is positive on a real neighborhood of $1/2$: both $s(s-1)$
+and $1-2^{1-s}$ are negative for $0<s<1$.
+We do not claim that the displayed $A$ is holomorphic throughout
+the right half-plane; its other apparent singularities require
+cancellation in the product.
+
+\subsubsection{An explicit map from the source integrals to the required moments}
+
+Differentiation under the integral is valid to every fixed order:
+\begin{equation}\label{hyp-eq:log-integrals}
+I_j(s):=I^{(j)}(s)
+=\int_0^\infty x^{s-1}(\log x)^j h(x)\,\mathrm dx.
+\end{equation}
+On each compact substrip $\Re s\geq\sigma>0$, the behavior at
+zero is controlled by $x^{\sigma-1}|\log x|^j$, and the exponential
+tail controls infinity. In particular all the integrals at $1/2$
+are absolutely convergent. The product rule now gives actual,
+unconditional coefficient identities:
+\begin{align}
+a_n&:=\frac{\xi^{(2n)}(1/2)}{(2n)!\,\xi(1/2)},
+\qquad a_0=1,\label{hyp-eq:actual-coefficients}\\
+\xi^{(2n)}(1/2)
+&=\sum_{j=0}^{2n}\binom{2n}{j}
+A^{(2n-j)}(1/2)I_j(1/2),\label{hyp-eq:jet-product}\\
+\frac{\Theta(z)}{\Theta(0)}&=\sum_{n\geq0}a_nz^n.
+\label{hyp-eq:normalized-theta-series}
+\end{align}
+Consequently, hyperbolic identities that evaluate or bound these
+integrals can be transported to the actual $\Theta$ coefficients
+with every normalization factor visible.
+
+The resolvent moments are different quantities. Set
+$m_n=(-1)^nL^{(n)}(0)/n!$ as before. Comparing coefficients in
+$\Theta'=L\Theta$ gives the exact triangular recurrence
+\begin{equation}\label{hyp-eq:newton-recurrence}
+(n+1)a_{n+1}=\sum_{k=0}^{n}(-1)^km_k a_{n-k}
+\qquad(n\geq0).
+\end{equation}
+It determines every required $m_n$ from $a_1,\ldots,a_{n+1}$.
+The first cases and the first nontrivial Hankel determinant are
+\begin{align}
+m_0&=a_1,\notag\\
+m_1&=a_1^2-2a_2,\notag\\
+m_2&=a_1^3-3a_1a_2+3a_3,\label{hyp-eq:first-moments}\\
+\det\begin{pmatrix}m_0&m_1\\m_1&m_2\end{pmatrix}
+&=a_1^2a_2+3a_1a_3-4a_2^2.
+\label{hyp-eq:first-hankel}
+\end{align}
+These are algebraic identities, not positivity assertions.
+In particular, positive formulas for the individual $a_n$ do not
+settle the signs of their nonlinear combinations. To check the
+recurrence directly, multiply
+$\sum_{k\geq0}(-1)^km_kz^k$ by
+$\sum_{j\geq0}a_jz^j$ in a sufficiently small disk where
+$\Theta$ is nonzero. The coefficient of $z^n$ is the right side
+of \eqref{hyp-eq:newton-recurrence}, whereas differentiation of the
+second series gives its left side. The occurrence of $m_n$ with
+coefficient $(-1)^na_0=(-1)^n$ makes the recursion unique.
+
+There is also a compact cumulant interpretation. Let $X=\log x$
+under the probability measure
+$\mathrm d\nu=x^{-1/2}h(x)\,\mathrm dx/I(1/2)$, and write
+$\operatorname{cum}_j(X)$ for its $j$th cumulant. Its moment
+generating function exists near zero, and
+$\operatorname{cum}_j(X)=(\log I)^{(j)}(1/2)$.
+Indeed $\mathbf E_\nu[e^{tX}]=I(1/2+t)/I(1/2)$ for
+$|\Re t|<1/2$. The preceding endpoint estimates control this
+identity and all its fixed derivatives on smaller strips.
+Evenness of $\xi(1/2+w)$ and its nonzero value at zero give
+\begin{equation}\label{hyp-eq:cumulants}
+m_n=\frac{(-1)^n}{2(2n+1)!}
+\left((\log A)^{(2n+2)}(1/2)
++\operatorname{cum}_{2n+2}(X)\right).
+\end{equation}
+All logarithms here are local analytic logarithms chosen real on
+the relevant real interval. Formula~\eqref{hyp-eq:cumulants}
+shows explicitly why ordinary positive-measure moments do not
+automatically yield the required alternating logarithmic moments.
+The derivatives of $\log A$ are part of the calibration and cannot
+be discarded. For example, the second derivative of $\log I$ is
+the variance of $X$, but the second derivative of $\log\xi$
+also contains $(\log A)''$. Higher cumulants have no positivity
+law comparable to the elementary squared-norm identity for ordinary
+moment matrices.
+
+\subsubsection{The positive mass and the remaining positivity theorem}
+
+The mass $\kappa=m_0$ is strictly positive without RH. One standard
+positive Riemann kernel, obtained by rescaling the representation in
+\cite[Section~4, Eqs.~(4.1)--(4.2)]{csordas-kernel}, is
+\begin{align}
+\Psi(u)&=4\sum_{n\geq1}\pi n^2
+\bigl(2\pi n^2e^{2u}-3\bigr)
+e^{5u/2-\pi n^2e^{2u}},\qquad u\geq0,
+\label{hyp-eq:positive-riemann-kernel}\\
+\xi(1/2+w)&=\int_0^\infty\Psi(u)\cosh(wu)\,\mathrm du.
+\label{hyp-eq:riemann-cosh}
+\end{align}
+Every summand is positive, since $2\pi n^2e^{2u}>3$.
+The rapid decay justifies differentiation, and therefore
+\begin{equation}\label{hyp-eq:kappa-positive}
+\kappa=\frac{\int_0^\infty u^2\Psi(u)\,\mathrm du}
+{2\int_0^\infty\Psi(u)\,\mathrm du}>0.
+\end{equation}
+
+To see the distinction quantitatively, normalize
+$\mathrm d\nu_R=\Psi(u)\,\mathrm du/\xi(1/2)$ and put
+$b_j=\int u^{2j}\,\mathrm d\nu_R$, so that
+$a_j=b_j/(2j)!$ and $b_0=1$. Then
+\begin{equation}\label{hyp-eq:kurtosis-gap}
+m_1=\frac{3b_1^2-b_2}{12}.
+\end{equation}
+Ordinary positive-measure Cauchy--Schwarz gives $b_2\geq b_1^2$;
+the necessary resolvent inequality $m_1\geq0$ instead requires
+the additional upper bound $b_2\leq3b_1^2$. These are different
+inequalities. The first Hankel determinant in
+\eqref{hyp-eq:first-hankel} introduces still another combination
+involving $b_3$, and the hierarchy continues to unbounded degree.
+
+Such kernel positivity must still be distinguished from the full
+resolvent criterion. For example, the entire function
+$\Theta_*(z)=\tfrac34+\tfrac14\cosh\sqrt z$ has a positive
+cosh-measure representation and is positive for $z\geq0$.
+Nevertheless its normalized coefficients satisfy
+$a_1=1/8$, $a_2=1/96$, and its transformed moment is
+$m_1=a_1^2-2a_2=-1/192<0$.
+Thus even a positive cosh representation and entire square descent
+do not by themselves imply the desired Stieltjes moment positivity.
+
+The exact benefit of the hyperbolic source identities is therefore
+the calibrated chain
+$I_j\longmapsto\xi^{(2n)}(1/2)\longmapsto a_n\longmapsto m_n$.
+The missing theorem must control these \emph{actual transformed}
+moments: for one finite $M>0$, all finite sections of
+$(m_{i+j})$, $(m_{i+j+1})$, and
+$(M^2m_{i+j}-m_{i+j+2})$ must be positive semidefinite.
+The source integrals already give positivity of ordinary
+log-moment matrices $(I_{i+j}(1/2))$, since for every finite
+coefficient list
+\[
+\sum_{i,j}\overline c_i c_j I_{i+j}(1/2)
+=\int_0^\infty x^{-1/2}h(x)
+\left|\sum_jc_j(\log x)^j\right|^2\,\mathrm dx\geq0.
+\]
+These are moments of $\log x$, which ranges over the whole real
+line. They are not already moments of a bounded nonnegative
+operator with the required logarithmic-derivative calibration.
+Transferring their positivity
+through \eqref{hyp-eq:jet-product} and
+\eqref{hyp-eq:newton-recurrence} is a substantive additional
+obligation. Establishing it uniformly would activate the paper's
+bounded moment reconstruction and RH transfer.
+
+
+\subsection{From the signed hyperbolic pencil to positive determinant models}
+\label{subsec:hyp-pencil}
+
+The determinant identities in the Hyperbolic Zeta project give a second
+construction, different from the multiplication model above. Let
+$k,m,N,J$ be integers with $k,m\geq1$ and $1\leq N<J$, and put
+$h=J-N$, $x_0=\zeta(2k+1)$ and
+\[
+D_j(t)=\prod_{r=1}^{j}(t+r^2).
+\]
+For an admissible affine Hankel pencil in that project, its value $G$
+at $x_0$ has entries
+\begin{equation}\label{eq:hyp-pencil-gram}
+G_{ij}=\int_0^\infty y^{2(i+j)}
+  \frac{D_N(y^2)^{2m}}{D_J(y^2)}\omega_k(y)\dd y,
+\qquad 0\leq i,j<h.
+\end{equation}
+All these integrals converge. For $c\in\C^h\setminus\{0\}$,
+\[
+c^*Gc=\int_0^\infty
+ \left|\sum_{j=0}^{h-1}c_j y^{2j}\right|^2
+ \frac{D_N(y^2)^{2m}}{D_J(y^2)}\omega_k(y)\dd y>0.
+\]
+The density and rational factor are positive, and a nonzero polynomial
+cannot vanish on an interval. Thus $G$ is positive definite.
+The affine pencil is
+\begin{equation}\label{eq:hyp-affine-pencil}
+\mathcal G(X)=G+(X-x_0)M,\qquad
+\Delta(X)=\det\mathcal G(X),\qquad
+B=G^{-1/2}MG^{-1/2}.
+\end{equation}
+Here $M=M^*$ is the coefficient of $X$. These identifications are
+recorded in the project's exact Gram and pole-diagonalization sources
+\cite{hyp-gram,hyp-signs}.
+
+The positive Gram matrix does not make the coefficient $M$ positive.
+In the pole basis the identity is
+\begin{equation}\label{eq:hyp-pole-sign}
+M=V\operatorname{diag}(\gamma_r)_{N<r\leq J}V^T,
+\qquad \operatorname{sgn}\gamma_r=(-1)^{r-1},
+\end{equation}
+with $V$ invertible. In fact,
+\[
+\gamma_r=r^{2k}
+ \frac{D_N(-r^2)^{2m-1}}{D_{\mathrm{tail}}'(-r^2)},
+\qquad D_{\mathrm{tail}}(t)=\prod_{j=N+1}^J(t+j^2).
+\]
+The numerator has sign $(-1)^N$ and the denominator has sign
+$(-1)^{r-N-1}$, proving the sign in \eqref{eq:hyp-pole-sign}.
+Consequently $B$ is self-adjoint and invertible, but has both positive
+and negative eigenvalues when $h\geq2$. Hyperbolicity of $\Delta$
+means its roots are real; the Hilbert seed instead requires a
+nonnegative operator. These are different properties.
+
+\begin{proposition}[Squared-pencil identity]\label{prop:hyp-square}
+For any finite self-adjoint $B$ as in \eqref{eq:hyp-affine-pencil}
+and any $c>0$, let $K=cB^2$ and $Q_c(z)=\det(I+zK)$. Then
+\begin{equation}\label{eq:hyp-square-product}
+Q_c(z)=
+\frac{\Delta(x_0+i\sqrt{cz})\Delta(x_0-i\sqrt{cz})}
+     {\Delta(x_0)^2}.
+\end{equation}
+The right side is a polynomial in $z$, independent of the choice
+of square root. If $\beta_1,\ldots,\beta_h$ are the eigenvalues of $B$,
+then $\lambda_j=c\beta_j^2\geq0$ and
+\begin{equation}\label{eq:hyp-square-resolvent}
+Q_c(z)=\prod_{j=1}^h(1+z\lambda_j),\qquad
+\frac{Q_c'(a)}{Q_c(a)}
+=\sum_{j=1}^h\frac{\lambda_j}{1+a\lambda_j}
+=\ip{v}{(I+aK)^{-1}v},\quad a\geq0,
+\end{equation}
+where $v=\sum_j\sqrt{\lambda_j}\,e_j$ in an orthonormal eigenbasis
+of $K$. In particular the exact differential seed algebra holds for
+$Q_c'/Q_c$.
+\end{proposition}
+
+\begin{proof}
+Congruence in \eqref{eq:hyp-affine-pencil} gives
+$\Delta(x_0+u)/\Delta(x_0)=\det(I+uB)$.
+The commuting factors satisfy
+\[
+(I+i\sqrt{cz}B)(I-i\sqrt{cz}B)=I+czB^2.
+\]
+Taking determinants proves \eqref{eq:hyp-square-product}. The spectral
+theorem gives the product and the scalar resolvent in
+\eqref{eq:hyp-square-resolvent}. Applying the already proved identity
+\eqref{eq:norm-square} to this $K,v$ gives the differential identity.
+For real $z\geq0$, the numerator in \eqref{eq:hyp-square-product} is
+an absolute square; for general complex $z$ it is the product of the
+two displayed factors.
+\end{proof}
+
+The operation $B\mapsto B^2$ changes the scalar determinant. It
+therefore constructs positive candidates without transferring any
+identity with the actual $\Theta$. The next result states a sufficient
+transfer condition in terms of exactly specified coefficients.
+
+\subsection{An all-order coefficient-limit theorem}
+\label{subsec:hyp-limit}
+
+Write $\Theta(z)/\Theta(0)=\sum_{r\geq0}a_rz^r$, where $a_0=1$,
+and let $\kappa=a_1=L(0)>0$ as established above. Consider a sequence
+of finite, nonzero self-adjoint matrices $B_n$, for example a
+specified sequence of the hyperbolic slopes. Define
+\begin{equation}\label{eq:hyp-normalized-square}
+c_n=\frac{\kappa}{\Tr(B_n^2)},\qquad
+K_n=c_nB_n^2,\qquad
+Q_n(z)=\det(I+zK_n)=\sum_{r\geq0}e_{n,r}z^r.
+\end{equation}
+Coefficients above the degree of $Q_n$ are set equal to zero.
+The denominator is positive, and
+\begin{equation}\label{eq:hyp-trace-bound}
+K_n\geq0,\qquad \Tr K_n=\kappa,\qquad
+\norm{K_n}\leq\kappa,\qquad
+0\leq e_{n,r}\leq\frac{\kappa^r}{r!}.
+\end{equation}
+The last inequality follows by expanding $(\sum_j\lambda_{n,j})^r$:
+the terms with $r$ distinct indices include $r!$ copies of every
+summand of the elementary symmetric polynomial $e_{n,r}$.
+
+\begin{theorem}[Conditional transfer of hyperbolic determinant models]
+\label{thm:hyp-coefficient-transfer}
+For the sequence \eqref{eq:hyp-normalized-square}, the following two
+conditions are equivalent:
+\begin{align}
+&\text{for every }r\geq0,\qquad
+\lim_{n\to\infty}e_{n,r}
+=\frac{\xi^{(2r)}(1/2)}{(2r)!\,\xi(1/2)}=a_r;
+\label{eq:hyp-coefficient-target}\\
+&\text{for every }r\geq0,\qquad
+\lim_{n\to\infty}\Tr(K_n^{r+1})
+=\frac{(-1)^r}{r!}L^{(r)}(0)=m_r.
+\label{eq:hyp-power-target}
+\end{align}
+Either condition implies locally uniform convergence on $\C$,
+\begin{equation}\label{eq:hyp-entire-limit}
+Q_n(z)\longrightarrow\frac{\Theta(z)}{\Theta(0)},
+\end{equation}
+and implies RH. No assertion that the particular Hyperbolic Zeta
+sequence satisfies either condition is included in this theorem.
+\end{theorem}
+
+\begin{proof}
+Put $p_{n,j}=\Tr(K_n^j)$ for $j\geq1$. Newton's identities give
+\[
+r e_{n,r}=\sum_{j=1}^r(-1)^{j-1}e_{n,r-j}p_{n,j}.
+\]
+The actual coefficients satisfy the identical finite algebraic
+recurrence
+\[
+r a_r=\sum_{j=1}^r(-1)^{j-1}a_{r-j}m_{j-1},
+\]
+obtained from $\Theta'=L\Theta$. For any fixed $r$, the first
+recurrence determines $e_{n,r}$ from $p_{n,1},\ldots,p_{n,r}$ and
+also determines $p_{n,r}$ from $e_{n,1},\ldots,e_{n,r}$, since
+$e_{n,0}=1$. Induction on $r$ proves the equivalence of
+\eqref{eq:hyp-coefficient-target} and \eqref{eq:hyp-power-target}.
+
+Assume coefficient convergence. Taking limits in
+\eqref{eq:hyp-trace-bound} gives $0\leq a_r\leq\kappa^r/r!$.
+On every disk $|z|\leq R$, both coefficient series are dominated by
+$\sum_r(\kappa R)^r/r!=e^{\kappa R}$. Split the series at a fixed
+degree, use coefficient convergence for its finite head, and then
+let that degree tend to infinity. This proves
+\eqref{eq:hyp-entire-limit}. Quantitatively, for every integer $d\geq0$,
+\begin{equation}\label{eq:hyp-uniform-tail}
+\sup_{|z|\leq R}\left|Q_n(z)-\frac{\Theta(z)}{\Theta(0)}\right|
+\leq\sum_{r=0}^{d}|e_{n,r}-a_r|R^r
+ +\frac{2e^{\kappa R}(\kappa R)^{d+1}}{(d+1)!}.
+\end{equation}
+
+Every zero of $Q_n$ is $-1/\lambda_{n,j}$ for a positive eigenvalue.
+Since $\lambda_{n,j}\leq\kappa$, all $Q_n$ are zero-free on the
+connected domain $\C\setminus(-\infty,-1/\kappa]$. Their locally
+uniform limit equals $1$ at the origin and is not identically zero.
+Hurwitz's theorem therefore makes this limit zero-free on the same
+domain. The zeros of $\Theta$ lie on the negative real axis, giving RH
+by Section~\ref{sec:theta}.
+
+There is also a direct route through the moment criterion. The measures
+$\mu_n=\sum_j\lambda_{n,j}\delta_{\lambda_{n,j}}$ have mass $\kappa$
+and support in $[0,\kappa]$. Hence their moments satisfy all three
+quadratic-form inequalities in Section~\ref{sec:moments}, with
+$M=\kappa$. Under \eqref{eq:hyp-power-target}, taking limits in
+each finite quadratic form transfers those inequalities to the actual
+$m_r$. The reconstruction theorem then supplies the calibrated seed.
+\end{proof}
+
+The fixed Hilbert space in this limit can be displayed directly.
+The measures $\mu_n$ in the proof have uniformly bounded mass on
+the compact interval $[0,\kappa]$, so they have weakly convergent
+subsequences. Condition~\eqref{eq:hyp-power-target} fixes every
+moment of any such limit. Polynomials are dense in the continuous
+functions on this interval, so the limit measure is unique; call it
+$\mu$. Then
+\begin{equation}\label{eq:hyp-fixed-limit-seed}
+\HH=L^2(\mu),\qquad (Kf)(t)=tf(t),\qquad v(t)=1
+\end{equation}
+satisfy $0\leq K\leq\kappa I$ and $\norm v^2=\kappa$.
+The Taylor series of
+$\ip{v}{(I+zK)^{-1}v}=\int(1+zt)^{-1}\dd\mu(t)$
+has coefficients $(-1)^rm_r$, so it equals the actual $L$ near
+zero. Thus the conditional limit constructs one fixed seed of the
+type used in the main theorem.
+
+For the squared pencils, the first two nonautomatic trace targets are
+\begin{equation}\label{eq:hyp-first-trace-targets}
+\lim_{n\to\infty}
+ \frac{\Tr B_n^4}{(\Tr B_n^2)^2}=\frac{m_1}{\kappa^2},
+\qquad
+\lim_{n\to\infty}
+ \frac{\Tr B_n^6}{(\Tr B_n^2)^3}=\frac{m_2}{\kappa^3}.
+\end{equation}
+These can serve as preliminary consistency tests for a proposed choice
+of pencil parameters. They become an RH argument only when the
+all-order statement \eqref{eq:hyp-power-target} is proved.
+
+\begin{example}[Trace normalization does not give calibration]
+Take $K_n=(\kappa/n)I_n$, which has nonnegative spectrum and trace
+$\kappa$. Then
+\[
+Q_n(z)=(1+\kappa z/n)^n\longrightarrow e^{\kappa z},\qquad
+\Tr(K_n^{r+1})=\kappa^{r+1}n^{-r}.
+\]
+This limit has no zeros, whereas the actual $\Theta$ has infinitely
+many zeros. Thus positivity, growing dimension, exact normalization,
+and locally uniform convergence do not by themselves identify the
+limit with $\Theta$. The example is a general normalization test,
+not an assertion that the project's particular pencils have this limit.
+\end{example}
+
+\begin{scopebox}
+\small\textbf{The remaining Hyperbolic Zeta obligation.}
+Choose an explicit family of admissible pencils and prove
+\eqref{eq:hyp-coefficient-target}, equivalently
+\eqref{eq:hyp-power-target}, for every degree. The constructions and
+identities above establish a positive candidate family and the exact
+consequence of such a limit theorem. They leave that limit theorem open.
+The normalization uses the actual real constant $\kappa$, and the
+pencil data use actual zeta values. Finite matrix dimension therefore
+does not make this construction a finite raw checker witness.
+The implication proved here is convergence of this family implies RH;
+a converse for this particular family would require a separate
+completeness theorem.
+\end{scopebox}
+
+
+
+\section[Finite matrices and witnesses]{Why a finite matrix is not the finite witness}\label{sec:finite}
+
+\subsection{An obstruction to exact finite-dimensional calibration}
+
+\begin{proposition}[Finite visible spectrum is impossible]\label{prop:finite-obstruction}
+There is no exactly calibrated seed for the actual $\Theta$ whose
+scalar spectral measure has finite support. In particular, no
+finite-dimensional or finite-rank operator can supply an exact seed.
+\end{proposition}
+\begin{proof}
+A finitely supported spectral measure makes
+$F(z)=\sum_{j=1}^q c_j/(1+\lambda_jz)$ rational, with a possible
+constant term when $\lambda_j=0$. Write $F=p/q_0$ for polynomials,
+where $q_0$ is not identically zero. Exact interval calibration implies
+that the entire function
+\[
+q_0(z)\Theta'(z)-p(z)\Theta(z)
+\]
+vanishes on an interval and therefore vanishes on all of $\C$.
+At any zero $z_0$ of $\Theta$ with $q_0(z_0)\ne0$, the local
+ODE $\Theta'=(p/q_0)\Theta$ contradicts the finite-order zero
+argument of Theorem~\ref{thm:forward}. Thus every zero of $\Theta$
+would have to be among the finitely many roots of $q_0$.
+But $\xi$ has infinitely many distinct zeros, and the two-to-one
+square map can identify only opposite pairs. Hence $\Theta$ has
+infinitely many distinct zeros, a contradiction.
+
+If $K$ is finite rank, its nonzero spectral values form a finite set;
+its kernel can contribute only the additional spectral point zero.
+Its scalar spectral measure is therefore finitely supported, so the
+same argument applies.
+\end{proof}
+
+This obstruction does not prohibit a finite description of an
+infinite-dimensional operator or a finite certificate for an infinite
+analytic argument. It rules out the narrower proposal that a finite
+positive matrix by itself can reproduce the full actual logarithmic
+derivative exactly on an interval.
+
+\subsection{The two missing checker theorems}
+
+The project's requested finite endpoint is
+\begin{equation}\label{eq:finite-goal}
+\bigl(\exists W:\mathsf{FiniteWitness},\ \mathsf{check}(W)=\mathsf{true}\bigr)
+\quad\Longleftrightarrow\quad\RH.
+\end{equation}
+The witness must consist of finite raw data and the checker must
+terminate. The analytic seed defined in this paper is not such a
+witness type: it quantifies over a Hilbert space, an operator, a vector,
+and an exact interval identity.
+
+A route through Theorem~\ref{thm:main} would require the following
+separate statements for one specified checker:
+\begin{align}
+\mathsf{check}(W)=\mathsf{true}&\ \Longrightarrow\ \HSeed,
+&&\text{for every finite }W;\label{eq:soundness}\\
+\RH&\ \Longrightarrow\ \exists W,\ \mathsf{check}(W)=\mathsf{true}.
+&&\label{eq:completeness}
+\end{align}
+Equation~\eqref{eq:soundness} is actual-function soundness. It must
+derive calibration, not receive an unverified calibration proof as a
+field of the purported raw witness. Equation~\eqref{eq:completeness}
+is finite-language completeness. Constructing a countable spectrum
+from all zeros under RH proves an analytic existence statement; it
+does not extract an accepted finite code in an independently fixed
+language.
+
+Finite moment matrices, finite Gram matrices and finite truncations
+are legitimate components of a possible certificate design. To yield
+\eqref{eq:soundness}, they need a theorem extending the verified finite
+information to the uniform analytic assertion. The all-order moment
+criterion in Corollary~\ref{cor:moment-criterion} specifies one precise
+target for such an extension. No such finite reduction is established
+by the present note.
+
+\subsection{Finite jets cannot replace a functional identity}
+
+There is a direct mathematical reason for the distinction. Fix a
+real anchor $a_*>0$ and an integer $N\geq0$. The functions
+\[
+L(z)\quad\text{and}\quad L(z)+\varepsilon(z-a_*)^{N+1}
+\]
+have identical derivatives through order $N$ at $a_*$ for every
+$\varepsilon$, but are different analytic functions when
+$\varepsilon\ne0$. Finitely many samples can likewise be preserved by
+adding a nonzero polynomial vanishing at all sample points.
+The identity theorem requires a set with an accumulation point in
+the analytic domain, or equivalent exact all-order germ information.
+A finite initial jet is neither of these.
+
+\section[Repository and evidence]{Connection with the repository and proof obligations}\label{sec:repository}
+
+This note was prepared against the public repository
+\texttt{randogelist/Riemann-Hypothesis-Final} at the source revision
+\begin{center}\small\reposha.\end{center}
+The inspected source records an analytic slit-plane admission
+\cite{repo-ode}:
+\begin{equation}\label{eq:repo-admission}
+\exists A\text{ holomorphic on }\C\setminus(-\infty,0],\qquad
+\Theta'+A\Theta=0\text{ there}.
+\end{equation}
+The source declaration
+\nolinkurl{SoloboloAdmission.slitODEAdmission_iff_RH}
+has literal target \texttt{\_root\_.RiemannHypothesis}.
+The resolvent transfer in this paper supplies the coefficient
+$A=-F$ on that domain, because the smaller slit plane is contained
+in $D_M$. The sign is negative: the paper writes $\Theta'=F\Theta$,
+whereas the source admission writes $\Theta'+A\Theta=0$.
+
+The source zero-geometry declaration
+\nolinkurl{AngularMaster.native_RH_iff_theta_zeros_nonpositive}
+matches Proposition~\ref{prop:geometry}, allowing nonpositive real
+zeros before origin nonvanishing is supplied \cite{repo-geometry}.
+The repository's positive-product assessment uses the normalization
+$\sum_n\lambda_n/(1+a\lambda_n)$ with
+$\lambda_n=\gamma_n^{-2}$, consistent with
+\eqref{eq:diagonal-calibration} \cite{repo-product}.
+
+The particular legacy archive name
+\nolinkurl{RH_SOLOBOLO_SEED_v0_1_0.zip} and the named
+\texttt{NativeOperatorSeed} sources were not recovered in the inspected
+repository tree or targeted searches. Accordingly, Definitions
+\ref{def:hseed} and \ref{def:dseed} are explicit mathematical
+formulations supplied by this paper. No claim is made that their
+fields are textually identical to an unrecovered legacy declaration.
+
+\clearpage
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.19\textwidth}>{\raggedright\arraybackslash}p{0.47\textwidth}>{\raggedright\arraybackslash}p{0.27\textwidth}@{}}
+\toprule
+\textbf{Layer}&\textbf{Statement or construction}&\textbf{Evidence in this note}\\
+\midrule
+\endhead
+Resolvent algebra&Norm-square identity and all-parameter Gram formula&On-paper proofs, Sections~3--4\\
+\addlinespace
+Analytic transfer&Exact normalized or differential seed implies actual RH&On-paper proofs, Sections~5--6\\
+\addlinespace
+Converse&RH gives the positive countable diagonal seed&On-paper proof from classical factorization, Section~7\\
+\addlinespace
+Moment route&All-order positivity with one support bound gives a seed&On-paper reconstruction, Section~8\\
+\addlinespace
+Hyperbolic zeta&Exact model integrals, actual-jet identities, and a conditional determinant-limit transfer&On-paper proofs, Section~\ref{sec:hyperbolic}; convergence to actual coefficients remains open\\
+\addlinespace
+Legacy seed&Exact \texttt{SeedOn}/\texttt{HasSeed} implementation&Not recovered or certified here\\
+\addlinespace
+Lean verification&Compilation and exact endpoint axiom audit&Not run; no new formal certification\\
+\addlinespace
+Finite checker&Actual soundness, finite completeness, accepted witness&Open; not constructed here\\
+\bottomrule
+\end{longtable}
+
+The repository's inspected status records native build and axiom audit
+as \texttt{NOT\_RUN}, actual calibration as \texttt{OPEN}, and
+finite-witness soundness and completeness as \texttt{OPEN}
+\cite{repo-status}. Publication of this paper does not change those
+statuses. A later formalization must connect the exact definitions,
+complex derivative, domains, spectral constructions and zero geometry
+to the actual native declarations; familiar theorem names are not a
+substitute for that transport.
+
+\section{Conclusion}\label{sec:conclusion}
+
+The recovered Hilbert-vector anchor has a complete and coherent
+on-paper analytic formulation. Its central scalar identity is
+\[
+\frac{\mathrm d}{\mathrm da}\left(a\frac{\Theta'(a)}{\Theta(a)}\right)
+=\norm{(I+aK)^{-1}v}^2,
+\]
+where $K$ and $v$ are fixed, $K$ is bounded and nonnegative
+self-adjoint, and the identity is exact on a positive interval.
+The proof proceeds through a holomorphic resolvent, an explicitly
+removed integration constant, and a division-free analytic ODE.
+The zero-order contradiction then yields the critical-line statement.
+
+Conversely RH supplies a diagonal seed through the genus-zero
+product of the entire square-descended function. This gives the
+analytic equivalence \eqref{eq:main}, the Gram identity, and the
+normalization \eqref{eq:trace-norm}. It does not construct the seed
+without RH. The unresolved constructive task is to derive one of
+these exact analytic inputs from independently verifiable data;
+the further finite-checker equivalence requires both
+\eqref{eq:soundness} and \eqref{eq:completeness}.
+
+
+Section~\ref{sec:hyperbolic} gives a precise role for the Hyperbolic
+Zeta identities. The Bose weights construct positive bounded model
+resolvents and exact odd-zeta formulas; their asymptotics exclude a
+direct identification with the actual $L$. A separate positive
+hyperbolic-tangent integral determines actual $\xi$ jets, and the
+Newton recurrence converts those jets to the required logarithmic
+moments. Squaring the project's signed pencils supplies positive
+determinant models. Theorem~\ref{thm:hyp-coefficient-transfer} proves
+that calibration of all their coefficients, or all their trace moments,
+would construct the fixed seed and imply RH. That all-order limit
+theorem, and a completeness theorem for this particular family,
+remain open.
+
+\appendix
+\section[Real Hilbert spaces]{Real Hilbert spaces and the holomorphic convention}\label{app:real}
+
+The recovered anchor may be expressed on a real Hilbert space.
+That does not obstruct the complex-analytic proof. If $H$ is real,
+form $H_\C=H\oplus iH$ with
+\begin{align*}
+\ip{x+iy}{u+iw}_{\C}
+&=(x,u)_H+(y,w)_H\\
+&\quad+i\bigl((x,w)_H-(y,u)_H\bigr).
+\end{align*}
+This inner product is conjugate-linear in the first slot and linear
+in the second. A real bounded self-adjoint nonnegative $K$ extends
+by $K_\C(x+iy)=Kx+iKy$. Its norm is unchanged, because
+\[
+\norm{K_\C(x+iy)}^2=\norm{Kx}^2+\norm{Ky}^2
+\leq\norm K^2(\norm x^2+\norm y^2),
+\]
+and restriction to real vectors gives the reverse norm inequality.
+Self-adjointness follows by expanding the inner product. Positivity
+follows from
+\[
+\ip{x+iy}{K_\C(x+iy)}=(x,Kx)_H+(y,Ky)_H\geq0,
+\]
+since the imaginary cross terms cancel by symmetry.
+For real $a\geq0$, the inverse extends the real inverse, so every
+real scalar calibration and norm identity is preserved. Thus the
+complex theorem applies to the real Hilbert version as well.
+
+If an alternative convention makes the inner product linear in the
+first slot, the scalar holomorphic expression should instead be
+$\ip{R_zv}{v}$. With the convention fixed in this paper, it is
+$\ip v{R_zv}$. Mixing these conventions would turn a holomorphic
+function into an anti-holomorphic one and invalidate the identity-theorem
+step.
+
+\section[Proof dependencies]{A compact proof dependency ledger}\label{app:ledger}
+
+The forward implication has the following dependencies, each proved
+or cited at its point of use:
+\begin{enumerate}[label=\textbf{F\arabic*.},leftmargin=2.8em]
+\item The actual $\Theta$ is entire and $\Theta(0)>0$.
+\item Fixed bounded positive $K$ gives a holomorphic resolvent on
+      $D_M$, a connected domain containing zero and the positive ray.
+\item Exact interval calibration gives $\Theta'=F\Theta$ by the
+      identity theorem. For differential calibration, first remove
+      $C$ using $Q(0)=-C\Theta(0)$.
+\item A nonzero entire solution of that ODE has no zero where its
+      coefficient is holomorphic, by the finite-order contradiction.
+\item Negative-real-axis confinement of $\Theta$ zeros is equivalent
+      to the critical-line condition for actual $\xi$ zeros.
+\end{enumerate}
+Only the converse uses RH:
+\begin{enumerate}[label=\textbf{R\arabic*.},leftmargin=2.8em]
+\item RH places the zeros of $\Theta$ at $-\gamma_n^2$.
+\item The order bound and Hadamard factorization give
+      $\Theta/\Theta(0)=\prod_n(1+z/\gamma_n^2)$ and summability.
+\item Uniformly convergent logarithmic differentiation gives
+      $L(a)=\sum_n(a+\gamma_n^2)^{-1}$.
+\item The explicit diagonal $K$ and square-summable $v$ realize this
+      scalar function and hence both seed conditions.
+\end{enumerate}
+The all-order moment criterion reconstructs the forward input through
+Theorem~\ref{thm:gns}. It does not remove an infinite quantifier by
+itself. Neither direction in this ledger uses a finite accepted
+witness, and neither is reported as a Lean-verified endpoint.
+
+\begin{thebibliography}{99}
+\small
+\bibitem{dlmf-reflection}
+NIST Digital Library of Mathematical Functions,
+\emph{Section 25.4: Reflection Formulas}, especially Eqs.~25.4.3--25.4.4.
+\url{https://dlmf.nist.gov/25.4}. Accessed 27 October 2026.
+
+\bibitem{dlmf-series}
+NIST Digital Library of Mathematical Functions,
+\emph{Section 25.2: Definition and Expansions}, especially Eq.~25.2.3.
+\url{https://dlmf.nist.gov/25.2}. Accessed 27 October 2026.
+
+\bibitem{dlmf-zeros}
+NIST Digital Library of Mathematical Functions,
+\emph{Section 25.10: Zeros}, subsection (i).
+\url{https://dlmf.nist.gov/25.10}. Accessed 27 October 2026.
+
+\bibitem{garrett}
+Paul Garrett, \emph{Riemann-Hadamard product for $\zeta(s)$},
+24 October 2021, pp.~1--2 (growth of the completed entire function).
+\url{https://www-users.cse.umn.edu/~garrett/m/number_theory/riemann_hadamard_product.pdf}.
+
+\bibitem{mcmullen}
+C. McMullen, \emph{Advanced Complex Analysis}, Harvard Math 213a
+course notes, 22 January 2017. Theorems~3.7 and 3.11,
+printed pp.~43--44 (Hadamard factorization and zero summability).
+\url{https://people.math.harvard.edu/~ctm/home/text/class/harvard/213a/10/html/home/course/course.pdf}.
+
+\bibitem{williams}
+Dana P. Williams, \emph{Lecture Notes on the Spectral Theorem},
+10 August 2018, Sections~2, 4 and 5 (bounded spectral calculus and
+spectral measures).
+\url{https://math.dartmouth.edu/~dana/bookspapers/ln-spec-thm.pdf}.
+
+\bibitem{repo-ode}
+Riemann-Hypothesis-Final project, \texttt{SoloboloAdmission/NativeODE.lean},
+source revision \texttt{362d9f8}. Exact source of
+\texttt{slitODEAdmission\_iff\_RH}; native audit not run in this note.
+\href{https://github.com/randogelist/Riemann-Hypothesis-Final/blob/362d9f8aeaaf9479cc27ceb6b63bdb7456267990/SoloboloAdmission/NativeODE.lean}{Pinned repository source}.
+
+\bibitem{repo-geometry}
+Riemann-Hypothesis-Final project, \texttt{AngularMaster/ZeroGeometry.lean},
+source revision \texttt{362d9f8}.
+\href{https://github.com/randogelist/Riemann-Hypothesis-Final/blob/362d9f8aeaaf9479cc27ceb6b63bdb7456267990/AngularMaster/ZeroGeometry.lean}{Pinned repository source}.
+
+\bibitem{repo-product}
+Riemann-Hypothesis-Final project,
+\emph{RH positive-product assessment}, 25 October 2026,
+source revision \texttt{362d9f8}.
+\href{https://github.com/randogelist/Riemann-Hypothesis-Final/blob/362d9f8aeaaf9479cc27ceb6b63bdb7456267990/docs/research/2026-10-25/rh-positive-product-assessment.md}{Pinned research assessment}.
+
+\bibitem{repo-status}
+Riemann-Hypothesis-Final project, \texttt{provenance/status.json},
+\texttt{docs/BUILD.md}, and \texttt{docs/FRONTIER.md},
+source revision \texttt{362d9f8}. Source evidence and open finite
+calibration obligations.
+\href{https://github.com/randogelist/Riemann-Hypothesis-Final/blob/362d9f8aeaaf9479cc27ceb6b63bdb7456267990/provenance/status.json}{Pinned status record}.
+\bibitem{hyp-manuscript}
+Prince Anand, \emph{Spectral Theory and Diophantine Bounds for Hankel
+Determinants of Odd Zeta Values}, supplied project manuscript,
+printed pp.~7--9, especially Eq.~(3.1) and Theorem~3.1.
+Tracked in \texttt{randogelist/zetahyperbolic-axiom}, revision
+\texttt{b56c8102d25b931a601992c93bf30b19cc7ee103}.
+\href{https://github.com/randogelist/zetahyperbolic-axiom/tree/b56c8102d25b931a601992c93bf30b19cc7ee103}{Pinned manuscript repository}.
+Only the identities identified in Section~\ref{sec:hyperbolic} are
+used here; other manuscript endpoints are outside this note's scope.
+
+\bibitem{hyp-weight}
+zetahyperbolic-axiom project,
+\texttt{Theorem\_3\_1\_Hyperbolic\_Weight.lean},
+revision \texttt{b56c810}, declarations \texttt{density} and
+\texttt{density\_pos}. Source inspection; no fresh native audit.
+\href{https://github.com/randogelist/zetahyperbolic-axiom/blob/b56c8102d25b931a601992c93bf30b19cc7ee103/src/Theorem_3_1_Hyperbolic_Weight.lean}{Pinned weight source}.
+
+\bibitem{hyp-moments}
+zetahyperbolic-axiom project,
+\texttt{Theorem\_3\_1\_Hyperbolic\_Moments.lean},
+revision \texttt{b56c810}, declaration
+\texttt{integral\_monomial\_density}.
+\href{https://github.com/randogelist/zetahyperbolic-axiom/blob/b56c8102d25b931a601992c93bf30b19cc7ee103/src/Theorem_3_1_Hyperbolic_Moments.lean}{Pinned moment source}.
+
+\bibitem{hyp-pole}
+zetahyperbolic-axiom project,
+\texttt{Theorem\_3\_1\_Pole\_Integral\_Identity.lean},
+revision \texttt{b56c810}, declaration \texttt{poleIntegralIdentity}.
+Its integer-parameter statement is extended on paper to real positive
+parameters in Proposition~\ref{hyp-hurwitz-prop}.
+\href{https://github.com/randogelist/zetahyperbolic-axiom/blob/b56c8102d25b931a601992c93bf30b19cc7ee103/src/Theorem_3_1_Pole_Integral_Identity.lean}{Pinned pole-integral source}.
+
+\bibitem{hyp-normalization}
+zetahyperbolic-axiom project,
+\texttt{LeanPaper/ContinuousDensityNormalization.lean},
+revision \texttt{b56c810}, declarations
+\texttt{correctedDensity\_odd} and \texttt{printedDensity\_odd}.
+\href{https://github.com/randogelist/zetahyperbolic-axiom/blob/b56c8102d25b931a601992c93bf30b19cc7ee103/src/LeanPaper/ContinuousDensityNormalization.lean}{Pinned normalization correction}.
+
+\bibitem{hyp-gram}
+zetahyperbolic-axiom project,
+\texttt{LeanPaper/ContinuousGram.lean}, revision \texttt{b56c810},
+declarations \texttt{baseMatrix\_entry\_exact},
+\texttt{baseMatrix\_posDef}, and \texttt{pencil\_odd}.
+\href{https://github.com/randogelist/zetahyperbolic-axiom/blob/b56c8102d25b931a601992c93bf30b19cc7ee103/src/LeanPaper/ContinuousGram.lean}{Pinned Gram source}.
+
+\bibitem{hyp-signs}
+zetahyperbolic-axiom project,
+\texttt{LeanPaper/PoleWeightSigns.lean}, revision \texttt{b56c810},
+declarations \texttt{poleWeight\_sign} and
+\texttt{gamma\_has\_both\_signs}.
+\href{https://github.com/randogelist/zetahyperbolic-axiom/blob/b56c8102d25b931a601992c93bf30b19cc7ee103/src/LeanPaper/PoleWeightSigns.lean}{Pinned sign source}.
+See also \texttt{snditeration}, revision
+\texttt{35218ba6ee152774ff4e1fb778e530c1752acfd6},
+\texttt{Zetahyperbolic/Section3/SpectralInertia.lean},
+\texttt{actual\_inertia\_formula}.
+
+\bibitem{dlmf-binet}
+NIST Digital Library of Mathematical Functions,
+\emph{Section 5.9: Integral Representations}, Eq.~5.9.15
+(Binet's digamma formula).
+\url{https://dlmf.nist.gov/5.9}. Accessed 27 October 2026.
+
+\bibitem{dlmf-hurwitz}
+NIST Digital Library of Mathematical Functions,
+\emph{Section 25.11: Hurwitz Zeta Function},
+Eqs.~25.11.1, 25.11.3, 25.11.12, and 25.11.17.
+\url{https://dlmf.nist.gov/25.11}. Accessed 27 October 2026.
+
+\bibitem{dlmf-mangoldt}
+NIST Digital Library of Mathematical Functions,
+\emph{Section 27.4: Euler Products and Dirichlet Series}, Eq.~27.4.12.
+\url{https://dlmf.nist.gov/27.4}. Accessed 27 October 2026.
+
+\bibitem{dlmf-fermi}
+NIST Digital Library of Mathematical Functions,
+\emph{Section 25.5: Integral Representations}, Eq.~25.5.3.
+\url{https://dlmf.nist.gov/25.5}. Accessed 27 October 2026.
+
+\bibitem{dlmf-duplication}
+NIST Digital Library of Mathematical Functions,
+\emph{Section 5.5: Functional Relations}, Eq.~5.5.5
+(gamma duplication).
+\url{https://dlmf.nist.gov/5.5}. Accessed 27 October 2026.
+
+\bibitem{csordas-kernel}
+George Csordas, \emph{Fourier transforms of positive definite kernels
+and the Riemann $\xi$-function}, arXiv:1309.0055v2,
+21 February 2014, Section~4, Eqs.~(4.1)--(4.2), printed pp.~9--10.
+The Fourier-variable $\xi$ in that source is distinguished from
+the completion $\xi(s)$ used here by the rescaling in
+\eqref{hyp-eq:riemann-cosh}.
+\url{https://arxiv.org/abs/1309.0055}.
+
+\end{thebibliography}
+\end{document}
