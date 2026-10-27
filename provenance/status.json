@@ -65,22 +65,22 @@
     }
   },
   "hilbert_vector_paper": {
-    "version": "v1_1_construction",
+    "version": "v1_2_construction",
     "date": "2026-10-27",
     "mode": "B_TIER_DERIVATION",
-    "pdf": "RH_Hilbert_Vector_Anchor_v1_1_construction.pdf",
-    "source": "docs/papers/RH_Hilbert_Vector_Anchor_v1_1_construction.tex",
-    "pages": 29,
+    "pdf": "RH_Hilbert_Vector_Anchor_v1_2_construction.pdf",
+    "source": "docs/papers/RH_Hilbert_Vector_Anchor_v1_2_construction.tex",
+    "pages": 41,
     "source_review_base_commit": "362d9f8aeaaf9479cc27ceb6b63bdb7456267990",
-    "result": "ON_PAPER_SEED_EQUIVALENCE_WITH_HYPERBOLIC_IDENTITIES_AND_CONDITIONAL_DETERMINANT_LIMIT_TRANSFER",
+    "result": "ON_PAPER_CANONICAL_ACTUAL_APPROXIMATION_AND_EXACT_EXTENSION_CRITERIA",
     "original_legacy_seed_definition": "NOT_RECOVERED",
     "unconditional_seed_existence": "OPEN",
     "finite_witness_iff_RH": "OPEN",
     "native_build": "NOT_RUN",
     "native_axiom_audit": "NOT_RUN",
-    "pdf_sha256": "85451206ac3355fe81b6cf32b51148d3573ada5ab4d9f1db226c50ef6946297e",
-    "source_sha256": "9bd1a27949b42b5c2da0c16cbd3c5c3b11bab8c4d1b1a6fc8381aec015ddee36",
-    "revision_base_commit": "a6de7c126e23cf7f52d0831bdec6bd888f2dbf7e",
+    "pdf_sha256": "b2bee4dae5ef9f91b4ac14cf9fcd0f1d5cf59fd986d85812c5c510e37feb6e74",
+    "source_sha256": "a8b7ccee3dff26cc2a7094958364fcc61426db7beacaee7b5f4afa83dd8a3212",
+    "revision_base_commit": "29b1da26465948f7326aeb39b5b819827178930e",
     "hyperbolic_source_repository": "randogelist/zetahyperbolic-axiom",
     "hyperbolic_source_commit": "b56c8102d25b931a601992c93bf30b19cc7ee103",
     "hyperbolic_secondary_repository": "randogelist/snditeration",
@@ -88,11 +88,37 @@
     "hyperbolic_actual_coefficient_convergence": "OPEN",
     "hyperbolic_family_RH_completeness": "OPEN",
     "previous_publication": {
-      "version": "v1_0_construction",
-      "pdf": "RH_Hilbert_Vector_Anchor_v1_0_construction.pdf",
-      "source": "docs/papers/RH_Hilbert_Vector_Anchor_v1_0_construction.tex",
-      "pdf_sha256": "4543f5b0c5f27db69c7db4f8a107066742713a683ac3ea2de2e0c3ab88b4bc6f",
-      "source_sha256": "660f595739b03b24f6597edcd9cad6eaacc00f47018981d3885cf6e20b85b553"
-    }
+      "version": "v1_1_construction",
+      "pdf": "RH_Hilbert_Vector_Anchor_v1_1_construction.pdf",
+      "source": "docs/papers/RH_Hilbert_Vector_Anchor_v1_1_construction.tex",
+      "pages": 29,
+      "publication_commit": "29b1da26465948f7326aeb39b5b819827178930e",
+      "pdf_sha256": "85451206ac3355fe81b6cf32b51148d3573ada5ab4d9f1db226c50ef6946297e",
+      "source_sha256": "9bd1a27949b42b5c2da0c16cbd3c5c3b11bab8c4d1b1a6fc8381aec015ddee36",
+      "previous_publication": {
+        "version": "v1_0_construction",
+        "pdf": "RH_Hilbert_Vector_Anchor_v1_0_construction.pdf",
+        "source": "docs/papers/RH_Hilbert_Vector_Anchor_v1_0_construction.tex",
+        "pdf_sha256": "4543f5b0c5f27db69c7db4f8a107066742713a683ac3ea2de2e0c3ab88b4bc6f",
+        "source_sha256": "660f595739b03b24f6597edcd9cad6eaacc00f47018981d3885cf6e20b85b553"
+      }
+    },
+    "canonical_jensen_coefficient_convergence": "ON_PAPER_UNCONDITIONAL",
+    "canonical_jensen_entire_convergence": "ON_PAPER_UNCONDITIONAL",
+    "canonical_jensen_RH_equivalence": "ON_PAPER_CLASSICAL_JENSEN_POLYA",
+    "canonical_jensen_unbounded_hyperbolicity": "OPEN",
+    "canonical_jensen_hermite_matrix_criterion": "ON_PAPER_CLASSICAL_HERMITE_SYLVESTER",
+    "canonical_jensen_literature_base": {
+      "degrees": "1_TO_8",
+      "source": "Griffin-Ono-Rolen-Zagier (2019), Theorem 2",
+      "native_verification": "NOT_RUN",
+      "claimed_maximal_known_range": false
+    },
+    "canonical_bernstein_moment_convergence": "ON_PAPER_UNCONDITIONAL",
+    "canonical_bernstein_all_level_positivity": "OPEN",
+    "canonical_bernstein_resolvent_error_bound": "ON_PAPER_CONDITIONAL_ON_ALL_LEVEL_POSITIVITY",
+    "exact_upward_extension_intervals": "ON_PAPER_DERIVED",
+    "actual_upward_extension_all_orders": "OPEN",
+    "original_squared_pencil_limit_classification": "ON_PAPER_DERIVED"
   }
 }

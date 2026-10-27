@@ -28,15 +28,19 @@ with their actual-function bindings kept explicit.
 
 ## Hilbert-vector anchor paper
 
-[Read the revised paper (PDF)](RH_Hilbert_Vector_Anchor_v1_1_construction.pdf) · [Editable LaTeX source](docs/papers/RH_Hilbert_Vector_Anchor_v1_1_construction.tex)
+[Read the revised paper (PDF)](RH_Hilbert_Vector_Anchor_v1_2_construction.pdf) · [Editable LaTeX source](docs/papers/RH_Hilbert_Vector_Anchor_v1_2_construction.tex)
 
-**Hilbert-Vector Resolvents and the Riemann Hypothesis: A detailed analytic seed criterion** (version 1.1, 27 October 2026, 29 pages).
-The paper derives the fixed positive-operator norm and Gram identities, the precisely stated analytic seed equivalence with actual RH, the converse zero-product construction, and the all-order moment criterion.
+**Hilbert-Vector Resolvents and the Riemann Hypothesis: A detailed analytic seed criterion** (version 1.2, 27 October 2026, 41 pages).
 
-**New in version 1.1:** Section 10 derives the Hyperbolic Zeta Bose/Hurwitz identities, constructs bounded positive comparison resolvents, and proves why these fixed integral models cannot equal the actual logarithmic derivative directly. It then gives an exact hyperbolic-tangent Mellin identity for actual ξ, the transformation from its Taylor coefficients to the required moments, and a positive determinant construction obtained by squaring the signed hyperbolic pencils. An all-order coefficient-limit theorem proves that exact convergence of those models to the actual coefficients would construct the Hilbert seed and imply RH. **That convergence remains open.**
+The paper derives the fixed positive-operator norm and Gram identities, the exact analytic seed equivalence with actual RH, the converse zero-product construction, and the all-order moment criterion. Hyperbolic Zeta identities supply both positive comparison models and the exact actual ξ coefficients.
 
-This is **B-Tier derivation**: no unconditional seed, finite checker witness, or proof of RH is claimed; native Lean compilation and axiom audits remain `NOT_RUN`.
-[Previous version 1.0 (PDF)](RH_Hilbert_Vector_Anchor_v1_0_construction.pdf) remains available.
+**New in version 1.2:** Sections 11–13 construct canonical Jensen polynomials directly from the actual coefficients and prove their entire convergence with an explicit error bound. Their hyperbolicity at unbounded degrees is equivalent to RH; a finite Hermite-matrix criterion expresses the same condition in the coefficients. The paper derives the exact next-degree critical-value interval, canonical Bernstein grid seeds with a resolvent error bound, and the Schur intervals for extending actual moments. Appendix C classifies the possible limits of the original squared pencils and excludes a flat normalized spectrum.
+
+**The remaining assertion is all-order actual positivity.** The canonical polynomial convergence is proved on paper, but hyperbolicity at unbounded degrees and positivity of all Bernstein levels remain open. The separate coefficient limits and completeness of the original Hyperbolic Zeta pencil family also remain open. The quoted low-degree Jensen base is a published literature result, not a new native verification.
+
+This is **B-Tier derivation**: no unconditional calibrated seed, accepted finite RH witness, or proof of RH is claimed. Native Lean compilation and axiom audits remain `NOT_RUN`.
+
+[Previous version 1.1 (PDF)](RH_Hilbert_Vector_Anchor_v1_1_construction.pdf) · [Version 1.0 (PDF)](RH_Hilbert_Vector_Anchor_v1_0_construction.pdf)
 
 ## Contents
 
@@ -122,3 +126,4 @@ These research sources include the GP construction and recovered analytic
 equivalence chains. See
 [clone and update instructions](docs/PUBLISH.md); repository publication does
 not certify a native Lean build.
+
