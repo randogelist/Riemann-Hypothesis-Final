@@ -1,0 +1,29 @@
+{
+  "schema": "RH_HILBERT_V0216_REUSE_RECORD_STATIC_REVIEW_V1",
+  "package": "RH_HILBERT_LIMIT_LEAN_v0_2_16_construction",
+  "delivery_filename": "RH_HILBERT_LIMIT_LEAN_v0_2_16_REUSE_RECORD_construction.zip",
+  "status": "SOURCE_RUNTIME_AND_IDENTITY_PRESERVATION_CHECKED",
+  "lean_sources_preserved": 92,
+  "changed_proof_inputs": [],
+  "selected_axiom_targets_preserved": 370,
+  "exact_endpoint_declarations_preserved": 10,
+  "analytic_declaration_evidence_entries_updated": 67,
+  "older_metadata_entries_unchanged": 1038,
+  "all_runtime_bytes_unchanged": true,
+  "package_and_runner_identity_unchanged": true,
+  "new_tests_or_native_execution": false,
+  "formal_closure": "OPEN",
+  "allowed_changed_parent_files": [
+    "CHECKPOINT.json",
+    "DECLARATIONS.json",
+    "OPEN_OBLIGATIONS.txt",
+    "PROVENANCE.json",
+    "README.md",
+    "RUNNER_LOGIC_VALIDATION.json",
+    "RUNNER_NOTES.txt",
+    "SHA256SUMS.txt",
+    "STATIC_REVIEW.json",
+    "STATUS.json"
+  ],
+  "prior_evidence_files_preserved": 333
+}

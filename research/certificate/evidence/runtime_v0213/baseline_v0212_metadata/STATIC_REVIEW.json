@@ -1,0 +1,39 @@
+{
+  "schema": "RH_HILBERT_RAM_PARALLEL_PACKAGE_REVIEW_V1",
+  "scope": "RUNTIME_ONLY_SOURCE_AND_MOCK_REVIEW",
+  "status": "PRESERVATION_AND_PACKAGE_STATIC_CHECKS_PASS; NATIVE_PENDING",
+  "lean_sources_byte_preserved": 92,
+  "frozen_inputs_byte_preserved": 102,
+  "ordered_modules": 89,
+  "selected_aggregate": "AnalyticAudit.lean",
+  "aggregate_axiom_targets": 370,
+  "new_lean_sources": 0,
+  "protected_functions": [
+    "moduleInput",
+    "checkAxioms",
+    "readAnchorCore",
+    "workingArtifactsMatch",
+    "restoreAnchor",
+    "saveAnchor",
+    "acceptRestored",
+    "processModuleBody",
+    "finalAudit"
+  ],
+  "integration_review": "evidence/runtime_v0212/review/integration_review.json",
+  "ram_source_review": "evidence/runtime_v0212/ram/STATIC_REVIEW.json",
+  "mock_report": "evidence/runtime_v0212/tests/mock_report.json",
+  "metadata_updated_from_parent": [
+    "PROVENANCE.json",
+    "README.md",
+    "RUNNER_LOGIC_VALIDATION.json",
+    "RUNNER_NOTES.txt",
+    "SHA256SUMS.txt",
+    "STATIC_REVIEW.json",
+    "STATUS.json",
+    "runner-version.txt",
+    "tools/native_runner.js"
+  ],
+  "formal_closure": "OPEN",
+  "finite_checker_equivalence": "OPEN",
+  "native_build_and_axiom_audit": "NOT_RUN"
+}

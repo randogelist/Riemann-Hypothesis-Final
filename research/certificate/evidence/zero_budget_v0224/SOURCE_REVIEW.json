@@ -1,0 +1,225 @@
+{
+  "schema": "RH_ZERO_BUDGET_V0224_INDEPENDENT_PROOF_SOURCE_REVIEW_V1",
+  "status": "SOURCE_REVIEW_ONLY",
+  "reviewer": "/root/regression_review",
+  "native_validation": "NOT_RUN",
+  "scope": "Independent static mathematical and likely Lean elaboration review of the two new proof modules and relevant imported definitions/API signatures. No proof source edits.",
+  "execution": {
+    "Lean": false,
+    "Lake": false,
+    "WSH": false,
+    "native_compiler": false,
+    "Windows_tools": false,
+    "CSharp": false,
+    "Wine": false,
+    "CI": false,
+    "synthetic_runtime_tests": false
+  },
+  "reviewed_sources": [
+    {
+      "prepared_path": "tmp/zero_budget_v0224/proof/ZeroBudgetCandidate.lean",
+      "package_path": "RH_HilbertLimit/ZeroBudgetCandidate.lean",
+      "sha256": "6bd77ae2b11382699d612b90205a3c31c0db6055163dcdd85dfa3a72f6835f65",
+      "package_copy_byte_identical": true,
+      "explicit_public_declaration_count": 19,
+      "explicit_public_declarations": [
+        "RH_HilbertLimit.zeroBudgetCandidate",
+        "RH_HilbertLimit.actualNormalizedMoment_zero_unconditional",
+        "RH_HilbertLimit.actualWeight_zero_zero",
+        "RH_HilbertLimit.actualVariation_zero",
+        "RH_HilbertLimit.actualWeight_one_zero",
+        "RH_HilbertLimit.actualWeight_one_one",
+        "RH_HilbertLimit.actualVariation_one_eq",
+        "RH_HilbertLimit.rowCancellation_eq_zero_iff_rowVariation_eq",
+        "RH_HilbertLimit.actual_rowCancellation_zero_eq",
+        "RH_HilbertLimit.actual_rowCancellation_zero_eq_zero_iff",
+        "RH_HilbertLimit.actualVariation_one_eq_one_iff",
+        "RH_HilbertLimit.actualWeight_two_zero",
+        "RH_HilbertLimit.actualWeight_two_one",
+        "RH_HilbertLimit.actualWeight_two_two",
+        "RH_HilbertLimit.actualVariation_two_eq_one_iff",
+        "RH_HilbertLimit.actual_rowCancellation_one_eq_zero_iff",
+        "RH_HilbertLimit.zeroBudgetCandidate_admissible_iff_all_cancellation_zero",
+        "RH_HilbertLimit.zeroBudgetCandidate_admissible_iff_nativeRH",
+        "RH_HilbertLimit.zeroBudgetCandidate_admissible_iff_seed_and_propagation"
+      ]
+    },
+    {
+      "prepared_path": "tmp/zero_budget_v0224/proof/ZeroBudgetFirstMoment.lean",
+      "package_path": "RH_HilbertLimit/ZeroBudgetFirstMoment.lean",
+      "sha256": "6d542388e484a68a5d0c0eb4d19939aacaa071a0bba3b258cd6f8cd4a0e359eb",
+      "package_copy_byte_identical": true,
+      "explicit_public_declaration_count": 15,
+      "explicit_public_declarations": [
+        "RH_HilbertLimit.zeroBudget_norm_mul_sub_one_le_41_16",
+        "RH_HilbertLimit.zeroBudget_xi_ne_zero_of_abs_im_le_five_fourths",
+        "RH_HilbertLimit.zeroBudget_xi_zero_five_fourths_lt_abs_im",
+        "RH_HilbertLimit.zeroBudget_theta_zero_angle_le_neg_21_29",
+        "RH_HilbertLimit.zeroBudget_actualComplexScale_square_re_pos",
+        "RH_HilbertLimit.zeroBudget_canonicalNode_re_pos",
+        "RH_HilbertLimit.zeroBudget_canonicalNode_re_le_one",
+        "RH_HilbertLimit.zeroBudget_canonicalNode_square_re_pos",
+        "RH_HilbertLimit.actualNormalizedMoment_one_pos",
+        "RH_HilbertLimit.actualNormalizedMoment_one_nonneg",
+        "RH_HilbertLimit.actualNormalizedMoment_one_le_one",
+        "RH_HilbertLimit.actual_rowCancellation_zero_eq_zero_unconditional",
+        "RH_HilbertLimit.actualVariation_one_eq_one_unconditional",
+        "RH_HilbertLimit.actual_rowCancellation_one_eq_zero_iff_unconditional",
+        "RH_HilbertLimit.zeroBudgetCandidate_admissible_iff_propagation"
+      ]
+    }
+  ],
+  "new_explicit_public_declarations": 34,
+  "inspected_baseline_dependencies": [
+    {
+      "path": "output/RH_HILBERT_LIMIT_LEAN_v0_2_23_construction/RH_HilbertLimit/Bernstein.lean",
+      "sha256": "e0b488ee02ec770a436348f8ebd9ff607e0480adddb23a6edc89c4272131f0b1"
+    },
+    {
+      "path": "output/RH_HILBERT_LIMIT_LEAN_v0_2_23_construction/RH_HilbertLimit/Cancellation.lean",
+      "sha256": "985602ead4c4b3581b6aef194a36da6ca1f78defbeaaadf328e0cf97749b9528"
+    },
+    {
+      "path": "output/RH_HILBERT_LIMIT_LEAN_v0_2_23_construction/RH_HilbertLimit/ActualCancellationWitness.lean",
+      "sha256": "0daeeb9fab456f2d399cc95cfda2b94c55f03d2c403b92d3a18579a0a7d622d6"
+    },
+    {
+      "path": "output/RH_HILBERT_LIMIT_LEAN_v0_2_23_construction/RH_HilbertLimit/ActualXi.lean",
+      "sha256": "d1fe6b5d5a8a3d6caf398790fe4a6b519ad0510a229c3cf88e3e20267d003322"
+    },
+    {
+      "path": "output/RH_HILBERT_LIMIT_LEAN_v0_2_23_construction/RH_HilbertLimit/ActualCalibrationProgress.lean",
+      "sha256": "8d268760cc235fdcf95ea4514aec2dbf126d90056df5e06730ee5b06bd4a275e"
+    },
+    {
+      "path": "output/RH_HILBERT_LIMIT_LEAN_v0_2_23_construction/RH_HilbertLimit/CanonicalBridge.lean",
+      "sha256": "103d1917e0fa30b2ec50fb03217176235ebd045d65c3740eba5914f4860822fd"
+    },
+    {
+      "path": "output/RH_HILBERT_LIMIT_LEAN_v0_2_23_construction/RH_HilbertLimit/CanonicalPowerSums.lean",
+      "sha256": "55e10b78e84bb2ec7cfbd693e5275f46b4ada256bda0530ccb4c0e80337e65de"
+    },
+    {
+      "path": "output/RH_HILBERT_LIMIT_LEAN_v0_2_23_construction/RH_HilbertLimit/AnalyticClosure.lean",
+      "sha256": "ed440ff35623939ee3b5b7d58b0c85836d0c3e425e9db60ed95e7cb3eb465c16"
+    },
+    {
+      "path": "output/RH_HILBERT_LIMIT_LEAN_v0_2_23_construction/AngularMaster/ZeroGeometry.lean",
+      "sha256": "b0812a3b5f8bdf2a162553b24fa9801aa71d3dc2227d02400f9abca0e1888bc9"
+    },
+    {
+      "path": "output/RH_HILBERT_LIMIT_LEAN_v0_2_23_construction/AngularMaster/LowHeightGeometry.lean",
+      "sha256": "524de1676223e39ace67404892e5ff78a69a37a77efbbe66aa8263498954a392"
+    },
+    {
+      "path": "output/RH_HILBERT_LIMIT_LEAN_v0_2_23_construction/AngularMaster/ZeroFreeSeed.lean",
+      "sha256": "4c617c74b545f1473f85c8ea59dd31818b5de9e8b5a35814d0a0e8a7ca1a3aa4"
+    },
+    {
+      "path": "output/RH_HILBERT_LIMIT_LEAN_v0_2_23_construction/AngularMaster/QQRHGeometry.lean",
+      "sha256": "f661ee3f0359af3539d30a297a23f0edc160699495725f2888bd2facaf637906"
+    },
+    {
+      "path": "output/RH_HILBERT_LIMIT_LEAN_v0_2_23_construction/AWPIRH/XiCore.lean",
+      "sha256": "6bda1a14b59a508811b9f9a8bff400ed824d86f366b2ddeecd728571be7fd9db"
+    }
+  ],
+  "inspected_local_API_references": [
+    {
+      "path": "tmp/mathlib_reference/ComplexData433.lean",
+      "sha256": "a1c1d12f5edd15b80379db89a82071a3c4e543929ed093a22c683406d3938b0f"
+    },
+    {
+      "path": "tmp/mathlib_reference/ComplexNorm433.lean",
+      "sha256": "19707877f7f8303ca5b5a462d4ba02215f90e72dbcad9aa3af22b04b8d318f18"
+    },
+    {
+      "path": "tmp/mathlib_reference/ComplexBasic433.lean",
+      "sha256": "9c7fa21dc5fb9084746f5079e149bb6400091c121e50c72637f152228968e40e"
+    },
+    {
+      "path": "tmp/mathlib_reference/InfiniteSumOrder433.lean",
+      "sha256": "92a6509b4a34c5a8342202ca0dd914b765c04948fa70b78da638af8aa1739353"
+    }
+  ],
+  "baseline_scope_limit": "Relevant source definitions, signatures and proof uses were inspected. The entire inherited analytic proof chain and native receipts were not independently recompiled or audited.",
+  "mathematical_review": [
+    {
+      "subject": "Named zero-budget data and normalization",
+      "finding": "zeroBudgetCandidate is exactly the finite pair cutoff=0, coefficient=0. Unconditional actualKappa positivity supplies normalized moment u_0=1, degree-zero weight=1 and variation V_0=1. This alone is not cancellation C_0=0, which also involves V_1."
+    },
+    {
+      "subject": "First finite row",
+      "finding": "The degree-one weights are 1-u_1 and u_1; V_1=|1-u_1|+|u_1|. The existing cancellation identity gives C_0=V_1-1, and the source derives C_0=0 iff 0<=u_1<=1."
+    },
+    {
+      "subject": "Second finite row",
+      "finding": "The three degree-two weights are 1-2u_1+u_2, 2(u_1-u_2), and u_2. Unit total mass makes V_2=1 equivalent to all three weights being nonnegative, exactly u_2>=0, u_2<=u_1 and 2u_1<=1+u_2. Enumeration j=0,1,2 follows from j in range(3). With V_1=1 established, this also characterizes C_1=0."
+    },
+    {
+      "subject": "Independent height bound",
+      "finding": "For 0<=Re(s)<=1 and |Im(s)|<=5/4, both squared norms are <=41/16, so ||s(s-1)||<=41/16. The imported unconditional bound ||completedRiemannZeta_0(s)||<=3/8 gives product norm <=123/128<1, contradicting the xi-zero equation whose product norm is 1."
+    },
+    {
+      "subject": "Sector and positive real squares",
+      "finding": "For w=sqrt(z) at a theta zero, critical-strip membership gives |Re(w)|<1/2 and the new height bound gives |Im(w)|>5/4. The existing slope lemma with m=5/2 yields Re(z)/||z||<=-21/29. Applied to z=-actualComplexScale(i), this yields Re(scale)>=21/29*||scale||. Since 2*(21/29)^2-1=41/841>0 and scale is nonzero, Re(scale^2)>0. Complex inversion and positive real normalization preserve positivity of the real part of the squared canonical node."
+    },
+    {
+      "subject": "HasSum and lower moment bound",
+      "finding": "canonicalPowerSums 1 supplies the exact HasSum of canonicalNode(i)^2 to u_1 cast into Complex. Taking real parts yields a real HasSum to u_1. Each real squared-node term is positive, and the imported actual divisor is nonempty; a selected term is bounded by the sum, proving u_1>0."
+    },
+    {
+      "subject": "Upper moment bound",
+      "finding": "Positive real canonical masses sum to 1, hence each a_i=Re(canonicalNode(i)) lies in (0,1]. For b_i=Im(canonicalNode(i)), Re(canonicalNode(i)^2)=a_i^2-b_i^2<=a_i. Applying hasSum_le to the two supplied HasSum identities gives u_1<=1."
+    },
+    {
+      "subject": "Independent first refinement",
+      "finding": "The source combines the unconditional first-moment interval with the finite-row equivalence to conclude C_0=0 and V_1=1. Neither source theorem takes RH, admissibility or a universal sign hierarchy as a premise."
+    },
+    {
+      "subject": "Propagation remains an explicit obligation",
+      "finding": "The all-cancellation-zero property is equivalent to seed C_0=0 plus forall n, C_n=0 implies C_(n+1)=0. After the source proves the seed, admissibility is equivalent to this universal propagation law. The source does not prove that law or assert zeroBudgetCandidate.Admissible."
+    }
+  ],
+  "circularity_and_hypothesis_review": {
+    "new_unconditional_first_moment_route_assumes_RH": false,
+    "new_unconditional_first_moment_route_assumes_admissible_zero_budget": false,
+    "new_unconditional_first_moment_route_assumes_all_order_signs_or_propagation": false,
+    "analytic_dependencies": "Uses the existing unconditional theta-kernel bound, xi strip membership, actual scale/zero correspondence, normalization positivity, nonempty divisor, canonical mass-one and canonicalPowerSums theorem.",
+    "RH_occurrences": "RH appears in the explicitly stated semantic admissibility equivalence and its conditional reverse direction, not as a hidden premise of the new first-moment/first-cancellation results.",
+    "zero_budget_admissibility": "OPEN",
+    "propagation": "OPEN; universal mathematical predicate, not a finite check",
+    "finite_Bool_checker": "NOT_IMPLEMENTED",
+    "finite_checker_soundness": "OPEN",
+    "finite_checker_equivalence": "OPEN",
+    "accepted_finite_witness": "NOT_ESTABLISHED",
+    "unconditional_RH": "NOT_ESTABLISHED"
+  },
+  "API_and_elaboration_review": {
+    "definite_elaboration_failure_identified": false,
+    "kernel_acceptance_established": false,
+    "checked_points": [
+      "Bernstein rowVariation_eq_one_iff has the expected range-membership positivity statement. The row-two proof supplies range proofs for 0,1,2 and uses omega for the exhaustive finite case split.",
+      "The low-degree bernsteinWeight definitions match the displayed finite formulas; norm_num/simp/ring are used to normalize finite sums and natural coefficients rather than relying on an unproved sign assumption.",
+      "The zero-budget admissibility proof retains the explicit ((0 : Nat) : Real) cast, avoiding the earlier real-zero change-target mismatch.",
+      "Complex.hasSum_re takes a HasSum proof and returns the HasSum of real parts. The locally inspected signature and baseline ActualXi usage agree with the new calls.",
+      "Summable.le_tsum takes the selected index followed by nonnegativity for the other indices. The local to_additive-generated signature and baseline usages agree; stronger all-index positivity is a valid supplied proof.",
+      "hasSum_le takes the pointwise inequality and two HasSum proofs in the order used. No unsupported interchange of a non-absolutely-convergent series is introduced.",
+      "Complex.inv_re, Complex.normSq_pos, Complex.normSq_eq_norm_sq and Complex.normSq_apply match the expressions used; nonzero denominators are supplied for squared scales.",
+      "canonicalNode_eq_inverseScale_mul and reverse ofReal_inv/ofReal_pow rewrites put the positive real normalizing factor outside the complex real-part product.",
+      "The new height and slope arguments follow established baseline tactics and theorem argument order. Numeric constants reduce to 123/128 and -21/29 with positive denominators.",
+      "The final propagation equivalence invokes the explicit seed-and-propagation equivalence plus the new unconditional seed; it does not silently introduce a propagation proof."
+    ],
+    "remaining_native_risks": "Static inspection cannot certify tactic execution, definitional reduction, coercion elaboration or imported environment compatibility. Native Lean compilation and exact axiom auditing remain required; no such execution occurred."
+  },
+  "anti_overclaim_gates": [
+    "Naming the finite pair (0,0) does not establish its all-order admissibility.",
+    "The supplied new source proves only the first cancellation index zero; index one remains the three displayed moment inequalities.",
+    "Positive real parts of squared canonical nodes do not imply positivity for all higher powers or all Bernstein rows.",
+    "The propagation iff statement exposes the remaining universal obligation; it is not a successful inductive proof of that obligation.",
+    "No finite checker or checker-accepted witness is constructed.",
+    "New source conclusions must remain source-prepared/native-pending until the user supplies compilation and axiom-audit evidence."
+  ],
+  "blockers": [],
+  "conclusion": "No definite mathematical defect, hidden RH assumption, circular proof use or likely API mismatch was identified in the two final source files. The independently supplied first-refinement route is substantive but limited to C_0=0. Full zero-budget admissibility and the finite-checker goal remain open. This report is source review only, not a native PASS."
+}

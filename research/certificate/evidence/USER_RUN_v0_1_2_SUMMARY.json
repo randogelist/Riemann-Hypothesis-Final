@@ -1,0 +1,43 @@
+{
+  "scope": "User-supplied partial Windows console excerpt from v0.1.2; not a v0.1.3 run or a full independent receipt validation",
+  "source": "evidence/USER_RUN_v0_1_2_EXCERPT.txt",
+  "source_representation": "User message preserved as UTF-8 text with LF line endings; excerpt begins in a truncated receipt path",
+  "source_sha256": "bbcccf33921a695f72dbc6d76dacc16a49753591d2614b0370e5fdf829597f17",
+  "package_reported": "RH_HILBERT_LIMIT_LEAN_v0_1_2_construction",
+  "target_reported": "LOCAL_COMPILER",
+  "run_result": "FAIL",
+  "reported_compile_and_axiom_audit_pass": [
+    "RH_HilbertLimit.Bernstein",
+    "RH_HilbertLimit.Growth",
+    "RH_HilbertLimit.Geometry",
+    "RH_HilbertLimit.Vandermonde"
+  ],
+  "reported_compile_failure": {
+    "module": "RH_HilbertLimit.ActualXi",
+    "line": 145,
+    "column": 16,
+    "message": "Unknown identifier D.moment_real"
+  },
+  "reported_blocked": [
+    "RH_HilbertLimit.Spectral",
+    "RH_HilbertLimit.Main"
+  ],
+  "not_shown_in_excerpt": [
+    "AWPIRH.XiCore",
+    "AWPIRH.ThetaEntire",
+    "startup fingerprint and hash backend details"
+  ],
+  "reported_pass_source_sha256": {
+    "RH_HilbertLimit.Bernstein": "e0b488ee02ec770a436348f8ebd9ff607e0480adddb23a6edc89c4272131f0b1",
+    "RH_HilbertLimit.Growth": "5fce21c7df7955ab1146418865141e3f3f7d2df23a92994032bcfb7008fc87fb",
+    "RH_HilbertLimit.Geometry": "87cf597061c1c297a58faeabc246af3129965b47be3f47971201628f940e1543",
+    "RH_HilbertLimit.Vandermonde": "b3bdc529531308962e66e3e9d36f37321c77169b1c7c4d70295be713dbaaacfe"
+  },
+  "full_build_log_supplied": false,
+  "full_axiom_audit_output_supplied": false,
+  "receipt_files_supplied": false,
+  "cached_artifacts_supplied": false,
+  "elapsed_time_available": false,
+  "native_hash_backend_confirmed": false,
+  "reuse_rule": "Runner validates existing same-target receipts and source/dependency/toolchain/artifact fingerprints on the user machine before reuse"
+}

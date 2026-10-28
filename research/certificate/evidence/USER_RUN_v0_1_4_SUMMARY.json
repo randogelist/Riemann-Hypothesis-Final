@@ -1,0 +1,34 @@
+{
+  "evidence_type": "USER_SUPPLIED_NATIVE_CONSOLE_EXCERPT",
+  "package_path_reported": "RH_HILBERT_LIMIT_LEAN_v0_1_4_construction",
+  "source_sha256": "5d629dc30a6b8a274ef112e2d9ee598fc4b99de214e75e08b13e351eb1ce14c3",
+  "bytes": 37339,
+  "reported_project_build": "PASS",
+  "reported_run": "PASS",
+  "reported_final_audit_declarations": 126,
+  "directly_visible_axiom_records": 116,
+  "visible_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "missing_prefix_targets": [
+    "AWPIRH.xi_differentiable",
+    "AWPIRH.xi_reflection",
+    "AWPIRH.centeredXi_differentiable",
+    "AWPIRH.centeredXi_even",
+    "AWPIRH.nontrivialZero_ne_zero",
+    "AWPIRH.gammaR_ne_zero_of_nontrivialZero",
+    "AWPIRH.completedZeta_zero_of_nontrivialZero",
+    "AWPIRH.xi_eq_completed",
+    "AWPIRH.xi_zero_of_nontrivialZero",
+    "AWPIRH.xi_ne_zero_of_one_le_re"
+  ],
+  "reported_compiled_modules": 3,
+  "reported_frozen_reused_modules": 7,
+  "startup_fingerprints_visible": false,
+  "receipt_files_supplied": false,
+  "independent_native_execution": false,
+  "scope": "Conditional analytic chain only; no finite checker or RH closure.",
+  "binding_limit": "Package path and printed types are visible. Startup provenance and actual Windows receipt/artifact files are not included; runtime must verify reuse."
+}

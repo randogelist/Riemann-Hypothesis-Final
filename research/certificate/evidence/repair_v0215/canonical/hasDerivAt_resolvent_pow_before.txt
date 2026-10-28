@@ -1,0 +1,3 @@
+  have h := (hasDerivAt_resolvent hb hz i).fun_pow (n + 1)
+  convert h using 1 <;>
+    simp only [Nat.add_sub_cancel, pow_succ, pow_zero] <;> ring

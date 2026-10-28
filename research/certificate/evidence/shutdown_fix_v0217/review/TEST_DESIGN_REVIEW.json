@@ -1,0 +1,86 @@
+{
+  "schema": "RH_V0217_INDEPENDENT_SHUTDOWN_TEST_DESIGN_REVIEW_V1",
+  "scope": "READ_ONLY_SOURCE_REVIEW_AND_TWO_BASELINE_NODE_VM_OBSERVATIONS",
+  "runner_sha256": "d5eb2c1f33b4fafcd0b1d366850cc860c7e73552dd739ee9cdd238559e679c86",
+  "findings": [
+    {
+      "id": "NO_SELF_HASH_CALL_FROM_LOGGING",
+      "finding": "diagnosticLog calls log, append, and read/write. Those functions use WScript.Echo and ADODB.Stream; none invokes fileHash, freshHashSet, launchCertutil, shell.Exec, or shell.Run."
+    },
+    {
+      "id": "OWNER_SNAPSHOT_IS_PURE_TEXT_HASH",
+      "finding": "lockSnapshotAt reads the owner metadata and computes its generation with textHash, the embedded JavaScript SHA256 implementation. No external certificate/hash process is launched."
+    },
+    {
+      "id": "NO_WRITEOWNER_SYMBOL",
+      "finding": "No writeOwner function exists in the current runner or follower. acquireRunnerLock writes owner.txt through write; releaseRunnerLock checks text through lockSnapshot."
+    },
+    {
+      "id": "SHUTDOWN_HAS_NO_NEW_HASH_LAUNCH",
+      "finding": "After existing workers drain, parallelAssertShutdownInventory rechecks owner metadata, owned process handles, WMI inventory, and the original worker guard. Retry logging and sleeping do not create hashes. Two in-memory observations show zero tool launches on these paths."
+    },
+    {
+      "id": "ADMISSION_EXCEPTION_STOPS_AT_PARENT",
+      "finding": "parallelShutdownInventory removes an exact, same-owner preadmitted relative-script host. Its children remain in the guarded inventory. An unreadable relevant child causes a tagged retry even when its parent is the admitted host."
+    },
+    {
+      "id": "CONTINUOUS_CHURN_CAN_EXHAUST_RETRIES",
+      "finding": "A new unreadable child in each of six snapshots can retain the lock without a single long-lived child. Increasing a retry count alone cannot guarantee resolution while a separate host continues creating such rows."
+    },
+    {
+      "id": "CURRENT_FAILURE_MESSAGE_OVERSTATES_OWNERSHIP",
+      "finding": "The entry-point message after parallelShutdown=false says owned workers remain live or uncertain even when the owned-handle list drained and the failure is an unclassified external inventory row. Diagnostic wording should preserve that distinction."
+    }
+  ],
+  "baseline_observation": {
+    "report": "../tests/baseline_observation_report.json",
+    "sha256": "9b22a2c3c14a01bbd067028b6e0eb264f97b2e789e03dc3fcf4b060c1e9d5af5",
+    "cases": 2,
+    "status": "PASS_EXPECTED_BASELINE_BEHAVIOR",
+    "candidate_fix_test": false
+  },
+  "future_focused_test_matrix": [
+    {
+      "case": "reported_rotating_child_pattern",
+      "expectation": "Simulate six changing certutil PIDs under the same admitted host. Any newly allowed outcome must cite additional observed identity/workspace/exit evidence or an explicit revised policy; do not silently label them unrelated."
+    },
+    {
+      "case": "current_workspace_binding_precedence",
+      "expectation": "A readable command referencing the current absolute workspace remains guarded regardless of parent, prior admission, or executable name."
+    },
+    {
+      "case": "full_identity_and_pid_reuse",
+      "expectation": "Parent/child PID reuse, changed CreationDate, changed host command, unreadable parent identity, or owner replacement cannot inherit an exception for a different identity."
+    },
+    {
+      "case": "unknown_or_new_unassociated_worker",
+      "expectation": "An unreadable process outside the narrowly justified relation remains uncertain. A newly visible blocker must not be hidden because a previous PID disappeared."
+    },
+    {
+      "case": "actual_own_worker_barrier",
+      "expectation": "Live or unknown retained Lean/RAM process handles still block release. A handle becoming live/unknown across an inventory boundary cannot be ignored."
+    },
+    {
+      "case": "error_and_budget_handling",
+      "expectation": "WMI/query/read errors retain uncertainty; any retry has a documented finite scheduled-sleep/attempt budget without assuming a WMI wall-clock bound."
+    },
+    {
+      "case": "stale_lock_scope",
+      "expectation": "Fresh-current-owner shutdown handling must not silently relax stale or legacy lock reclamation."
+    },
+    {
+      "case": "no_self_spawn_during_cleanup",
+      "expectation": "Logging, owner validation, and a successful/failed shutdown inventory launch no new hash/compiler/helper process."
+    },
+    {
+      "case": "audit_and_runtime_status_accuracy",
+      "expectation": "A cleanup failure may retain separately recorded successful audit-stage evidence, but never fabricate runtime success, receipt content, module compilation, or mathematical closure."
+    }
+  ],
+  "limits": [
+    "No source edits made by this review.",
+    "No native Windows, real WSH/WMI, Lean/Lake, C#, Wine or CI execution.",
+    "Baseline synthetic parent and process rows model the reported structure only; they do not determine real native command lines or workspace ownership.",
+    "No final repair design or candidate implementation was available when this review was written."
+  ]
+}

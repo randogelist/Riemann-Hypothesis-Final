@@ -1,0 +1,13 @@
+{
+  "schema": "RH_HILBERT_V0216_REUSE_RUNTIME_PRESERVATION_V1",
+  "status": "EXACT_ALL_RUNTIME_BYTES_AND_IDENTITIES_PRESERVED",
+  "runner_sha256": "d5eb2c1f33b4fafcd0b1d366850cc860c7e73552dd739ee9cdd238559e679c86",
+  "baseline_runner_sha256": "d5eb2c1f33b4fafcd0b1d366850cc860c7e73552dd739ee9cdd238559e679c86",
+  "runtime_or_identity_revision": false,
+  "runtime_review": "evidence/reuse_record_v0216/evidence/UNCHANGED_EXECUTION_INPUTS_REVIEW.json",
+  "runtime_review_sha256": "c571b7ea155ad69969b219994531d8b238150d374b8e3aaa8e256fbc3b9cd778",
+  "new_runtime_tests": false,
+  "native_execution_here": false,
+  "user_reported_run": "PASS; 0 compiled, 90 frozen reused; explicit standard-axiom audit summary with no sorryAx",
+  "independent_native_audit_or_receipt_inspection": false
+}

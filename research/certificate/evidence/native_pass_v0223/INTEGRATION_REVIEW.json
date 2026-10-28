@@ -1,0 +1,108 @@
+{
+  "schema": "RH_V0223_READ_ONLY_EVIDENCE_INTEGRATION_REVIEW_V1",
+  "status": "PASS",
+  "blockers": [],
+  "runner_sha256": "3dd2f760861c2cad12cfae1c5e37dc38f009f6f22037dddaaaa407acad8850f5",
+  "baseline": "RH_HILBERT_LIMIT_LEAN_v0_2_22_construction",
+  "candidate": "RH_HILBERT_LIMIT_LEAN_v0_2_23_construction",
+  "scope": "Static source/manifest preservation and evidence interpretation; no proof development or native execution.",
+  "lean_source_files_byte_preserved": 96,
+  "lean_source_set_sha256": "a09fa592956fe8b28cc91698326a6dba760bb42431848c9000ed3a77157bab8b",
+  "source_set_digest_encoding": "UTF-8 compact JSON object mapping sorted relative paths to SHA256, excluding evidence directory",
+  "declaration_inventory_records_byte_preserved": 1129,
+  "preserved_non_lean_files": [
+    "run.cmd",
+    "compile-order.txt",
+    "audit-targets.tsv",
+    "mathlib-imports.txt",
+    "final-audit.txt",
+    "DECLARATIONS.json",
+    "lean-toolchain",
+    "tools/NativeSha256.cs",
+    "tools/NativeRamWarm.cs",
+    "tools/follow_active.js"
+  ],
+  "normalized_runner_bytes_identical": true,
+  "only_runner_changes": [
+    "PACKAGE string constant",
+    "RUNNER_VERSION string constant"
+  ],
+  "latest_user_native_evidence": {
+    "package": "v0.2.22",
+    "run": "PASS",
+    "compiled_modules": 0,
+    "frozen_reused_modules": 93,
+    "selected_final_audit": "CancellationAudit.lean",
+    "selected_targets": 394,
+    "audit_kind": "REUSED_AGGREGATE",
+    "axioms": "PASS_STANDARD_LOGICAL_AXIOMS_ONLY",
+    "sorryax": "NONE",
+    "fresh_explicit_per_declaration_axiom_outputs": 0
+  },
+  "prior_explicit_axiom_evidence": {
+    "package": "v0.2.20",
+    "printed_declarations": 14,
+    "preserved_separately": true
+  },
+  "semantic_forward": "(exists W : CancellationBudget, W.Admissible) -> _root_.RiemannHypothesis",
+  "semantic_equivalence": "(exists W : CancellationBudget, W.Admissible) iff _root_.RiemannHypothesis",
+  "admissibility_limitation": "W contains natural cutoff and coefficient; Admissible separately asserts an explicit universal cancellation bound after the cutoff. No terminating finite Bool checker or unconditional admissible witness is obtained.",
+  "formal_closure_for_finite_checker_goal": "OPEN",
+  "finite_checker_soundness": "OPEN",
+  "finite_checker_equivalence": "OPEN",
+  "shutdown_evidence_scope": {
+    "clear": true,
+    "attempts": 1,
+    "full_inventories": 1,
+    "exact_worker_queries": 2,
+    "certutil_pids_confirmed_absent": [
+      41244,
+      44548
+    ],
+    "preexisting_admitted_host_pid": 45652,
+    "admitted_host_termination_claimed": false,
+    "relative_host_absence_second_inventory_branch_exercised": false
+  },
+  "current_v0223_native_run": "NOT_RUN",
+  "historical_v0222_mock_report": "20 synthetic-host cases preserved; no new mock execution or native coverage inferred.",
+  "native_receipt_contents_and_toolchain_artifact_identity_independently_verified": false,
+  "reviewer_execution": {
+    "lean": false,
+    "lake": false,
+    "native_runner": false,
+    "windows": false,
+    "csharp": false,
+    "wine": false,
+    "ci": false,
+    "new_runtime_tests": false
+  },
+  "source_or_runtime_edits_by_reviewer": false,
+  "reviewed_file_sha256": {
+    "run.cmd": "5e6c6561c370c904b13d165986f0c045c6e7732de1745744b03619cf4a4b9f16",
+    "compile-order.txt": "c9fa315ade1df77f184f323175e1ec96cf53e5b6c054ef441ba78ce4591f974b",
+    "audit-targets.tsv": "b34e9fb2e855e03ab8e68d66883a3534bdd225aa77c6e1a02d21eccbcb1c4c9a",
+    "mathlib-imports.txt": "0c2ef006a5917ffe890cf1483b524435038824c7116ca8fe49533d4d9a4da31c",
+    "final-audit.txt": "b4f96eed934280134dda30493f695a985527438f4ec6511930b68368b616fdbf",
+    "DECLARATIONS.json": "e2e0169ab779090455ded647f1f8aec26168b40befbf1d2465cb8235b19fdee3",
+    "lean-toolchain": "302cd63c54178885b89e669f33b38f12f4dd7ae7e5cac537b3203e3768d8fb2b",
+    "tools/NativeSha256.cs": "d8cd2d616ed2b7a64931fe391bd6e25b236a1c450e5b7c669df26c2974dd9f18",
+    "tools/NativeRamWarm.cs": "315d97cf6f1030c838292f5a871c5b583a682464638f139070055b2727f9d87a",
+    "tools/follow_active.js": "beb08b78f7c8ef53d06db9e99b266f1fb5a33cbb21d936a71dd6b1a8354f024f",
+    "tools/native_runner.js": "3dd2f760861c2cad12cfae1c5e37dc38f009f6f22037dddaaaa407acad8850f5",
+    "STATUS.json": "9487541e4983cdaf96501ae6a9609449e0395dcec37593b4a9c297778f99b13c",
+    "CHECKPOINT.json": "9883a36559bc30a1ad4fb18a0528af1ab4ad9085a214ce47bc0fb5aec69fa04b",
+    "README.md": "60893c17595e47bf31c5e71e43e34a782b65c256512acf42f68c6af3a127bf9a",
+    "RH_HilbertLimit/ActualCancellationWitness.lean": "0daeeb9fab456f2d399cc95cfda2b94c55f03d2c403b92d3a18579a0a7d622d6",
+    "CancellationAudit.lean": "2da7bb304576e2a592de29e8781685b621c28ffe794a85ae65fa50e1bcdc5891",
+    "evidence/native_pass_v0223/USER_REPORTED_NATIVE_PASS.json": "ee5d52ba2f7822c25862d19baa7f4fc57cb49ea9d0f87ed00bf23995af328407",
+    "evidence/native_pass_v0223/USER_NATIVE_V0222_PASS_TAIL.txt": "d26ae674fc97df7e732de0853c957f1e679e6d3b1b9e2f7558a3dbac4bfadbfb",
+    "evidence/native_pass_v0223/FROZEN_SOURCE_MANIFEST.json": "b692d71aea0a12620262056ce59426b24b25e6a8c6b5dd0a11a7bd7c8893b1af"
+  },
+  "excluded_pending_regeneration": [
+    "ZIP",
+    "SHA256SUMS.txt",
+    "PROVENANCE.json",
+    "STATIC_REVIEW.json",
+    "RUNNER_LOGIC_VALIDATION.json"
+  ]
+}

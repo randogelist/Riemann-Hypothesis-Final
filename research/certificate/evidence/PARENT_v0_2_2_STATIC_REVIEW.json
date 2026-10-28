@@ -1,0 +1,23 @@
+{
+  "result": "PASS_STATIC_AND_MOCK_CHECKS_ONLY",
+  "scope": "Runner/helper cache update; unchanged mathematical files",
+  "runner_sha256": "7ff8b7735c4310f632e484e93d2d5d164c6cb47997307b51e80972761197ad91",
+  "native_hash_helper_sha256": "d8cd2d616ed2b7a64931fe391bd6e25b236a1c450e5b7c669df26c2974dd9f18",
+  "lean_files_byte_preserved_from_latest_parent": 86,
+  "new_or_changed_lean_sources": 0,
+  "selected_axiom_targets_byte_preserved": 303,
+  "cmd_entry_count": 1,
+  "cmd_byte_preserved": true,
+  "node_runner_syntax": "PASS",
+  "cache_mock_scenarios_passed": 42,
+  "max_generated_artifact_path_under_observed_user_root": 232,
+  "all_parent_cache_optimizations_preserved": true,
+  "lean_execution": false,
+  "lake_execution": false,
+  "native_windows_execution": false,
+  "csharp_execution_or_compilation": false,
+  "ci_execution": false,
+  "new_native_build_or_axiom_audit": "NOT_RUN",
+  "finite_checker_equivalence": "OPEN_UNCHANGED",
+  "checked_at_utc": "2026-10-27T17:04:41.376689+00:00"
+}

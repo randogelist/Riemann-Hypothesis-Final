@@ -1,0 +1,153 @@
+{
+  "schema": "RH_HILBERT_FAST_STORE_PROFILE_VALIDATION_SUMMARY_V029",
+  "candidate_sha256": "c817f1cda09b76cd02570c8a8ba8553b85ead1c6e885a717087d71a79bd8ffbd",
+  "baseline_runner_sha256": "0d7b773a674a9d95261b0d3727744402b4ac1e1aafd910c3cb15a60d6397aa8a",
+  "helper_source_sha256": "d8cd2d616ed2b7a64931fe391bd6e25b236a1c450e5b7c669df26c2974dd9f18",
+  "reports": [
+    {
+      "path": "profile_results.json",
+      "sha256": "e8425b0710b80c62c241b9473d51a892f5b1fc0ac160f97e0ce83390663a389e",
+      "passed": 11,
+      "failed": 0,
+      "runner_sha256": "c817f1cda09b76cd02570c8a8ba8553b85ead1c6e885a717087d71a79bd8ffbd"
+    }
+  ],
+  "total_passed": 11,
+  "total_failed": 0,
+  "profile": {
+    "storage_root": "E:\\RH-FAST",
+    "workspaces": "E:\\RH-FAST\\workspaces",
+    "shared_anchor_base": "E:\\RH-FAST\\anchors",
+    "work_and_locks": "Per extracted package, unchanged root-relative paths"
+  },
+  "migration_checks": [
+    {
+      "prior": "default LOCALAPPDATA",
+      "migration": {
+        "compiles": 0,
+        "audits": 0,
+        "copies": 36,
+        "csc": 0
+      },
+      "repeated_warm": {
+        "compiles": 0,
+        "audits": 0,
+        "copies": 0,
+        "csc": 0
+      },
+      "old_anchor_bytes_preserved": true
+    },
+    {
+      "prior": "D:\\PreviousExplicitAnchors",
+      "migration": {
+        "compiles": 0,
+        "audits": 0,
+        "copies": 36,
+        "csc": 0
+      },
+      "repeated_warm": {
+        "compiles": 0,
+        "audits": 0,
+        "copies": 0,
+        "csc": 0
+      },
+      "old_anchor_bytes_preserved": true
+    }
+  ],
+  "inherited_tests_not_rerun": {
+    "scope": "Prior runtime/cache/helper/lock suites, including the86 named runtime review scenarios",
+    "rerun": false,
+    "reason": "Unchanged algorithm functions compared exactly with v0.2.8; new profile integration tested directly.",
+    "unchanged_function_count": 26,
+    "unchanged_functions": [
+      "selectCompiler",
+      "makeGlobalKey",
+      "moduleInput",
+      "auditKey",
+      "readAnchorCore",
+      "verifyCurrent",
+      "verifyLegacy",
+      "workingArtifactsMatch",
+      "restoreAnchor",
+      "saveAnchor",
+      "acceptRestored",
+      "processModuleBody",
+      "processModule",
+      "freshHashSet",
+      "fileHash",
+      "certutilHashSet",
+      "batchHashes",
+      "parseBatchHashes",
+      "hasherInput",
+      "prepareBatchHasher",
+      "recheckHasherInput",
+      "acquireRunnerLock",
+      "releaseRunnerLock",
+      "lockSnapshot",
+      "lockLaunchToken",
+      "identifyLockSelf"
+    ]
+  },
+  "harness_compatibility": {
+    "mock_host": "Byte-preserved from prior portable host",
+    "runtime_host": "Prior synthetic response function extracted into a module with explicit dependencies",
+    "virtual_drives": "C:, D:, E:, F: seeded as synthetic existing drive roots; no real-drive probe",
+    "cmd_fixture": "Inert v0.2.8 provenance text; current extraction launcher not executed"
+  },
+  "copy_files": [
+    {
+      "path": "README.txt",
+      "sha256": "9c07c84af535b70ed54a2683ac00f1e97779fd2c33de817394661edad6bca04d",
+      "bytes": 2289
+    },
+    {
+      "path": "fixtures/NativeSha256.cs.txt",
+      "sha256": "d8cd2d616ed2b7a64931fe391bd6e25b236a1c450e5b7c669df26c2974dd9f18",
+      "bytes": 8565
+    },
+    {
+      "path": "fixtures/baseline_native_runner.js.txt",
+      "sha256": "0d7b773a674a9d95261b0d3727744402b4ac1e1aafd910c3cb15a60d6397aa8a",
+      "bytes": 80705
+    },
+    {
+      "path": "fixtures/baseline_run.cmd.txt",
+      "sha256": "5e6c6561c370c904b13d165986f0c045c6e7732de1745744b03619cf4a4b9f16",
+      "bytes": 1250
+    },
+    {
+      "path": "mock_host.js",
+      "sha256": "4028eb36105d4fb59facd32cdc0fb7502a98112cafa850e98998d7af101f0b06",
+      "bytes": 13437
+    },
+    {
+      "path": "profile_results.json",
+      "sha256": "e8425b0710b80c62c241b9473d51a892f5b1fc0ac160f97e0ce83390663a389e",
+      "bytes": 8959
+    },
+    {
+      "path": "profile_review.js",
+      "sha256": "681b775712be70695847747e3adb6241ae55729de2ed83559f4b1752c6ea81e1",
+      "bytes": 22438
+    },
+    {
+      "path": "runtime_host.js",
+      "sha256": "04bbe337cfd78da17d692aa80b26d1d9585ad43ba237ddeca618d49d85e55a2e",
+      "bytes": 4553
+    }
+  ],
+  "also_copy": "validation_summary.json",
+  "native_windows_execution": false,
+  "lean_execution": false,
+  "lake_execution": false,
+  "csharp_compilation_or_execution": false,
+  "wine_execution": false,
+  "ci_execution": false,
+  "native_child_processes": 0,
+  "limitations": [
+    "No native E: drive, extraction, CMD/WSH, filesystem permissions or native timing validation.",
+    "Synthetic artifacts and receipts are not proof certification or native PASS evidence.",
+    "Wrong-root and same-root-owner main branches execute only against synthetic APIs and return before any simulated compiler operation."
+  ],
+  "checked_at_utc": "2026-10-27T18:20:56.534753+00:00"
+}

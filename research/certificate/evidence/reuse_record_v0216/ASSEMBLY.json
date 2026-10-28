@@ -1,0 +1,89 @@
+{
+  "baseline": "/workspace/scratch/f128c1434505/output/RH_HILBERT_LIMIT_LEAN_v0_2_16_construction",
+  "candidate": "/workspace/scratch/f128c1434505/output/reuse_record_v0216/RH_HILBERT_LIMIT_LEAN_v0_2_16_construction",
+  "delivery": "RH_HILBERT_LIMIT_LEAN_v0_2_16_REUSE_RECORD_construction.zip",
+  "metadata_changed": [
+    "CHECKPOINT.json",
+    "DECLARATIONS.json",
+    "OPEN_OBLIGATIONS.txt",
+    "PROVENANCE.json",
+    "README.md",
+    "RUNNER_LOGIC_VALIDATION.json",
+    "RUNNER_NOTES.txt",
+    "SHA256SUMS.txt",
+    "STATIC_REVIEW.json",
+    "STATUS.json"
+  ],
+  "reported_run": {
+    "evidence_kind": "USER_MESSAGE_UTF8_LF_TRANSCRIPTION_NOT_ORIGINAL_NATIVE_LOG_BYTES",
+    "reported_package": "RH_HILBERT_LIMIT_LEAN_v0_2_16_construction",
+    "reported_build": "PASS",
+    "reported_run": "PASS",
+    "reported_axiom_audit": "PASS_STANDARD_LOGICAL_AXIOMS_ONLY",
+    "reported_sorryax": "NONE",
+    "reported_final_audit": "AnalyticAudit.lean",
+    "reported_formal_closure": "OPEN",
+    "reported_finite_checker_equivalence": "OPEN",
+    "reported_compiled_modules": 0,
+    "reported_frozen_reused_modules": 90,
+    "reported_counts": {
+      "compiled_modules": 0,
+      "frozen_reused_modules": 90,
+      "audit_only_modules": 0,
+      "legacy_migrated_modules": 0,
+      "working_artifact_modules_retained": 0,
+      "restored_artifact_files": 90,
+      "anchor_history_scans": 0,
+      "compact_anchors_saved": 0,
+      "combined_working_digests_consumed": 0,
+      "final_audit_declarations": 370
+    },
+    "reported_stages": {
+      "PROJECT_MODULES": {
+        "elapsed_ms": 53350,
+        "result": "RETURNED"
+      },
+      "FINAL_AUDIT": {
+        "elapsed_ms": 469,
+        "result": "RETURNED"
+      },
+      "WORKER_SHUTDOWN": {
+        "elapsed_ms": 270,
+        "result": "RETURNED"
+      }
+    },
+    "reported_logical_tool_launches": {
+      "certutil": 401,
+      "csc": 0,
+      "helper": 2,
+      "lean": 2,
+      "other": 0,
+      "ram_warm": 0,
+      "total": 405
+    },
+    "reported_hash_phase_totals": {
+      "batch_sets": 1,
+      "certutil_sets": 183,
+      "elapsed_ms": 34526,
+      "failed_sets": 0,
+      "files": 37509,
+      "sets": 184
+    },
+    "reported_ram_warm": "SKIPPED_NO_ELIGIBLE_DIRTY_FRONTIER",
+    "source_sha256": "d4c7ca9f9d6b20e4d0085f7c3cbdd2105957263746b2bb0bb6668bdb81d07f15",
+    "source_bytes": 2014,
+    "source": "evidence/reuse_record_v0216/evidence/USER_NATIVE_REUSE_TAIL.txt",
+    "review": "evidence/reuse_record_v0216/evidence/NATIVE_REUSE_TAIL_REVIEW.json",
+    "source_anchor_receipt_path_as_reported": "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\306d31ec023b7765\\efe6a0ea0d5554bca15985613c6d0eb2\\01a17f23ecf728ce\\receipt.txt",
+    "native_receipt_contents": "NOT_SUPPLIED; PATH_ONLY",
+    "native_source_dependency_toolchain_and_artifact_fingerprints": "NOT_SUPPLIED_IN_EXCERPT",
+    "direct_per_declaration_axiom_output": "NOT_SUPPLIED; EXPLICIT_AGGREGATE_AUDIT_SUMMARY_PRESENT",
+    "independent_exact_native_verification": "NOT_PERFORMED",
+    "first_marker": "CLIPPED_PREFIX_PRESERVED_VERBATIM; NOT_RECONSTRUCTED",
+    "timing_scope": "Stage and hash aggregate counters only; whole-run wall time is absent."
+  },
+  "runner_sha256": "d5eb2c1f33b4fafcd0b1d366850cc860c7e73552dd739ee9cdd238559e679c86",
+  "proof_or_runtime_changes": false,
+  "new_native_or_test_execution": false,
+  "prepared_at": "2026-10-27T22:06:52.501919+01:00"
+}

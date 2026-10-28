@@ -1,0 +1,30 @@
+{
+  "baseline_runner_sha256": "d5eb2c1f33b4fafcd0b1d366850cc860c7e73552dd739ee9cdd238559e679c86",
+  "candidate_runner_sha256": "3d9233a9dd98ecd6549860716c338d11f5aedb44d9146b0835941d3b171e030c",
+  "exact_function_text_preserved": {
+    "acquireRunnerLock": true,
+    "quarantineStaleLock": true,
+    "releaseRunnerLock": true,
+    "assertNoLockWorkers": true,
+    "queryLockProcesses": true,
+    "lockSnapshotAt": true,
+    "identifyLockSelf": true,
+    "captureFreshAdmittedRelativeHosts": true,
+    "parallelIsFreshAdmittedRelativeHost": true,
+    "parallelIsReadOnlyFollower": true,
+    "moduleInput": true,
+    "makeGlobalKey": true,
+    "checkAxioms": true,
+    "readAnchorCore": true,
+    "workingArtifactsMatch": true,
+    "restoreAnchor": true,
+    "saveAnchor": true,
+    "acceptRestored": true,
+    "processModuleBody": true,
+    "finalAudit": true,
+    "parallelMemoryAllowsLaunch": true,
+    "parallelTrySerialFallback": true,
+    "parallelStopRamForMemory": true
+  },
+  "parallelShutdown_only_inserts_launch_seal": true
+}

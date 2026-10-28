@@ -1,0 +1,33 @@
+{
+  "schema": "RH_HILBERT_REPORTING_ADAPTER_STATIC_REVIEW_V1",
+  "status": "STATIC_REPORTING_ONLY_DIFF_AND_JS_SYNTAX_CHECK_PASS",
+  "checked_at_utc": "2026-10-27T19:19:47.407426+00:00",
+  "parent_runner_sha256": "eaf8ebc221f08607bd2256827e8bbafb5e5b2e2509e3e71513fe994db2d9eb97",
+  "runner_sha256": "738f7f92b68f8145a3c6b9e5b395e0c5ac95b156b6e4c5bdf2799c6d272fbb7f",
+  "exact_replacement_count": 4,
+  "replacements": [
+    "package label",
+    "runner version label",
+    "result JSON status fields",
+    "post-audit console status fields"
+  ],
+  "reverse_replacements_restore_entire_prior_runner": true,
+  "compile_cache_hash_lock_and_audit_algorithms_unchanged": true,
+  "success_console_statuses_after_final_audit": true,
+  "json_construction_statuses_conditioned_on_pass_argument": true,
+  "formal_closure_and_finite_checker_open_on_success_and_failure": true,
+  "javascript_syntax": "node --check returned 0; Windows source not executed",
+  "historical_runtime_validation": "evidence/baseline_v0210_metadata/RUNNER_LOGIC_VALIDATION.json",
+  "historical_tests_rerun": false,
+  "native_windows_execution": false,
+  "lean_or_lake_execution": false,
+  "csharp_execution": false,
+  "ci_execution": false,
+  "runtime_performance_change_or_speedup_claim": false,
+  "isolated_result_format_simulation": {
+    "scope": "Only result(pass,message) JSON formatting with dummy data; no native build",
+    "pass_and_fail_cases": "PASS_FORMATTING_SIMULATION_ONLY",
+    "report": "evidence/analytic_v0211/REPORTING_FORMAT_SIMULATION.json",
+    "report_sha256": "930adb2cb0df1ade5e58f0284eaf876e4c1c6f6969556646a16f914c0d424c78"
+  }
+}

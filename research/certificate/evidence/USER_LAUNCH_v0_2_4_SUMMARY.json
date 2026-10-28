@@ -1,0 +1,12 @@
+{
+  "evidence_type": "TRANSCRIPTION_OF_USER_MESSAGE",
+  "package": "RH_HILBERT_LIMIT_LEAN_v0_2_4_construction",
+  "source": "Current user message; no attached raw log file",
+  "transcribed_evidence_sha256": "d398cec3abb5413cfc3f27ecc39f9904e4e3fdeb105d4acef49d3a68bee4a00c",
+  "observed_failure": "CSCRIPT_SCRIPT_NOT_FOUND_WITH_DUPLICATED_PACKAGE_DIRECTORY",
+  "runner_started": false,
+  "lean_started": false,
+  "new_build_or_axiom_audit_evidence": false,
+  "repair": "Resolve and store the absolute package directory before pushd; launch cscript using that captured directory.",
+  "repair_native_validation": "PENDING"
+}

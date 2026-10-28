@@ -1,0 +1,51 @@
+Graph-startup candidate for RH_HILBERT_LIMIT_LEAN_v0_2_10_construction
+Baseline: output/RH_HILBERT_LIMIT_LEAN_v0_2_9_construction/tools/native_runner.js
+
+Graph-only patch scope (before the separate parent overlay)
+- Read each current external source file, then scan only the prefix that the
+  existing import-header parser can inspect. The shared line parser preserves
+  implicit Init, prelude/module lines, import modifiers/all, errors, nested
+  comments, strings, and the original escaped-newline behavior.
+- Reuse the already strict-cleaned current local/final source for import
+  parsing. The strict full-source placeholder/kernel-bypass scanner is unchanged.
+  No source or parsed-import cache crosses from requirements checking into the
+  dependency graph, or persists between runs.
+- Classify each immutable external artifact-directory listing once per graph
+  walk. Exact family spelling, every .olean.* companion, .ir/.dll inclusion,
+  and sorted enumeration order are preserved. Mutable project artifact-family
+  reads retain the original uncached function.
+- Normalize each requestHash path once; request each package's lockfiles once.
+  The same source, dependency, artifact, package-lock and toolchain files remain
+  subject to the existing fresh content-hash and identity checks.
+- Print STAGE_START before each timed stage and dependency-graph START,
+  five-second-throttled RUNNING, and COMPLETE/INTERRUPTED diagnostics. Counters
+  cover modules, current sources, source characters, import-prefix characters,
+  strict-scan characters, artifact directories/entries, and package lock sets.
+  Character counters are JavaScript string lengths (UTF-16 code units), not
+  byte counts. Existing stage-end timings and failure stages are preserved.
+
+Preserved by the graph-only patch
+- All existing source/dependency/toolchain/audit fingerprint formulas and
+  validation, receipt compatibility, hashing transport, locks, follower behavior,
+  E:\RH-FAST profile, compiler flags, and Lean/Mathlib cache search order.
+- No changes to run.cmd, NativeSha256.cs, or any Lean source.
+- No persistent graph index, timestamp-based trust, or omission of content hashes.
+
+Graph-only candidate review status
+- Node syntax-only check passed. This does not execute WSH or validate Windows.
+- Static comparison: six existing functions changed; 101 existing functions
+  remain byte-identical. Twelve graph/parser/index helpers were added.
+- Independent mocked-host and read-only reviews are coordinated separately.
+- No Lean, Lake, Windows, C#, Wine, or CI execution; no native speedup claimed.
+
+Graph-only runner SHA256 at handoff:
+1e13f7016ef070a1c452fb4061770a33af14edc07d21831dc6f0c88800d6c694
+
+Parent overlay
+- The parent subsequently merged a separate narrow certutil empty-file recovery
+  patch into native_runner.js. The graph-only patch described above left
+  hashOutput/fileHash/certutilHashSet unchanged; the preservation/count assertions
+  above describe that graph-only diff, not the parent's combined hash patch.
+- The combined runner is frozen for the coordinated independent review/tests.
+- Combined runner SHA256 reported by the parent:
+  eaf8ebc221f08607bd2256827e8bbafb5e5b2e2509e3e71513fe994db2d9eb97

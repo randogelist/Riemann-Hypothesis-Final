@@ -1,0 +1,1053 @@
+{
+  "baseline_path": "/workspace/scratch/f128c1434505/output/RH_HILBERT_LIMIT_LEAN_v0_2_21_construction/tools/native_runner.js",
+  "baseline_sha256": "5362c7e1550711b7604682836aa220c429916c73761f5cef7a7014bebd11f81a",
+  "candidate_path": "/workspace/scratch/f128c1434505/output/RH_HILBERT_LIMIT_LEAN_v0_2_22_construction/tools/native_runner.js",
+  "candidate_sha256": "8fc5a81e3802a52e3ec12fa2c94177a42b59b202a83b66c9609ea1356889e907",
+  "method": "Exact comparison of every top-level named function body using the source file's column-zero function and closing-brace layout, plus independent full unified-diff review.",
+  "baseline_function_count": 165,
+  "candidate_function_count": 168,
+  "changed_existing_functions": [
+    "assertNoLockWorkers",
+    "parallelAssertShutdownInventory"
+  ],
+  "added_functions": [
+    "lockSimpleWshScriptArgument",
+    "relativeLockWorkerDetails",
+    "relativeLockWorkerError"
+  ],
+  "removed_functions": [],
+  "unchanged_existing_function_count": 163,
+  "explicitly_protected_functions": [
+    "acquireRunnerLock",
+    "quarantineStaleLock",
+    "releaseRunnerLock",
+    "queryLockProcesses",
+    "queryShutdownProcess",
+    "guardShutdownOwner",
+    "captureFreshAdmittedRelativeHosts",
+    "parallelIsFreshAdmittedRelativeHost",
+    "parallelIsReadOnlyFollower",
+    "lockActualRelativeRunner",
+    "lockCreatedNoLater",
+    "parallelShutdownInventory",
+    "lockAncestors",
+    "identifyLockSelf",
+    "commandHasArgument",
+    "lockSnapshotAt",
+    "lockSnapshot",
+    "processIdentity",
+    "validProcessCreation",
+    "nativeBeginLaunch",
+    "nativeTrackedRun",
+    "nativeTrackedExec",
+    "sealNativeLaunches",
+    "ownedNativeLaunchOutstanding",
+    "parallelLiveProcesses",
+    "parallelShutdown",
+    "moduleInput",
+    "makeGlobalKey",
+    "checkAxioms",
+    "readAnchorCore",
+    "workingArtifactsMatch",
+    "restoreAnchor",
+    "saveAnchor",
+    "acceptRestored",
+    "processModuleBody",
+    "finalAudit",
+    "parallelMemoryAllowsLaunch",
+    "parallelTrySerialFallback",
+    "parallelStopRamForMemory"
+  ],
+  "functions": [
+    {
+      "name": "trim",
+      "byte_identical": true,
+      "baseline_sha256": "92eff4e51a13e1c0fef28271c06f133f92a58b37ed0d203f07ae1f94be95abb0",
+      "candidate_sha256": "92eff4e51a13e1c0fef28271c06f133f92a58b37ed0d203f07ae1f94be95abb0"
+    },
+    {
+      "name": "norm",
+      "byte_identical": true,
+      "baseline_sha256": "a770dde2dce13c943b8a6767bb6ddc0e4fc883519afe8284aa3f071531ca53e8",
+      "candidate_sha256": "a770dde2dce13c943b8a6767bb6ddc0e4fc883519afe8284aa3f071531ca53e8"
+    },
+    {
+      "name": "keyPath",
+      "byte_identical": true,
+      "baseline_sha256": "ef543bb6f53812a3804093e87bacaf57496340ce899648d73ab5937f4faaf29d",
+      "candidate_sha256": "ef543bb6f53812a3804093e87bacaf57496340ce899648d73ab5937f4faaf29d"
+    },
+    {
+      "name": "configurePersistentProfile",
+      "byte_identical": true,
+      "baseline_sha256": "02059ea2a400c240d046eb12ec7602abc43e7e3a4dc4bcb37e1d9706b612fd10",
+      "candidate_sha256": "02059ea2a400c240d046eb12ec7602abc43e7e3a4dc4bcb37e1d9706b612fd10"
+    },
+    {
+      "name": "compactToken",
+      "byte_identical": true,
+      "baseline_sha256": "4c2c66bc768a88b7d0e3fcd8c7a3ede69f3050f2b382bf5e2fb6815553a19efc",
+      "candidate_sha256": "4c2c66bc768a88b7d0e3fcd8c7a3ede69f3050f2b382bf5e2fb6815553a19efc"
+    },
+    {
+      "name": "shortCacheGroup",
+      "byte_identical": true,
+      "baseline_sha256": "8aee5507fb38fc42109dde22141a105f152f8758bf7fac46a1ee73b05bbadc62",
+      "candidate_sha256": "8aee5507fb38fc42109dde22141a105f152f8758bf7fac46a1ee73b05bbadc62"
+    },
+    {
+      "name": "requireShortPath",
+      "byte_identical": true,
+      "baseline_sha256": "9f338048914a1f5a601e53893179bd23545f7f856a4679b06ddfaa8e772065d0",
+      "candidate_sha256": "9f338048914a1f5a601e53893179bd23545f7f856a4679b06ddfaa8e772065d0"
+    },
+    {
+      "name": "exists",
+      "byte_identical": true,
+      "baseline_sha256": "25d2cc1a773141ee123694e57b992146aecc83fdc84b1bd7a259521bf8ef4403",
+      "candidate_sha256": "25d2cc1a773141ee123694e57b992146aecc83fdc84b1bd7a259521bf8ef4403"
+    },
+    {
+      "name": "directory",
+      "byte_identical": true,
+      "baseline_sha256": "a26383249a5d56a97bf428a9e5caee4ad3bedbde32e3972e61028c32a2d3fb27",
+      "candidate_sha256": "a26383249a5d56a97bf428a9e5caee4ad3bedbde32e3972e61028c32a2d3fb27"
+    },
+    {
+      "name": "mkdir",
+      "byte_identical": true,
+      "baseline_sha256": "6f70848ed84b154998b7c3a6948fc6043e8b29ea701d95cb21e3f3114618a42a",
+      "candidate_sha256": "6f70848ed84b154998b7c3a6948fc6043e8b29ea701d95cb21e3f3114618a42a"
+    },
+    {
+      "name": "read",
+      "byte_identical": true,
+      "baseline_sha256": "71ef65066d45127d564bff232bb438d062ed6e157736902ced3a4a9253cebd15",
+      "candidate_sha256": "71ef65066d45127d564bff232bb438d062ed6e157736902ced3a4a9253cebd15"
+    },
+    {
+      "name": "write",
+      "byte_identical": true,
+      "baseline_sha256": "a34d658bf18bab9882cf24053fe8a6dc883753b99915ecfca1f7bd1391ae9779",
+      "candidate_sha256": "a34d658bf18bab9882cf24053fe8a6dc883753b99915ecfca1f7bd1391ae9779"
+    },
+    {
+      "name": "writeAscii",
+      "byte_identical": true,
+      "baseline_sha256": "362d28cbf8898144a2040441fd15828b0afcc8a31f3aad726f1fab802c874fa6",
+      "candidate_sha256": "362d28cbf8898144a2040441fd15828b0afcc8a31f3aad726f1fab802c874fa6"
+    },
+    {
+      "name": "append",
+      "byte_identical": true,
+      "baseline_sha256": "562e94bc3bc94d735b754b25345a49816bbd9d5cdaee64870ab2d997169a5f4d",
+      "candidate_sha256": "562e94bc3bc94d735b754b25345a49816bbd9d5cdaee64870ab2d997169a5f4d"
+    },
+    {
+      "name": "log",
+      "byte_identical": true,
+      "baseline_sha256": "d1fcb7855745f439a1592bf83ef8abd07237aa2c004497c3682ca49a1017eddc",
+      "candidate_sha256": "d1fcb7855745f439a1592bf83ef8abd07237aa2c004497c3682ca49a1017eddc"
+    },
+    {
+      "name": "stamp",
+      "byte_identical": true,
+      "baseline_sha256": "2e0bbfdc0b717f72a387f5d7aa62032a82f63572bf7303860ea46e0f9f6abe1a",
+      "candidate_sha256": "2e0bbfdc0b717f72a387f5d7aa62032a82f63572bf7303860ea46e0f9f6abe1a"
+    },
+    {
+      "name": "error",
+      "byte_identical": true,
+      "baseline_sha256": "032714d5d2d01b15350282951d4f5354dc6768838144d781f84c3dc4c193af82",
+      "candidate_sha256": "032714d5d2d01b15350282951d4f5354dc6768838144d781f84c3dc4c193af82"
+    },
+    {
+      "name": "fatalHashError",
+      "byte_identical": true,
+      "baseline_sha256": "3b7312e1086f8f42ed3e78a35db4aa345db660f916c5d7a38a36a47986260ad6",
+      "candidate_sha256": "3b7312e1086f8f42ed3e78a35db4aa345db660f916c5d7a38a36a47986260ad6"
+    },
+    {
+      "name": "isFatalHashError",
+      "byte_identical": true,
+      "baseline_sha256": "4763ea92b5e0f89135812822130814bcf84042fc2a10808ef043bb16935835ac",
+      "candidate_sha256": "4763ea92b5e0f89135812822130814bcf84042fc2a10808ef043bb16935835ac"
+    },
+    {
+      "name": "helperUnavailableError",
+      "byte_identical": true,
+      "baseline_sha256": "7c9a06fcdcee3f5cdefea260dab10ac4db6e837a61ce62c6540bb3df71b25209",
+      "candidate_sha256": "7c9a06fcdcee3f5cdefea260dab10ac4db6e837a61ce62c6540bb3df71b25209"
+    },
+    {
+      "name": "elapsedSince",
+      "byte_identical": true,
+      "baseline_sha256": "061aa34cc4b49e52b6ae6fc34920118a3557409954eae13be9246a6741ca4348",
+      "candidate_sha256": "061aa34cc4b49e52b6ae6fc34920118a3557409954eae13be9246a6741ca4348"
+    },
+    {
+      "name": "diagnosticLog",
+      "byte_identical": true,
+      "baseline_sha256": "f353630b5cb66f84449aeda83eea4565ea7aa4969a6fe59f7417d0bc76c1c535",
+      "candidate_sha256": "f353630b5cb66f84449aeda83eea4565ea7aa4969a6fe59f7417d0bc76c1c535"
+    },
+    {
+      "name": "timedStage",
+      "byte_identical": true,
+      "baseline_sha256": "6de0ac21fa8459160cf8d2fc43dcb32c980260fbb5750bfd463d7a6296e8deaf",
+      "candidate_sha256": "6de0ac21fa8459160cf8d2fc43dcb32c980260fbb5750bfd463d7a6296e8deaf"
+    },
+    {
+      "name": "keys",
+      "byte_identical": true,
+      "baseline_sha256": "0008380edc03947264449e0e323d4e929e0d1bfb0178cbe63b8258b4ee5d997e",
+      "candidate_sha256": "0008380edc03947264449e0e323d4e929e0d1bfb0178cbe63b8258b4ee5d997e"
+    },
+    {
+      "name": "unique",
+      "byte_identical": true,
+      "baseline_sha256": "d9fbde6275850baa3c2dc6e09ee9013b3efbfee2744eded504abb8e78793a614",
+      "candidate_sha256": "d9fbde6275850baa3c2dc6e09ee9013b3efbfee2744eded504abb8e78793a614"
+    },
+    {
+      "name": "quote",
+      "byte_identical": true,
+      "baseline_sha256": "2ac7f3cf98cebbca62576f15f2d42ce4e0d82788bb9cd736d11c88ba3cc25bd7",
+      "candidate_sha256": "2ac7f3cf98cebbca62576f15f2d42ce4e0d82788bb9cd736d11c88ba3cc25bd7"
+    },
+    {
+      "name": "runToFile",
+      "byte_identical": true,
+      "baseline_sha256": "b5c6421b300c84d94ceb3b9750d6a086dbce61f48a0d21dbf8193acb1dbcafaa",
+      "candidate_sha256": "b5c6421b300c84d94ceb3b9750d6a086dbce61f48a0d21dbf8193acb1dbcafaa"
+    },
+    {
+      "name": "nativeBeginLaunch",
+      "byte_identical": true,
+      "baseline_sha256": "2884fce2493be9e815e19512c79eb0f06fc17f6f039c6346680efadca783b37a",
+      "candidate_sha256": "2884fce2493be9e815e19512c79eb0f06fc17f6f039c6346680efadca783b37a"
+    },
+    {
+      "name": "nativeTrackedRun",
+      "byte_identical": true,
+      "baseline_sha256": "4fa2eebb4186ab1f1393a9af6181204518b3793cb371a3768c1d5ac62de76d1a",
+      "candidate_sha256": "4fa2eebb4186ab1f1393a9af6181204518b3793cb371a3768c1d5ac62de76d1a"
+    },
+    {
+      "name": "nativeTrackedExec",
+      "byte_identical": true,
+      "baseline_sha256": "6f6c1371c3e3c97b2832d8a233225c173ef5a476309fb5ec062ff0a0ddbb6ff0",
+      "candidate_sha256": "6f6c1371c3e3c97b2832d8a233225c173ef5a476309fb5ec062ff0a0ddbb6ff0"
+    },
+    {
+      "name": "sealNativeLaunches",
+      "byte_identical": true,
+      "baseline_sha256": "ac7fe10f7211abd7ede3f3a762330cf642f3cda2179256f0a8496cef955fb89c",
+      "candidate_sha256": "ac7fe10f7211abd7ede3f3a762330cf642f3cda2179256f0a8496cef955fb89c"
+    },
+    {
+      "name": "ownedNativeLaunchOutstanding",
+      "byte_identical": true,
+      "baseline_sha256": "1c342de4813caf6b185e1dad4a4fe78f0791baa2af7d97e0e29f4eb3743a80d4",
+      "candidate_sha256": "1c342de4813caf6b185e1dad4a4fe78f0791baa2af7d97e0e29f4eb3743a80d4"
+    },
+    {
+      "name": "invokeNative",
+      "byte_identical": true,
+      "baseline_sha256": "e5ec7d47ad083891176767e0152cb29edb9c114287bd28cb8b5999a42eddc03b",
+      "candidate_sha256": "e5ec7d47ad083891176767e0152cb29edb9c114287bd28cb8b5999a42eddc03b"
+    },
+    {
+      "name": "lockString",
+      "byte_identical": true,
+      "baseline_sha256": "60f80c51c7de062db3e960fa9fe68680a45cbf155e44ca127f30a0a41bccde9a",
+      "candidate_sha256": "60f80c51c7de062db3e960fa9fe68680a45cbf155e44ca127f30a0a41bccde9a"
+    },
+    {
+      "name": "validProcessCreation",
+      "byte_identical": true,
+      "baseline_sha256": "ad15a5d7760a8349551a75632070951360c227893887169f33a18645239b98d9",
+      "candidate_sha256": "ad15a5d7760a8349551a75632070951360c227893887169f33a18645239b98d9"
+    },
+    {
+      "name": "processCreationMillis",
+      "byte_identical": true,
+      "baseline_sha256": "034e9b16409327c7c4cbd58d4a5578ce60be9ac6dc1177178519394aaeea3a4a",
+      "candidate_sha256": "034e9b16409327c7c4cbd58d4a5578ce60be9ac6dc1177178519394aaeea3a4a"
+    },
+    {
+      "name": "queryLockProcesses",
+      "byte_identical": true,
+      "baseline_sha256": "c47da155a30cb32083ab13af669166bbc2e756fc34301ec30ef72f4a567019dc",
+      "candidate_sha256": "c47da155a30cb32083ab13af669166bbc2e756fc34301ec30ef72f4a567019dc"
+    },
+    {
+      "name": "commandHasArgument",
+      "byte_identical": true,
+      "baseline_sha256": "2581ae0aa0e6264b7bf77a0fe846c73132164a03e411a4c8cc47eafff4171d2c",
+      "candidate_sha256": "2581ae0aa0e6264b7bf77a0fe846c73132164a03e411a4c8cc47eafff4171d2c"
+    },
+    {
+      "name": "lockLaunchToken",
+      "byte_identical": true,
+      "baseline_sha256": "b9f5e37e4c6d94c8ff2b28fce44ff861d2348c4779b0aed0fd8c466da95d138e",
+      "candidate_sha256": "b9f5e37e4c6d94c8ff2b28fce44ff861d2348c4779b0aed0fd8c466da95d138e"
+    },
+    {
+      "name": "identifyLockSelf",
+      "byte_identical": true,
+      "baseline_sha256": "b820f9bf882e319ed4c032cee55e1e074811384f4c0abaa41445316d299c925a",
+      "candidate_sha256": "b820f9bf882e319ed4c032cee55e1e074811384f4c0abaa41445316d299c925a"
+    },
+    {
+      "name": "formatLockOwner",
+      "byte_identical": true,
+      "baseline_sha256": "67a70b812f40bf7f585fa161e25f8693e913ac860de27906fba49be1ae0c9d79",
+      "candidate_sha256": "67a70b812f40bf7f585fa161e25f8693e913ac860de27906fba49be1ae0c9d79"
+    },
+    {
+      "name": "lockSnapshotAt",
+      "byte_identical": true,
+      "baseline_sha256": "f8b0bb62574f60dcd2754c684c5dabcf8ae4b54e3ad86f6b32030b91664aae7c",
+      "candidate_sha256": "f8b0bb62574f60dcd2754c684c5dabcf8ae4b54e3ad86f6b32030b91664aae7c"
+    },
+    {
+      "name": "lockSnapshot",
+      "byte_identical": true,
+      "baseline_sha256": "f5420accec634ed54f1c70d8594db5310a682ffc95b80e0881a157ff42938b52",
+      "candidate_sha256": "f5420accec634ed54f1c70d8594db5310a682ffc95b80e0881a157ff42938b52"
+    },
+    {
+      "name": "processIdentity",
+      "byte_identical": true,
+      "baseline_sha256": "a588ba2f91b727ea498ceb12fed99c89171df33b06ba0fc8d924978a1ff950da",
+      "candidate_sha256": "a588ba2f91b727ea498ceb12fed99c89171df33b06ba0fc8d924978a1ff950da"
+    },
+    {
+      "name": "lockAncestors",
+      "byte_identical": true,
+      "baseline_sha256": "09d02b0d182d2fb0759656ba5c9bdd9e1055996e28b8e6249f315433dcb97a51",
+      "candidate_sha256": "09d02b0d182d2fb0759656ba5c9bdd9e1055996e28b8e6249f315433dcb97a51"
+    },
+    {
+      "name": "assertNoLockWorkers",
+      "byte_identical": false,
+      "baseline_sha256": "44908bfe873094bfd3b7248ffa8f9d77831814bbe2afacc292fba35015beca67",
+      "candidate_sha256": "7c47f14337e30d7e4858cd0f1390aec36e11bbc9b496415f1539711e3c020f40"
+    },
+    {
+      "name": "quarantineStaleLock",
+      "byte_identical": true,
+      "baseline_sha256": "aaff4a4c5f9589bf2f245619e1601826eaba47d6ece860df4d136bc009eea607",
+      "candidate_sha256": "aaff4a4c5f9589bf2f245619e1601826eaba47d6ece860df4d136bc009eea607"
+    },
+    {
+      "name": "acquireRunnerLock",
+      "byte_identical": true,
+      "baseline_sha256": "9a5cdba0cf2368f759883997038c8a1114c0fd04ff70bd99810de592a55b7c03",
+      "candidate_sha256": "9a5cdba0cf2368f759883997038c8a1114c0fd04ff70bd99810de592a55b7c03"
+    },
+    {
+      "name": "releaseRunnerLock",
+      "byte_identical": true,
+      "baseline_sha256": "0831b0085446873dc32d9144fe4766a4556d6e6b1067dfe102b4a440904a0754",
+      "candidate_sha256": "0831b0085446873dc32d9144fe4766a4556d6e6b1067dfe102b4a440904a0754"
+    },
+    {
+      "name": "textHash",
+      "byte_identical": true,
+      "baseline_sha256": "34e1e0aebe349ed26ac01e652ba1b9159d03fbedfa9c72bbc7a3bbddf29bf7a2",
+      "candidate_sha256": "34e1e0aebe349ed26ac01e652ba1b9159d03fbedfa9c72bbc7a3bbddf29bf7a2"
+    },
+    {
+      "name": "isCertutilInvalidFileError",
+      "byte_identical": true,
+      "baseline_sha256": "21b0ea67e2f940b99d24db336cc3eca79395af5a2ec905f4ec48e9548962118f",
+      "candidate_sha256": "21b0ea67e2f940b99d24db336cc3eca79395af5a2ec905f4ec48e9548962118f"
+    },
+    {
+      "name": "verifiedEmptyFileHash",
+      "byte_identical": true,
+      "baseline_sha256": "40285b5ce542ce90c6ed00c557a9edb4ab176099c6cf7f458d4b19843ca71cc9",
+      "candidate_sha256": "40285b5ce542ce90c6ed00c557a9edb4ab176099c6cf7f458d4b19843ca71cc9"
+    },
+    {
+      "name": "hashOutput",
+      "byte_identical": true,
+      "baseline_sha256": "5022aa92e8786fc2d1781abc66a5acc5c6e75cbbe84a21586bac78adbacf8fea",
+      "candidate_sha256": "5022aa92e8786fc2d1781abc66a5acc5c6e75cbbe84a21586bac78adbacf8fea"
+    },
+    {
+      "name": "fileHash",
+      "byte_identical": true,
+      "baseline_sha256": "3f63e5c13f7c3acd426a9bd522164c414a66d8657768104f8444cc9c7b0f9022",
+      "candidate_sha256": "3f63e5c13f7c3acd426a9bd522164c414a66d8657768104f8444cc9c7b0f9022"
+    },
+    {
+      "name": "requestHash",
+      "byte_identical": true,
+      "baseline_sha256": "87f6e1d2b49150ad7f3da5a1d4c61cf51234089204a4f849a0a133889a3ffb4f",
+      "candidate_sha256": "87f6e1d2b49150ad7f3da5a1d4c61cf51234089204a4f849a0a133889a3ffb4f"
+    },
+    {
+      "name": "launchCertutil",
+      "byte_identical": true,
+      "baseline_sha256": "6b81cd000ad819d79f92dfbbd91d61fa82b00a164698fe75bec99bebf8d556ab",
+      "candidate_sha256": "6b81cd000ad819d79f92dfbbd91d61fa82b00a164698fe75bec99bebf8d556ab"
+    },
+    {
+      "name": "certutilHashSet",
+      "byte_identical": true,
+      "baseline_sha256": "2acd98b4afa20f67599c14ae6f10154c455852b0485f799a204f21a3eb1c2566",
+      "candidate_sha256": "2acd98b4afa20f67599c14ae6f10154c455852b0485f799a204f21a3eb1c2566"
+    },
+    {
+      "name": "certutilHashes",
+      "byte_identical": true,
+      "baseline_sha256": "61621e6e9b9d0cc924075017217fca0e218f46efe1486e599fcc21f81206013b",
+      "candidate_sha256": "61621e6e9b9d0cc924075017217fca0e218f46efe1486e599fcc21f81206013b"
+    },
+    {
+      "name": "freshHashSet",
+      "byte_identical": true,
+      "baseline_sha256": "20011635d53cbacb7455e62d1ff28511f2e57d77804aa4a36160b7b92de006dc",
+      "candidate_sha256": "20011635d53cbacb7455e62d1ff28511f2e57d77804aa4a36160b7b92de006dc"
+    },
+    {
+      "name": "hasherInput",
+      "byte_identical": true,
+      "baseline_sha256": "21fcd266193545ca791f1f873cefc981e398723b05a0592b8c82c7238e633b99",
+      "candidate_sha256": "21fcd266193545ca791f1f873cefc981e398723b05a0592b8c82c7238e633b99"
+    },
+    {
+      "name": "recheckHasherInput",
+      "byte_identical": true,
+      "baseline_sha256": "f292303bf96a42ed2873d1483030cf7151660f301dd1ecf095b575f29183f3a3",
+      "candidate_sha256": "f292303bf96a42ed2873d1483030cf7151660f301dd1ecf095b575f29183f3a3"
+    },
+    {
+      "name": "selfTestHasher",
+      "byte_identical": true,
+      "baseline_sha256": "57b71a184adf2c99fd893e789193c3972e4b90f8194e6247f5c5b3ac89762ca1",
+      "candidate_sha256": "57b71a184adf2c99fd893e789193c3972e4b90f8194e6247f5c5b3ac89762ca1"
+    },
+    {
+      "name": "useHasher",
+      "byte_identical": true,
+      "baseline_sha256": "023dab915322ff0702a74e61ee935b249cb99fc27078e0ae19a3029ca2b22aad",
+      "candidate_sha256": "023dab915322ff0702a74e61ee935b249cb99fc27078e0ae19a3029ca2b22aad"
+    },
+    {
+      "name": "prepareBatchHasher",
+      "byte_identical": true,
+      "baseline_sha256": "9851638444770f895211bf1b67acdfa5ab61998af77fd686c138039f9c9d4646",
+      "candidate_sha256": "9851638444770f895211bf1b67acdfa5ab61998af77fd686c138039f9c9d4646"
+    },
+    {
+      "name": "parseBatchHashes",
+      "byte_identical": true,
+      "baseline_sha256": "e0ac9fc4074822012198630111c44d2757ee3afb89e047f631721e3c6d2176ee",
+      "candidate_sha256": "e0ac9fc4074822012198630111c44d2757ee3afb89e047f631721e3c6d2176ee"
+    },
+    {
+      "name": "batchHashes",
+      "byte_identical": true,
+      "baseline_sha256": "8abf09465cfeabe924d8ffd7eac3b24f250d31b65fc85bf531806a009d5e7fcf",
+      "candidate_sha256": "8abf09465cfeabe924d8ffd7eac3b24f250d31b65fc85bf531806a009d5e7fcf"
+    },
+    {
+      "name": "parallelHashes",
+      "byte_identical": true,
+      "baseline_sha256": "7790847b7b58abbb33214bf6af51d8d0b90f1b2783cf04b621f98f67aa453ca2",
+      "candidate_sha256": "7790847b7b58abbb33214bf6af51d8d0b90f1b2783cf04b621f98f67aa453ca2"
+    },
+    {
+      "name": "sourceClean",
+      "byte_identical": true,
+      "baseline_sha256": "77b2a2ad9ac3cf227c3ae0754312eee21e9ee1116cd2bff12ca8d1eb2b07d5d4",
+      "candidate_sha256": "77b2a2ad9ac3cf227c3ae0754312eee21e9ee1116cd2bff12ca8d1eb2b07d5d4"
+    },
+    {
+      "name": "beginDependencyGraph",
+      "byte_identical": true,
+      "baseline_sha256": "43f24dfd823150a0bc03ec33432d0301d4d5b6931106ccaad8d71301c310dcfd",
+      "candidate_sha256": "43f24dfd823150a0bc03ec33432d0301d4d5b6931106ccaad8d71301c310dcfd"
+    },
+    {
+      "name": "dependencyGraphProgress",
+      "byte_identical": true,
+      "baseline_sha256": "dcac5aea4a0a4b7571c6bd925e647e055650e1a658c33470e807aad30adbd4a7",
+      "candidate_sha256": "dcac5aea4a0a4b7571c6bd925e647e055650e1a658c33470e807aad30adbd4a7"
+    },
+    {
+      "name": "graphSourceRead",
+      "byte_identical": true,
+      "baseline_sha256": "8ad7756303d8c8cbf443c58f97e6b8a200025a6a4025a523aeaaf2689ef60ffa",
+      "candidate_sha256": "8ad7756303d8c8cbf443c58f97e6b8a200025a6a4025a523aeaaf2689ef60ffa"
+    },
+    {
+      "name": "graphImportScan",
+      "byte_identical": true,
+      "baseline_sha256": "0bab07f7820a57d95cf64705d79815ad1e71dad6b190cccaf87fbd673843f1f7",
+      "candidate_sha256": "0bab07f7820a57d95cf64705d79815ad1e71dad6b190cccaf87fbd673843f1f7"
+    },
+    {
+      "name": "graphModuleStart",
+      "byte_identical": true,
+      "baseline_sha256": "f8812d1cc70fb35e97a4190b6bc41e6851098999c6ed4d110f2422476fd6db83",
+      "candidate_sha256": "f8812d1cc70fb35e97a4190b6bc41e6851098999c6ed4d110f2422476fd6db83"
+    },
+    {
+      "name": "graphModuleAdded",
+      "byte_identical": true,
+      "baseline_sha256": "a652168da121a559270ee85678831cb0878606bb6156898a62930e3182c28427",
+      "candidate_sha256": "a652168da121a559270ee85678831cb0878606bb6156898a62930e3182c28427"
+    },
+    {
+      "name": "importHeaderLine",
+      "byte_identical": true,
+      "baseline_sha256": "05e10cea808d7c593258986374af0f5c7f25b685e707800d299606316131326d",
+      "candidate_sha256": "05e10cea808d7c593258986374af0f5c7f25b685e707800d299606316131326d"
+    },
+    {
+      "name": "finishImportHeader",
+      "byte_identical": true,
+      "baseline_sha256": "38d8b052e3b7db074b50c4b9c516942ed12fff83e7acc9459e499745c8453d1a",
+      "candidate_sha256": "38d8b052e3b7db074b50c4b9c516942ed12fff83e7acc9459e499745c8453d1a"
+    },
+    {
+      "name": "scanCleanImportHeader",
+      "byte_identical": true,
+      "baseline_sha256": "dce6d8b581e4888c965808c97698d168fa8aaf9346069c68cacb2a8885d17f2f",
+      "candidate_sha256": "dce6d8b581e4888c965808c97698d168fa8aaf9346069c68cacb2a8885d17f2f"
+    },
+    {
+      "name": "scanImportHeader",
+      "byte_identical": true,
+      "baseline_sha256": "cea6600d8f499da9a1b3a5c6681c14b6e0f80acef2f65ef98ea43b50421533de",
+      "candidate_sha256": "cea6600d8f499da9a1b3a5c6681c14b6e0f80acef2f65ef98ea43b50421533de"
+    },
+    {
+      "name": "importsFromClean",
+      "byte_identical": true,
+      "baseline_sha256": "38fc94c6d65cdc354a7212c98995074c3deb388af9df7be469b950a40c8d1775",
+      "candidate_sha256": "38fc94c6d65cdc354a7212c98995074c3deb388af9df7be469b950a40c8d1775"
+    },
+    {
+      "name": "importsOf",
+      "byte_identical": true,
+      "baseline_sha256": "ce333a4d388b048d8526526180797df97eef3060ec6471d45492c934d6306115",
+      "candidate_sha256": "ce333a4d388b048d8526526180797df97eef3060ec6471d45492c934d6306115"
+    },
+    {
+      "name": "listFiles",
+      "byte_identical": true,
+      "baseline_sha256": "6762c50aad1258ab030fbdad6092d4ca366d9a24dfe1ed6df821a3f6ee3dfcb7",
+      "candidate_sha256": "6762c50aad1258ab030fbdad6092d4ca366d9a24dfe1ed6df821a3f6ee3dfcb7"
+    },
+    {
+      "name": "subfolders",
+      "byte_identical": true,
+      "baseline_sha256": "01ff7f7811fb8f7bf75b12aec72b4a52bb0007b081b776a1990be486f85517e5",
+      "candidate_sha256": "01ff7f7811fb8f7bf75b12aec72b4a52bb0007b081b776a1990be486f85517e5"
+    },
+    {
+      "name": "addPackage",
+      "byte_identical": true,
+      "baseline_sha256": "959d39e6675a5142c90ff3891c81802a0a1d2c715a98c77a03bb14b3eddff2df",
+      "candidate_sha256": "959d39e6675a5142c90ff3891c81802a0a1d2c715a98c77a03bb14b3eddff2df"
+    },
+    {
+      "name": "artifactsFromList",
+      "byte_identical": true,
+      "baseline_sha256": "9b985909431f9ffd671efa8f0197874c640acbac58895409decad0075af9b4ae",
+      "candidate_sha256": "9b985909431f9ffd671efa8f0197874c640acbac58895409decad0075af9b4ae"
+    },
+    {
+      "name": "artifactFamily",
+      "byte_identical": true,
+      "baseline_sha256": "a502a215cdc291871a2ffbd827c7f2866a77e6074a2602efc8e773cf12fc04ae",
+      "candidate_sha256": "a502a215cdc291871a2ffbd827c7f2866a77e6074a2602efc8e773cf12fc04ae"
+    },
+    {
+      "name": "indexArtifactFamilies",
+      "byte_identical": true,
+      "baseline_sha256": "908bec0b31d92dd94f81d773044a7612bbb8156206678fd3a598a40449e1a27a",
+      "candidate_sha256": "908bec0b31d92dd94f81d773044a7612bbb8156206678fd3a598a40449e1a27a"
+    },
+    {
+      "name": "externalArtifactFamily",
+      "byte_identical": true,
+      "baseline_sha256": "898876adf42cf453ff163dc5b833b75acec1ea81a88ceea0be9361d813277c18",
+      "candidate_sha256": "898876adf42cf453ff163dc5b833b75acec1ea81a88ceea0be9361d813277c18"
+    },
+    {
+      "name": "externalModule",
+      "byte_identical": true,
+      "baseline_sha256": "8643a59d0ad3639be0997d4fd051bcc2b0457539fb940e2fb17d7be307ea7331",
+      "candidate_sha256": "8643a59d0ad3639be0997d4fd051bcc2b0457539fb940e2fb17d7be307ea7331"
+    },
+    {
+      "name": "externalKey",
+      "byte_identical": true,
+      "baseline_sha256": "f0f61e1e18f502f7e62a66fbffe7a07dc54cb23a9a978c13f5b1358ed5f5d956",
+      "candidate_sha256": "f0f61e1e18f502f7e62a66fbffe7a07dc54cb23a9a978c13f5b1358ed5f5d956"
+    },
+    {
+      "name": "selectCompiler",
+      "byte_identical": true,
+      "baseline_sha256": "0820bc7589b77cd1a59ebb7bc330008736d4ac945a2562d88c819814f108d401",
+      "candidate_sha256": "0820bc7589b77cd1a59ebb7bc330008736d4ac945a2562d88c819814f108d401"
+    },
+    {
+      "name": "tryCache",
+      "byte_identical": true,
+      "baseline_sha256": "23c6b5529afdd860ee03ac5ba7bc867054e6fe2bd4d0da864b231ed668b7fb58",
+      "candidate_sha256": "23c6b5529afdd860ee03ac5ba7bc867054e6fe2bd4d0da864b231ed668b7fb58"
+    },
+    {
+      "name": "loadFinalAuditRoot",
+      "byte_identical": true,
+      "baseline_sha256": "d25a2e8e174f1bba5bc3b6b874a40bf71f9126baf13377f9b884aa8ebbce86d5",
+      "candidate_sha256": "d25a2e8e174f1bba5bc3b6b874a40bf71f9126baf13377f9b884aa8ebbce86d5"
+    },
+    {
+      "name": "loadMathlibRequirements",
+      "byte_identical": true,
+      "baseline_sha256": "b11b7464cd439c67a74ef04376c0c439d6bfb442b0de1d4b75c1c6548fbef3bc",
+      "candidate_sha256": "b11b7464cd439c67a74ef04376c0c439d6bfb442b0de1d4b75c1c6548fbef3bc"
+    },
+    {
+      "name": "addAnchorRoot",
+      "byte_identical": true,
+      "baseline_sha256": "7cc9e7b198eccfc300e4d54c951f4abc3cc37a2d86741653e784482ddaa4b895",
+      "candidate_sha256": "7cc9e7b198eccfc300e4d54c951f4abc3cc37a2d86741653e784482ddaa4b895"
+    },
+    {
+      "name": "selectCache",
+      "byte_identical": true,
+      "baseline_sha256": "7de5c84687b9701d283bf563cfa39f2d234fac9318923d889361ac6cc5ff5787",
+      "candidate_sha256": "7de5c84687b9701d283bf563cfa39f2d234fac9318923d889361ac6cc5ff5787"
+    },
+    {
+      "name": "loadPlan",
+      "byte_identical": true,
+      "baseline_sha256": "af3e90da5914110ad8d05050ee3a068aa9026b131d0cc6edde1dff123f50820b",
+      "candidate_sha256": "af3e90da5914110ad8d05050ee3a068aa9026b131d0cc6edde1dff123f50820b"
+    },
+    {
+      "name": "makeGlobalKey",
+      "byte_identical": true,
+      "baseline_sha256": "a0750dd874377f5350bf71b79ce86f60ec09a695ae77578c70498134d25eb562",
+      "candidate_sha256": "a0750dd874377f5350bf71b79ce86f60ec09a695ae77578c70498134d25eb562"
+    },
+    {
+      "name": "parseReceipt",
+      "byte_identical": true,
+      "baseline_sha256": "5ee0133dbc32a5a7a2c5d0808901cecdcbd8c8b10b32d785a5066cb3e3abe1e6",
+      "candidate_sha256": "5ee0133dbc32a5a7a2c5d0808901cecdcbd8c8b10b32d785a5066cb3e3abe1e6"
+    },
+    {
+      "name": "checkAxioms",
+      "byte_identical": true,
+      "baseline_sha256": "615b72333a3fa3340ca01930b77bd69bc7b5411315ba0500ecb85feb487284c9",
+      "candidate_sha256": "615b72333a3fa3340ca01930b77bd69bc7b5411315ba0500ecb85feb487284c9"
+    },
+    {
+      "name": "moduleInput",
+      "byte_identical": true,
+      "baseline_sha256": "c627b7a76f8a6dcfb56b587609ec9a83fbb9eb76bccf80a1bda43b32a5cfb640",
+      "candidate_sha256": "c627b7a76f8a6dcfb56b587609ec9a83fbb9eb76bccf80a1bda43b32a5cfb640"
+    },
+    {
+      "name": "clearOutputs",
+      "byte_identical": true,
+      "baseline_sha256": "128611da380dbedeeb8b31188fcbd01c3eeb9a64f4a12e0d0cfc46eb7d73492e",
+      "candidate_sha256": "128611da380dbedeeb8b31188fcbd01c3eeb9a64f4a12e0d0cfc46eb7d73492e"
+    },
+    {
+      "name": "parseTargets",
+      "byte_identical": true,
+      "baseline_sha256": "9213276969d568e015a91e553699b79e6feaf73980fac773a0cc1b426cd2637c",
+      "candidate_sha256": "9213276969d568e015a91e553699b79e6feaf73980fac773a0cc1b426cd2637c"
+    },
+    {
+      "name": "coversTargets",
+      "byte_identical": true,
+      "baseline_sha256": "75b83ef0e988e99e1461021d62b4676ba85153e38743947bb0ec2e8bf50f78fa",
+      "candidate_sha256": "75b83ef0e988e99e1461021d62b4676ba85153e38743947bb0ec2e8bf50f78fa"
+    },
+    {
+      "name": "auditKey",
+      "byte_identical": true,
+      "baseline_sha256": "3e9e9f70d081e96e0f17efa10a0a31342483515654d348d705d56349e6047843",
+      "candidate_sha256": "3e9e9f70d081e96e0f17efa10a0a31342483515654d348d705d56349e6047843"
+    },
+    {
+      "name": "compactModuleRoot",
+      "byte_identical": true,
+      "baseline_sha256": "7dedf039628ee006733e7992216d5558e9ab13a17015b9bf368d6742ee8eed91",
+      "candidate_sha256": "7dedf039628ee006733e7992216d5558e9ab13a17015b9bf368d6742ee8eed91"
+    },
+    {
+      "name": "compactInputRoot",
+      "byte_identical": true,
+      "baseline_sha256": "5e994ba599d57e66c8d9afadf3ecb09bae44cc04d0a1821612482cdec6646ece",
+      "candidate_sha256": "5e994ba599d57e66c8d9afadf3ecb09bae44cc04d0a1821612482cdec6646ece"
+    },
+    {
+      "name": "checkAnchorPathLength",
+      "byte_identical": true,
+      "baseline_sha256": "3c6bbaf6b89a94fd7df9b0546a73061498ab2895a0dc88434c75de46a1857b76",
+      "candidate_sha256": "3c6bbaf6b89a94fd7df9b0546a73061498ab2895a0dc88434c75de46a1857b76"
+    },
+    {
+      "name": "preflightAnchorPaths",
+      "byte_identical": true,
+      "baseline_sha256": "7094ce84e64f79cf09661243c3acd2ec663880410ad77cd2b25fa2b571cfcc53",
+      "candidate_sha256": "7094ce84e64f79cf09661243c3acd2ec663880410ad77cd2b25fa2b571cfcc53"
+    },
+    {
+      "name": "nextAnchorTag",
+      "byte_identical": true,
+      "baseline_sha256": "517e0df27c84b57538b11832c5b4bf56b43da72b2c261313b27e691a6438fe19",
+      "candidate_sha256": "517e0df27c84b57538b11832c5b4bf56b43da72b2c261313b27e691a6438fe19"
+    },
+    {
+      "name": "entryFolders",
+      "byte_identical": true,
+      "baseline_sha256": "632770da50edb6be6ffe24ce10c46fe4b53ca26740ca2686d92d61ff8850e75f",
+      "candidate_sha256": "632770da50edb6be6ffe24ce10c46fe4b53ca26740ca2686d92d61ff8850e75f"
+    },
+    {
+      "name": "historicalAnchorCandidates",
+      "byte_identical": true,
+      "baseline_sha256": "42050df7deb8951310507c340528051182eb042e01887d101cec3526ec21bb85",
+      "candidate_sha256": "42050df7deb8951310507c340528051182eb042e01887d101cec3526ec21bb85"
+    },
+    {
+      "name": "anchorCandidates",
+      "byte_identical": true,
+      "baseline_sha256": "fad276e85c5e5ff92492be3136d7fe6f4bb9306edcbbf0fae5d584abc45c06aa",
+      "candidate_sha256": "fad276e85c5e5ff92492be3136d7fe6f4bb9306edcbbf0fae5d584abc45c06aa"
+    },
+    {
+      "name": "readAnchorCore",
+      "byte_identical": true,
+      "baseline_sha256": "44f8acdd1f45d18c323e067966c055f7b92fe5ec5421eed308e009f01b6fa481",
+      "candidate_sha256": "44f8acdd1f45d18c323e067966c055f7b92fe5ec5421eed308e009f01b6fa481"
+    },
+    {
+      "name": "verifyLegacy",
+      "byte_identical": true,
+      "baseline_sha256": "40dcf929d837d18cda3dd5c14c80b764be4da6e9010202e98df3c4e87ae41be3",
+      "candidate_sha256": "40dcf929d837d18cda3dd5c14c80b764be4da6e9010202e98df3c4e87ae41be3"
+    },
+    {
+      "name": "verifyCurrent",
+      "byte_identical": true,
+      "baseline_sha256": "b9b8e211276bdc68ad433bd033c1fbea7ffa52cf385d92d597e8f8fc457284ed",
+      "candidate_sha256": "b9b8e211276bdc68ad433bd033c1fbea7ffa52cf385d92d597e8f8fc457284ed"
+    },
+    {
+      "name": "workingArtifactsMatch",
+      "byte_identical": true,
+      "baseline_sha256": "42fe80ee2f272e13894f1ac6161330ca4112932487634ea1dc4fd48b98cde83c",
+      "candidate_sha256": "42fe80ee2f272e13894f1ac6161330ca4112932487634ea1dc4fd48b98cde83c"
+    },
+    {
+      "name": "restoreAnchor",
+      "byte_identical": true,
+      "baseline_sha256": "4c6edb6d0c4c806ab488e877b70a28b351705ea5a070a583ff82f58c0068aeae",
+      "candidate_sha256": "4c6edb6d0c4c806ab488e877b70a28b351705ea5a070a583ff82f58c0068aeae"
+    },
+    {
+      "name": "saveAnchor",
+      "byte_identical": true,
+      "baseline_sha256": "fc22922942d210f7891c1b5b9199658f7b92315f233dc081d1df04c0da52b4c4",
+      "candidate_sha256": "fc22922942d210f7891c1b5b9199658f7b92315f233dc081d1df04c0da52b4c4"
+    },
+    {
+      "name": "acceptRestored",
+      "byte_identical": true,
+      "baseline_sha256": "6337e1c0f10aef7faacd8e15e235e1c2b2e69ce55062edc3a043a0fd814807f1",
+      "candidate_sha256": "6337e1c0f10aef7faacd8e15e235e1c2b2e69ce55062edc3a043a0fd814807f1"
+    },
+    {
+      "name": "parallelIntegerSetting",
+      "byte_identical": true,
+      "baseline_sha256": "9306d0214597bb28cf2435201e2dc753d316a67cb5db7b8e28703f5b02b8db86",
+      "candidate_sha256": "9306d0214597bb28cf2435201e2dc753d316a67cb5db7b8e28703f5b02b8db86"
+    },
+    {
+      "name": "parallelMemorySnapshot",
+      "byte_identical": true,
+      "baseline_sha256": "89837141b47a920e51a3bb9eb12f7f69bc1cf4f74c9770c7380013b12068a79f",
+      "candidate_sha256": "89837141b47a920e51a3bb9eb12f7f69bc1cf4f74c9770c7380013b12068a79f"
+    },
+    {
+      "name": "configureParallelRuntime",
+      "byte_identical": true,
+      "baseline_sha256": "32c339db87eb5e839d60ddb596f804a761d9e49c85f01fd624c5d21d03697559",
+      "candidate_sha256": "32c339db87eb5e839d60ddb596f804a761d9e49c85f01fd624c5d21d03697559"
+    },
+    {
+      "name": "parallelActiveThreads",
+      "byte_identical": true,
+      "baseline_sha256": "766bb40d252d27de1bced316c2c3dabba4bdd08ffa5b63e3f2971eceb52616a7",
+      "candidate_sha256": "766bb40d252d27de1bced316c2c3dabba4bdd08ffa5b63e3f2971eceb52616a7"
+    },
+    {
+      "name": "resourceHashJobs",
+      "byte_identical": true,
+      "baseline_sha256": "035809e17085fb790da214406fef7237e29252a09dd3d85c875c79403d3162e6",
+      "candidate_sha256": "035809e17085fb790da214406fef7237e29252a09dd3d85c875c79403d3162e6"
+    },
+    {
+      "name": "parallelDependencyState",
+      "byte_identical": true,
+      "baseline_sha256": "4337ea203c2e7f529ffd6b8ce6ce17c389e3686daad277dfb92249b5df5d7884",
+      "candidate_sha256": "4337ea203c2e7f529ffd6b8ce6ce17c389e3686daad277dfb92249b5df5d7884"
+    },
+    {
+      "name": "parallelRecord",
+      "byte_identical": true,
+      "baseline_sha256": "1079453830e49e3bf20b74bc394b0930b9b222d907e3b6983837dc11de593ad9",
+      "candidate_sha256": "1079453830e49e3bf20b74bc394b0930b9b222d907e3b6983837dc11de593ad9"
+    },
+    {
+      "name": "parallelPrepare",
+      "byte_identical": true,
+      "baseline_sha256": "37460518f75f444a8afadeeca78547fdc4a10f3f9914fd616a437492fd236a51",
+      "candidate_sha256": "37460518f75f444a8afadeeca78547fdc4a10f3f9914fd616a437492fd236a51"
+    },
+    {
+      "name": "startNativeAsync",
+      "byte_identical": true,
+      "baseline_sha256": "fdbb8c62738581d2b1c76910a2bb491c12fcc19291b69ea0e02d77999bfe5952",
+      "candidate_sha256": "fdbb8c62738581d2b1c76910a2bb491c12fcc19291b69ea0e02d77999bfe5952"
+    },
+    {
+      "name": "parallelStartPhase",
+      "byte_identical": true,
+      "baseline_sha256": "af06b0a096a5ff91007a58eb486a49a059ce049298ea28b81a808122dc8f3624",
+      "candidate_sha256": "af06b0a096a5ff91007a58eb486a49a059ce049298ea28b81a808122dc8f3624"
+    },
+    {
+      "name": "parallelFail",
+      "byte_identical": true,
+      "baseline_sha256": "8c539c994286b64ddeae75de59a6e333d7eada4b8ffadbebe122d8aad7143646",
+      "candidate_sha256": "8c539c994286b64ddeae75de59a6e333d7eada4b8ffadbebe122d8aad7143646"
+    },
+    {
+      "name": "parallelAdvance",
+      "byte_identical": true,
+      "baseline_sha256": "f79f488f9e9c13c0ca58da47d5f1d43495fcaf957fc0332a7022a53fd40be3b5",
+      "candidate_sha256": "f79f488f9e9c13c0ca58da47d5f1d43495fcaf957fc0332a7022a53fd40be3b5"
+    },
+    {
+      "name": "parallelReadyTasks",
+      "byte_identical": true,
+      "baseline_sha256": "f9d51cceb784fead0fbec318a16fc8f8a376bcffdaa81587ceb18b086fcf70f9",
+      "candidate_sha256": "f9d51cceb784fead0fbec318a16fc8f8a376bcffdaa81587ceb18b086fcf70f9"
+    },
+    {
+      "name": "parallelStopRamForMemory",
+      "byte_identical": true,
+      "baseline_sha256": "34432f64eda20d529b7a2eed4cb71ccd17f8ed3f9480e398aee233bdf8bf44d1",
+      "candidate_sha256": "34432f64eda20d529b7a2eed4cb71ccd17f8ed3f9480e398aee233bdf8bf44d1"
+    },
+    {
+      "name": "parallelTrySerialFallback",
+      "byte_identical": true,
+      "baseline_sha256": "f3c8cef3c2188005fd7b7cc9ebd447bdbde92e6f05740cb975c8ea720d189ab7",
+      "candidate_sha256": "f3c8cef3c2188005fd7b7cc9ebd447bdbde92e6f05740cb975c8ea720d189ab7"
+    },
+    {
+      "name": "parallelMemoryAllowsLaunch",
+      "byte_identical": true,
+      "baseline_sha256": "4a6b8af767adbe725dca7e63a463e7e484900f77b79104a5978ce3cd96544d82",
+      "candidate_sha256": "4a6b8af767adbe725dca7e63a463e7e484900f77b79104a5978ce3cd96544d82"
+    },
+    {
+      "name": "parallelRequireFinalAuditMemory",
+      "byte_identical": true,
+      "baseline_sha256": "39998f7192cc343ff81419781c465f654d658517e410c8f93f6d2e391bd43ac5",
+      "candidate_sha256": "39998f7192cc343ff81419781c465f654d658517e410c8f93f6d2e391bd43ac5"
+    },
+    {
+      "name": "parallelThreadShare",
+      "byte_identical": true,
+      "baseline_sha256": "a406275d5970d9cdc5549df5e0f0260ba2fb2dad7b4c59e84a47670e5e64c7f6",
+      "candidate_sha256": "a406275d5970d9cdc5549df5e0f0260ba2fb2dad7b4c59e84a47670e5e64c7f6"
+    },
+    {
+      "name": "parallelLiveProcesses",
+      "byte_identical": true,
+      "baseline_sha256": "4b2af8e2ce80d8fab95e4fe8cb9b1ef36c19cc156ecc86cbdaae7771c80591e0",
+      "candidate_sha256": "4b2af8e2ce80d8fab95e4fe8cb9b1ef36c19cc156ecc86cbdaae7771c80591e0"
+    },
+    {
+      "name": "parallelIsReadOnlyFollower",
+      "byte_identical": true,
+      "baseline_sha256": "cc28aa5054f8cfdf48f61da4d18e0c29812e9133fd34055dea463ab8270e58bb",
+      "candidate_sha256": "cc28aa5054f8cfdf48f61da4d18e0c29812e9133fd34055dea463ab8270e58bb"
+    },
+    {
+      "name": "lockActualRelativeRunner",
+      "byte_identical": true,
+      "baseline_sha256": "a06703269cd5547fe428f5172313d015646c8ca90920135e9ada5daa66048969",
+      "candidate_sha256": "a06703269cd5547fe428f5172313d015646c8ca90920135e9ada5daa66048969"
+    },
+    {
+      "name": "lockCreatedNoLater",
+      "byte_identical": true,
+      "baseline_sha256": "f2d4e1c1795c24a765d7b9089d8b2e180e9a713ccdd96df2677c4d3d61747f86",
+      "candidate_sha256": "f2d4e1c1795c24a765d7b9089d8b2e180e9a713ccdd96df2677c4d3d61747f86"
+    },
+    {
+      "name": "captureFreshAdmittedRelativeHosts",
+      "byte_identical": true,
+      "baseline_sha256": "27c8c2f2e80b2518421c6290ba4f0e4c4d829521e5b4adf8c847271576388b33",
+      "candidate_sha256": "27c8c2f2e80b2518421c6290ba4f0e4c4d829521e5b4adf8c847271576388b33"
+    },
+    {
+      "name": "parallelIsFreshAdmittedRelativeHost",
+      "byte_identical": true,
+      "baseline_sha256": "3e52199eca9931cc91b897e464e62a7632b5bd30358424828a33da53e5872ee6",
+      "candidate_sha256": "3e52199eca9931cc91b897e464e62a7632b5bd30358424828a33da53e5872ee6"
+    },
+    {
+      "name": "parallelShutdownInventory",
+      "byte_identical": true,
+      "baseline_sha256": "f20adb80aee9682088a234f56bc9ddee4c7defd6a97658e479eab7c9bd8cd64a",
+      "candidate_sha256": "f20adb80aee9682088a234f56bc9ddee4c7defd6a97658e479eab7c9bd8cd64a"
+    },
+    {
+      "name": "unreadableLockWorkerError",
+      "byte_identical": true,
+      "baseline_sha256": "764618f65569043691714a74239f26f56f13a56e75bef8b500b5d358d6093a84",
+      "candidate_sha256": "764618f65569043691714a74239f26f56f13a56e75bef8b500b5d358d6093a84"
+    },
+    {
+      "name": "queryShutdownProcess",
+      "byte_identical": true,
+      "baseline_sha256": "f595358289858ff1dd28cde05e8dd73bf97385ddb215064aada1c8094a992729",
+      "candidate_sha256": "f595358289858ff1dd28cde05e8dd73bf97385ddb215064aada1c8094a992729"
+    },
+    {
+      "name": "guardShutdownOwner",
+      "byte_identical": true,
+      "baseline_sha256": "06d0dea7ddfdf3035db898956890f3c633bd7b78878bcbd77c351ed2e7b8245f",
+      "candidate_sha256": "06d0dea7ddfdf3035db898956890f3c633bd7b78878bcbd77c351ed2e7b8245f"
+    },
+    {
+      "name": "parallelAssertShutdownInventory",
+      "byte_identical": false,
+      "baseline_sha256": "d6f5942a7fbc7e65b343448f3607d7879e5a2429841dc1cc5296cd5adf897fff",
+      "candidate_sha256": "0db0211cfcfe9222d7d0f5f66922cf0694665a3f7424144d576293c9fe125c4d"
+    },
+    {
+      "name": "parallelReportRamCompletion",
+      "byte_identical": true,
+      "baseline_sha256": "11835de9a1d1f6851592c17bf89dfe08c7a2c09d8a3eab9cf2e1fb7a94355224",
+      "candidate_sha256": "11835de9a1d1f6851592c17bf89dfe08c7a2c09d8a3eab9cf2e1fb7a94355224"
+    },
+    {
+      "name": "parallelShutdown",
+      "byte_identical": true,
+      "baseline_sha256": "1653cd0f99d765e8d839d5835e55a72230c8a2823704d2d72082375262be0ac4",
+      "candidate_sha256": "1653cd0f99d765e8d839d5835e55a72230c8a2823704d2d72082375262be0ac4"
+    },
+    {
+      "name": "processModulesParallel",
+      "byte_identical": true,
+      "baseline_sha256": "f248c8ad0e9cc45a36b04555ec34d45cbe940987b8b838ddb49a8a99b26fbf60",
+      "candidate_sha256": "f248c8ad0e9cc45a36b04555ec34d45cbe940987b8b838ddb49a8a99b26fbf60"
+    },
+    {
+      "name": "ramHelperInput",
+      "byte_identical": true,
+      "baseline_sha256": "ff06a3c2366002e26427637fa31fc8c8512f15463330799c93d5ec72b2a5c519",
+      "candidate_sha256": "ff06a3c2366002e26427637fa31fc8c8512f15463330799c93d5ec72b2a5c519"
+    },
+    {
+      "name": "ramSelfTest",
+      "byte_identical": true,
+      "baseline_sha256": "1d465d40db6fa5780c12ba50a11828ca025ae3b25766537dea2229e478a8d414",
+      "candidate_sha256": "1d465d40db6fa5780c12ba50a11828ca025ae3b25766537dea2229e478a8d414"
+    },
+    {
+      "name": "prepareRamWarmer",
+      "byte_identical": true,
+      "baseline_sha256": "41e6976677fb03609f6738bd15878a93f7b72e0cf03fa219536a3148f6435914",
+      "candidate_sha256": "41e6976677fb03609f6738bd15878a93f7b72e0cf03fa219536a3148f6435914"
+    },
+    {
+      "name": "ramCandidatePlan",
+      "byte_identical": true,
+      "baseline_sha256": "6f940c13bc3f884f07728dc32b97736353fefe9e0a84e6087ae389e20c7d4ea6",
+      "candidate_sha256": "6f940c13bc3f884f07728dc32b97736353fefe9e0a84e6087ae389e20c7d4ea6"
+    },
+    {
+      "name": "ramStatusInteger",
+      "byte_identical": true,
+      "baseline_sha256": "f3b31c89473692c135b2dae0e86374a6616476846893fbe8774a600725a5290d",
+      "candidate_sha256": "f3b31c89473692c135b2dae0e86374a6616476846893fbe8774a600725a5290d"
+    },
+    {
+      "name": "readRamWarmStatus",
+      "byte_identical": true,
+      "baseline_sha256": "04c32c27e3684906bbbbde1b0fac1adcd6d5f5b6a6cb008a9aca05e50a30d7d4",
+      "candidate_sha256": "04c32c27e3684906bbbbde1b0fac1adcd6d5f5b6a6cb008a9aca05e50a30d7d4"
+    },
+    {
+      "name": "maybeStartRamWarm",
+      "byte_identical": true,
+      "baseline_sha256": "ff5bf4c6e388384cd2802029dd25dc401d8b044d787d82f99ecc567b262460c1",
+      "candidate_sha256": "ff5bf4c6e388384cd2802029dd25dc401d8b044d787d82f99ecc567b262460c1"
+    },
+    {
+      "name": "processModuleBody",
+      "byte_identical": true,
+      "baseline_sha256": "bd39b58085ba88dbee4057a912782af98356ac09d1b5231c5ada8d0d8591e071",
+      "candidate_sha256": "bd39b58085ba88dbee4057a912782af98356ac09d1b5231c5ada8d0d8591e071"
+    },
+    {
+      "name": "processModule",
+      "byte_identical": true,
+      "baseline_sha256": "f646425b84d4b1f730f385f7486b94ff940a6ab4fe31450de3c640619d2fc63d",
+      "candidate_sha256": "f646425b84d4b1f730f385f7486b94ff940a6ab4fe31450de3c640619d2fc63d"
+    },
+    {
+      "name": "finalAudit",
+      "byte_identical": true,
+      "baseline_sha256": "6134313796e3fefc158a2ee169a505eb8e48f4bb5e53b59bd811db56865442c1",
+      "candidate_sha256": "6134313796e3fefc158a2ee169a505eb8e48f4bb5e53b59bd811db56865442c1"
+    },
+    {
+      "name": "quoteJSON",
+      "byte_identical": true,
+      "baseline_sha256": "e12f349f067023866681d6b9556efe17d0e76a0933c85f7acaed865a832170f8",
+      "candidate_sha256": "e12f349f067023866681d6b9556efe17d0e76a0933c85f7acaed865a832170f8"
+    },
+    {
+      "name": "numericMapJSON",
+      "byte_identical": true,
+      "baseline_sha256": "3b5ca6aee224c81492feeeb4eb4983560d652c7d98b0d2191f433a9cd42fd1a3",
+      "candidate_sha256": "3b5ca6aee224c81492feeeb4eb4983560d652c7d98b0d2191f433a9cd42fd1a3"
+    },
+    {
+      "name": "phaseRecordsJSON",
+      "byte_identical": true,
+      "baseline_sha256": "b7603803c2c6dbe507e7c850dc53719d38f66fc58549f83ddef2318a456a1ec5",
+      "candidate_sha256": "b7603803c2c6dbe507e7c850dc53719d38f66fc58549f83ddef2318a456a1ec5"
+    },
+    {
+      "name": "result",
+      "byte_identical": true,
+      "baseline_sha256": "f4cdc9c7782c60f8e81439ab1a1424b5f1d26f5bdf34cccf0aabbea83318de45",
+      "candidate_sha256": "f4cdc9c7782c60f8e81439ab1a1424b5f1d26f5bdf34cccf0aabbea83318de45"
+    }
+  ]
+}

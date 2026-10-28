@@ -1,0 +1,10 @@
+{
+  "package": "RH_HILBERT_LIMIT_LEAN_v0_2_16_construction",
+  "runner_sha256": "d5eb2c1f33b4fafcd0b1d366850cc860c7e73552dd739ee9cdd238559e679c86",
+  "lean_source_files_preserved": 92,
+  "unchanged_manifest_inputs": 101,
+  "changed_lean_sources": [],
+  "declaration_metadata_entries_updated": 67,
+  "native_execution": "NOT_RUN",
+  "new_tests": "NOT_RUN; NO_FUNCTIONAL_CODE_CHANGE"
+}

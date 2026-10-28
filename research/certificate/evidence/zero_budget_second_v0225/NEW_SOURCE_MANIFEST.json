@@ -1,0 +1,8 @@
+{
+  "count": 3,
+  "sources": {
+    "RH_HilbertLimit/ZeroBudgetSecondSector.lean": "e3a809b8cf16e255288f70f9d6f27e570a365dcf2e631455e3708db28b55287f",
+    "RH_HilbertLimit/ZeroBudgetSecondMoment.lean": "396ffd69ec0ec05b70c7fd2a0324589a18298e45b27d4cc98f09d2102f730638",
+    "SecondMomentAudit.lean": "2984529d9ab6827819cd24d51737e764fd5bc96568c61465ba48f4ba53f658d7"
+  }
+}

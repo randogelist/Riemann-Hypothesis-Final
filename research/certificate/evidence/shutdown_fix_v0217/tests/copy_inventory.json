@@ -1,0 +1,61 @@
+{
+  "schema": "RH_V0217_FROZEN_TEST_FILES_V1",
+  "scope": "All dependency-complete test source and report files; inventory excludes itself.",
+  "files": [
+    {
+      "path": "baseline_host/candidate_sources.js",
+      "bytes": 6724,
+      "sha256": "92ddba93bcb792dc369b0774e38b8d5cebd20f1af68dc3628780452e52aa5eb8"
+    },
+    {
+      "path": "baseline_host/mock_host.js",
+      "bytes": 13674,
+      "sha256": "525da25dd590b785537bf6885a43df1e56462870a545cd9692159f4ced53e590"
+    },
+    {
+      "path": "baseline_host/runtime_host.js",
+      "bytes": 11382,
+      "sha256": "3805fac27c8bfefb147d475d960befd8e1859bade4cad677058d50a01da0c2d7"
+    },
+    {
+      "path": "baseline_observation_report.json",
+      "bytes": 1657,
+      "sha256": "9b22a2c3c14a01bbd067028b6e0eb264f97b2e789e03dc3fcf4b060c1e9d5af5"
+    },
+    {
+      "path": "baseline_shutdown_observation.js",
+      "bytes": 4597,
+      "sha256": "1e65534096e54879ec2f7fbcd1c3c9de2a2732c49f67d7c1c1455d3166353c48"
+    },
+    {
+      "path": "candidate/candidate_sources.js",
+      "bytes": 6724,
+      "sha256": "92ddba93bcb792dc369b0774e38b8d5cebd20f1af68dc3628780452e52aa5eb8"
+    },
+    {
+      "path": "candidate/focused_review.js",
+      "bytes": 18508,
+      "sha256": "d58eccbecf54d2677a21f499cc1cafac630fe685fd66bfedf817226097511dba"
+    },
+    {
+      "path": "candidate/mock_host.js",
+      "bytes": 14379,
+      "sha256": "06cb5ada2df8abbf19477d374996a9c0c7e10b49f55bad5a0bbd3cfe9e1b835a"
+    },
+    {
+      "path": "candidate/mock_report.json",
+      "bytes": 6444,
+      "sha256": "f62d97084c6f7daa4266f3c2d4d9442af8f906bed1ce1158547f22a0abdab134"
+    },
+    {
+      "path": "candidate/runtime_host.js",
+      "bytes": 11903,
+      "sha256": "a516a5882dcb9ffb43277916bebc710ac8a873213962f0b201a55bd4a74b5d30"
+    },
+    {
+      "path": "test_usage.json",
+      "bytes": 3738,
+      "sha256": "e793141dcce5c17848ae2a9536bb2fec3e0aa1ee03cc0c4eacce9ba6a7ce9104"
+    }
+  ]
+}

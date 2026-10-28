@@ -1,0 +1,10 @@
+{
+  "package": "RH_HILBERT_LIMIT_LEAN_v0_2_14_construction",
+  "runner_sha256": "828af9d989ae820ad43784839a2d140fe3f7495a55c7e43e66df3e1d145bbb02",
+  "changed_lean_sha256": "6dac0ba1d627eae6c5a70d0bb2dbdc52f0fa6474e3984d34a2d53feb48fb2160",
+  "runtime_snippet_sha256": "32dd483658af0764a1e123973e4a2928eeb50bee2fb3f2e6e86230bf43eee925",
+  "preserved_inputs": 101,
+  "lean_sources_byte_preserved": 91,
+  "javascript_syntax": "PASS",
+  "native_execution": "NOT_RUN"
+}

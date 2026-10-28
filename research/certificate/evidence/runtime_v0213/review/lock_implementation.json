@@ -1,0 +1,92 @@
+{
+  "schema": "RH_HILBERT_LOCK_IMPLEMENTATION_REVIEW_V1",
+  "status": "PASS_SOURCE_REVIEW_NO_CONCRETE_FINDINGS",
+  "scope": "Bounded read-only review of the admitted-relative-host helper, acquisition/shutdown integration, and corresponding assembler edits. Memory-policy changes are outside this review.",
+  "baseline": {
+    "path": "/workspace/scratch/f128c1434505/output/RH_HILBERT_LIMIT_LEAN_v0_2_12_construction/tools/native_runner.js",
+    "sha256": "b11c97c591c5e200978fcfff5f37d6f6cd4b9388a464697a673174ab20c5a632"
+  },
+  "candidate": {
+    "path": "/workspace/scratch/f128c1434505/output/RH_HILBERT_LIMIT_LEAN_v0_2_13_construction/tools/native_runner.js",
+    "sha256": "f6726db78ef9b532b24e2c09092e44e1e7f855c5eb84a6873c1dc519ef13803f"
+  },
+  "helper": {
+    "path": "/workspace/scratch/f128c1434505/tmp/ram_parallel_v0213/admitted_relative_hosts.js",
+    "sha256": "e8b0ae365d74c416881ba9333ab58e396f83c1f7d69f10dc7d7f9b05165b0a4a",
+    "exact_helper_text_present_in_candidate": true
+  },
+  "assembler": {
+    "path": "/workspace/scratch/f128c1434505/tmp/ram_parallel_v0213/assemble_runtime.py",
+    "sha256": "5d5054616b7baef6dc3efae1626eeace5cb4a83ed4add0310c93012023d3b753",
+    "reviewed_not_executed": true
+  },
+  "checks": [
+    {
+      "name": "Capture after successful publication",
+      "result": "PASS",
+      "evidence": "acquireRunnerLock line 303 calls captureFreshAdmittedRelativeHosts only after MoveFolder publication, exact owner reread, and lockHeld=true. It passes the original acquisition inventory and original snapshot."
+    },
+    {
+      "name": "Fresh acquisition only",
+      "result": "PASS",
+      "evidence": "captureFreshAdmittedRelativeHosts clears the in-memory set first and returns whenever snapshot is truthy or lockHeld is false. A successful stale recovery cannot populate the exception."
+    },
+    {
+      "name": "Same-owner scope",
+      "result": "PASS",
+      "evidence": "The helper binds to exact lockOwnerText and requires lockHeld plus equality with that owner text at shutdown. releaseRunnerLock still rereads and requires the exact on-disk owner before deletion."
+    },
+    {
+      "name": "Actual script and creation filter",
+      "result": "PASS",
+      "evidence": "lockActualRelativeRunner inspects the actual WSH script argument after leading WSH options; an arbitrary later native_runner.js data argument does not qualify. Absolute drive/UNC script paths are excluded. lockCreatedNoLater requires valid full creation strings and compares timestamp plus remaining microseconds."
+    },
+    {
+      "name": "Exact admitted identity",
+      "result": "PASS",
+      "evidence": "The shutdown predicate requires exact numeric PID, exact full CreationDate string, and exact command string from the acquisition snapshot. It neither adds identities nor learns new exceptions during shutdown."
+    },
+    {
+      "name": "Current-root protection",
+      "result": "PASS",
+      "evidence": "Both capture and shutdown predicate reject commands containing the normalized current-root boundary. assertNoLockWorkers remains byte-identical and retains absolute-root worker checks."
+    },
+    {
+      "name": "Only this host is filtered",
+      "result": "PASS",
+      "evidence": "parallelShutdownInventory filters only the individually matched WSH host. Direct children and coordinator PID are explicitly excluded; no compiler, RAM helper, wrapper, or other descendant is exempted by association."
+    },
+    {
+      "name": "Unknown and new hosts stay guarded",
+      "result": "PASS",
+      "evidence": "Unreadable commands and new or changed PID/creation/command tuples cannot use the exception; they remain subject to the unchanged guard. The existing observer exemption is unchanged."
+    },
+    {
+      "name": "Recovery and shutdown retained",
+      "result": "PASS",
+      "evidence": "assertNoLockWorkers, quarantineStaleLock, lockSnapshotAt, identifyLockSelf, releaseRunnerLock and parallelShutdown were compared byte-for-byte as function sections against v0.2.12 and are unchanged. The observer function body is also unchanged."
+    },
+    {
+      "name": "Assembler integration",
+      "result": "PASS",
+      "evidence": "Assembler inserts exactly the helper, two globals, one post-publication capture call and the shutdown predicate call for this lock feature. It asserts baseline identity and unchanged guard/quarantine/release sections."
+    }
+  ],
+  "findings": [],
+  "important_boundaries": [
+    "The exception preserves a prior fresh-lock admission decision; it does not prove the relative host belongs to another workspace or is read-only.",
+    "The original acquisition inventory is taken before this runner launches compiler/helper work. Later descendants cannot enter the immutable recorded set. This is not a general transitive-lineage implementation.",
+    "The retained v0.2.12 stale lock is not made recoverable by this exception. Existing stale/legacy locks keep conservative recovery checks.",
+    "Windows process behavior, WMI accuracy and command-line observation remain native validation concerns."
+  ],
+  "execution": {
+    "runner_or_assembler_executed_by_reviewer": false,
+    "tests_executed_by_reviewer": false,
+    "lean": false,
+    "lake": false,
+    "native_windows": false,
+    "csharp": false,
+    "ci": false,
+    "files_modified": "Only this requested scratch review JSON was written."
+  }
+}

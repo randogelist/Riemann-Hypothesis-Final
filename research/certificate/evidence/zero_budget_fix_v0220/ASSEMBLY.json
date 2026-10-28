@@ -1,0 +1,26 @@
+{
+  "package": "RH_HILBERT_LIMIT_LEAN_v0_2_20_construction",
+  "parent_package": "RH_HILBERT_LIMIT_LEAN_v0_2_19_construction",
+  "mode": "A_TIER_LEAN",
+  "target": "LOCAL_COMPILER",
+  "changed_source": "RH_HilbertLimit/ActualCancellationWitness.lean",
+  "old_source_sha256": "e8281816a7dc16ca30dfe0009df97ea201c5259f0a137f41ca768f6da3c8c6f8",
+  "new_source_sha256": "0daeeb9fab456f2d399cc95cfda2b94c55f03d2c403b92d3a18579a0a7d622d6",
+  "runner_sha256": "51deb1dacb580c48b5451df975521b69b5848c93d4198d19d80edbfdf2982d3b",
+  "cancellation_source_sha256": "985602ead4c4b3581b6aef194a36da6ca1f78defbeaaadf328e0cf97749b9528",
+  "eventual_growth_source_sha256": "f846d1a1b897542c460783a9ab5702ff1b713e5788fe149034d1ead5f0d178c0",
+  "other_lean_sources_byte_preserved": 95,
+  "total_lean_sources": 96,
+  "ordinary_modules": 92,
+  "active_modules": 93,
+  "selected_audit_targets": 394,
+  "declaration_inventory_records": 1129,
+  "source_change_invalidation_cone": [
+    "RH_HilbertLimit/ActualCancellationWitness.lean",
+    "CancellationAudit.lean"
+  ],
+  "runtime_algorithm_changes": false,
+  "native_or_lean_execution": false,
+  "formal_closure": "OPEN",
+  "finite_checker_soundness": "OPEN"
+}

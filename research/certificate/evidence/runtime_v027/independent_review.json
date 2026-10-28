@@ -1,0 +1,95 @@
+{
+  "schema": "RH_HILBERT_RUNNER_INDEPENDENT_SOURCE_REVIEW_V1",
+  "reviewer": "analytic_source",
+  "review_status": "NO_CONCRETE_BLOCKER_FOUND_IN_BOUNDED_SOURCE_REVIEW",
+  "candidate_file": "/workspace/scratch/f128c1434505/tmp/runtime_opt_v026/native_runner.js",
+  "candidate_sha256": "14e084bcc689b16da6ad37b38b549dda8ca3d849c2f36a969eb5c3b92c8ef4eb",
+  "baseline_file": "/workspace/scratch/f128c1434505/output/RH_HILBERT_LIMIT_LEAN_v0_2_5_construction/tools/native_runner.js",
+  "baseline_sha256": "00c97331f102c2415c9b884ee43ec47d969a20d1b32f2a583037bb5a6b8f7270",
+  "original_full_review_sha256": "9353fa59f64de22d406efd3a2bb0bf8b8e7ac1f27df265586e96d4db860f5296",
+  "preparation_fallback_delta_sha256": "1cdb1bca64724d7f62714bdfa6f004528aec561360d457c1a4aba8929da7973a",
+  "findings": [],
+  "full_review": {
+    "fresh_hash_maps": "freshHashSet uses independent request/result maps; only a complete dependency batch populates global fileHashes.",
+    "working_snapshots": "Only current V2 validation may carry a matching active scope. workingArtifactsMatch nulls and consumes its snapshot and deactivates the scope before early return; artifact names are checked again.",
+    "legacy_isolation": "verifyLegacy supplies no working-output scope, so legacy memo objects contain no working digest snapshots.",
+    "copy_phases": "Restore destinations are freshly hashed after copying. Save originals and staged copies use separate fresh batches; copied artifacts and current source are checked before receipt commit.",
+    "hash_failure_propagation": "Operational and protocol hash failures retain rhFatalHash through helper, legacy dependency, working-file and restore candidate catches. Ordinary missing-file preflight and receipt/content mismatch remain candidate rejection paths.",
+    "helper_integrity": "Bootstrap input manifest, helper schema, persistent cache identity, self-test format, separate input recheck and executable identity checks remain enforced.",
+    "batch_protocol": "Fresh request token and exact request digest bind schema, row count, ordered row IDs and completion. Fresh helper/source/request guard hashes are checked before returned digests are accepted.",
+    "lean_path": "First cached .olean match preserves LEAN_PATH order; missing source for that first match remains a hard failure.",
+    "byte_identical_function_bodies": [
+      "externalKey",
+      "makeGlobalKey",
+      "moduleInput",
+      "auditKey",
+      "checkAxioms",
+      "selectCache",
+      "loadPlan",
+      "queryLockProcesses",
+      "commandHasArgument",
+      "lockLaunchToken",
+      "identifyLockSelf",
+      "formatLockOwner",
+      "lockSnapshotAt",
+      "lockSnapshot",
+      "processIdentity",
+      "lockAncestors",
+      "assertNoLockWorkers",
+      "quarantineStaleLock",
+      "acquireRunnerLock",
+      "releaseRunnerLock"
+    ],
+    "compile_audit_control_flow": "processModuleBody equals the baseline processModule after only the function-name and runToFile/invokeNative wrapper renames.",
+    "wsh_compatibility": "No introduced modern JavaScript feature found in the reviewed changes; this is source inspection only."
+  },
+  "narrow_delta_review": {
+    "scope": "Only helperUnavailableError, selfTestHasher preparation-error classification, and the two prepareBatchHasher catch guards.",
+    "exact_delta_check": "Reversing the five enumerated textual replacements in the 1cdb1bca version reconstructed the original full-review SHA256 exactly.",
+    "auto_behavior": "Preparation self-test unavailability may reject a cached helper, rebuild, or fall back to certutil; no helper-produced file digests are accepted before preparation succeeds.",
+    "batch_behavior": "Strict BATCH promotes helper preparation self-test unavailability to a fatal error.",
+    "unchanged_failure_policy": "Actual hashing, result protocol, post-run guard failures and post-self-test input/executable mutation remain fatal.",
+    "concrete_blocker_found": false
+  },
+  "final_label_delta": {
+    "fields": [
+      "PACKAGE",
+      "RUNNER_VERSION"
+    ],
+    "new_version": "v0_2_7",
+    "exact_delta_check": "Reversing only the two v0_2_7 label strings reconstructs the preparation-fallback delta SHA256 exactly.",
+    "semantic_changes": false
+  },
+  "function_lines_in_final": {
+    "freshHashSet": 376,
+    "helperUnavailableError": 102,
+    "selfTestHasher": 440,
+    "prepareBatchHasher": 453,
+    "batchHashes": 529,
+    "externalModule": 635,
+    "readAnchorCore": 944,
+    "verifyLegacy": 988,
+    "workingArtifactsMatch": 1020,
+    "restoreAnchor": 1039,
+    "saveAnchor": 1082,
+    "processModuleBody": 1127
+  },
+  "limits": {
+    "review_type": "Read-only source inspection, textual comparisons, and SHA256 checks; only this scratch review report was written.",
+    "not_executed": [
+      "Lean",
+      "Lake",
+      "Windows tools",
+      "C# compilation",
+      "native runner",
+      "CI",
+      "mock runtime tests by this reviewer"
+    ],
+    "does_not_establish": [
+      "Native Windows or WSH execution success",
+      "Native performance improvement",
+      "New mathematical certification"
+    ],
+    "mock_test_results": "Owned by the separate mock-review agent and not claimed as independently rerun here."
+  }
+}

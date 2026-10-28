@@ -1,0 +1,22 @@
+{
+  "evidence_kind": "USER_MESSAGE_UTF8_LF_TRANSCRIPTION_NOT_ORIGINAL_NATIVE_LOG_BYTES",
+  "reported_package": "RH_HILBERT_LIMIT_LEAN_v0_2_17_construction",
+  "reported_build": "PASS",
+  "reported_run": "PASS",
+  "reported_axiom_audit": "PASS_STANDARD_LOGICAL_AXIOMS_ONLY",
+  "reported_sorryax": "NONE",
+  "reported_compiled_modules": 0,
+  "reported_frozen_reused_modules": 90,
+  "reported_restored_artifact_files": 90,
+  "reported_working_artifact_modules_retained": 0,
+  "reported_shutdown_elapsed_ms": 1062,
+  "reported_shutdown_full_inventories": 1,
+  "reported_shutdown_exact_worker_queries": 2,
+  "reported_formal_closure": "OPEN",
+  "reported_finite_checker_equivalence": "OPEN",
+  "source": "evidence/cancellation_v0218/USER_NATIVE_V0217_PASS_TAIL.txt",
+  "source_sha256": "763d6e2f3de75404513bc622e63915847f7ad55a4be2e84abf9dfed53ed87de5",
+  "direct_receipt_contents_and_per_declaration_axiom_output": "NOT_SUPPLIED",
+  "independent_native_verification": "NOT_PERFORMED",
+  "new_v0218_source_execution": "NOT_PERFORMED"
+}

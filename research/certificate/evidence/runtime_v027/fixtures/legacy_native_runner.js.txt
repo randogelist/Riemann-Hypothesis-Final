@@ -1,0 +1,488 @@
+/* Native Windows Lean 4.33.0 runner. WSH JScript only; no downloads or setup.
+   Cache policy: content hashes, exact dependency graph, same-target clean audit.
+   This script has not been executed on Windows as part of package preparation. */
+var fso = new ActiveXObject("Scripting.FileSystemObject");
+var shell = new ActiveXObject("WScript.Shell");
+var env = shell.Environment("PROCESS");
+var root = fso.GetAbsolutePathName(".");
+var PACKAGE = "RH_HILBERT_LIMIT_LEAN_v0_1_0_construction";
+var SCHEMA = "RH_HILBERT_NATIVE_RUNNER_v0_1_0";
+var TARGET = "LOCAL_COMPILER";
+var logPath = root + "\\run-build.log";
+var auditLogPath = root + "\\run-audit.log";
+var work = root + "\\.native-build";
+var helpers = work + "\\runner";
+var certutil = env("SystemRoot") + "\\System32\\certutil.exe";
+var comspec = env("SystemRoot") + "\\System32\\cmd.exe";
+var compiler = "", prefix = "", leanVersion = "", jobs = 16;
+var mathlibRoot = "", cacheRoot = "", anchorRoot = "";
+var packages = [], modules = {}, ordered = [], auditTargets = {};
+var hashFiles = {}, fileHashes = {}, moduleKeys = {}, buildStates = {};
+var artifactHashes = {}, dependencyKeys = {}, globalKey = "";
+var compiled = 0, reused = 0, failed = 0, blocked = 0, audited = 0;
+var runTag = stamp() + "-" + Math.floor(Math.random() * 1000000000);
+var stage = "STARTUP";
+var lockPath = root + "\\.native-run.lock", lockHeld = false;
+
+function trim(s) { return String(s).replace(/^\s+|\s+$/g, ""); }
+function norm(p) { return fso.GetAbsolutePathName(p).replace(/\\+$/g, ""); }
+function keyPath(p) { return norm(p).toLowerCase(); }
+function exists(p) { return fso.FileExists(p); }
+function directory(p) { return fso.FolderExists(p); }
+function mkdir(p) {
+  if (directory(p)) return;
+  var parent = fso.GetParentFolderName(p);
+  if (parent && !directory(parent)) mkdir(parent);
+  fso.CreateFolder(p);
+}
+function read(p) {
+  var stream = new ActiveXObject("ADODB.Stream");
+  stream.Type = 2; stream.Charset = "utf-8"; stream.Open();
+  stream.LoadFromFile(p); var s = stream.ReadText(); stream.Close();
+  return String(s).replace(/^\uFEFF/, "");
+}
+function write(p, s) {
+  mkdir(fso.GetParentFolderName(p));
+  var stream = new ActiveXObject("ADODB.Stream");
+  stream.Type = 2; stream.Charset = "utf-8"; stream.Open();
+  stream.WriteText(s); stream.SaveToFile(p, 2); stream.Close();
+}
+function append(p, s) {
+  /* Keep Unicode theorem types intact in the canonical logs. */
+  write(p, (exists(p) ? read(p) : "") + s);
+}
+function log(s) { WScript.Echo(s); append(logPath, s + "\r\n"); }
+function stamp() {
+  var d = new Date();
+  function two(n) { return n < 10 ? "0" + n : String(n); }
+  return d.getUTCFullYear() + two(d.getUTCMonth()+1) + two(d.getUTCDate()) +
+    "T" + two(d.getUTCHours()) + two(d.getUTCMinutes()) + two(d.getUTCSeconds()) + "Z";
+}
+function error(s) { throw new Error(s); }
+function keys(obj) { var a=[]; for(var k in obj) if(obj.hasOwnProperty(k)) a.push(k); return a.sort(); }
+function unique(a) { var o={}, r=[]; for(var i=0;i<a.length;i++) if(!o[a[i]]) {o[a[i]]=true;r.push(a[i]);} return r; }
+function quote(s) {
+  s=String(s);
+  if(/["\r\n%]/.test(s)) error("Unsupported command path or argument: quote, percent, or newline.");
+  return '"' + s + '"';
+}
+function runToFile(exe, args, output) {
+  var command=quote(exe), i;
+  for(i=0;i<args.length;i++) command += " " + quote(args[i]);
+  command += " > " + quote(output) + " 2>&1";
+  return shell.Run(quote(comspec) + ' /d /v:off /s /c "' + command + '"', 0, true);
+}
+function textHash(s) {
+  /* SHA-256 of UTF-8, used for small canonical manifests; binaries use certutil. */
+  var bytes=unescape(encodeURIComponent(s)), w=[], len=bytes.length, i,j;
+  for(i=0;i<len;i++) w[i>>2]=(w[i>>2]||0)|(bytes.charCodeAt(i)<<(24-(i%4)*8));
+  w[len>>2]=(w[len>>2]||0)|(0x80<<(24-(len%4)*8));
+  var size=(((len+8)>>6)+1)*16;
+  for(i=0;i<size;i++) if(typeof w[i]==="undefined") w[i]=0;
+  w[size-2]=Math.floor(len/0x20000000); w[size-1]=(len*8)|0;
+  var K=[0x428a2f98,0x71374491,0xb5c0fbcf,0xe9b5dba5,0x3956c25b,0x59f111f1,0x923f82a4,0xab1c5ed5,
+    0xd807aa98,0x12835b01,0x243185be,0x550c7dc3,0x72be5d74,0x80deb1fe,0x9bdc06a7,0xc19bf174,
+    0xe49b69c1,0xefbe4786,0x0fc19dc6,0x240ca1cc,0x2de92c6f,0x4a7484aa,0x5cb0a9dc,0x76f988da,
+    0x983e5152,0xa831c66d,0xb00327c8,0xbf597fc7,0xc6e00bf3,0xd5a79147,0x06ca6351,0x14292967,
+    0x27b70a85,0x2e1b2138,0x4d2c6dfc,0x53380d13,0x650a7354,0x766a0abb,0x81c2c92e,0x92722c85,
+    0xa2bfe8a1,0xa81a664b,0xc24b8b70,0xc76c51a3,0xd192e819,0xd6990624,0xf40e3585,0x106aa070,
+    0x19a4c116,0x1e376c08,0x2748774c,0x34b0bcb5,0x391c0cb3,0x4ed8aa4a,0x5b9cca4f,0x682e6ff3,
+    0x748f82ee,0x78a5636f,0x84c87814,0x8cc70208,0x90befffa,0xa4506ceb,0xbef9a3f7,0xc67178f2];
+  var H=[0x6a09e667,0xbb67ae85,0x3c6ef372,0xa54ff53a,0x510e527f,0x9b05688c,0x1f83d9ab,0x5be0cd19];
+  function rr(x,n){return(x>>>n)|(x<<(32-n));}
+  for(i=0;i<size;i+=16){
+    var W=[], a=H[0],b=H[1],c=H[2],d=H[3],e=H[4],f=H[5],g=H[6],h=H[7];
+    for(j=0;j<64;j++){
+      if(j<16) W[j]=w[i+j];
+      else {var x=W[j-15],y=W[j-2]; W[j]=(W[j-16]+(rr(x,7)^rr(x,18)^(x>>>3))+W[j-7]+(rr(y,17)^rr(y,19)^(y>>>10)))|0;}
+      var t1=(h+(rr(e,6)^rr(e,11)^rr(e,25))+((e&f)^((~e)&g))+K[j]+W[j])|0;
+      var t2=((rr(a,2)^rr(a,13)^rr(a,22))+((a&b)^(a&c)^(b&c)))|0;
+      h=g;g=f;f=e;e=(d+t1)|0;d=c;c=b;b=a;a=(t1+t2)|0;
+    }
+    var v=[a,b,c,d,e,f,g,h]; for(j=0;j<8;j++)H[j]=(H[j]+v[j])|0;
+  }
+  var out="";for(i=0;i<8;i++)out+=("00000000"+(H[i]>>>0).toString(16)).slice(-8);return out;
+}
+function hashOutput(output, code, path) {
+  if(code!==0) error("SHA256 command failed for " + path + " : " + output);
+  var lines=output.split(/\r?\n/), found=[];
+  for(var i=0;i<lines.length;i++) {var x=lines[i].replace(/\s/g,"");if(/^[a-fA-F0-9]{64}$/.test(x))found.push(x.toLowerCase());}
+  if(found.length!==1)error("Unrecognized certutil SHA256 result for " + path);
+  return found[0];
+}
+function fileHash(path) {
+  if(!exists(path))error("Cannot fingerprint missing file: " + path);
+  var proc=shell.Exec(quote(certutil)+" -hashfile "+quote(path)+" SHA256");
+  var output=proc.StdOut.ReadAll()+proc.StdErr.ReadAll();
+  while(proc.Status===0)WScript.Sleep(10);
+  return hashOutput(output,proc.ExitCode,path);
+}
+function requestHash(path) { hashFiles[keyPath(path)]=norm(path); }
+function parallelHashes() {
+  var todo=keys(hashFiles), active=[], cursor=0, done=0, lastReport=0;
+  log("DEPENDENCY_CONTENT_FILES="+todo.length);
+  log("DEPENDENCY_HASH_MODE=SHA256_CONTENT_PARALLEL_"+jobs);
+  while(cursor<todo.length || active.length){
+    while(cursor<todo.length && active.length<jobs){
+      var key=todo[cursor++],p=hashFiles[key];
+      active.push({key:key,path:p,proc:shell.Exec(quote(certutil)+" -hashfile "+quote(p)+" SHA256")});
+    }
+    for(var i=active.length-1;i>=0;i--){
+      var x=active[i]; if(x.proc.Status===0)continue;
+      var output=x.proc.StdOut.ReadAll()+x.proc.StdErr.ReadAll();
+      fileHashes[x.key]=hashOutput(output,x.proc.ExitCode,x.path);
+      active.splice(i,1);done++;
+    }
+    if(done-lastReport>=256 || done===todo.length){log("DEPENDENCY_HASH_PROGRESS="+done+"/"+todo.length);lastReport=done;}
+    if(active.length)WScript.Sleep(10);
+  }
+}
+function sourceClean(s, strict) {
+  /* Preserve newlines while removing nested comments and string literals. */
+  var out="",depth=0,inString=false,i=0;
+  while(i<s.length){var a=s.charAt(i),b=s.charAt(i+1);
+    if(depth){if(a==="/"&&b==="-"){depth++;out+="  ";i+=2;}else if(a==="-"&&b==="/"){depth--;out+="  ";i+=2;}else{out+=a==="\n"?"\n":" ";i++;}continue;}
+    if(inString){if(a==="\\"){out+="  ";i+=2;}else{if(a==='"')inString=false;out+=a==="\n"?"\n":" ";i++;}continue;}
+    if(a==="/"&&b==="-"){depth=1;out+="  ";i+=2;continue;}
+    if(a==="-"&&b==="-"){while(i<s.length&&s.charAt(i)!=="\n"){out+=" ";i++;}continue;}
+    if(a==='"'){inString=true;out+=" ";i++;continue;}
+    out+=a;i++;
+  }
+  if(strict!==false && (depth||inString))error("Unclosed comment or string in Lean source scan.");
+  return out;
+}
+function importsOf(source) {
+  var lines=sourceClean(read(source),false).split(/\r?\n/),imports=[],prelude=false;
+  for(var i=0;i<lines.length;i++){
+    var line=trim(lines[i]);if(!line)continue;
+    if(line==="prelude"){prelude=true;continue;}
+    if(line==="module")continue;
+    var match=/^(?:(?:public|private|meta)\s+)*import\s+(.+)$/.exec(line);
+    if(!match){if(/\bimport\b/.test(line))error("Unsupported import header in "+source+": "+line);break;}
+    var items=trim(match[1]).split(/\s+/);
+    for(var j=0;j<items.length;j++){
+      if(items[j]==="all")continue;
+      if(!/^[A-Za-z_][A-Za-z0-9_'.]*$/.test(items[j]))error("Unsupported import name in "+source+": "+items[j]);
+      imports.push(items[j]);
+    }
+  }
+  if(!prelude)imports.unshift("Init");return unique(imports);
+}
+function listFiles(folder) {
+  var out=[];if(!directory(folder))return out;
+  var en=new Enumerator(fso.GetFolder(folder).Files);
+  for(;!en.atEnd();en.moveNext())out.push(String(en.item().Path));return out.sort();
+}
+function subfolders(folder) {
+  var out=[];if(!directory(folder))return out;
+  var en=new Enumerator(fso.GetFolder(folder).SubFolders);
+  for(;!en.atEnd();en.moveNext())out.push(String(en.item().Path));return out.sort();
+}
+function addPackage(source, artifacts, label) {
+  if(!directory(artifacts))return;
+  var id=keyPath(artifacts);
+  for(var i=0;i<packages.length;i++)if(packages[i].id===id)return;
+  var locks=[],names=["lean-toolchain","lake-manifest.json","lakefile.lean","lakefile.toml"];
+  for(i=0;i<names.length;i++)if(exists(source+"\\"+names[i]))locks.push(source+"\\"+names[i]);
+  packages.push({id:id,source:norm(source),artifacts:norm(artifacts),label:label,locks:locks});
+}
+function artifactFamily(base) {
+  var folder=fso.GetParentFolderName(base),stem=fso.GetBaseName(base),files=listFiles(folder),out=[];
+  for(var i=0;i<files.length;i++){
+    var name=fso.GetFileName(files[i]);
+    if(name===stem+".olean" || name.indexOf(stem+".olean.")===0 || name===stem+".ir" || name===stem+".dll")out.push(files[i]);
+  }
+  return out;
+}
+function externalModule(name, visiting) {
+  if(modules[name])return;
+  if(visiting[name])error("Import cycle detected at "+name);
+  visiting[name]=true;
+  var rel=name.replace(/\./g,"\\"),matches=[],i;
+  for(i=0;i<packages.length;i++)if(exists(packages[i].artifacts+"\\"+rel+".olean"))matches.push(packages[i]);
+  if(!matches.length)error("Missing cached artifact for "+name);
+  /* The search order is exactly the LEAN_PATH order, including duplicate caches. */
+  var pkg=matches[0],src=pkg.source+"\\"+rel+".lean",ole=pkg.artifacts+"\\"+rel+".olean";
+  if(!exists(src))error("Source needed to fingerprint cached dependency imports is missing: "+src);
+  var deps=importsOf(src),artifacts=artifactFamily(ole);
+  var node={name:name,local:false,source:src,imports:deps,artifacts:artifacts,package:pkg};
+  modules[name]=node;requestHash(src);
+  for(i=0;i<artifacts.length;i++)requestHash(artifacts[i]);
+  for(i=0;i<pkg.locks.length;i++)requestHash(pkg.locks[i]);
+  for(i=0;i<deps.length;i++)externalModule(deps[i],visiting);
+  visiting[name]=false;
+}
+function externalKey(name, visiting) {
+  if(dependencyKeys[name])return dependencyKeys[name];
+  var n=modules[name];if(!n||n.local)error("Expected external dependency: "+name);
+  if(visiting[name])error("Dependency fingerprint cycle at "+name);visiting[name]=true;
+  var s="EXTERNAL_MODULE_V1\n"+name+"\n"+fileHashes[keyPath(n.source)]+"\n",i;
+  for(i=0;i<n.artifacts.length;i++)s+=fso.GetFileName(n.artifacts[i])+"="+fileHashes[keyPath(n.artifacts[i])]+"\n";
+  for(i=0;i<n.package.locks.length;i++)s+=fso.GetFileName(n.package.locks[i])+"="+fileHashes[keyPath(n.package.locks[i])]+"\n";
+  var deps=n.imports.slice().sort();for(i=0;i<deps.length;i++)s+=deps[i]+"="+externalKey(deps[i],visiting)+"\n";
+  visiting[name]=false;return dependencyKeys[name]=textHash(s);
+}
+function selectCompiler() {
+  compiler=env("AWPIRH_LEAN_EXE")||env("LEAN_EXE");
+  if(!compiler){var elan=env("ELAN_HOME")||(env("USERPROFILE")+"\\.elan");compiler=elan+"\\toolchains\\leanprover--lean4---v4.33.0\\bin\\lean.exe";}
+  compiler=norm(compiler);
+  if(!exists(compiler)||/\\\.elan\\bin\\lean\.exe$/i.test(compiler))error("Set AWPIRH_LEAN_EXE to the native Lean 4.33.0 executable, not an elan shim: "+compiler);
+  var versionFile=root+"\\lean_version.log";
+  if(runToFile(compiler,["--version"],versionFile)!==0)error("Native Lean version command failed; see lean_version.log.");
+  leanVersion=trim(read(versionFile));log(leanVersion);
+  if(!/version 4\.33\.0,/.test(leanVersion))error("Expected exact native Lean 4.33.0; found "+leanVersion);
+  var prefixFile=root+"\\lean_prefix.log";
+  if(runToFile(compiler,["--print-prefix"],prefixFile)!==0)error("Native Lean prefix query failed.");
+  prefix=norm(trim(read(prefixFile)));
+  if(!exists(prefix+"\\lib\\lean\\Init.olean"))error("Native Lean prefix has no Init.olean: "+prefix);
+  if(env("LEAN_JOBS")){jobs=Number(env("LEAN_JOBS"));if(!(jobs>=1&&jobs<=64&&Math.floor(jobs)===jobs))error("LEAN_JOBS must be an integer from 1 to 64.");}
+}
+function tryCache(candidate) {
+  if(!candidate)return false;
+  var base=norm(candidate),m=base+"\\.lake\\packages\\mathlib";
+  if(!exists(m+"\\lean-toolchain"))m=base;
+  if(!exists(m+"\\lean-toolchain")||trim(read(m+"\\lean-toolchain"))!=="leanprover/lean4:v4.33.0")return false;
+  if(!exists(m+"\\.lake\\build\\lib\\lean\\Mathlib.olean"))return false;
+  cacheRoot=base;mathlibRoot=m;return true;
+}
+function selectCache() {
+  var override=env("MATHLIB_CACHE_ROOT"),found=false,i;
+  if(override){if(!tryCache(override))error("Explicit MATHLIB_CACHE_ROOT lacks a compatible complete Lean 4.33.0 Mathlib cache: "+override);found=true;}
+  else{
+    var candidates=[root,env("USERPROFILE")+"\\lean-native\\awpi_phi_rh_lean_sieved_v0_1_1",env("USERPROFILE")+"\\Downloads\\awpi_phi_rh_lean_sieved_v0_1_1"];
+    for(i=0;i<candidates.length;i++)if(tryCache(candidates[i])){found=true;break;}
+  }
+  if(!found)error("Existing Mathlib cache not found. Set MATHLIB_CACHE_ROOT to a cached project or Mathlib checkout; no setup or download is attempted.");
+  addPackage(mathlibRoot,mathlibRoot+"\\.lake\\build\\lib\\lean","mathlib");
+  var dirs=subfolders(cacheRoot+"\\.lake\\packages").concat(subfolders(mathlibRoot+"\\.lake\\packages"));
+  for(i=0;i<dirs.length;i++)addPackage(dirs[i],dirs[i]+"\\.lake\\build\\lib\\lean",fso.GetFileName(dirs[i]));
+  addPackage(prefix+"\\src\\lean",prefix+"\\lib\\lean","lean-toolchain");
+  log("MATHLIB_CACHE=READY");log("CACHE_ROOT="+cacheRoot);log("MATHLIB_ROOT="+mathlibRoot);
+  var paths=[work];for(i=0;i<packages.length;i++)paths.push(packages[i].artifacts);
+  env("LEAN_PATH")=paths.join(";");env("LEAN_SYSROOT")=prefix;
+  env("PATH")=prefix+"\\bin;"+env("PATH");env("LEAN_NUM_THREADS")=String(jobs);
+  var base=env("LEAN_ANCHORINGS_ROOT")||(env("LOCALAPPDATA")+"\\LEAN_ANCHORINGS");
+  if(!env("LEAN_ANCHORINGS_ROOT")&&!env("LOCALAPPDATA"))error("LOCALAPPDATA or LEAN_ANCHORINGS_ROOT is required.");
+  anchorRoot=norm(base)+"\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0";mkdir(anchorRoot);
+  log("LEAN_ANCHORINGS="+anchorRoot);log("LEAN_JOBS="+jobs);
+}
+function loadPlan() {
+  var plan=root+"\\compile-order.txt",targets=root+"\\audit-targets.tsv",i,j;
+  if(!exists(plan)||!exists(targets)||!exists(root+"\\Audit.lean"))error("compile-order.txt, audit-targets.tsv, and Audit.lean are required.");
+  var lines=read(plan).split(/\r?\n/),seen={};
+  for(i=0;i<lines.length;i++){
+    var rel=trim(lines[i]);if(!rel||rel.charAt(0)==="#")continue;
+    rel=rel.replace(/\//g,"\\");
+    if(!/^[A-Za-z_][A-Za-z0-9_\\]*\.lean$/.test(rel)||rel==="Audit.lean")error("Invalid compile-order entry: "+rel);
+    var name=rel.slice(0,-5).replace(/\\/g,".");
+    if(seen[name])error("Duplicate module in compile-order: "+name);seen[name]=true;
+    var src=root+"\\"+rel;if(!exists(src))error("Missing local module source: "+rel);
+    var clean=sourceClean(read(src));
+    if(/\b(?:sorry|admit|axiom)\b/.test(clean)||/debug\.skipKernel/.test(clean))error("Prohibited proof placeholder or kernel bypass in "+rel);
+    modules[name]={name:name,local:true,source:src,relative:rel,imports:importsOf(src)};
+    ordered.push(name);requestHash(src);
+  }
+  if(!ordered.length)error("Empty compile-order.txt.");
+  lines=read(targets).split(/\r?\n/);var declarations={};
+  for(i=0;i<lines.length;i++){
+    var line=trim(lines[i]);if(!line||line.charAt(0)==="#")continue;
+    var parts=line.split("|");if(parts.length!==2)error("Audit target must be module|declaration: "+line);
+    var module=trim(parts[0]),decl=trim(parts[1]);
+    if(!modules[module]||!modules[module].local||!/^[A-Za-z_][A-Za-z0-9_.]*$/.test(decl))error("Invalid audit target: "+line);
+    if(declarations[decl])error("Duplicate audited declaration: "+decl);declarations[decl]=true;
+    if(!auditTargets[module])auditTargets[module]=[];auditTargets[module].push(decl);
+  }
+  seen={};
+  for(i=0;i<ordered.length;i++){
+    var n=modules[ordered[i]];
+    if(!auditTargets[n.name]||!auditTargets[n.name].length)error("No explicit axiom-audit target for "+n.name);
+    auditTargets[n.name].sort();
+    for(j=0;j<n.imports.length;j++){
+      var dep=n.imports[j];if(modules[dep]&&modules[dep].local&&!seen[dep])error("Compile order is not topological: "+n.name+" imports "+dep);
+      if(!modules[dep])externalModule(dep,{});
+    }
+    seen[n.name]=true;
+  }
+  var auditClean=sourceClean(read(root+"\\Audit.lean"));
+  if(/\b(?:sorry|admit|axiom)\b/.test(auditClean)||/debug\.skipKernel/.test(auditClean))error("Prohibited proof placeholder or kernel bypass in Audit.lean.");
+  var auditImports=importsOf(root+"\\Audit.lean");
+  for(i=0;i<auditImports.length;i++)if(!modules[auditImports[i]])externalModule(auditImports[i],{});
+  modules.Audit={name:"Audit",local:true,source:root+"\\Audit.lean",relative:"Audit.lean",imports:auditImports};
+  auditTargets.Audit=[];
+  for(i=0;i<ordered.length;i++)auditTargets.Audit=auditTargets.Audit.concat(auditTargets[ordered[i]]);
+  auditTargets.Audit.sort();
+  requestHash(root+"\\Audit.lean");requestHash(root+"\\compile-order.txt");requestHash(targets);
+  requestHash(root+"\\tools\\native_runner.js");requestHash(root+"\\run.cmd");requestHash(compiler);
+  var dllDirs=[prefix+"\\bin",prefix+"\\lib\\lean"];
+  for(i=0;i<dllDirs.length;i++){var files=listFiles(dllDirs[i]);for(j=0;j<files.length;j++)if(/\.dll$/i.test(files[j]))requestHash(files[j]);}
+  log("PROJECT_SOURCE_SCAN=PASS");log("PROJECT_MODULES="+ordered.length);
+}
+function makeGlobalKey() {
+  var s=SCHEMA+"\nTARGET="+TARGET+"\nLEAN="+leanVersion+"\n";
+  s+="RUNNER="+fileHashes[keyPath(root+"\\tools\\native_runner.js")]+"\n";
+  s+="CMD="+fileHashes[keyPath(root+"\\run.cmd")]+"\n";
+  s+="COMPILER="+fileHashes[keyPath(compiler)]+"\n";
+  var files=keys(hashFiles);
+  for(var i=0;i<files.length;i++)if(/\.dll$/i.test(files[i]))s+=files[i]+"="+fileHashes[files[i]]+"\n";
+  globalKey=textHash(s);write(helpers+"\\toolchain-fingerprint.txt",s+"FINGERPRINT="+globalKey+"\n");
+  log("TOOLCHAIN_FINGERPRINT="+globalKey);
+}
+function parseReceipt(s) {
+  var lines=s.split(/\r?\n/),o={};
+  for(var i=0;i<lines.length;i++){var p=lines[i].indexOf("=");if(p>0){var k=lines[i].slice(0,p);if(o.hasOwnProperty(k))error("Duplicate receipt field: "+k);o[k]=lines[i].slice(p+1);}}
+  return o;
+}
+function checkAxioms(contents, expected) {
+  if(/sorryAx/.test(contents))error("sorryAx occurs in compiler/audit output.");
+  var re=/'([^']+)'\s+(?:depends on axioms:\s*\[([^\]]*)\]|does not depend on any axioms)/g;
+  var m,found={},allowed={"propext":true,"Classical.choice":true,"Quot.sound":true};
+  while((m=re.exec(contents))!==null){
+    if(found[m[1]])error("Duplicate axiom record for "+m[1]);found[m[1]]=true;
+    var axioms=typeof m[2]==="string"?trim(m[2]):"";
+    if(axioms){var a=axioms.split(/\s*,\s*/);for(var i=0;i<a.length;i++)if(!allowed[trim(a[i])])error("Unapproved axiom "+a[i]+" in "+m[1]);}
+  }
+  for(var j=0;j<expected.length;j++)if(!found[expected[j]])error("Missing exact axiom-audit record for "+expected[j]);
+  return expected.length;
+}
+function moduleInput(name) {
+  var n=modules[name],s=SCHEMA+"\nTARGET="+TARGET+"\nTOOLCHAIN="+globalKey+"\nMODULE="+name+"\n";
+  s+="SOURCE="+fileHashes[keyPath(n.source)]+"\nAUDIT="+auditTargets[name].join(",")+"\n";
+  var deps=n.imports.slice().sort();
+  for(var i=0;i<deps.length;i++){
+    if(modules[deps[i]].local){if(!moduleKeys[deps[i]])error("Local dependency not verified: "+deps[i]);s+=deps[i]+"="+moduleKeys[deps[i]]+";"+artifactHashes[deps[i]]+"\n";}
+    else s+=deps[i]+"="+externalKey(deps[i],{})+"\n";
+  }
+  return {key:textHash(s),manifest:s};
+}
+function clearOutputs(name) {
+  var out=work+"\\"+name.replace(/\./g,"\\")+".olean",files=artifactFamily(out);
+  for(var i=0;i<files.length;i++)fso.DeleteFile(files[i],true);return out;
+}
+function restoreAnchor(name,input) {
+  var parent=anchorRoot+"\\"+name+"\\"+input.key,entries=subfolders(parent);
+  for(var i=entries.length-1;i>=0;i--){
+    try{
+    var folder=entries[i],receiptFile=folder+"\\receipt.txt";
+      if(/\.pending$/.test(folder))continue;
+      if(!exists(receiptFile))continue;
+      var r=parseReceipt(read(receiptFile));
+      if(r.SCHEMA!==SCHEMA||r.TARGET!==TARGET||r.MODULE!==name||r.INPUT_SHA256!==input.key||r.BUILD_PASS!=="1"||r.AUDIT_PASS!=="1"||r.LEAN_VERSION!=="4.33.0")continue;
+      if(r.SOURCE_SHA256!==fileHashes[keyPath(modules[name].source)]||fileHash(folder+"\\source.lean")!==r.SOURCE_SHA256)continue;
+      if(fileHash(folder+"\\audit.log")!==r.AUDIT_LOG_SHA256)continue;
+      checkAxioms(read(folder+"\\audit.log"),auditTargets[name]);
+      if(read(folder+"\\input.txt")!==input.manifest)continue;
+      var artifacts=read(folder+"\\artifacts.tsv").split(/\r?\n/),verified=[],canonical="";
+      for(var j=0;j<artifacts.length;j++){
+        if(!trim(artifacts[j]))continue;var p=artifacts[j].split("|");
+        if(p.length!==2||!/^[A-Za-z0-9_.]+$/.test(p[0])||!/^[a-f0-9]{64}$/.test(p[1]))error("Invalid anchor artifact manifest.");
+        if(fileHash(folder+"\\artifacts\\"+p[0])!==p[1])error("Anchor artifact content hash mismatch.");
+        verified.push(p[0]);canonical+=p[0]+"="+p[1]+"\n";
+      }
+      if(!verified.length||textHash(canonical)!==r.ARTIFACTS_SHA256)continue;
+      var required=fso.GetFileName(name.replace(/\./g,"\\"))+".olean",hasMain=false;
+      for(j=0;j<verified.length;j++)if(verified[j]===required)hasMain=true;
+      if(!hasMain)continue;
+      var output=clearOutputs(name),outputDir=fso.GetParentFolderName(output);mkdir(outputDir);
+      for(j=0;j<verified.length;j++)fso.CopyFile(folder+"\\artifacts\\"+verified[j],outputDir+"\\"+verified[j],false);
+      moduleKeys[name]=input.key;artifactHashes[name]=r.ARTIFACTS_SHA256;buildStates[name]="FROZEN_REUSED";
+      append(auditLogPath,"FROZEN_AUDIT="+name+"\r\n"+read(folder+"\\audit.log")+"\r\n");
+      log("FROZEN_REUSE="+name);log("ANCHOR_RECEIPT="+receiptFile);reused++;audited+=auditTargets[name].length;return true;
+    }catch(e){log("ANCHOR_REJECTED="+entries[i]+" : "+e.message);}
+  }
+  return false;
+}
+function saveAnchor(name,input,auditLog,output) {
+  var parent=anchorRoot+"\\"+name+"\\"+input.key;mkdir(parent);
+  var dest=parent+"\\"+runTag,temp=dest+".pending";
+  if(directory(dest)||directory(temp))error("Unique anchor directory collision.");mkdir(temp+"\\artifacts");
+  var files=artifactFamily(output),manifest="",canonical="";
+  if(!exists(output))error("Compiler did not create "+output);
+  for(var i=0;i<files.length;i++){
+    var fileName=fso.GetFileName(files[i]),hash=fileHash(files[i]);
+    fso.CopyFile(files[i],temp+"\\artifacts\\"+fileName,false);
+    if(fileHash(temp+"\\artifacts\\"+fileName)!==hash)error("Anchor output copy verification failed.");
+    manifest+=fileName+"|"+hash+"\n";canonical+=fileName+"="+hash+"\n";
+  }
+  fso.CopyFile(modules[name].source,temp+"\\source.lean",false);
+  fso.CopyFile(auditLog,temp+"\\audit.log",false);
+  if(fileHash(temp+"\\source.lean")!==fileHashes[keyPath(modules[name].source)])error("Source changed during compilation; no anchor is accepted.");
+  write(temp+"\\input.txt",input.manifest);write(temp+"\\artifacts.tsv",manifest);
+  var artifactKey=textHash(canonical),auditHash=fileHash(temp+"\\audit.log");
+  var receipt="SCHEMA="+SCHEMA+"\nTARGET="+TARGET+"\nLEAN_VERSION=4.33.0\nMODULE="+name+"\nINPUT_SHA256="+input.key+
+    "\nSOURCE_SHA256="+fileHashes[keyPath(modules[name].source)]+"\nARTIFACTS_SHA256="+artifactKey+"\nAUDIT_LOG_SHA256="+auditHash+
+    "\nBUILD_PASS=1\nAUDIT_PASS=1\nAUDIT_TARGET_COUNT="+auditTargets[name].length+"\nTIME_UTC="+stamp()+"\n";
+  write(temp+"\\receipt.txt",receipt);fso.MoveFolder(temp,dest);
+  moduleKeys[name]=input.key;artifactHashes[name]=artifactKey;buildStates[name]="COMPILED_AUDITED";
+  log("ANCHOR_SAVED="+dest+"\\receipt.txt");
+}
+function processModule(name) {
+  var n=modules[name],i;
+  for(i=0;i<n.imports.length;i++)if(modules[n.imports[i]].local&&!moduleKeys[n.imports[i]]){
+    clearOutputs(name);buildStates[name]="BLOCKED_DEPENDENCY";blocked++;log("MODULE_BLOCKED="+name+" DEPENDENCY="+n.imports[i]);return;
+  }
+  var input=moduleInput(name);if(restoreAnchor(name,input))return;
+  var output=clearOutputs(name);mkdir(fso.GetParentFolderName(output));
+  var compileLog=helpers+"\\"+name+".compile.log",auditSource=root+"\\RunnerAudit\\"+name.replace(/\./g,"_")+".lean",auditLog=helpers+"\\"+name+".audit.log";
+  log("COMPILE_START="+name);
+  if(runToFile(compiler,["-j"+jobs,"-o",output,n.source],compileLog)!==0){
+    log(read(compileLog));clearOutputs(name);buildStates[name]="COMPILE_FAILED";failed++;log("COMPILE_FAIL="+name);return;
+  }
+  var compileContents=read(compileLog);if(compileContents)log(compileContents);
+  if(/sorryAx/.test(compileContents))error("Compiler reported sorryAx in "+name);
+  var audit="import "+name+"\n";
+  for(i=0;i<auditTargets[name].length;i++)audit+="#check "+auditTargets[name][i]+"\n#print axioms "+auditTargets[name][i]+"\n";
+  write(auditSource,audit);log("AXIOM_AUDIT_START="+name);
+  if(runToFile(compiler,["-j"+jobs,auditSource],auditLog)!==0){
+    log(read(auditLog));clearOutputs(name);buildStates[name]="AUDIT_COMPILE_FAILED";failed++;return;
+  }
+  try{audited+=checkAxioms(read(auditLog),auditTargets[name]);}
+  catch(e){clearOutputs(name);buildStates[name]="AUDIT_FAILED";failed++;log("AXIOM_AUDIT_FAIL="+name+" : "+e.message);return;}
+  append(auditLogPath,"MODULE="+name+"\r\n"+read(auditLog)+"\r\n");
+  saveAnchor(name,input,auditLog,output);compiled++;log("COMPILE_AND_AXIOM_AUDIT_PASS="+name);
+}
+function finalAudit() {
+  var input=moduleInput("Audit"),expected=auditTargets.Audit;
+  if(restoreAnchor("Audit",input)){log("FINAL_AUDIT_DECLARATIONS="+expected.length);return;}
+  var output=clearOutputs("Audit"),file=helpers+"\\final-audit.log";
+  log("FINAL_AUDIT_START=Audit.lean");
+  if(runToFile(compiler,["-j"+jobs,"-o",output,root+"\\Audit.lean"],file)!==0)error("Final Audit.lean failed: "+read(file));
+  checkAxioms(read(file),expected);append(auditLogPath,"FINAL_AUDIT\r\n"+read(file)+"\r\n");
+  saveAnchor("Audit",input,file,output);compiled++;audited+=expected.length;
+  log("FINAL_AUDIT_DECLARATIONS="+expected.length);
+}
+function quoteJSON(s) {return '"'+String(s).replace(/\\/g,"\\\\").replace(/"/g,'\\"').replace(/\r/g,"\\r").replace(/\n/g,"\\n").replace(/\t/g,"\\t")+'"';}
+function result(pass,message) {
+  var lines=["{",'  "package": '+quoteJSON(PACKAGE)+",",'  "target": "LOCAL_COMPILER",',
+    '  "lean_version": '+quoteJSON(leanVersion)+",",'  "build": '+quoteJSON(pass?"PASS":"FAIL")+",",
+    '  "axiom_audit": '+quoteJSON(pass?"PASS":"INCOMPLETE_OR_FAILED")+",",
+    '  "mathematical_status": "CONDITIONAL_PARTIAL",','  "actual_spectral_calibration": "OPEN",','  "dominant_extraction": "OPEN",','  "unconditional_actual_limit": "NOT_CERTIFIED",','  "actual_subexponential_bound": "OPEN",','  "unconditional_rh": "NOT_ESTABLISHED",',
+    '  "compiled": '+compiled+",",'  "frozen_reused": '+reused+",",'  "failed": '+failed+",",'  "blocked": '+blocked+",",
+    '  "audited_declarations_with_module_multiplicity": '+audited+",",'  "time_utc": '+quoteJSON(stamp())+",",'  "message": '+quoteJSON(message)+",",'  "modules": {'];
+  var names=keys(buildStates);for(var i=0;i<names.length;i++)lines.push("    "+quoteJSON(names[i])+": "+quoteJSON(buildStates[names[i]])+(i+1<names.length?",":""));
+  lines.push("  }","}");write(root+"\\run-result.json",lines.join("\r\n")+"\r\n");
+}
+var exitCode=1;
+try{
+  if(directory(lockPath))error("A runner lock already exists: "+lockPath+". Wait for that worker to exit. If it was terminated, remove this lock directory before retrying.");
+  fso.CreateFolder(lockPath);lockHeld=true;write(lockPath+"\\owner.txt",runTag+"\n");
+  write(logPath,"");write(auditLogPath,"");mkdir(helpers);
+  if(!exists(certutil))error("Native certutil.exe is required for SHA256 fingerprints.");
+  if(textHash("")!=="e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"||textHash("abc")!=="ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad")error("Manifest SHA256 self-check failed.");
+  log("PACKAGE="+PACKAGE);log("RUNNER="+SCHEMA);log("TARGET="+TARGET);
+  log("NETWORK=NOT_USED");log("LAKE=NOT_USED");log("PYTHON=NOT_USED");log("POWERSHELL=NOT_USED");log("WSL=NOT_USED");
+  stage="COMPILER";selectCompiler();stage="MATHLIB_CACHE";selectCache();stage="DEPENDENCY_GRAPH";loadPlan();
+  stage="CONTENT_FINGERPRINTS";parallelHashes();makeGlobalKey();
+  for(var mi=0;mi<ordered.length;mi++){stage="MODULE:"+ordered[mi];processModule(ordered[mi]);}
+  if(failed||blocked)error("Some modules failed or were blocked. Independent modules were still attempted.");
+  stage="FINAL_AUDIT";finalAudit();
+  log("AXIOM_AUDIT=PASS_STANDARD_LOGICAL_AXIOMS_ONLY");log("SORRYAX=NONE");
+  log("MATHEMATICAL_STATUS=CONDITIONAL_PARTIAL");log("ACTUAL_SPECTRAL_CALIBRATION=OPEN");log("DOMINANT_EXTRACTION=OPEN");log("UNCONDITIONAL_ACTUAL_LIMIT=NOT_CERTIFIED");log("ACTUAL_SUBEXPONENTIAL_BOUND=OPEN");log("UNCONDITIONAL_RH=NOT_ESTABLISHED");log("FINITE_ACCEPTED_WITNESS=NOT_ESTABLISHED");
+  log("COMPILED_MODULES="+compiled);log("FROZEN_REUSED_MODULES="+reused);log("PROJECT_BUILD=PASS");log("RUN=PASS");
+  result(true,"Exact supplied declarations compiled and passed their recorded axiom audits; theorem hypotheses remain explicit.");exitCode=0;
+}catch(e){
+  if(lockHeld){try{log("PROJECT_BUILD=FAIL");log("FAILED_STAGE="+stage);log("REASON="+e.message);log("RUN=FAIL");result(false,e.message);}catch(ignore){WScript.Echo("RUN=FAIL : "+e.message);}}
+  else WScript.Echo("RUN=FAIL : "+e.message);
+}
+if(lockHeld){try{fso.DeleteFolder(lockPath,true);}catch(lockError){WScript.Echo("LOCK_CLEANUP_FAILED="+lockPath);}}
+WScript.Echo("Logs: "+logPath+" and "+auditLogPath);
+WScript.Quit(exitCode);

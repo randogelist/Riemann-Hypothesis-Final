@@ -1,0 +1,27 @@
+CURRENT PACKAGE: v0.2.15 construction, native verification pending
+Proof frontier inherited from v0.2.11; current repair changes four proofs in two modules.
+
+1. Compile and axiom-audit the five new proof modules and AnalyticAudit.lean on
+   the user's existing native Windows Lean 4.33.0 setup. Static source review
+   does not certify elaboration, tactic closure, kernel acceptance, or axioms.
+
+2. Canonical all-order power sums and dominant extraction now have complete
+   source candidates, used by the new actual analytic endpoints. They remain
+   unverified native constructions until the new run succeeds. The previous
+   v0.2.10 PASS does not certify them.
+
+3. The requested formal closure remains OPEN:
+     (exists W : FiniteWitness, check W = true) iff _root_.RiemannHypothesis
+   It requires a finite raw witness format, a terminating checker, soundness
+   for the actual RH, and completeness under RH. No accepted witness is
+   required to state or prove that equivalence. None is supplied here.
+
+4. The natural parameters in the existing and new analytic criteria have
+   all-order admissibility conditions. Finite natural data alone does not
+   make these conditions terminating finite checks. No finite prefix is
+   promoted to a certified infinite-tail bound.
+
+5. Actual subexponential growth and unconditional RH are not established.
+   The new root-limit candidate identifies a spectral-radius limit; it does
+   not prove that this limit equals one and says nothing about convergence
+   of the unrooted variation sequence by itself.

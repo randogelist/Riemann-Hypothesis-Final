@@ -1,0 +1,9 @@
+{
+  "kind": "SOURCE_REVIEW_NOT_NATIVE_CERTIFICATE",
+  "change": "Remove only the two redundant ring calls after completed square-identity simp proofs. Preserve cubic ring calls.",
+  "exact_theorem_statements_and_assumptions": "UNCHANGED",
+  "five_sector_source": "UNCHANGED; ACTUAL_COMPILER_ERROR_REQUIRED",
+  "independent_reviews": 2,
+  "native_compilation": "NOT_RUN",
+  "native_axiom_audit": "PENDING"
+}

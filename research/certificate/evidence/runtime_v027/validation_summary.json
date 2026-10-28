@@ -1,0 +1,224 @@
+{
+  "schema": "RH_HILBERT_RUNTIME_OPT_VALIDATION_SUMMARY_V026",
+  "scope": "Node-only mocked-host validation of fresh scoped hashing and inherited cache/helper/lock behavior",
+  "candidate_sha256": "14e084bcc689b16da6ad37b38b549dda8ca3d849c2f36a969eb5c3b92c8ef4eb",
+  "baseline_runner_sha256": "00c97331f102c2415c9b884ee43ec47d969a20d1b32f2a583037bb5a6b8f7270",
+  "helper_source_sha256": "d8cd2d616ed2b7a64931fe391bd6e25b236a1c450e5b7c669df26c2974dd9f18",
+  "reports": [
+    {
+      "path": "fresh_hash_results.json",
+      "sha256": "46fdb3625b5e64f4275c6f1438514471f2ed9f45ef93dd1346694fbfbb2f2fca",
+      "passed": 19,
+      "failed": 0,
+      "runner_sha256": "14e084bcc689b16da6ad37b38b549dda8ca3d849c2f36a969eb5c3b92c8ef4eb"
+    },
+    {
+      "path": "inherited_cache_results.json",
+      "sha256": "2b9c35fa7e6de1613d284dc301a58c81cccceca549e88d97771a43bd026bda14",
+      "passed": 25,
+      "failed": 0,
+      "runner_sha256": "14e084bcc689b16da6ad37b38b549dda8ca3d849c2f36a969eb5c3b92c8ef4eb"
+    },
+    {
+      "path": "inherited_helper_results.json",
+      "sha256": "67513dfa2d8979b05b087208805d78c86e9f121af47b9013c6b1ebb4c12941f7",
+      "passed": 17,
+      "failed": 0,
+      "runner_sha256": "14e084bcc689b16da6ad37b38b549dda8ca3d849c2f36a969eb5c3b92c8ef4eb"
+    },
+    {
+      "path": "inherited_lock_results.json",
+      "sha256": "c64190dbb12bd61fd4a209284c1911f793a2b1421d4385ad3f9ac7a09fd3154c",
+      "passed": 25,
+      "failed": 0,
+      "runner_sha256": "14e084bcc689b16da6ad37b38b549dda8ca3d849c2f36a969eb5c3b92c8ef4eb"
+    }
+  ],
+  "total_passed": 86,
+  "total_failed": 0,
+  "operation_count_comparison": {
+    "synthetic_modules": 3,
+    "artifact_files_per_module": 5,
+    "observed": {
+      "baseline": {
+        "certutil": 36,
+        "helper": 0,
+        "compiles": 0,
+        "audits": 0,
+        "copies": 0
+      },
+      "candidate": {
+        "certutil": 12,
+        "helper": 3,
+        "compiles": 0,
+        "audits": 0,
+        "copies": 0
+      }
+    },
+    "native_timing_claim": false
+  },
+  "identities_preserved": [
+    "globalKey",
+    "legacyGlobalKey",
+    "current module input keys",
+    "current audit keys",
+    "legacy receipt input/artifact/target identities",
+    "helper input key"
+  ],
+  "snapshot_lifetime_checks": [
+    "isolated local maps",
+    "unique request tokens and files",
+    "one-use scope identity",
+    "discard on candidate rejection",
+    "fresh postcopy hashes",
+    "no snapshots in legacyVerified",
+    "freshness across runs"
+  ],
+  "compatibility_adaptations": [
+    {
+      "file": "inherited/cache_mock_tests.js",
+      "original_sha256": "51c45e500907cf6261a8babb45f04426cba9c8694635a3f3350403f1e97148d3",
+      "adapted_sha256": "d6e523faa5e593f5c96a8a66d59b02263a744bd7a026448339f30b9b50675ae0",
+      "adaptations": [
+        "Added synthetic certutil shell.Exec host response; no scenario assertions changed."
+      ]
+    },
+    {
+      "file": "inherited/helper_cache_mock_tests.js",
+      "original_sha256": "aa4f4ec3b8a2d6f86b27106234c96176c5c0c96f98bcf49da89291a9bdc8be94",
+      "adapted_sha256": "524a1eef1b9c0a9a133cd346a5fd7603c3333bb086629225331055123ce98614",
+      "adaptations": [
+        "Read the identical inert helper source fixture only when candidate sibling NativeSha256.cs is absent; no scenario assertions changed."
+      ]
+    },
+    {
+      "file": "inherited/lock_mock_tests.js",
+      "original_sha256": "69bf348947e72dd56964a939c3d82eae42a74fd82f76c2d6f42f1281c9b764dc",
+      "adapted_sha256": "69bf348947e72dd56964a939c3d82eae42a74fd82f76c2d6f42f1281c9b764dc",
+      "adaptations": []
+    }
+  ],
+  "regressions_found_and_resolved": [
+    {
+      "candidate_with_regression_sha256": "9353fa59f64de22d406efd3a2bb0bf8b8e7ac1f27df265586e96d4db860f5296",
+      "scenario": "selftest_failure_publishes_no_entry_auto_falls_back",
+      "finding": "Preparation self-test failure incorrectly escaped as fatal in AUTO mode.",
+      "resolution": "Restore pre-validation helper-unavailable fallback while retaining fatal actual hash transport/integrity failures.",
+      "resolved_candidate_sha256": "1cdb1bca64724d7f62714bdfa6f004528aec561360d457c1a4aba8929da7973a"
+    }
+  ],
+  "copy_files": [
+    {
+      "path": "README.txt",
+      "sha256": "012b1aa67efe72ab2c07acf974085b5df5898f38a13a442763be53896a3e4abe",
+      "bytes": 2496
+    },
+    {
+      "path": "fixtures/NativeSha256.cs.txt",
+      "sha256": "d8cd2d616ed2b7a64931fe391bd6e25b236a1c450e5b7c669df26c2974dd9f18",
+      "bytes": 8565
+    },
+    {
+      "path": "fixtures/baseline_native_runner.js.txt",
+      "sha256": "00c97331f102c2415c9b884ee43ec47d969a20d1b32f2a583037bb5a6b8f7270",
+      "bytes": 69785
+    },
+    {
+      "path": "fixtures/baseline_run.cmd.txt",
+      "sha256": "16c597d014725a9db9d62be52b6849eaa2f493d5152b3cb66e9c37a4fea97ea4",
+      "bytes": 645
+    },
+    {
+      "path": "fixtures/legacy_native_runner.js.txt",
+      "sha256": "413a421e81441f7161af501612bf9555e4e60d588d83f162eb2fda295834d020",
+      "bytes": 30751
+    },
+    {
+      "path": "fixtures/legacy_run.cmd.txt",
+      "sha256": "3f7df94bd9fb4c8adf1c8733792c02f002f4122d681a375cf2ee6343591b6ef5",
+      "bytes": 431
+    },
+    {
+      "path": "fresh_hash_results.json",
+      "sha256": "46fdb3625b5e64f4275c6f1438514471f2ed9f45ef93dd1346694fbfbb2f2fca",
+      "bytes": 13077
+    },
+    {
+      "path": "fresh_hash_review.js",
+      "sha256": "4d417da7f8eaaa852c4e1588d11db6306346f981bed4c4c29b5df7813910ec2d",
+      "bytes": 33880
+    },
+    {
+      "path": "inherited/cache_mock_tests.js",
+      "sha256": "d6e523faa5e593f5c96a8a66d59b02263a744bd7a026448339f30b9b50675ae0",
+      "bytes": 19313
+    },
+    {
+      "path": "inherited/helper_cache_mock_tests.js",
+      "sha256": "524a1eef1b9c0a9a133cd346a5fd7603c3333bb086629225331055123ce98614",
+      "bytes": 8487
+    },
+    {
+      "path": "inherited/lock_mock_tests.js",
+      "sha256": "69bf348947e72dd56964a939c3d82eae42a74fd82f76c2d6f42f1281c9b764dc",
+      "bytes": 15981
+    },
+    {
+      "path": "inherited_adaptations.json",
+      "sha256": "d4b11261aad944b2d13f98047b8f07fadbe1185bb9265e0722848e7c0a5de95a",
+      "bytes": 1023
+    },
+    {
+      "path": "inherited_cache_results.json",
+      "sha256": "2b9c35fa7e6de1613d284dc301a58c81cccceca549e88d97771a43bd026bda14",
+      "bytes": 3269
+    },
+    {
+      "path": "inherited_helper_results.json",
+      "sha256": "67513dfa2d8979b05b087208805d78c86e9f121af47b9013c6b1ebb4c12941f7",
+      "bytes": 2263
+    },
+    {
+      "path": "inherited_lock_results.json",
+      "sha256": "c64190dbb12bd61fd4a209284c1911f793a2b1421d4385ad3f9ac7a09fd3154c",
+      "bytes": 3412
+    },
+    {
+      "path": "mock_host.js",
+      "sha256": "4028eb36105d4fb59facd32cdc0fb7502a98112cafa850e98998d7af101f0b06",
+      "bytes": 13437
+    }
+  ],
+  "also_copy": "validation_summary.json",
+  "native_windows_execution": false,
+  "lean_execution": false,
+  "lake_execution": false,
+  "csharp_compilation_or_execution": false,
+  "ci_execution": false,
+  "native_child_processes": 0,
+  "limitations": [
+    "Synthetic process counts, not native elapsed-time measurements.",
+    "No native CMD, WSH, filesystem-sharing or Lean proof validation.",
+    "Fault injection occurs at explicit validation/copy boundaries; no atomic filesystem snapshot guarantee.",
+    "Mock receipts and compiled bytes exist only in memory and are not native PASS evidence."
+  ],
+  "checked_at_utc": "2026-10-27T17:58:05.001393+00:00",
+  "final_label_rebind": {
+    "previous_corrected_candidate_sha256": "1cdb1bca64724d7f62714bdfa6f004528aec561360d457c1a4aba8929da7973a",
+    "final_candidate_sha256": "14e084bcc689b16da6ad37b38b549dda8ca3d849c2f36a969eb5c3b92c8ef4eb",
+    "changed_fields_only": [
+      "PACKAGE",
+      "RUNNER_VERSION"
+    ],
+    "normalized_bytes_equal": true,
+    "all_86_scenarios_reexecuted_on_final_bytes": true
+  },
+  "launcher_and_observer_scope": {
+    "cmd_fixture": "fixtures/baseline_run.cmd.txt",
+    "cmd_fixture_role": "Inert v0.2.5 provenance input; never executed or parsed by this suite.",
+    "new_follow_root_branch_tested_here": false,
+    "observer_prior_cases_reported_by_parent": 19,
+    "observer_prior_cases_included_in_86_total": false,
+    "latest_cmd_and_observer_byte_preservation": "Parent packaging responsibility; not replaced by fixture CMD."
+  }
+}

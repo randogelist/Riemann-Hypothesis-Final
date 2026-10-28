@@ -1,0 +1,73 @@
+{
+  "scope": "14_DECLARATIONS_EXPLICITLY_PRINTED_IN_SUPPLIED_TAIL",
+  "source": "evidence/native_pass_v0221/USER_NATIVE_V0220_PASS_TAIL.txt",
+  "source_sha256": "a3c8671ca646ca1e0fc601a0b952a2cbb3f1a0c95a1b8dd5fa89b2df44bf53d6",
+  "axioms_by_declaration": {
+    "RH_HilbertLimit.subexponential_of_eventual_natural_growth_step": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RH_HilbertLimit.subexponential_of_exists_eventual_natural_growth_step": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RH_HilbertLimit.CancellationBudget": [],
+    "RH_HilbertLimit.CancellationBudget.Admissible": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RH_HilbertLimit.cancellationBudget_admissible_iff_eventual_growth_step": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RH_HilbertLimit.actual_subexponential_of_admissible_cancellationBudget": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RH_HilbertLimit.nativeRH_of_admissible_cancellationBudget": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RH_HilbertLimit.nativeRH_of_exists_admissible_cancellationBudget": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RH_HilbertLimit.zero_cancellationBudget_admissible_of_nativeRH": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RH_HilbertLimit.exists_admissible_cancellationBudget_iff_nativeRH": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RH_HilbertLimit.nativeRH_of_exists_eventual_cancellation_bound": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RH_HilbertLimit.CancellationBudget.LocalFlux": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RH_HilbertLimit.cancellationBudget_admissible_of_local_flux": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RH_HilbertLimit.nativeRH_of_exists_local_cancellation_flux": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  }
+}

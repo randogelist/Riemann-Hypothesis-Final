@@ -1,0 +1,33 @@
+PACKAGE=RH_HILBERT_LIMIT_LEAN_v0_2_11_construction
+RUNNER=RH_HILBERT_NATIVE_RUNNER_v0_2_11
+TARGET=LOCAL_COMPILER
+REQUIRED_COMPILER=Native Windows Lean 4.33.0
+PREPARATION_STATUS=NEW_PROOF_SOURCES_PENDING_NATIVE_COMPILE_AND_AUDIT
+CACHE_IMPLEMENTATION=V0_2_10_UNCHANGED
+RUNNER_CHANGES=PACKAGE_LABELS_AND_POST_AUDIT_STATUS_REPORTING_ONLY
+LEAN_JOBS_DEFAULT=16
+PERSISTENT_WORKSPACE=E:\RH-FAST\workspaces\RH_HILBERT_LIMIT_LEAN_v0_2_11_construction
+SHARED_ANCHORS=E:\RH-FAST\anchors\RH_HILBERT_LIMIT\LOCAL_COMPILER\lean-4.33.0
+ORDINARY_MODULES=89
+SELECTED_FINAL_AUDIT=AnalyticAudit.lean
+FINAL_AUDIT_TARGETS=370
+PRIOR_LEAN_SOURCE_FILES_PRESERVED=86
+NEW_PROOF_MODULES=5
+NEW_AGGREGATE_AUDITS=1
+FORMAL_CLOSURE=OPEN
+FINITE_CHECKER_EQUIVALENCE=OPEN
+
+The expected first-run path is 84 unchanged ordinary modules reused from
+validated shared anchors, then 5 new modules and 1 new aggregate compiled.
+This is conditional on actual current source/dependency/compiler/content
+validation and prior clean same-target receipts; it is not a predeclared PASS.
+The older final aggregate is preserved but not selected. A new workspace may
+restore existing artifacts once before later runs retain them in place.
+
+The latest user tail belongs to v0.2.10: 85 reused, 85 working retained,
+0 compiled, 0 restored, 0 new anchors, 303 aggregate targets. It reports
+37,781 ms in aggregate hash phases, not whole-run duration or graph time.
+No runtime algorithm was changed or performance claim made in this revision.
+
+No Lean/Lake/native Windows/C# compilation or CI was run by the assistant.
+Node syntax checking of the JS source is not execution of the Windows runner.

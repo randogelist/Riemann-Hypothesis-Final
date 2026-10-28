@@ -1,0 +1,32 @@
+{
+  "package": "RH_HILBERT_LIMIT_LEAN_v0_2_16_construction",
+  "prepared_at": "2026-10-27T21:58:37.741512+01:00",
+  "mode": "A_TIER_LEAN",
+  "target": "LOCAL_COMPILER",
+  "parent_package": "RH_HILBERT_LIMIT_LEAN_v0_2_15_construction",
+  "parent_zip_sha256": "746214590251c079eca33d5b66a4257c136b86ad497a321ef143c83d2a116a0d",
+  "parent_library_file_id": "libfile_48346676be6481919f67e8f904a3bd73",
+  "parent_library_version": 17,
+  "scope": "Preserve all reported-pass proof inputs; record user PASS evidence; no proof/runtime policy changes",
+  "runner_sha256": "d5eb2c1f33b4fafcd0b1d366850cc860c7e73552dd739ee9cdd238559e679c86",
+  "lean_sources_byte_preserved": 92,
+  "prior_evidence_files_preserved": 311,
+  "user_pass_transcript_sha256": "06566411d1665dd1f45dc0e8876c0597e95f343c84321453a735ff75af0a568c",
+  "new_native_or_lean_execution": false,
+  "new_runtime_tests": false,
+  "direct_native_receipt_inspection": false,
+  "checkpoint_evidence_sha256": {
+    "ASSEMBLY.json": "459f27b0b3e309d1f10105e9a6c95063922f209d3a2f35287921be8ad92208ac",
+    "DECLARATION_METADATA_DELTA.json": "6ca2404619d59596f98167f2b8a16c98bc18ad0c28b158e57f40c7cf08c1bfa0",
+    "FROZEN_LEAN_SOURCE_HASHES_V0215.json": "30d3c6b56d229b3b8e09ac89dfd6ca3d17c78281f9c1d873897aae6da8a16a3e",
+    "NATIVE_RUNNER_IDENTITY_DIFF.txt": "47f4fe26ba0291a6f7473bdb9267f308629e49000d6e7754c9753489dd8e8911",
+    "PRESERVED_PRIOR_EVIDENCE.json": "4ae3e1b5c993952f37b74ccfd802afabbd9c0c6e70dfb9561a1b6ac7360cb1aa",
+    "PRESERVED_PROOF_AND_CACHE_INPUTS.json": "1c29d5f11b7ee1a4d7800e287ddcdf2550992d6e07e065694f01fac33da0884f",
+    "assemble.py": "32d58582c341d8bfb4c719735d2132c57379f2441b146968535b2e92a295f7e6",
+    "evidence/NATIVE_PASS_TAIL_REVIEW.json": "757fed6e59f563288161e57a1e00a5ffe5ad65426a8e7bdf275931e5d5417d2a",
+    "evidence/RUNTIME_AND_SOURCE_IDENTITY_REVIEW.json": "4e10e0ef5f306071bf571cea165699c9da42effe00fc4e37846c5c0e2a60000f",
+    "evidence/USER_NATIVE_PASS_TAIL.txt": "06566411d1665dd1f45dc0e8876c0597e95f343c84321453a735ff75af0a568c",
+    "evidence/verify_runtime_identity_only.py": "ef9164faa40fa2bf8b93ec9703ce7b9ee713978eb2d28270432350bf5dff99e1",
+    "review/endpoint_review.json": "1439edfd0bca01391a7a34a558fc35029a84b265112565a238946a955362b2f0"
+  }
+}

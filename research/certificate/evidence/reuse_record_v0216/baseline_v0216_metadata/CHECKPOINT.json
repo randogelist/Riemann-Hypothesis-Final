@@ -1,0 +1,159 @@
+{
+  "schema": "RH_HILBERT_REPORTED_NATIVE_PASS_CHECKPOINT_V1",
+  "branch": "RH_HILBERT_LIMIT",
+  "mode": "A_TIER_LEAN",
+  "target": "LOCAL_COMPILER",
+  "source_package": "RH_HILBERT_LIMIT_LEAN_v0_2_15_construction",
+  "source_zip_sha256": "746214590251c079eca33d5b66a4257c136b86ad497a321ef143c83d2a116a0d",
+  "checkpoint_package": "RH_HILBERT_LIMIT_LEAN_v0_2_16_construction",
+  "evidence_class": "USER_REPORTED_NATIVE_PASS; SOURCE_PRESERVATION_VERIFIED_LOCALLY",
+  "reported_run": {
+    "evidence_kind": "USER_MESSAGE_UTF8_LF_TRANSCRIPTION_NOT_ORIGINAL_NATIVE_LOG_BYTES",
+    "reported_package": "RH_HILBERT_LIMIT_LEAN_v0_2_15_construction",
+    "reported_build": "PASS",
+    "reported_run": "PASS",
+    "reported_formal_closure": "OPEN",
+    "reported_compiled_modules": 5,
+    "reported_frozen_reused_modules": 85,
+    "reported_compact_anchors_saved": 5,
+    "reported_counts": {
+      "formal_closure": "OPEN",
+      "compiled_modules": 5,
+      "frozen_reused_modules": 85,
+      "audit_only_modules": 0,
+      "legacy_migrated_modules": 0,
+      "project_build": "PASS",
+      "run": "PASS",
+      "working_artifact_modules_retained": 0,
+      "restored_artifact_files": 85,
+      "anchor_history_scans": 5,
+      "compact_anchors_saved": 5,
+      "combined_working_digests_consumed": 0,
+      "logical_tool_launches": {
+        "certutil": 401,
+        "csc": 0,
+        "helper": 2,
+        "lean": 11,
+        "other": 0,
+        "ram_warm": 0,
+        "total": 414
+      },
+      "hash_phase_totals": {
+        "batch_sets": 1,
+        "certutil_sets": 183,
+        "elapsed_ms": 51231,
+        "failed_sets": 0,
+        "files": 37509,
+        "sets": 184
+      }
+    },
+    "source_sha256": "06566411d1665dd1f45dc0e8876c0597e95f343c84321453a735ff75af0a568c",
+    "source_bytes": 671,
+    "review": "evidence/checkpoint_v0216/evidence/NATIVE_PASS_TAIL_REVIEW.json",
+    "direct_axiom_output": "NOT_IN_SUPPLIED_EXCERPT",
+    "native_receipts_and_fingerprints": "NOT_SUPPLIED",
+    "audit_inference": "If the reported run used the reviewed package unchanged, PASS occurs after its selected audit and guarded shutdown.",
+    "independent_exact_native_verification": "NOT_PERFORMED"
+  },
+  "all_lean_sources_byte_preserved": 92,
+  "changed_mathematical_declarations": [],
+  "changed_runtime_policy": false,
+  "source_manifest": "evidence/checkpoint_v0216/FROZEN_LEAN_SOURCE_HASHES_V0215.json",
+  "selected_final_audit": "AnalyticAudit.lean",
+  "selected_axiom_targets": 370,
+  "exact_endpoint_declarations": [
+    {
+      "kind": "def",
+      "name": "RH_HilbertLimit.actualCanonicalCalibration",
+      "type": "ActualSpectralCalibration AngularMaster.ActualPairIndex",
+      "selected_aggregate_check": true,
+      "selected_aggregate_axiom_print": true,
+      "target_manifest_present": true
+    },
+    {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.actualCanonicalDominantExtraction",
+      "type": "DominantExtraction actualCanonicalCalibration",
+      "selected_aggregate_check": true,
+      "selected_aggregate_axiom_print": true,
+      "target_manifest_present": true
+    },
+    {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.canonical_actual_root_tendsto_constructed",
+      "type": "Tendsto (rootScale actualVariation) atTop (𝓝 (spectralRadius canonicalNode))",
+      "selected_aggregate_check": true,
+      "selected_aggregate_axiom_print": true,
+      "target_manifest_present": true
+    },
+    {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.canonical_actual_root_limit_exists",
+      "type": "∃ R : ℝ, 1 ≤ R ∧ Tendsto (rootScale actualVariation) atTop (𝓝 R)",
+      "selected_aggregate_check": true,
+      "selected_aggregate_axiom_print": true,
+      "target_manifest_present": true
+    },
+    {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.canonical_actual_root_one_iff_nativeRH",
+      "type": "Tendsto (rootScale actualVariation) atTop (𝓝 1) ↔ _root_.RiemannHypothesis",
+      "selected_aggregate_check": true,
+      "selected_aggregate_axiom_print": true,
+      "target_manifest_present": true
+    },
+    {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.canonical_actual_subexponential_iff_nativeRH",
+      "type": "Subexponential actualVariation ↔ _root_.RiemannHypothesis",
+      "selected_aggregate_check": true,
+      "selected_aggregate_axiom_print": true,
+      "target_manifest_present": true
+    },
+    {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.canonical_actual_all_variation_one_iff_nativeRH",
+      "type": "(∀ N, actualVariation N = 1) ↔ _root_.RiemannHypothesis",
+      "selected_aggregate_check": true,
+      "selected_aggregate_axiom_print": true,
+      "target_manifest_present": true
+    },
+    {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.canonical_actual_weights_nonnegative_iff_nativeRH",
+      "type": "(∀ N j, j ≤ N → 0 ≤ actualWeight N j) ↔ _root_.RiemannHypothesis",
+      "selected_aggregate_check": true,
+      "selected_aggregate_axiom_print": true,
+      "target_manifest_present": true
+    },
+    {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.canonical_actual_natural_growth_step_iff_nativeRH_constructed",
+      "type": "(∃ K : ℕ, NaturalGrowthStep actualVariation K) ↔ _root_.RiemannHypothesis",
+      "selected_aggregate_check": true,
+      "selected_aggregate_axiom_print": true,
+      "target_manifest_present": true
+    },
+    {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.canonical_actual_natural_bound_iff_nativeRH_constructed",
+      "type": "(∃ B : ℕ, ∀ n : ℕ, actualVariation n ≤ (B : ℝ)) ↔ _root_.RiemannHypothesis",
+      "selected_aggregate_check": true,
+      "selected_aggregate_axiom_print": true,
+      "target_manifest_present": true
+    }
+  ],
+  "formal_closure": "OPEN",
+  "finite_checker_equivalence": "OPEN",
+  "accepted_finite_witness": null,
+  "unconditional_rh": "NOT_ESTABLISHED",
+  "obtained_witness_required_for_formal_closure": false,
+  "cache_reuse": "Only matching same-target source/dependency/toolchain/artifact/audit identities are reusable.",
+  "expected_warm_counts_if_all_90_anchors_validate": {
+    "compiled_modules": 0,
+    "frozen_reused_modules": 90
+  },
+  "warm_counts_are_observed": false,
+  "new_native_or_test_execution": false,
+  "not_an_init_record": true
+}

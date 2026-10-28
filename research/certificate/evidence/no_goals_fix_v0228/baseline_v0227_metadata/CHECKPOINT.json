@@ -1,0 +1,74 @@
+{
+  "schema": "RH_HILBERT_FIRST_FIVE_SOURCE_CHECKPOINT_V1",
+  "branch": "RH_HILBERT_LIMIT / Hilbert.vector",
+  "mode": "A_TIER_LEAN",
+  "target": "LOCAL_COMPILER",
+  "checkpoint_package": "RH_HILBERT_LIMIT_LEAN_v0_2_27_construction",
+  "parent_package": "RH_HILBERT_LIMIT_LEAN_v0_2_26_construction",
+  "parent_zip_sha256": "3b24e3c08ec824085df024e516a59cabadd0a54a58ebe906ed6944368c052af3",
+  "revision_kind": "COMPILE_REPAIR_NOT_INIT",
+  "selected_candidate": {
+    "cutoff": 0,
+    "coefficient": 0
+  },
+  "new_source_sha256": {},
+  "native_execution": "NOT_RUN",
+  "native_audit": "PENDING",
+  "latest_user_native_evidence": {
+    "evidence_kind": "USER_MESSAGE_DIAGNOSTIC_EXCERPT; NOT_ORIGINAL_NATIVE_LOG_BYTES",
+    "reported_package": "RH_HILBERT_LIMIT_LEAN_v0_2_26_construction",
+    "reported_build": "FAIL",
+    "reported_run": "FAIL",
+    "failed_modules": [
+      "RH_HilbertLimit.ZeroBudgetSecondSector",
+      "RH_HilbertLimit.ZeroBudgetFiveAlgebra"
+    ],
+    "blocked_modules": [
+      "RH_HilbertLimit.ZeroBudgetSecondMoment",
+      "RH_HilbertLimit.ZeroBudgetFiveSector",
+      "RH_HilbertLimit.ZeroBudgetFiveRows"
+    ],
+    "reported_final_failed_stage": "MODULE:RH_HilbertLimit.ZeroBudgetFiveAlgebra",
+    "diagnostics": [
+      {
+        "file": "RH_HilbertLimit/ZeroBudgetSecondSector.lean",
+        "line": 117,
+        "message": "Tactic `rewrite` failed: Did not find an occurrence of the pattern x⁻¹ ^ ?y",
+        "target": "6⁻¹ * (1 / x) ^ (-(3 / 2)) = 6⁻¹ * x ^ (3 / 2)"
+      },
+      {
+        "file": "RH_HilbertLimit/ZeroBudgetSecondSector.lean",
+        "lines": [
+          141,
+          166,
+          192,
+          193
+        ],
+        "message": "Invalid field `mono_set`: environment does not contain `And.mono_set`"
+      },
+      {
+        "file": "RH_HilbertLimit/ZeroBudgetFiveAlgebra.lean",
+        "line": 48,
+        "message": "Unknown identifier `abs_add`"
+      }
+    ],
+    "reported_shutdown": "WORKER_INVENTORY_RECHECK=CLEAR|ATTEMPTS:1|FULL_INVENTORIES:1|EXACT_WORKER_QUERIES:0",
+    "new_compilation_or_axiom_audit_performed_here": false,
+    "first_five_endpoint_verified_by_this_run": false
+  },
+  "first_batch_indices": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "next_batch_gate": "FIRST_BATCH_USER_NATIVE_BUILD_AND_AXIOM_AUDIT_PASS",
+  "next_batch_status": "NOT_INCLUDED_NOT_VERIFIED",
+  "universal_admissibility": "OPEN",
+  "changed_source_sha256": {
+    "RH_HilbertLimit/ZeroBudgetSecondSector.lean": "974506ab55be6024d536caeb824ea80cf06a86687930c33aa42f7cdef63e1f72",
+    "RH_HilbertLimit/ZeroBudgetFiveSector.lean": "c903332a3da68997b77e6ce7960fd4e149a5c46449be63a4bffaa2fe8d95115c",
+    "RH_HilbertLimit/ZeroBudgetFiveAlgebra.lean": "4f15864c2e6125a4829489659f56436d74b325e682b7058b7f746b9d3214131c"
+  }
+}

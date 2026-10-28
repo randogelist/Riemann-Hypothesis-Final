@@ -1,0 +1,19 @@
+{
+  "schema": "RH_HILBERT_V0219_RUNTIME_IDENTITY_REVIEW_V1",
+  "status": "STATIC_ONLY_NO_NATIVE_OR_RUNTIME_EXECUTION",
+  "runner_sha256": "06288a26630f1abfb888053ac60e4ec7e57e4a1b30ae738ddc05b7ecdb4ee1a6",
+  "baseline_runner_sha256": "e27b634a8625a35d05ede552b3089232097ffdbcbb020ddb881d5b2f34904ccd",
+  "changes": "TWO_PACKAGE_AND_VERSION_CONSTANTS_ONLY",
+  "normalized_exact_raw_byte_comparison": "MATCH",
+  "node_syntax_check": "PASSED; NO_RUNNER_OR_WINDOWS_API_EXECUTION",
+  "cache_acceptance_compile_flags_scheduling_hashing_locks_shutdown": "EXACT_BASELINE_LOGIC_PRESERVED",
+  "launcher_and_native_helpers": "EXACT_BYTES_PRESERVED",
+  "candidate_native_execution": "NOT_PERFORMED",
+  "lean_execution": false,
+  "lake_execution": false,
+  "ci_execution": false,
+  "new_axiom_audit_execution": false,
+  "new_runtime_mock_execution": false,
+  "integration_review": "evidence/cancellation_fix_v0219/INTEGRATION_REVIEW.json",
+  "integration_review_sha256": "7a9d35e1b03f715205facf3e1bf3d03dfa60d452f69948583ff79b35130823b5"
+}

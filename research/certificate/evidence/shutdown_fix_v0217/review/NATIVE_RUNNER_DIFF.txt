@@ -1,0 +1,283 @@
+--- v0.2.16/tools/native_runner.js
++++ v0.2.17/tools/native_runner.js
+@@ -5,8 +5,8 @@
+ var shell = new ActiveXObject("WScript.Shell");
+ var env = shell.Environment("PROCESS");
+ var root = fso.GetAbsolutePathName(".");
+-var PACKAGE = "RH_HILBERT_LIMIT_LEAN_v0_2_16_construction";
+-var RUNNER_VERSION = "RH_HILBERT_NATIVE_RUNNER_v0_2_16_PASS_CHECKPOINT";
++var PACKAGE = "RH_HILBERT_LIMIT_LEAN_v0_2_17_construction";
++var RUNNER_VERSION = "RH_HILBERT_NATIVE_RUNNER_v0_2_17_EXACT_PROCESS_RECHECK";
+ var SCHEMA = "RH_HILBERT_LOCAL_ANCHOR_V2";
+ var CACHE_LAYOUT = "COMPACT_V1";
+ var HELPER_SCHEMA = "RH_HILBERT_SHA256_HELPER_CACHE_V1";
+@@ -44,6 +44,7 @@
+ var lockOwnerText = "", lockSelf = null, lockEvents = [], lockRecovered = 0;
+ var lockEverHeld = false;
+ var lockAdmittedRelativeHosts = [], lockAdmittedRelativeOwner = "";
++var ownedNativeLaunches = [], nativeLaunchesSealed = false;
+ var activeHasher = null, hashBackendMode = "AUTO", hashBatchSerial = 0, workingDigestConsumed = 0;
+ var HASH_BATCH_MIN_FILES = 6;
+ var directLaunchCounts = {certutil:0,helper:0,csc:0,lean:0,ram_warm:0,other:0,total:0};
+@@ -136,7 +137,48 @@
+   var command=quote(exe), i;
+   for(i=0;i<args.length;i++) command += " " + quote(args[i]);
+   command += " > " + quote(output) + " 2>&1";
+-  return shell.Run(quote(comspec) + ' /d /v:off /s /c "' + command + '"', 0, true);
++  return nativeTrackedRun(quote(comspec) + ' /d /v:off /s /c "' + command + '"');
++}
++/* Every native launch is registered before the call can start a process.
++   A throwing launch remains uncertain. Shutdown seals every launch route. */
++function nativeBeginLaunch(kind,command) {
++  if(nativeLaunchesSealed)error("NATIVE_LAUNCH_CLOSED: no native process may start after shutdown begins.");
++  if(!lockHeld||!lockOwnerText)error("NATIVE_LAUNCH_UNOWNED: native processes require this runner's verified lock.");
++  var record={id:ownedNativeLaunches.length+1,kind:kind,command:command,owner:lockOwnerText,
++    state:"LAUNCH_UNCERTAIN",proc:null};
++  ownedNativeLaunches.push(record);return record;
++}
++function nativeTrackedRun(command) {
++  var record=nativeBeginLaunch("SYNC_RUN",command);
++  var code=shell.Run(command,0,true);
++  if(typeof code!=="number"||!isFinite(code)||Math.floor(code)!==code)
++    error("NATIVE_LAUNCH_UNCERTAIN: synchronous process returned an invalid exit code.");
++  record.exitCode=code;record.state="SYNC_RETURNED";return code;
++}
++function nativeTrackedExec(command,kind) {
++  var record=nativeBeginLaunch(kind,command),process=shell.Exec(command);
++  if(!process)error("NATIVE_LAUNCH_UNCERTAIN: asynchronous launch returned no process handle.");
++  record.proc=process;record.state="ASYNC_RETURNED";return process;
++}
++function sealNativeLaunches() {
++  if(nativeLaunchesSealed)return;
++  nativeLaunchesSealed=true;
++  diagnosticLog("NATIVE_LAUNCH_INVENTORY=SEALED|RECORDS="+ownedNativeLaunches.length);
++}
++function ownedNativeLaunchOutstanding() {
++  var out=[];
++  for(var i=0;i<ownedNativeLaunches.length;i++){
++    var record=ownedNativeLaunches[i],label="NATIVE_LAUNCH:"+record.id+":"+record.kind;
++    if(record.owner!==lockOwnerText){out.push(label+":OWNER_UNKNOWN");continue;}
++    if(record.state==="SYNC_RETURNED")continue;
++    if(record.state!=="ASYNC_RETURNED"||!record.proc){out.push(label+":LAUNCH_UNCERTAIN");continue;}
++    try{
++      var status=record.proc.Status;
++      if(status===0)out.push(label+":ACTIVE");
++      else if(status!==1)out.push(label+":STATUS_UNKNOWN");
++    }catch(unknownNativeStatus){out.push(label+":STATUS_UNKNOWN");}
++  }
++  return out;
+ }
+ function invokeNative(exe,args,output) {
+   var leaf=fso.GetFileName(exe).toLowerCase(),kind="other";
+@@ -385,7 +427,7 @@
+ function requestHash(path) { var normalized=norm(path);hashFiles[normalized.toLowerCase()]=normalized; }
+ function launchCertutil(path) {
+   directLaunchCounts.certutil++;directLaunchCounts.total++;
+-  return shell.Exec(quote(certutil)+" -hashfile "+quote(path)+" SHA256");
++  return nativeTrackedExec(quote(certutil)+" -hashfile "+quote(path)+" SHA256","certutil");
+ }
+ function certutilHashSet(todo,requested,purpose) {
+   var active=[],cursor=0,done=0,lastReport=0,out={},failure="",limit=resourceHashJobs();
+@@ -1284,7 +1326,9 @@
+   workerMemoryMB:4096, reserveMB:4096, ramCapMB:0, ramMode:"AUTO", ramAttempted:false,
+   ram:null, ramStatus:"NOT_NEEDED", ramExitCode:null, shutdownKeepLock:false, shutdownComplete:false, shutdownClean:false,
+   memoryDenial:"", preferredReserveMB:4096, minimumReserveMB:1024, memoryPressureSeen:false,
+-  memoryFallback:false, ramDisabledForMemory:false, shutdownInventoryAttempts:0};
++  memoryFallback:false, ramDisabledForMemory:false, shutdownInventoryAttempts:0,
++  shutdownFullInventoryQueries:0, shutdownTargetedWorkerQueries:0, shutdownTargetedSelfQueries:0,
++  shutdownExpiredRows:0, shutdownReadableRows:0};
+ var RAM_HELPER_SCHEMA = "RH_HILBERT_RAM_HELPER_CACHE_V1";
+ 
+ function parallelIntegerSetting(name,fallback,min,max) {
+@@ -1404,7 +1448,7 @@
+   var previousThreads=String(env("LEAN_NUM_THREADS")||"");
+   if(threads)env("LEAN_NUM_THREADS")=String(threads);
+   try{
+-    var process=shell.Exec(quote(comspec)+' /d /v:off /s /c "'+command+'"');
++    var process=nativeTrackedExec(quote(comspec)+' /d /v:off /s /c "'+command+'"',kind);
+     if(!directLaunchCounts.hasOwnProperty(kind))directLaunchCounts[kind]=0;
+     directLaunchCounts[kind]++;directLaunchCounts.total++;return process;
+   }finally{if(threads)env("LEAN_NUM_THREADS")=previousThreads;}
+@@ -1563,6 +1607,8 @@
+     try{if(parallelRuntime.ram.proc.Status===0)live.push("RAM_WARM:"+parallelRuntime.ram.proc.ProcessID);}
+     catch(unknownRam){live.push("RAM_WARM:STATUS_UNKNOWN");}
+   }
++  var nativeLive=ownedNativeLaunchOutstanding();
++  for(var ni=0;ni<nativeLive.length;ni++)live.push(nativeLive[ni]);
+   return live;
+ }
+ function parallelIsReadOnlyFollower(process) {
+@@ -1628,48 +1674,125 @@
+   return false;
+ }
+ 
+-function parallelShutdownInventory() {
+-  var processes=queryLockProcesses(),guarded=[];
++function parallelShutdownInventory(processes) {
++  var guarded=[];
+   for(var i=0;i<processes.length;i++)if(!parallelIsReadOnlyFollower(processes[i])&&!parallelIsFreshAdmittedRelativeHost(processes[i]))guarded.push(processes[i]);
+   return guarded;
+ }
+-/* A fresh complete inventory can resolve a transient unreadable process row.
+-   No process is omitted because it was previously unreadable or has exited by
+-   assumption. Existing stale-lock recovery does not call this retry wrapper. */
++/* Shutdown revalidates exact rows from one complete inventory. It never
++   chases new unrelated processes by restarting a whole-machine inventory.
++   Acquisition and stale-lock recovery continue to use the strict guard. */
+ function unreadableLockWorkerError(process) {
+   var e=new Error("LOCK_STATE_UNKNOWN: cannot exclude an active "+process.name+" worker with unreadable command line. No lock was changed.");
+   e.rhUnreadableLockWorker=true;
+   e.rhWorker={pid:process.pid,parent:process.parent,created:process.created,name:process.name};
+   return e;
+ }
++function queryShutdownProcess(pid) {
++  if(!(pid>0&&pid<=4294967295&&Math.floor(pid)===pid))
++    error("LOCK_STATE_UNKNOWN: invalid PID for exact shutdown process query.");
++  try{
++    var service=GetObject("winmgmts:{impersonationLevel=impersonate}!\\\\.\\root\\cimv2");
++    var items=service.ExecQuery("SELECT ProcessId, ParentProcessId, CreationDate, Name, CommandLine FROM Win32_Process WHERE ProcessId="+pid,"WQL",48);
++    var en=new Enumerator(items),out=[];
++    for(;!en.atEnd();en.moveNext()){
++      var p=en.item(),currentPid=Number(p.ProcessId),parent=Number(p.ParentProcessId);
++      var created=lockString(p.CreationDate),name=lockString(p.Name).toLowerCase();
++      if(currentPid!==pid||!(parent>=0&&parent<=4294967295&&Math.floor(parent)===parent)||
++        !validProcessCreation(created)||!name)error("Invalid exact process identity.");
++      out.push({pid:currentPid,parent:parent,created:created,name:name,command:lockString(p.CommandLine)});
++    }
++    if(out.length>1)error("Duplicate exact process identity.");
++    return out.length?out[0]:null;
++  }catch(queryError){
++    error("LOCK_STATE_UNKNOWN: exact process query failed for PID="+pid+"; no process was assumed absent. "+queryError.message);
++  }
++}
++function guardShutdownOwner(ownerText,self,generation) {
++  if(!nativeLaunchesSealed)error("LOCK_STATE_UNKNOWN: native launch inventory is not sealed.");
++  if(!lockHeld||lockOwnerText!==ownerText)error("RUNNER_LOCK_CHANGED: shutdown ownership changed; the lock was preserved.");
++  var snapshot=lockSnapshot();
++  if(!snapshot||snapshot.text!==ownerText||snapshot.generation!==generation)
++    error("RUNNER_LOCK_CHANGED: shutdown lock generation changed; the lock was preserved.");
++  var live=parallelLiveProcesses();
++  if(live.length)error("LOCK_STATE_UNKNOWN: owned native launches remain live or uncertain: "+live.join(","));
++  parallelRuntime.shutdownTargetedSelfQueries++;
++  var current=queryShutdownProcess(self.pid);
++  if(!current)error("LOCK_STATE_UNKNOWN: current runner is absent from its exact process query.");
++  current=identifyLockSelf([current],self.token);
++  if(processIdentity(current)!==processIdentity(self)||current.name!==self.name||current.parent!==self.parent)
++    error("LOCK_STATE_UNKNOWN: runner identity changed during shutdown recheck.");
++  snapshot=lockSnapshot();
++  if(!lockHeld||lockOwnerText!==ownerText||!snapshot||snapshot.text!==ownerText||snapshot.generation!==generation)
++    error("RUNNER_LOCK_CHANGED: shutdown lock generation changed during its exact process query.");
++  live=parallelLiveProcesses();
++  if(live.length)error("LOCK_STATE_UNKNOWN: owned native launches became live or uncertain during shutdown recheck: "+live.join(","));
++  return current;
++}
+ function parallelAssertShutdownInventory() {
+-  var ownerText=lockOwnerText,self=lockSelf,maxAttempts=6;
++  var ownerText=lockOwnerText,self=lockSelf,maxAttempts=6,maxRows=64,processes=null,pending=[];
+   if(!lockHeld||!ownerText||!self)error("LOCK_STATE_UNKNOWN: owned shutdown has no verified lock owner.");
+-  var selfIdentity=processIdentity(self),token=self.token;
++  var initialLock=lockSnapshot();
++  if(!initialLock||initialLock.text!==ownerText)error("RUNNER_LOCK_CHANGED: shutdown owner metadata does not match.");
++  var generation=initialLock.generation;
+   for(var attempt=1;attempt<=maxAttempts;attempt++){
+     parallelRuntime.shutdownInventoryAttempts=attempt;
+-    if(!lockHeld||lockOwnerText!==ownerText)error("RUNNER_LOCK_CHANGED: shutdown ownership changed; the lock was preserved.");
+-    var snapshot=lockSnapshot();
+-    if(!snapshot||snapshot.text!==ownerText)error("RUNNER_LOCK_CHANGED: shutdown lock metadata changed; the lock was preserved.");
+-    var live=parallelLiveProcesses();
+-    if(live.length)error("LOCK_STATE_UNKNOWN: owned workers became live or uncertain during inventory recheck: "+live.join(","));
+-    var processes=parallelShutdownInventory(),current=identifyLockSelf(processes,token);
+-    if(processIdentity(current)!==selfIdentity)error("LOCK_STATE_UNKNOWN: runner process identity changed during shutdown recheck.");
++    var current=guardShutdownOwner(ownerText,self,generation);
++    if(processes===null){
++      parallelRuntime.shutdownFullInventoryQueries++;
++      processes=queryLockProcesses();
++      var inventorySelf=identifyLockSelf(processes,self.token);
++      if(processIdentity(inventorySelf)!==processIdentity(self)||inventorySelf.name!==self.name||inventorySelf.parent!==self.parent)
++        error("LOCK_STATE_UNKNOWN: complete inventory does not identify the recorded runner.");
++      var excluded=lockAncestors(parallelShutdownInventory(processes),inventorySelf);
++      for(var pi=0;pi<processes.length;pi++){
++        var original=processes[pi];
++        var relevant=/^(?:cscript|wscript|cmd|lean|csc|certutil|helper|ramwarm)\.exe$/.test(original.name)||/^sha256-.*\.exe$/.test(original.name);
++        if(!relevant||original.command||excluded[processIdentity(original)])continue;
++        if(!(original.pid>0&&original.pid<=4294967295&&Math.floor(original.pid)===original.pid)||
++          !(original.parent>=0&&original.parent<=4294967295&&Math.floor(original.parent)===original.parent)||
++          !validProcessCreation(original.created))error("LOCK_STATE_UNKNOWN: unreadable initial row has no complete process identity.");
++        pending.push({index:pi,original:original,resolved:false});
++      }
++      if(pending.length>maxRows)error("LOCK_STATE_UNKNOWN: exact shutdown recheck exceeds its bounded row budget ("+pending.length+" > "+maxRows+").");
++      diagnosticLog("SHUTDOWN_PROCESS_SNAPSHOT=CAPTURED|ROWS="+processes.length+"|UNREADABLE="+pending.length);
++    }
++    for(var ri=0;ri<pending.length;ri++){
++      var row=pending[ri];if(row.resolved)continue;
++      var p=row.original;
++      parallelRuntime.shutdownTargetedWorkerQueries++;
++      var refreshed=queryShutdownProcess(p.pid);
++      if(!refreshed){
++        processes[row.index]=null;row.resolved=true;parallelRuntime.shutdownExpiredRows++;
++        diagnosticLog("SHUTDOWN_EXACT_ROW=ABSENT|PID="+p.pid+"|CREATED="+p.created+"|NAME="+p.name);
++      }else{
++        if(refreshed.pid!==p.pid||refreshed.created!==p.created||refreshed.name!==p.name||refreshed.parent!==p.parent)
++          error("LOCK_STATE_UNKNOWN: exact shutdown row changed identity for PID="+p.pid+"; the lock was preserved.");
++        processes[row.index]=refreshed;
++        if(refreshed.command){
++          row.resolved=true;parallelRuntime.shutdownReadableRows++;
++          diagnosticLog("SHUTDOWN_EXACT_ROW=READABLE|PID="+p.pid+"|CREATED="+p.created+"|NAME="+p.name);
++        }else diagnosticLog("SHUTDOWN_UNREADABLE_WORKER=PID:"+p.pid+"|PARENT:"+p.parent+"|CREATED:"+p.created+"|NAME:"+p.name+"|ATTEMPT:"+attempt);
++      }
++    }
++    var retained=[];
++    for(var ki=0;ki<processes.length;ki++)if(processes[ki]!==null)retained.push(processes[ki]);
++    var guardError=null;
+     try{
+-      assertNoLockWorkers(processes,{owner:null},current);
++      assertNoLockWorkers(parallelShutdownInventory(retained),{owner:null},current);
+     }catch(inventoryError){
+       if(!inventoryError||inventoryError.rhUnreadableLockWorker!==true)throw inventoryError;
+-      var p=inventoryError.rhWorker;
+-      diagnosticLog("SHUTDOWN_UNREADABLE_WORKER=PID:"+p.pid+"|PARENT:"+p.parent+"|CREATED:"+p.created+"|NAME:"+p.name+"|ATTEMPT:"+attempt);
+-      if(attempt===maxAttempts)throw inventoryError;
+-      diagnosticLog("WORKER_INVENTORY_RECHECK=NEXT:"+(attempt+1)+"|MAX:"+maxAttempts+"|WAIT_MS:200");
+-      WScript.Sleep(200);
+-      continue;
+-    }
+-    live=parallelLiveProcesses();
+-    if(live.length)error("LOCK_STATE_UNKNOWN: owned workers became live or uncertain after inventory recheck: "+live.join(","));
+-    if(attempt>1)diagnosticLog("WORKER_INVENTORY_RECHECK=CLEAR|ATTEMPTS:"+attempt);
+-    return;
++      guardError=inventoryError;
++    }
++    guardShutdownOwner(ownerText,self,generation);
++    if(!guardError){
++      diagnosticLog("WORKER_INVENTORY_RECHECK=CLEAR|ATTEMPTS:"+attempt+"|FULL_INVENTORIES:"+parallelRuntime.shutdownFullInventoryQueries+
++        "|EXACT_WORKER_QUERIES:"+parallelRuntime.shutdownTargetedWorkerQueries);
++      return;
++    }
++    if(attempt===maxAttempts)throw guardError;
++    diagnosticLog("WORKER_INVENTORY_RECHECK=SAME_IDENTITIES|NEXT:"+(attempt+1)+"|MAX:"+maxAttempts+"|WAIT_MS:200");
++    WScript.Sleep(200);
+   }
+   error("LOCK_STATE_UNKNOWN: shutdown inventory recheck exhausted without a verified result.");
+ }
+@@ -1703,6 +1826,7 @@
+ function parallelShutdown() {
+   if(parallelRuntime.shutdownComplete)return parallelRuntime.shutdownClean;
+   if(!lockHeld){parallelRuntime.shutdownComplete=true;parallelRuntime.shutdownClean=true;return true;}
++  sealNativeLaunches();
+   if(parallelRuntime.ram){
+     try{write(parallelRuntime.ram.stop,parallelRuntime.ram.token+"\n");}
+     catch(stopError){diagnosticLog("RAM_WARM_STOP_REQUEST_FAILED="+stopError.message);}
+@@ -2040,6 +2164,13 @@
+     '  "ram_disabled_for_memory": '+(parallelRuntime.ramDisabledForMemory?"true":"false")+",",
+     '  "preexisting_admitted_unresolved_hosts": '+lockAdmittedRelativeHosts.length+",",
+     '  "shutdown_inventory_attempts": '+parallelRuntime.shutdownInventoryAttempts+",",
++    '  "shutdown_full_inventory_queries": '+parallelRuntime.shutdownFullInventoryQueries+",",
++    '  "shutdown_targeted_worker_queries": '+parallelRuntime.shutdownTargetedWorkerQueries+",",
++    '  "shutdown_targeted_self_queries": '+parallelRuntime.shutdownTargetedSelfQueries+",",
++    '  "shutdown_expired_rows": '+parallelRuntime.shutdownExpiredRows+",",
++    '  "shutdown_readable_rows": '+parallelRuntime.shutdownReadableRows+",",
++    '  "native_launches_sealed": '+(nativeLaunchesSealed?"true":"false")+",",
++    '  "native_launch_records": '+ownedNativeLaunches.length+",",
+     '  "ram_warm_exit_code": '+(parallelRuntime.ramExitCode===null?"null":String(parallelRuntime.ramExitCode))+",",
+     '  "ram_warm_residency": "OS_MANAGED_NOT_GUARANTEED",','  "owned_worker_shutdown_complete": '+(parallelRuntime.shutdownClean?"true":"false")+",",
+     '  "logical_tool_launches": '+numericMapJSON(directLaunchCounts)+",",'  "hash_phase_totals": '+numericMapJSON(hashPhaseTotals)+",",

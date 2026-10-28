@@ -1,0 +1,17 @@
+{
+  "runner_sha256": "d12a31ecc04af078c7b2620694e2057f67e78dfbd3c58f9215f21338c2b4cf3e",
+  "baseline_runner_sha256": "bcb5911d6b9c6c87a8d4271948546c6632591c5bced36b3b96037a7b0a5a6104",
+  "normalized_exact_raw_bytes_match": true,
+  "changes": [
+    "PACKAGE",
+    "RUNNER_VERSION",
+    "two mathematical-status literals",
+    "two verified-scope literals",
+    "two JSON result fields",
+    "two success log lines"
+  ],
+  "json_addition": "    '  \"zero_budget_second_moment_bounds\": '+quoteJSON(pass?\"DECLARATIONS_AUDITED\":\"NATIVE_AUDIT_PENDING\")+\",\",\n    '  \"zero_budget_second_refinement_cancellation\": '+quoteJSON(pass?\"ZERO_DECLARATION_AUDITED\":\"NATIVE_AUDIT_PENDING\")+\",\",\n",
+  "log_addition": "  log(\"ZERO_BUDGET_SECOND_MOMENT_BOUNDS=DECLARATIONS_AUDITED\");\n  log(\"ZERO_BUDGET_SECOND_REFINEMENT_CANCELLATION=ZERO_DECLARATION_AUDITED\");\n",
+  "execution_cache_audit_memory_lock_shutdown_policy_changed": false,
+  "runner_entrypoint_executed": false
+}

@@ -1,0 +1,15 @@
+--- v0.2.13/RH_HilbertLimit/CanonicalPowerSums.lean
++++ v0.2.14/RH_HilbertLimit/CanonicalPowerSums.lean
+@@ -310,9 +310,9 @@
+     (((actualKappa : ℂ)⁻¹) ^ (n + 1))
+   have htarget : (((actualKappa : ℂ)⁻¹) ^ (n + 1)) * actualComplexMoment n =
+       (actualNormalizedMoment n : ℂ) := by
+-    rw [actualComplexMoment_eq_ofReal_actualMoment]
+-    simp only [actualNormalizedMoment, Complex.ofReal_div, Complex.ofReal_pow,
+-      div_eq_mul_inv, inv_pow, mul_comm]
++    rw [actualComplexMoment_eq_ofReal_actualMoment, actualNormalizedMoment,
++      Complex.ofReal_div, Complex.ofReal_pow, inv_pow, div_eq_mul_inv]
++    exact mul_comm _ _
+   rw [htarget] at h
+   apply h.congr_fun
+   intro i

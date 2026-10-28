@@ -1,0 +1,343 @@
+{
+  "schema": "RH_HILBERT_V0222_RELATIVE_RUNNER_RUNTIME_REPAIR_V1",
+  "branch": "RH_HILBERT_LIMIT",
+  "mode": "A_TIER_LEAN",
+  "target": "LOCAL_COMPILER",
+  "source_package": "RH_HILBERT_LIMIT_LEAN_v0_2_21_construction",
+  "source_zip_sha256": "4bde59b2e1dd110a8659ca9569900492fcc963190f05a85a8b6e75e08982e508",
+  "checkpoint_package": "RH_HILBERT_LIMIT_LEAN_v0_2_22_construction",
+  "evidence_class": "USER_SUPPLIED_SHUTDOWN_FAILURE_AFTER_REUSED_AUDIT; SOURCE_BOUND_SIMULATED_RUNTIME_TESTS; LEAN_SOURCES_FROZEN",
+  "latest_user_run": {
+    "evidence_kind": "SELECTED_FINAL_STAGES_FROM_USER_MESSAGE_UTF8_LF_TRANSCRIPTION_NOT_ORIGINAL_LOG_BYTES",
+    "reported_package": "RH_HILBERT_LIMIT_LEAN_v0_2_21_construction",
+    "reported_build": "FAIL",
+    "reported_run": "FAIL",
+    "reported_failed_stage": "WORKER_SHUTDOWN",
+    "reported_reason": "Owned workers remain live or uncertain; the workspace lock is preserved until they finish.",
+    "ordinary_module_progress": {
+      "completed": 92,
+      "total": 92,
+      "active": 0,
+      "ready": 0,
+      "lean_threads": 0
+    },
+    "reported_new_or_reaudited_module_tasks": 0,
+    "reported_peak_module_workers": 0,
+    "reported_ram_warm": "SKIPPED_NO_ELIGIBLE_DIRTY_FRONTIER",
+    "reported_final_audit": "CancellationAudit.lean",
+    "reported_final_audit_state": "FROZEN_REUSED",
+    "reported_final_audit_declarations": 394,
+    "reported_stages_ms": {
+      "PROJECT_MODULES": 58644,
+      "FINAL_AUDIT": 427,
+      "WORKER_SHUTDOWN": 548
+    },
+    "reported_final_audit_module_elapsed_ms": 343,
+    "reported_shutdown": {
+      "launch_inventory_sealed": true,
+      "launch_records": 417,
+      "snapshot_rows": 717,
+      "queued_unreadable_rows": 0,
+      "lock_retained": true,
+      "reason": "LEGACY_RELATIVE_RUNNER_WORKSPACE_UNKNOWN",
+      "offending_process_identity": null
+    },
+    "aggregate_module_summary_counts": null,
+    "aggregate_module_summary_note": "Not emitted in the supplied failed run; do not infer final aggregate counters.",
+    "explicit_per_declaration_axiom_output_in_excerpt": 0,
+    "final_audit_anchor_receipt_path": "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\dfb014b4edea4fa5\\dfdde963255fcdf198c5fc8dcb8d5ad1\\01a17f72f0e0b979\\receipt.txt",
+    "receipt_contents_inspected": false,
+    "independent_native_verification": false,
+    "source": "evidence/relative_shutdown_v0222/USER_NATIVE_V0221_SHUTDOWN_FAIL_EXCERPT.txt",
+    "source_sha256": "da785e35f7c225ad780a5d850270428b9768b38ff94fbebacd5155f596a814ad",
+    "scope": "Selected exact final-stage excerpt; preceding per-module reuse lines remain in the user message.",
+    "cause_limit": "The old log does not identify the host, its actual script argument, or whether it exited; the two repaired cases are source-level findings, not a proven diagnosis of that process."
+  },
+  "latest_successful_full_run": {
+    "evidence_kind": "USER_MESSAGE_UTF8_LF_TRANSCRIPTION_NOT_ORIGINAL_NATIVE_LOG_BYTES",
+    "reported_package": "RH_HILBERT_LIMIT_LEAN_v0_2_20_construction",
+    "reported_build": "PASS",
+    "reported_run": "PASS",
+    "reported_final_audit": "CancellationAudit.lean",
+    "reported_final_audit_declarations": 394,
+    "explicitly_printed_axiom_declarations": 14,
+    "explicit_axioms": {
+      "RH_HilbertLimit.subexponential_of_eventual_natural_growth_step": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "RH_HilbertLimit.subexponential_of_exists_eventual_natural_growth_step": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "RH_HilbertLimit.CancellationBudget": [],
+      "RH_HilbertLimit.CancellationBudget.Admissible": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "RH_HilbertLimit.cancellationBudget_admissible_iff_eventual_growth_step": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "RH_HilbertLimit.actual_subexponential_of_admissible_cancellationBudget": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "RH_HilbertLimit.nativeRH_of_admissible_cancellationBudget": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "RH_HilbertLimit.nativeRH_of_exists_admissible_cancellationBudget": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "RH_HilbertLimit.zero_cancellationBudget_admissible_of_nativeRH": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "RH_HilbertLimit.exists_admissible_cancellationBudget_iff_nativeRH": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "RH_HilbertLimit.nativeRH_of_exists_eventual_cancellation_bound": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "RH_HilbertLimit.CancellationBudget.LocalFlux": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "RH_HilbertLimit.cancellationBudget_admissible_of_local_flux": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "RH_HilbertLimit.nativeRH_of_exists_local_cancellation_flux": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "reported_axiom_audit": "PASS_STANDARD_LOGICAL_AXIOMS_ONLY",
+    "reported_sorryax": "NONE",
+    "reported_final_audit_module_elapsed_ms": 9914,
+    "reported_stages": {
+      "FINAL_AUDIT": 10036,
+      "WORKER_SHUTDOWN": 1044
+    },
+    "reported_counts": {
+      "COMPILED_MODULES": 2,
+      "FROZEN_REUSED_MODULES": 91,
+      "AUDIT_ONLY_MODULES": 0,
+      "LEGACY_MIGRATED_MODULES": 0,
+      "WORKING_ARTIFACT_MODULES_RETAINED": 0,
+      "RESTORED_ARTIFACT_FILES": 91,
+      "ANCHOR_HISTORY_SCANS": 2,
+      "COMPACT_ANCHORS_SAVED": 2,
+      "COMBINED_WORKING_DIGESTS_CONSUMED": 0
+    },
+    "reported_logical_tool_launches": {
+      "certutil": 413,
+      "csc": 0,
+      "helper": 2,
+      "lean": 5,
+      "other": 0,
+      "ram_warm": 0,
+      "total": 420
+    },
+    "reported_hash_phase_totals": {
+      "batch_sets": 1,
+      "certutil_sets": 189,
+      "elapsed_ms": 41473,
+      "failed_sets": 0,
+      "files": 37524,
+      "sets": 190
+    },
+    "reported_shutdown": {
+      "clear": true,
+      "attempts": 1,
+      "full_inventories": 1,
+      "exact_worker_queries": 0
+    },
+    "reported_mathematical_status": "ANALYTIC_AND_SEMANTIC_CANCELLATION_AUDITED_FINITE_CHECKER_OPEN",
+    "reported_semantic_forward": "DECLARATION_AUDITED",
+    "reported_semantic_equivalence": "DECLARATION_AUDITED",
+    "reported_formal_closure": "OPEN",
+    "reported_finite_checker_soundness": "OPEN",
+    "reported_finite_checker_equivalence": "OPEN",
+    "reported_accepted_finite_witness": "NOT_ESTABLISHED",
+    "reported_unconditional_rh": "NOT_ESTABLISHED",
+    "reported_anchor_receipt_path": "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\dfb014b4edea4fa5\\dfdde963255fcdf198c5fc8dcb8d5ad1\\01a17f72f0e0b979\\receipt.txt",
+    "source": "evidence/native_pass_v0221/USER_NATIVE_V0220_PASS_TAIL.txt",
+    "source_sha256": "a3c8671ca646ca1e0fc601a0b952a2cbb3f1a0c95a1b8dd5fa89b2df44bf53d6",
+    "source_bytes": 6087,
+    "first_marker": "AXIOM_OUTPUT_TAIL_STARTS_WITHOUT_THE_PRECEDING_DECLARATION_SIGNATURE",
+    "direct_native_receipt_contents": "NOT_SUPPLIED; PATH_ONLY",
+    "native_source_dependency_toolchain_and_artifact_fingerprints": "NOT_SUPPLIED_IN_EXCERPT",
+    "independent_native_verification": "NOT_PERFORMED",
+    "aggregate_coverage_scope": "394_SELECTED_TARGETS; 14_EXPLICIT_AXIOM_LISTS_IN_THIS_TAIL",
+    "reuse_requirement": "EXACT_SAME_TARGET_SOURCE_DEPENDENCIES_TOOLCHAIN_ARTIFACTS_AND_PRIOR_AUDIT_PASS_VALIDATION",
+    "timing_scope": "REPORTED_STAGES_AND_HASH_AGGREGATES_ONLY; NO_WHOLE_RUN_WALL_TIME"
+  },
+  "lean_sources_byte_preserved": 96,
+  "changed_proof_bodies": [],
+  "added_or_removed_mathematical_declarations": [],
+  "definitions_theorem_statements_and_assumptions": "UNCHANGED",
+  "eventual_growth_source_sha256": "f846d1a1b897542c460783a9ab5702ff1b713e5788fe149034d1ead5f0d178c0",
+  "changed_runtime_policy": true,
+  "runner_changes": "CONSERVATIVE_SCRIPT_CLASSIFICATION_AND_BOUNDED_RELATIVE_HOST_SHUTDOWN_REVALIDATION",
+  "source_manifest": "evidence/relative_shutdown_v0222/FROZEN_SOURCE_MANIFEST.json",
+  "selected_final_audit": "CancellationAudit.lean",
+  "selected_axiom_targets": 394,
+  "exact_endpoint_declarations": [
+    {
+      "kind": "def",
+      "name": "RH_HilbertLimit.actualCanonicalCalibration",
+      "type": "ActualSpectralCalibration AngularMaster.ActualPairIndex",
+      "selected_aggregate_check": true,
+      "selected_aggregate_axiom_print": true,
+      "target_manifest_present": true
+    },
+    {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.actualCanonicalDominantExtraction",
+      "type": "DominantExtraction actualCanonicalCalibration",
+      "selected_aggregate_check": true,
+      "selected_aggregate_axiom_print": true,
+      "target_manifest_present": true
+    },
+    {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.canonical_actual_root_tendsto_constructed",
+      "type": "Tendsto (rootScale actualVariation) atTop (𝓝 (spectralRadius canonicalNode))",
+      "selected_aggregate_check": true,
+      "selected_aggregate_axiom_print": true,
+      "target_manifest_present": true
+    },
+    {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.canonical_actual_root_limit_exists",
+      "type": "∃ R : ℝ, 1 ≤ R ∧ Tendsto (rootScale actualVariation) atTop (𝓝 R)",
+      "selected_aggregate_check": true,
+      "selected_aggregate_axiom_print": true,
+      "target_manifest_present": true
+    },
+    {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.canonical_actual_root_one_iff_nativeRH",
+      "type": "Tendsto (rootScale actualVariation) atTop (𝓝 1) ↔ _root_.RiemannHypothesis",
+      "selected_aggregate_check": true,
+      "selected_aggregate_axiom_print": true,
+      "target_manifest_present": true
+    },
+    {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.canonical_actual_subexponential_iff_nativeRH",
+      "type": "Subexponential actualVariation ↔ _root_.RiemannHypothesis",
+      "selected_aggregate_check": true,
+      "selected_aggregate_axiom_print": true,
+      "target_manifest_present": true
+    },
+    {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.canonical_actual_all_variation_one_iff_nativeRH",
+      "type": "(∀ N, actualVariation N = 1) ↔ _root_.RiemannHypothesis",
+      "selected_aggregate_check": true,
+      "selected_aggregate_axiom_print": true,
+      "target_manifest_present": true
+    },
+    {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.canonical_actual_weights_nonnegative_iff_nativeRH",
+      "type": "(∀ N j, j ≤ N → 0 ≤ actualWeight N j) ↔ _root_.RiemannHypothesis",
+      "selected_aggregate_check": true,
+      "selected_aggregate_axiom_print": true,
+      "target_manifest_present": true
+    },
+    {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.canonical_actual_natural_growth_step_iff_nativeRH_constructed",
+      "type": "(∃ K : ℕ, NaturalGrowthStep actualVariation K) ↔ _root_.RiemannHypothesis",
+      "selected_aggregate_check": true,
+      "selected_aggregate_axiom_print": true,
+      "target_manifest_present": true
+    },
+    {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.canonical_actual_natural_bound_iff_nativeRH_constructed",
+      "type": "(∃ B : ℕ, ∀ n : ℕ, actualVariation n ≤ (B : ℝ)) ↔ _root_.RiemannHypothesis",
+      "selected_aggregate_check": true,
+      "selected_aggregate_axiom_print": true,
+      "target_manifest_present": true
+    }
+  ],
+  "forward_endpoint": "RH_HilbertLimit.nativeRH_of_exists_admissible_cancellationBudget",
+  "forward_endpoint_type": "(exists W : CancellationBudget, W.Admissible) -> _root_.RiemannHypothesis",
+  "forward_endpoint_status": "USER_REPORTED_NATIVE_COMPILE_AND_EXPLICIT_AXIOM_AUDIT_PASS_SOURCE_UNCHANGED",
+  "formal_closure": "OPEN",
+  "finite_checker_soundness": "OPEN",
+  "finite_checker_equivalence": "OPEN",
+  "accepted_finite_witness": null,
+  "unconditional_rh": "NOT_ESTABLISHED",
+  "obtained_witness_required_for_formal_closure": false,
+  "expected_first_run_if_all_relevant_anchors_validate": {
+    "frozen_reused": 93,
+    "compiled_and_audited": 0
+  },
+  "counts_are_observed": false,
+  "source_change_invalidation_cone": [],
+  "cache_reuse": "MATCHING_SAME_TARGET_SOURCE_DEPENDENCIES_TOOLCHAIN_ARTIFACTS_AND_AUDIT_REQUIRED",
+  "new_native_or_lean_execution": false,
+  "new_runtime_test_execution": true,
+  "not_an_init_record": true,
+  "previous_checkpoint": "evidence/relative_shutdown_v0222/baseline_v0221_metadata/CHECKPOINT.json",
+  "delivery_filename": "RH_HILBERT_LIMIT_LEAN_v0_2_22_construction.zip",
+  "canonical_archive_root": "RH_HILBERT_LIMIT_LEAN_v0_2_22_construction",
+  "cancellation_source_sha256": "985602ead4c4b3581b6aef194a36da6ca1f78defbeaaadf328e0cf97749b9528",
+  "changed_lean_sources": [],
+  "equivalence_endpoint": "RH_HilbertLimit.exists_admissible_cancellationBudget_iff_nativeRH",
+  "equivalence_endpoint_type": "(∃ W : CancellationBudget, W.Admissible) ↔ _root_.RiemannHypothesis",
+  "equivalence_endpoint_status": "USER_REPORTED_NATIVE_COMPILE_AND_EXPLICIT_AXIOM_AUDIT_PASS_SOURCE_UNCHANGED",
+  "endpoint_evidence": "evidence/native_pass_v0221/SEMANTIC_ENDPOINT_REVIEW.json",
+  "shutdown_policy": {
+    "strategy": "INITIAL_COMPLETE_INVENTORY_WITH_BOUNDED_EXACT_RECHECK; ONE_FRESH_BARRIER_AFTER_UNRESOLVED_RELATIVE_HOST_ABSENCE",
+    "script_classifier": "RESTRICTED_FULLY_CONSUMED_WSH_SCRIPT_ARGUMENT_PARSER; OLD_BROAD_MATCHER_FOR_UNSUPPORTED_SYNTAX",
+    "current_workspace_guard": "ABSOLUTE_ROOT_ANYWHERE_CHECK_PRECEDES_SCRIPT_CLASSIFICATION; EVERY_INITIAL_ROW_CHECKED_BEFORE_ABSENCE_QUERIES",
+    "absence_rule": "ONLY_COMPLETE_SUCCESSFUL_EXACT_PID_QUERY_WITH_NO_ROW",
+    "identity_rule": "EXACT_PID_FULL_CREATION_NAME_PARENT; KNOWN_RELATIVE_COMMAND_MUST_REMAIN_IDENTICAL",
+    "unreadable_to_relative": "REMAINS_PENDING_AND_BINDS_FIRST_READABLE_COMMAND",
+    "post_exit_barrier": "ONE_FRESH_COMPLETE_INVENTORY; NEW_UNRESOLVED_RELATIVE_HOST_FAILS_IMMEDIATELY; UNREADABLE_ROWS_SHARE_EXISTING_BUDGET",
+    "contradictory_reappearance": "RETAIN_LOCK",
+    "persistent_uncertainty_or_identity_change": "RETAIN_LOCK",
+    "preexisting_parent_exemption_extended_to_children": false,
+    "existing_admission_and_follower_exceptions": "EXACT_FUNCTION_BYTES_PRESERVED",
+    "own_launch_boundary": "EXACT_EXISTING_SEAL_AND_COMPLETION_CHECKS_PRESERVED",
+    "owner_and_self_checks": "EXACT_BEFORE_AND_AFTER_EACH_INVENTORY_ITERATION",
+    "stale_lock_acquisition_and_recovery": "CONTROL_FLOW_UNCHANGED; SHARED_SCRIPT_CLASSIFIER_CORRECTED; NO_RETRY_OR_NEW_EXEMPTION",
+    "scope": "COOPERATIVE_WORKSPACE_LOCK_AND_POINT_IN_TIME_PROCESS_OBSERVATIONS; NOT_ATOMIC_OS_PROCESS_TREE_CLOSURE",
+    "query_and_wait_limits": {
+      "complete_machine_inventory_queries_max": 2,
+      "queued_rows_across_both_inventories_max": 64,
+      "rounds_max": 6,
+      "targeted_worker_queries_per_round_max": 64,
+      "targeted_worker_queries_total_max": 384,
+      "targeted_self_queries_total_max": 14,
+      "scheduled_sleep_between_rounds_ms": 200,
+      "scheduled_sleep_total_max_ms": 1000,
+      "existing_owned_worker_drain_ms": 30000,
+      "hard_wall_clock_bound": false,
+      "runtime_note": "WMI/COM enumeration and status calls retain their existing lack of a wrapper-imposed hard deadline."
+    }
+  }
+}

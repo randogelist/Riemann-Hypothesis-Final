@@ -1,0 +1,53 @@
+{
+  "schema": "RH_HILBERT_RUNTIME_V027_VALIDATION",
+  "status": "PASS_NODE_HOST_SIMULATIONS_AND_STATIC_REVIEW; NATIVE_EXECUTION_PENDING",
+  "checked_at_utc": "2026-10-27T17:58:54.015532+00:00",
+  "runner_sha256": "14e084bcc689b16da6ad37b38b549dda8ca3d849c2f36a969eb5c3b92c8ef4eb",
+  "parent_runner_sha256": "de355f04fe3f59fad64c90613c7731dd37dfe795298769465d08c83482d7a165",
+  "cmd_sha256": "5e6c6561c370c904b13d165986f0c045c6e7732de1745744b03619cf4a4b9f16",
+  "helper_source_sha256": "d8cd2d616ed2b7a64931fe391bd6e25b236a1c450e5b7c669df26c2974dd9f18",
+  "mock_scenarios_passed": 86,
+  "mock_scenarios_failed": 0,
+  "reports": [
+    "evidence/runtime_v027/fresh_hash_results.json",
+    "evidence/runtime_v027/inherited_cache_results.json",
+    "evidence/runtime_v027/inherited_helper_results.json",
+    "evidence/runtime_v027/inherited_lock_results.json"
+  ],
+  "static_invariants": "evidence/runtime_v027/static_invariants_v026.json",
+  "independent_review": "evidence/runtime_v027/independent_review.json",
+  "method": "Actual runner functions in a Node VM; in-memory filesystem and synthetic OS/tool responses. Separate static source/identity and archive checks.",
+  "simulated_warm_comparison": {
+    "synthetic_modules": 3,
+    "artifact_files_per_module": 5,
+    "observed": {
+      "baseline": {
+        "certutil": 36,
+        "helper": 0,
+        "compiles": 0,
+        "audits": 0,
+        "copies": 0
+      },
+      "candidate": {
+        "certutil": 12,
+        "helper": 3,
+        "compiles": 0,
+        "audits": 0,
+        "copies": 0
+      }
+    },
+    "native_timing_claim": false
+  },
+  "native_windows_execution": false,
+  "lean_execution": false,
+  "lake_execution": false,
+  "csharp_execution_or_compilation": false,
+  "ci_execution": false,
+  "comparative_native_timing": "NOT_MEASURED",
+  "limitations": [
+    "Node simulations do not establish Windows Script Host, CMD, native filesystem or native runtime performance.",
+    "Logical tool-launch counts exclude wrapper CMD processes and subprocesses launched internally by tools.",
+    "File hashes are fresh at their validation phases; no atomic snapshot against arbitrary external mutation is claimed.",
+    "Runner validation does not compile Lean or change the mathematical status."
+  ]
+}

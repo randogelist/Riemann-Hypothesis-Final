@@ -1,0 +1,10 @@
+  have hd : HasDerivAt (fun w : ℂ => 1 + w * b i) (b i) z := by
+    simpa using ((hasDerivAt_id z).mul_const (b i)).const_add 1
+  have hne := denominator_ne_zero hb hz i
+  have h := (hasDerivAt_const z (b i)).fun_div hd hne
+  have hscalar :
+      ((0 : ℂ) * (1 + z * b i) - b i * b i) / (1 + z * b i) ^ 2 =
+        -((resolvent b i z) ^ 2) := by
+    simp only [resolvent, zero_mul, zero_sub, neg_div, div_pow, ← pow_two]
+  rw [hscalar] at h
+  exact h

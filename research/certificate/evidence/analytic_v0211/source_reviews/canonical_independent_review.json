@@ -1,0 +1,62 @@
+{
+  "schema": "RH_CANONICAL_POWER_SUMS_STATIC_REVIEW_V1",
+  "reviewer": "moment_induction",
+  "reviewed_file": "CanonicalPowerSums.lean",
+  "reviewed_sha256": "2aecbd7e10aa87c0ce726026d563d6a33caf0b99e58f824719cf5a99a6217169",
+  "reviewed_bytes": 14409,
+  "scope": "Bounded independent source-level mathematical and Mathlib v4.33.0 API review.",
+  "edits_performed": false,
+  "native_execution": false,
+  "lean_lake_or_compiler_execution": false,
+  "tests_executed": false,
+  "concrete_issues": [],
+  "checks": [
+    {
+      "area": "uniform majorant",
+      "assessment": "The open domain contains zero and forces norm(z*b_i)<1/2. The denominator norm exceeds 1/2, giving norm(resolvent_i)<=2*norm(b_i). The nth positive power is bounded by norm(b_i)*[2*(2*massBound)^n], a summable majorant for each n on the same domain."
+    },
+    {
+      "area": "local product logarithmic derivative",
+      "assessment": "The existing affine-product locally uniform theorem is used on ball(0,1), with z in that ball. Each factor and the product are nonzero at z by the verified summable-product theorem. logDeriv_tprod_eq_tsum receives the expected differentiability, summability, local-product and nonvanishing arguments."
+    },
+    {
+      "area": "termwise derivative API",
+      "assessment": "Complex.hasSum_deriv_of_summable_norm takes the displayed summable majorant, all-term DifferentiableOn proof, IsOpen domain, uniform bound and point membership in the order supplied. Its derivative target is definitionally resolventSeries. HasSum.congr_fun requires the new summand equals the old summand, matching the use of the derivative equality reversed."
+    },
+    {
+      "area": "all-order recurrence",
+      "assessment": "The term derivative is -(n+1)*resolvent^(n+2); HasSum uniqueness gives S_n prime=-(n+1)*S_(n+1). The neighborhood equality from the induction hypothesis has the correct direction for deriv_eq. iteratedDeriv_succ and the assumption-free field constant-multiple derivative yield (-1)^n*n!*S_n."
+    },
+    {
+      "area": "origin and actual function",
+      "assessment": "The eventual equality logDeriv(product)=S_0 is obtained from HasSum.tsum_eq.symm on the open neighborhood. Filter.EventuallyEq.iteratedDeriv_eq is applied in the correct direction. The actual theta product normalization and nonzero theta(0) identify the literal actualLogDerivative without a new hypothesis."
+    },
+    {
+      "area": "sign and factorial",
+      "assessment": "The moment definition contributes (-1)^n/n!, exactly cancelling (-1)^n*n! from the derivative formula. Nat.factorial_ne_zero supplies the required complex nonzero denominator. The sign product proof correctly reduces to ((-1)*(-1))^n=1."
+    },
+    {
+      "area": "kappa normalization",
+      "assessment": "canonicalNode=(actualKappa:Complex)^(-1)*inverseScale; multiplying the n+1 power series by ((actualKappa:Complex)^(-1))^(n+1) gives actualMoment(n)/actualKappa^(n+1). Existing unconditional moment reality justifies the real-to-complex target. HasSum.congr_fun uses the correct canonical-node-to-product equality orientation."
+    },
+    {
+      "area": "premises",
+      "assessment": "The final canonicalPowerSums declaration has no displayed calibration, RH, power-sum, or derivative-interchange premise. Its candidate proof uses the established actual product and summability source theorems. It does not prove RH or finite-checker completeness."
+    }
+  ],
+  "native_pending_limitations": [
+    "This review is not a Lean elaboration, kernel check, axiom audit, or authentic native PASS receipt.",
+    "Tactic closure for field_simp, ring and nlinarith remains subject to the native compiler.",
+    "Definitional reductions through resolventSeries and natural exponent associations were reviewed but not compiled."
+  ],
+  "reference_files": [
+    "reference/Mathlib__Analysis__Complex__LocallyUniformLimit.lean",
+    "reference/Mathlib__Analysis__Calculus__LogDerivUniformlyOn.lean",
+    "reference/Mathlib__Analysis__Calculus__Deriv__Inv.lean",
+    "reference/Mathlib__Analysis__Calculus__Deriv__Pow.lean",
+    "reference/Mathlib__Analysis__Calculus__Deriv__Mul.lean",
+    "reference/Mathlib__Analysis__Calculus__IteratedDeriv__Defs.lean",
+    "reference/Mathlib__Analysis__Calculus__IteratedDeriv__Lemmas.lean",
+    "reference/Mathlib__Analysis__SpecialFunctions__Log__Summable.lean"
+  ]
+}

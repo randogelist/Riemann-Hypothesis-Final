@@ -1,0 +1,114 @@
+--- output/RH_HILBERT_LIMIT_LEAN_v0_1_4_construction/tools/native_runner.js
++++ tmp/witness_equivalence_review/runner/native_runner.js
+@@ -5,8 +5,8 @@
+ var shell = new ActiveXObject("WScript.Shell");
+ var env = shell.Environment("PROCESS");
+ var root = fso.GetAbsolutePathName(".");
+-var PACKAGE = "RH_HILBERT_LIMIT_LEAN_v0_1_4_construction";
+-var RUNNER_VERSION = "RH_HILBERT_NATIVE_RUNNER_v0_1_4";
++var PACKAGE = "RH_HILBERT_LIMIT_LEAN_v0_2_0_construction";
++var RUNNER_VERSION = "RH_HILBERT_NATIVE_RUNNER_v0_2_0";
+ var SCHEMA = "RH_HILBERT_LOCAL_ANCHOR_V2";
+ var COMPILE_POLICY = "RH_HILBERT_NATIVE_COMPILE_V1";
+ var AUDIT_POLICY = "RH_HILBERT_STANDARD_AXIOMS_V1";
+@@ -25,6 +25,7 @@
+ var compiler = "", prefix = "", leanVersion = "", jobs = 16;
+ var mathlibRoot = "", cacheRoot = "", anchorRoot = "";
+ var packages = [], modules = {}, ordered = [], auditTargets = {};
++var finalAuditRelative = "Audit.lean", finalAuditName = "Audit", finalAuditSource = root + "\\Audit.lean";
+ var hashFiles = {}, fileHashes = {}, moduleKeys = {}, buildStates = {};
+ var artifactHashes = {}, dependencyKeys = {}, globalKey = "";
+ var legacyGlobalKey = "", provenance = {}, anchorRoots = [], requiredMathlib = [];
+@@ -341,10 +342,19 @@
+   for(var i=0;i<requiredMathlib.length;i++)if(!exists(m+"\\.lake\\build\\lib\\lean\\"+requiredMathlib[i].replace(/\./g,"\\")+".olean"))return false;
+   cacheRoot=base;mathlibRoot=m;return true;
+ }
++function loadFinalAuditRoot() {
++  var selector=root+"\\final-audit.txt",rel=exists(selector)?trim(read(selector)):"Audit.lean";
++  rel=rel.replace(/\//g,"\\");
++  if(!/^[A-Za-z_][A-Za-z0-9_]*(?:\\[A-Za-z_][A-Za-z0-9_]*)*\.lean$/.test(rel))error("final-audit.txt must contain one package-relative Lean module path.");
++  finalAuditRelative=rel;finalAuditName=rel.slice(0,-5).replace(/\\/g,".");finalAuditSource=root+"\\"+rel;
++  if(!exists(finalAuditSource))error("Selected final audit source is missing: "+finalAuditRelative);
++  log("FINAL_AUDIT_ROOT="+finalAuditRelative);
++}
+ function loadMathlibRequirements() {
++  loadFinalAuditRoot();
+   var plan=root+"\\compile-order.txt",manifest=root+"\\mathlib-imports.txt";
+-  if(!exists(plan)||!exists(manifest)||!exists(root+"\\Audit.lean"))error("compile-order.txt, mathlib-imports.txt and Audit.lean are required.");
+-  var files=[root+"\\Audit.lean"],lines=read(plan).split(/\r?\n/),direct={},listed={},i,j;
++  if(!exists(plan)||!exists(manifest))error("compile-order.txt and mathlib-imports.txt are required.");
++  var files=[finalAuditSource],lines=read(plan).split(/\r?\n/),direct={},listed={},i,j;
+   for(i=0;i<lines.length;i++){
+     var rel=trim(lines[i]);if(!rel||rel.charAt(0)==="#")continue;rel=rel.replace(/\//g,"\\");
+     if(!/^[A-Za-z_][A-Za-z0-9_\\]*\.lean$/.test(rel))error("Invalid compile-order entry: "+rel);
+@@ -402,12 +412,12 @@
+ }
+ function loadPlan() {
+   var plan=root+"\\compile-order.txt",targets=root+"\\audit-targets.tsv",i,j;
+-  if(!exists(plan)||!exists(targets)||!exists(root+"\\Audit.lean"))error("compile-order.txt, audit-targets.tsv, and Audit.lean are required.");
++  if(!exists(plan)||!exists(targets)||!exists(finalAuditSource))error("compile-order.txt, audit-targets.tsv, and the selected final audit source are required.");
+   var lines=read(plan).split(/\r?\n/),seen={};
+   for(i=0;i<lines.length;i++){
+     var rel=trim(lines[i]);if(!rel||rel.charAt(0)==="#")continue;
+     rel=rel.replace(/\//g,"\\");
+-    if(!/^[A-Za-z_][A-Za-z0-9_\\]*\.lean$/.test(rel)||rel==="Audit.lean")error("Invalid compile-order entry: "+rel);
++    if(!/^[A-Za-z_][A-Za-z0-9_\\]*\.lean$/.test(rel)||keyPath(root+"\\"+rel)===keyPath(finalAuditSource))error("Invalid compile-order entry or selected final audit listed twice: "+rel);
+     var name=rel.slice(0,-5).replace(/\\/g,".");
+     if(seen[name])error("Duplicate module in compile-order: "+name);seen[name]=true;
+     var src=root+"\\"+rel;if(!exists(src))error("Missing local module source: "+rel);
+@@ -437,15 +447,16 @@
+     }
+     seen[n.name]=true;
+   }
+-  var auditClean=sourceClean(read(root+"\\Audit.lean"));
+-  if(/\b(?:sorry|admit|axiom)\b/.test(auditClean)||/debug\.skipKernel/.test(auditClean))error("Prohibited proof placeholder or kernel bypass in Audit.lean.");
+-  var auditImports=importsOf(root+"\\Audit.lean");
++  var auditClean=sourceClean(read(finalAuditSource));
++  if(/\b(?:sorry|admit|axiom)\b/.test(auditClean)||/debug\.skipKernel/.test(auditClean))error("Prohibited proof placeholder or kernel bypass in "+finalAuditRelative);
++  var auditImports=importsOf(finalAuditSource);
+   for(i=0;i<auditImports.length;i++)if(!modules[auditImports[i]])externalModule(auditImports[i],{});
+-  modules.Audit={name:"Audit",local:true,source:root+"\\Audit.lean",relative:"Audit.lean",imports:auditImports};
+-  auditTargets.Audit=[];
+-  for(i=0;i<ordered.length;i++)auditTargets.Audit=auditTargets.Audit.concat(auditTargets[ordered[i]]);
+-  auditTargets.Audit.sort();
+-  requestHash(root+"\\Audit.lean");requestHash(root+"\\compile-order.txt");requestHash(targets);requestHash(root+"\\mathlib-imports.txt");
++  modules[finalAuditName]={name:finalAuditName,local:true,source:finalAuditSource,relative:finalAuditRelative,imports:auditImports};
++  auditTargets[finalAuditName]=[];
++  for(i=0;i<ordered.length;i++)auditTargets[finalAuditName]=auditTargets[finalAuditName].concat(auditTargets[ordered[i]]);
++  auditTargets[finalAuditName].sort();
++  requestHash(finalAuditSource);requestHash(root+"\\compile-order.txt");requestHash(targets);requestHash(root+"\\mathlib-imports.txt");
++  if(exists(root+"\\final-audit.txt"))requestHash(root+"\\final-audit.txt");
+   requestHash(root+"\\tools\\native_runner.js");requestHash(root+"\\run.cmd");requestHash(compiler);
+   var dllDirs=[prefix+"\\bin",prefix+"\\lib\\lean"];
+   for(i=0;i<dllDirs.length;i++){var files=listFiles(dllDirs[i]);for(j=0;j<files.length;j++)if(/\.dll$/i.test(files[j]))requestHash(files[j]);}
+@@ -678,16 +689,17 @@
+   else{compiled++;buildStates[name]="COMPILED_AUDITED";log("COMPILE_AND_AXIOM_AUDIT_PASS="+name);}
+ }
+ function finalAudit() {
+-  log("FINAL_AUDIT_START=Audit.lean");processModule("Audit",true);
+-  if(!moduleKeys.Audit)error("Final Audit.lean was not successfully compiled/reused and audited.");
+-  log("FINAL_AUDIT_DECLARATIONS="+auditTargets.Audit.length);
++  log("FINAL_AUDIT_START="+finalAuditRelative);processModule(finalAuditName,true);
++  if(!moduleKeys[finalAuditName])error("Final "+finalAuditRelative+" was not successfully compiled/reused and audited.");
++  log("FINAL_AUDIT_DECLARATIONS="+auditTargets[finalAuditName].length);
+ }
+ function quoteJSON(s) {return '"'+String(s).replace(/\\/g,"\\\\").replace(/"/g,'\\"').replace(/\r/g,"\\r").replace(/\n/g,"\\n").replace(/\t/g,"\\t")+'"';}
+ function result(pass,message) {
+   var lines=["{",'  "package": '+quoteJSON(PACKAGE)+",",'  "target": "LOCAL_COMPILER",',
+     '  "lean_version": '+quoteJSON(leanVersion)+",",'  "build": '+quoteJSON(pass?"PASS":"FAIL")+",",
+     '  "axiom_audit": '+quoteJSON(pass?"PASS":"INCOMPLETE_OR_FAILED")+",",
+-    '  "mathematical_status": "CONDITIONAL_PARTIAL",','  "actual_spectral_calibration": "OPEN",','  "dominant_extraction": "OPEN",','  "unconditional_actual_limit": "NOT_CERTIFIED",','  "actual_subexponential_bound": "OPEN",','  "unconditional_rh": "NOT_ESTABLISHED",',
++    '  "mathematical_status": "CONDITIONAL_PARTIAL",','  "actual_spectral_calibration": "OPEN",','  "dominant_extraction": "OPEN",','  "unconditional_actual_limit": "NOT_CERTIFIED",','  "actual_subexponential_bound": "OPEN",','  "unconditional_rh": "NOT_ESTABLISHED",','  "finite_checker_equivalence": "OPEN",',
++    '  "final_audit_source": '+quoteJSON(finalAuditRelative)+",",
+     '  "compiled": '+compiled+",",'  "frozen_reused": '+reused+",",'  "audit_only": '+auditOnly+",",'  "legacy_migrated": '+migrated+",",'  "failed": '+failed+",",'  "blocked": '+blocked+",",
+     '  "audited_declarations_with_module_multiplicity": '+audited+",",'  "time_utc": '+quoteJSON(stamp())+",",'  "message": '+quoteJSON(message)+",",'  "modules": {'];
+   var names=keys(buildStates);for(var i=0;i<names.length;i++)lines.push("    "+quoteJSON(names[i])+": "+quoteJSON(buildStates[names[i]])+(i+1<names.length?",":""));
+@@ -708,7 +720,7 @@
+   if(failed||blocked)error("Some modules failed or were blocked. Independent modules were still attempted.");
+   stage="FINAL_AUDIT";finalAudit();
+   log("AXIOM_AUDIT=PASS_STANDARD_LOGICAL_AXIOMS_ONLY");log("SORRYAX=NONE");
+-  log("MATHEMATICAL_STATUS=CONDITIONAL_PARTIAL");log("ACTUAL_SPECTRAL_CALIBRATION=OPEN");log("DOMINANT_EXTRACTION=OPEN");log("UNCONDITIONAL_ACTUAL_LIMIT=NOT_CERTIFIED");log("ACTUAL_SUBEXPONENTIAL_BOUND=OPEN");log("UNCONDITIONAL_RH=NOT_ESTABLISHED");log("FINITE_ACCEPTED_WITNESS=NOT_ESTABLISHED");
++  log("MATHEMATICAL_STATUS=CONDITIONAL_PARTIAL");log("ACTUAL_SPECTRAL_CALIBRATION=OPEN");log("DOMINANT_EXTRACTION=OPEN");log("UNCONDITIONAL_ACTUAL_LIMIT=NOT_CERTIFIED");log("ACTUAL_SUBEXPONENTIAL_BOUND=OPEN");log("UNCONDITIONAL_RH=NOT_ESTABLISHED");log("FINITE_ACCEPTED_WITNESS=NOT_ESTABLISHED");log("FINITE_CHECKER_EQUIVALENCE=OPEN");
+   log("COMPILED_MODULES="+compiled);log("FROZEN_REUSED_MODULES="+reused);log("AUDIT_ONLY_MODULES="+auditOnly);log("LEGACY_MIGRATED_MODULES="+migrated);log("PROJECT_BUILD=PASS");log("RUN=PASS");
+   result(true,"Exact supplied declarations compiled and passed their recorded axiom audits; theorem hypotheses remain explicit.");exitCode=0;
+ }catch(e){

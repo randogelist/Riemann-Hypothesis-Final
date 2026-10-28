@@ -1,0 +1,24 @@
+[
+  {
+    "file": "inherited/cache_mock_tests.js",
+    "original_sha256": "51c45e500907cf6261a8babb45f04426cba9c8694635a3f3350403f1e97148d3",
+    "adapted_sha256": "d6e523faa5e593f5c96a8a66d59b02263a744bd7a026448339f30b9b50675ae0",
+    "adaptations": [
+      "Added synthetic certutil shell.Exec host response; no scenario assertions changed."
+    ]
+  },
+  {
+    "file": "inherited/helper_cache_mock_tests.js",
+    "original_sha256": "aa4f4ec3b8a2d6f86b27106234c96176c5c0c96f98bcf49da89291a9bdc8be94",
+    "adapted_sha256": "524a1eef1b9c0a9a133cd346a5fd7603c3333bb086629225331055123ce98614",
+    "adaptations": [
+      "Read the identical inert helper source fixture only when candidate sibling NativeSha256.cs is absent; no scenario assertions changed."
+    ]
+  },
+  {
+    "file": "inherited/lock_mock_tests.js",
+    "original_sha256": "69bf348947e72dd56964a939c3d82eae42a74fd82f76c2d6f42f1281c9b764dc",
+    "adapted_sha256": "69bf348947e72dd56964a939c3d82eae42a74fd82f76c2d6f42f1281c9b764dc",
+    "adaptations": []
+  }
+]

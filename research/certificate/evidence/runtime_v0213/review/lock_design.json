@@ -1,0 +1,83 @@
+{
+  "schema": "RH_HILBERT_LOCK_DESIGN_REVIEW_V1",
+  "status": "READ_ONLY_DESIGN_REVIEW_COMPLETE",
+  "source": {
+    "path": "/workspace/scratch/f128c1434505/output/RH_HILBERT_LIMIT_LEAN_v0_2_12_construction/tools/native_runner.js",
+    "sha256": "b11c97c591c5e200978fcfff5f37d6f6cd4b9388a464697a673174ab20c5a632"
+  },
+  "native_tail": {
+    "path": "/workspace/scratch/f128c1434505/upload/Pasted text(20261027-200359).txt",
+    "sha256": "fe90ee4f2db2f779539b422cd6884ed16482dc860a3b9048c447885785faa541",
+    "evidence": [
+      "PARALLEL_PROGRESS=85/89|ACTIVE=0|READY=2|LEAN_THREADS=0",
+      "REASON=PARALLEL_RESOURCE_BLOCKED: FREE_MB=5479|REQUIRED_MB=10476|LIVE_WORKERS=0",
+      "RUNNER_LOCK_RETAINED=WORKER_INVENTORY_UNCERTAIN : LOCK_STATE_UNKNOWN: a legacy relative-path native_runner.js is active; its package cannot be distinguished. No lock was changed."
+    ],
+    "limits": [
+      "The tail contains no PID, creation time, command line, parent chain, or working directory for the unresolved relative runner. Its being unrelated is not established by this excerpt.",
+      "This review does not assess a RAM fallback or claim native success."
+    ]
+  },
+  "diagnosis": {
+    "functions": [
+      "assertNoLockWorkers",
+      "acquireRunnerLock",
+      "parallelShutdown",
+      "quarantineStaleLock"
+    ],
+    "locations": [
+      "assertNoLockWorkers lines 237-265",
+      "acquireRunnerLock lines 286-305",
+      "parallelShutdown lines 1541-1568"
+    ],
+    "finding": "Fresh acquisition passes snapshot=null and admits a readable relative native_runner.js without current-root binding; owned shutdown passes {owner:null} and turns the same unresolved preexisting host into a global veto.",
+    "not_a_safety_bypass": "The proposed exception preserves an already made fresh-lock admission decision; it does not infer the host workspace or grant a general unknown-process exemption."
+  },
+  "recommended_minimal_fix": {
+    "scope": "In-memory preexisting-admitted-relative-host snapshot, active only for owned shutdown of the same successfully acquired fresh lock.",
+    "capture_conditions": [
+      "The original lockSnapshot() was absent; do not populate this permission on stale or legacy recovery.",
+      "Use the same successful acquisition process inventory, with valid PID and full CreationDate, plus the exact readable command string.",
+      "Parse the actual WSH script argument, not an arbitrary later data argument. Capture only relative native_runner.js script hosts that the existing guard already admitted.",
+      "The process existed no later than the identified coordinator and has no absolute binding to the current workspace.",
+      "Activate the captured set only after fresh lock publication and exact owner verification succeed; keep it scoped to that owner/token/generation in memory."
+    ],
+    "shutdown_conditions": [
+      "Apply all current-root absolute-path and exact live-owner checks before the narrow exception.",
+      "Exempt only the same recorded script-host process with unchanged PID, full CreationDate, exact command, and still-relative actual script argument.",
+      "Do not exempt descendants, wrappers, Lean compilers, hash workers, or the RAM sidecar by association with an admitted host.",
+      "Do not exempt a new host, reused PID with different creation identity, changed command, unreadable command, or newly current-root-bound command.",
+      "Preserve the tracked-process drain, own absolute-root orphan checks, unreadable relevant-process handling, exact observer exception, owner reread on release, and permanent non-overwriting quarantine rules.",
+      "Never learn or extend the admitted set during shutdown, from prior logs, or from a previous run."
+    ],
+    "terminology": "preexisting admitted unresolved hosts; not observers, verified foreign workers, or proved-unrelated processes",
+    "migration_boundary": "The already retained v0.2.12 lock is not made recoverable by this fresh-only exception. A distinct new v0.2.13 workspace can acquire fresh; an existing lock still uses the conservative recovery checks. No forced lock deletion or process killing is authorized."
+  },
+  "lineage_assessment": {
+    "positive_use": "Exact PID plus CreationDate, captured launch handles, and validated parent-child links can establish positive ownership and detect descendants. Absolute source/output/log paths under the exact workspace remain useful orphan-worker evidence even after an ancestor exits.",
+    "negative_limit": "ParentProcessId alone or absence of a live ancestor does not prove a process unrelated: parents can exit and their PIDs can be reused. A readable relative script command does not disclose its working directory. A generic not-a-descendant exception is therefore not recommended.",
+    "required_for_minimal_fix": false,
+    "reason": "The narrow fix uses the unchanged identity of a process already admitted before this owner, without relying on a missing ancestor to infer another workspace."
+  },
+  "primary_reference": {
+    "url": "https://github.com/MicrosoftDocs/win32/blob/docs/desktop-src/CIMWin32Prov/win32-process.md",
+    "git_blob": "275a275184bf8bd2614b66de3b27c7c9b4579b36",
+    "relevant_lines": [
+      179,
+      213,
+      639,
+      651
+    ],
+    "supports": "Win32_Process exposes CommandLine, CreationDate and ParentProcessId; the ParentProcessId documentation warns that the parent may have terminated and its PID may identify a reused process. The advertised schema has no current-working-directory property."
+  },
+  "validation_limits": {
+    "runner_edits": false,
+    "lean_execution": false,
+    "lake_execution": false,
+    "native_windows_execution": false,
+    "csharp_execution": false,
+    "ci_execution": false,
+    "tests_run_by_this_review": false,
+    "result": "Source design review only. Candidate implementation and native behavior remain unverified by this report."
+  }
+}

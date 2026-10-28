@@ -1,0 +1,31 @@
+{
+  "status": "STATIC_SOURCE_INTERPRETATION_OF_USER_SUPPLIED_NATIVE_PASS",
+  "reviewed_independently_by": "/root/proof_repair",
+  "checkpoint_kind": "EVIDENCE_ONLY_NOT_INIT",
+  "source": "RH_HilbertLimit/ActualCancellationWitness.lean",
+  "source_sha256": "0daeeb9fab456f2d399cc95cfda2b94c55f03d2c403b92d3a18579a0a7d622d6",
+  "forward_declaration": "RH_HilbertLimit.nativeRH_of_exists_admissible_cancellationBudget",
+  "forward_statement": "(∃ W : CancellationBudget, W.Admissible) → _root_.RiemannHypothesis",
+  "equivalence_declaration": "RH_HilbertLimit.exists_admissible_cancellationBudget_iff_nativeRH",
+  "equivalence_statement": "(∃ W : CancellationBudget, W.Admissible) ↔ _root_.RiemannHypothesis",
+  "expanded_admissibility": "∃ N K : ℕ, ∀ n : ℕ, N ≤ n → rowCancellation actualNormalizedMoment n ≤ (K : ℝ) * actualVariation n",
+  "data_fields": [
+    "cutoff : ℕ",
+    "coefficient : ℕ"
+  ],
+  "admissibility_kind": "EXPLICIT_UNIVERSALLY_QUANTIFIED_PROP",
+  "extra_analytic_hypotheses_in_endpoint_signature": [],
+  "under_rh": "THE_EXPLICIT_BUDGET_WITH_CUTOFF_ZERO_AND_COEFFICIENT_ZERO_IS_ADMISSIBLE",
+  "data_existence_alone_implies_rh": "NOT_CLAIMED; THE_HYPOTHESIS_INCLUDES_ADMISSIBILITY",
+  "finite_bool_checker": "NOT_IMPLEMENTED",
+  "finite_checker_soundness": "OPEN",
+  "finite_checker_completeness": "OPEN",
+  "finite_checker_equivalence": "OPEN",
+  "formal_closure_for_finite_checker_goal": "OPEN",
+  "unconditionally_admissible_budget": "NOT_ESTABLISHED",
+  "accepted_finite_checker_witness": null,
+  "unconditional_rh": "NOT_ESTABLISHED",
+  "native_receipt_artifact_and_toolchain_identity_verification": "NOT_PERFORMED",
+  "assistant_native_or_lean_execution": "NONE",
+  "source_changes": []
+}

@@ -1,0 +1,167 @@
+{
+  "schema": "RH_HILBERT_GRAPH_AND_EMPTY_HASH_INDEPENDENT_SOURCE_REVIEW_V1",
+  "reviewer": "analytic_source",
+  "review_status": "NO_CONCRETE_BLOCKER_FOUND_IN_BOUNDED_SOURCE_REVIEW",
+  "candidate_file": "/workspace/scratch/f128c1434505/tmp/graph_startup_v030/native_runner.js",
+  "candidate_sha256": "eaf8ebc221f08607bd2256827e8bbafb5e5b2e2509e3e71513fe994db2d9eb97",
+  "graph_only_candidate_sha256": "1e13f7016ef070a1c452fb4061770a33af14edc07d21831dc6f0c88800d6c694",
+  "baseline_file": "/workspace/scratch/f128c1434505/output/RH_HILBERT_LIMIT_LEAN_v0_2_9_construction/tools/native_runner.js",
+  "baseline_sha256": "c817f1cda09b76cd02570c8a8ba8553b85ead1c6e885a717087d71a79bd8ffbd",
+  "findings": [],
+  "scope": "Read-only review of dependency-graph startup optimization and narrow certutil ERROR_FILE_INVALID empty-file recovery. Proof sources, native execution and general hashing fallbacks are outside this review.",
+  "graph_review": {
+    "header_scanner": "scanImportHeader mirrors sourceClean(text,false) through the first substantive nonheader cleaned line: nested block comments, line comments, string escapes, and suppressed escaped newlines follow the same branches. It stops at the same header boundary; it still reads the whole source file, but avoids cleaning its unread body.",
+    "shared_header_rules": "importHeaderLine preserves blank/prelude/module treatment, repeated public/private/meta modifiers, import-all skipping, name validation, unsupported-header rejection, implicit Init, import order and unique deduplication.",
+    "crlf_eof": "scanCleanImportHeader splits on LF and trims the line; this retains the prior CRLF behavior. Both scanners handle the final line and empty input, and raw escaped-LF behavior matches the unchanged sourceClean implementation.",
+    "local_sources": "loadPlan still strictly cleans each complete local source and final audit source and applies the same placeholder/kernel-bypass rejection. Imports are parsed from that same cleaned string, eliminating a second read/clean operation.",
+    "external_artifact_index": "indexArtifactFamilies registers exact .olean/.ir/.dll suffixes and every .olean. prefix. The branches cannot register the same path twice for a given stem; each family preserves outer file-list order. Keys retain case, and returned arrays are copied.",
+    "mutable_artifacts": "artifactFamily and artifactsFromList are byte-identical and remain uncached for working/staged mutable outputs.",
+    "selection_and_closure": "externalModule still chooses the first package containing the requested .olean and rejects a missing source in that selected package without trying a later package. Import recursion and node memoization remain in the same order.",
+    "hash_registration": "requestHash normalizes once and uses the lowercase normalized result as its key. Package lock files are registered once per existing unique package id; the resulting set is unchanged.",
+    "index_scope": "External-directory indexes and package-lock registration flags reset at beginDependencyGraph and are in-memory only. No source text or digest is persisted or reused from the requirements pass or another invocation.",
+    "progress": "Stage-start diagnostics run at the existing timedStage call sites after lock acquisition. Graph progress is time-throttled to five seconds except forced start/completion/interruption, and reports counts rather than claiming native speedup.",
+    "concrete_blocker_found": false
+  },
+  "empty_file_recovery_review": {
+    "error_gate": "isCertutilInvalidFileError rejects zero, nonnumeric and nonfinite codes; it recognizes native integer1006 or signed/unsigned HRESULT0x800703ee, or an anchored CertUtil line containing the exact HRESULT and WIN32:1006 ERROR_FILE_INVALID record. It does not match a bare1006 or free-floating filename substring.",
+    "content_verification": "FSO zero size is only a prefilter. A fresh ADODB.Stream is configured Type1, opened, and LoadFromFile(path) reads actual file contents. Acceptance requires loaded Size0, Position0 and EOStrue. The stream is closed in finally and FSO size is read again afterward.",
+    "accepted_digest": "Only after verified empty contents does the function return textHash(\"\"), whose known SHA256 is checked by the unchanged startup self-test before hashing begins.",
+    "nonempty_and_unreadable": "Nonempty metadata or stream contents return no replacement digest; failed reads, state checks, close operations or changed post-read size reject. The existing fileHash/certutilHashSet wrappers propagate these errors as fatal hash infrastructure failures.",
+    "other_failures": "Other certutil errors retain rejection. A malformed zero-exit result stays on the original exact-one-digest parser path. No general retry, blanket fallback or metadata-only digest acceptance was introduced.",
+    "root_cause_limit": "The uploaded scenario reportedly failed on a newly compiled helper build.log with ERROR_FILE_INVALID. Its actual native file size/content was not supplied or independently inspected. An empty successful compiler log is a hypothesis, not a confirmed diagnosis; the recovery tests actual current content rather than assuming that hypothesis.",
+    "native_compatibility_limit": "ADODB/WSH behavior was reviewed against Microsoft documentation, not executed on Windows.",
+    "concrete_blocker_found": false
+  },
+  "preservation": {
+    "byte_identical_protected_functions": [
+      "sourceClean",
+      "artifactFamily",
+      "artifactsFromList",
+      "configurePersistentProfile",
+      "makeGlobalKey",
+      "externalKey",
+      "moduleInput",
+      "auditKey",
+      "checkAxioms",
+      "acquireRunnerLock",
+      "releaseRunnerLock",
+      "quarantineStaleLock",
+      "identifyLockSelf",
+      "assertNoLockWorkers",
+      "selectCompiler",
+      "selectCache",
+      "freshHashSet",
+      "batchHashes",
+      "certutilHashSet",
+      "prepareBatchHasher",
+      "readAnchorCore",
+      "verifyLegacy",
+      "verifyCurrent",
+      "workingArtifactsMatch",
+      "restoreAnchor",
+      "saveAnchor",
+      "processModuleBody"
+    ],
+    "unchanged_existing_function_count": 100,
+    "changed_existing_functions": [
+      "externalArtifactFamily",
+      "externalModule",
+      "hashOutput",
+      "importsOf",
+      "loadPlan",
+      "requestHash",
+      "timedStage"
+    ],
+    "new_functions": [
+      "beginDependencyGraph",
+      "dependencyGraphProgress",
+      "finishImportHeader",
+      "graphImportScan",
+      "graphModuleAdded",
+      "graphModuleStart",
+      "graphSourceRead",
+      "importHeaderLine",
+      "importsFromClean",
+      "indexArtifactFamilies",
+      "isCertutilInvalidFileError",
+      "scanCleanImportHeader",
+      "scanImportHeader",
+      "verifiedEmptyFileHash"
+    ],
+    "removed_functions": [],
+    "unchanged_constants": {
+      "SCHEMA": true,
+      "CACHE_LAYOUT": true,
+      "HELPER_SCHEMA": true,
+      "COMPILE_POLICY": true,
+      "AUDIT_POLICY": true,
+      "COMPILE_FLAGS": true,
+      "LEGACY_SCHEMA": true,
+      "LEGACY_RUNNER_SHA": true,
+      "LEGACY_CMD_SHA": true,
+      "TARGET": true
+    },
+    "exact_merge_check": "Removing only the two new empty-file functions and restoring baseline hashOutput reconstructs graph-only SHA256 exactly.",
+    "proof_and_auxiliary_files": "This review read the runner candidate only and made no source/output edits. Final package equality of all Lean files, C# helper, CMD and follower remains the parent packaging gate."
+  },
+  "function_lines_in_final": {
+    "isCertutilInvalidFileError": 344,
+    "verifiedEmptyFileHash": 349,
+    "hashOutput": 362,
+    "requestHash": 382,
+    "beginDependencyGraph": 623,
+    "dependencyGraphProgress": 633,
+    "importHeaderLine": 660,
+    "scanCleanImportHeader": 678,
+    "scanImportHeader": 688,
+    "importsFromClean": 715,
+    "importsOf": 718,
+    "indexArtifactFamilies": 751,
+    "externalArtifactFamily": 763,
+    "externalModule": 774,
+    "loadPlan": 903
+  },
+  "primary_documentation": [
+    {
+      "title": "LoadFromFile method (ADO)",
+      "url": "https://learn.microsoft.com/en-us/office/client-developer/access/desktop-database-reference/loadfromfile-method-ado",
+      "reviewed_fact": "Loads existing file contents into an already-open stream, replaces prior contents and resets Position to0; missing files raise an error."
+    },
+    {
+      "title": "StreamTypeEnum",
+      "url": "https://learn.microsoft.com/en-us/office/client-developer/access/desktop-database-reference/streamtypeenum",
+      "reviewed_fact": "adTypeBinary has numeric value1; text is the separate default type2."
+    },
+    {
+      "title": "EOS property (ADO)",
+      "url": "https://learn.microsoft.com/en-us/office/client-developer/access/desktop-database-reference/eos-property-ado",
+      "reviewed_fact": "EOS is Boolean and reports whether bytes remain after the current position."
+    },
+    {
+      "title": "Stream object (ADO)",
+      "url": "https://learn.microsoft.com/en-us/office/client-developer/access/desktop-database-reference/stream-object-ado",
+      "reviewed_fact": "Stream represents binary or text data; Size determines the number of bytes and Position controls the current position."
+    },
+    {
+      "title": "System Error Codes (1000-1299)",
+      "url": "https://learn.microsoft.com/en-us/windows/win32/debug/system-error-codes--1000-1299-",
+      "reviewed_fact": "ERROR_FILE_INVALID is1006/0x3EE and denotes an invalidated open file/volume condition; this code is not a declaration of empty contents."
+    }
+  ],
+  "limits": {
+    "review_method": "Source reads, textual/function comparisons and SHA256 calculations, plus primary Microsoft documentation review.",
+    "not_executed": [
+      "Lean",
+      "Lake",
+      "native Windows runner",
+      "C# compiler/helper",
+      "Wine",
+      "CI",
+      "mock host tests by this reviewer"
+    ],
+    "no_native_speedup_claim": true,
+    "no_native_empty_log_confirmation": true,
+    "source_output_edits": false,
+    "only_written_file": "/workspace/scratch/f128c1434505/tmp/graph_startup_v030/review/independent_review.json"
+  }
+}

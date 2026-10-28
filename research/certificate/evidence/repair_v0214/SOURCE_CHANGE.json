@@ -1,0 +1,9 @@
+{
+  "file": "RH_HilbertLimit/CanonicalPowerSums.lean",
+  "before_sha256": "2aecbd7e10aa87c0ce726026d563d6a33caf0b99e58f824719cf5a99a6217169",
+  "after_sha256": "6dac0ba1d627eae6c5a70d0bb2dbdc52f0fa6474e3984d34a2d53feb48fb2160",
+  "scope": "Only local htarget proof body; declaration statements and assumptions unchanged",
+  "lean_sources_byte_preserved": 91,
+  "total_lean_sources": 92,
+  "native_compilation": "NOT_RUN"
+}

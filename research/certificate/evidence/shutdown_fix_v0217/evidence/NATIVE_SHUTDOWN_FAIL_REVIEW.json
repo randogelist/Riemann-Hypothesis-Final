@@ -1,0 +1,194 @@
+{
+  "review": "BOUNDED_USER_NATIVE_SHUTDOWN_FAILURE_AND_FROZEN_ENDPOINT_REVIEW",
+  "evidence_class": "USER_REPORTED_NATIVE_SHUTDOWN_FAIL_AFTER_AGGREGATE_REUSE",
+  "transcript": {
+    "path": "/workspace/scratch/f128c1434505/tmp/shutdown_fix_v0217/evidence/USER_NATIVE_SHUTDOWN_FAIL_TAIL.txt",
+    "sha256": "d5d0f7e509bbf1eec992b010752aaf76a57422472e2f228cd70cc1424e427d6f",
+    "bytes": 2553,
+    "lines": 41,
+    "kind": "USER_MESSAGE_UTF8_LF_TRANSCRIPTION_NOT_ORIGINAL_NATIVE_LOG_BYTES",
+    "first_line_verbatim": "OGRESS=89/89|ACTIVE=0|READY=0|LEAN_THREADS=0",
+    "first_marker": "CLIPPED_PREFIX_PRESERVED; NOT_RECONSTRUCTED"
+  },
+  "reported_package": "RH_HILBERT_LIMIT_LEAN_v0_2_16_construction, from the reported log paths",
+  "reported_progress_suffix": {
+    "terminal_progress": "89/89",
+    "active": 0,
+    "ready": 0,
+    "lean_threads": 0,
+    "scope": "Visible suffix of clipped first diagnostic only."
+  },
+  "directly_reported": {
+    "PARALLEL_PEAK_MODULE_WORKERS": "0",
+    "PARALLEL_NEW_OR_REAUDITED_MODULE_TASKS": "0",
+    "RAM_WARM": "SKIPPED_NO_ELIGIBLE_DIRTY_FRONTIER",
+    "FINAL_AUDIT_START": "AnalyticAudit.lean",
+    "WORKING_ARTIFACTS_RETAINED": "AnalyticAudit",
+    "FROZEN_REUSE": "AnalyticAudit",
+    "FINAL_AUDIT_DECLARATIONS": "370",
+    "RUNNER_LOCK_RETAINED": "WORKER_INVENTORY_UNCERTAIN : LOCK_STATE_UNKNOWN: cannot exclude an active certutil.exe worker with unreadable command line. No lock was changed.",
+    "PROJECT_BUILD": "FAIL",
+    "FAILED_STAGE": "WORKER_SHUTDOWN",
+    "REASON": "Owned workers remain live or uncertain; the workspace lock is preserved until they finish.",
+    "RUN": "FAIL"
+  },
+  "stage_timings_ms": {
+    "PROJECT_MODULES": 51424,
+    "FINAL_AUDIT": 395,
+    "WORKER_SHUTDOWN": 3089
+  },
+  "timing_scope": "Stage values only; no whole-run wall time is supplied.",
+  "aggregate_reuse": {
+    "module": "AnalyticAudit",
+    "reported_retained": true,
+    "reported_reused": true,
+    "reported_declarations": 370,
+    "source_anchor_receipt_path_as_reported": "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\306d31ec023b7765\\efe6a0ea0d5554bca15985613c6d0eb2\\01a17f23ecf728ce\\receipt.txt",
+    "receipt_contents_inspected": false,
+    "scope": "The retained/reused final aggregate is explicit. This line does not establish that all 90 working artifacts were retained."
+  },
+  "shutdown_inventory": {
+    "reported_admitted_host_pid": 34008,
+    "worker_observations": [
+      {
+        "pid": 36224,
+        "parent_pid_as_reported": 34008,
+        "creation_string_as_reported": "20261027221141.871213+060",
+        "name": "certutil.exe",
+        "attempt": 1
+      },
+      {
+        "pid": 39212,
+        "parent_pid_as_reported": 34008,
+        "creation_string_as_reported": "20261027221142.436092+060",
+        "name": "certutil.exe",
+        "attempt": 2
+      },
+      {
+        "pid": 24364,
+        "parent_pid_as_reported": 34008,
+        "creation_string_as_reported": "20261027221142.965889+060",
+        "name": "certutil.exe",
+        "attempt": 3
+      },
+      {
+        "pid": 38276,
+        "parent_pid_as_reported": 34008,
+        "creation_string_as_reported": "20261027221143.494456+060",
+        "name": "certutil.exe",
+        "attempt": 4
+      },
+      {
+        "pid": 39088,
+        "parent_pid_as_reported": 34008,
+        "creation_string_as_reported": "20261027221144.050284+060",
+        "name": "certutil.exe",
+        "attempt": 5
+      },
+      {
+        "pid": 8836,
+        "parent_pid_as_reported": 34008,
+        "creation_string_as_reported": "20261027221144.609267+060",
+        "name": "certutil.exe",
+        "attempt": 6
+      }
+    ],
+    "distinct_observed_worker_pids": 6,
+    "attempt_count": 6,
+    "common_parent_pid_as_reported": 34008,
+    "inventory_recheck_count": 5,
+    "interpretation": "Six distinct certutil.exe PID observations across six attempts share the reported numeric parent field. Their unreadable command lines prevented exclusion by the shutdown inventory. The parent field alone does not establish current process identity, process ownership, or a foreign/current workspace."
+  },
+  "summary_markers_absent_from_this_failed_tail": {
+    "AXIOM_AUDIT": true,
+    "SORRYAX": true,
+    "COMPILED_MODULES": true,
+    "FROZEN_REUSED_MODULES": true
+  },
+  "interpretation": "The supplied run reports selected aggregate reuse then overall failure at WORKER_SHUTDOWN. It does not report a proof/compiler failure, but it also emits no final overall axiom-PASS summary in this excerpt. A new full-run PASS cannot be claimed.",
+  "previous_successful_evidence": {
+    "relative_path": "evidence/reuse_record_v0216/evidence/USER_NATIVE_REUSE_TAIL.txt",
+    "baseline_exists": true,
+    "candidate_exists": true,
+    "byte_preserved": true,
+    "sha256": "d4c7ca9f9d6b20e4d0085f7c3cbdd2105957263746b2bb0bb6668bdb81d07f15",
+    "scope": "Earlier v0.2.16 successful reported standard-axiom reuse evidence remains historical evidence; it is not this failed run."
+  },
+  "candidate_frozen_source_review": {
+    "baseline_root": "/workspace/scratch/f128c1434505/output/reuse_record_v0216/RH_HILBERT_LIMIT_LEAN_v0_2_16_construction",
+    "candidate_root": "/workspace/scratch/f128c1434505/output/RH_HILBERT_LIMIT_LEAN_v0_2_17_construction",
+    "baseline_lean_file_count": 92,
+    "candidate_lean_file_count": 92,
+    "byte_identical": true,
+    "changed_lean_files": [],
+    "missing_lean_files": [],
+    "added_lean_files": [],
+    "selected_final_audit": "AnalyticAudit.lean",
+    "selected_axiom_target_count": 370,
+    "selected_unique_axiom_target_count": 370,
+    "checkpoint_exact_endpoint_count": 10,
+    "checkpoint_exact_endpoint_entries_preserved": true,
+    "endpoint_source_and_audit_review": [
+      {
+        "name": "RH_HilbertLimit.actualCanonicalCalibration",
+        "source_type_matches_frozen_checkpoint": true,
+        "selected_check_and_axiom_target": true
+      },
+      {
+        "name": "RH_HilbertLimit.actualCanonicalDominantExtraction",
+        "source_type_matches_frozen_checkpoint": true,
+        "selected_check_and_axiom_target": true
+      },
+      {
+        "name": "RH_HilbertLimit.canonical_actual_root_tendsto_constructed",
+        "source_type_matches_frozen_checkpoint": true,
+        "selected_check_and_axiom_target": true
+      },
+      {
+        "name": "RH_HilbertLimit.canonical_actual_root_limit_exists",
+        "source_type_matches_frozen_checkpoint": true,
+        "selected_check_and_axiom_target": true
+      },
+      {
+        "name": "RH_HilbertLimit.canonical_actual_root_one_iff_nativeRH",
+        "source_type_matches_frozen_checkpoint": true,
+        "selected_check_and_axiom_target": true
+      },
+      {
+        "name": "RH_HilbertLimit.canonical_actual_subexponential_iff_nativeRH",
+        "source_type_matches_frozen_checkpoint": true,
+        "selected_check_and_axiom_target": true
+      },
+      {
+        "name": "RH_HilbertLimit.canonical_actual_all_variation_one_iff_nativeRH",
+        "source_type_matches_frozen_checkpoint": true,
+        "selected_check_and_axiom_target": true
+      },
+      {
+        "name": "RH_HilbertLimit.canonical_actual_weights_nonnegative_iff_nativeRH",
+        "source_type_matches_frozen_checkpoint": true,
+        "selected_check_and_axiom_target": true
+      },
+      {
+        "name": "RH_HilbertLimit.canonical_actual_natural_growth_step_iff_nativeRH_constructed",
+        "source_type_matches_frozen_checkpoint": true,
+        "selected_check_and_axiom_target": true
+      },
+      {
+        "name": "RH_HilbertLimit.canonical_actual_natural_bound_iff_nativeRH_constructed",
+        "source_type_matches_frozen_checkpoint": true,
+        "selected_check_and_axiom_target": true
+      }
+    ]
+  },
+  "mathematical_status": {
+    "formal_closure": "OPEN",
+    "finite_raw_checker_equivalence": "OPEN",
+    "accepted_finite_witness": "NOT_ESTABLISHED",
+    "unconditional_rh": "NOT_ESTABLISHED",
+    "source": "Unchanged frozen source/checkpoint; these final mathematical summary markers are absent from this failed tail."
+  },
+  "independent_native_verification": "NOT_PERFORMED; no native receipt contents, per-declaration audit output, source/artifact/toolchain identities independently supplied.",
+  "edits_by_this_review": "This JSON report only. No Lean, proof, runtime source, or acceptance policy edits.",
+  "native_or_test_execution": "NONE"
+}

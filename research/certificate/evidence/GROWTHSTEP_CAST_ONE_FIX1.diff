@@ -1,0 +1,11 @@
+--- RH_HILBERT_LIMIT_LEAN_v0_2_3_construction/RH_HilbertLimit/GrowthStep.lean
++++ RH_HILBERT_LIMIT_LEAN_v0_2_4_construction/RH_HilbertLimit/GrowthStep.lean
+@@ -152,7 +152,6 @@
+   · intro hRH
+     refine ⟨1, ?_⟩
+     intro n
+-    change actualVariation n ≤ 1
+-    exact (D.variation_eq_one_of_nativeRH hRH n).le
++    simpa only [Nat.cast_one] using (D.variation_eq_one_of_nativeRH hRH n).le
+ 
+ end RH_HilbertLimit

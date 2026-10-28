@@ -1,0 +1,276 @@
+--- output/RH_HILBERT_LIMIT_LEAN_v0_2_21_construction/tools/native_runner.js
++++ output/RH_HILBERT_LIMIT_LEAN_v0_2_22_construction/tools/native_runner.js
+@@ -5,8 +5,8 @@
+ var shell = new ActiveXObject("WScript.Shell");
+ var env = shell.Environment("PROCESS");
+ var root = fso.GetAbsolutePathName(".");
+-var PACKAGE = "RH_HILBERT_LIMIT_LEAN_v0_2_21_construction";
+-var RUNNER_VERSION = "RH_HILBERT_NATIVE_RUNNER_v0_2_21_SEMANTIC_PASS_CHECKPOINT";
++var PACKAGE = "RH_HILBERT_LIMIT_LEAN_v0_2_22_construction";
++var RUNNER_VERSION = "RH_HILBERT_NATIVE_RUNNER_v0_2_22_RELATIVE_SHUTDOWN_RECHECK";
+ var SCHEMA = "RH_HILBERT_LOCAL_ANCHOR_V2";
+ var CACHE_LAYOUT = "COMPACT_V1";
+ var HELPER_SCHEMA = "RH_HILBERT_SHA256_HELPER_CACHE_V1";
+@@ -277,6 +277,45 @@
+   }
+   return out;
+ }
++/* Recognize only a fully consumed, deliberately small WSH command grammar.
++   Unsupported syntax returns null so the old conservative matcher remains
++   in force. This is not a general Windows command-line parser. */
++function lockSimpleWshScriptArgument(process) {
++  if((process.name!=="cscript.exe"&&process.name!=="wscript.exe")||!process.command)return null;
++  var s=String(process.command),tokens=[],i=0,n=s.length;
++  if(!n||/^[ \t]/.test(s)||/[\x00-\x08\x0B-\x1F\x7F]/.test(s)||/[^\S \t]/.test(s))return null;
++  while(i<n){
++    while(i<n&&(s.charAt(i)===" "||s.charAt(i)==="\t"))i++;
++    if(i===n)break;
++    var start,token;
++    if(s.charAt(i)==='"'){
++      start=++i;
++      while(i<n&&s.charAt(i)!=='"')i++;
++      if(i===n||i===start||s.charAt(i-1)==="\\")return null;
++      token=s.slice(start,i++);
++      if(i<n&&s.charAt(i)!==" "&&s.charAt(i)!=="\t")return null;
++    }else{
++      start=i;
++      while(i<n&&s.charAt(i)!==" "&&s.charAt(i)!=="\t"){
++        if(s.charAt(i)==='"')return null;
++        i++;
++      }
++      token=s.slice(start,i);
++    }
++    tokens.push(token);
++  }
++  if(tokens.length<2)return null;
++  var exe=tokens[0].replace(/\//g,"\\").toLowerCase();
++  exe=exe.slice(exe.lastIndexOf("\\")+1);
++  if(exe!==process.name&&exe+".exe"!==process.name)return null;
++  var index=1;
++  while(index<tokens.length&&/^\/\//.test(tokens[index])){
++    if(!/^\/\/(?:b|d|i|logo|nologo|s|x|u|\?|h:(?:cscript|wscript)|e:[a-z][a-z0-9_.-]*|job:[a-z0-9_.-]+|t:\d+)$/i.test(tokens[index]))return null;
++    index++;
++  }
++  if(index>=tokens.length||/^[\/-]/.test(tokens[index]))return null;
++  return {script:tokens[index]};
++}
+ function assertNoLockWorkers(processes,snapshot,self) {
+   var excluded=lockAncestors(processes,self),needle=keyPath(root)+"\\";
+   if(snapshot&&snapshot.owner){
+@@ -296,12 +335,18 @@
+     if(p.name==="cmd.exe"&&!/(?:^|\s)[\/]c(?:\s|"|$)/i.test(p.command))continue;
+     if(command.indexOf(needle)>=0)error("RUNNER_ACTIVE: related worker PID="+p.pid+" ("+p.name+") is still using this package. No lock was changed.");
+     if(p.name==="cscript.exe"||p.name==="wscript.exe"){
+-      var scriptArg=/(?:"([^"]*native_runner\.js)"|([^\s"]*native_runner\.js))(?=\s|$)/i.exec(command);
+-      if(scriptArg){
+-        var arg=scriptArg[1]||scriptArg[2];
++      var parsed=lockSimpleWshScriptArgument(p),arg=null,parseMode=parsed?"SIMPLE":"UNSUPPORTED";
++      if(parsed){
++        if(/(?:^|[\\/]|^[a-z]:)native_runner\.js$/i.test(parsed.script))arg=parsed.script;
++      }else{
++        var scriptArg=/(?:"([^"]*native_runner\.js)"|([^\s"]*native_runner\.js))(?=\s|$)/i.exec(command);
++        if(scriptArg)arg=scriptArg[1]||scriptArg[2];
++      }
++      if(arg!==null){
++        arg=arg.replace(/\//g,"\\");
+         if(/^(?:[a-z]:\\|\\\\)/i.test(arg)){
+           if(keyPath(arg)===keyPath(root+"\\tools\\native_runner.js"))error("RUNNER_ACTIVE: another script host is using this package. No lock was changed.");
+-        }else if(snapshot)error("LOCK_STATE_UNKNOWN: a legacy relative-path native_runner.js is active; its package cannot be distinguished. No lock was changed.");
++        }else if(snapshot)throw relativeLockWorkerError(p,arg,parseMode);
+       }
+     }
+   }
+@@ -1679,13 +1724,29 @@
+   for(var i=0;i<processes.length;i++)if(!parallelIsReadOnlyFollower(processes[i])&&!parallelIsFreshAdmittedRelativeHost(processes[i]))guarded.push(processes[i]);
+   return guarded;
+ }
+-/* Shutdown revalidates exact rows from one complete inventory. It never
+-   chases new unrelated processes by restarting a whole-machine inventory.
+-   Acquisition and stale-lock recovery continue to use the strict guard. */
++/* Shutdown revalidates bounded exact identities. If an unresolved relative
++   runner is confirmed absent, one final complete inventory checks for workers
++   it may have left behind. A new relative ambiguity at that barrier fails
++   immediately. Acquisition and stale recovery retain the strict guard. */
+ function unreadableLockWorkerError(process) {
+   var e=new Error("LOCK_STATE_UNKNOWN: cannot exclude an active "+process.name+" worker with unreadable command line. No lock was changed.");
+   e.rhUnreadableLockWorker=true;
+   e.rhWorker={pid:process.pid,parent:process.parent,created:process.created,name:process.name};
++  return e;
++}
++function relativeLockWorkerDetails(process,arg,parseMode) {
++  var digest="UNAVAILABLE";
++  try{digest=textHash(process.command);}catch(ignoredCommandHash){}
++  var script=parseMode==="SIMPLE"?String(arg).replace(/[\x00-\x1F\x7F|]/g,"?").slice(0,180):"UNPARSED";
++  return "PID:"+process.pid+"|PARENT:"+process.parent+"|CREATED:"+process.created+"|NAME:"+process.name+
++    "|SCRIPT_PARSE:"+parseMode+"|SCRIPT_FORM:RELATIVE|SCRIPT:"+script+"|COMMAND_SHA256:"+digest;
++}
++function relativeLockWorkerError(process,arg,parseMode) {
++  var details=relativeLockWorkerDetails(process,arg,parseMode);
++  var e=new Error("LOCK_STATE_UNKNOWN: a legacy relative-path native_runner.js is active; its package cannot be distinguished. "+details+". No lock was changed.");
++  e.rhRelativeLockWorker=true;
++  e.rhWorker={pid:process.pid,parent:process.parent,created:process.created,name:process.name,command:process.command};
++  e.rhRelativeScript=arg;e.rhScriptParse=parseMode;e.rhDetails=details;
+   return e;
+ }
+ function queryShutdownProcess(pid) {
+@@ -1734,61 +1795,109 @@
+   if(!lockHeld||!ownerText||!self)error("LOCK_STATE_UNKNOWN: owned shutdown has no verified lock owner.");
+   var initialLock=lockSnapshot();
+   if(!initialLock||initialLock.text!==ownerText)error("RUNNER_LOCK_CHANGED: shutdown owner metadata does not match.");
+-  var generation=initialLock.generation;
++  var generation=initialLock.generation,queuedRows=0,previousRows={};
++  var relativeExit=false,postRelativeExit=false;
+   for(var attempt=1;attempt<=maxAttempts;attempt++){
+     parallelRuntime.shutdownInventoryAttempts=attempt;
+-    var current=guardShutdownOwner(ownerText,self,generation);
+-    if(processes===null){
+-      parallelRuntime.shutdownFullInventoryQueries++;
+-      processes=queryLockProcesses();
+-      var inventorySelf=identifyLockSelf(processes,self.token);
+-      if(processIdentity(inventorySelf)!==processIdentity(self)||inventorySelf.name!==self.name||inventorySelf.parent!==self.parent)
+-        error("LOCK_STATE_UNKNOWN: complete inventory does not identify the recorded runner.");
+-      var excluded=lockAncestors(parallelShutdownInventory(processes),inventorySelf);
+-      for(var pi=0;pi<processes.length;pi++){
+-        var original=processes[pi];
+-        var relevant=/^(?:cscript|wscript|cmd|lean|csc|certutil|helper|ramwarm)\.exe$/.test(original.name)||/^sha256-.*\.exe$/.test(original.name);
+-        if(!relevant||original.command||excluded[processIdentity(original)])continue;
+-        if(!(original.pid>0&&original.pid<=4294967295&&Math.floor(original.pid)===original.pid)||
+-          !(original.parent>=0&&original.parent<=4294967295&&Math.floor(original.parent)===original.parent)||
+-          !validProcessCreation(original.created))error("LOCK_STATE_UNKNOWN: unreadable initial row has no complete process identity.");
+-        pending.push({index:pi,original:original,resolved:false});
++    var checkAgain=true,guardError=null;
++    while(checkAgain){
++      checkAgain=false;
++      var current=guardShutdownOwner(ownerText,self,generation);
++      if(processes===null){
++        parallelRuntime.shutdownFullInventoryQueries++;
++        processes=queryLockProcesses();
++        var inventorySelf=identifyLockSelf(processes,self.token);
++        if(processIdentity(inventorySelf)!==processIdentity(self)||inventorySelf.name!==self.name||inventorySelf.parent!==self.parent)
++          error("LOCK_STATE_UNKNOWN: complete inventory does not identify the recorded runner.");
++        var guarded=parallelShutdownInventory(processes),included={},excluded=lockAncestors(guarded,inventorySelf);
++        for(var gi=0;gi<guarded.length;gi++)included[processIdentity(guarded[gi])]=true;
++        var unreadableCount=0,relativeCount=0;
++        for(var pi=0;pi<processes.length;pi++){
++          var original=processes[pi],prior=previousRows[original.pid];
++          if(postRelativeExit&&prior){
++            var priorProcess=prior.original;
++            if(prior.absent||original.created!==priorProcess.created||original.name!==priorProcess.name||original.parent!==priorProcess.parent||
++              (prior.relative&&original.command!==prior.command))
++              error("LOCK_STATE_UNKNOWN: post-exit inventory contradicts a checked identity for PID="+original.pid+"; the lock was preserved.");
++          }
++          if(!included[processIdentity(original)]||excluded[processIdentity(original)])continue;
++          var retryError=null;
++          try{
++            /* Check every original row before any disappearance query. An
++               already readable current-workspace worker is never retired. */
++            assertNoLockWorkers([inventorySelf,original],{owner:null},inventorySelf);
++          }catch(initialError){
++            if(initialError&&initialError.rhUnreadableLockWorker===true)retryError=initialError;
++            else if(initialError&&initialError.rhRelativeLockWorker===true&&!postRelativeExit)retryError=initialError;
++            else throw initialError;
++          }
++          if(!retryError)continue;
++          if(!(original.pid>0&&original.pid<=4294967295&&Math.floor(original.pid)===original.pid)||
++            !(original.parent>=0&&original.parent<=4294967295&&Math.floor(original.parent)===original.parent)||
++            !validProcessCreation(original.created))error("LOCK_STATE_UNKNOWN: unresolved initial row has no complete process identity.");
++          var relative=retryError.rhRelativeLockWorker===true;
++          var queued={index:pi,original:original,resolved:false,absent:false,relative:relative,
++            command:relative?original.command:"",relativeError:relative?retryError:null};
++          pending.push(queued);previousRows[original.pid]=queued;queuedRows++;
++          if(queuedRows>maxRows)error("LOCK_STATE_UNKNOWN: exact shutdown recheck exceeds its bounded row budget ("+queuedRows+" > "+maxRows+").");
++          if(relative){relativeCount++;diagnosticLog("SHUTDOWN_LEGACY_RUNNER="+retryError.rhDetails+"|ATTEMPT:"+attempt);}
++          else unreadableCount++;
++        }
++        diagnosticLog("SHUTDOWN_PROCESS_SNAPSHOT=CAPTURED|ROWS="+processes.length+"|UNREADABLE="+unreadableCount+
++          "|RELATIVE_RUNNERS="+relativeCount+"|PHASE="+(postRelativeExit?"POST_RELATIVE_EXIT":"INITIAL"));
+       }
+-      if(pending.length>maxRows)error("LOCK_STATE_UNKNOWN: exact shutdown recheck exceeds its bounded row budget ("+pending.length+" > "+maxRows+").");
+-      diagnosticLog("SHUTDOWN_PROCESS_SNAPSHOT=CAPTURED|ROWS="+processes.length+"|UNREADABLE="+pending.length);
+-    }
+-    for(var ri=0;ri<pending.length;ri++){
+-      var row=pending[ri];if(row.resolved)continue;
+-      var p=row.original;
+-      parallelRuntime.shutdownTargetedWorkerQueries++;
+-      var refreshed=queryShutdownProcess(p.pid);
+-      if(!refreshed){
+-        processes[row.index]=null;row.resolved=true;parallelRuntime.shutdownExpiredRows++;
+-        diagnosticLog("SHUTDOWN_EXACT_ROW=ABSENT|PID="+p.pid+"|CREATED="+p.created+"|NAME="+p.name);
+-      }else{
+-        if(refreshed.pid!==p.pid||refreshed.created!==p.created||refreshed.name!==p.name||refreshed.parent!==p.parent)
+-          error("LOCK_STATE_UNKNOWN: exact shutdown row changed identity for PID="+p.pid+"; the lock was preserved.");
+-        processes[row.index]=refreshed;
+-        if(refreshed.command){
+-          row.resolved=true;parallelRuntime.shutdownReadableRows++;
+-          diagnosticLog("SHUTDOWN_EXACT_ROW=READABLE|PID="+p.pid+"|CREATED="+p.created+"|NAME="+p.name);
+-        }else diagnosticLog("SHUTDOWN_UNREADABLE_WORKER=PID:"+p.pid+"|PARENT:"+p.parent+"|CREATED:"+p.created+"|NAME:"+p.name+"|ATTEMPT:"+attempt);
++      for(var ri=0;ri<pending.length;ri++){
++        var row=pending[ri];if(row.resolved)continue;
++        var p=row.original;
++        parallelRuntime.shutdownTargetedWorkerQueries++;
++        var refreshed=queryShutdownProcess(p.pid);
++        if(!refreshed){
++          processes[row.index]=null;row.resolved=true;row.absent=true;parallelRuntime.shutdownExpiredRows++;
++          if(row.relative)relativeExit=true;
++          diagnosticLog("SHUTDOWN_EXACT_ROW=ABSENT|PID="+p.pid+"|CREATED="+p.created+"|NAME="+p.name);
++        }else{
++          if(refreshed.pid!==p.pid||refreshed.created!==p.created||refreshed.name!==p.name||refreshed.parent!==p.parent)
++            error("LOCK_STATE_UNKNOWN: exact shutdown row changed identity for PID="+p.pid+"; the lock was preserved.");
++          if(row.relative&&refreshed.command!==row.command)
++            error("LOCK_STATE_UNKNOWN: known relative runner command changed for PID="+p.pid+"; the lock was preserved.");
++          processes[row.index]=refreshed;
++          if(refreshed.command){
++            var readableError=null;
++            try{assertNoLockWorkers(parallelShutdownInventory([current,refreshed]),{owner:null},current);}
++            catch(changedError){
++              if(changedError&&changedError.rhRelativeLockWorker===true&&!postRelativeExit)readableError=changedError;
++              else throw changedError;
++            }
++            if(readableError){
++              row.relative=true;row.command=refreshed.command;row.relativeError=readableError;
++              diagnosticLog("SHUTDOWN_LEGACY_RUNNER="+readableError.rhDetails+"|ATTEMPT:"+attempt);
++            }else{
++              row.resolved=true;parallelRuntime.shutdownReadableRows++;
++              diagnosticLog("SHUTDOWN_EXACT_ROW=READABLE|PID="+p.pid+"|CREATED="+p.created+"|NAME="+p.name);
++            }
++          }else diagnosticLog("SHUTDOWN_UNREADABLE_WORKER=PID:"+p.pid+"|PARENT:"+p.parent+"|CREATED:"+p.created+"|NAME:"+p.name+"|ATTEMPT:"+attempt);
++        }
+       }
+-    }
+-    var retained=[];
+-    for(var ki=0;ki<processes.length;ki++)if(processes[ki]!==null)retained.push(processes[ki]);
+-    var guardError=null;
+-    try{
+-      assertNoLockWorkers(parallelShutdownInventory(retained),{owner:null},current);
+-    }catch(inventoryError){
+-      if(!inventoryError||inventoryError.rhUnreadableLockWorker!==true)throw inventoryError;
+-      guardError=inventoryError;
+-    }
+-    guardShutdownOwner(ownerText,self,generation);
+-    if(!guardError){
+-      diagnosticLog("WORKER_INVENTORY_RECHECK=CLEAR|ATTEMPTS:"+attempt+"|FULL_INVENTORIES:"+parallelRuntime.shutdownFullInventoryQueries+
+-        "|EXACT_WORKER_QUERIES:"+parallelRuntime.shutdownTargetedWorkerQueries);
+-      return;
++      var retained=[];
++      for(var ki=0;ki<processes.length;ki++)if(processes[ki]!==null)retained.push(processes[ki]);
++      guardError=null;
++      try{assertNoLockWorkers(parallelShutdownInventory(retained),{owner:null},current);}
++      catch(inventoryError){
++        if(!inventoryError||(inventoryError.rhUnreadableLockWorker!==true&&
++          !(inventoryError.rhRelativeLockWorker===true&&!postRelativeExit)))throw inventoryError;
++        guardError=inventoryError;
++      }
++      guardShutdownOwner(ownerText,self,generation);
++      if(!guardError){
++        if(relativeExit&&!postRelativeExit){
++          postRelativeExit=true;processes=null;pending=[];checkAgain=true;
++          diagnosticLog("SHUTDOWN_POST_RELATIVE_EXIT=REQUIRED|FULL_INVENTORY_LIMIT:2");
++          continue;
++        }
++        diagnosticLog("WORKER_INVENTORY_RECHECK=CLEAR|ATTEMPTS:"+attempt+"|FULL_INVENTORIES:"+parallelRuntime.shutdownFullInventoryQueries+
++          "|EXACT_WORKER_QUERIES:"+parallelRuntime.shutdownTargetedWorkerQueries);
++        return;
++      }
+     }
+     if(attempt===maxAttempts)throw guardError;
+     diagnosticLog("WORKER_INVENTORY_RECHECK=SAME_IDENTITIES|NEXT:"+(attempt+1)+"|MAX:"+maxAttempts+"|WAIT_MS:200");

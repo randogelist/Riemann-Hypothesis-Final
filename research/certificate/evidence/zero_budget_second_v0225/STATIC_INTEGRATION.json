@@ -1,0 +1,44 @@
+{
+  "schema": "RH_HILBERT_V0225_STATIC_INTEGRATION_V1",
+  "status": "STATIC_PACKAGE_INVARIANTS_VERIFIED; NATIVE_AUDIT_PENDING",
+  "package": "RH_HILBERT_LIMIT_LEAN_v0_2_25_construction",
+  "revision_kind": "ADDITIVE_PROOF_SOURCE_NOT_INIT",
+  "old_lean_sources_byte_preserved": 99,
+  "new_lean_sources": [
+    "RH_HilbertLimit/ZeroBudgetSecondSector.lean",
+    "RH_HilbertLimit/ZeroBudgetSecondMoment.lean",
+    "SecondMomentAudit.lean"
+  ],
+  "new_source_sha256": {
+    "RH_HilbertLimit/ZeroBudgetSecondSector.lean": "e3a809b8cf16e255288f70f9d6f27e570a365dcf2e631455e3708db28b55287f",
+    "RH_HilbertLimit/ZeroBudgetSecondMoment.lean": "396ffd69ec0ec05b70c7fd2a0324589a18298e45b27d4cc98f09d2102f730638",
+    "SecondMomentAudit.lean": "2984529d9ab6827819cd24d51737e764fd5bc96568c61465ba48f4ba53f658d7"
+  },
+  "old_declaration_records_preserved": 1163,
+  "new_public_declarations": 20,
+  "ordinary_modules": 96,
+  "active_modules": 97,
+  "audit_targets": 448,
+  "prior_audit_targets_retained": 428,
+  "declaration_inventory_records": 1183,
+  "direct_mathlib_requirements": 92,
+  "added_direct_mathlib_requirements": [
+    "Mathlib.Analysis.SpecialFunctions.ImproperIntegrals"
+  ],
+  "import_topology": "VERIFIED_FROM_COMMENT_STRIPPED_ACTIVE_SOURCES",
+  "final_audit_exact_type_and_axiom_output_coverage": "EVERY_SELECTED_TARGET_EXACTLY_ONCE",
+  "expected_frozen_ordinary_reuse_if_valid": 94,
+  "expected_new_source_driven_tasks": 3,
+  "expected_counts_are_observed": false,
+  "source_token_scan": "NO_SORRY_ADMIT_AXIOM_UNSAFE_NATIVE_DECIDE_OR_SKIP_KERNEL_TOKENS",
+  "proof_source_review_is_native_compilation": false,
+  "second_check": "SOURCE_ONLY; NATIVE_AUDIT_PENDING",
+  "universal_propagation": "OPEN",
+  "universal_admissibility": "OPEN",
+  "finite_checker_equivalence": "OPEN",
+  "formal_closure": "OPEN",
+  "current_native_run": "NOT_RUN",
+  "assistant_native_lean_lake_or_ci_execution": false,
+  "node_syntax_check_exit_code": 0,
+  "runtime_logic_normalization_matches_baseline": true
+}

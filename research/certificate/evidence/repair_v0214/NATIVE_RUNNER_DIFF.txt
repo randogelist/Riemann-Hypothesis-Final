@@ -1,0 +1,96 @@
+--- RH_HILBERT_LIMIT_LEAN_v0_2_13_construction/tools/native_runner.js
++++ RH_HILBERT_LIMIT_LEAN_v0_2_14_construction/tools/native_runner.js
+@@ -5,8 +5,8 @@
+ var shell = new ActiveXObject("WScript.Shell");
+ var env = shell.Environment("PROCESS");
+ var root = fso.GetAbsolutePathName(".");
+-var PACKAGE = "RH_HILBERT_LIMIT_LEAN_v0_2_13_construction";
+-var RUNNER_VERSION = "RH_HILBERT_NATIVE_RUNNER_v0_2_13_MEMORY_FALLBACK";
++var PACKAGE = "RH_HILBERT_LIMIT_LEAN_v0_2_14_construction";
++var RUNNER_VERSION = "RH_HILBERT_NATIVE_RUNNER_v0_2_14_CAST_AND_SHUTDOWN_RECHECK";
+ var SCHEMA = "RH_HILBERT_LOCAL_ANCHOR_V2";
+ var CACHE_LAYOUT = "COMPACT_V1";
+ var HELPER_SCHEMA = "RH_HILBERT_SHA256_HELPER_CACHE_V1";
+@@ -247,7 +247,7 @@
+     var p=processes[i];if(excluded[processIdentity(p)])continue;
+     var relevant=/^(?:cscript|wscript|cmd|lean|csc|certutil|helper|ramwarm)\.exe$/.test(p.name)||/^sha256-.*\.exe$/.test(p.name);
+     if(!relevant)continue;
+-    if(!p.command){if(snapshot)error("LOCK_STATE_UNKNOWN: cannot exclude an active "+p.name+" worker with unreadable command line. No lock was changed.");continue;}
++    if(!p.command){if(snapshot)throw unreadableLockWorkerError(p);continue;}
+     var command=p.command.replace(/\//g,"\\").toLowerCase();
+     /* Persistent /k shells can remain idle after run.cmd finishes; live script
+        hosts and /c compiler workers are checked separately. */
+@@ -1284,7 +1284,7 @@
+   workerMemoryMB:4096, reserveMB:4096, ramCapMB:0, ramMode:"AUTO", ramAttempted:false,
+   ram:null, ramStatus:"NOT_NEEDED", ramExitCode:null, shutdownKeepLock:false, shutdownComplete:false, shutdownClean:false,
+   memoryDenial:"", preferredReserveMB:4096, minimumReserveMB:1024, memoryPressureSeen:false,
+-  memoryFallback:false, ramDisabledForMemory:false};
++  memoryFallback:false, ramDisabledForMemory:false, shutdownInventoryAttempts:0};
+ var RAM_HELPER_SCHEMA = "RH_HILBERT_RAM_HELPER_CACHE_V1";
+ 
+ function parallelIntegerSetting(name,fallback,min,max) {
+@@ -1633,6 +1633,47 @@
+   for(var i=0;i<processes.length;i++)if(!parallelIsReadOnlyFollower(processes[i])&&!parallelIsFreshAdmittedRelativeHost(processes[i]))guarded.push(processes[i]);
+   return guarded;
+ }
++/* A fresh complete inventory can resolve a transient unreadable process row.
++   No process is omitted because it was previously unreadable or has exited by
++   assumption. Existing stale-lock recovery does not call this retry wrapper. */
++function unreadableLockWorkerError(process) {
++  var e=new Error("LOCK_STATE_UNKNOWN: cannot exclude an active "+process.name+" worker with unreadable command line. No lock was changed.");
++  e.rhUnreadableLockWorker=true;
++  e.rhWorker={pid:process.pid,parent:process.parent,created:process.created,name:process.name};
++  return e;
++}
++function parallelAssertShutdownInventory() {
++  var ownerText=lockOwnerText,self=lockSelf,maxAttempts=6;
++  if(!lockHeld||!ownerText||!self)error("LOCK_STATE_UNKNOWN: owned shutdown has no verified lock owner.");
++  var selfIdentity=processIdentity(self),token=self.token;
++  for(var attempt=1;attempt<=maxAttempts;attempt++){
++    parallelRuntime.shutdownInventoryAttempts=attempt;
++    if(!lockHeld||lockOwnerText!==ownerText)error("RUNNER_LOCK_CHANGED: shutdown ownership changed; the lock was preserved.");
++    var snapshot=lockSnapshot();
++    if(!snapshot||snapshot.text!==ownerText)error("RUNNER_LOCK_CHANGED: shutdown lock metadata changed; the lock was preserved.");
++    var live=parallelLiveProcesses();
++    if(live.length)error("LOCK_STATE_UNKNOWN: owned workers became live or uncertain during inventory recheck: "+live.join(","));
++    var processes=parallelShutdownInventory(),current=identifyLockSelf(processes,token);
++    if(processIdentity(current)!==selfIdentity)error("LOCK_STATE_UNKNOWN: runner process identity changed during shutdown recheck.");
++    try{
++      assertNoLockWorkers(processes,{owner:null},current);
++    }catch(inventoryError){
++      if(!inventoryError||inventoryError.rhUnreadableLockWorker!==true)throw inventoryError;
++      var p=inventoryError.rhWorker;
++      diagnosticLog("SHUTDOWN_UNREADABLE_WORKER=PID:"+p.pid+"|PARENT:"+p.parent+"|CREATED:"+p.created+"|NAME:"+p.name+"|ATTEMPT:"+attempt);
++      if(attempt===maxAttempts)throw inventoryError;
++      diagnosticLog("WORKER_INVENTORY_RECHECK=NEXT:"+(attempt+1)+"|MAX:"+maxAttempts+"|WAIT_MS:200");
++      WScript.Sleep(200);
++      continue;
++    }
++    live=parallelLiveProcesses();
++    if(live.length)error("LOCK_STATE_UNKNOWN: owned workers became live or uncertain after inventory recheck: "+live.join(","));
++    if(attempt>1)diagnosticLog("WORKER_INVENTORY_RECHECK=CLEAR|ATTEMPTS:"+attempt);
++    return;
++  }
++  error("LOCK_STATE_UNKNOWN: shutdown inventory recheck exhausted without a verified result.");
++}
++
+ function parallelReportRamCompletion() {
+   var ram=parallelRuntime.ram;if(!ram)return;
+   var exited=false,known=false,status=null,statusError="";
+@@ -1679,7 +1720,7 @@
+     diagnosticLog("WORKERS_STILL_ACTIVE="+live.join(","));
+     return false;
+   }
+-  try{assertNoLockWorkers(parallelShutdownInventory(),{owner:null},lockSelf);}
++  try{parallelAssertShutdownInventory();}
+   catch(workerInventoryError){
+     parallelRuntime.shutdownKeepLock=true;
+     parallelRuntime.shutdownComplete=true;parallelRuntime.shutdownClean=false;
+@@ -1998,6 +2039,7 @@
+     '  "memory_preferred_reserve_mib": '+parallelRuntime.preferredReserveMB+",",'  "memory_effective_reserve_mib": '+parallelRuntime.reserveMB+",",
+     '  "ram_disabled_for_memory": '+(parallelRuntime.ramDisabledForMemory?"true":"false")+",",
+     '  "preexisting_admitted_unresolved_hosts": '+lockAdmittedRelativeHosts.length+",",
++    '  "shutdown_inventory_attempts": '+parallelRuntime.shutdownInventoryAttempts+",",
+     '  "ram_warm_exit_code": '+(parallelRuntime.ramExitCode===null?"null":String(parallelRuntime.ramExitCode))+",",
+     '  "ram_warm_residency": "OS_MANAGED_NOT_GUARANTEED",','  "owned_worker_shutdown_complete": '+(parallelRuntime.shutdownClean?"true":"false")+",",
+     '  "logical_tool_launches": '+numericMapJSON(directLaunchCounts)+",",'  "hash_phase_totals": '+numericMapJSON(hashPhaseTotals)+",",

@@ -1,0 +1,48 @@
+{
+  "schema": "RH_HILBERT_V0217_FROZEN_PROOF_RUNNER_REPAIR_REVIEW_V1",
+  "package": "RH_HILBERT_LIMIT_LEAN_v0_2_17_construction",
+  "status": "EXACT_PROOF_PRESERVATION_AND_BOUNDED_RUNTIME_REPAIR_REVIEWED",
+  "lean_sources_byte_preserved": 92,
+  "changed_lean_sources": [],
+  "declaration_inventory_byte_preserved": 1105,
+  "selected_axiom_targets_preserved": 370,
+  "exact_endpoint_types_preserved": 10,
+  "helpers_and_launcher_byte_preserved": true,
+  "runner_changed_functions": [
+    "launchCertutil",
+    "parallelAssertShutdownInventory",
+    "parallelLiveProcesses",
+    "parallelShutdown",
+    "parallelShutdownInventory",
+    "result",
+    "runToFile",
+    "startNativeAsync"
+  ],
+  "new_runner_functions": [
+    "guardShutdownOwner",
+    "nativeBeginLaunch",
+    "nativeTrackedExec",
+    "nativeTrackedRun",
+    "ownedNativeLaunchOutstanding",
+    "queryShutdownProcess",
+    "sealNativeLaunches"
+  ],
+  "all_other_existing_runner_function_bodies_unchanged": 150,
+  "cache_criteria_and_compile_semantic_flags_unchanged": true,
+  "prior_evidence_files_byte_preserved": 354,
+  "runtime_tests": "16 TARGETED NODE VM MOCK CASES PASS; NO NATIVE EXECUTION",
+  "allowed_changed_parent_files": [
+    "CHECKPOINT.json",
+    "OPEN_OBLIGATIONS.txt",
+    "PROVENANCE.json",
+    "README.md",
+    "RUNNER_LOGIC_VALIDATION.json",
+    "RUNNER_NOTES.txt",
+    "SHA256SUMS.txt",
+    "STATIC_REVIEW.json",
+    "STATUS.json",
+    "runner-version.txt",
+    "tools/native_runner.js"
+  ],
+  "formal_closure": "OPEN"
+}

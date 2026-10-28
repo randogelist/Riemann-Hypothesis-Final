@@ -1,0 +1,27 @@
+{
+  "review_kind": "INDEPENDENT_STATIC_SOURCE_AND_EXACT_RATIONAL_ARITHMETIC_REVIEW",
+  "reviewed_files": [
+    "RH_HilbertLimit/ZeroBudgetFiveAlgebra.lean",
+    "RH_HilbertLimit/ZeroBudgetFiveRows.lean"
+  ],
+  "source_sha256": {
+    "RH_HilbertLimit/ZeroBudgetFiveAlgebra.lean": "8bdeabb2a04c6bb2e1e877ecca3f5ed81fd48531094cdbb301ac8d0507529158",
+    "RH_HilbertLimit/ZeroBudgetFiveRows.lean": "10981de983426495f2c2d1b3b3796def020a9750154b87f02ac02b0a91285386"
+  },
+  "blockers": [],
+  "checks": [
+    "Six exact rational cone-slope recurrences and positive multiplication denominators",
+    "Cone multiplication signs and denominator clearing",
+    "Power induction restricted to total degree at most six",
+    "Canonical mass transferred to complementary quarter-wedge",
+    "Exact canonical HasSum used to identify actual Bernstein weights",
+    "Variation-one implication restricted to degrees at most five",
+    "Final endpoint cancellation index n less than five",
+    "No RH hypothesis, sorry, axiom, or universal-admissibility assertion in reviewed sources"
+  ],
+  "exact_endpoint": "forall n : Nat, n < 5 -> rowCancellation actualNormalizedMoment n = 0",
+  "compiled": false,
+  "lean_executed": false,
+  "native_audit_executed": false,
+  "limitations": "Static review is not Lean elaboration, compilation, or an axiom audit. Sector source is reviewed separately."
+}

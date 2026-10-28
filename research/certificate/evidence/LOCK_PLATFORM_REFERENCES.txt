@@ -1,0 +1,15 @@
+Official references inspected during the lock repair (2026-10-27):
+
+https://learn.microsoft.com/en-us/office/vba/language/reference/user-interface-help/movefolder-method
+For an exact source and a destination without a trailing separator, an existing
+destination directory is an error. Recovery therefore uses a deterministic
+destination and retains it permanently. This is not a claim of arbitrary
+transactional rollback for filesystem operations.
+
+https://learn.microsoft.com/en-us/windows/win32/cimwin32prov/win32-process
+ProcessId values and parent IDs may be reused. CreationDate is included in
+owner identity and checked when deciding whether a process is an ancestor.
+CommandLine and Name are used to classify possible workers conservatively.
+
+These references describe Windows APIs, not evidence of a native run of this
+package. Native execution remains pending.

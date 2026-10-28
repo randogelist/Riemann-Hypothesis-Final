@@ -1,0 +1,110 @@
+PACKAGE=RH_HILBERT_LIMIT_LEAN_v0_2_10_construction
+MODE=A_TIER_LEAN
+TARGET=LOCAL_COMPILER
+REQUESTED_DIRECTIONS=BOTH
+PREPARATION=NATIVE_V025_PASS_EVIDENCE_UPDATE_ONLY
+NEW_LEAN_BUILD=NOT_RUN
+NEW_AXIOM_AUDIT=NOT_RUN
+LOCAL_LEAN_EXECUTED=FALSE
+LAKE_EXECUTED=FALSE
+CI_EXECUTED=FALSE
+NATIVE_WINDOWS_EXECUTION_BY_ASSISTANT=FALSE
+BASELINE_V0_1_4=USER_REPORTED_NATIVE_BUILD_AND_AUDIT_PASS
+BASELINE_LEAN_FILES_BYTE_PRESERVED=10
+V0_2_0_LEAN_FILES_BYTE_PRESERVED=86
+V0_2_0_NATIVE_RUN=USER_REPORTED_PARTIAL_FAIL
+V0_2_0_NEW_MODULE_PASS=AngularMaster.ZeroExclusion
+V0_2_1_NATIVE_RUN=USER_REPORTED_PARTIAL_FAIL
+V0_2_1_VISIBLE_MODULE_COMPILE_AUDIT_PASSES=31
+V0_2_1_EXTENSION_MODULE_PASSES=FinitePrefix,SpectralTail,ActualCalibrationProgress,ActualMomentReality
+CURRENT_CHANGE_SCOPE=EVIDENCE_AND_RUNNER_PACKAGE_LABEL; LEAN_AND_RUNNER_IMPLEMENTATION_UNCHANGED
+CURRENT_PARENT_LEAN_FILES_BYTE_PRESERVED=86
+CURRENT_NATIVE_RUN=NOT_RUN
+FORMAL_CLOSURE=FINITE_CHECKER_EQUIVALENCE_WITH_ANALYTIC_PREMISES_DISCHARGED
+CONCRETE_ACCEPTED_WITNESS_REQUIRED_FOR_FORMAL_CLOSURE=FALSE
+
+REQUESTED_FINITE_CHECKER_EQUIVALENCE=OPEN
+  Requested statement:
+    (exists W : FiniteWitness, check W = true) iff _root_.RiemannHypothesis
+  No proved declaration implementing this requested statement is supplied.
+
+USER_REPORTED_NATIVE_SOURCE_AND_AGGREGATE_STATUS=V025_PASS
+  The supplied v0.2.5 tail reports PROJECT_BUILD=PASS, RUN=PASS and a 303-target
+  aggregate axiom audit PASS: 3 compiled modules and 82 frozen reuses.
+  Exactly 28 complete records are directly visible and match target positions
+  276-303; the other 275 records are outside the excerpt. All visible records
+  list only propext, Classical.choice and Quot.sound. The canonical endpoints
+  retain CanonicalPowerSums and DominantExtraction as explicit premises.
+  Startup fingerprints and native receipt contents were not supplied. The
+  report does not certify native execution of the optimized v0.2.7 runner.
+  All 85 active modules can be reused if current same-target receipts validate.
+
+ACTUAL_CALIBRATION_REMAINING_INPUT=CANONICAL_POWER_SUMS
+  The new source supplies positive actualKappa, canonical complex nodes,
+  norm summability, actual-zero soundness and exhaustive coverage, all-order
+  moment reality, canonical node mass one, and the zeroth power-sum case.
+  The v0.2.5 excerpt directly prints the all-order moment-reality endpoints,
+  canonical node mass one and the zeroth power-sum statement with clean
+  standard-axiom records. It does not prove CanonicalPowerSums at higher orders.
+  The current constructor still requires:
+    forall n : Nat, HasSum (fun i => canonicalNode i ^ (n+1))
+      (actualNormalizedMoment n : Complex)
+  Its positive-order cases remain open. Prove the actual differentiated
+  product/Taylor identity with convergence and the exact sign/factorial
+  normalization; the first trace alone does not prove all orders.
+
+DOMINANT_EXTRACTION=OPEN
+  Finite-tail localization and radius attainment above one have new source
+  proofs. The full finite exponential decomposition still needs a unit-phase
+  choice, grouping of repeated nodes/equal rates, nonzero grouped coefficients,
+  exact generating-polynomial splitting, and a strictly smaller geometric
+  remainder bound. No maximum or finite-support assumption is substituted.
+
+UNCONDITIONAL_ACTUAL_ROOT_LIMIT=NOT_CERTIFIED
+  The new canonical endpoint explicitly takes CanonicalPowerSums and
+  DominantExtraction (canonicalCalibration hpower).
+
+NATURAL_PARAMETER_CRITERION=USER_REPORTED_CONDITIONAL_NATIVE_AUDIT
+  Under those inputs the source proves:
+    (exists K : Nat, forall n,
+       (n+1)*(actualVariation(n+1)-actualVariation n) <= K*actualVariation n)
+    iff _root_.RiemannHypothesis
+  RH gives K=0. A related uniform natural-bound criterion gives B=1.
+  Their forall-n predicates have not been reduced to finite computation.
+
+FINITE_RAW_WITNESS_FORMAT=OPEN
+TERMINATING_ACTUAL_RH_CHECKER=OPEN
+FINITE_CHECKER_SOUNDNESS=OPEN
+RH_TO_ACCEPTED_FINITE_WITNESS_COMPLETENESS=OPEN
+  These require a concrete finite raw representation and terminating checker
+  with both directions proved for the actual zeta function. Infinite function
+  fields, proof fields asserting the target, or an assumed soundness/completeness
+  pair do not fill this gap. No noncomputable decision is supplied as a checker.
+
+GENERIC_FINITE_PREFIX_RESULT_SCOPE=ARBITRARY_MOMENT_SEQUENCES_ONLY
+  Candidate counterextensions show that finitely many generic nonnegative rows
+  do not control later signs/growth. They do not prove impossibility of an
+  actual-RH certificate using additional analytic structure.
+
+ACTUAL_SUBEXPONENTIAL_BOUND=OPEN
+ACTUAL_ALL_ORDER_GROWTH_STEP=OPEN
+ACCEPTED_FINITE_WITNESS=NONE
+UNCONDITIONAL_RH=NOT_ESTABLISHED
+
+Successful native compilation certifies only the exact declarations with
+their displayed hypotheses and actual audited dependencies. It does not
+construct the remaining analytic inputs, turn a universal predicate into
+a terminating checker, or establish the requested finite-witness equivalence.
+
+V0_2_4_LAUNCH=USER_REPORTED_SCRIPT_NOT_FOUND_BEFORE_RUNNER
+CURRENT_LAUNCH_REPAIR=ABSOLUTE_PACKAGE_PATH_CAPTURE_BEFORE_PUSHD
+V025_NATIVE_LAUNCH=USER_REPORTED_RUN_PASS; OPTIMIZED_RUNNER_NATIVE_VALIDATION_PENDING
+CAST_ONE_FIX=PRESERVED_BYTE_IDENTICAL
+
+V0_2_7_NATIVE_RUNTIME_VALIDATION=PENDING
+V0_2_7_NATIVE_SPEEDUP_MEASUREMENT=NOT_PERFORMED
+CURRENT_FORMAL_CLOSURE=OPEN; NO_MATHEMATICAL_STATUS_CHANGE
+
+CURRENT_USER_NATIVE_EVIDENCE=V025_PROJECT_AUDIT_PASS_WITH28_VISIBLE_AXIOM_RECORDS
+CURRENT_UNCHANGED_ACTIVE_MODULES_ELIGIBLE_FOR_VALIDATED_REUSE=85
+CURRENT_SOURCE_CHANGES=NONE

@@ -1,0 +1,16 @@
+[
+  {
+    "path": "RH_HilbertLimit/CanonicalPowerSums.lean",
+    "before_sha256": "6dac0ba1d627eae6c5a70d0bb2dbdc52f0fa6474e3984d34a2d53feb48fb2160",
+    "after_sha256": "55e10b78e84bb2ec7cfbd693e5275f46b4ada256bda0530ccb4c0e80337e65de",
+    "declaration_headers_preserved": 27,
+    "imports_preserved": true
+  },
+  {
+    "path": "RH_HilbertLimit/SpectralPhase.lean",
+    "before_sha256": "bc21fd329ecce37ce7b4808ffa565d1b0cc7507c90cbc1965b1a540756db3a80",
+    "after_sha256": "e5d3e26af0da7eb222dac75252480975eb4fa46150ebb342a58c42ab20063db3",
+    "declaration_headers_preserved": 8,
+    "imports_preserved": true
+  }
+]

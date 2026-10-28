@@ -1,0 +1,433 @@
+AWPIRH.complex_sqrt_sq (z : ℂ) : z.sqrt ^ 2 = z
+'AWPIRH.complex_sqrt_sq' depends on axioms: [propext, Classical.choice, Quot.sound]
+AWPIRH.theta_square (w : ℂ) : AWPIRH.theta (w ^ 2) = AWPIRH.centeredXi w
+'AWPIRH.theta_square' depends on axioms: [propext, Classical.choice, Quot.sound]
+AWPIRH.theta_one : AWPIRH.theta 1 = AWPIRH.xi (3 / 2)
+'AWPIRH.theta_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+AWPIRH.theta_one_ne_zero : AWPIRH.theta 1 ≠ 0
+'AWPIRH.theta_one_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+AWPIRH.theta_zero_of_nontrivialZero {s : ℂ} (hs : AWPIRH.NontrivialZero s) : AWPIRH.theta ((s - 1 / 2) ^ 2) = 0
+'AWPIRH.theta_zero_of_nontrivialZero' depends on axioms: [propext, Classical.choice, Quot.sound]
+AWPIRH.sqrt_differentiableAt_one : DifferentiableAt ℂ Complex.sqrt 1
+'AWPIRH.sqrt_differentiableAt_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+AWPIRH.sqrt_continuousAt_zero : ContinuousAt Complex.sqrt 0
+'AWPIRH.sqrt_continuousAt_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+AWPIRH.normalizedSqrt_sq {z0 : ℂ} (hz0 : z0 ≠ 0) (z : ℂ) : AWPIRH.normalizedSqrt z0 z ^ 2 = z
+'AWPIRH.normalizedSqrt_sq' depends on axioms: [propext, Classical.choice, Quot.sound]
+AWPIRH.normalizedSqrt_differentiableAt {z0 : ℂ} (hz0 : z0 ≠ 0) : DifferentiableAt ℂ (AWPIRH.normalizedSqrt z0) z0
+'AWPIRH.normalizedSqrt_differentiableAt' depends on axioms: [propext, Classical.choice, Quot.sound]
+AWPIRH.theta_eq_normalizedSqrt {z0 : ℂ} (hz0 : z0 ≠ 0) (z : ℂ) :
+  AWPIRH.theta z = AWPIRH.centeredXi (AWPIRH.normalizedSqrt z0 z)
+'AWPIRH.theta_eq_normalizedSqrt' depends on axioms: [propext, Classical.choice, Quot.sound]
+AWPIRH.theta_differentiableAt_of_ne_zero {z : ℂ} (hz : z ≠ 0) : DifferentiableAt ℂ AWPIRH.theta z
+'AWPIRH.theta_differentiableAt_of_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+AWPIRH.theta_continuousAt_zero : ContinuousAt AWPIRH.theta 0
+'AWPIRH.theta_continuousAt_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+AWPIRH.theta_analyticAt_zero : AnalyticAt ℂ AWPIRH.theta 0
+'AWPIRH.theta_analyticAt_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+AWPIRH.theta_differentiable : Differentiable ℂ AWPIRH.theta
+'AWPIRH.theta_differentiable' depends on axioms: [propext, Classical.choice, Quot.sound]
+AWPIRH.theta_analyticAt (z : ℂ) : AnalyticAt ℂ AWPIRH.theta z
+'AWPIRH.theta_analyticAt' depends on axioms: [propext, Classical.choice, Quot.sound]
+AWPIRH.theta_entire : AnalyticOnNhd ℂ AWPIRH.theta Set.univ
+'AWPIRH.theta_entire' depends on axioms: [propext, Classical.choice, Quot.sound]
+AWPIRH.theta_continuous : Continuous AWPIRH.theta
+'AWPIRH.theta_continuous' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.momentFunctional_monomial (u : ℕ → ℝ) (n : ℕ) (c : ℝ) :
+  (RH_HilbertLimit.momentFunctional u) ((Polynomial.monomial n) c) = c * u n
+'RH_HilbertLimit.momentFunctional_monomial' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.momentFunctional_one (u : ℕ → ℝ) : (RH_HilbertLimit.momentFunctional u) 1 = u 0
+'RH_HilbertLimit.momentFunctional_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.momentFunctional_C_mul (u : ℕ → ℝ) (c : ℝ) (p : Polynomial ℝ) :
+  (RH_HilbertLimit.momentFunctional u) (Polynomial.C c * p) = c * (RH_HilbertLimit.momentFunctional u) p
+'RH_HilbertLimit.momentFunctional_C_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.bernsteinPolynomial_expansion (N j : ℕ) :
+  bernsteinPolynomial ℝ N j =
+    ∑ r ∈ Finset.range (N - j + 1), (Polynomial.monomial (j + r)) (↑(N.choose j) * (-1) ^ r * ↑((N - j).choose r))
+'RH_HilbertLimit.bernsteinPolynomial_expansion' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.momentFunctional_bernsteinPolynomial (u : ℕ → ℝ) (N j : ℕ) :
+  (RH_HilbertLimit.momentFunctional u) (bernsteinPolynomial ℝ N j) = RH_HilbertLimit.bernsteinWeight u N j
+'RH_HilbertLimit.momentFunctional_bernsteinPolynomial' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.polynomial_moment_hasSum.{u_1} {ι : Type u_1} (u : ℕ → ℝ) (q : ι → ℂ)
+  (hpower : ∀ (n : ℕ), HasSum (fun i => q i ^ (n + 1)) ↑(u n)) (p : Polynomial ℝ) :
+  HasSum (fun i => q i * Polynomial.eval₂ (algebraMap ℝ ℂ) (q i) p) ↑((RH_HilbertLimit.momentFunctional u) p)
+'RH_HilbertLimit.polynomial_moment_hasSum' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.bernsteinWeight_hasSum.{u_1} {ι : Type u_1} (u : ℕ → ℝ) (q : ι → ℂ)
+  (hpower : ∀ (n : ℕ), HasSum (fun i => q i ^ (n + 1)) ↑(u n)) (N j : ℕ) :
+  HasSum (fun i => ↑(N.choose j) * q i ^ (j + 1) * (1 - q i) ^ (N - j)) ↑(RH_HilbertLimit.bernsteinWeight u N j)
+'RH_HilbertLimit.bernsteinWeight_hasSum' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.bernsteinWeight_zero_zero (u : ℕ → ℝ) : RH_HilbertLimit.bernsteinWeight u 0 0 = u 0
+'RH_HilbertLimit.bernsteinWeight_zero_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.rowVariation_zero (u : ℕ → ℝ) : RH_HilbertLimit.rowVariation u 0 = |u 0|
+'RH_HilbertLimit.rowVariation_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.sum_bernsteinWeight_eq (u : ℕ → ℝ) (N : ℕ) :
+  ∑ j ∈ Finset.range (N + 1), RH_HilbertLimit.bernsteinWeight u N j = u 0
+'RH_HilbertLimit.sum_bernsteinWeight_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.sum_bernsteinWeight_eq_one (u : ℕ → ℝ) (hzero : u 0 = 1) (N : ℕ) :
+  ∑ j ∈ Finset.range (N + 1), RH_HilbertLimit.bernsteinWeight u N j = 1
+'RH_HilbertLimit.sum_bernsteinWeight_eq_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.rowVariation_nonneg (u : ℕ → ℝ) (N : ℕ) : 0 ≤ RH_HilbertLimit.rowVariation u N
+'RH_HilbertLimit.rowVariation_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.one_le_rowVariation (u : ℕ → ℝ) (hzero : u 0 = 1) (N : ℕ) : 1 ≤ RH_HilbertLimit.rowVariation u N
+'RH_HilbertLimit.one_le_rowVariation' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.rowVariation_eq_one_iff (u : ℕ → ℝ) (hzero : u 0 = 1) (N : ℕ) :
+  RH_HilbertLimit.rowVariation u N = 1 ↔ ∀ j ∈ Finset.range (N + 1), 0 ≤ RH_HilbertLimit.bernsteinWeight u N j
+'RH_HilbertLimit.rowVariation_eq_one_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.bernsteinWeight_coarsening (u : ℕ → ℝ) (N j : ℕ) (hj : j ≤ N) :
+  RH_HilbertLimit.bernsteinWeight u N j =
+    (↑N + 1 - ↑j) / (↑N + 1) * RH_HilbertLimit.bernsteinWeight u (N + 1) j +
+      (↑j + 1) / (↑N + 1) * RH_HilbertLimit.bernsteinWeight u (N + 1) (j + 1)
+'RH_HilbertLimit.bernsteinWeight_coarsening' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.rowVariation_le_succ (u : ℕ → ℝ) (N : ℕ) :
+  RH_HilbertLimit.rowVariation u N ≤ RH_HilbertLimit.rowVariation u (N + 1)
+'RH_HilbertLimit.rowVariation_le_succ' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.rowVariation_monotone (u : ℕ → ℝ) : Monotone (RH_HilbertLimit.rowVariation u)
+'RH_HilbertLimit.rowVariation_monotone' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.all_rowVariation_eq_one_iff (u : ℕ → ℝ) (hzero : u 0 = 1) :
+  (∀ (N : ℕ), RH_HilbertLimit.rowVariation u N = 1) ↔ ∀ (N j : ℕ), j ≤ N → 0 ≤ RH_HilbertLimit.bernsteinWeight u N j
+'RH_HilbertLimit.all_rowVariation_eq_one_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.rootScale_eq_exp_logScale {V : ℕ → ℝ} {n : ℕ} (hV : 0 < V n) :
+  RH_HilbertLimit.rootScale V n = Real.exp (RH_HilbertLimit.logScale V n)
+'RH_HilbertLimit.rootScale_eq_exp_logScale' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.log_rootScale_eq_logScale {V : ℕ → ℝ} {n : ℕ} (hV : 0 < V n) :
+  Real.log (RH_HilbertLimit.rootScale V n) = RH_HilbertLimit.logScale V n
+'RH_HilbertLimit.log_rootScale_eq_logScale' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.logScale_tendsto_iff_rootScale_tendsto {V : ℕ → ℝ} {R : ℝ} (hR : 0 < R)
+  (hV : ∀ᶠ (n : ℕ) in Filter.atTop, 0 < V n) :
+  Filter.Tendsto (RH_HilbertLimit.logScale V) Filter.atTop (nhds (Real.log R)) ↔
+    Filter.Tendsto (RH_HilbertLimit.rootScale V) Filter.atTop (nhds R)
+'RH_HilbertLimit.logScale_tendsto_iff_rootScale_tendsto' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.logScale_zero_iff_rootScale_one {V : ℕ → ℝ} (hV : ∀ᶠ (n : ℕ) in Filter.atTop, 0 < V n) :
+  Filter.Tendsto (RH_HilbertLimit.logScale V) Filter.atTop (nhds 0) ↔
+    Filter.Tendsto (RH_HilbertLimit.rootScale V) Filter.atTop (nhds 1)
+'RH_HilbertLimit.logScale_zero_iff_rootScale_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.eventually_pos_of_geometric_lower {V : ℕ → ℝ} {R c : ℝ} (hR : 0 < R) (hc : 0 < c)
+  (hlo : ∀ᶠ (n : ℕ) in Filter.atTop, c * R ^ n ≤ V n) : ∀ᶠ (n : ℕ) in Filter.atTop, 0 < V n
+'RH_HilbertLimit.eventually_pos_of_geometric_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.geometric_sandwich_log_tendsto {V : ℕ → ℝ} {R c C : ℝ} (hR : 0 < R) (hc : 0 < c) (hC : 0 < C)
+  (hb : ∀ᶠ (n : ℕ) in Filter.atTop, c * R ^ n ≤ V n ∧ V n ≤ C * R ^ n) :
+  Filter.Tendsto (RH_HilbertLimit.logScale V) Filter.atTop (nhds (Real.log R))
+'RH_HilbertLimit.geometric_sandwich_log_tendsto' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.geometric_sandwich_root_tendsto {V : ℕ → ℝ} {R c C : ℝ} (hR : 0 < R) (hc : 0 < c) (hC : 0 < C)
+  (hb : ∀ᶠ (n : ℕ) in Filter.atTop, c * R ^ n ≤ V n ∧ V n ≤ C * R ^ n) :
+  Filter.Tendsto (RH_HilbertLimit.rootScale V) Filter.atTop (nhds R)
+'RH_HilbertLimit.geometric_sandwich_root_tendsto' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.block_lower_to_eventual_lower {V : ℕ → ℝ} {R c : ℝ} {d : ℕ} (hR : 0 < R) (hmono : Monotone V)
+  (hb : ∀ᶠ (n : ℕ) in Filter.atTop, ∃ k ≤ d, c * R ^ n ≤ V (n + k)) :
+  ∀ᶠ (n : ℕ) in Filter.atTop, c / R ^ d * R ^ n ≤ V n
+'RH_HilbertLimit.block_lower_to_eventual_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.root_tendsto_of_monotone_block_bounds {V : ℕ → ℝ} {R c C : ℝ} {d : ℕ} (hR : 0 < R) (hc : 0 < c)
+  (hC : 0 < C) (hmono : Monotone V) (hblock : ∀ᶠ (n : ℕ) in Filter.atTop, ∃ k ≤ d, c * R ^ n ≤ V (n + k))
+  (hupper : ∀ᶠ (n : ℕ) in Filter.atTop, V n ≤ C * R ^ n) :
+  Filter.Tendsto (RH_HilbertLimit.rootScale V) Filter.atTop (nhds R)
+'RH_HilbertLimit.root_tendsto_of_monotone_block_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.subexponential_of_eventual_exp_upper {V : ℕ → ℝ}
+  (hV : ∀ (ε : ℝ), 0 < ε → ∀ᶠ (n : ℕ) in Filter.atTop, V n ≤ Real.exp (ε * ↑n)) : RH_HilbertLimit.Subexponential V
+'RH_HilbertLimit.subexponential_of_eventual_exp_upper' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.subexponential_of_logScale_tendsto_zero {V : ℕ → ℝ} (hV : ∀ᶠ (n : ℕ) in Filter.atTop, 0 < V n)
+  (hlog : Filter.Tendsto (RH_HilbertLimit.logScale V) Filter.atTop (nhds 0)) : RH_HilbertLimit.Subexponential V
+'RH_HilbertLimit.subexponential_of_logScale_tendsto_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.log_limit_nonpos_of_subexponential {V : ℕ → ℝ} {l : ℝ} (hV : ∀ᶠ (n : ℕ) in Filter.atTop, 0 < V n)
+  (hlog : Filter.Tendsto (RH_HilbertLimit.logScale V) Filter.atTop (nhds l)) (hSG : RH_HilbertLimit.Subexponential V) :
+  l ≤ 0
+'RH_HilbertLimit.log_limit_nonpos_of_subexponential' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.logScale_tendsto_zero_of_subexponential {V : ℕ → ℝ} (hV : ∀ᶠ (n : ℕ) in Filter.atTop, 1 ≤ V n)
+  (hSG : RH_HilbertLimit.Subexponential V) : Filter.Tendsto (RH_HilbertLimit.logScale V) Filter.atTop (nhds 0)
+'RH_HilbertLimit.logScale_tendsto_zero_of_subexponential' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.subexponential_iff_logScale_zero {V : ℕ → ℝ} (hV : ∀ᶠ (n : ℕ) in Filter.atTop, 1 ≤ V n) :
+  RH_HilbertLimit.Subexponential V ↔ Filter.Tendsto (RH_HilbertLimit.logScale V) Filter.atTop (nhds 0)
+'RH_HilbertLimit.subexponential_iff_logScale_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.subexponential_iff_rootScale_one {V : ℕ → ℝ} (hV : ∀ᶠ (n : ℕ) in Filter.atTop, 1 ≤ V n) :
+  RH_HilbertLimit.Subexponential V ↔ Filter.Tendsto (RH_HilbertLimit.rootScale V) Filter.atTop (nhds 1)
+'RH_HilbertLimit.subexponential_iff_rootScale_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.rate_le_one_of_subexponential {V : ℕ → ℝ} {R : ℝ} (hR : 0 < R)
+  (hV : ∀ᶠ (n : ℕ) in Filter.atTop, 0 < V n)
+  (hlog : Filter.Tendsto (RH_HilbertLimit.logScale V) Filter.atTop (nhds (Real.log R)))
+  (hSG : RH_HilbertLimit.Subexponential V) : R ≤ 1
+'RH_HilbertLimit.rate_le_one_of_subexponential' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.geometric_rate_eq_one_iff_subexponential {V : ℕ → ℝ} {R c C : ℝ} (hR1 : 1 ≤ R) (hc : 0 < c) (hC : 0 < C)
+  (hb : ∀ᶠ (n : ℕ) in Filter.atTop, c * R ^ n ≤ V n ∧ V n ≤ C * R ^ n) : R = 1 ↔ RH_HilbertLimit.Subexponential V
+'RH_HilbertLimit.geometric_rate_eq_one_iff_subexponential' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.geometric_root_one_iff_rate_one {V : ℕ → ℝ} {R c C : ℝ} (hR : 0 < R) (hc : 0 < c) (hC : 0 < C)
+  (hb : ∀ᶠ (n : ℕ) in Filter.atTop, c * R ^ n ≤ V n ∧ V n ≤ C * R ^ n) :
+  Filter.Tendsto (RH_HilbertLimit.rootScale V) Filter.atTop (nhds 1) ↔ R = 1
+'RH_HilbertLimit.geometric_root_one_iff_rate_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.geometric_root_one_iff_subexponential {V : ℕ → ℝ} {R c C : ℝ} (hR1 : 1 ≤ R) (hc : 0 < c) (hC : 0 < C)
+  (hb : ∀ᶠ (n : ℕ) in Filter.atTop, c * R ^ n ≤ V n ∧ V n ≤ C * R ^ n) :
+  Filter.Tendsto (RH_HilbertLimit.rootScale V) Filter.atTop (nhds 1) ↔ RH_HilbertLimit.Subexponential V
+'RH_HilbertLimit.geometric_root_one_iff_subexponential' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.one_le_ellipseRadius (z : ℂ) : 1 ≤ RH_HilbertLimit.ellipseRadius z
+'RH_HilbertLimit.one_le_ellipseRadius' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.ellipseRadius_eq_one_iff (z : ℂ) : RH_HilbertLimit.ellipseRadius z = 1 ↔ RH_HilbertLimit.InUnitSegment z
+'RH_HilbertLimit.ellipseRadius_eq_one_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.ellipseRadius_le_one_iff (z : ℂ) : RH_HilbertLimit.ellipseRadius z ≤ 1 ↔ RH_HilbertLimit.InUnitSegment z
+'RH_HilbertLimit.ellipseRadius_le_one_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.one_lt_ellipseRadius_iff (z : ℂ) :
+  1 < RH_HilbertLimit.ellipseRadius z ↔ ¬RH_HilbertLimit.InUnitSegment z
+'RH_HilbertLimit.one_lt_ellipseRadius_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.spectralBounded_of_norm_bound.{u_1} {ι : Type u_1} {q : ι → ℂ} {S : ℝ} (hS : 0 ≤ S)
+  (hq : ∀ (i : ι), ‖q i‖ ≤ S) : RH_HilbertLimit.SpectralBounded q
+'RH_HilbertLimit.spectralBounded_of_norm_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.one_le_spectralRadius.{u_1} {ι : Type u_1} {q : ι → ℂ} (hq : RH_HilbertLimit.SpectralBounded q) :
+  1 ≤ RH_HilbertLimit.spectralRadius q
+'RH_HilbertLimit.one_le_spectralRadius' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.ellipseRadius_le_spectralRadius.{u_1} {ι : Type u_1} {q : ι → ℂ}
+  (hq : RH_HilbertLimit.SpectralBounded q) (i : ι) :
+  RH_HilbertLimit.ellipseRadius (q i) ≤ RH_HilbertLimit.spectralRadius q
+'RH_HilbertLimit.ellipseRadius_le_spectralRadius' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.spectralRadius_eq_sSup_range.{u_1} {ι : Type u_1} [Nonempty ι] {q : ι → ℂ}
+  (hq : RH_HilbertLimit.SpectralBounded q) :
+  RH_HilbertLimit.spectralRadius q = sSup (Set.range fun i => RH_HilbertLimit.ellipseRadius (q i))
+'RH_HilbertLimit.spectralRadius_eq_sSup_range' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.spectralRadius_eq_one_iff.{u_1} {ι : Type u_1} {q : ι → ℂ} (hq : RH_HilbertLimit.SpectralBounded q) :
+  RH_HilbertLimit.spectralRadius q = 1 ↔ ∀ (i : ι), RH_HilbertLimit.InUnitSegment (q i)
+'RH_HilbertLimit.spectralRadius_eq_one_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.one_lt_spectralRadius_of_node.{u_1} {ι : Type u_1} {q : ι → ℂ} (hq : RH_HilbertLimit.SpectralBounded q)
+  (i : ι) (hi : ¬RH_HilbertLimit.InUnitSegment (q i)) : 1 < RH_HilbertLimit.spectralRadius q
+'RH_HilbertLimit.one_lt_spectralRadius_of_node' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.norm_affine_le_ellipseRadius (q x : ℂ) (hx : ‖x‖ ≤ 1) :
+  ‖1 + (x - 1) * q‖ ≤ RH_HilbertLimit.ellipseRadius q
+'RH_HilbertLimit.norm_affine_le_ellipseRadius' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.rootOfNode_nonpositive_iff {κ : ℝ} (hκ : 0 < κ) {q : ℂ} (hq : q ≠ 0) :
+  (RH_HilbertLimit.rootOfNode κ q).im = 0 ∧ (RH_HilbertLimit.rootOfNode κ q).re ≤ 0 ↔ q.im = 0 ∧ 0 ≤ q.re
+'RH_HilbertLimit.rootOfNode_nonpositive_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.square_nonpositive_iff_re_zero (w : ℂ) : (w ^ 2).im = 0 ∧ (w ^ 2).re ≤ 0 ↔ w.re = 0
+'RH_HilbertLimit.square_nonpositive_iff_re_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.xi_zero_iff_nontrivialZero (s : ℂ) : AWPIRH.xi s = 0 ↔ AWPIRH.NontrivialZero s
+'RH_HilbertLimit.xi_zero_iff_nontrivialZero' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.nativeRH_iff_xiZerosCritical : RiemannHypothesis ↔ ∀ (s : ℂ), AWPIRH.xi s = 0 → s.re = 1 / 2
+'RH_HilbertLimit.nativeRH_iff_xiZerosCritical' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.nativeRH_iff_thetaZerosNonpositive : RiemannHypothesis ↔ RH_HilbertLimit.ThetaZerosNonpositive
+'RH_HilbertLimit.nativeRH_iff_thetaZerosNonpositive' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.actualNormalizedMoment_zero (hκ : RH_HilbertLimit.actualKappa ≠ 0) :
+  RH_HilbertLimit.actualNormalizedMoment 0 = 1
+'RH_HilbertLimit.actualNormalizedMoment_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.ActualSpectralCalibration.complexMoment_eq_real.{u_1} {ι : Type u_1}
+  (D : RH_HilbertLimit.ActualSpectralCalibration ι) (n : ℕ) :
+  RH_HilbertLimit.actualComplexMoment n = ↑(RH_HilbertLimit.actualMoment n)
+'RH_HilbertLimit.ActualSpectralCalibration.complexMoment_eq_real' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+RH_HilbertLimit.ActualSpectralCalibration.mass_one.{u_1} {ι : Type u_1}
+  (D : RH_HilbertLimit.ActualSpectralCalibration ι) : HasSum D.node 1
+'RH_HilbertLimit.ActualSpectralCalibration.mass_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.ActualSpectralCalibration.re_mass_one.{u_1} {ι : Type u_1}
+  (D : RH_HilbertLimit.ActualSpectralCalibration ι) : HasSum (fun i => (D.node i).re) 1
+'RH_HilbertLimit.ActualSpectralCalibration.re_mass_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.ActualSpectralCalibration.norm_node_le_total.{u_1} {ι : Type u_1}
+  (D : RH_HilbertLimit.ActualSpectralCalibration ι) (i : ι) : ‖D.node i‖ ≤ ∑' (j : ι), ‖D.node j‖
+'RH_HilbertLimit.ActualSpectralCalibration.norm_node_le_total' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+RH_HilbertLimit.ActualSpectralCalibration.bounded.{u_1} {ι : Type u_1}
+  (D : RH_HilbertLimit.ActualSpectralCalibration ι) : RH_HilbertLimit.SpectralBounded D.node
+'RH_HilbertLimit.ActualSpectralCalibration.bounded' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.ActualSpectralCalibration.nodes_nonnegative_iff_nativeRH.{u_1} {ι : Type u_1}
+  (D : RH_HilbertLimit.ActualSpectralCalibration ι) :
+  (∀ (i : ι), (D.node i).im = 0 ∧ 0 ≤ (D.node i).re) ↔ RiemannHypothesis
+'RH_HilbertLimit.ActualSpectralCalibration.nodes_nonnegative_iff_nativeRH' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+RH_HilbertLimit.ActualSpectralCalibration.nodes_segment_iff_nativeRH.{u_1} {ι : Type u_1}
+  (D : RH_HilbertLimit.ActualSpectralCalibration ι) :
+  (∀ (i : ι), RH_HilbertLimit.InUnitSegment (D.node i)) ↔ RiemannHypothesis
+'RH_HilbertLimit.ActualSpectralCalibration.nodes_segment_iff_nativeRH' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+RH_HilbertLimit.ActualSpectralCalibration.radius_one_iff_nativeRH.{u_1} {ι : Type u_1}
+  (D : RH_HilbertLimit.ActualSpectralCalibration ι) : RH_HilbertLimit.spectralRadius D.node = 1 ↔ RiemannHypothesis
+'RH_HilbertLimit.ActualSpectralCalibration.radius_one_iff_nativeRH' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+RH_HilbertLimit.norm_spectralTerm (N j : ℕ) (z : ℂ) :
+  ‖RH_HilbertLimit.spectralTerm N j z‖ = ↑(N.choose j) * ‖z‖ ^ (j + 1) * ‖1 - z‖ ^ (N - j)
+'RH_HilbertLimit.norm_spectralTerm' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.sum_norm_spectralTerm (N : ℕ) (z : ℂ) :
+  ∑ j ∈ Finset.range (N + 1), ‖RH_HilbertLimit.spectralTerm N j z‖ = ‖z‖ * RH_HilbertLimit.ellipseRadius z ^ N
+'RH_HilbertLimit.sum_norm_spectralTerm' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.norm_spectralTerm_le {N j : ℕ} (hj : j ∈ Finset.range (N + 1)) (z : ℂ) {R : ℝ}
+  (hR : RH_HilbertLimit.ellipseRadius z ≤ R) : ‖RH_HilbertLimit.spectralTerm N j z‖ ≤ ‖z‖ * R ^ N
+'RH_HilbertLimit.norm_spectralTerm_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.spectralTerm_re_nonneg {z : ℂ} (hz : RH_HilbertLimit.InUnitSegment z) (N j : ℕ) :
+  0 ≤ (RH_HilbertLimit.spectralTerm N j z).re
+'RH_HilbertLimit.spectralTerm_re_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.norm_rowGenerating_le (u : ℕ → ℝ) (N : ℕ) {x : ℂ} (hx : ‖x‖ ≤ 1) :
+  ‖RH_HilbertLimit.rowGenerating u N x‖ ≤ RH_HilbertLimit.rowVariation u N
+'RH_HilbertLimit.norm_rowGenerating_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.ActualSpectralCalibration.weight_hasSum.{u_1} {ι : Type u_1}
+  (D : RH_HilbertLimit.ActualSpectralCalibration ι) (N j : ℕ) :
+  HasSum (fun i => RH_HilbertLimit.spectralTerm N j (D.node i)) ↑(RH_HilbertLimit.actualWeight N j)
+'RH_HilbertLimit.ActualSpectralCalibration.weight_hasSum' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.ActualSpectralCalibration.variation_one_le.{u_1} {ι : Type u_1}
+  (D : RH_HilbertLimit.ActualSpectralCalibration ι) (N : ℕ) : 1 ≤ RH_HilbertLimit.actualVariation N
+'RH_HilbertLimit.ActualSpectralCalibration.variation_one_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.ActualSpectralCalibration.variation_monotone : Monotone RH_HilbertLimit.actualVariation
+'RH_HilbertLimit.ActualSpectralCalibration.variation_monotone' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+RH_HilbertLimit.ActualSpectralCalibration.term_norm_summable.{u_1} {ι : Type u_1}
+  (D : RH_HilbertLimit.ActualSpectralCalibration ι) {N j : ℕ} (hj : j ∈ Finset.range (N + 1)) :
+  Summable fun i => ‖RH_HilbertLimit.spectralTerm N j (D.node i)‖
+'RH_HilbertLimit.ActualSpectralCalibration.term_norm_summable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+RH_HilbertLimit.ActualSpectralCalibration.variation_upper.{u_1} {ι : Type u_1}
+  (D : RH_HilbertLimit.ActualSpectralCalibration ι) (N : ℕ) :
+  RH_HilbertLimit.actualVariation N ≤ (∑' (i : ι), ‖D.node i‖) * RH_HilbertLimit.spectralRadius D.node ^ N
+'RH_HilbertLimit.ActualSpectralCalibration.variation_upper' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.ActualSpectralCalibration.total_norm_pos.{u_1} {ι : Type u_1}
+  (D : RH_HilbertLimit.ActualSpectralCalibration ι) : 0 < ∑' (i : ι), ‖D.node i‖
+'RH_HilbertLimit.ActualSpectralCalibration.total_norm_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.ActualSpectralCalibration.weights_nonneg_of_nativeRH.{u_1} {ι : Type u_1}
+  (D : RH_HilbertLimit.ActualSpectralCalibration ι) (hRH : RiemannHypothesis) (N j : ℕ) :
+  0 ≤ RH_HilbertLimit.actualWeight N j
+'RH_HilbertLimit.ActualSpectralCalibration.weights_nonneg_of_nativeRH' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+RH_HilbertLimit.ActualSpectralCalibration.variation_eq_one_of_nativeRH.{u_1} {ι : Type u_1}
+  (D : RH_HilbertLimit.ActualSpectralCalibration ι) (hRH : RiemannHypothesis) (N : ℕ) :
+  RH_HilbertLimit.actualVariation N = 1
+'RH_HilbertLimit.ActualSpectralCalibration.variation_eq_one_of_nativeRH' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+RH_HilbertLimit.ActualSpectralCalibration.variation_eq_one_of_radius_one.{u_1} {ι : Type u_1}
+  (D : RH_HilbertLimit.ActualSpectralCalibration ι) (hR : RH_HilbertLimit.spectralRadius D.node = 1) (N : ℕ) :
+  RH_HilbertLimit.actualVariation N = 1
+'RH_HilbertLimit.ActualSpectralCalibration.variation_eq_one_of_radius_one' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+RH_HilbertLimit.inverseRowControl_pos {d : ℕ} (rate : Fin d → ℂ) (i₀ : Fin d) :
+  0 < RH_HilbertLimit.inverseRowControl rate i₀
+'RH_HilbertLimit.inverseRowControl_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.recoveryConstant_pos {d : ℕ} (rate c : Fin d → ℂ) (i₀ : Fin d) (hc : c i₀ ≠ 0) :
+  0 < RH_HilbertLimit.recoveryConstant rate c i₀
+'RH_HilbertLimit.recoveryConstant_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.finiteBlockMatrix_det_ne_zero {d : ℕ} {rate : Fin d → ℂ} (hrate : Function.Injective rate) :
+  (RH_HilbertLimit.finiteBlockMatrix rate).det ≠ 0
+'RH_HilbertLimit.finiteBlockMatrix_det_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.finiteExponential_block_mulVec {d : ℕ} (rate c : Fin d → ℂ) (N : ℕ) :
+  ((RH_HilbertLimit.finiteBlockMatrix rate).mulVec fun i => c i * rate i ^ N) = fun k =>
+    RH_HilbertLimit.finiteExponentialSum rate c (N + ↑k)
+'RH_HilbertLimit.finiteExponential_block_mulVec' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.finite_exponential_recovery {d : ℕ} {rate : Fin d → ℂ} (hrate : Function.Injective rate) (c : Fin d → ℂ)
+  (N : ℕ) (i₀ : Fin d) :
+  c i₀ * rate i₀ ^ N =
+    ∑ k, (RH_HilbertLimit.finiteBlockMatrix rate)⁻¹ i₀ k * RH_HilbertLimit.finiteExponentialSum rate c (N + ↑k)
+'RH_HilbertLimit.finite_exponential_recovery' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.coefficient_norm_le_block_bound {d : ℕ} {rate c : Fin d → ℂ} {N : ℕ} {i₀ : Fin d} {M : ℝ}
+  (hrate : Function.Injective rate) (hM : 0 ≤ M)
+  (hb : ∀ (k : Fin d), ‖RH_HilbertLimit.finiteExponentialSum rate c (N + ↑k)‖ ≤ M) :
+  ‖c i₀‖ * ‖rate i₀‖ ^ N ≤ RH_HilbertLimit.inverseRowControl rate i₀ * M
+'RH_HilbertLimit.coefficient_norm_le_block_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.recoveryConstant_mul_pow_le_block_bound {d : ℕ} {rate c : Fin d → ℂ} {N : ℕ} {i₀ : Fin d} {M : ℝ}
+  (hrate : Function.Injective rate) (hM : 0 ≤ M)
+  (hb : ∀ (k : Fin d), ‖RH_HilbertLimit.finiteExponentialSum rate c (N + ↑k)‖ ≤ M) :
+  RH_HilbertLimit.recoveryConstant rate c i₀ * ‖rate i₀‖ ^ N ≤ M
+'RH_HilbertLimit.recoveryConstant_mul_pow_le_block_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.finite_exponential_shifted_lower {d : ℕ} {rate c : Fin d → ℂ} {V : ℕ → ℝ}
+  (hrate : Function.Injective rate) (i₀ : Fin d) (hmono : Monotone V)
+  (hdom : ∀ (n : ℕ), ‖RH_HilbertLimit.finiteExponentialSum rate c n‖ ≤ V n) (N : ℕ) :
+  RH_HilbertLimit.recoveryConstant rate c i₀ * ‖rate i₀‖ ^ N ≤ V (N + d)
+'RH_HilbertLimit.finite_exponential_shifted_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.absorb_subdominant_tail {V : ℕ → ℝ} {A C R r : ℝ} {d : ℕ} (hA : 0 < A) (hR : 0 < R) (hr : 0 ≤ r)
+  (hrR : r < R) (hpre : ∀ᶠ (n : ℕ) in Filter.atTop, A * R ^ n ≤ V (n + d) + C * r ^ n) :
+  ∀ᶠ (n : ℕ) in Filter.atTop, A / 2 * R ^ n ≤ V (n + d)
+'RH_HilbertLimit.absorb_subdominant_tail' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.finite_tail_preliminary_lower {d : ℕ} {rate c : Fin d → ℂ} {V : ℕ → ℝ} {E : ℕ → ℂ} {C r : ℝ}
+  (hrate : Function.Injective rate) (i₀ : Fin d) (hmono : Monotone V) (hC : 0 ≤ C) (hr : 1 ≤ r)
+  (hE : ∀ (n : ℕ), ‖E n‖ ≤ C * r ^ n) (hdom : ∀ (n : ℕ), ‖RH_HilbertLimit.finiteExponentialSum rate c n + E n‖ ≤ V n)
+  (N : ℕ) : RH_HilbertLimit.recoveryConstant rate c i₀ * ‖rate i₀‖ ^ N ≤ V (N + d) + C * r ^ d * r ^ N
+'RH_HilbertLimit.finite_tail_preliminary_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.finite_tail_block_lower {d : ℕ} {rate c : Fin d → ℂ} {V : ℕ → ℝ} {E : ℕ → ℂ} {C r : ℝ}
+  (hrate : Function.Injective rate) (i₀ : Fin d) (hc : c i₀ ≠ 0) (hmono : Monotone V) (hC : 0 ≤ C) (hr : 1 ≤ r)
+  (hrR : r < ‖rate i₀‖) (hE : ∀ (n : ℕ), ‖E n‖ ≤ C * r ^ n)
+  (hdom : ∀ (n : ℕ), ‖RH_HilbertLimit.finiteExponentialSum rate c n + E n‖ ≤ V n) :
+  ∃ a, 0 < a ∧ ∀ᶠ (n : ℕ) in Filter.atTop, ∃ k ≤ d, a * ‖rate i₀‖ ^ n ≤ V (n + k)
+'RH_HilbertLimit.finite_tail_block_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.root_tendsto_of_finite_dominant_tail {d : ℕ} {rate c : Fin d → ℂ} {V : ℕ → ℝ} {E : ℕ → ℂ} {C D r : ℝ}
+  (hrate : Function.Injective rate) (i₀ : Fin d) (hc : c i₀ ≠ 0) (hmono : Monotone V) (hC : 0 ≤ C) (hD : 0 < D)
+  (hr : 1 ≤ r) (hrR : r < ‖rate i₀‖) (hE : ∀ (n : ℕ), ‖E n‖ ≤ C * r ^ n)
+  (hdom : ∀ (n : ℕ), ‖RH_HilbertLimit.finiteExponentialSum rate c n + E n‖ ≤ V n)
+  (hupper : ∀ᶠ (n : ℕ) in Filter.atTop, V n ≤ D * ‖rate i₀‖ ^ n) :
+  Filter.Tendsto (RH_HilbertLimit.rootScale V) Filter.atTop (nhds ‖rate i₀‖)
+'RH_HilbertLimit.root_tendsto_of_finite_dominant_tail' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.DominantTailData.envelope.{u_1} {ι : Type u_1} {D : RH_HilbertLimit.ActualSpectralCalibration ι}
+  (T : RH_HilbertLimit.DominantTailData D) (N : ℕ) :
+  ‖RH_HilbertLimit.finiteExponentialSum T.rate T.coefficient N + T.tail N‖ ≤ RH_HilbertLimit.actualVariation N
+'RH_HilbertLimit.DominantTailData.envelope' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.actual_root_tendsto_of_dominant_tail.{u_1} {ι : Type u_1}
+  (D : RH_HilbertLimit.ActualSpectralCalibration ι) (T : RH_HilbertLimit.DominantTailData D) :
+  Filter.Tendsto (RH_HilbertLimit.rootScale RH_HilbertLimit.actualVariation) Filter.atTop
+    (nhds (RH_HilbertLimit.spectralRadius D.node))
+'RH_HilbertLimit.actual_root_tendsto_of_dominant_tail' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.actual_root_tendsto_of_analytic_inputs.{u_1} {ι : Type u_1}
+  (D : RH_HilbertLimit.ActualSpectralCalibration ι) (hExtract : RH_HilbertLimit.DominantExtraction D) :
+  Filter.Tendsto (RH_HilbertLimit.rootScale RH_HilbertLimit.actualVariation) Filter.atTop
+    (nhds (RH_HilbertLimit.spectralRadius D.node))
+'RH_HilbertLimit.actual_root_tendsto_of_analytic_inputs' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.exists_actual_root_limit_of_analytic_inputs.{u_1} {ι : Type u_1}
+  (D : RH_HilbertLimit.ActualSpectralCalibration ι) (hExtract : RH_HilbertLimit.DominantExtraction D) :
+  ∃ R, 1 ≤ R ∧ Filter.Tendsto (RH_HilbertLimit.rootScale RH_HilbertLimit.actualVariation) Filter.atTop (nhds R)
+'RH_HilbertLimit.exists_actual_root_limit_of_analytic_inputs' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.actual_root_one_iff_nativeRH_of_analytic_inputs.{u_1} {ι : Type u_1}
+  (D : RH_HilbertLimit.ActualSpectralCalibration ι) (hExtract : RH_HilbertLimit.DominantExtraction D) :
+  Filter.Tendsto (RH_HilbertLimit.rootScale RH_HilbertLimit.actualVariation) Filter.atTop (nhds 1) ↔ RiemannHypothesis
+'RH_HilbertLimit.actual_root_one_iff_nativeRH_of_analytic_inputs' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+RH_HilbertLimit.actual_subexponential_iff_nativeRH_of_analytic_inputs.{u_1} {ι : Type u_1}
+  (D : RH_HilbertLimit.ActualSpectralCalibration ι) (hExtract : RH_HilbertLimit.DominantExtraction D) :
+  RH_HilbertLimit.Subexponential RH_HilbertLimit.actualVariation ↔ RiemannHypothesis
+'RH_HilbertLimit.actual_subexponential_iff_nativeRH_of_analytic_inputs' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+RH_HilbertLimit.actual_logScale_zero_iff_nativeRH_of_analytic_inputs.{u_1} {ι : Type u_1}
+  (D : RH_HilbertLimit.ActualSpectralCalibration ι) (hExtract : RH_HilbertLimit.DominantExtraction D) :
+  Filter.Tendsto (RH_HilbertLimit.logScale RH_HilbertLimit.actualVariation) Filter.atTop (nhds 0) ↔ RiemannHypothesis
+'RH_HilbertLimit.actual_logScale_zero_iff_nativeRH_of_analytic_inputs' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+RH_HilbertLimit.actual_all_variation_one_iff_nativeRH_of_analytic_inputs.{u_1} {ι : Type u_1}
+  (D : RH_HilbertLimit.ActualSpectralCalibration ι) (hExtract : RH_HilbertLimit.DominantExtraction D) :
+  (∀ (N : ℕ), RH_HilbertLimit.actualVariation N = 1) ↔ RiemannHypothesis
+'RH_HilbertLimit.actual_all_variation_one_iff_nativeRH_of_analytic_inputs' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+RH_HilbertLimit.actual_weights_nonnegative_iff_nativeRH_of_analytic_inputs.{u_1} {ι : Type u_1}
+  (D : RH_HilbertLimit.ActualSpectralCalibration ι) (hExtract : RH_HilbertLimit.DominantExtraction D) :
+  (∀ (N j : ℕ), j ≤ N → 0 ≤ RH_HilbertLimit.actualWeight N j) ↔ RiemannHypothesis
+'RH_HilbertLimit.actual_weights_nonnegative_iff_nativeRH_of_analytic_inputs' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+RH_HilbertLimit.actual_bounded_variation_iff_nativeRH_of_analytic_inputs.{u_1} {ι : Type u_1}
+  (D : RH_HilbertLimit.ActualSpectralCalibration ι) (hExtract : RH_HilbertLimit.DominantExtraction D) :
+  (∃ B, ∀ (N : ℕ), RH_HilbertLimit.actualVariation N ≤ B) ↔ RiemannHypothesis
+'RH_HilbertLimit.actual_bounded_variation_iff_nativeRH_of_analytic_inputs' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+RH_HilbertLimit.nativeRH_of_actual_subexponential_bound.{u_1} {ι : Type u_1}
+  (D : RH_HilbertLimit.ActualSpectralCalibration ι) (hExtract : RH_HilbertLimit.DominantExtraction D)
+  (hbound : RH_HilbertLimit.ActualSubexponentialBound) : RiemannHypothesis
+'RH_HilbertLimit.nativeRH_of_actual_subexponential_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+ANCHOR_SAVED=C:\Users\Simon\AppData\Local\LEAN_ANCHORINGS\RH_HILBERT_LIMIT\LOCAL_COMPILER\lean-4.33.0\Audit\2fc947e7b73b394bfbef2e3f61ed262cf81568440698760955fe5ad7860b6a87\20261027T155231Z-393557375-241634247\receipt.txt
+COMPILE_AND_AXIOM_AUDIT_PASS=Audit
+FINAL_AUDIT_DECLARATIONS=126
+AXIOM_AUDIT=PASS_STANDARD_LOGICAL_AXIOMS_ONLY
+SORRYAX=NONE
+MATHEMATICAL_STATUS=CONDITIONAL_PARTIAL
+ACTUAL_SPECTRAL_CALIBRATION=OPEN
+DOMINANT_EXTRACTION=OPEN
+UNCONDITIONAL_ACTUAL_LIMIT=NOT_CERTIFIED
+ACTUAL_SUBEXPONENTIAL_BOUND=OPEN
+UNCONDITIONAL_RH=NOT_ESTABLISHED
+FINITE_ACCEPTED_WITNESS=NOT_ESTABLISHED
+COMPILED_MODULES=3
+FROZEN_REUSED_MODULES=7
+AUDIT_ONLY_MODULES=0
+LEGACY_MIGRATED_MODULES=0
+PROJECT_BUILD=PASS
+RUN=PASS
+Logs: C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_1_4_construction\run-build.log and C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_1_4_construction\run-audit.log
+
+C:\Users\Simon\Downloads>

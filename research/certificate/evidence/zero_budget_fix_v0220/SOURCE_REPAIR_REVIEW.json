@@ -1,0 +1,18 @@
+{
+  "schema": "RH_HILBERT_V0220_ZERO_BUDGET_SOURCE_REVIEW_V1",
+  "status": "SOURCE_REVIEW_ONLY_NATIVE_COMPILATION_PENDING",
+  "source": "RH_HilbertLimit/ActualCancellationWitness.lean",
+  "old_source_sha256": "e8281816a7dc16ca30dfe0009df97ea201c5259f0a137f41ca768f6da3c8c6f8",
+  "new_source_sha256": "0daeeb9fab456f2d399cc95cfda2b94c55f03d2c403b92d3a18579a0a7d622d6",
+  "declaration": "RH_HilbertLimit.zero_cancellationBudget_admissible_of_nativeRH",
+  "repair": "PRESERVE_NATURAL_NUMBER_CAST_IN_CHANGE; REPLACE_REAL_ZERO_WITH_CAST_NAT_ZERO",
+  "old_expression": "(0 : ℝ)",
+  "new_expression": "((0 : ℕ) : ℝ)",
+  "reason": "The record coefficient is Nat. Reducing its zero projection leaves a Nat-to-Real cast. change requires definitional equality; the final simp applies Nat.cast_zero and zero arithmetic.",
+  "left_side_alignment": "actualVariation n is defined as rowVariation actualNormalizedMoment n.",
+  "reviewed_independently_by": "/root/proof_repair",
+  "theorem_statements_definitions_hypotheses_and_line_numbers": "UNCHANGED",
+  "lean_execution": false,
+  "native_compilation": false,
+  "axiom_audit_execution": false
+}

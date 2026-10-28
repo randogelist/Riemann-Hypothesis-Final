@@ -1,0 +1,72 @@
+--- RH_HILBERT_LIMIT_LEAN_v0_2_8_construction/tools/native_runner.js
++++ RH_HILBERT_LIMIT_LEAN_v0_2_9_construction/tools/native_runner.js
+@@ -5,8 +5,8 @@
+ var shell = new ActiveXObject("WScript.Shell");
+ var env = shell.Environment("PROCESS");
+ var root = fso.GetAbsolutePathName(".");
+-var PACKAGE = "RH_HILBERT_LIMIT_LEAN_v0_2_8_construction";
+-var RUNNER_VERSION = "RH_HILBERT_NATIVE_RUNNER_v0_2_7";
++var PACKAGE = "RH_HILBERT_LIMIT_LEAN_v0_2_9_construction";
++var RUNNER_VERSION = "RH_HILBERT_NATIVE_RUNNER_v0_2_9";
+ var SCHEMA = "RH_HILBERT_LOCAL_ANCHOR_V2";
+ var CACHE_LAYOUT = "COMPACT_V1";
+ var HELPER_SCHEMA = "RH_HILBERT_SHA256_HELPER_CACHE_V1";
+@@ -48,10 +48,25 @@
+ var hashPhaseRecords = [], stagePhaseRecords = [], modulePhaseRecords = [];
+ var hashPhaseTotals = {sets:0,files:0,batch_sets:0,certutil_sets:0,elapsed_ms:0,failed_sets:0};
+ var runtimeStarted = new Date().getTime();
++var persistentStorageRoot = "E:\\RH-FAST";
++var persistentWorkspacesRoot = persistentStorageRoot + "\\workspaces";
++var persistentProjectCache = persistentStorageRoot + "\\anchors";
++var persistentWorkspace = "", persistentPriorAnchorRoot = "", persistentProfileConfigured = false;
+ 
+ function trim(s) { return String(s).replace(/^\s+|\s+$/g, ""); }
+ function norm(p) { return fso.GetAbsolutePathName(p).replace(/\\+$/g, ""); }
+ function keyPath(p) { return norm(p).toLowerCase(); }
++function configurePersistentProfile() {
++  /* Location validation precedes every lock/log write. This profile neither
++     creates nor moves a workspace; the extraction command prepares it. */
++  var workspace=norm(root),boundary=keyPath(persistentWorkspacesRoot)+"\\";
++  if(keyPath(workspace).indexOf(boundary)!==0)error("PERSISTENT_WORKSPACE_REQUIRED: Extract the entire "+PACKAGE+
++    " ZIP under "+persistentWorkspacesRoot+" and run that extracted package's run.cmd. Current package directory: "+workspace+
++    ". No fallback workspace or cache writes on C: are enabled.");
++  if(!persistentProfileConfigured)persistentPriorAnchorRoot=String(env("LEAN_ANCHORINGS_ROOT")||"");
++  env("LEAN_ANCHORINGS_ROOT")=persistentProjectCache;
++  persistentWorkspace=workspace;persistentProfileConfigured=true;
++}
+ function compactToken(label) { return textHash(runTag+"|"+label+"|"+Math.random()).slice(0,16); }
+ function shortCacheGroup(kind,inputKey) { return anchorRoot+"\\"+kind+"\\"+inputKey.slice(0,24); }
+ function requireShortPath(path,purpose) {
+@@ -745,6 +760,7 @@
+   anchorRoot=norm(base)+"\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0";
+   checkAnchorPathLength(anchorRoot,true);mkdir(anchorRoot);
+   addAnchorRoot(anchorRoot,false);
++  if(persistentPriorAnchorRoot&&keyPath(persistentPriorAnchorRoot)!==keyPath(persistentProjectCache))addAnchorRoot(persistentPriorAnchorRoot,true);
+   if(env("LEAN_ANCHORINGS_ROOT")&&env("LOCALAPPDATA"))addAnchorRoot(env("LOCALAPPDATA")+"\\LEAN_ANCHORINGS",false);
+   if(env("LEAN_ANCHORINGS_IMPORT_ROOT"))addAnchorRoot(env("LEAN_ANCHORINGS_IMPORT_ROOT"),true);
+   if(env("LEAN_ANCHORINGS_IMPORT_ROOTS")){
+@@ -1190,6 +1206,8 @@
+     '  "mathematical_status": "CONDITIONAL_PARTIAL",','  "actual_spectral_calibration": "OPEN",','  "dominant_extraction": "OPEN",','  "unconditional_actual_limit": "NOT_CERTIFIED",','  "actual_subexponential_bound": "OPEN",','  "unconditional_rh": "NOT_ESTABLISHED",','  "finite_checker_equivalence": "OPEN",',
+     '  "final_audit_source": '+quoteJSON(finalAuditRelative)+",",
+     '  "project_cache": "READ_WRITE",','  "cache_root": '+quoteJSON(anchorRoot)+",",
++    '  "persistent_storage_root": '+quoteJSON(persistentStorageRoot)+",",'  "persistent_workspace": '+quoteJSON(persistentWorkspace)+",",
++    '  "persistent_project_cache": '+quoteJSON(persistentProjectCache)+",",'  "cache_retention": "VALID_ANCHORS_NO_QUOTA_NO_AUTOMATIC_EVICTION",',
+     '  "hash_helper_cache": '+quoteJSON(helperCacheState)+",",
+     '  "lock_policy": "PID_CREATION_AND_PERMANENT_QUARANTINE_V1",','  "stale_locks_recovered": '+lockRecovered+",",
+     '  "compiled": '+compiled+",",'  "frozen_reused": '+reused+",",'  "audit_only": '+auditOnly+",",'  "legacy_migrated": '+migrated+",",'  "failed": '+failed+",",'  "blocked": '+blocked+",",
+@@ -1204,12 +1222,15 @@
+ }
+ var exitCode=1;
+ try{
++  stage="PERSISTENT_PROFILE";configurePersistentProfile();
+   stage="RUNNER_LOCK";acquireRunnerLock();
+   write(logPath,"");write(auditLogPath,"");mkdir(helpers);
+   for(var li=0;li<lockEvents.length;li++)log(lockEvents[li]);
+   if(!exists(certutil))error("Native certutil.exe is required for SHA256 fingerprints.");
+   if(textHash("")!=="e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"||textHash("abc")!=="ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad")error("Manifest SHA256 self-check failed.");
+   log("PACKAGE="+PACKAGE);log("RUNNER="+RUNNER_VERSION);log("ANCHOR_SCHEMA="+SCHEMA);log("TARGET="+TARGET);
++  log("PERSISTENT_STORAGE_ROOT="+persistentStorageRoot);log("PERSISTENT_WORKSPACE="+persistentWorkspace);
++  log("PERSISTENT_PROJECT_CACHE="+persistentProjectCache);log("CACHE_RETENTION=VALID_ANCHORS_NO_QUOTA_NO_AUTOMATIC_EVICTION");
+   log("RUNNER_LOCK_POLICY=PID_CREATION_AND_PERMANENT_QUARANTINE_V1");
+   log("RUNNER_PROFILE=LOCAL_FAST_CACHED");log("CACHE_VALIDATION=FRESH_CONTENT_HASHES_SAME_TARGET_AUDIT");log("ANCHOR_WRITE_LAYOUT=COMPACT_V1");
+   log("NETWORK=NOT_USED");log("LAKE=NOT_USED");log("PYTHON=NOT_USED");log("POWERSHELL=NOT_USED");log("WSL=NOT_USED");

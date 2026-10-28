@@ -1,0 +1,43 @@
+{
+  "schema": "RH_HILBERT_RUNTIME_REPAIR_PACKAGE_REVIEW_V1",
+  "status": "STATIC_PRESERVATION_PASS; NATIVE_PENDING",
+  "package": "RH_HILBERT_LIMIT_LEAN_v0_2_13_construction",
+  "lean_sources_byte_preserved": 92,
+  "frozen_inputs_byte_preserved": 103,
+  "new_lean_sources": 0,
+  "selected_final_audit": "AnalyticAudit.lean",
+  "aggregate_axiom_targets": 370,
+  "protected_function_text_preserved": [
+    "moduleInput",
+    "checkAxioms",
+    "readAnchorCore",
+    "workingArtifactsMatch",
+    "restoreAnchor",
+    "saveAnchor",
+    "acceptRestored",
+    "makeGlobalKey",
+    "finalAudit",
+    "assertNoLockWorkers",
+    "quarantineStaleLock",
+    "releaseRunnerLock",
+    "lockSnapshotAt",
+    "identifyLockSelf",
+    "parallelShutdown"
+  ],
+  "new_user_native_evidence": "v0.2.12 partial FAIL tail; no mathematical promotion",
+  "focused_mock_report": "evidence/runtime_v0213/tests/mock_report.json",
+  "changed_parent_files": [
+    "PROVENANCE.json",
+    "README.md",
+    "RUNNER_LOGIC_VALIDATION.json",
+    "RUNNER_NOTES.txt",
+    "SHA256SUMS.txt",
+    "STATIC_REVIEW.json",
+    "STATUS.json",
+    "runner-version.txt",
+    "tools/native_runner.js"
+  ],
+  "formal_closure": "OPEN",
+  "finite_checker_equivalence": "OPEN",
+  "native_verification": "NOT_RUN"
+}

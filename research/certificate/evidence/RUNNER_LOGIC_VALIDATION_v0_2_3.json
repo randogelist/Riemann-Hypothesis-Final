@@ -1,0 +1,53 @@
+{
+  "schema": "RH_HILBERT_LOCK_AND_CACHE_MOCK_VALIDATION_V023",
+  "status": "PASS_MOCK_HOST_ONLY",
+  "runner_sha256": "90a19d878cc528220dd9d6d116c831ebfd075ec01df2086d81dd68cad130f6ba",
+  "cmd_sha256": "8ea89de2a07919a2a3144128b86669c6922acec2e9dce031e53bb606347ef302",
+  "project_cache_scenarios": 25,
+  "helper_cache_scenarios": 17,
+  "lock_scenarios": 25,
+  "total_scenarios": 67,
+  "failed": 0,
+  "preserved_cache_and_identity_functions": {
+    "externalKey": true,
+    "makeGlobalKey": true,
+    "moduleInput": true,
+    "auditKey": true,
+    "verifyCurrent": true,
+    "verifyLegacy": true,
+    "readAnchorCore": true,
+    "restoreAnchor": true,
+    "checkAxioms": true,
+    "workingArtifactsMatch": true,
+    "entryFolders": true,
+    "historicalAnchorCandidates": true,
+    "nextAnchorTag": true,
+    "preflightAnchorPaths": true,
+    "saveAnchor": true,
+    "acceptRestored": true,
+    "processModule": true,
+    "prepareBatchHasher": true,
+    "hasherInput": true,
+    "batchHashes": true,
+    "selectCache": true
+  },
+  "preserved_policies": {
+    "SCHEMA": "RH_HILBERT_LOCAL_ANCHOR_V2",
+    "COMPILE_POLICY": "RH_HILBERT_NATIVE_COMPILE_V1",
+    "AUDIT_POLICY": "RH_HILBERT_STANDARD_AXIOMS_V1",
+    "COMPILE_FLAGS": "native-lean4.33.0;kernel-default;output-olean;resolved-LEAN_PATH;no-extra-options;threads-nonsemantic",
+    "TARGET": "LOCAL_COMPILER"
+  },
+  "reports": [
+    "evidence/cache_mock_report_v023.json",
+    "evidence/helper_cache_mock_report_v023.json",
+    "evidence/lock_mock_report_v023.json"
+  ],
+  "native_windows_execution": false,
+  "lean_execution": false,
+  "lake_execution": false,
+  "csharp_execution_or_compilation": false,
+  "ci_execution": false,
+  "certification": "RUNNER_LOGIC_ONLY; NO_NATIVE_BUILD_OR_AXIOM_AUDIT",
+  "checked_at_utc": "2026-10-27T17:26:40.407369+00:00"
+}

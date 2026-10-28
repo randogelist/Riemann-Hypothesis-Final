@@ -1,0 +1,303 @@
+{
+  "schema": "RH_HILBERT_WARM_NATIVE_TRANSCRIPT_INDEPENDENT_EVIDENCE_REVIEW_V1",
+  "reviewer": "analytic_source",
+  "status": "USER_REPORTED_WARM_CACHE_PASS_CONSISTENT_WITH_BASELINE_SOURCE_AND_PRIOR_SAVED_RECEIPT_PATHS",
+  "transcript": {
+    "path": "/workspace/scratch/f128c1434505/tmp/native_warm_pass_v0210/USER_RUN_MESSAGE.txt",
+    "sha256": "5c9973e4ec34d4e686f88ec0559385508cb1a013d82bac1f1e7745ecc4d2c84c",
+    "bytes": 2113,
+    "lines": 43,
+    "encoding": "UTF-8",
+    "line_endings": "LF transcription",
+    "provenance": "Transcript of the current user message. This hash binds the reviewed transcript only, not original native log-file bytes.",
+    "complete_original_log_file": false,
+    "continuously_observed_native_run": false,
+    "first_line_is_partial_receipt_suffix": true
+  },
+  "baseline_evidence": {
+    "directory": "/workspace/scratch/f128c1434505/output/RH_HILBERT_LIMIT_LEAN_v0_2_10_NATIVE_RUN_PASS_construction",
+    "previous_attached_tail": {
+      "path": "/workspace/scratch/f128c1434505/output/RH_HILBERT_LIMIT_LEAN_v0_2_10_NATIVE_RUN_PASS_construction/evidence/native_run_v0210/USER_RUN_PASS.txt",
+      "sha256": "7db5fbc1ad77ffe0c17be8fc7bbb4de12a0f2f585c204662de4b8a3717c8e432",
+      "bytes": 18707
+    },
+    "summary": {
+      "path": "/workspace/scratch/f128c1434505/output/RH_HILBERT_LIMIT_LEAN_v0_2_10_NATIVE_RUN_PASS_construction/evidence/native_run_v0210/SUMMARY.json",
+      "sha256": "1fd48cbc1d083fbc7de3a0aff89c9deb25298c0cf7b2e4d6fe5964bd3cfb9204",
+      "raw_hash_matches": true,
+      "reviewed_count_fields_match_previous_tail": true
+    }
+  },
+  "baseline_bindings": {
+    "files": {
+      "tools/native_runner.js": {
+        "sha256": "eaf8ebc221f08607bd2256827e8bbafb5e5b2e2509e3e71513fe994db2d9eb97",
+        "bytes": 89574
+      },
+      "compile-order.txt": {
+        "sha256": "196c995a7728c6569594f9ef0b5721a1382a8e98275c383c2d48f48ad3106823",
+        "bytes": 3993
+      },
+      "audit-targets.tsv": {
+        "sha256": "916cceaf788a772a609fc8b14fc1412e07fc6eb6ae230834a3c8ccb16d878b1f",
+        "bytes": 25879
+      },
+      "mathlib-imports.txt": {
+        "sha256": "de30b7b5c862909076398b451edef86aa9916c08b76db1bc0d56e86cd3352dba",
+        "bytes": 3411
+      },
+      "final-audit.txt": {
+        "sha256": "4cb335de643f48edb21f0d2f2eb8790d0b5a2c4350de96d4ab59954c302606b3",
+        "bytes": 22
+      },
+      "run.cmd": {
+        "sha256": "5e6c6561c370c904b13d165986f0c045c6e7732de1745744b03619cf4a4b9f16",
+        "bytes": 1250
+      },
+      "tools/NativeSha256.cs": {
+        "sha256": "d8cd2d616ed2b7a64931fe391bd6e25b236a1c450e5b7c669df26c2974dd9f18",
+        "bytes": 8565
+      },
+      "tools/follow_active.js": {
+        "sha256": "beb08b78f7c8ef53d06db9e99b266f1fb5a33cbb21d936a71dd6b1a8354f024f",
+        "bytes": 10557
+      }
+    },
+    "lean_file_count": 86,
+    "source_manifest_sha256": "44efa81cdc3f4f232681ab53d4950f81d37fdf2284e9935ccdfc9a2df284f17f",
+    "source_manifest_serialization": "Sorted UTF-8 relative/path.lean|SHA256 lines with LF.",
+    "source_manifest_matches_previous_independent_review": true,
+    "scope": "These pin the available baseline source/runtime/configuration files. No native execution fingerprint or receipt contents in the transcript independently bind the executed bytes to this snapshot."
+  },
+  "exact_visible_counts": {
+    "key_value_marker_records": 39,
+    "marker_counts": {
+      "ACTUAL_SPECTRAL_CALIBRATION": 1,
+      "ACTUAL_SUBEXPONENTIAL_BOUND": 1,
+      "ANCHOR_HISTORY_SCANS": 1,
+      "AUDIT_ONLY_MODULES": 1,
+      "AXIOM_AUDIT": 1,
+      "COMBINED_WORKING_DIGESTS_CONSUMED": 1,
+      "COMPACT_ANCHORS_SAVED": 1,
+      "COMPILED_MODULES": 1,
+      "DOMINANT_EXTRACTION": 1,
+      "FINAL_AUDIT_DECLARATIONS": 1,
+      "FINAL_AUDIT_START": 1,
+      "FINITE_ACCEPTED_WITNESS": 1,
+      "FINITE_CHECKER_EQUIVALENCE": 1,
+      "FROZEN_REUSE": 3,
+      "FROZEN_REUSED_MODULES": 1,
+      "HASH_PHASE": 2,
+      "HASH_PHASE_TOTALS": 1,
+      "LEGACY_MIGRATED_MODULES": 1,
+      "LOGICAL_TOOL_LAUNCHES": 1,
+      "MATHEMATICAL_STATUS": 1,
+      "MODULE_ELAPSED_MS": 3,
+      "PROJECT_BUILD": 1,
+      "RESTORED_ARTIFACT_FILES": 1,
+      "RUN": 1,
+      "SORRYAX": 1,
+      "SOURCE_ANCHOR_RECEIPT": 2,
+      "STAGE_ELAPSED_MS": 1,
+      "STAGE_START": 1,
+      "UNCONDITIONAL_ACTUAL_LIMIT": 1,
+      "UNCONDITIONAL_RH": 1,
+      "WORKING_ARTIFACTS_RETAINED": 2,
+      "WORKING_ARTIFACT_MODULES_RETAINED": 1
+    },
+    "reuse_markers": 3,
+    "unique_reused_modules": 3,
+    "complete_hash_retention_receipt_records": 2,
+    "module_timing_records": 3,
+    "individual_axiom_records": 0,
+    "individual_theorem_signature_records": 0
+  },
+  "visible_module_suffix": {
+    "expected_active_module_count": 85,
+    "modules": [
+      "RH_HilbertLimit.ActualMomentReality",
+      "RH_HilbertLimit.CanonicalBridge",
+      "EquivalenceAudit"
+    ],
+    "equals_exact_expected_suffix": true,
+    "ordinals_1_based": [
+      83,
+      85
+    ],
+    "earlier_module_reuse_markers_not_visible": 82,
+    "partial_first_module": "RH_HilbertLimit.ActualMomentReality",
+    "partial_first_record_scope": "Its reuse and timing markers are visible, preceded by a truncated receipt suffix; its full source receipt, hash phase and working-retention marker are absent.",
+    "partial_suffix_matches_previous_saved_path": true,
+    "complete_records": [
+      {
+        "module": "RH_HilbertLimit.CanonicalBridge",
+        "hash_phase": {
+          "line": 4,
+          "key": "HASH_PHASE",
+          "value": "ANCHOR:RH_HilbertLimit.CanonicalBridge|FILES=4|BACKEND=CERTUTIL|ELAPSED_MS=67|COMPLETE"
+        },
+        "working_retention": {
+          "line": 5,
+          "key": "WORKING_ARTIFACTS_RETAINED",
+          "value": "RH_HilbertLimit.CanonicalBridge"
+        },
+        "source_receipt": {
+          "line": 6,
+          "key": "SOURCE_ANCHOR_RECEIPT",
+          "value": "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\52e47af6a403a560\\f7590e7eee15dd85fc697f30c176c9ab\\01a17eabae30109b\\receipt.txt"
+        },
+        "reuse": {
+          "line": 7,
+          "key": "FROZEN_REUSE",
+          "value": "RH_HilbertLimit.CanonicalBridge"
+        },
+        "module_timing": {
+          "line": 8,
+          "key": "MODULE_ELAPSED_MS",
+          "value": "RH_HilbertLimit.CanonicalBridge|281|FROZEN_REUSED"
+        },
+        "previous_saved_receipt": {
+          "line": 167,
+          "key": "ANCHOR_SAVED",
+          "value": "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\52e47af6a403a560\\f7590e7eee15dd85fc697f30c176c9ab\\01a17eabae30109b\\receipt.txt"
+        },
+        "receipt_path_exactly_equal": true
+      },
+      {
+        "module": "EquivalenceAudit",
+        "hash_phase": {
+          "line": 11,
+          "key": "HASH_PHASE",
+          "value": "ANCHOR:EquivalenceAudit|FILES=4|BACKEND=CERTUTIL|ELAPSED_MS=86|COMPLETE"
+        },
+        "working_retention": {
+          "line": 12,
+          "key": "WORKING_ARTIFACTS_RETAINED",
+          "value": "EquivalenceAudit"
+        },
+        "source_receipt": {
+          "line": 13,
+          "key": "SOURCE_ANCHOR_RECEIPT",
+          "value": "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\6c336235f91ff235\\fb7f637d29669dd8db5a7f925b5521d7\\01a17eabb1d357c4\\receipt.txt"
+        },
+        "reuse": {
+          "line": 14,
+          "key": "FROZEN_REUSE",
+          "value": "EquivalenceAudit"
+        },
+        "module_timing": {
+          "line": 15,
+          "key": "MODULE_ELAPSED_MS",
+          "value": "EquivalenceAudit|333|FROZEN_REUSED"
+        },
+        "previous_saved_receipt": {
+          "line": 179,
+          "key": "ANCHOR_SAVED",
+          "value": "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\6c336235f91ff235\\fb7f637d29669dd8db5a7f925b5521d7\\01a17eabb1d357c4\\receipt.txt"
+        },
+        "receipt_path_exactly_equal": true
+      }
+    ]
+  },
+  "reported_warm_summary": {
+    "PROJECT_BUILD": "PASS",
+    "RUN": "PASS",
+    "AXIOM_AUDIT": "PASS_STANDARD_LOGICAL_AXIOMS_ONLY",
+    "SORRYAX": "NONE",
+    "FINAL_AUDIT_DECLARATIONS": "303",
+    "COMPILED_MODULES": "0",
+    "FROZEN_REUSED_MODULES": "85",
+    "AUDIT_ONLY_MODULES": "0",
+    "LEGACY_MIGRATED_MODULES": "0",
+    "WORKING_ARTIFACT_MODULES_RETAINED": "85",
+    "RESTORED_ARTIFACT_FILES": "0",
+    "ANCHOR_HISTORY_SCANS": "0",
+    "COMPACT_ANCHORS_SAVED": "0",
+    "COMBINED_WORKING_DIGESTS_CONSUMED": "85"
+  },
+  "warm_cache_interpretation": {
+    "conclusion": "The user-reported counters now describe warm working-artifact retention:85 retained,0 restored,0 new anchors saved and85 combined working-digest snapshots consumed, with0 project modules compiled and85 reused.",
+    "direct_confirmation": "CanonicalBridge and EquivalenceAudit each have a complete visible anchor hash/working-retention/source-receipt record. Each current source receipt path exactly equals the E: anchor path saved for that module in the earlier population tail.",
+    "combined_hash_scope": "Both visible ANCHOR phases list4 files; this is consistent with the unchanged runner batching the anchor source, audit log, stored artifact and matching working artifact before one-use digest consumption. It is fresh validation, not skipping working-artifact checks.",
+    "coverage_limit": "Full records for all85 retained modules are not present. The total85 is a user-supplied runner summary corroborated by the visible final suffix, not85 independently inspected retention records.",
+    "legacy_counter": "0 legacy migrations does not conflict with current-schema frozen reuse."
+  },
+  "process_and_hash_comparison": {
+    "logical_launches_before": {
+      "certutil": 722,
+      "csc": 1,
+      "helper": 2,
+      "lean": 2,
+      "other": 0,
+      "total": 727
+    },
+    "logical_launches_warm": {
+      "certutil": 381,
+      "csc": 0,
+      "helper": 2,
+      "lean": 2,
+      "other": 0,
+      "total": 385
+    },
+    "logical_launch_total_reduction": 342,
+    "logical_totals_arithmetic_consistent": true,
+    "csc_interpretation": "The warm summary reports0 CSC launches, so no helper compilation is reported. Two helper launches remain consistent with validating/reusing an existing helper and one batch operation; no helper-cache HIT line is visible here.",
+    "lean_interpretation": "The two logical Lean launches match the unchanged selectCompiler --version and --print-prefix startup queries. With0 project compilations and0 audit-only runs, they are not evidence of two theorem builds.",
+    "hash_phase_totals_before": {
+      "batch_sets": 1,
+      "certutil_sets": 342,
+      "elapsed_ms": 46682,
+      "failed_sets": 0,
+      "files": 37820,
+      "sets": 343
+    },
+    "hash_phase_totals_warm": {
+      "batch_sets": 1,
+      "certutil_sets": 88,
+      "elapsed_ms": 38326,
+      "failed_sets": 0,
+      "files": 37484,
+      "sets": 89
+    },
+    "hash_aggregate_elapsed_reduction_ms": 8356,
+    "timing_scope": "46682ms and38326ms are sums of timed hash phases. They compare population and warm runs with different restoration/save/helper-cache work; they are not total elapsed time or dependency-graph timing.",
+    "speedup_claim": "No total-runtime speedup, graph speedup, benchmark percentage, or attribution to a new runtime change is established.",
+    "counter_scope": "Logical launches are runner counters, not an operating-system process trace. Hash files counts include repeated files across phases; failed_sets0 does not prove no internally recovered certutil failure."
+  },
+  "audit_and_math_limits": {
+    "expected_unique_audit_targets": 303,
+    "reported_final_audit_targets": 303,
+    "individually_visible_axiom_records": 0,
+    "native_receipt_contents_visible": 0,
+    "startup_source_dependency_toolchain_fingerprints_visible": false,
+    "executed_bytes_independently_bound": false,
+    "dependency_graph_timing_visible": false,
+    "explicit_empty_file_recovery_marker_visible": false,
+    "finite_checker_equivalence": "OPEN",
+    "finite_accepted_witness": "NOT_ESTABLISHED",
+    "unconditional_rh": "NOT_ESTABLISHED",
+    "mathematical_status": "CONDITIONAL_PARTIAL",
+    "interpretation": "This records warm cache evidence only. The303 audit total is reported; no individual axiom record or new formal closure is supplied. Existing finite-checker equivalence and analytic obligations remain open."
+  },
+  "packaging_recommendation": {
+    "kind": "Evidence-only WARM_CACHE_PASS ZIP",
+    "preserve_internal_root": "RH_HILBERT_LIMIT_LEAN_v0_2_10_construction",
+    "preserve_workspace": "E:\\RH-FAST\\workspaces\\RH_HILBERT_LIMIT_LEAN_v0_2_10_construction",
+    "preserve_runtime_configuration_and_proof_bytes": true,
+    "reason": "Keeping the existing root retains the warm .native-build location and its lock/follower relationship. An evidence-label change does not require a runtime/source/version-root change.",
+    "do_not_replace": "Existing working outputs or anchors; add only transcript/evidence/documentation/status files."
+  },
+  "inconsistencies_found": [],
+  "review_limits": {
+    "source_runtime_proof_edits": false,
+    "tests_run": false,
+    "not_executed": [
+      "Lean",
+      "Lake",
+      "C#",
+      "Windows native runner",
+      "CI"
+    ],
+    "only_written_file": "/workspace/scratch/f128c1434505/tmp/native_warm_pass_v0210/independent_review.json"
+  }
+}

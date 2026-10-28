@@ -1,0 +1,70 @@
+{
+  "evidence_type": "USER_SUPPLIED_NATIVE_CONSOLE_EXCERPT",
+  "package_path_reported": "RH_HILBERT_LIMIT_LEAN_v0_2_1_construction",
+  "source_attachment": "Pasted text(20261027-172050).txt",
+  "source_sha256": "7fb509f98b691481ac236e3e632efaa4d18ce0d2911255f75cb850f92247a7dc",
+  "bytes": 17131,
+  "reported_project_build": "FAIL",
+  "reported_run": "FAIL",
+  "visible_compile_and_axiom_audit_pass_markers": 31,
+  "compile_and_audit_passes": [
+    "RiemannHypothesis.HadamardProduct.RealZeroSign",
+    "RiemannHypothesis.HadamardProduct.StrictRealZeroCriterion",
+    "RiemannHypothesis.HadamardProduct.OriginMultiplicityCriterion",
+    "RiemannHypothesis.Xi.StrictLagariasCriterion",
+    "RiemannHypothesis.Xi.HadamardLogDerivativeCriterion",
+    "RiemannHypothesis.Xi.CanonicalQuotientCriterion",
+    "RiemannHypothesis.Xi.CanonicalProductSymmetry",
+    "RiemannHypothesis.Xi.CanonicalQuotientLogNormGrowth",
+    "RiemannHypothesis.Xi.CanonicalQuotientCharacteristicGrowth",
+    "RiemannHypothesis.ComplexAnalysis.MellinGrowth",
+    "RiemannHypothesis.Xi.ThetaKernelMellinGrowth",
+    "RiemannHypothesis.ComplexAnalysis.FactorialDyadicGrowth",
+    "RiemannHypothesis.Xi.JensenDyadicCountBridge",
+    "RiemannHypothesis.Xi.EntireXiMellinGrowth",
+    "RiemannHypothesis.Xi.EntireXiLogNormGrowth",
+    "RiemannHypothesis.Xi.CanonicalQuotientThetaCharacteristicGrowth",
+    "RiemannHypothesis.Xi.UnconditionalLagariasEquivalence",
+    "RiemannHypothesis.Xi.CompletedLFunctionInstance",
+    "RiemannHypothesis.Xi.CanonicalProductPairedGrowth",
+    "AngularMaster.ActualHadamard",
+    "AngularMaster.ComplexScaleProduct",
+    "AngularMaster.ZeroGeometry",
+    "AngularMaster.QQRHGeometry",
+    "AngularMaster.LowHeightGeometry",
+    "AngularMaster.ThetaKernelExplicitBound",
+    "AngularMaster.ZeroFreeSeed",
+    "OriginTrace",
+    "RH_HilbertLimit.FinitePrefix",
+    "RH_HilbertLimit.SpectralTail",
+    "RH_HilbertLimit.ActualCalibrationProgress",
+    "RH_HilbertLimit.ActualMomentReality"
+  ],
+  "extension_module_passes": [
+    "RH_HilbertLimit.FinitePrefix",
+    "RH_HilbertLimit.SpectralTail",
+    "RH_HilbertLimit.ActualCalibrationProgress",
+    "RH_HilbertLimit.ActualMomentReality"
+  ],
+  "compile_failures": [
+    "RH_HilbertLimit.GrowthStep"
+  ],
+  "blocked_modules": [
+    "RH_HilbertLimit.CanonicalBridge DEPENDENCY=RH_HilbertLimit.GrowthStep"
+  ],
+  "lean_error": {
+    "module": "RH_HilbertLimit.GrowthStep",
+    "line": 155,
+    "column": 4,
+    "message": "change tactic failed: actualVariation n ≤ 1 is not definitionally equal to actualVariation n ≤ ↑1"
+  },
+  "compact_anchor_save_markers": 31,
+  "final_audit_completed": false,
+  "direct_axiom_records_in_excerpt": 0,
+  "startup_fingerprints_visible": false,
+  "runner_sha256_reported": null,
+  "receipt_files_supplied": false,
+  "native_artifacts_supplied": false,
+  "independent_native_execution": false,
+  "scope": "Module-level user log markers only. Earlier modules are outside the excerpt. Cached reuse still requires complete same-target receipt and fingerprint validation."
+}

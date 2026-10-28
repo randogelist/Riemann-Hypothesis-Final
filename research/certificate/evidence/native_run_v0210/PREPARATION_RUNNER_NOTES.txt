@@ -1,0 +1,548 @@
+PACKAGE=RH_HILBERT_LIMIT_LEAN_v0_2_10_construction
+RUNNER=RH_HILBERT_NATIVE_RUNNER_v0_2_10
+TARGET=LOCAL_COMPILER
+REQUIRED_COMPILER=Native Windows Lean 4.33.0
+PREPARATION_STATUS=TARGETED_NODE_STARTUP_EMPTY_HASH_TESTS_AND_STATIC_REVIEW; NATIVE_VALIDATION_PENDING
+
+ENTRY POINT
+Extract this package below E:\RH-FAST\workspaces using the README command.
+Run that package's sole run.cmd from a Windows CMD window. The worker exits normally so
+an automated caller can collect its result. An outer CMD /K keeps a manually
+opened window available after completion or errors.
+
+The runner uses existing cscript.exe, certutil.exe and ADODB.Stream. It never
+invokes Lake, Python, PowerShell or WSL and never downloads software.
+The optional batch SHA256 path also uses an existing .NET Framework v4 C#
+compiler and runtime. The helper is built and self-tested only when no valid persistent helper
+entry exists. A verified cached helper is reused automatically.
+
+COMPILER AND CACHE DISCOVERY
+Compiler selection, in order:
+  AWPIRH_LEAN_EXE, then LEAN_EXE, then the native v4.33.0 toolchain below
+  ELAN_HOME, or below %USERPROFILE%\.elan when ELAN_HOME is unset.
+An elan shim is not accepted as the native executable. The actual version
+and native prefix are checked on the user's machine.
+
+An explicit MATHLIB_CACHE_ROOT is authoritative. It may name a cached project
+root or the Mathlib checkout itself. It is never silently replaced.
+Otherwise the package directory and these established locations are probed:
+  %USERPROFILE%\lean-native\awpi_phi_rh_lean_sieved_v0_1_1
+  %USERPROFILE%\Downloads\awpi_phi_rh_lean_sieved_v0_1_1
+
+The cached checkout must declare leanprover/lean4:v4.33.0. Cache selection
+checks the required modules in mathlib-imports.txt, rather than requiring the
+umbrella Mathlib.olean. The subsequent resolved dependency traversal still
+requires the actual imported sources and compiled artifacts. Dependencies
+are loaded from the existing cache; this runner never builds Mathlib.
+
+LEAN_JOBS defaults to 16 and accepts an integer from 1 through 64. This is
+threading within each Lean process, not sixteen simultaneous module builds.
+
+DEPENDENCY HASHING
+RH_HASH_MODE accepts AUTO (default), CERTUTIL or BATCH.
+  AUTO      Use the batch helper if an existing compiler can build it.
+            If the compiler is absent or helper compilation fails before
+            hashing, fall back to certutil.
+  CERTUTIL  Use independent per-file certutil hashing in bounded parallel.
+  BATCH     Require the batch helper; do not fall back to certutil.
+
+Existing compiler locations, in order:
+  %SystemRoot%\Microsoft.NET\Framework64\v4.0.30319\csc.exe
+  %SystemRoot%\Microsoft.NET\Framework\v4.0.30319\csc.exe
+Neither mode downloads, installs or rebuilds a Lean toolchain or Mathlib.
+
+The batch helper streams SHA256 over every requested file with at most
+min(LEAN_JOBS,16) workers. It verifies the empty-input and abc test vectors,
+uses ordered request IDs, and stages its output until every file succeeds.
+The runner requires the exact request digest, run token, row count, ordered
+IDs, valid digests and completion record. It rechecks the source, helper
+executable and request bytes after execution and accepts no partial result.
+Apart from the independently verified empty-file case described below,
+hash execution failure or malformed output stops the run;
+AUTO does not silently fall back from a partial hash operation. All dependency and toolchain content checks
+are retained. File modification times do not replace any fingerprint.
+
+Batch run logs and current helper provenance are under .native-build\runner.
+The persistent helper entry retains its original build and self-test logs. The helper
+reports BATCH_SHA256_ELAPSED_MS on the user's machine. No elapsed time or
+speedup is claimed for this revision before that native run.
+
+LEAN_ANCHORINGS
+Persistent destination for this profile:
+  E:\RH-FAST\anchors\RH_HILBERT_LIMIT\LOCAL_COMPILER\lean-4.33.0
+Before locking or writing logs, the profile requires a package directory
+strictly below E:\RH-FAST\workspaces. It captures an existing custom
+LEAN_ANCHORINGS_ROOT as a read-only import, then sets that process variable
+to E:\RH-FAST\anchors. The old %LOCALAPPDATA%\LEAN_ANCHORINGS cache and
+explicit import roots are also available for verified import. Other
+environment settings, compiler/Mathlib paths and Lean memory flags are unchanged.
+Valid anchors have no quota or automatic eviction. Working artifacts,
+generated audits, logs and owner locks remain in each package workspace.
+The first run may copy validated old project entries and build one helper;
+later runs can reuse the common E: store after fresh content verification.
+
+Each immutable module entry contains its exact source, compiled artifacts,
+input fingerprints, successful axiom-audit output and same-target PASS
+receipt. Reuse requires matching source, transitive dependencies, compiler,
+relevant native libraries, compilation policy and artifact content. It also
+requires a verified previous LOCAL_COMPILER build and clean axiom audit.
+Each restored working copy is also hashed against the verified anchoring
+digest before acceptance. Timestamps or the mere presence of an .olean
+never establish reuse.
+
+Compilation identity and audit identity are separate. A presentation-only
+change to the runner or CMD does not invalidate compiled proofs. A changed
+audit target list or audit policy can require a fresh audit of the existing
+verified artifact, without recompiling unchanged theorem modules. A source,
+compiler, build-policy or dependency change does invalidate compilation.
+The current runner and launcher hashes are retained as provenance.
+
+Current receipt schema:
+  RH_HILBERT_LOCAL_ANCHOR_V2
+Compilation policy:
+  RH_HILBERT_NATIVE_COMPILE_V1
+Audit policy:
+  RH_HILBERT_STANDARD_AXIOMS_V1
+Future changes that alter compilation semantics must update the compilation
+policy; changes that alter audit acceptance must update the audit policy.
+
+VERIFIED COMPATIBILITY
+Optional LEAN_ANCHORINGS_IMPORT_ROOT and LEAN_ANCHORINGS_IMPORT_ROOTS provide
+additional existing anchoring locations. The latter is a semicolon-separated
+list. These entries are read for verification; new receipts are saved under
+the E:\RH-FAST\anchors destination selected by this profile.
+Recognized layouts are the directory containing module-named folders, its
+RH_HILBERT_LIMIT parent containing LOCAL_COMPILER\lean-4.33.0, or the
+LEAN_ANCHORINGS parent containing RH_HILBERT_LIMIT\LOCAL_COMPILER\lean-4.33.0.
+Only these explicit layouts are inspected; there is no whole-disk search.
+
+The compatibility adapter accepts only documented recognizable protocols.
+The older RH_HILBERT_NATIVE_RUNNER_v0_1_0 protocol is tied to the exact known
+v0.1.0 runner and CMD fingerprints. Its opaque old toolchain key and complete
+source/dependency manifests are recomputed and checked before migration.
+Successful prior same-target build and audit records and exact artifact
+hashes are mandatory. No unknown or existence-only FASTCORE receipt is
+accepted. No matching prior native receipts or project objects are included
+in this ZIP. Unverifiable or incompatible project modules are compiled anew.
+
+RUNTIME PROCESS
+The imported dependency closure is content-hashed with SHA256. Validated
+unchanged project artifacts are then restored from verified anchors. Only
+new or invalidated project modules are compiled. An independent module is
+still attempted if another module fails. Invalid dependent modules are
+blocked. The selected final audit root has its own compiled-source and audit identities.
+The supplied v0.1.3 batch timing is recorded below; no full startup or
+project-build benchmark is available.
+
+compile-order.txt lists the active project source paths, excluding the selected final audit root.
+audit-targets.tsv contains one module|fully.qualified.declaration per line.
+Every listed module has explicit audit targets. The runner requires actual
+#check/#print axioms output for the exact target list. Only propext,
+Classical.choice and Quot.sound are allowed. Missing records, sorryAx or
+additional axioms fail the audit.
+Generated RunnerAudit/*.lean sources now use a BOM-free ASCII writer.
+The UTF-8 log writer is unchanged so Unicode theorem types remain intact.
+
+CANONICAL OUTPUT
+  run-build.log     runner version, cache identity, fingerprints and results
+  run-audit.log     exact theorem types and actual dependency audit records
+  run-result.json   machine-readable runtime result
+  lean_version.log  native compiler version output
+
+MATHEMATICAL BOUNDARY
+A successful native build certifies the supplied declarations with their
+explicit hypotheses. It does not construct the remaining analytic inputs.
+The runner preserves these separate statements:
+  MATHEMATICAL_STATUS=CONDITIONAL_PARTIAL
+  ACTUAL_SPECTRAL_CALIBRATION=OPEN
+  DOMINANT_EXTRACTION=OPEN
+  UNCONDITIONAL_ACTUAL_LIMIT=NOT_CERTIFIED
+  ACTUAL_SUBEXPONENTIAL_BOUND=OPEN
+  UNCONDITIONAL_RH=NOT_ESTABLISHED
+  FINITE_ACCEPTED_WITNESS=NOT_ESTABLISHED
+
+
+HISTORICAL CHANGELOG
+The sections below describe their named releases. The E: storage policy
+above supersedes their earlier default-location instructions. Historical
+mock/native evidence remains scoped to the source version it reviewed.
+
+BASELINE AND V0_2_0 PREPARATION
+All ten v0.1.4 Lean source files are byte-identical in v0.2.0. The latest
+user-supplied v0.1.4 log reports PROJECT_BUILD=PASS and RUN=PASS, with 126
+final audit targets. The supplied excerpt directly exposes the final 116
+axiom records; all use only propext, Classical.choice and Quot.sound.
+Actual native receipt files and startup fingerprints were not supplied.
+Reuse therefore still requires the runner's full same-target validation.
+No Lean, Lake, Windows compiler, C# helper or CI was executed during this
+preparation. All new and newly imported sources require native validation.
+
+V0_2_0 FINAL AUDIT ROOT
+final-audit.txt selects EquivalenceAudit.lean. With no selector the runner
+keeps its original Audit.lean behavior. A malformed/missing selection fails.
+The historical Audit.lean source is retained unchanged but not rebuilt or
+used as the new aggregate. Nine baseline proof modules remain eligible for
+same-target frozen reuse, subject to the unchanged fingerprint/receipt checks.
+The 69 imported source modules and six new proof modules require their own
+valid same-target receipts or native compilation/audit. No archive PASS label
+is imported as a trusted receipt. The new aggregate audits every selected target.
+The helper, single CMD entry, policies, semantic flags and default16threads
+are unchanged. The runner reports FINITE_CHECKER_EQUIVALENCE=OPEN even after
+a successful build. Compilation cannot discharge a theorem's hypotheses.
+
+V0_2_1 LOCAL FAST CACHED RUNNER
+All 86 Lean source files, run.cmd, NativeSha256.cs, compile order, final audit
+selector, and 303 audit targets are byte-identical to v0.2.0. This is a runner
+and metadata update; the mathematical boundary is unchanged.
+
+The supplied v0.2.0 log confirms compatible cached Mathlib, 16 threads, batch
+content hashing of 37,108 files in 2,751 ms, nine frozen module reuses, and one
+additional reported compile/audit PASS for AngularMaster.ZeroExclusion.
+It fails after GrowthRigidity starts its audit, with a file-not-found message.
+No final project PASS is supplied. The old staged GrowthRigidity artifact
+path is 278 characters at the supplied base; this is consistent with a Windows
+legacy path-length error, but the exact failing API call was not logged.
+
+New immutable anchor entries use compact lookup directories below the same
+LEAN_ANCHORINGS branch root. The full names and full source/input/artifact
+hashes remain in receipts and are verified. Lookup prefixes do not confer
+trust. Previous module/full-input-key layouts and supported legacy/imported
+receipts remain readable. No earlier anchor is removed or rewritten.
+
+Matching input-key entries are tried before enumerating historical entries.
+A working artifact family is retained only after a valid same-target anchor
+and exact filename/fresh-content-hash checks. Otherwise normal verified
+restoration is used. A valid .olean alone does not authorize reuse. Audit-only
+refresh remains mandatory if selected target coverage expands.
+
+The conservative path preflight rejects overlong staged paths before writing
+a receipt. A long custom cache root produces a clear diagnostic; use a shorter
+LEAN_ANCHORINGS_ROOT if needed. No registry edit or system installation occurs.
+
+The new code has focused simulated-host checks only. No native Lean, WSH,
+C#, Windows or CI execution or comparative runtime benchmark was performed.
+Content hashes and all current same-target trust checks remain mandatory.
+
+
+V0_2_2 PERSISTENT HELPER CACHE
+Project caching is automatic: PROJECT_CACHE=READ_WRITE. The latest v0.2.1
+COMPACT_V1 layout, exact-input-first lookup, verified working-object retention,
+same-target receipts and source/dependency/compiler/audit checks are preserved.
+All 86 Lean files, run.cmd and all proof/audit manifests are byte-identical to
+v0.2.1. Only the runner/helper implementation and package metadata change.
+
+The helper uses hashers\<24-hex lookup prefix>\<16-hex unique tag> below the
+existing branch anchor root. Prefixes are lookup hints; the full input identity
+and exact manifest must match. Its fingerprint covers source bytes, compiler
+flags, csc.exe, mscorlib/System/System.Core references and listed existing
+compiler/CLR/runtime configuration inputs. A byte-identical source in another
+package directory is compatible. The executable, source copy, build log and
+successful self-test log are content-verified before a hit. The SHA256 empty/abc
+self-test runs on every reuse, followed by an input-fingerprint recheck.
+
+Fresh valid helpers report BATCH_HASH_HELPER_CACHE=BUILT_AND_SAVED; repeat
+hits report BATCH_HASH_HELPER_CACHE=HIT. Failed/incomplete/corrupt entries do
+not confer trust. AUTO may fall back to certutil before hashing if a validated
+helper is unavailable; BATCH requires one. Every dependency is still hashed
+by content. The helper receipt is not a Lean theorem or axiom-audit certificate.
+
+The existing default cache remains an import source if LEAN_ANCHORINGS_ROOT
+chooses another writable root. New cache-save failures report CACHE_SAVE:<module>.
+The canonical run-result.json now records helper cache state and cache root.
+The one run.cmd still uses no Lake, Python, PowerShell, WSL or network access.
+
+Validation: 42 focused synthetic-host scenarios, with no native execution.
+No Lean, C#, WSH, Windows or GitHub CI was run in this preparation. Existing
+proof certification and all mathematical open obligations are unchanged.
+
+
+V0_2_3 OWNER-AWARE LOCK RECOVERY
+The single run.cmd now passes an absolute native_runner.js path and a unique
+--runner-token. It still returns the worker exit code and requires no Lake,
+Python, PowerShell, WSL, network access, registry change or software install.
+Local Windows WMI (Win32_Process) provides PID, exact CreationDate and command
+line data. Process ownership must be identifiable before work begins.
+
+New .native-run.lock metadata records schema, package root, absolute script,
+PID, exact creation time, invocation token and run tag. Ownership is published
+by moving a fully prepared directory into the lock location without overwrite.
+No half-written new owner is accepted. Cleanup verifies exact ownership.
+
+Existing owners are recovered only after fresh process checks establish no
+matching owner or related writer. PID reuse is distinguished by CreationDate;
+ancestor checks retain its microsecond precision. Recognized legacy locks
+contain only an exact prior run tag, or are empty interrupted initializations.
+Unknown metadata/files, unreadable process inventory or ambiguous live legacy
+relative scripts block recovery. Nothing terminates an active process.
+
+Old generations are moved to deterministic .native-stale-locks records that
+are never overwritten or deleted by the runner. These permanent records stop
+two delayed reclaimers from moving a later owner's lock. If ownership changes
+while publishing, the losing invocation preserves the winner's lock. Busy or
+uncertain startup does not truncate prior build or audit logs.
+
+RUNNER_LOCK_POLICY=PID_CREATION_AND_PERMANENT_QUARANTINE_V1
+STALE_LOCK_RECOVERED is emitted only after validated recovery. The JSON result
+records recovered lock count. A report of an existing lock alone is not proof
+of a stale lock, proof failure or new mathematical certification.
+
+All 86 Lean files and every compile/audit/helper input-identity function are
+unchanged. The helper source is unchanged. Existing valid cache receipts remain
+eligible; the launcher change does not enter the semantic build fingerprint.
+Validation is 67 synthetic-host scenarios; no Lean/C#/Windows/CI was executed.
+
+
+V0_2_4 CAST_ONE_FIX1
+The one Lean source change is an explicit Nat.cast_one simplification in
+GrowthStep. All other 85 Lean files and the compile/audit/import manifests
+remain byte-identical. The native runner differs only in its PACKAGE string;
+its implementation version, compile identity, cache checks, flags and axiom
+policy remain unchanged. Its 67 mock cases are preserved as inherited evidence,
+not rerun or promoted into a new native PASS.
+
+The v0.2.1 user excerpt reports 31 compile/audit passes and compact anchor saves,
+then one GrowthStep cast error and a blocked CanonicalBridge. The final audit
+did not run. If the unchanged same-target anchors validate, only GrowthStep,
+CanonicalBridge and the final aggregate need compilation. Missing/invalidated
+anchors still require the existing normal compile/audit path.
+
+Formal closure means the proved finite-checker equivalence, without an obtained
+witness requirement. That equivalence remains open. This cast repair does not
+change any theorem statement or discharge the remaining analytic premises.
+
+
+V0_2_5 ABSOLUTE LAUNCH PATH FIX1
+The package directory is resolved to a fully qualified path before pushd.
+The JScript path uses that captured value; %~dp0 is never expanded after the
+working directory changes. This repairs the reported doubled package path.
+The launch token, return code, process-owned lock policy, persistent helper
+cache and proof anchor validation are preserved. Every Lean file, including
+the v0.2.4 Nat.cast_one repair, is byte-identical. No native runtime, Lean,
+Lake or CI was executed while preparing this repair.
+
+
+ACTIVE OWNER FOLLOW MODE
+
+## Follow the active v0.2.5 worker
+
+The supplied console output reports that PID 24284 matched the lock owner's
+PID and full creation timestamp. It establishes process presence at that
+check, not forward progress, a hang, or a completed proof build. The existing
+worker and its canonical logs remain authoritative.
+
+This package adds an explicit read-only `--follow-root` mode to the single
+`run.cmd`. Use the following command to open a progress view of the existing
+v0.2.5 run without extracting files into its live directory:
+
+
+cd /d "%USERPROFILE%\Downloads" && (if not exist "E:\RH-FAST\workspaces" mkdir "E:\RH-FAST\workspaces") && tar -xf "RH_HILBERT_LIMIT_LEAN_v0_2_10_construction.zip" -C "E:\RH-FAST\workspaces" && cmd /k call "E:\RH-FAST\workspaces\RH_HILBERT_LIMIT_LEAN_v0_2_10_construction\run.cmd" --follow-root "%USERPROFILE%\Downloads\RH_HILBERT_LIMIT_LEAN_v0_2_5_construction"
+
+
+The observer validates the current owner record, PID, full WMI creation time,
+script path and invocation token. It follows that captured owner only. All
+displayed build-log lines have an observer prefix. Sharing errors and partial
+rewrites are treated as transient samples. Owner replacement or uncertainty
+stops observation; owner exit is reported separately from build success.
+
+Follow mode never starts Lean, writes into the observed package, removes a
+lock, terminates a process or falls through to a new compiler run. It does
+not interpret `run-result.json`: the v0.2.5 result format lacks an owner token
+or run-tag binding, so an existing PASS cannot be attributed by this observer
+to the current process. Exiting the observer is not a build/axiom-audit PASS.
+
+`run.cmd` without arguments retains the native cached-build behavior. Use it
+for a new run after the existing worker has finished. This release preserves
+all 86 Lean files, the native runner logic, helper, receipts and axiom policy
+from its parent; only the native runner's package label changes. Native
+Windows execution and Lean verification of this release remain pending.
+
+
+
+V0_2_7 SCOPED FRESH HASHES AND RUNTIME MEASUREMENT
+Fresh file hashes are scoped to one operation. The startup dependency map is
+not used to validate mutable anchor or working files. For current V2 entries,
+an exact working family can be included with source/audit/anchor artifacts in
+one batch. The matching operation consumes that snapshot exactly once using
+the same attempt's scope object. Legacy receipt memoization stores no working
+snapshot. A later working check hashes again. Names/counts must still match.
+
+Restoration copies all files and then hashes the new destinations. Saving
+hashes working artifacts before copying and independently checks the staged
+artifacts, source and audit before publishing any PASS receipt. A changed
+copy, missing source, unknown target, bad audit or inconsistent manifest is
+never accepted as a cache hit. Existing/imported V2 and pinned legacy
+receipts retain the same identities and eligibility rules.
+
+The already validated helper can hash repeated fresh sets within a run.
+Every helper call has a distinct short request token and fresh request/result
+paths. Header, request digest, count, ordered IDs and completion footer must
+all match. The request is independently hashed before execution; executable,
+source and request are independently rehashed afterward using certutil.
+No partial set is published. Helper selection and its separate self-test
+remain once per run; compiler/runtime inputs still have both fresh snapshots.
+
+Hash sets of at least six files use the available helper. Smaller sets use
+certutil because a helper call requires four independent guard hashes plus
+the helper invocation. Both paths cap concurrent hashing at min(LEAN_JOBS,16).
+RH_HASH_MODE=BATCH still requires an available validated helper; small sets
+and independent trust checks use certutil. LEAN_JOBS still defaults to 16 and
+continues to control threads within each native Lean process.
+
+AUTO can fall back when the helper/compiler is unavailable or an ordinary
+preparation/build failure prevents using it. Once a hash command starts,
+execution or protocol failure is fatal. A preparation self-test failure can
+still fall back in AUTO before any helper file digests are accepted; strict
+BATCH requires a valid helper. Changed helper inputs/artifacts stop the run.
+Cache-content mismatch is distinct from
+hash infrastructure failure; broad candidate catches do not swallow the latter.
+
+Dependency probing stops at the first existing .olean in LEAN_PATH order.
+If that package has no matching source, the run fails rather than selecting
+a later package. Graph, fingerprint and audit formulas are preserved.
+
+STAGE_ELAPSED_MS and MODULE_ELAPSED_MS report milliseconds plus the observed
+outcome. HASH_PHASE reports purpose, unique file count, selected backend and
+elapsed milliseconds. run-result.json contains stage_timings, module_timings,
+hash_timings, hash_phase_totals, runtime_elapsed_ms and logical_tool_launches.
+Stage/module/hash intervals can overlap; they must not be added together.
+runtime_elapsed_ms is sampled when result output is written and is not a
+measurement of later lock cleanup. Logical launches count tool invocations,
+not wrapper CMD processes or children created internally by tools. They are
+not security/audit identities and do not determine cache eligibility.
+
+The 3-module/5-artifact synthetic warm-reuse comparison reports 36 certutil
+calls in v0.2.5 versus 12 certutil + 3 helper calls in v0.2.7. Startup preparation
+is outside that comparison. Both perform 0 Lean compiles/audits/copies in that
+fixture. No native Windows timing or speedup is claimed. See the current
+RUNNER_LOGIC_VALIDATION.json and evidence/runtime_v027 for exact evidence.
+
+
+V0_2_8 RECORD USER-REPORTED V0_2_5 NATIVE PASS
+The supplied run tail reports project/run PASS, 303 final targets, 3 compiled
+modules and 82 frozen reuses. It directly exposes 28 complete clean axiom
+records, exactly the last 28 current targets; 275 records and startup content
+fingerprints are not in the excerpt. No actual native receipts are supplied.
+The current 86 Lean sources are byte-identical to the prepared v0.2.5 package.
+The native runtime must still validate every same-target anchor before reuse.
+If every unchanged anchor validates, all 85 active modules, including the
+final audit, are eligible for reuse and no changed source needs compilation.
+
+This update changes evidence/status and the PACKAGE label only. The optimized
+v0.2.7 implementation, launcher, observer, helper, flags and audit policy are
+preserved. Its 86 mock scenarios and the 19 observer scenarios are inherited;
+no tests are rerun merely for this label change. The supplied v0.2.5 report
+does not validate the optimized runner or provide a native timing comparison.
+No Lean, Lake, C#, Windows runner or CI was executed by the assistant.
+
+The visible canonical RH criteria explicitly retain CanonicalPowerSums and
+DominantExtraction. The finite-checker equivalence remains OPEN. Obtaining a
+specific accepted witness is not required for the formal-closure milestone.
+
+
+V0_2_9 PERSISTENT E: STORAGE PROFILE
+RH local runner persistent-storage profile for v0.2.9
+Implementation baseline: v0.2.8.
+
+This scratch patch changes only native_runner.js and this note. The release
+must preserve run.cmd, the follower observer, NativeSha256.cs, every Lean
+source, the compile/audit manifests and all semantic policies/flags.
+
+configurePersistentProfile runs before acquiring a lock or touching logs.
+It requires the normalized package root to be a proper descendant of
+E:\RH-FAST\workspaces, with a case-insensitive exact path-component boundary.
+An invalid root fails with PERSISTENT_WORKSPACE_REQUIRED and an extraction
+instruction. The profile itself creates no directories and copies no files.
+
+The first valid configuration captures the previous LEAN_ANCHORINGS_ROOT.
+The process environment then points new project/helper caches at
+E:\RH-FAST\anchors. Repeated configuration preserves the captured prior
+root. selectCache adds that prior root as a read-only verified import when
+distinct, while preserving the existing LOCALAPPDATA and explicit imports.
+
+Working objects, generated audits, locks and logs remain together beneath
+the extracted package root. Each version has its own persistent E: workspace;
+verified project/helper entries use the common E: anchor store. Existing
+cache validation and migration rules still decide every reuse. No valid
+anchor quota or automatic eviction is introduced.
+
+Lean and Mathlib remain at their existing configured cached locations.
+Compiler/DLL path fingerprints, LEAN_PATH ordering, LEAN_JOBS, semantic flags,
+hashing, audit, owned-lock and follower behavior are unchanged by this patch.
+Profile roots and retention policy are reported in logs and run-result.json.
+
+No Lean, Lake, Windows, C#, Wine or CI execution occurred in preparation.
+
+Targeted Node mock scenarios: 11 passed, 0 failed.
+No native execution or measured speedup is claimed. All 86 Lean files remain unchanged.
+
+
+V0_2_10 GRAPH STARTUP AND EMPTY HASH HANDLING
+Graph-startup candidate for RH_HILBERT_LIMIT_LEAN_v0_2_10_construction
+Baseline: output/RH_HILBERT_LIMIT_LEAN_v0_2_9_construction/tools/native_runner.js
+
+Graph-only patch scope (before the separate parent overlay)
+- Read each current external source file, then scan only the prefix that the
+  existing import-header parser can inspect. The shared line parser preserves
+  implicit Init, prelude/module lines, import modifiers/all, errors, nested
+  comments, strings, and the original escaped-newline behavior.
+- Reuse the already strict-cleaned current local/final source for import
+  parsing. The strict full-source placeholder/kernel-bypass scanner is unchanged.
+  No source or parsed-import cache crosses from requirements checking into the
+  dependency graph, or persists between runs.
+- Classify each immutable external artifact-directory listing once per graph
+  walk. Exact family spelling, every .olean.* companion, .ir/.dll inclusion,
+  and sorted enumeration order are preserved. Mutable project artifact-family
+  reads retain the original uncached function.
+- Normalize each requestHash path once; request each package's lockfiles once.
+  The same source, dependency, artifact, package-lock and toolchain files remain
+  subject to the existing fresh content-hash and identity checks.
+- Print STAGE_START before each timed stage and dependency-graph START,
+  five-second-throttled RUNNING, and COMPLETE/INTERRUPTED diagnostics. Counters
+  cover modules, current sources, source characters, import-prefix characters,
+  strict-scan characters, artifact directories/entries, and package lock sets.
+  Character counters are JavaScript string lengths (UTF-16 code units), not
+  byte counts. Existing stage-end timings and failure stages are preserved.
+
+Preserved by the graph-only patch
+- All existing source/dependency/toolchain/audit fingerprint formulas and
+  validation, receipt compatibility, hashing transport, locks, follower behavior,
+  E:\RH-FAST profile, compiler flags, and Lean/Mathlib cache search order.
+- No changes to run.cmd, NativeSha256.cs, or any Lean source.
+- No persistent graph index, timestamp-based trust, or omission of content hashes.
+
+Graph-only candidate review status
+- Node syntax-only check passed. This does not execute WSH or validate Windows.
+- Static comparison: six existing functions changed; 101 existing functions
+  remain byte-identical. Twelve graph/parser/index helpers were added.
+- Independent mocked-host and read-only reviews are coordinated separately.
+- No Lean, Lake, Windows, C#, Wine, or CI execution; no native speedup claimed.
+
+Graph-only runner SHA256 at handoff:
+1e13f7016ef070a1c452fb4061770a33af14edc07d21831dc6f0c88800d6c694
+
+Parent overlay
+- The parent subsequently merged a separate narrow certutil empty-file recovery
+  patch into native_runner.js. The graph-only patch described above left
+  hashOutput/fileHash/certutilHashSet unchanged; the preservation/count assertions
+  above describe that graph-only diff, not the parent's combined hash patch.
+- The combined runner is frozen for the coordinated independent review/tests.
+- Combined runner SHA256 reported by the parent:
+  eaf8ebc221f08607bd2256827e8bbafb5e5b2e2509e3e71513fe994db2d9eb97
+
+The additional hashOutput repair handles only recognized nonzero certutil
+ERROR_FILE_INVALID failures and only after a fresh binary LoadFromFile proves
+Size0, Position0 and EOStrue, with FSO size0 before/after. It returns the
+self-tested SHA256 of the empty byte sequence. Text trim, metadata alone,
+generic retries, other error codes and unverified content are not accepted.
+The user's failed build.log bytes were not supplied; emptiness is a hypothesis
+that the new runtime checks. A nonempty/unreadable/changed file still fails.
+SHA256_EMPTY_FILE_VERIFIED identifies the new successful verification path.
+
+The user's v0.2.9 log reports37108 dependency-content files and then failure
+in CONTENT_FINGERPRINTS, before proof compilation. It supplies no graph-stage
+duration or new proof/audit PASS. Earlier v0.2.5 proof evidence is preserved.
+All86 Lean files and proof manifests, the native C# helper, single CMD and
+read-only observer are unchanged. E: storage,16threads and Mathlib reuse
+remain. No native Lean/Windows/C#/CI execution or speedup is claimed.
+
+Current targeted Node scenarios: 28 passed,0 failed.

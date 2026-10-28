@@ -1,0 +1,133 @@
+{
+  "schema": "RH_HILBERT_FINAL_AUDIT_SELECTION_MOCK_REVIEW_V020",
+  "status": "PASS",
+  "method": "Node VM execution of draft runner helpers with the existing in-memory WSH host; all native responses simulated",
+  "scope": "Optional final audit selection and unchanged baseline reuse only; prior 24-case suite was not rerun",
+  "checked_at_utc": "2026-10-27T16:19:16.585Z",
+  "runner_path": "tmp/witness_equivalence_review/runner/native_runner.js",
+  "runner_sha256": "fab2212ff37c7972cc51d0e3cb305f9096c33652dd636fb15fc8d2bc9ebfe7ce",
+  "baseline_runner_sha256": "cf6d1116c6b9fe0ff5d23bdff0c031719627cbe77bdfbbc41e0ae589a15c4a0d",
+  "passed": 5,
+  "failed": 0,
+  "unchanged_identity_and_receipt_functions": {
+    "externalKey": true,
+    "makeGlobalKey": true,
+    "moduleInput": true,
+    "auditKey": true,
+    "verifyCurrent": true,
+    "verifyLegacy": true,
+    "readAnchorCore": true,
+    "restoreAnchor": true,
+    "saveAnchor": true,
+    "processModule": true
+  },
+  "unchanged_policies": {
+    "SCHEMA": {
+      "value": "RH_HILBERT_LOCAL_ANCHOR_V2",
+      "unchanged": true
+    },
+    "COMPILE_POLICY": {
+      "value": "RH_HILBERT_NATIVE_COMPILE_V1",
+      "unchanged": true
+    },
+    "AUDIT_POLICY": {
+      "value": "RH_HILBERT_STANDARD_AXIOMS_V1",
+      "unchanged": true
+    },
+    "COMPILE_FLAGS": {
+      "value": "native-lean4.33.0;kernel-default;output-olean;resolved-LEAN_PATH;no-extra-options;threads-nonsemantic",
+      "unchanged": true
+    },
+    "TARGET": {
+      "value": "LOCAL_COMPILER",
+      "unchanged": true
+    }
+  },
+  "tests": [
+    {
+      "name": "absent_selector_preserves_default_audit_and_existing_receipts",
+      "status": "PASS",
+      "details": {
+        "selected": "Audit.lean",
+        "simulated_frozen_restores": 4,
+        "simulated_compilations": 0,
+        "original_module_input_keys_unchanged": true
+      }
+    },
+    {
+      "name": "selected_new_audit_preserves_baseline_sources_and_reuses_passed_modules",
+      "status": "PASS",
+      "details": {
+        "selected": "EquivalenceAudit.lean",
+        "simulated_frozen_restores": 3,
+        "simulated_compilations": [
+          "Extension.lean",
+          "EquivalenceAudit.lean"
+        ],
+        "old_audit_source_and_anchor_preserved": true,
+        "all_ordered_modules_in_new_import_closure": true,
+        "complete_target_count": 4,
+        "finite_checker_status": "OPEN"
+      }
+    },
+    {
+      "name": "invalid_missing_and_duplicate_final_audit_selections_fail_closed",
+      "status": "PASS",
+      "details": {
+        "rejected": [
+          {
+            "selector": "",
+            "reason": "invalid_selector"
+          },
+          {
+            "selector": "../Audit.lean",
+            "reason": "invalid_selector"
+          },
+          {
+            "selector": "C:\\outside\\Audit.lean",
+            "reason": "invalid_selector"
+          },
+          {
+            "selector": "Audit.lean\nOther.lean",
+            "reason": "invalid_selector"
+          },
+          {
+            "selector": "MissingAudit.lean",
+            "reason": "missing_source_no_default_fallback"
+          },
+          {
+            "selector": "Review/Base.lean",
+            "reason": "ordinary_compile_order_collision"
+          }
+        ]
+      }
+    },
+    {
+      "name": "selected_audit_direct_imports_are_included_in_cache_manifest_checks",
+      "status": "PASS",
+      "details": {
+        "missing_new_direct_import_rejected": true
+      }
+    },
+    {
+      "name": "new_final_audit_missing_an_endpoint_record_cannot_be_accepted",
+      "status": "PASS",
+      "details": {
+        "missing_endpoint_rejected": true,
+        "no_new_final_audit_key_accepted": true,
+        "original_audit_source_unchanged": true
+      }
+    }
+  ],
+  "native_lean_invocations": 0,
+  "lake_invocations": 0,
+  "native_csharp_invocations": 0,
+  "native_windows_invocations": 0,
+  "ci_invocations": 0,
+  "child_process_invocations": 0,
+  "limitations": [
+    "No Lean parsing, elaboration or kernel verification.",
+    "No Windows Script Host, CMD or C# runtime validation.",
+    "Synthetic source files, compiler output, object bytes and receipts exist only in the mock filesystem."
+  ]
+}

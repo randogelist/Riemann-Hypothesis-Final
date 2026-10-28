@@ -1,0 +1,31 @@
+{
+  "schema": "RH_V0214_FOCUSED_REGRESSION_PLAN_V1",
+  "status": "EXECUTED_NODE_MOCK_ONLY",
+  "runner_sha256": "828af9d989ae820ad43784839a2d140fe3f7495a55c7e43e66df3e1d145bbb02",
+  "repair_source_sha256": "32dd483658af0764a1e123973e4a2928eeb50bee2fb3f2e6e86230bf43eee925",
+  "cases": [
+    "already_clear_owned_shutdown_uses_one_inventory_without_waiting",
+    "transient_unreadable_certutil_requires_fresh_guard_success_before_release",
+    "persistent_unreadable_certutil_retains_lock_after_six_attempts",
+    "readable_current_root_worker_after_uncertainty_blocks_immediately",
+    "whole_fresh_inventory_catches_new_blocker_after_old_pid_disappears",
+    "pid_reuse_with_new_creation_and_unreadable_command_remains_unknown",
+    "inventory_failure_is_not_retryable_or_a_clean_shutdown",
+    "changed_lock_owner_during_retry_is_preserved_and_stops_immediately",
+    "missing_or_changed_self_identity_prevents_shutdown_release",
+    "existing_admitted_relative_host_and_transient_certutil_are_checked_together",
+    "stale_and_legacy_recovery_never_use_shutdown_retry",
+    "live_or_unknown_owned_process_still_uses_original_drain_and_retains_lock",
+    "owned_worker_appearing_during_inventory_prevents_release",
+    "memory_serial_fallback_and_final_audit_barriers_remain_effective",
+    "verified_final_cache_reuse_does_not_require_new_memory_or_compile"
+  ],
+  "execution_limits": [
+    "No native Windows, WSH/COM, WMI, process tree, C#, Lean/Lake, CI, memory mapping, or performance execution.",
+    "Compiler outputs, receipts, process identities, RAM readings, and time are simulated in memory.",
+    "WMI API calls have no real-time completion guarantee; 1000 ms refers to bounded scheduled mock sleeps only.",
+    "The supplied native user run remains FAIL. These tests do not certify the Lean repair, mathematical endpoint or finite checker equivalence.",
+    "A persistent unreadable worker is retained as unknown; no test treats it as known unrelated or as a safe hash-only command."
+  ],
+  "scope": "NODE_VM_SYNTHETIC_HOST_ONLY"
+}

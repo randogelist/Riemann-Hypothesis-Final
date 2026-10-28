@@ -1,0 +1,9 @@
+{
+  "command_kind": "NODE_SYNTAX_CHECK_ONLY",
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "",
+  "runner_sha256": "d12a31ecc04af078c7b2620694e2057f67e78dfbd3c58f9215f21338c2b4cf3e",
+  "runner_entrypoint_executed": false,
+  "lean_or_native_compiler_executed": false
+}

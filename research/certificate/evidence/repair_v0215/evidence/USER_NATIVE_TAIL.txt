@@ -1,0 +1,101 @@
+BUILD_ARTIFACT_RESTORED=RH_HilbertLimit.CanonicalBridge
+SOURCE_ANCHOR_RECEIPT=E:\RH-FAST\anchors\RH_HILBERT_LIMIT\LOCAL_COMPILER\lean-4.33.0\c\52e47af6a403a560\f7590e7eee15dd85fc697f30c176c9ab\01a17eabae30109b\receipt.txt
+FROZEN_REUSE=RH_HilbertLimit.CanonicalBridge
+MODULE_ELAPSED_MS=RH_HilbertLimit.CanonicalBridge|370|FROZEN_REUSED
+HASH_PHASE=ANCHOR:RH_HilbertLimit.SpectralGenerating|FILES=3|BACKEND=CERTUTIL|ELAPSED_MS=54|COMPLETE
+HASH_PHASE=RESTORE_DESTINATIONS:RH_HilbertLimit.SpectralGenerating|FILES=1|BACKEND=CERTUTIL|ELAPSED_MS=42|COMPLETE
+BUILD_ARTIFACT_RESTORED=RH_HilbertLimit.SpectralGenerating
+SOURCE_ANCHOR_RECEIPT=E:\RH-FAST\anchors\RH_HILBERT_LIMIT\LOCAL_COMPILER\lean-4.33.0\c\08a37e641649fc73\ba2970398c5b33f4377a3a6de207b86f\01a17ed59225a473\receipt.txt
+FROZEN_REUSE=RH_HilbertLimit.SpectralGenerating
+MODULE_ELAPSED_MS=RH_HilbertLimit.SpectralGenerating|351|FROZEN_REUSED
+PARALLEL_MEMORY_FALLBACK=SERIAL_UNTIL_EXIT
+PARALLEL_MODULE_WORKERS_EFFECTIVE=1
+SYSTEM_MEMORY_RESERVE_EFFECTIVE_MB=1024
+SERIAL_ADMISSION_MB=FREE:7283|REQUIRED:5120|WORKER:4096|RESERVE:1024
+RAM_WARM_FUTURE_BUDGET_MB=0
+COMPILE_START=RH_HilbertLimit.SpectralPhase
+PARALLEL_WORKER=RH_HilbertLimit.SpectralPhase|PHASE=COMPILE|THREADS=16|SHELL_PID=41520
+PARALLEL_PROGRESS=85/89|ACTIVE=1|READY=1|LEAN_THREADS=16
+PARALLEL_PROGRESS=85/89|ACTIVE=1|READY=1|LEAN_THREADS=16
+E:\RH-FAST\workspaces\RH_HILBERT_LIMIT_LEAN_v0_2_14_construction\RH_HilbertLimit\SpectralPhase.lean:64:4: error: Type mismatch
+  affine_injective hx
+has type
+  Function.Injective fun q => 1 + (x - 1) * q
+but is expected to have type
+  1 + (x - 1) * q = 1 + (x - 1) * r → q = r
+E:\RH-FAST\workspaces\RH_HILBERT_LIMIT_LEAN_v0_2_14_construction\RH_HilbertLimit\SpectralPhase.lean:83:6: error: Type mismatch
+  add_lt_add_left (mul_lt_mul_of_pos_right hx (norm_pos_iff.mpr hq)) ?m.162
+has type
+  ‖x‖ * ‖q‖ + ?m.162 < 1 * ‖q‖ + ?m.162
+but is expected to have type
+  ‖1 - q‖ + ‖x‖ * ‖q‖ < ‖1 - q‖ + 1 * ‖q‖
+
+COMPILE_FAIL=RH_HilbertLimit.SpectralPhase
+MODULE_ELAPSED_MS=RH_HilbertLimit.SpectralPhase|10337|COMPILE_FAILED
+MODULE_BLOCKED=RH_HilbertLimit.SpectralExtraction DEPENDENCY=RH_HilbertLimit.SpectralPhase
+MODULE_BLOCKED=RH_HilbertLimit.AnalyticClosure DEPENDENCY=RH_HilbertLimit.SpectralExtraction
+COMPILE_START=RH_HilbertLimit.CanonicalPowerSums
+PARALLEL_WORKER=RH_HilbertLimit.CanonicalPowerSums|PHASE=COMPILE|THREADS=16|SHELL_PID=24776
+PARALLEL_PROGRESS=88/89|ACTIVE=1|READY=0|LEAN_THREADS=16
+PARALLEL_PROGRESS=88/89|ACTIVE=1|READY=0|LEAN_THREADS=16
+E:\RH-FAST\workspaces\RH_HILBERT_LIMIT_LEAN_v0_2_14_construction\RH_HilbertLimit\CanonicalPowerSums.lean:168:4: error: `field_simp` made no progress on the goal
+E:\RH-FAST\workspaces\RH_HILBERT_LIMIT_LEAN_v0_2_14_construction\RH_HilbertLimit\CanonicalPowerSums.lean:168:4: error: `field_simp` made no progress on the goal
+E:\RH-FAST\workspaces\RH_HILBERT_LIMIT_LEAN_v0_2_14_construction\RH_HilbertLimit\CanonicalPowerSums.lean:162:63: error: unsolved goals
+case e'_9
+ι : Type u_1
+b : ι → ℂ
+hb : Summable fun i => ‖b i‖
+z : ℂ
+hz : z ∈ resolventDomain b
+i : ι
+hd : HasDerivAt (fun w => 1 + w * b i) (b i) z
+hne : 1 + z * b i ≠ 0
+⊢ -(b i ^ 2 / (1 + b i * z) ^ 2) = ((1 + b i * z) * 0 - b i ^ 2) / (1 + b i * z) ^ 2
+E:\RH-FAST\workspaces\RH_HILBERT_LIMIT_LEAN_v0_2_14_construction\RH_HilbertLimit\CanonicalPowerSums.lean:177:4: error: `simp` made no progress
+E:\RH-FAST\workspaces\RH_HILBERT_LIMIT_LEAN_v0_2_14_construction\RH_HilbertLimit\CanonicalPowerSums.lean:177:4: error: `simp` made no progress
+E:\RH-FAST\workspaces\RH_HILBERT_LIMIT_LEAN_v0_2_14_construction\RH_HilbertLimit\CanonicalPowerSums.lean:174:60: error: unsolved goals
+case e'_9
+ι : Type u_1
+b : ι → ℂ
+hb : Summable fun i => ‖b i‖
+n : ℕ
+z : ℂ
+hz : z ∈ resolventDomain b
+i : ι
+h :
+  HasDerivAt (fun i_1 => resolvent b i i_1 ^ (n + 1)) (↑(n + 1) * resolvent b i z ^ (n + 1 - 1) * -resolvent b i z ^ 2)
+    z
+⊢ -↑(n + 1) * (resolvent b i z ^ n * resolvent b i z * resolvent b i z) =
+    ↑(n + 1) * resolvent b i z ^ n * -(1 * resolvent b i z * resolvent b i z)
+E:\RH-FAST\workspaces\RH_HILBERT_LIMIT_LEAN_v0_2_14_construction\RH_HilbertLimit\CanonicalPowerSums.lean:297:28: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+E:\RH-FAST\workspaces\RH_HILBERT_LIMIT_LEAN_v0_2_14_construction\RH_HilbertLimit\CanonicalPowerSums.lean:297:28: warning: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+
+COMPILE_FAIL=RH_HilbertLimit.CanonicalPowerSums
+MODULE_ELAPSED_MS=RH_HilbertLimit.CanonicalPowerSums|18785|COMPILE_FAILED
+PARALLEL_PROGRESS=89/89|ACTIVE=0|READY=0|LEAN_THREADS=0
+PARALLEL_PEAK_MODULE_WORKERS=1
+PARALLEL_NEW_OR_REAUDITED_MODULE_TASKS=2
+RAM_WARM=SKIPPED_NO_ELIGIBLE_DIRTY_FRONTIER
+STAGE_ELAPSED_MS=PROJECT_MODULES|79115|RETURNED
+PROJECT_BUILD=FAIL
+FAILED_STAGE=MODULE:RH_HilbertLimit.CanonicalPowerSums
+REASON=Some modules failed or were blocked. Independent modules were still attempted.
+RUN=FAIL
+SHUTDOWN_PREEXISTING_ADMITTED_UNRESOLVED_HOST=PID:35980
+SHUTDOWN_UNREADABLE_WORKER=PID:14704|PARENT:35980|CREATED:20261027214225.292952+060|NAME:certutil.exe|ATTEMPT:1
+WORKER_INVENTORY_RECHECK=NEXT:2|MAX:6|WAIT_MS:200
+SHUTDOWN_PREEXISTING_ADMITTED_UNRESOLVED_HOST=PID:35980
+SHUTDOWN_UNREADABLE_WORKER=PID:42972|PARENT:35980|CREATED:20261027214225.876927+060|NAME:certutil.exe|ATTEMPT:2
+WORKER_INVENTORY_RECHECK=NEXT:3|MAX:6|WAIT_MS:200
+SHUTDOWN_PREEXISTING_ADMITTED_UNRESOLVED_HOST=PID:35980
+SHUTDOWN_UNREADABLE_WORKER=PID:40224|PARENT:35980|CREATED:20261027214226.395447+060|NAME:certutil.exe|ATTEMPT:3
+WORKER_INVENTORY_RECHECK=NEXT:4|MAX:6|WAIT_MS:200
+SHUTDOWN_PREEXISTING_ADMITTED_UNRESOLVED_HOST=PID:35980
+WORKER_INVENTORY_RECHECK=CLEAR|ATTEMPTS:4
+Logs: E:\RH-FAST\workspaces\RH_HILBERT_LIMIT_LEAN_v0_2_14_construction\run-build.log and E:\RH-FAST\workspaces\RH_HILBERT_LIMIT_LEAN_v0_2_14_construction\run-audit.log
+
+C:\Users\Simon\Downloads>

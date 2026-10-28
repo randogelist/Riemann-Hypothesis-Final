@@ -1,0 +1,238 @@
+--- v0.2.0/tools/native_runner.js
++++ v0.2.1/tools/native_runner.js
+@@ -5,8 +5,8 @@
+ var shell = new ActiveXObject("WScript.Shell");
+ var env = shell.Environment("PROCESS");
+ var root = fso.GetAbsolutePathName(".");
+-var PACKAGE = "RH_HILBERT_LIMIT_LEAN_v0_2_0_construction";
+-var RUNNER_VERSION = "RH_HILBERT_NATIVE_RUNNER_v0_2_0";
++var PACKAGE = "RH_HILBERT_LIMIT_LEAN_v0_2_1_construction";
++var RUNNER_VERSION = "RH_HILBERT_NATIVE_RUNNER_v0_2_1";
+ var SCHEMA = "RH_HILBERT_LOCAL_ANCHOR_V2";
+ var COMPILE_POLICY = "RH_HILBERT_NATIVE_COMPILE_V1";
+ var AUDIT_POLICY = "RH_HILBERT_STANDARD_AXIOMS_V1";
+@@ -31,6 +31,8 @@
+ var legacyGlobalKey = "", provenance = {}, anchorRoots = [], requiredMathlib = [];
+ var externalDirectoryFiles = {}, legacyVerified = {};
+ var compiled = 0, reused = 0, failed = 0, blocked = 0, audited = 0, auditOnly = 0, migrated = 0;
++var workingRetained = 0, restoredArtifactFiles = 0, anchorHistoryScans = 0, compactAnchorsSaved = 0;
++var anchorSerial = 0;
+ var runTag = stamp() + "-" + Math.floor(Math.random() * 1000000000);
+ var stage = "STARTUP";
+ var lockPath = root + "\\.native-run.lock", lockHeld = false;
+@@ -401,7 +403,8 @@
+   env("PATH")=prefix+"\\bin;"+env("PATH");env("LEAN_NUM_THREADS")=String(jobs);
+   var base=env("LEAN_ANCHORINGS_ROOT")||(env("LOCALAPPDATA")+"\\LEAN_ANCHORINGS");
+   if(!env("LEAN_ANCHORINGS_ROOT")&&!env("LOCALAPPDATA"))error("LOCALAPPDATA or LEAN_ANCHORINGS_ROOT is required.");
+-  anchorRoot=norm(base)+"\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0";mkdir(anchorRoot);
++  anchorRoot=norm(base)+"\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0";
++  checkAnchorPathLength(anchorRoot,true);mkdir(anchorRoot);
+   addAnchorRoot(anchorRoot,false);
+   if(env("LEAN_ANCHORINGS_IMPORT_ROOT"))addAnchorRoot(env("LEAN_ANCHORINGS_IMPORT_ROOT"),true);
+   if(env("LEAN_ANCHORINGS_IMPORT_ROOTS")){
+@@ -523,24 +526,78 @@
+ function auditKey(inputKey,artifactKey,targets,policy) {
+   return textHash("AUDIT_KEY_V1\nTARGET="+TARGET+"\nPOLICY="+policy+"\nALLOW=propext,Classical.choice,Quot.sound\nBUILD="+inputKey+"\nARTIFACTS="+artifactKey+"\nTARGETS="+targets.slice().sort().join(",")+"\n");
+ }
++function compactModuleRoot(base,name) { return base+"\\c\\"+textHash(name).slice(0,16); }
++function compactInputRoot(base,name,inputKey) { return compactModuleRoot(base,name)+"\\"+inputKey.slice(0,32); }
++function checkAnchorPathLength(path,isDirectory) {
++  var absolute=norm(path),limit=isDirectory?248:260;
++  if(absolute.length>=limit)error("ANCHOR_PATH_TOO_LONG: "+(isDirectory?"directory":"file")+
++    " length "+absolute.length+" must be less than "+limit+" characters: "+absolute+
++    ". Choose a shorter LEAN_ANCHORINGS_ROOT before retrying.");
++}
++function preflightAnchorPaths(parent,dest,temp,files) {
++  var folders=[parent,dest,temp,dest+"\\artifacts",temp+"\\artifacts"],i,j;
++  for(i=0;i<folders.length;i++)checkAnchorPathLength(folders[i],true);
++  var names=["source.lean","audit.log","input.txt","artifacts.tsv","receipt.txt"];
++  for(i=0;i<names.length;i++){
++    checkAnchorPathLength(dest+"\\"+names[i],false);
++    checkAnchorPathLength(temp+"\\"+names[i],false);
++  }
++  for(j=0;j<files.length;j++){
++    var name=fso.GetFileName(files[j]);
++    checkAnchorPathLength(dest+"\\artifacts\\"+name,false);
++    checkAnchorPathLength(temp+"\\artifacts\\"+name,false);
++  }
++}
++function nextAnchorTag(parent,name,inputKey) {
++  checkAnchorPathLength(parent,true);
++  var millis=new Date().getTime(),entries=subfolders(parent),i;
++  /* A newer receipt sorts first, even if two saves share a clock tick or
++     the local clock moved backward. Only this exact compact input folder is read. */
++  for(i=0;i<entries.length;i++){
++    var old=fso.GetFileName(entries[i]);
++    if(/^[a-f0-9]{16}$/.test(old))millis=Math.max(millis,parseInt(old.slice(0,12),16)+1);
++  }
++  var prefix=millis.toString(16);
++  if(prefix.length>12)error("Compact anchoring timestamp exceeds its bounded path component.");
++  prefix=("000000000000"+prefix).slice(-12);
++  for(i=0;i<16;i++){
++    var suffix=textHash(runTag+"\n"+name+"\n"+inputKey+"\n"+(++anchorSerial)+"\n"+Math.random()).slice(0,4);
++    var tag=prefix+suffix,path=parent+"\\"+tag;
++    if(!directory(path)&&!directory(path+".pending")&&!exists(path)&&!exists(path+".pending"))return tag;
++  }
++  error("Unique compact anchor tag collision after 16 attempts.");
++}
+ function entryFolders(name,inputKey) {
+   var out=[];
+-  for(var i=0;i<anchorRoots.length;i++)out=out.concat(subfolders(anchorRoots[i]+"\\"+name+"\\"+inputKey).reverse());
++  for(var i=0;i<anchorRoots.length;i++){
++    out=out.concat(subfolders(compactInputRoot(anchorRoots[i],name,inputKey)).reverse());
++    out=out.concat(subfolders(anchorRoots[i]+"\\"+name+"\\"+inputKey).reverse());
++  }
++  return unique(out);
++}
++function historicalAnchorCandidates(name,seen) {
++  var out=[],i,j,k,l;
++  /* Only the two documented module/input directory layouts are inspected.
++     Short directory components are locators; full receipt identities decide trust. */
++  for(i=0;i<anchorRoots.length;i++){
++    var roots=[compactModuleRoot(anchorRoots[i],name),anchorRoots[i]+"\\"+name];
++    for(j=0;j<roots.length;j++){
++      var groups=subfolders(roots[j]),pattern=j===0?/^[a-f0-9]{32}$/:/^[a-f0-9]{64}$/;
++      for(k=0;k<groups.length;k++){
++        if(!pattern.test(fso.GetFileName(groups[k])))continue;
++        var entries=subfolders(groups[k]).reverse();
++        for(l=0;l<entries.length;l++)if(!seen[keyPath(entries[l])]){
++          seen[keyPath(entries[l])]=true;out.push(entries[l]);
++        }
++      }
++    }
++  }
+   return out;
+ }
+ function anchorCandidates(name,inputKey) {
+-  var out=entryFolders(name,inputKey),seen={},i,j,k;
+-  for(i=0;i<out.length;i++)seen[keyPath(out[i])]=true;
+-  /* Bounded to this goal/module and two known receipt directory levels. */
+-  for(i=0;i<anchorRoots.length;i++){
+-    var groups=subfolders(anchorRoots[i]+"\\"+name);
+-    for(j=0;j<groups.length;j++){
+-      if(!/^[a-f0-9]{64}$/.test(fso.GetFileName(groups[j])))continue;
+-      var entries=subfolders(groups[j]).reverse();
+-      for(k=0;k<entries.length;k++)if(!seen[keyPath(entries[k])]){seen[keyPath(entries[k])]=true;out.push(entries[k]);}
+-    }
+-  }
+-  return out;
++  var out=entryFolders(name,inputKey),seen={};
++  for(var i=0;i<out.length;i++)seen[keyPath(out[i])]=true;
++  return out.concat(historicalAnchorCandidates(name,seen));
+ }
+ function readAnchorCore(name,folder) {
+   if(/\.pending$/.test(folder))error("Uncommitted anchoring entry.");
+@@ -600,36 +657,57 @@
+   if(r.AUDIT_KEY!==auditKey(input.key,c.artifactKey,c.targets,r.AUDIT_POLICY))error("Prior audit identity is inconsistent.");
+   return c;
+ }
++function workingArtifactsMatch(name,output,c) {
++  var files=artifactFamily(output);
++  if(files.length!==c.files.length)return false;
++  for(var i=0;i<files.length;i++)if(!c.expectedHashes.hasOwnProperty(fso.GetFileName(files[i])))return false;
++  try{
++    for(i=0;i<files.length;i++)if(fileHash(files[i])!==c.expectedHashes[fso.GetFileName(files[i])])return false;
++  }catch(e){log("WORKING_ARTIFACT_RECHECK_FAILED="+name+" : "+e.message);return false;}
++  return true;
++}
+ function restoreAnchor(name,input) {
+-  var entries=anchorCandidates(name,input.key);
+-  for(var i=0;i<entries.length;i++){
+-    var folder=entries[i],copyStarted=false;if(/\.pending$/.test(folder)||!exists(folder+"\\receipt.txt"))continue;
+-    try{
+-      var summary=parseReceipt(read(folder+"\\receipt.txt"));
+-      if(summary.SOURCE_SHA256!==fileHashes[keyPath(modules[name].source)])continue;
+-      if(summary.SCHEMA===SCHEMA&&summary.INPUT_SHA256!==input.key)continue;
+-      var legacy=summary.SCHEMA===LEGACY_SCHEMA;
+-      var c=legacy?verifyLegacy(name,folder,{}):verifyCurrent(name,folder,input);
+-      var output=clearOutputs(name),outputDir=fso.GetParentFolderName(output);mkdir(outputDir);copyStarted=true;
+-      for(var j=0;j<c.files.length;j++){
+-        var destination=outputDir+"\\"+c.files[j];
+-        fso.CopyFile(folder+"\\artifacts\\"+c.files[j],destination,false);
+-        if(fileHash(destination)!==c.expectedHashes[c.files[j]])error("Restored working artifact does not match its verified anchoring hash.");
+-      }
+-      var imported=keyPath(folder).indexOf(keyPath(anchorRoot)+"\\")!==0;
+-      var policy=legacy?"RH_HILBERT_STANDARD_AXIOMS_V1":c.r.AUDIT_POLICY;
+-      log("BUILD_ARTIFACT_RESTORED="+name);log("SOURCE_ANCHOR_RECEIPT="+c.receipt);
+-      return {restored:true,needsAudit:policy!==AUDIT_POLICY||!coversTargets(c.targets,auditTargets[name]),legacy:legacy,imported:imported,receipt:c.receipt,folder:folder,artifactKey:c.artifactKey,auditText:c.auditText,auditLog:folder+"\\audit.log",output:output};
+-    }catch(e){if(copyStarted)clearOutputs(name);log("ANCHOR_REJECTED="+folder+" : "+e.message);}
++  var entries=entryFolders(name,input.key),seen={};
++  for(var phase=0;phase<2;phase++){
++    if(phase===1){anchorHistoryScans++;entries=historicalAnchorCandidates(name,seen);}
++    for(var i=0;i<entries.length;i++){
++      var folder=entries[i],copyStarted=false;seen[keyPath(folder)]=true;
++      if(/\.pending$/.test(folder)||!exists(folder+"\\receipt.txt"))continue;
++      try{
++        var summary=parseReceipt(read(folder+"\\receipt.txt"));
++        if(summary.SOURCE_SHA256!==fileHashes[keyPath(modules[name].source)])continue;
++        if(summary.SCHEMA===SCHEMA&&summary.INPUT_SHA256!==input.key)continue;
++        var legacy=summary.SCHEMA===LEGACY_SCHEMA;
++        var c=legacy?verifyLegacy(name,folder,{}):verifyCurrent(name,folder,input);
++        var output=work+"\\"+name.replace(/\./g,"\\")+".olean";
++        var retained=workingArtifactsMatch(name,output,c),outputDir=fso.GetParentFolderName(output);
++        if(retained){workingRetained++;log("WORKING_ARTIFACTS_RETAINED="+name);}
++        else{
++          clearOutputs(name);mkdir(outputDir);copyStarted=true;
++          for(var j=0;j<c.files.length;j++){
++            var destination=outputDir+"\\"+c.files[j];
++            fso.CopyFile(folder+"\\artifacts\\"+c.files[j],destination,false);
++            if(fileHash(destination)!==c.expectedHashes[c.files[j]])error("Restored working artifact does not match its verified anchoring hash.");
++          }
++          restoredArtifactFiles+=c.files.length;log("BUILD_ARTIFACT_RESTORED="+name);
++        }
++        var imported=keyPath(folder).indexOf(keyPath(anchorRoot)+"\\")!==0;
++        var policy=legacy?"RH_HILBERT_STANDARD_AXIOMS_V1":c.r.AUDIT_POLICY;
++        log("SOURCE_ANCHOR_RECEIPT="+c.receipt);
++        return {restored:true,retained:retained,needsAudit:policy!==AUDIT_POLICY||!coversTargets(c.targets,auditTargets[name]),legacy:legacy,imported:imported,receipt:c.receipt,folder:folder,artifactKey:c.artifactKey,auditText:c.auditText,auditLog:folder+"\\audit.log",output:output};
++      }catch(e){if(copyStarted)clearOutputs(name);log("ANCHOR_REJECTED="+folder+" : "+e.message);}
++    }
+   }
+   return null;
+ }
+ function saveAnchor(name,input,auditLog,output,origin) {
+-  var parent=anchorRoot+"\\"+name+"\\"+input.key;mkdir(parent);
+-  var tag=runTag+"-"+Math.floor(Math.random()*1000000000),dest=parent+"\\"+tag,temp=dest+".pending";
+-  if(directory(dest)||directory(temp))error("Unique anchor directory collision.");mkdir(temp+"\\artifacts");
++  var parent=compactInputRoot(anchorRoot,name,input.key);
++  var tag=nextAnchorTag(parent,name,input.key);
++  var dest=parent+"\\"+tag,temp=dest+".pending";
+   var files=artifactFamily(output),manifest="",canonical="";
+   if(!exists(output))error("Compiler did not create "+output);
++  preflightAnchorPaths(parent,dest,temp,files);
++  if(directory(dest)||directory(temp))error("Unique anchor directory collision.");mkdir(temp+"\\artifacts");
+   for(var i=0;i<files.length;i++){
+     var fileName=fso.GetFileName(files[i]),hash=fileHash(files[i]);
+     fso.CopyFile(files[i],temp+"\\artifacts\\"+fileName,false);
+@@ -648,6 +726,7 @@
+     "\nRUNNER="+provenance.runner+"\nRUNNER_SHA256="+provenance.runnerSHA+"\nCMD_SHA256="+provenance.cmdSHA+"\nORIGIN_RECEIPT="+(origin||"")+"\nTIME_UTC="+stamp()+"\n";
+   write(temp+"\\receipt.txt",receipt);fso.MoveFolder(temp,dest);
+   moduleKeys[name]=input.key;artifactHashes[name]=artifactKey;
++  compactAnchorsSaved++;log("ANCHOR_SAVE_LAYOUT=COMPACT_V1");
+   log("ANCHOR_SAVED="+dest+"\\receipt.txt");
+ }
+ function acceptRestored(name,input,restored) {
+@@ -701,6 +780,8 @@
+     '  "mathematical_status": "CONDITIONAL_PARTIAL",','  "actual_spectral_calibration": "OPEN",','  "dominant_extraction": "OPEN",','  "unconditional_actual_limit": "NOT_CERTIFIED",','  "actual_subexponential_bound": "OPEN",','  "unconditional_rh": "NOT_ESTABLISHED",','  "finite_checker_equivalence": "OPEN",',
+     '  "final_audit_source": '+quoteJSON(finalAuditRelative)+",",
+     '  "compiled": '+compiled+",",'  "frozen_reused": '+reused+",",'  "audit_only": '+auditOnly+",",'  "legacy_migrated": '+migrated+",",'  "failed": '+failed+",",'  "blocked": '+blocked+",",
++    '  "runner_profile": "LOCAL_FAST_CACHED",','  "cache_validation": "FRESH_CONTENT_HASHES_SAME_TARGET_AUDIT",','  "anchor_write_layout": "COMPACT_V1",',
++    '  "working_artifact_modules_retained": '+workingRetained+",",'  "restored_artifact_files": '+restoredArtifactFiles+",",'  "anchor_history_scans": '+anchorHistoryScans+",",'  "compact_anchors_saved": '+compactAnchorsSaved+",",
+     '  "audited_declarations_with_module_multiplicity": '+audited+",",'  "time_utc": '+quoteJSON(stamp())+",",'  "message": '+quoteJSON(message)+",",'  "modules": {'];
+   var names=keys(buildStates);for(var i=0;i<names.length;i++)lines.push("    "+quoteJSON(names[i])+": "+quoteJSON(buildStates[names[i]])+(i+1<names.length?",":""));
+   lines.push("  }","}");write(root+"\\run-result.json",lines.join("\r\n")+"\r\n");
+@@ -713,6 +794,7 @@
+   if(!exists(certutil))error("Native certutil.exe is required for SHA256 fingerprints.");
+   if(textHash("")!=="e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"||textHash("abc")!=="ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad")error("Manifest SHA256 self-check failed.");
+   log("PACKAGE="+PACKAGE);log("RUNNER="+RUNNER_VERSION);log("ANCHOR_SCHEMA="+SCHEMA);log("TARGET="+TARGET);
++  log("RUNNER_PROFILE=LOCAL_FAST_CACHED");log("CACHE_VALIDATION=FRESH_CONTENT_HASHES_SAME_TARGET_AUDIT");log("ANCHOR_WRITE_LAYOUT=COMPACT_V1");
+   log("NETWORK=NOT_USED");log("LAKE=NOT_USED");log("PYTHON=NOT_USED");log("POWERSHELL=NOT_USED");log("WSL=NOT_USED");
+   stage="COMPILER";selectCompiler();stage="MATHLIB_REQUIREMENTS";loadMathlibRequirements();stage="MATHLIB_CACHE";selectCache();stage="DEPENDENCY_GRAPH";loadPlan();
+   stage="CONTENT_FINGERPRINTS";parallelHashes();makeGlobalKey();
+@@ -722,6 +804,7 @@
+   log("AXIOM_AUDIT=PASS_STANDARD_LOGICAL_AXIOMS_ONLY");log("SORRYAX=NONE");
+   log("MATHEMATICAL_STATUS=CONDITIONAL_PARTIAL");log("ACTUAL_SPECTRAL_CALIBRATION=OPEN");log("DOMINANT_EXTRACTION=OPEN");log("UNCONDITIONAL_ACTUAL_LIMIT=NOT_CERTIFIED");log("ACTUAL_SUBEXPONENTIAL_BOUND=OPEN");log("UNCONDITIONAL_RH=NOT_ESTABLISHED");log("FINITE_ACCEPTED_WITNESS=NOT_ESTABLISHED");log("FINITE_CHECKER_EQUIVALENCE=OPEN");
+   log("COMPILED_MODULES="+compiled);log("FROZEN_REUSED_MODULES="+reused);log("AUDIT_ONLY_MODULES="+auditOnly);log("LEGACY_MIGRATED_MODULES="+migrated);log("PROJECT_BUILD=PASS");log("RUN=PASS");
++  log("WORKING_ARTIFACT_MODULES_RETAINED="+workingRetained);log("RESTORED_ARTIFACT_FILES="+restoredArtifactFiles);log("ANCHOR_HISTORY_SCANS="+anchorHistoryScans);log("COMPACT_ANCHORS_SAVED="+compactAnchorsSaved);
+   result(true,"Exact supplied declarations compiled and passed their recorded axiom audits; theorem hypotheses remain explicit.");exitCode=0;
+ }catch(e){
+   if(lockHeld){try{log("PROJECT_BUILD=FAIL");log("FAILED_STAGE="+stage);log("REASON="+e.message);log("RUN=FAIL");result(false,e.message);}catch(ignore){WScript.Echo("RUN=FAIL : "+e.message);}}

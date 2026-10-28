@@ -1,0 +1,18 @@
+function isCertutilInvalidFileError(output,code) {
+  if(typeof code!=="number"||!isFinite(code)||code===0)return false;
+  if(code===1006||(code>>>0)===0x800703ee)return true;
+  return /(?:^|\r?\n)CertUtil:[^\r\n]*\b0x800703ee\b[^\r\n]*\(\s*WIN32:\s*1006\s+ERROR_FILE_INVALID\s*\)/i.test(String(output));
+}
+function verifiedEmptyFileHash(path) {
+  /* Metadata is only a prefilter. Load actual bytes into a fresh binary
+     stream; neither decoded text nor a file-size record establishes emptiness. */
+  if(Number(fso.GetFile(path).Size)!==0)return "";
+  var stream=new ActiveXObject("ADODB.Stream"),opened=false;
+  try{
+    stream.Type=1;stream.Open();opened=true;stream.LoadFromFile(path);
+    if(Number(stream.Size)!==0||Number(stream.Position)!==0||stream.EOS!==true)return "";
+  }finally{if(opened)stream.Close();}
+  if(Number(fso.GetFile(path).Size)!==0)error("File changed while verifying an empty SHA256 input: "+path);
+  diagnosticLog("SHA256_EMPTY_FILE_VERIFIED="+path+"|BYTES=0|BACKEND=ADODB_BINARY");
+  return textHash("");
+}

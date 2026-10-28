@@ -1,0 +1,27 @@
+{
+  "schema": "RH_HILBERT_RESULT_REPORTING_FORMAT_SIMULATION_V1",
+  "runner_sha256": "738f7f92b68f8145a3c6b9e5b395e0c5ac95b156b6e4c5bdf2799c6d272fbb7f",
+  "source_function": "result(pass,message)",
+  "scope": "Only isolated JSON formatting and status selection; no native calls or actual build",
+  "cases": [
+    {
+      "input_pass": false,
+      "valid_json": true,
+      "construction_status": "NEW_SOURCE_NATIVE_AUDIT_PENDING",
+      "finite_checker_equivalence": "OPEN",
+      "formal_closure": "OPEN"
+    },
+    {
+      "input_pass": true,
+      "valid_json": true,
+      "construction_status": "EXACT_CONSTRUCTION_AUDITED",
+      "finite_checker_equivalence": "OPEN",
+      "formal_closure": "OPEN"
+    }
+  ],
+  "result": "PASS_FORMATTING_SIMULATION_ONLY",
+  "native_execution": false,
+  "lean_execution": false,
+  "csharp_execution": false,
+  "ci_execution": false
+}

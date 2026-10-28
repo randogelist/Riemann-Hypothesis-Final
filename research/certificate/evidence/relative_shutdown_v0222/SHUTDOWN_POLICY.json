@@ -1,0 +1,30 @@
+{
+  "strategy": "INITIAL_COMPLETE_INVENTORY_WITH_BOUNDED_EXACT_RECHECK; ONE_FRESH_BARRIER_AFTER_UNRESOLVED_RELATIVE_HOST_ABSENCE",
+  "script_classifier": "RESTRICTED_FULLY_CONSUMED_WSH_SCRIPT_ARGUMENT_PARSER; OLD_BROAD_MATCHER_FOR_UNSUPPORTED_SYNTAX",
+  "current_workspace_guard": "ABSOLUTE_ROOT_ANYWHERE_CHECK_PRECEDES_SCRIPT_CLASSIFICATION; EVERY_INITIAL_ROW_CHECKED_BEFORE_ABSENCE_QUERIES",
+  "absence_rule": "ONLY_COMPLETE_SUCCESSFUL_EXACT_PID_QUERY_WITH_NO_ROW",
+  "identity_rule": "EXACT_PID_FULL_CREATION_NAME_PARENT; KNOWN_RELATIVE_COMMAND_MUST_REMAIN_IDENTICAL",
+  "unreadable_to_relative": "REMAINS_PENDING_AND_BINDS_FIRST_READABLE_COMMAND",
+  "post_exit_barrier": "ONE_FRESH_COMPLETE_INVENTORY; NEW_UNRESOLVED_RELATIVE_HOST_FAILS_IMMEDIATELY; UNREADABLE_ROWS_SHARE_EXISTING_BUDGET",
+  "contradictory_reappearance": "RETAIN_LOCK",
+  "persistent_uncertainty_or_identity_change": "RETAIN_LOCK",
+  "preexisting_parent_exemption_extended_to_children": false,
+  "existing_admission_and_follower_exceptions": "EXACT_FUNCTION_BYTES_PRESERVED",
+  "own_launch_boundary": "EXACT_EXISTING_SEAL_AND_COMPLETION_CHECKS_PRESERVED",
+  "owner_and_self_checks": "EXACT_BEFORE_AND_AFTER_EACH_INVENTORY_ITERATION",
+  "stale_lock_acquisition_and_recovery": "CONTROL_FLOW_UNCHANGED; SHARED_SCRIPT_CLASSIFIER_CORRECTED; NO_RETRY_OR_NEW_EXEMPTION",
+  "scope": "COOPERATIVE_WORKSPACE_LOCK_AND_POINT_IN_TIME_PROCESS_OBSERVATIONS; NOT_ATOMIC_OS_PROCESS_TREE_CLOSURE",
+  "query_and_wait_limits": {
+    "complete_machine_inventory_queries_max": 2,
+    "queued_rows_across_both_inventories_max": 64,
+    "rounds_max": 6,
+    "targeted_worker_queries_per_round_max": 64,
+    "targeted_worker_queries_total_max": 384,
+    "targeted_self_queries_total_max": 14,
+    "scheduled_sleep_between_rounds_ms": 200,
+    "scheduled_sleep_total_max_ms": 1000,
+    "existing_owned_worker_drain_ms": 30000,
+    "hard_wall_clock_bound": false,
+    "runtime_note": "WMI/COM enumeration and status calls retain their existing lack of a wrapper-imposed hard deadline."
+  }
+}

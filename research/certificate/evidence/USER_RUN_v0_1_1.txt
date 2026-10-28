@@ -1,0 +1,243 @@
+DEPENDENCY_HASH_PROGRESS=18062/36176
+DEPENDENCY_HASH_PROGRESS=18328/36176
+DEPENDENCY_HASH_PROGRESS=18594/36176
+DEPENDENCY_HASH_PROGRESS=18860/36176
+DEPENDENCY_HASH_PROGRESS=19126/36176
+DEPENDENCY_HASH_PROGRESS=19392/36176
+DEPENDENCY_HASH_PROGRESS=19658/36176
+DEPENDENCY_HASH_PROGRESS=19924/36176
+DEPENDENCY_HASH_PROGRESS=20190/36176
+DEPENDENCY_HASH_PROGRESS=20456/36176
+DEPENDENCY_HASH_PROGRESS=20722/36176
+DEPENDENCY_HASH_PROGRESS=20988/36176
+DEPENDENCY_HASH_PROGRESS=21254/36176
+DEPENDENCY_HASH_PROGRESS=21520/36176
+DEPENDENCY_HASH_PROGRESS=21786/36176
+DEPENDENCY_HASH_PROGRESS=22052/36176
+DEPENDENCY_HASH_PROGRESS=22318/36176
+DEPENDENCY_HASH_PROGRESS=22584/36176
+DEPENDENCY_HASH_PROGRESS=22850/36176
+DEPENDENCY_HASH_PROGRESS=23116/36176
+DEPENDENCY_HASH_PROGRESS=23382/36176
+DEPENDENCY_HASH_PROGRESS=23648/36176
+DEPENDENCY_HASH_PROGRESS=23914/36176
+DEPENDENCY_HASH_PROGRESS=24180/36176
+DEPENDENCY_HASH_PROGRESS=24446/36176
+DEPENDENCY_HASH_PROGRESS=24712/36176
+DEPENDENCY_HASH_PROGRESS=24978/36176
+DEPENDENCY_HASH_PROGRESS=25244/36176
+DEPENDENCY_HASH_PROGRESS=25510/36176
+DEPENDENCY_HASH_PROGRESS=25776/36176
+DEPENDENCY_HASH_PROGRESS=26043/36176
+DEPENDENCY_HASH_PROGRESS=26309/36176
+DEPENDENCY_HASH_PROGRESS=26575/36176
+DEPENDENCY_HASH_PROGRESS=26841/36176
+DEPENDENCY_HASH_PROGRESS=27107/36176
+DEPENDENCY_HASH_PROGRESS=27373/36176
+DEPENDENCY_HASH_PROGRESS=27639/36176
+DEPENDENCY_HASH_PROGRESS=27905/36176
+DEPENDENCY_HASH_PROGRESS=28171/36176
+DEPENDENCY_HASH_PROGRESS=28437/36176
+DEPENDENCY_HASH_PROGRESS=28703/36176
+DEPENDENCY_HASH_PROGRESS=28969/36176
+DEPENDENCY_HASH_PROGRESS=29235/36176
+DEPENDENCY_HASH_PROGRESS=29501/36176
+DEPENDENCY_HASH_PROGRESS=29767/36176
+DEPENDENCY_HASH_PROGRESS=30033/36176
+DEPENDENCY_HASH_PROGRESS=30299/36176
+DEPENDENCY_HASH_PROGRESS=30565/36176
+DEPENDENCY_HASH_PROGRESS=30831/36176
+DEPENDENCY_HASH_PROGRESS=31097/36176
+DEPENDENCY_HASH_PROGRESS=31363/36176
+DEPENDENCY_HASH_PROGRESS=31629/36176
+DEPENDENCY_HASH_PROGRESS=31895/36176
+DEPENDENCY_HASH_PROGRESS=32161/36176
+DEPENDENCY_HASH_PROGRESS=32427/36176
+DEPENDENCY_HASH_PROGRESS=32696/36176
+DEPENDENCY_HASH_PROGRESS=32955/36176
+DEPENDENCY_HASH_PROGRESS=33216/36176
+DEPENDENCY_HASH_PROGRESS=33476/36176
+DEPENDENCY_HASH_PROGRESS=33738/36176
+DEPENDENCY_HASH_PROGRESS=33998/36176
+DEPENDENCY_HASH_PROGRESS=34258/36176
+DEPENDENCY_HASH_PROGRESS=34518/36176
+DEPENDENCY_HASH_PROGRESS=34781/36176
+DEPENDENCY_HASH_PROGRESS=35041/36176
+DEPENDENCY_HASH_PROGRESS=35301/36176
+DEPENDENCY_HASH_PROGRESS=35559/36176
+DEPENDENCY_HASH_PROGRESS=35820/36176
+DEPENDENCY_HASH_PROGRESS=36089/36176
+DEPENDENCY_HASH_PROGRESS=36176/36176
+TOOLCHAIN_FINGERPRINT=9accc35f783dedab9563980b5d45c280b70fbc8b1daaeadc65cdebf7cdd0f2f8
+BUILD_IDENTITY=SOURCE_DEPENDENCIES_NATIVE_COMPILER_SEMANTIC_FLAGS
+RUNNER_PROVENANCE_SHA256=f6817d4794f9b751348b3e520ca6741e04e3bf0adde876f2aaea69a46c0c33e9
+COMPILE_START=AWPIRH.XiCore
+Try this:
+  [apply] ring_nf
+
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_1_1_construction\AWPIRH\XiCore.lean:48:20: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_1_1_construction\AWPIRH\XiCore.lean:85:2: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_1_1_construction\AWPIRH\XiCore.lean:107:10: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_1_1_construction\AWPIRH\XiCore.lean:116:2: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+
+AXIOM_AUDIT_START=AWPIRH.XiCore
+C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_1_1_construction\RunnerAudit\AWPIRH_XiCore.lean:1:0: error: expected token
+C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_1_1_construction\RunnerAudit\AWPIRH_XiCore.lean:2:7: error(lean.unknownIdentifier): Unknown identifier `AWPIRH.centeredXi_differentiable`
+C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_1_1_construction\RunnerAudit\AWPIRH_XiCore.lean:3:14: error(lean.unknownIdentifier): Unknown constant `AWPIRH.centeredXi_differentiable`
+C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_1_1_construction\RunnerAudit\AWPIRH_XiCore.lean:4:7: error(lean.unknownIdentifier): Unknown identifier `AWPIRH.centeredXi_even`
+C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_1_1_construction\RunnerAudit\AWPIRH_XiCore.lean:5:14: error(lean.unknownIdentifier): Unknown constant `AWPIRH.centeredXi_even`
+C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_1_1_construction\RunnerAudit\AWPIRH_XiCore.lean:6:7: error(lean.unknownIdentifier): Unknown identifier `AWPIRH.completedZeta_zero_of_nontrivialZero`
+C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_1_1_construction\RunnerAudit\AWPIRH_XiCore.lean:7:14: error(lean.unknownIdentifier): Unknown constant `AWPIRH.completedZeta_zero_of_nontrivialZero`
+C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_1_1_construction\RunnerAudit\AWPIRH_XiCore.lean:8:7: error(lean.unknownIdentifier): Unknown identifier `AWPIRH.complex_sqrt_sq`
+C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_1_1_construction\RunnerAudit\AWPIRH_XiCore.lean:9:14: error(lean.unknownIdentifier): Unknown constant `AWPIRH.complex_sqrt_sq`
+C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_1_1_construction\RunnerAudit\AWPIRH_XiCore.lean:10:7: error(lean.unknownIdentifier): Unknown identifier `AWPIRH.gammaR_ne_zero_of_nontrivialZero`
+C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_1_1_construction\RunnerAudit\AWPIRH_XiCore.lean:11:14: error(lean.unknownIdentifier): Unknown constant `AWPIRH.gammaR_ne_zero_of_nontrivialZero`
+C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_1_1_construction\RunnerAudit\AWPIRH_XiCore.lean:12:7: error(lean.unknownIdentifier): Unknown identifier `AWPIRH.nontrivialZero_ne_zero`
+C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_1_1_construction\RunnerAudit\AWPIRH_XiCore.lean:13:14: error(lean.unknownIdentifier): Unknown constant `AWPIRH.nontrivialZero_ne_zero`
+C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_1_1_construction\RunnerAudit\AWPIRH_XiCore.lean:14:7: error(lean.unknownIdentifier): Unknown identifier `AWPIRH.theta_one`
+C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_1_1_construction\RunnerAudit\AWPIRH_XiCore.lean:15:14: error(lean.unknownIdentifier): Unknown constant `AWPIRH.theta_one`
+C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_1_1_construction\RunnerAudit\AWPIRH_XiCore.lean:16:7: error(lean.unknownIdentifier): Unknown identifier `AWPIRH.theta_one_ne_zero`
+C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_1_1_construction\RunnerAudit\AWPIRH_XiCore.lean:17:14: error(lean.unknownIdentifier): Unknown constant `AWPIRH.theta_one_ne_zero`
+C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_1_1_construction\RunnerAudit\AWPIRH_XiCore.lean:18:7: error(lean.unknownIdentifier): Unknown identifier `AWPIRH.theta_square`
+C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_1_1_construction\RunnerAudit\AWPIRH_XiCore.lean:19:14: error(lean.unknownIdentifier): Unknown constant `AWPIRH.theta_square`
+C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_1_1_construction\RunnerAudit\AWPIRH_XiCore.lean:20:7: error(lean.unknownIdentifier): Unknown identifier `AWPIRH.theta_zero_of_nontrivialZero`
+C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_1_1_construction\RunnerAudit\AWPIRH_XiCore.lean:21:14: error(lean.unknownIdentifier): Unknown constant `AWPIRH.theta_zero_of_nontrivialZero`
+C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_1_1_construction\RunnerAudit\AWPIRH_XiCore.lean:22:7: error(lean.unknownIdentifier): Unknown identifier `AWPIRH.xi_differentiable`
+C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_1_1_construction\RunnerAudit\AWPIRH_XiCore.lean:23:14: error(lean.unknownIdentifier): Unknown constant `AWPIRH.xi_differentiable`
+C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_1_1_construction\RunnerAudit\AWPIRH_XiCore.lean:24:7: error(lean.unknownIdentifier): Unknown identifier `AWPIRH.xi_eq_completed`
+C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_1_1_construction\RunnerAudit\AWPIRH_XiCore.lean:25:14: error(lean.unknownIdentifier): Unknown constant `AWPIRH.xi_eq_completed`
+C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_1_1_construction\RunnerAudit\AWPIRH_XiCore.lean:26:7: error(lean.unknownIdentifier): Unknown identifier `AWPIRH.xi_ne_zero_of_one_le_re`
+C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_1_1_construction\RunnerAudit\AWPIRH_XiCore.lean:27:14: error(lean.unknownIdentifier): Unknown constant `AWPIRH.xi_ne_zero_of_one_le_re`
+C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_1_1_construction\RunnerAudit\AWPIRH_XiCore.lean:28:7: error(lean.unknownIdentifier): Unknown identifier `AWPIRH.xi_reflection`
+C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_1_1_construction\RunnerAudit\AWPIRH_XiCore.lean:29:14: error(lean.unknownIdentifier): Unknown constant `AWPIRH.xi_reflection`
+C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_1_1_construction\RunnerAudit\AWPIRH_XiCore.lean:30:7: error(lean.unknownIdentifier): Unknown identifier `AWPIRH.xi_zero_of_nontrivialZero`
+C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_1_1_construction\RunnerAudit\AWPIRH_XiCore.lean:31:14: error(lean.unknownIdentifier): Unknown constant `AWPIRH.xi_zero_of_nontrivialZero`
+
+MODULE_BLOCKED=AWPIRH.ThetaEntire DEPENDENCY=AWPIRH.XiCore
+COMPILE_START=RH_HilbertLimit.Bernstein
+C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_1_1_construction\RH_HilbertLimit\Bernstein.lean:295:24: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_1_1_construction\RH_HilbertLimit\Bernstein.lean:321:52: error(lean.unknownIdentifier): Unknown identifier `abs_add`
+
+COMPILE_FAIL=RH_HilbertLimit.Bernstein
+COMPILE_START=RH_HilbertLimit.Growth
+C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_1_1_construction\RH_HilbertLimit\Growth.lean:45:47: error: unsolved goals
+V : ℕ → ℝ
+n : ℕ
+hV : 0 < V n
+⊢ (V n).rpow (↑n)⁻¹ = Real.exp (Real.log (V n) * (↑n)⁻¹)
+C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_1_1_construction\RH_HilbertLimit\Growth.lean:46:34: warning: This simp argument is unused:
+  Real.rpow_def_of_pos hV
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [rootScale, logScale, div_eq_mul_inv]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_1_1_construction\RH_HilbertLimit\Growth.lean:51:17: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  Real.log (V n ^ ?y)
+in the target expression
+  Real.log ((V n).rpow (↑n)⁻¹) = logScale V n
+
+V : ℕ → ℝ
+n : ℕ
+hV : 0 < V n
+⊢ Real.log ((V n).rpow (↑n)⁻¹) = logScale V n
+C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_1_1_construction\RH_HilbertLimit\Growth.lean:90:23: warning: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_1_1_construction\RH_HilbertLimit\Growth.lean:90:23: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_1_1_construction\RH_HilbertLimit\Growth.lean:162:42: warning: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_1_1_construction\RH_HilbertLimit\Growth.lean:162:42: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_1_1_construction\RH_HilbertLimit\Growth.lean:226:25: warning: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_1_1_construction\RH_HilbertLimit\Growth.lean:226:25: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_1_1_construction\RH_HilbertLimit\Growth.lean:270:6: error: Type mismatch
+  (tendsto_order.mp hu).right b ?m.219
+has type
+  Filter.Eventually (fun (b_1 : ℕ) => Real.log C / ↑b_1 + b / 2 < b) atTop
+but is expected to have type
+  Filter.Eventually (fun (n : ℝ) => Real.log C / n + b / 2 < b) atTop
+C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_1_1_construction\RH_HilbertLimit\Growth.lean:271:24: error: Application type mismatch: The argument
+  hsmall
+has type
+  ∀ᶠ (n : ℝ) in atTop, Real.log C / n + b / 2 < b
+but is expected to have type
+  ?m.252 ∈ atTop
+in the application
+  mp_mem hsmall
+
+COMPILE_FAIL=RH_HilbertLimit.Growth
+COMPILE_START=RH_HilbertLimit.Geometry
+C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_1_1_construction\RH_HilbertLimit\Geometry.lean:56:16: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_1_1_construction\RH_HilbertLimit\Geometry.lean:115:42: error: Invalid `⟨...⟩` notation: The expected type of this term could not be determined
+C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_1_1_construction\RH_HilbertLimit\Geometry.lean:148:6: error: Type mismatch
+  add_le_add_left (mul_le_mul_of_nonneg_right hx (norm_nonneg q)) ?m.156
+has type
+  ‖x‖ * ‖q‖ + ?m.156 ≤ 1 * ‖q‖ + ?m.156
+but is expected to have type
+  ‖1 - q‖ + ‖x‖ * ‖q‖ ≤ ‖1 - q‖ + 1 * ‖q‖
+C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_1_1_construction\RH_HilbertLimit\Geometry.lean:162:49: error: unsolved goals
+κ : ℝ
+hκ : 0 < κ
+q : ℂ
+hq : q ≠ 0
+hκc : ↑κ ≠ 0
+hd : 0 < Complex.normSq (↑κ * q)
+⊢ -(-q.im / Complex.normSq q * κ⁻¹) = κ * q.im / (κ * κ * Complex.normSq q)
+C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_1_1_construction\RH_HilbertLimit\Geometry.lean:165:52: error: unsolved goals
+κ : ℝ
+hκ : 0 < κ
+q : ℂ
+hq : q ≠ 0
+hκc : ↑κ ≠ 0
+hd : 0 < Complex.normSq (↑κ * q)
+him : (rootOfNode κ q).im = κ * q.im / Complex.normSq (↑κ * q)
+⊢ q.re / Complex.normSq q * κ⁻¹ = κ * q.re / (κ * κ * Complex.normSq q)
+C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_1_1_construction\RH_HilbertLimit\Geometry.lean:176:48: error(lean.invalidField): Invalid field `mp`: The environment does not contain `Function.mp`, so it is not possible to project the field `mp` from an expression
+  mul_le_mul_left ?m.223
+of type
+  ∀ (a : ?m.217), ?m.221 * a ≤ ?m.222 * a
+C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_1_1_construction\RH_HilbertLimit\Geometry.lean:176:44: error: Application type mismatch: The argument
+  hκ
+has type
+  0 < κ
+but is expected to have type
+  ?m.221 ≤ ?m.222
+in the application
+  mul_le_mul_left hκ
+
+COMPILE_FAIL=RH_HilbertLimit.Geometry
+MODULE_BLOCKED=RH_HilbertLimit.ActualXi DEPENDENCY=AWPIRH.ThetaEntire
+MODULE_BLOCKED=RH_HilbertLimit.Spectral DEPENDENCY=RH_HilbertLimit.ActualXi
+MODULE_BLOCKED=RH_HilbertLimit.Vandermonde DEPENDENCY=RH_HilbertLimit.Growth
+MODULE_BLOCKED=RH_HilbertLimit.Main DEPENDENCY=RH_HilbertLimit.Spectral
+PROJECT_BUILD=FAIL
+FAILED_STAGE=MODULE:RH_HilbertLimit.Main
+REASON=Some modules failed or were blocked. Independent modules were still attempted.
+RUN=FAIL
+Logs: C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_1_1_construction\run-build.log and C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_1_1_construction\run-audit.log
+
+C:\Users\Simon\Downloads>

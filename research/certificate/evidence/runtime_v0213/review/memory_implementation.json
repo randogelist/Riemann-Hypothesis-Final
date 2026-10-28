@@ -1,0 +1,115 @@
+{
+  "schema": "RH_HILBERT_MEMORY_IMPLEMENTATION_REVIEW_V1",
+  "date": "2026-10-27",
+  "scope": "Bounded independent static review of adaptive memory admission and its assembler integration. Separate relative-host lock exception is outside this review.",
+  "candidate": {
+    "path": "output/RH_HILBERT_LIMIT_LEAN_v0_2_13_construction/tools/native_runner.js",
+    "bytes": 129383,
+    "sha256": "f6726db78ef9b532b24e2c09092e44e1e7f855c5eb84a6873c1dc519ef13803f"
+  },
+  "baseline": {
+    "path": "output/RH_HILBERT_LIMIT_LEAN_v0_2_12_construction/tools/native_runner.js",
+    "bytes": 122898,
+    "sha256": "b11c97c591c5e200978fcfff5f37d6f6cd4b9388a464697a673174ab20c5a632"
+  },
+  "fragment": {
+    "path": "tmp/ram_parallel_v0213/memory_fallback.js",
+    "bytes": 3759,
+    "sha256": "2e7606215fe234f04da2e18ba0930253dff388fb2a5bdf08272ecd44786fe673"
+  },
+  "assembler": {
+    "path": "tmp/ram_parallel_v0213/assemble_runtime.py",
+    "bytes": 7522,
+    "sha256": "5d5054616b7baef6dc3efae1626eeace5cb4a83ed4add0310c93012023d3b753"
+  },
+  "conclusion": "NO_CONCRETE_MEMORY_IMPLEMENTATION_ISSUE_IDENTIFIED",
+  "issues": [],
+  "checked": [
+    {
+      "property": "Explicit host floor",
+      "location": "configureParallelRuntime lines1312-1324",
+      "finding": "minimumReserveMB captures explicit RH_SYSTEM_RESERVE_MB before total-memory20% inflation; otherwise1024. preferredReserveMB keeps the original preferred policy. Worker estimate unchanged."
+    },
+    {
+      "property": "Fresh known memory after pressure",
+      "location": "parallelTrySerialFallback; parallelMemoryAllowsLaunch",
+      "finding": "Fallback sets memoryPressureSeen, requires RAM stop success, then forces parallelMemorySnapshot(true). Missing refresh or insufficient free memory rejects. Later unknown snapshots cannot use original unknown-memory permission after pressure."
+    },
+    {
+      "property": "Bounded RAM-only release",
+      "location": "parallelStopRamForMemory",
+      "finding": "Only matching RAM stop request is written. Polling budget is5000ms. Live/unknown helper state rejects. Existing process record remains present; whole-run parallelShutdown and its completion fields are untouched."
+    },
+    {
+      "property": "No premature zero reservation",
+      "location": "parallelTrySerialFallback",
+      "finding": "workers1, effective floor and ramCapMB0 are assigned only after confirmed absence/exit and successful threshold check. HELD_BYTES is never added to free memory."
+    },
+    {
+      "property": "Sticky serial scheduling",
+      "location": "parallelTrySerialFallback; processModulesParallel",
+      "finding": "No promotion path resets workers after fallback. Thread share reads the updated workers1 before launching, and next while-condition prevents a second active task."
+    },
+    {
+      "property": "First-iteration denial",
+      "location": "processModulesParallel lines1726-1729",
+      "finding": "Idle denial check no longer depends on !progress. A cache-preparation progress flag cannot cause a second5000ms release attempt on the next scheduler iteration."
+    },
+    {
+      "property": "Dirty final-audit gate",
+      "location": "processModuleBody lines1918-1921",
+      "finding": "Accepted frozen restore returns before gate. Only a needed final compile/re-audit checks memory, before clearing new outputs or invoking Lean. Ordinary-worker barrier is checked."
+    },
+    {
+      "property": "Active resources",
+      "location": "parallelMemoryAllowsLaunch",
+      "finding": "Preferred/effective reserve + live warmer cap + (live+1)*worker estimate formula is preserved. Adaptive fallback is unavailable while a task is active."
+    },
+    {
+      "property": "Result metadata",
+      "location": "result lines1997-1999",
+      "finding": "memory_serial_fallback and ram_disabled_for_memory are booleans; preferred/effective reserve values are separate numeric MiB fields. Existing fields remain present."
+    },
+    {
+      "property": "Assembler placement",
+      "location": "assemble_runtime.py",
+      "finding": "Unique-site assertions and scoped replacements place the helper fragment once, preserve cache-only final return, and alter the intended scheduler denial condition. Assembler itself was inspected, not executed by this reviewer."
+    }
+  ],
+  "static_file_checks": {
+    "lean_source_sets_equal": true,
+    "lean_source_count": 92,
+    "frozen_input_count": 103,
+    "frozen_input_mismatches": [],
+    "memory_fragment_exact_occurrences": 1,
+    "new_helper_definition_counts": {
+      "parallelStopRamForMemory": 1,
+      "parallelTrySerialFallback": 1,
+      "parallelMemoryAllowsLaunch": 1,
+      "parallelRequireFinalAuditMemory": 1
+    },
+    "unchanged_helpers_and_launcher": {
+      "run.cmd": true,
+      "tools/NativeSha256.cs": true,
+      "tools/NativeRamWarm.cs": true,
+      "tools/follow_active.js": true
+    }
+  },
+  "limitations": [
+    "This is source inspection plus read-only byte/hash comparison, not execution of the JavaScript scheduler or any native tool.",
+    "The5000ms constant bounds the intended polling window; synchronous WSH property/I/O operations and scheduler latency have no hard real-time guarantee.",
+    "4096MiB is an admission estimate, not an enforced process memory cap; volatile memory can change after admission.",
+    "Existing initially-unknown memory serial policy is retained until known pressure is observed.",
+    "Run-plan JSON describes initial planning, while result metadata and fallback logs report effective serial degradation."
+  ],
+  "execution": {
+    "runner": "NOT_RUN",
+    "mock_tests": "NOT_RUN_BY_THIS_REVIEWER",
+    "lean_lake": "NOT_RUN",
+    "native_windows": "NOT_RUN",
+    "csharp": "NOT_RUN",
+    "wine": "NOT_RUN",
+    "ci": "NOT_RUN"
+  },
+  "source_edits": "NONE"
+}

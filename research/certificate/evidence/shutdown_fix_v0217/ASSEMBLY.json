@@ -1,0 +1,103 @@
+{
+  "baseline": "/workspace/scratch/f128c1434505/output/reuse_record_v0216/RH_HILBERT_LIMIT_LEAN_v0_2_16_construction",
+  "baseline_zip": "/workspace/scratch/f128c1434505/output/RH_HILBERT_LIMIT_LEAN_v0_2_16_REUSE_RECORD_construction.zip",
+  "baseline_zip_sha256": "03c16d7cd2cdfb9e6fa5081d7084a667e2f27f34bb313c8993d55f379b24074d",
+  "candidate": "/workspace/scratch/f128c1434505/output/RH_HILBERT_LIMIT_LEAN_v0_2_17_construction",
+  "metadata_changed": [
+    "STATUS.json",
+    "CHECKPOINT.json",
+    "README.md",
+    "OPEN_OBLIGATIONS.txt",
+    "PROVENANCE.json",
+    "STATIC_REVIEW.json",
+    "RUNNER_LOGIC_VALIDATION.json",
+    "RUNNER_NOTES.txt",
+    "SHA256SUMS.txt",
+    "runner-version.txt"
+  ],
+  "changed_runtime_files": [
+    "tools/native_runner.js"
+  ],
+  "changed_lean_sources": [],
+  "all_lean_sources_preserved": 92,
+  "latest_user_evidence": {
+    "evidence_kind": "USER_MESSAGE_UTF8_LF_TRANSCRIPTION_NOT_ORIGINAL_NATIVE_LOG_BYTES",
+    "reported_package": "RH_HILBERT_LIMIT_LEAN_v0_2_16_construction",
+    "reported_build": "FAIL",
+    "reported_run": "FAIL",
+    "failed_stage": "WORKER_SHUTDOWN",
+    "reported_parallel_peak_module_workers": 0,
+    "reported_new_or_reaudited_tasks": 0,
+    "reported_selected_final_audit": "AnalyticAudit.lean",
+    "reported_final_audit_declarations": 370,
+    "reported_retained_and_reused_final_module": "AnalyticAudit",
+    "reported_stage_elapsed_ms": {
+      "PROJECT_MODULES": 51424,
+      "FINAL_AUDIT": 395,
+      "WORKER_SHUTDOWN": 3089
+    },
+    "reported_shutdown_inventory": {
+      "reported_admitted_host_pid": 34008,
+      "worker_observations": [
+        {
+          "pid": 36224,
+          "parent_pid_as_reported": 34008,
+          "creation_string_as_reported": "20261027221141.871213+060",
+          "name": "certutil.exe",
+          "attempt": 1
+        },
+        {
+          "pid": 39212,
+          "parent_pid_as_reported": 34008,
+          "creation_string_as_reported": "20261027221142.436092+060",
+          "name": "certutil.exe",
+          "attempt": 2
+        },
+        {
+          "pid": 24364,
+          "parent_pid_as_reported": 34008,
+          "creation_string_as_reported": "20261027221142.965889+060",
+          "name": "certutil.exe",
+          "attempt": 3
+        },
+        {
+          "pid": 38276,
+          "parent_pid_as_reported": 34008,
+          "creation_string_as_reported": "20261027221143.494456+060",
+          "name": "certutil.exe",
+          "attempt": 4
+        },
+        {
+          "pid": 39088,
+          "parent_pid_as_reported": 34008,
+          "creation_string_as_reported": "20261027221144.050284+060",
+          "name": "certutil.exe",
+          "attempt": 5
+        },
+        {
+          "pid": 8836,
+          "parent_pid_as_reported": 34008,
+          "creation_string_as_reported": "20261027221144.609267+060",
+          "name": "certutil.exe",
+          "attempt": 6
+        }
+      ],
+      "distinct_observed_worker_pids": 6,
+      "attempt_count": 6,
+      "common_parent_pid_as_reported": 34008,
+      "inventory_recheck_count": 5,
+      "interpretation": "Six distinct certutil.exe PID observations across six attempts share the reported numeric parent field. Their unreadable command lines prevented exclusion by the shutdown inventory. The parent field alone does not establish current process identity, process ownership, or a foreign/current workspace."
+    },
+    "source": "evidence/shutdown_fix_v0217/evidence/USER_NATIVE_SHUTDOWN_FAIL_TAIL.txt",
+    "source_sha256": "d5d0f7e509bbf1eec992b010752aaf76a57422472e2f228cd70cc1424e427d6f",
+    "source_bytes": 2553,
+    "review": "evidence/shutdown_fix_v0217/evidence/NATIVE_SHUTDOWN_FAIL_REVIEW.json",
+    "final_overall_axiom_summary": "NOT_EMITTED_IN_FAILED_EXCERPT",
+    "aggregate_compiled_and_reused_module_counts": "NOT_SUPPLIED_IN_FAILED_EXCERPT",
+    "all_90_working_artifacts_retained": "NOT_INFERRED_FROM_FINAL_AUDIT_RETENTION_LINE",
+    "native_receipt_contents_or_exact_fingerprints": "NOT_SUPPLIED",
+    "independent_native_verification": "NOT_PERFORMED",
+    "first_marker": "CLIPPED_PREFIX_PRESERVED_VERBATIM"
+  },
+  "prepared_at": "2026-10-27T22:17:52.217526+01:00"
+}

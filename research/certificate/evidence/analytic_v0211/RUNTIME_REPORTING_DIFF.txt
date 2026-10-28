@@ -1,0 +1,43 @@
+--- v0_2_10/tools/native_runner.js
++++ v0_2_11/tools/native_runner.js
+@@ -5,8 +5,8 @@
+ var shell = new ActiveXObject("WScript.Shell");
+ var env = shell.Environment("PROCESS");
+ var root = fso.GetAbsolutePathName(".");
+-var PACKAGE = "RH_HILBERT_LIMIT_LEAN_v0_2_10_construction";
+-var RUNNER_VERSION = "RH_HILBERT_NATIVE_RUNNER_v0_2_10";
++var PACKAGE = "RH_HILBERT_LIMIT_LEAN_v0_2_11_construction";
++var RUNNER_VERSION = "RH_HILBERT_NATIVE_RUNNER_v0_2_11";
+ var SCHEMA = "RH_HILBERT_LOCAL_ANCHOR_V2";
+ var CACHE_LAYOUT = "COMPACT_V1";
+ var HELPER_SCHEMA = "RH_HILBERT_SHA256_HELPER_CACHE_V1";
+@@ -1338,7 +1338,14 @@
+   var lines=["{",'  "package": '+quoteJSON(PACKAGE)+",",'  "target": "LOCAL_COMPILER",',
+     '  "lean_version": '+quoteJSON(leanVersion)+",",'  "build": '+quoteJSON(pass?"PASS":"FAIL")+",",
+     '  "axiom_audit": '+quoteJSON(pass?"PASS":"INCOMPLETE_OR_FAILED")+",",
+-    '  "mathematical_status": "CONDITIONAL_PARTIAL",','  "actual_spectral_calibration": "OPEN",','  "dominant_extraction": "OPEN",','  "unconditional_actual_limit": "NOT_CERTIFIED",','  "actual_subexponential_bound": "OPEN",','  "unconditional_rh": "NOT_ESTABLISHED",','  "finite_checker_equivalence": "OPEN",',
++    '  "mathematical_status": '+quoteJSON(pass?"ANALYTIC_CRITERIA_AUDITED_FINITE_CHECKER_OPEN":"NEW_ANALYTIC_SOURCE_NATIVE_AUDIT_PENDING")+",",
++    '  "canonical_power_sums": '+quoteJSON(pass?"EXACT_CONSTRUCTION_AUDITED":"NEW_SOURCE_NATIVE_AUDIT_PENDING")+",",
++    '  "actual_spectral_calibration": '+quoteJSON(pass?"EXACT_CONSTRUCTION_AUDITED":"NEW_SOURCE_NATIVE_AUDIT_PENDING")+",",
++    '  "dominant_extraction": '+quoteJSON(pass?"EXACT_CONSTRUCTION_AUDITED":"NEW_SOURCE_NATIVE_AUDIT_PENDING")+",",
++    '  "unconditional_actual_limit": '+quoteJSON(pass?"ROOT_SCALE_LIMIT_DECLARATION_AUDITED":"NOT_CERTIFIED")+",",
++    '  "ordinary_limit_sequence": "rootScale actualVariation",',
++    '  "actual_subexponential_bound": "OPEN",','  "unconditional_rh": "NOT_ESTABLISHED",',
++    '  "finite_accepted_witness": "NOT_ESTABLISHED",','  "finite_checker_equivalence": "OPEN",','  "formal_closure": "OPEN",',
+     '  "final_audit_source": '+quoteJSON(finalAuditRelative)+",",
+     '  "project_cache": "READ_WRITE",','  "cache_root": '+quoteJSON(anchorRoot)+",",
+     '  "persistent_storage_root": '+quoteJSON(persistentStorageRoot)+",",'  "persistent_workspace": '+quoteJSON(persistentWorkspace)+",",
+@@ -1376,7 +1383,12 @@
+   if(failed||blocked)error("Some modules failed or were blocked. Independent modules were still attempted.");
+   timedStage("FINAL_AUDIT",finalAudit);
+   log("AXIOM_AUDIT=PASS_STANDARD_LOGICAL_AXIOMS_ONLY");log("SORRYAX=NONE");
+-  log("MATHEMATICAL_STATUS=CONDITIONAL_PARTIAL");log("ACTUAL_SPECTRAL_CALIBRATION=OPEN");log("DOMINANT_EXTRACTION=OPEN");log("UNCONDITIONAL_ACTUAL_LIMIT=NOT_CERTIFIED");log("ACTUAL_SUBEXPONENTIAL_BOUND=OPEN");log("UNCONDITIONAL_RH=NOT_ESTABLISHED");log("FINITE_ACCEPTED_WITNESS=NOT_ESTABLISHED");log("FINITE_CHECKER_EQUIVALENCE=OPEN");
++  log("MATHEMATICAL_STATUS=ANALYTIC_CRITERIA_AUDITED_FINITE_CHECKER_OPEN");
++  log("CANONICAL_POWER_SUMS=EXACT_CONSTRUCTION_AUDITED");log("ACTUAL_SPECTRAL_CALIBRATION=EXACT_CONSTRUCTION_AUDITED");
++  log("DOMINANT_EXTRACTION=EXACT_CONSTRUCTION_AUDITED");log("UNCONDITIONAL_ACTUAL_LIMIT=ROOT_SCALE_LIMIT_DECLARATION_AUDITED");
++  log("ORDINARY_LIMIT_SEQUENCE=rootScale actualVariation");log("ACTUAL_SUBEXPONENTIAL_BOUND=OPEN");
++  log("UNCONDITIONAL_RH=NOT_ESTABLISHED");log("FINITE_ACCEPTED_WITNESS=NOT_ESTABLISHED");
++  log("FINITE_CHECKER_EQUIVALENCE=OPEN");log("FORMAL_CLOSURE=OPEN");
+   log("COMPILED_MODULES="+compiled);log("FROZEN_REUSED_MODULES="+reused);log("AUDIT_ONLY_MODULES="+auditOnly);log("LEGACY_MIGRATED_MODULES="+migrated);log("PROJECT_BUILD=PASS");log("RUN=PASS");
+   log("WORKING_ARTIFACT_MODULES_RETAINED="+workingRetained);log("RESTORED_ARTIFACT_FILES="+restoredArtifactFiles);log("ANCHOR_HISTORY_SCANS="+anchorHistoryScans);log("COMPACT_ANCHORS_SAVED="+compactAnchorsSaved);
+   log("COMBINED_WORKING_DIGESTS_CONSUMED="+workingDigestConsumed);log("LOGICAL_TOOL_LAUNCHES="+numericMapJSON(directLaunchCounts));log("HASH_PHASE_TOTALS="+numericMapJSON(hashPhaseTotals));

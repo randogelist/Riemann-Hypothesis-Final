@@ -1,0 +1,30 @@
+{
+  "status": "STATIC_INVARIANTS_VERIFIED_NATIVE_AUDIT_PENDING",
+  "package": "RH_HILBERT_LIMIT_LEAN_v0_2_26_construction",
+  "old_lean_files_preserved": 102,
+  "new_source_sha256": {
+    "RH_HilbertLimit/ZeroBudgetFiveSector.lean": "83f8d2c3d114f7547b539a6200483736bdd794f11c4b0fab8d21af48536104ae",
+    "RH_HilbertLimit/ZeroBudgetFiveAlgebra.lean": "8bdeabb2a04c6bb2e1e877ecca3f5ed81fd48531094cdbb301ac8d0507529158",
+    "RH_HilbertLimit/ZeroBudgetFiveRows.lean": "10981de983426495f2c2d1b3b3796def020a9750154b87f02ac02b0a91285386",
+    "FiveRowsAudit.lean": "f0874a2d67daf9f9d9875ad2e536b8a03553621f5d99f0a97c5b200666cb13df"
+  },
+  "new_public_declarations": 15,
+  "old_audit_targets_preserved": 448,
+  "audit_targets": 463,
+  "active_modules": 100,
+  "import_topology": "VERIFIED",
+  "source_token_scan": "NO_SORRY_ADMIT_AXIOM_UNSAFE_NATIVE_DECIDE_OR_SKIP_KERNEL",
+  "runtime_policy_byte_preserved": true,
+  "native_compilation": "NOT_RUN",
+  "native_audit": "PENDING",
+  "first_batch_indices": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "next_batch_status": "NOT_INCLUDED_NOT_VERIFIED",
+  "universal_admissibility": "OPEN",
+  "unconditional_rh": "NOT_ESTABLISHED"
+}

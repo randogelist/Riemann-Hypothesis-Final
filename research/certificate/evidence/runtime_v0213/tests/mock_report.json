@@ -1,0 +1,215 @@
+{
+  "schema": "RH_V0213_FOCUSED_NODE_VM_REVIEW_V1",
+  "status": "PASS",
+  "scope": "NODE_VM_SYNTHETIC_HOST_ONLY",
+  "runner_sha256": "f6726db78ef9b532b24e2c09092e44e1e7f855c5eb84a6873c1dc519ef13803f",
+  "memory_fallback_sha256": "2e7606215fe234f04da2e18ba0930253dff388fb2a5bdf08272ecd44786fe673",
+  "admitted_relative_hosts_sha256": "e8b0ae365d74c416881ba9333ab58e396f83c1f7d69f10dc7d7f9b05165b0a4a",
+  "native_tail_sha256": "fe90ee4f2db2f779539b422cd6884ed16482dc860a3b9048c447885785faa541",
+  "passed": 15,
+  "failed": 0,
+  "cases": [
+    {
+      "name": "reported_5479_idle_frontier_degrades_to_serial_16_threads",
+      "outcome": "PASS",
+      "evidence": {
+        "free_mib": 5479,
+        "previous_required_mib": 10476,
+        "effective_required_mib": 5120,
+        "workers": 1,
+        "threads_per_compile_or_audit": 16,
+        "warmer_cap_mib": 0,
+        "simulated_modules_accepted": 4
+      }
+    },
+    {
+      "name": "serial_minimum_boundary_denies_5119_and_allows_5120",
+      "outcome": "PASS",
+      "evidence": {
+        "boundary_results": [
+          {
+            "free_mib": 5119,
+            "admitted": false
+          },
+          {
+            "free_mib": 5120,
+            "admitted": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "explicit_system_reserve_and_worker_allowance_are_not_lowered",
+      "outcome": "PASS",
+      "evidence": {
+        "explicit_reserve_required_mib": 8192,
+        "explicit_worker_required_mib": 9216,
+        "unauthorized_lowering": false
+      }
+    },
+    {
+      "name": "known_pressure_then_unknown_fresh_WMI_never_becomes_unknown_serial_bypass",
+      "outcome": "PASS",
+      "evidence": {
+        "fresh_memory_unavailable": true,
+        "native_launches": 0,
+        "pressure_state_preserved": true
+      }
+    },
+    {
+      "name": "live_worker_forbids_serial_policy_change_and_additional_admission",
+      "outcome": "PASS",
+      "evidence": {
+        "live_workers": 1,
+        "extra_worker_admitted": false,
+        "serial_policy_changed": false
+      }
+    },
+    {
+      "name": "warmer_exit_requires_fresh_memory_measurement_without_crediting_mapped_bytes",
+      "outcome": "PASS",
+      "evidence": {
+        "outcomes": [
+          {
+            "fresh_free_mib": 5479,
+            "admitted": true,
+            "warmer_exit_confirmed": true,
+            "global_shutdown_called": false
+          },
+          {
+            "fresh_free_mib": 5119,
+            "admitted": false,
+            "warmer_exit_confirmed": true,
+            "global_shutdown_called": false
+          }
+        ]
+      }
+    },
+    {
+      "name": "warmer_timeout_or_unknown_status_preserves_lock_and_blocks_fallback",
+      "outcome": "PASS",
+      "evidence": {
+        "outcomes": [
+          {
+            "warmer_state": "timeout",
+            "fake_wait_ms": 5000,
+            "lock_retained": true,
+            "native_launches": 0
+          },
+          {
+            "warmer_state": "unknown",
+            "fake_wait_ms": 0,
+            "lock_retained": true,
+            "native_launches": 0
+          }
+        ]
+      }
+    },
+    {
+      "name": "dirty_final_audit_obeys_memory_and_active_worker_barriers",
+      "outcome": "PASS",
+      "evidence": {
+        "low_memory_dirty_final_blocked": true,
+        "ordinary_live_worker_dirty_final_blocked": true
+      }
+    },
+    {
+      "name": "verified_cached_final_audit_skips_new_memory_admission",
+      "outcome": "PASS",
+      "evidence": {
+        "verified_reuse": true,
+        "added_compiler_calls": 0,
+        "added_memory_probes": 0,
+        "fallback_needed": false
+      }
+    },
+    {
+      "name": "actual_fresh_acquisition_captures_exact_admitted_host_for_same_owner_shutdown",
+      "outcome": "PASS",
+      "evidence": {
+        "captured_count": 1,
+        "full_identity_bound": true,
+        "same_owner_shutdown_clean": true,
+        "workspace_classification": "UNRESOLVED; no assertion of another workspace"
+      }
+    },
+    {
+      "name": "capture_requires_actual_relative_script_and_preexisting_nonchild_identity",
+      "outcome": "PASS",
+      "evidence": {
+        "nonadmitted_variants": [
+          "later_argument_only",
+          "created_after_owner",
+          "direct_child_of_owner"
+        ],
+        "root_bound_host_rejected_at_acquisition": true
+      }
+    },
+    {
+      "name": "new_changed_unreadable_root_bound_and_owned_child_hosts_remain_guarded",
+      "outcome": "PASS",
+      "evidence": {
+        "retained_lock_variants": [
+          "new_pid",
+          "same_pid_new_creation_microsecond",
+          "changed_exact_command",
+          "unreadable_command",
+          "absolute_current_root_binding",
+          "new_owned_relative_child",
+          "absolute_orphan_lean_for_current_root"
+        ]
+      }
+    },
+    {
+      "name": "admitted_host_exception_does_not_transfer_to_a_different_owner",
+      "outcome": "PASS",
+      "evidence": {
+        "changed_owner_exception": false,
+        "old_owner_record_preserved": true
+      }
+    },
+    {
+      "name": "stale_lock_recovery_does_not_use_fresh_admission_exception",
+      "outcome": "PASS",
+      "evidence": {
+        "old_lock_preserved": true,
+        "stale_recovery_exception": false,
+        "lock_recovered": 0
+      }
+    },
+    {
+      "name": "admitted_unresolved_host_does_not_hide_live_or_unknown_owned_process",
+      "outcome": "PASS",
+      "evidence": {
+        "outcomes": [
+          {
+            "owned_process_state": "live",
+            "lock_retained": true,
+            "fake_drain_ms": 30000
+          },
+          {
+            "owned_process_state": "unknown",
+            "lock_retained": true,
+            "fake_drain_ms": 30000
+          }
+        ]
+      }
+    }
+  ],
+  "host": {
+    "basis": "Reused v0.2.12 in-memory host support; old22 cases were not rerun.",
+    "assembled_COM_setter_adaptations": 7,
+    "new_snippet_COM_setters": 0,
+    "entry_point_executed": false,
+    "exact_new_snippets_bound": true,
+    "fixture_warning": "The native tail reports free5479/required10476. Synthetic total31900/reserve6380 is one consistent realization, not a native hardware observation."
+  },
+  "limitations": [
+    "No native Windows, WSH/COM, WMI, process-tree, C#, Lean/Lake, CI, memory mapping, or performance execution.",
+    "Compiler outputs, receipts, process identities, RAM readings, and time are simulated in memory.",
+    "Actual runner functions are used for admission, scheduling, cache acceptance, acquisition, inventory guards and shutdown; WSH host boundaries are substituted.",
+    "The fresh-admission exception records an unresolved previously admitted host; these tests do not establish a different workspace or a general ancestry proof.",
+    "The native user run remains FAIL. These tests do not certify the mathematical endpoint or finite checker equivalence."
+  ],
+  "runner_sources_unmodified": true
+}

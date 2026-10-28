@@ -1,0 +1,48 @@
+{
+  "schema": "RH_HILBERT_V0224_ZERO_BUDGET_STATIC_REVIEW_V1",
+  "status": "STATIC_SOURCE_REVIEW_AND_PACKAGE_INVARIANTS_VERIFIED; NATIVE_AUDIT_PENDING",
+  "package": "RH_HILBERT_LIMIT_LEAN_v0_2_24_construction",
+  "revision_kind": "ADDITIVE_PROOF_SOURCE_NOT_INIT",
+  "all_old_lean_sources_byte_preserved": 96,
+  "new_lean_sources": [
+    "RH_HilbertLimit/ZeroBudgetCandidate.lean",
+    "RH_HilbertLimit/ZeroBudgetFirstMoment.lean",
+    "ZeroBudgetAudit.lean"
+  ],
+  "old_declaration_records_preserved": 1129,
+  "new_public_declarations_selected_for_audit": 34,
+  "new_source_sha256": {
+    "RH_HilbertLimit/ZeroBudgetCandidate.lean": "6bd77ae2b11382699d612b90205a3c31c0db6055163dcdd85dfa3a72f6835f65",
+    "RH_HilbertLimit/ZeroBudgetFirstMoment.lean": "6d542388e484a68a5d0c0eb4d19939aacaa071a0bba3b258cd6f8cd4a0e359eb",
+    "ZeroBudgetAudit.lean": "b86be6ddf2581c99acd32bbafd4412b80c44e710f44ec2221f6e923c7c636285"
+  },
+  "ordinary_modules": 94,
+  "active_modules": 95,
+  "audit_targets": 428,
+  "declaration_inventory_records": 1163,
+  "direct_mathlib_requirements": 91,
+  "import_topology": "VERIFIED_FROM_COMMENT_STRIPPED_ACTIVE_SOURCES",
+  "final_audit_exact_type_and_axiom_output_coverage": "428_SELECTED_TARGETS_EXACTLY_ONCE",
+  "expected_frozen_ordinary_reuse_if_valid": 92,
+  "expected_new_source_driven_tasks": 3,
+  "expected_counts_are_observed": false,
+  "selected_candidate": {
+    "cutoff": 0,
+    "coefficient": 0
+  },
+  "first_check": "SOURCE_PROOF_WITHOUT_RH_HYPOTHESIS; NATIVE_AUDIT_PENDING",
+  "first_check_is_full_admissibility": false,
+  "universal_propagation": "OPEN",
+  "universal_admissibility": "OPEN",
+  "finite_checker_soundness": "OPEN",
+  "finite_checker_equivalence": "OPEN",
+  "formal_closure": "OPEN",
+  "source_review": "evidence/zero_budget_v0224/SOURCE_REVIEW.json",
+  "source_review_sha256": "8d109d28ea6d867a19a70e90a7e93bfb1f12ece0ad4711fad0bb47557307c2c3",
+  "latest_reported_native_package": "RH_HILBERT_LIMIT_LEAN_v0_2_23_construction",
+  "latest_reported_native_run": "PASS",
+  "current_native_run": "NOT_RUN",
+  "assistant_native_lean_lake_or_ci_execution": false,
+  "native_receipt_contents_independently_inspected": false,
+  "new_runtime_tests": false
+}

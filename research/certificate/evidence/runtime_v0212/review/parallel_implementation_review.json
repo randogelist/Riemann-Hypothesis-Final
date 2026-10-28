@@ -1,0 +1,98 @@
+{
+  "schema": "RH_HILBERT_PARALLEL_DRAFT_IMPLEMENTATION_REVIEW_V1",
+  "reviewer": "analytic_source",
+  "scope": "Bounded source review and narrow fixes in parallel_runtime.js and ram_runtime.js only; integration and mocks owned by root/other agent.",
+  "final_files": {
+    "tmp/ram_parallel_v0212/parallel_runtime.js": {
+      "sha256": "21552e9308a6777ed88d7a83e5261723a0df7a42f156e22b332eaa0df578787a",
+      "lines": 336
+    },
+    "tmp/ram_parallel_v0212/ram_runtime.js": {
+      "sha256": "cba92c42546cad9c8360d5c7872c2ec8a876b3e168e4f2160e1c379bd4ace258",
+      "lines": 174
+    }
+  },
+  "helper_interface_reference": {
+    "path": "tmp/ram_parallel_v0212/ram/NativeRamWarm.cs",
+    "sha256": "315d97cf6f1030c838292f5a871c5b583a682464638f139070055b2727f9d87a",
+    "scope": "Read only status/argument/budget interface, not a complete independent C# review."
+  },
+  "fixes": [
+    {
+      "function": "parallelDependencyState",
+      "change": "Require DONE plus module input key and artifact hash; terminal failed/blocked state wins even if stale map entries exist."
+    },
+    {
+      "function": "configureParallelRuntime",
+      "change": "Reject case-insensitive collisions among simultaneous module artifact/log/generated-audit paths; align RAM request maximum with helper's65536MiB CLI maximum."
+    },
+    {
+      "function": "parallelMemoryAllowsLaunch",
+      "change": "Known low RAM cannot bypass first-worker admission. A bounded-age WMI snapshot reserves all active-worker allowances plus one proposed worker, the OS reserve, and the full live sidecar cap. Unknown-memory fallback remains serial."
+    },
+    {
+      "function": "processModulesParallel",
+      "change": "A known-low-memory no-active-worker frontier reports PARALLEL_RESOURCE_BLOCKED rather than looping or launching against the observed threshold."
+    },
+    {
+      "function": "parallelShutdown",
+      "change": "Idempotent shutdownComplete/shutdownClean result; no repeated30-second drain on catch. Unknown worker command lines fail closed using an ownerless truthy inventory snapshot."
+    },
+    {
+      "function": "parallelIsReadOnlyFollower / parallelShutdownInventory",
+      "change": "Exclude only a WSH process whose actual absolute script argument is this root's tools/follow_active.js. Native compilers, cmd wrappers, different scripts, and unreadable command lines remain guarded."
+    },
+    {
+      "function": "readRamWarmStatus",
+      "change": "Validate exact request count, bounded canonical numeric counters, HELD_BYTES<=MAPPED_BYTES<=CHARGED_BYTES<=BUDGET_BYTES<=requested cap, lifecycle consistency, and explicit non-residency/non-shared-environment semantics."
+    },
+    {
+      "function": "parallelReportRamCompletion",
+      "change": "Record owned helper wrapper exit code and final descriptive state. Exit3 is lease timeout; a nonterminal last snapshot after exit is stale. Last-status HELD_BYTES is never described as current residency."
+    }
+  ],
+  "reviewed_without_change": [
+    "startNativeAsync restores LEAN_NUM_THREADS in finally and preserves per-task stdout/stderr redirection.",
+    "Only the coordinator restores artifacts, generates audits, parses allowed axioms, writes shared logs/results, publishes anchors, and releases dependent modules.",
+    "Expected compile/audit failures become terminal and allow independent work; fatal hash failures are not swallowed.",
+    "Only modules already DONE with accepted keys enter the local RAM candidate plan; queued/running/dirty module output families are excluded.",
+    "RAM helper cache validates exact source/compiler/reference/runtime input manifest, fresh source/executable/build/self-test hashes, actual self-test success, and input rechecks; publication remains staged and non-overwriting, followed by prelaunch source/executable hash guards.",
+    "Sidecar status is informational and cannot release dependencies or locks; process handles and the final process inventory govern shutdown.",
+    "READY/PARTIAL can legitimately be terminal; mapped counters are cumulative and need not be <=processed or disjoint from skipped. The validator does not impose those false inequalities."
+  ],
+  "thread_policy": {
+    "nominal_Lean_job_budget": 16,
+    "parallel_coordinator_reserve": 1,
+    "lone_ordinary_worker_when_parallel_enabled": 15,
+    "three_simultaneous_ready_workers_example": [
+      5,
+      5,
+      5
+    ],
+    "final_synchronous_aggregate_jobs": 16,
+    "qualification": "Lean job-token accounting only; the coordinator, RAM helper, runtime internal threads and hashing are not a strict total OS-thread/process cap. Root must integrate resourceHashJobs into both hash launch paths."
+  },
+  "required_root_integration": [
+    "Use processModulesParallel for ordinary modules; keep finalAudit behind the all-ordinary-modules barrier.",
+    "Use resourceHashJobs in certutilHashSet and batchHashes without changing input/audit fingerprint formulas.",
+    "Recognize ramwarm.exe in the existing process-ownership guard.",
+    "Call parallelShutdown before successful completion and in the fatal path; never releaseRunnerLock when shutdownKeepLock is true or shutdown reports false.",
+    "Expose final parallelRuntime.ramStatus and optional ramExitCode in result reporting if included."
+  ],
+  "findings_remaining": [],
+  "validation": {
+    "source_review": "No remaining concrete blocker found in these frozen drafts.",
+    "integrated_runner_review": "NOT_PERFORMED_IN_THIS_REPORT",
+    "local_Lean": false,
+    "local_Lake": false,
+    "native_Windows": false,
+    "CSharp": false,
+    "Wine": false,
+    "CI": false,
+    "JS_draft_execution": false,
+    "portable_tests_by_this_reviewer": false,
+    "native_performance_claim": false,
+    "proof_sources_changed": false,
+    "mock_and_native_boundary": "Portable mocks can verify state transitions and counters; Windows process-tree/WMI/quoting/file-sharing/mapping and runtime performance remain native validation obligations."
+  }
+}

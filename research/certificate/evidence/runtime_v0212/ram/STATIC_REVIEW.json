@@ -1,0 +1,83 @@
+{
+  "schema": "RH_HILBERT_RAM_SOURCE_REVIEW_V1",
+  "reviewed_on": "2026-10-27",
+  "scope": "Bounded static review of standalone optional Windows mapped-file warmer; no existing baseline source was edited.",
+  "source": {
+    "path": "tmp/ram_parallel_v0212/ram/NativeRamWarm.cs",
+    "bytes": 27815,
+    "sha256": "315d97cf6f1030c838292f5a871c5b583a682464638f139070055b2727f9d87a"
+  },
+  "notes": {
+    "path": "tmp/ram_parallel_v0212/ram/RAM_DESIGN_NOTES.txt",
+    "bytes": 9256,
+    "sha256": "433efc2a39f8c4dabcbf19979b81ea173eb2f372018cdcc3458ee381d87f8347"
+  },
+  "official_source_index": {
+    "path": "tmp/ram_parallel_v0212/ram/SOURCE_REFERENCES.json",
+    "bytes": 5135,
+    "sha256": "805786d477c5efd74d4b04391ecc8aa175d7203f5d767b28aba34218e7bfd6a5"
+  },
+  "finding": "No concrete source-level blocker identified within the reviewed scope. This is not native build, runtime, residency, performance or theorem certification.",
+  "validation_status": {
+    "CSHARP_COMPILATION": "NOT_RUN",
+    "CSHARP_EXECUTION": "NOT_RUN",
+    "SELF_TEST_EXECUTION": "NOT_RUN",
+    "WINDOWS_EXECUTION": "NOT_RUN",
+    "LEAN_OR_LAKE": "NOT_RUN",
+    "WINE_OR_CI": "NOT_RUN",
+    "PERFORMANCE_MEASUREMENT": "NOT_RUN"
+  },
+  "reviewed_properties": [
+    {
+      "area": "Framework compatibility",
+      "source_locations": "imports; Session.WarmOne lines 430-480",
+      "evidence": "C# 4-compatible language constructs and the 7-argument MemoryMappedFile.CreateFromFile overload were inspected against official Framework reference source. x64 and System.Core are required; no compilation claim."
+    },
+    {
+      "area": "Read-only data scope",
+      "source_locations": "IsCompiledDataPath; ParseRequest; Session.WarmOne",
+      "evidence": "At most 4096 caller-selected normalized unique compiled-data paths, opened Read with ReadWrite|Delete sharing and mapped Read. No artifact copying, recursive discovery, proof validation or external file hashing."
+    },
+    {
+      "area": "Budget accounting",
+      "source_locations": "BudgetBytes; PageCharge; Session.WarmOne",
+      "evidence": "Caller cap 0..65536 binary MiB is reduced to initial available physical memory/4 and page-rounded. Attempted file spans are charged once; failed attempts do not recycle charge. HeldBytes<=MappedBytes<=ChargedBytes<=BudgetBytes holds for normal snapshots."
+    },
+    {
+      "area": "Control and publication",
+      "source_locations": "ValidateControlPaths; Publish",
+      "evidence": "Distinct sibling request/status/stop paths below E:\\RH-FAST\\workspaces; existing directory required. Fixed-order UTF-8 no-BOM status uses closed unique temporary file plus Move/Replace; no C: output fallback."
+    },
+    {
+      "area": "Ownership and lifecycle",
+      "source_locations": "Initialize; CheckLifecycle; Run; Dispose",
+      "evidence": "Exact floored UTC creation milliseconds checked with retained owner Process handle. Matching stop, parent exit and cooperative lease checks release views. Independent timer calls only Environment.Exit(3); it never terminates another process."
+    },
+    {
+      "area": "Status semantics",
+      "source_locations": "Publish; WarmOne; Stop; Main catch",
+      "evidence": "READY/PARTIAL can be terminal. Terminal snapshots have no tracked held views. Mapping counts are cumulative and may overlap skipped counts after touch failures; mapped need not be <=processed during an interrupted touch. Parent must check actual owned process exit and heartbeat."
+    },
+    {
+      "area": "Self-test boundary",
+      "source_locations": "SelfTest lines 541-568",
+      "evidence": "Implemented tests exercise parser, budget arithmetic, lifecycle predicates and manifest digest only. No external file reads, native RAM probe, process inventory, mapping or child process is invoked by that branch. The branch was not executed here."
+    }
+  ],
+  "required_parent_invariants": [
+    "The warm manifest must exclude every mutable or scheduled-to-change local output; FileShare flags do not make truncation of mapped files safe.",
+    "Warming never replaces fresh proof artifact/dependency/toolchain fingerprints or same-target build/audit receipt validation.",
+    "Reserve the announced warming cap conservatively in parallel-worker admission; it is not measured physical usage.",
+    "Bound readiness and shutdown waits. Retain the run lock while any owned process is live or unknown.",
+    "A stale nonterminal READY/PARTIAL snapshot after owned process exit, including exit3, is not current residency or success.",
+    "Keep the separate warmer source/compiler/reference/flags/output/self-test cache identity out of proof-global hash maps and preserve NativeSha256.cs."
+  ],
+  "limitations": [
+    "Open read-only views can share clean file-backed pages but do not pin RAM, share a constructed Lean environment, or guarantee Lean uses its mapping branch.",
+    "Existing hashing already reads dependency contents, so additional warming can add overhead; no speedup is claimed.",
+    "View-span accounting excludes managed, handle, page-table and other process overhead, and available physical memory is a volatile snapshot.",
+    "Synchronous file opens, mappings, page faults and status I/O have no 250ms latency guarantee. Timer scheduling is not real-time.",
+    "Watchdog exit3 does no status I/O and can leave the last snapshot stale; process teardown releases mappings.",
+    "Native compiler compatibility, runtime permissions, filesystem behavior, memory effects and performance remain untested on the user Windows host."
+  ]
+}

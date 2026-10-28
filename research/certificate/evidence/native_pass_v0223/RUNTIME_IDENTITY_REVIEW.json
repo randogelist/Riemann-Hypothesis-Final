@@ -1,0 +1,9 @@
+{
+  "status": "STATIC_SYNTAX_AND_NORMALIZED_BYTE_IDENTITY_PASS",
+  "node_syntax_check": "PASS",
+  "whole_runner_entrypoint_executed": false,
+  "runner_sha256": "3dd2f760861c2cad12cfae1c5e37dc38f009f6f22037dddaaaa407acad8850f5",
+  "baseline_runner_sha256": "8fc5a81e3802a52e3ec12fa2c94177a42b59b202a83b66c9609ea1356889e907",
+  "changes": "TWO_IDENTITY_CONSTANTS_ONLY",
+  "new_lean_native_or_mock_execution": false
+}

@@ -1,0 +1,220 @@
+{
+  "schema": "RH_GRAPH_STARTUP_NODE_REVIEW_V1",
+  "scope": "Node VM and in-memory Windows host only; no Lean or native execution",
+  "runner_sha256": "eaf8ebc221f08607bd2256827e8bbafb5e5b2e2509e3e71513fe994db2d9eb97",
+  "baseline_sha256": "c817f1cda09b76cd02570c8a8ba8553b85ead1c6e885a717087d71a79bd8ffbd",
+  "passed": 12,
+  "failed": 0,
+  "measurements": {
+    "synthetic_wide_graph": {
+      "local_modules": 3,
+      "external_wide_modules": 48,
+      "before": {
+        "GetAbsolutePathName": 867,
+        "FileExists": 112,
+        "FolderExists": 7,
+        "GetFolder": 5,
+        "GetFileName": 13829,
+        "GetBaseName": 51,
+        "leanReads": 59,
+        "leanReadChars": 594931,
+        "sourceCleanCalls": 59,
+        "sourceCleanChars": 594931,
+        "requestHashCalls": 405
+      },
+      "after": {
+        "GetAbsolutePathName": 364,
+        "FileExists": 114,
+        "FolderExists": 9,
+        "GetFolder": 5,
+        "GetFileName": 291,
+        "GetBaseName": 51,
+        "leanReads": 55,
+        "leanReadChars": 594566,
+        "sourceCleanCalls": 4,
+        "sourceCleanChars": 365,
+        "requestHashCalls": 307
+      },
+      "candidate_graph_counters": {
+        "active": false,
+        "started": 1793126147201,
+        "lastProgress": 1793126147212,
+        "local_modules": 4,
+        "external_modules": 51,
+        "source_files": 55,
+        "source_chars": 594566,
+        "import_prefix_chars": 3379,
+        "strict_scan_chars": 365,
+        "artifact_directories": 3,
+        "artifact_entries": 291,
+        "package_lock_sets": 2,
+        "current_module": "Audit"
+      },
+      "all_requested_hash_paths_equal": true,
+      "all_content_hashes_equal_except_runner_provenance": true,
+      "global_legacy_external_module_audit_keys_equal": true,
+      "native_timing_claim": false
+    }
+  },
+  "tests": [
+    {
+      "name": "header_parser_equivalence_edge_matrix",
+      "status": "PASS",
+      "details": {
+        "fixtures": 34,
+        "compared": [
+          "importsOf",
+          "scanCleanImportHeader"
+        ],
+        "errors_compared_exactly": true
+      }
+    },
+    {
+      "name": "all_86_frozen_project_sources_import_equivalence",
+      "status": "PASS",
+      "details": {
+        "sources": 86,
+        "sha256_verified": true,
+        "source_characters": 945304,
+        "header_characters": 73486
+      }
+    },
+    {
+      "name": "artifact_index_preserves_exact_case_delimiters_companions_and_sorted_order",
+      "status": "PASS",
+      "details": {
+        "files": 20,
+        "queried_stems": 8
+      }
+    },
+    {
+      "name": "wide_graph_manifest_and_build_audit_identity_equal_with_operation_counts",
+      "status": "PASS",
+      "details": {
+        "local_modules": 3,
+        "external_wide_modules": 48,
+        "before": {
+          "GetAbsolutePathName": 867,
+          "FileExists": 112,
+          "FolderExists": 7,
+          "GetFolder": 5,
+          "GetFileName": 13829,
+          "GetBaseName": 51,
+          "leanReads": 59,
+          "leanReadChars": 594931,
+          "sourceCleanCalls": 59,
+          "sourceCleanChars": 594931,
+          "requestHashCalls": 405
+        },
+        "after": {
+          "GetAbsolutePathName": 364,
+          "FileExists": 114,
+          "FolderExists": 9,
+          "GetFolder": 5,
+          "GetFileName": 291,
+          "GetBaseName": 51,
+          "leanReads": 55,
+          "leanReadChars": 594566,
+          "sourceCleanCalls": 4,
+          "sourceCleanChars": 365,
+          "requestHashCalls": 307
+        },
+        "candidate_graph_counters": {
+          "active": false,
+          "started": 1793126147201,
+          "lastProgress": 1793126147212,
+          "local_modules": 4,
+          "external_modules": 51,
+          "source_files": 55,
+          "source_chars": 594566,
+          "import_prefix_chars": 3379,
+          "strict_scan_chars": 365,
+          "artifact_directories": 3,
+          "artifact_entries": 291,
+          "package_lock_sets": 2,
+          "current_module": "Audit"
+        },
+        "all_requested_hash_paths_equal": true,
+        "all_content_hashes_equal_except_runner_provenance": true,
+        "global_legacy_external_module_audit_keys_equal": true,
+        "native_timing_claim": false
+      }
+    },
+    {
+      "name": "first_olean_shadow_wins_in_lean_path_order",
+      "status": "PASS",
+      "details": {
+        "first_eligible_package": "aaa"
+      }
+    },
+    {
+      "name": "first_olean_shadow_missing_source_fails_without_later_fallback",
+      "status": "PASS",
+      "details": {
+        "error": "Source needed to fingerprint cached dependency imports is missing: C:\\cache\\.lake\\packages\\aaa\\Duplicate\\Node.lean"
+      }
+    },
+    {
+      "name": "source_only_or_companion_only_package_does_not_shadow_later_olean",
+      "status": "PASS",
+      "details": {
+        "variants": 2
+      }
+    },
+    {
+      "name": "registered_local_module_precedes_external_namesake",
+      "status": "PASS",
+      "details": {
+        "local_winner": true
+      }
+    },
+    {
+      "name": "requirements_phase_does_not_cache_source_imports_for_graph",
+      "status": "PASS",
+      "details": {
+        "late_import_seen": true
+      }
+    },
+    {
+      "name": "strict_full_project_scan_still_rejects_late_body_placeholder",
+      "status": "PASS",
+      "details": {
+        "full_body_rejection_preserved": true
+      }
+    },
+    {
+      "name": "fresh_invocation_observes_external_source_edit_and_new_companion",
+      "status": "PASS",
+      "details": {
+        "source_and_new_artifact_seen": true,
+        "dependent_module_key_changed": true
+      }
+    },
+    {
+      "name": "profile_lock_and_build_identity_functions_preserved_byte_for_byte",
+      "status": "PASS",
+      "details": {
+        "functions": [
+          "configurePersistentProfile",
+          "acquireRunnerLock",
+          "releaseRunnerLock",
+          "lockSnapshot",
+          "selectCache",
+          "makeGlobalKey",
+          "moduleInput",
+          "verifyLegacy",
+          "auditKey",
+          "readAnchorCore",
+          "verifyCurrent",
+          "restoreAnchor",
+          "workingArtifactsMatch",
+          "processModule",
+          "prepareBatchHasher",
+          "parseBatchHashes",
+          "batchHashes"
+        ],
+        "identity_and_lock_no_change": true
+      }
+    }
+  ]
+}

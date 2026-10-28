@@ -1,0 +1,136 @@
+{
+  "schema": "RH_HILBERT_USER_WARM_REUSE_EVIDENCE_V1",
+  "evidence_type": "TRANSCRIPTION_OF_CURRENT_USER_MESSAGE_WITH_NATIVE_CONSOLE_TAIL",
+  "transcript_file": "evidence/warm_run_v0210/USER_RUN_MESSAGE.txt",
+  "transcript_sha256": "5c9973e4ec34d4e686f88ec0559385508cb1a013d82bac1f1e7745ecc4d2c84c",
+  "transcript_bytes": 2113,
+  "transcript_lines": 43,
+  "transcription_format": "UTF-8 with LF; supplied message text, not original native log-file bytes",
+  "source_native_log_file_supplied": false,
+  "package_path_reported": "RH_HILBERT_LIMIT_LEAN_v0_2_10_construction",
+  "package_identity_basis": "Final Logs paths; startup runner/source/dependency/toolchain fingerprint fields not supplied",
+  "reported_project_build": "PASS",
+  "reported_run": "PASS",
+  "reported_axiom_audit": "PASS_STANDARD_LOGICAL_AXIOMS_ONLY",
+  "reported_sorryax": "NONE",
+  "reported_final_audit_declarations": 303,
+  "reported_compiled_modules": 0,
+  "reported_frozen_reused_modules": 85,
+  "reported_audit_only_modules": 0,
+  "reported_legacy_migrated_modules": 0,
+  "reported_working_artifact_modules_retained": 85,
+  "reported_restored_artifact_files": 0,
+  "reported_anchor_history_scans": 0,
+  "reported_compact_anchors_saved": 0,
+  "reported_combined_working_digests_consumed": 85,
+  "visible_reuse_modules": [
+    "RH_HilbertLimit.ActualMomentReality",
+    "RH_HilbertLimit.CanonicalBridge",
+    "EquivalenceAudit"
+  ],
+  "visible_retention_modules": [
+    "RH_HilbertLimit.CanonicalBridge",
+    "EquivalenceAudit"
+  ],
+  "complete_visible_source_receipt_paths": [
+    "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\52e47af6a403a560\\f7590e7eee15dd85fc697f30c176c9ab\\01a17eabae30109b\\receipt.txt",
+    "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\6c336235f91ff235\\fb7f637d29669dd8db5a7f925b5521d7\\01a17eabb1d357c4\\receipt.txt"
+  ],
+  "complete_paths_exactly_match_previous_E_anchor_saves": true,
+  "first_line_is_truncated_receipt_path": true,
+  "visible_direct_axiom_records": 0,
+  "new_theorem_types_visible": 0,
+  "receipt_contents_supplied": false,
+  "executed_source_bytes_independently_bound": false,
+  "reported_final_audit_module_elapsed_ms": 333,
+  "reported_final_audit_stage_elapsed_ms": 454,
+  "reported_logical_tool_launches": {
+    "certutil": 381,
+    "csc": 0,
+    "helper": 2,
+    "lean": 2,
+    "other": 0,
+    "total": 385
+  },
+  "reported_hash_phase_totals": {
+    "batch_sets": 1,
+    "certutil_sets": 88,
+    "elapsed_ms": 38326,
+    "failed_sets": 0,
+    "files": 37484,
+    "sets": 89
+  },
+  "logical_count_scope": "Runner logical launches, not OS process counts",
+  "lean_launch_interpretation": "Two calls are consistent with selectCompiler --version and --print-prefix; zero project compile/audit-only executions reported",
+  "helper_interpretation": "Zero C# compiler launches reported; an explicit helper-cache HIT line is outside this tail",
+  "hash_count_scope": "File operations across hash sets, not unique dependency-file count",
+  "runtime_total_or_graph_timing_visible": false,
+  "native_speedup_measured": false,
+  "empty_file_recovery_marker_visible": false,
+  "cache_conclusion": "USER_REPORTED_ALL_85_WORKING_MODULES_RETAINED_WITH_NO_RESTORES_OR_NEW_ANCHOR_SAVES",
+  "cache_validation_remains_required": true,
+  "new_native_execution_by_assistant": false,
+  "comparison_with_population_run": {
+    "prior_population_raw_sha256": "7db5fbc1ad77ffe0c17be8fc7bbb4de12a0f2f585c204662de4b8a3717c8e432",
+    "prior_population_summary": "evidence/native_run_v0210/SUMMARY.json",
+    "reported_values": {
+      "compiled_modules": {
+        "population": 0,
+        "warm": 0
+      },
+      "frozen_reused_modules": {
+        "population": 85,
+        "warm": 85
+      },
+      "working_artifact_modules_retained": {
+        "population": 0,
+        "warm": 85
+      },
+      "restored_artifact_files": {
+        "population": 85,
+        "warm": 0
+      },
+      "compact_anchors_saved": {
+        "population": 85,
+        "warm": 0
+      },
+      "combined_working_digests_consumed": {
+        "population": 0,
+        "warm": 85
+      },
+      "csc_logical_launches": {
+        "population": 1,
+        "warm": 0
+      },
+      "total_logical_launches": {
+        "population": 727,
+        "warm": 385,
+        "difference": -342
+      },
+      "hash_sets": {
+        "population": 343,
+        "warm": 89,
+        "difference": -254
+      },
+      "hash_phase_elapsed_ms": {
+        "population": 46682,
+        "warm": 38326,
+        "difference": -8356
+      }
+    },
+    "limitations": "Different cache work: earlier import/restoration/saves versus later verified retention. Hash-phase elapsed time is not end-to-end or graph time; no controlled benchmark or native optimization speedup follows."
+  },
+  "reported_mathematical_status": "CONDITIONAL_PARTIAL",
+  "actual_spectral_calibration": "OPEN",
+  "dominant_extraction": "OPEN",
+  "unconditional_actual_limit": "NOT_CERTIFIED",
+  "actual_subexponential_bound": "OPEN",
+  "unconditional_rh": "NOT_ESTABLISHED",
+  "accepted_finite_witness": "NOT_ESTABLISHED",
+  "finite_checker_equivalence": "OPEN",
+  "formal_closure": "OPEN",
+  "witness_obtained_required_for_formal_closure": false,
+  "previous_direct_proof_evidence": "evidence/USER_RUN_v0_2_5_PASS_SUMMARY.json; earlier 28 direct axiom records preserved separately",
+  "independent_review": "evidence/warm_run_v0210/INDEPENDENT_REVIEW.json",
+  "independent_review_sha256": "a24dc4127bf3b73aef3795bb311d669d82a11432182e57e2e03054f25beb7943"
+}

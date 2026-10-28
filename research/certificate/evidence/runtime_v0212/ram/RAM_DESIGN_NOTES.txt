@@ -1,0 +1,159 @@
+OPTIONAL NATIVE MAPPED-FILE CACHE WARMING — SOURCE CANDIDATE
+
+Status
+NativeRamWarm.cs is a standalone .NET Framework v4 / x64 source candidate.
+Frozen source SHA256:
+315d97cf6f1030c838292f5a871c5b583a682464638f139070055b2727f9d87a
+It has not been compiled, executed, or timed here. Existing Lean sources,
+audit targets, native runner, launcher, and NativeSha256.cs were not edited.
+SOURCE_REFERENCES.json identifies the official sources behind this design.
+
+What can be shared
+Lean v4.33.0's CompactedRegion reader has a Windows LEAN_MMAP branch using
+PAGE_WRITECOPY / FILE_MAP_COPY at a saved virtual address. Relocation or other
+fixups can turn pages into private copy-on-write pages. Failure to obtain the
+desired mapping leads to a malloc-and-read fallback. This is source evidence,
+not a measurement of the user's compiler binary or a guarantee that its
+mapping attempt succeeds. See lean_module_v433.
+
+The sidecar creates independent, anonymous, read-only views of the same local
+files. Windows can use shared clean file-backed pages for such views. Lean
+still constructs its own process environment and can allocate private data.
+This helper does not load a pre-elaborated Lean environment, share a Lean heap,
+change LEAN_PATH, build a RAM disk, or replace any authoritative disk artifact.
+Copying the same bytes to a different file would not establish same-file page
+sharing, so the helper does not make artifact copies. See win32_mapview and
+lean_environment_v433.
+
+Warming versus residency
+Touching a byte in each mapped page requests those pages through the memory
+manager. Keeping the views open does not pin physical memory. Windows may
+trim the sidecar's working set and reclaim cached pages under pressure. The
+helper never calls VirtualLock, changes working-set limits, installs a driver,
+requests a privilege change, or promises a speedup. The runner's existing
+fresh hashes have already read dependency contents; extra warming may offer
+little benefit or add overhead. Native stage measurements must determine the
+effect. See win32_working_set and win32_virtual_lock.
+
+Caller-selected scope
+The runner supplies an ordered manifest for the actual compile/audit frontier.
+The helper performs no recursive scan and accepts at most 4,096 unique paths.
+Only compiled-data paths (.olean and companions, .ir, .ir.sig) are accepted.
+The caller must select existing immutable external artifacts and, if desired,
+already-audited local imports that cannot be recompiled, cleared, or restored
+again during this run. It must exclude every potentially mutable output.
+Files are opened with FileAccess.Read and FileShare.ReadWrite | FileShare.Delete.
+The share flags do not make truncation safe while a mapping exists; Microsoft
+requires unmapping and closing a mapping before SetEndOfFile. See
+framework_fileshare and win32_truncation.
+
+No proof trust is delegated
+The manifest is a warming request, not a receipt. The helper hashes only that
+small manifest byte snapshot, not the compiled files. READY does not certify
+file content, a prior audit, or a theorem. Existing fresh content fingerprints,
+compiler identity, same-target receipts, artifact validation, and axiom-audit
+checks remain the parent's responsibility. The parent must never substitute
+warming status for those checks.
+
+Memory accounting
+BUDGET_MB is an integer count of binary MiB; accepted range is 0..65536.
+The initial limit is min(caller cap, available physical RAM / 4), rounded down
+to a system page. A file is considered in manifest order; its entire view must
+fit the remaining budget, otherwise it is skipped. Each attempted mapping is
+charged its length rounded up to a page. Failed attempts keep their charge so
+repeated partial failures cannot recycle an unbounded warming budget.
+
+CHARGED_BYTES is an admission/accounting cap on attempted view spans, not a
+measured working set, private allocation, or system-wide RAM guarantee. There
+is additional small managed, handle, and page-table overhead. Available RAM
+is a volatile snapshot. The parallel compiler scheduler should conservatively
+reserve the announced warming cap in its own admission estimate and recheck
+RAM before launching workers. See win32_memory_status.
+
+Build and helper cache
+Build only on the user's Windows host using its existing .NET Framework v4
+csc.exe with /nologo /noconfig /target:exe /optimize+ /platform:x64 and its
+System.dll / System.Core.dll references (mscorlib is implicit). No downloads
+or installations are needed by this source. The required CreateFromFile
+overload is present in official Framework reference source. See
+framework_mmf_reference.
+
+Cache this executable separately from NativeSha256.cs. Bind its own source,
+compiler/reference/runtime inputs, semantic C# flags, output hash, and exact
+self-test result before reuse. Do not alter the existing hashing helper or
+register helper-framework DLLs in the proof toolchain's global hash map.
+
+CLI and request format
+  ramwarm.exe --self-test
+  ramwarm.exe --warm REQUEST STATUS STOP OWNER_PID OWNER_START_UNIX_MS TOKEN BUDGET_MB
+
+--self-test performs only parser, arithmetic, manifest-digest and lifecycle
+predicate checks. It does not open external files, query processes/RAM, map
+files, or run another executable. Success prints exactly:
+  RAM_WARM_SELF_TEST=PASS
+This self-test is implemented in source but has not been run here.
+
+REQUEST is strict UTF-8; a BOM and CRLF are permitted. Its complete format is:
+  RH_HILBERT_RAM_REQUEST_V1|token|count
+  0|absolutePath
+  1|absolutePath
+Rows must use consecutive canonical IDs, normalized local-drive paths, and
+case-insensitively unique filenames. UNC/device paths, relative paths,
+extra rows, malformed numbers, invalid tokens and unsupported types fail.
+The manifest is capped at 4 MiB and 4,096 rows. No per-file hashes are implied.
+
+REQUEST, STATUS and STOP must be distinct siblings in an already-existing
+directory below E:\RH-FAST\workspaces. The helper creates no directories and
+does not fall back to C: for output. The parent should retain short control
+paths; temporary status names include a process ID and sequence suffix.
+
+STATUS is UTF-8 without BOM, with fixed-order KEY=VALUE records. It begins with
+SCHEMA=RH_HILBERT_RAM_STATUS_V1 and includes TOKEN, REQUEST_SHA256, STATE,
+TERMINAL, OWNER_PID, OWNER_START_UNIX_MS, PID, SEQUENCE, HEARTBEAT_UNIX_MS,
+ELAPSED_MS, REQUEST_FILES, PROCESSED_FILES, MAPPED_FILES, WARMED_FILES,
+SKIPPED_FILES, HELD_FILES, MAPPED_BYTES, HELD_BYTES, CHARGED_BYTES, BUDGET_BYTES,
+AVAILABLE_PHYSICAL_BYTES, TOUCHED_PAGES, skip counters, REASON and LAST_ERROR.
+It also states MODE=WARM_MAPPED_FILE_CACHE, RESIDENCY=NOT_GUARANTEED and
+LEAN_ENVIRONMENT=NOT_SHARED. A closed unique temporary file is atomically
+moved/replaced into STATUS; inability to publish is an optional-helper error,
+never a reason to accept a proof artifact.
+
+INITIALIZING means warming is in progress. READY means every requested file
+completed one page-touch pass. PARTIAL covers skips or errors; TERMINAL=1 says
+the helper is exiting without retained views. Normal cleanup publishes
+STOPPED after releasing tracked views. MAPPED_BYTES and CHARGED_BYTES are
+cumulative; HELD_FILES and HELD_BYTES describe the currently tracked views.
+These values are bookkeeping, not an operating-system residency measurement.
+
+Lifetime and bounded parent behavior
+The helper checks exact floored UTC Unix milliseconds for the parent's
+creation time, then retains that Process handle so PID reuse cannot redirect
+its exit checks. It never terminates the parent or another process. See
+framework_process_reference.
+
+STOP contains the matching token, optionally followed by whitespace/newline.
+Normal lifecycle checks occur at cooperative boundaries at approximately
+200 ms intervals, and heartbeat publication occurs about once per second.
+Views are held only while the parent is running and has not requested stop.
+The parent must send stop after all compiler/audit work and close the sidecar
+before releasing its run lock; a live or unknown owned process keeps that
+lock held under the existing ownership policy.
+
+Synchronous file/mapping/page-fault operations have no promised 250 ms bound.
+The parent waits at most five seconds for initial readiness and can continue
+compilation while warming proceeds. It must also bound shutdown waits and,
+when necessary, terminate only the sidecar process it owns. Do not infer a
+live helper from an old READY snapshot without its process/heartbeat checks.
+
+A separate six-hour timer terminates only the helper with exit code 3 if it
+outlives the lease, even when cooperative cleanup is stuck. That exceptional
+branch does no file I/O and may leave the last status snapshot stale; process
+teardown releases mappings. Normal exits use code 0; startup/protocol/status
+errors use code 1. No exit code is a Lean build or proof-audit verdict.
+Timer scheduling itself is not a real-time guarantee. Parent shutdown must
+still retain the run lock while any owned process remains live or unknown.
+
+Verification boundary
+Only source inspection and primary documentation retrieval were performed.
+No C# compiler/runtime, Lean, Lake, Windows, Wine, or CI was executed here.
+There is no native performance or residency measurement for this candidate.

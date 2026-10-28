@@ -1,0 +1,1387 @@
+{
+  "schema": "RH_HILBERT_NATIVE_CACHED_PASS_EVIDENCE_REVIEW_V1",
+  "reviewer": "analytic_source",
+  "review_status": "USER_SUPPLIED_NATIVE_PASS_TAIL_CONSISTENT_WITH_CURRENT_MANIFESTS",
+  "input": {
+    "path": "/workspace/scratch/f128c1434505/upload/Pasted text(20261027-184232).txt",
+    "sha256": "7db5fbc1ad77ffe0c17be8fc7bbb4de12a0f2f585c204662de4b8a3717c8e432",
+    "bytes": 18707,
+    "lines": 207,
+    "acquisition": "Read the attached file locally only; no Library content read."
+  },
+  "current_reference_files": {
+    "tools/native_runner.js": {
+      "path": "/workspace/scratch/f128c1434505/output/RH_HILBERT_LIMIT_LEAN_v0_2_10_construction/tools/native_runner.js",
+      "sha256": "eaf8ebc221f08607bd2256827e8bbafb5e5b2e2509e3e71513fe994db2d9eb97",
+      "bytes": 89574
+    },
+    "compile-order.txt": {
+      "path": "/workspace/scratch/f128c1434505/output/RH_HILBERT_LIMIT_LEAN_v0_2_10_construction/compile-order.txt",
+      "sha256": "196c995a7728c6569594f9ef0b5721a1382a8e98275c383c2d48f48ad3106823",
+      "bytes": 3993
+    },
+    "audit-targets.tsv": {
+      "path": "/workspace/scratch/f128c1434505/output/RH_HILBERT_LIMIT_LEAN_v0_2_10_construction/audit-targets.tsv",
+      "sha256": "916cceaf788a772a609fc8b14fc1412e07fc6eb6ae230834a3c8ccb16d878b1f",
+      "bytes": 25879
+    },
+    "mathlib-imports.txt": {
+      "path": "/workspace/scratch/f128c1434505/output/RH_HILBERT_LIMIT_LEAN_v0_2_10_construction/mathlib-imports.txt",
+      "sha256": "de30b7b5c862909076398b451edef86aa9916c08b76db1bc0d56e86cd3352dba",
+      "bytes": 3411
+    },
+    "final-audit.txt": {
+      "path": "/workspace/scratch/f128c1434505/output/RH_HILBERT_LIMIT_LEAN_v0_2_10_construction/final-audit.txt",
+      "sha256": "4cb335de643f48edb21f0d2f2eb8790d0b5a2c4350de96d4ab59954c302606b3",
+      "bytes": 22
+    },
+    "run.cmd": {
+      "path": "/workspace/scratch/f128c1434505/output/RH_HILBERT_LIMIT_LEAN_v0_2_10_construction/run.cmd",
+      "sha256": "5e6c6561c370c904b13d165986f0c045c6e7732de1745744b03619cf4a4b9f16",
+      "bytes": 1250
+    },
+    "tools/NativeSha256.cs": {
+      "path": "/workspace/scratch/f128c1434505/output/RH_HILBERT_LIMIT_LEAN_v0_2_10_construction/tools/NativeSha256.cs",
+      "sha256": "d8cd2d616ed2b7a64931fe391bd6e25b236a1c450e5b7c669df26c2974dd9f18",
+      "bytes": 8565
+    },
+    "tools/follow_active.js": {
+      "path": "/workspace/scratch/f128c1434505/output/RH_HILBERT_LIMIT_LEAN_v0_2_10_construction/tools/follow_active.js",
+      "sha256": "beb08b78f7c8ef53d06db9e99b266f1fb5a33cbb21d936a71dd6b1a8354f024f",
+      "bytes": 10557
+    }
+  },
+  "current_source_reference": {
+    "lean_file_count": 86,
+    "sorted_relative_path_sha256_manifest_hash": "44efa81cdc3f4f232681ab53d4950f81d37fdf2284e9935ccdfc9a2df284f17f",
+    "manifest_serialization": "UTF-8 lines relative/path.lean|lowercase_sha256 followed by LF, sorted by relative path",
+    "interpretation": "Reference snapshot of the current package only; not independently verified native source identity."
+  },
+  "marker_counts": {
+    "ACTUAL_SPECTRAL_CALIBRATION": 1,
+    "ACTUAL_SUBEXPONENTIAL_BOUND": 1,
+    "ANCHOR_HISTORY_SCANS": 1,
+    "ANCHOR_SAVED": 18,
+    "ANCHOR_SAVE_LAYOUT": 18,
+    "AUDIT_ONLY_MODULES": 1,
+    "AXIOM_AUDIT": 1,
+    "BUILD_ARTIFACT_RESTORED": 18,
+    "COMBINED_WORKING_DIGESTS_CONSUMED": 1,
+    "COMPACT_ANCHORS_SAVED": 1,
+    "COMPILED_MODULES": 1,
+    "DOMINANT_EXTRACTION": 1,
+    "FINAL_AUDIT_DECLARATIONS": 1,
+    "FINAL_AUDIT_START": 1,
+    "FINITE_ACCEPTED_WITNESS": 1,
+    "FINITE_CHECKER_EQUIVALENCE": 1,
+    "FROZEN_REUSE": 18,
+    "FROZEN_REUSED_MODULES": 1,
+    "HASH_PHASE": 71,
+    "HASH_PHASE_TOTALS": 1,
+    "LEGACY_MIGRATED_MODULES": 1,
+    "LOGICAL_TOOL_LAUNCHES": 1,
+    "MATHEMATICAL_STATUS": 1,
+    "MODULE_ELAPSED_MS": 18,
+    "PROJECT_BUILD": 1,
+    "RESTORED_ARTIFACT_FILES": 1,
+    "RUN": 1,
+    "SORRYAX": 1,
+    "SOURCE_ANCHOR_RECEIPT": 18,
+    "STAGE_ELAPSED_MS": 1,
+    "STAGE_START": 1,
+    "UNCONDITIONAL_ACTUAL_LIMIT": 1,
+    "UNCONDITIONAL_RH": 1,
+    "WORKING_ARTIFACT_MODULES_RETAINED": 1
+  },
+  "total_key_value_marker_records": 206,
+  "single_occurrence_markers": {
+    "STAGE_START": "FINAL_AUDIT",
+    "FINAL_AUDIT_START": "EquivalenceAudit.lean",
+    "FINAL_AUDIT_DECLARATIONS": "303",
+    "STAGE_ELAPSED_MS": "FINAL_AUDIT|989|RETURNED",
+    "AXIOM_AUDIT": "PASS_STANDARD_LOGICAL_AXIOMS_ONLY",
+    "SORRYAX": "NONE",
+    "MATHEMATICAL_STATUS": "CONDITIONAL_PARTIAL",
+    "ACTUAL_SPECTRAL_CALIBRATION": "OPEN",
+    "DOMINANT_EXTRACTION": "OPEN",
+    "UNCONDITIONAL_ACTUAL_LIMIT": "NOT_CERTIFIED",
+    "ACTUAL_SUBEXPONENTIAL_BOUND": "OPEN",
+    "UNCONDITIONAL_RH": "NOT_ESTABLISHED",
+    "FINITE_ACCEPTED_WITNESS": "NOT_ESTABLISHED",
+    "FINITE_CHECKER_EQUIVALENCE": "OPEN",
+    "COMPILED_MODULES": "0",
+    "FROZEN_REUSED_MODULES": "85",
+    "AUDIT_ONLY_MODULES": "0",
+    "LEGACY_MIGRATED_MODULES": "0",
+    "PROJECT_BUILD": "PASS",
+    "RUN": "PASS",
+    "WORKING_ARTIFACT_MODULES_RETAINED": "0",
+    "RESTORED_ARTIFACT_FILES": "85",
+    "ANCHOR_HISTORY_SCANS": "0",
+    "COMPACT_ANCHORS_SAVED": "85",
+    "COMBINED_WORKING_DIGESTS_CONSUMED": "0",
+    "LOGICAL_TOOL_LAUNCHES": "{\"certutil\":722,\"csc\":1,\"helper\":2,\"lean\":2,\"other\":0,\"total\":727}",
+    "HASH_PHASE_TOTALS": "{\"batch_sets\":1,\"certutil_sets\":342,\"elapsed_ms\":46682,\"failed_sets\":0,\"files\":37820,\"sets\":343}"
+  },
+  "run_result": {
+    "reported_project_build": "PASS",
+    "reported_run": "PASS",
+    "reported_axiom_audit": "PASS_STANDARD_LOGICAL_AXIOMS_ONLY",
+    "reported_compiled_modules": 0,
+    "reported_reused_modules": 85,
+    "reported_audit_only_modules": 0,
+    "reported_legacy_migrated_modules": 0,
+    "reported_final_audit_declarations": 303,
+    "reported_working_modules_retained": 0,
+    "reported_artifact_files_restored": 85,
+    "reported_compact_anchors_saved": 85,
+    "reported_anchor_history_scans": 0,
+    "reported_combined_working_digest_snapshots_consumed": 0
+  },
+  "module_coverage": {
+    "ordered_source_module_count": 84,
+    "selected_final_audit_module": "EquivalenceAudit",
+    "active_module_count": 85,
+    "visible_reuse_record_count": 18,
+    "visible_unique_reused_modules": 18,
+    "visible_modules": [
+      "RiemannHypothesis.Xi.UnconditionalLagariasEquivalence",
+      "RiemannHypothesis.Xi.CompletedLFunctionInstance",
+      "RiemannHypothesis.Xi.CanonicalProductPairedGrowth",
+      "AngularMaster.ActualHadamard",
+      "AngularMaster.ComplexScaleProduct",
+      "AngularMaster.ZeroGeometry",
+      "AngularMaster.QQRHGeometry",
+      "AngularMaster.LowHeightGeometry",
+      "AngularMaster.ThetaKernelExplicitBound",
+      "AngularMaster.ZeroFreeSeed",
+      "OriginTrace",
+      "RH_HilbertLimit.GrowthStep",
+      "RH_HilbertLimit.FinitePrefix",
+      "RH_HilbertLimit.SpectralTail",
+      "RH_HilbertLimit.ActualCalibrationProgress",
+      "RH_HilbertLimit.ActualMomentReality",
+      "RH_HilbertLimit.CanonicalBridge",
+      "EquivalenceAudit"
+    ],
+    "visible_sequence_equals_exact_active_suffix": true,
+    "visible_ordinals_1_based": [
+      68,
+      85
+    ],
+    "earlier_active_modules_not_visible_count": 67,
+    "earlier_active_modules_not_visible": [
+      "AWPIRH.XiCore",
+      "AWPIRH.ThetaEntire",
+      "RH_HilbertLimit.Bernstein",
+      "RH_HilbertLimit.Growth",
+      "RH_HilbertLimit.Geometry",
+      "RH_HilbertLimit.ActualXi",
+      "RH_HilbertLimit.Spectral",
+      "RH_HilbertLimit.Vandermonde",
+      "RH_HilbertLimit.Main",
+      "AngularMaster.ZeroExclusion",
+      "RiemannHypothesis.ComplexAnalysis.GrowthRigidity",
+      "RiemannHypothesis.ComplexAnalysis.RealPartGrowth",
+      "RiemannHypothesis.ComplexAnalysis.ProximityGrowth",
+      "RiemannHypothesis.ComplexAnalysis.AntiHerglotz",
+      "RiemannHypothesis.ComplexAnalysis.LogDerivative",
+      "RiemannHypothesis.HadamardProduct.GenusOne",
+      "RiemannHypothesis.HadamardProduct.InfiniteProducts",
+      "RiemannHypothesis.HadamardProduct.LogDerivative",
+      "RiemannHypothesis.HadamardProduct.CanonicalProductGrowth",
+      "RiemannHypothesis.HadamardProduct.DyadicZeroCount",
+      "RiemannHypothesis.HadamardProduct.CanonicalProductDyadicGrowth",
+      "RiemannHypothesis.HadamardProduct.PairedGenusOne",
+      "RiemannHypothesis.HadamardProduct.PairedCanonicalProductGrowth",
+      "RiemannHypothesis.HadamardProduct.CanonicalProductDivisor",
+      "RiemannHypothesis.HadamardProduct.IndexedRealZeroSign",
+      "RiemannHypothesis.ComplexAnalysis.PoleProbe",
+      "RiemannHypothesis.ComplexAnalysis.RealSymmetry",
+      "RiemannHypothesis.RealZeros.Engine",
+      "RiemannHypothesis.RealZeros.EntireFunctions",
+      "RiemannHypothesis.HadamardProduct.CompletedLFunction",
+      "RiemannHypothesis.Xi.Definitions",
+      "RiemannHypothesis.Xi.FunctionalEquation",
+      "RiemannHypothesis.Xi.Pullback",
+      "RiemannHypothesis.Xi.SignTargets",
+      "RiemannHypothesis.Xi.CanonicalDivisor",
+      "RiemannHypothesis.HadamardProduct.CanonicalProductMultiplicity",
+      "RiemannHypothesis.Xi.CanonicalProductCharacteristicGrowth",
+      "RiemannHypothesis.ComplexAnalysis.EvenAnalyticOrder",
+      "RiemannHypothesis.ComplexAnalysis.EntireQuotient",
+      "RiemannHypothesis.Xi.BacklundTuringBridge",
+      "RiemannHypothesis.GammaCancellation.PoleSet",
+      "RiemannHypothesis.GammaCancellation.CompletedZeta",
+      "RiemannHypothesis.GammaCancellation.TextbookXi",
+      "RiemannHypothesis.Xi.RiemannHypothesisBridge",
+      "RiemannHypothesis.Xi.ZetaMultiplicityBridge",
+      "RiemannHypothesis.ZeroCounting.SmoothMainTerm",
+      "RiemannHypothesis.ZeroCounting.ZetaZeros",
+      "RiemannHypothesis.Reduction.BacklundCanonicalDivisor",
+      "RiemannHypothesis.Xi.DyadicZeroCountBridge",
+      "RiemannHypothesis.HadamardProduct.ExponentialPrefactor",
+      "RiemannHypothesis.HadamardProduct.NatZeroData",
+      "RiemannHypothesis.HadamardProduct.RealZeroSign",
+      "RiemannHypothesis.HadamardProduct.StrictRealZeroCriterion",
+      "RiemannHypothesis.HadamardProduct.OriginMultiplicityCriterion",
+      "RiemannHypothesis.Xi.StrictLagariasCriterion",
+      "RiemannHypothesis.Xi.HadamardLogDerivativeCriterion",
+      "RiemannHypothesis.Xi.CanonicalQuotientCriterion",
+      "RiemannHypothesis.Xi.CanonicalProductSymmetry",
+      "RiemannHypothesis.Xi.CanonicalQuotientLogNormGrowth",
+      "RiemannHypothesis.Xi.CanonicalQuotientCharacteristicGrowth",
+      "RiemannHypothesis.ComplexAnalysis.MellinGrowth",
+      "RiemannHypothesis.Xi.ThetaKernelMellinGrowth",
+      "RiemannHypothesis.ComplexAnalysis.FactorialDyadicGrowth",
+      "RiemannHypothesis.Xi.JensenDyadicCountBridge",
+      "RiemannHypothesis.Xi.EntireXiMellinGrowth",
+      "RiemannHypothesis.Xi.EntireXiLogNormGrowth",
+      "RiemannHypothesis.Xi.CanonicalQuotientThetaCharacteristicGrowth"
+    ],
+    "visible_module_records": [
+      {
+        "module": "RiemannHypothesis.Xi.UnconditionalLagariasEquivalence",
+        "restore_line": 2,
+        "source_receipt": {
+          "line": 3,
+          "path": "C:\\Users\\Simon\\AppData\\Local\\LEAN_ANCHORINGS\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\40f21c3794d7cd2e\\d9cead516a36a9468396d5dd2eb32f42\\01a17e5d0e7cc975\\receipt.txt"
+        },
+        "saved_receipt": {
+          "line": 7,
+          "path": "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\40f21c3794d7cd2e\\d9cead516a36a9468396d5dd2eb32f42\\01a17eab808196f2\\receipt.txt"
+        },
+        "reuse_line": 8,
+        "timing": {
+          "line": 9,
+          "elapsed_ms": 695,
+          "state": "FROZEN_REUSED"
+        },
+        "module_path_key_matches_current_formula": true,
+        "source_destination_input_prefix_equal": true,
+        "source_is_prior_localappdata": true,
+        "destination_is_e_fast_anchors": true
+      },
+      {
+        "module": "RiemannHypothesis.Xi.CompletedLFunctionInstance",
+        "restore_line": 12,
+        "source_receipt": {
+          "line": 13,
+          "path": "C:\\Users\\Simon\\AppData\\Local\\LEAN_ANCHORINGS\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\15389568fb8f23ac\\bc4bd2616c0996a4963dd097e4510c95\\01a17e5d4d474125\\receipt.txt"
+        },
+        "saved_receipt": {
+          "line": 17,
+          "path": "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\15389568fb8f23ac\\bc4bd2616c0996a4963dd097e4510c95\\01a17eab8355a99a\\receipt.txt"
+        },
+        "reuse_line": 18,
+        "timing": {
+          "line": 19,
+          "elapsed_ms": 706,
+          "state": "FROZEN_REUSED"
+        },
+        "module_path_key_matches_current_formula": true,
+        "source_destination_input_prefix_equal": true,
+        "source_is_prior_localappdata": true,
+        "destination_is_e_fast_anchors": true
+      },
+      {
+        "module": "RiemannHypothesis.Xi.CanonicalProductPairedGrowth",
+        "restore_line": 22,
+        "source_receipt": {
+          "line": 23,
+          "path": "C:\\Users\\Simon\\AppData\\Local\\LEAN_ANCHORINGS\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\eab7eaa876857e59\\0c992ed1e72fd091599af49059dd1aea\\01a17e5d8f6682c6\\receipt.txt"
+        },
+        "saved_receipt": {
+          "line": 27,
+          "path": "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\eab7eaa876857e59\\0c992ed1e72fd091599af49059dd1aea\\01a17eab861894df\\receipt.txt"
+        },
+        "reuse_line": 28,
+        "timing": {
+          "line": 29,
+          "elapsed_ms": 667,
+          "state": "FROZEN_REUSED"
+        },
+        "module_path_key_matches_current_formula": true,
+        "source_destination_input_prefix_equal": true,
+        "source_is_prior_localappdata": true,
+        "destination_is_e_fast_anchors": true
+      },
+      {
+        "module": "AngularMaster.ActualHadamard",
+        "restore_line": 32,
+        "source_receipt": {
+          "line": 33,
+          "path": "C:\\Users\\Simon\\AppData\\Local\\LEAN_ANCHORINGS\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\0bf2fd0379c9a014\\2bc14b03d9aa18fc04bf0af1fc8ef7db\\01a17e5dd66963cb\\receipt.txt"
+        },
+        "saved_receipt": {
+          "line": 37,
+          "path": "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\0bf2fd0379c9a014\\2bc14b03d9aa18fc04bf0af1fc8ef7db\\01a17eab88ebd05e\\receipt.txt"
+        },
+        "reuse_line": 38,
+        "timing": {
+          "line": 39,
+          "elapsed_ms": 686,
+          "state": "FROZEN_REUSED"
+        },
+        "module_path_key_matches_current_formula": true,
+        "source_destination_input_prefix_equal": true,
+        "source_is_prior_localappdata": true,
+        "destination_is_e_fast_anchors": true
+      },
+      {
+        "module": "AngularMaster.ComplexScaleProduct",
+        "restore_line": 42,
+        "source_receipt": {
+          "line": 43,
+          "path": "C:\\Users\\Simon\\AppData\\Local\\LEAN_ANCHORINGS\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\8a892a19d68417b7\\2c826276f2d5d5a28b273480ee570757\\01a17e5e0f44aaed\\receipt.txt"
+        },
+        "saved_receipt": {
+          "line": 47,
+          "path": "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\8a892a19d68417b7\\2c826276f2d5d5a28b273480ee570757\\01a17eab8ba56d88\\receipt.txt"
+        },
+        "reuse_line": 48,
+        "timing": {
+          "line": 49,
+          "elapsed_ms": 679,
+          "state": "FROZEN_REUSED"
+        },
+        "module_path_key_matches_current_formula": true,
+        "source_destination_input_prefix_equal": true,
+        "source_is_prior_localappdata": true,
+        "destination_is_e_fast_anchors": true
+      },
+      {
+        "module": "AngularMaster.ZeroGeometry",
+        "restore_line": 52,
+        "source_receipt": {
+          "line": 53,
+          "path": "C:\\Users\\Simon\\AppData\\Local\\LEAN_ANCHORINGS\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\7279654f4fa726c4\\aee262883c8c5ed58d6a4e75fefd0eeb\\01a17e5e4e49baa5\\receipt.txt"
+        },
+        "saved_receipt": {
+          "line": 57,
+          "path": "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\7279654f4fa726c4\\aee262883c8c5ed58d6a4e75fefd0eeb\\01a17eab8e68d626\\receipt.txt"
+        },
+        "reuse_line": 58,
+        "timing": {
+          "line": 59,
+          "elapsed_ms": 696,
+          "state": "FROZEN_REUSED"
+        },
+        "module_path_key_matches_current_formula": true,
+        "source_destination_input_prefix_equal": true,
+        "source_is_prior_localappdata": true,
+        "destination_is_e_fast_anchors": true
+      },
+      {
+        "module": "AngularMaster.QQRHGeometry",
+        "restore_line": 62,
+        "source_receipt": {
+          "line": 63,
+          "path": "C:\\Users\\Simon\\AppData\\Local\\LEAN_ANCHORINGS\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\d7648884855fc7e1\\77ef971aa7a867c0e6251bde2ea54b9c\\01a17e5e931023ac\\receipt.txt"
+        },
+        "saved_receipt": {
+          "line": 67,
+          "path": "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\d7648884855fc7e1\\77ef971aa7a867c0e6251bde2ea54b9c\\01a17eab914f6272\\receipt.txt"
+        },
+        "reuse_line": 68,
+        "timing": {
+          "line": 69,
+          "elapsed_ms": 839,
+          "state": "FROZEN_REUSED"
+        },
+        "module_path_key_matches_current_formula": true,
+        "source_destination_input_prefix_equal": true,
+        "source_is_prior_localappdata": true,
+        "destination_is_e_fast_anchors": true
+      },
+      {
+        "module": "AngularMaster.LowHeightGeometry",
+        "restore_line": 72,
+        "source_receipt": {
+          "line": 73,
+          "path": "C:\\Users\\Simon\\AppData\\Local\\LEAN_ANCHORINGS\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\d140b18fdccef532\\4a411d74f2f34fd5e8a9dba1d6f1ad59\\01a17e5ededb4411\\receipt.txt"
+        },
+        "saved_receipt": {
+          "line": 77,
+          "path": "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\d140b18fdccef532\\4a411d74f2f34fd5e8a9dba1d6f1ad59\\01a17eab95034980\\receipt.txt"
+        },
+        "reuse_line": 78,
+        "timing": {
+          "line": 79,
+          "elapsed_ms": 922,
+          "state": "FROZEN_REUSED"
+        },
+        "module_path_key_matches_current_formula": true,
+        "source_destination_input_prefix_equal": true,
+        "source_is_prior_localappdata": true,
+        "destination_is_e_fast_anchors": true
+      },
+      {
+        "module": "AngularMaster.ThetaKernelExplicitBound",
+        "restore_line": 82,
+        "source_receipt": {
+          "line": 83,
+          "path": "C:\\Users\\Simon\\AppData\\Local\\LEAN_ANCHORINGS\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\8ec56becf1e847d0\\1345e92f16287ab175b8fb4e45373937\\01a17e5f225c1f56\\receipt.txt"
+        },
+        "saved_receipt": {
+          "line": 87,
+          "path": "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\8ec56becf1e847d0\\1345e92f16287ab175b8fb4e45373937\\01a17eab987c86c8\\receipt.txt"
+        },
+        "reuse_line": 88,
+        "timing": {
+          "line": 89,
+          "elapsed_ms": 711,
+          "state": "FROZEN_REUSED"
+        },
+        "module_path_key_matches_current_formula": true,
+        "source_destination_input_prefix_equal": true,
+        "source_is_prior_localappdata": true,
+        "destination_is_e_fast_anchors": true
+      },
+      {
+        "module": "AngularMaster.ZeroFreeSeed",
+        "restore_line": 92,
+        "source_receipt": {
+          "line": 93,
+          "path": "C:\\Users\\Simon\\AppData\\Local\\LEAN_ANCHORINGS\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\334d3f3c3e432d90\\06a9dace047f95848109fe8e90662844\\01a17e5f6ae67faf\\receipt.txt"
+        },
+        "saved_receipt": {
+          "line": 97,
+          "path": "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\334d3f3c3e432d90\\06a9dace047f95848109fe8e90662844\\01a17eab9b3262e1\\receipt.txt"
+        },
+        "reuse_line": 98,
+        "timing": {
+          "line": 99,
+          "elapsed_ms": 687,
+          "state": "FROZEN_REUSED"
+        },
+        "module_path_key_matches_current_formula": true,
+        "source_destination_input_prefix_equal": true,
+        "source_is_prior_localappdata": true,
+        "destination_is_e_fast_anchors": true
+      },
+      {
+        "module": "OriginTrace",
+        "restore_line": 102,
+        "source_receipt": {
+          "line": 103,
+          "path": "C:\\Users\\Simon\\AppData\\Local\\LEAN_ANCHORINGS\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\c06015cc761fc48a\\fd0908e8903b3e58ca2b220e59152774\\01a17e5fc60982bb\\receipt.txt"
+        },
+        "saved_receipt": {
+          "line": 107,
+          "path": "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\c06015cc761fc48a\\fd0908e8903b3e58ca2b220e59152774\\01a17eab9e12ca24\\receipt.txt"
+        },
+        "reuse_line": 108,
+        "timing": {
+          "line": 109,
+          "elapsed_ms": 653,
+          "state": "FROZEN_REUSED"
+        },
+        "module_path_key_matches_current_formula": true,
+        "source_destination_input_prefix_equal": true,
+        "source_is_prior_localappdata": true,
+        "destination_is_e_fast_anchors": true
+      },
+      {
+        "module": "RH_HilbertLimit.GrowthStep",
+        "restore_line": 112,
+        "source_receipt": {
+          "line": 113,
+          "path": "C:\\Users\\Simon\\AppData\\Local\\LEAN_ANCHORINGS\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\0d707d9af456b64b\\0dcb5d7984519257a0047d9bb555a06e\\01a17e7802577023\\receipt.txt"
+        },
+        "saved_receipt": {
+          "line": 117,
+          "path": "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\0d707d9af456b64b\\0dcb5d7984519257a0047d9bb555a06e\\01a17eaba097aad6\\receipt.txt"
+        },
+        "reuse_line": 118,
+        "timing": {
+          "line": 119,
+          "elapsed_ms": 679,
+          "state": "FROZEN_REUSED"
+        },
+        "module_path_key_matches_current_formula": true,
+        "source_destination_input_prefix_equal": true,
+        "source_is_prior_localappdata": true,
+        "destination_is_e_fast_anchors": true
+      },
+      {
+        "module": "RH_HilbertLimit.FinitePrefix",
+        "restore_line": 122,
+        "source_receipt": {
+          "line": 123,
+          "path": "C:\\Users\\Simon\\AppData\\Local\\LEAN_ANCHORINGS\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\0e52a585e1fe1674\\f461b755c93df0c6dd5f11f2d6ae91a7\\01a17e601f4b12a1\\receipt.txt"
+        },
+        "saved_receipt": {
+          "line": 127,
+          "path": "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\0e52a585e1fe1674\\f461b755c93df0c6dd5f11f2d6ae91a7\\01a17eaba3743230\\receipt.txt"
+        },
+        "reuse_line": 128,
+        "timing": {
+          "line": 129,
+          "elapsed_ms": 728,
+          "state": "FROZEN_REUSED"
+        },
+        "module_path_key_matches_current_formula": true,
+        "source_destination_input_prefix_equal": true,
+        "source_is_prior_localappdata": true,
+        "destination_is_e_fast_anchors": true
+      },
+      {
+        "module": "RH_HilbertLimit.SpectralTail",
+        "restore_line": 132,
+        "source_receipt": {
+          "line": 133,
+          "path": "C:\\Users\\Simon\\AppData\\Local\\LEAN_ANCHORINGS\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\dce44f38e301ce87\\5564a73f9b5e780bb50128b304cd11e3\\01a17e6067480680\\receipt.txt"
+        },
+        "saved_receipt": {
+          "line": 137,
+          "path": "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\dce44f38e301ce87\\5564a73f9b5e780bb50128b304cd11e3\\01a17eaba656c181\\receipt.txt"
+        },
+        "reuse_line": 138,
+        "timing": {
+          "line": 139,
+          "elapsed_ms": 667,
+          "state": "FROZEN_REUSED"
+        },
+        "module_path_key_matches_current_formula": true,
+        "source_destination_input_prefix_equal": true,
+        "source_is_prior_localappdata": true,
+        "destination_is_e_fast_anchors": true
+      },
+      {
+        "module": "RH_HilbertLimit.ActualCalibrationProgress",
+        "restore_line": 142,
+        "source_receipt": {
+          "line": 143,
+          "path": "C:\\Users\\Simon\\AppData\\Local\\LEAN_ANCHORINGS\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\b96a29859eecc947\\ec2a960ca66e0319c38fa7047c4efc15\\01a17e60b0fac6aa\\receipt.txt"
+        },
+        "saved_receipt": {
+          "line": 147,
+          "path": "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\b96a29859eecc947\\ec2a960ca66e0319c38fa7047c4efc15\\01a17eaba8f460da\\receipt.txt"
+        },
+        "reuse_line": 148,
+        "timing": {
+          "line": 149,
+          "elapsed_ms": 615,
+          "state": "FROZEN_REUSED"
+        },
+        "module_path_key_matches_current_formula": true,
+        "source_destination_input_prefix_equal": true,
+        "source_is_prior_localappdata": true,
+        "destination_is_e_fast_anchors": true
+      },
+      {
+        "module": "RH_HilbertLimit.ActualMomentReality",
+        "restore_line": 152,
+        "source_receipt": {
+          "line": 153,
+          "path": "C:\\Users\\Simon\\AppData\\Local\\LEAN_ANCHORINGS\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\93fc514e58db55d9\\590803a0fe178cb6038187afb0cdfdcd\\01a17e60f8fed258\\receipt.txt"
+        },
+        "saved_receipt": {
+          "line": 157,
+          "path": "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\93fc514e58db55d9\\590803a0fe178cb6038187afb0cdfdcd\\01a17eabab7c82a4\\receipt.txt"
+        },
+        "reuse_line": 158,
+        "timing": {
+          "line": 159,
+          "elapsed_ms": 665,
+          "state": "FROZEN_REUSED"
+        },
+        "module_path_key_matches_current_formula": true,
+        "source_destination_input_prefix_equal": true,
+        "source_is_prior_localappdata": true,
+        "destination_is_e_fast_anchors": true
+      },
+      {
+        "module": "RH_HilbertLimit.CanonicalBridge",
+        "restore_line": 162,
+        "source_receipt": {
+          "line": 163,
+          "path": "C:\\Users\\Simon\\AppData\\Local\\LEAN_ANCHORINGS\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\52e47af6a403a560\\f7590e7eee15dd85fc697f30c176c9ab\\01a17e784d50cc0a\\receipt.txt"
+        },
+        "saved_receipt": {
+          "line": 167,
+          "path": "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\52e47af6a403a560\\f7590e7eee15dd85fc697f30c176c9ab\\01a17eabae30109b\\receipt.txt"
+        },
+        "reuse_line": 168,
+        "timing": {
+          "line": 169,
+          "elapsed_ms": 670,
+          "state": "FROZEN_REUSED"
+        },
+        "module_path_key_matches_current_formula": true,
+        "source_destination_input_prefix_equal": true,
+        "source_is_prior_localappdata": true,
+        "destination_is_e_fast_anchors": true
+      },
+      {
+        "module": "EquivalenceAudit",
+        "restore_line": 174,
+        "source_receipt": {
+          "line": 175,
+          "path": "C:\\Users\\Simon\\AppData\\Local\\LEAN_ANCHORINGS\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\6c336235f91ff235\\fb7f637d29669dd8db5a7f925b5521d7\\01a17e7870e01d0f\\receipt.txt"
+        },
+        "saved_receipt": {
+          "line": 179,
+          "path": "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\6c336235f91ff235\\fb7f637d29669dd8db5a7f925b5521d7\\01a17eabb1d357c4\\receipt.txt"
+        },
+        "reuse_line": 180,
+        "timing": {
+          "line": 181,
+          "elapsed_ms": 891,
+          "state": "FROZEN_REUSED"
+        },
+        "module_path_key_matches_current_formula": true,
+        "source_destination_input_prefix_equal": true,
+        "source_is_prior_localappdata": true,
+        "destination_is_e_fast_anchors": true
+      }
+    ],
+    "interpretation": "18 complete reuse/restoration/save records are directly visible. The summary reports85 reused modules; the earlier67 module records are not in the supplied tail."
+  },
+  "axiom_evidence": {
+    "expected_target_count": 303,
+    "unique_expected_target_count": 303,
+    "actual_visible_axiom_report_records": 0,
+    "actual_visible_theorem_signature_records": 0,
+    "expected_individual_axiom_records_not_visible": 303,
+    "reported_standard_axiom_pass": "PASS_STANDARD_LOGICAL_AXIOMS_ONLY",
+    "reported_sorryax": "NONE",
+    "scope": "This tail contains status markers and cache operations, not individual theorem axiom reports. The runner source rechecks saved audit logs before frozen reuse, but those audit-log contents and anchor receipt contents were not supplied for independent verification."
+  },
+  "cache_population_interpretation": {
+    "directly_visible_prior_localappdata_receipts": 18,
+    "directly_visible_e_fast_anchor_saves": 18,
+    "all_visible_source_destination_module_and_input_prefixes_match": true,
+    "classification": "Verified-cache import/population is reported, with working-artifact restoration; already-warm retained-output reuse is not demonstrated by this tail.",
+    "basis": "The summary reports85 restored files,85 saved compact anchors and0 retained working modules. Every visible source receipt is under the previous C: LocalAppData root and every visible destination receipt is under E:\\RH-FAST\\anchors.",
+    "first_population_limit": "These observations are consistent with initial population of this E: workspace and anchor store, but the excerpt alone cannot establish that the directories had never been used previously.",
+    "legacy_counter": "LEGACY_MIGRATED_MODULES=0 is consistent with importing current-schema anchors: acceptRestored saves imported anchors but increments migrated only for the pinned legacy schema."
+  },
+  "native_process_counters": {
+    "reported": {
+      "certutil": 722,
+      "csc": 1,
+      "helper": 2,
+      "lean": 2,
+      "other": 0,
+      "total": 727
+    },
+    "arithmetic_total_matches": true,
+    "lean_two_interpretation": "The current selectCompiler invokes Lean for --version and --print-prefix. With reported0 project compilations and0 audit-only runs, the two reported logical Lean launches match those startup checks; this is a source-based interpretation, not visible command transcripts.",
+    "helper_interpretation": "csc1 and helper2 are consistent with one native hash-helper build, one self-test and one batch-hash invocation. The helper build/self-test logs are outside the supplied tail.",
+    "limits": "Logical-tool counts are runner-reported direct invocations, not a complete operating-system process trace."
+  },
+  "hash_evidence": {
+    "visible_phase_count": 71,
+    "visible_phase_type_counts": {
+      "RESTORE_DESTINATIONS": 18,
+      "SAVE_ORIGINALS": 18,
+      "SAVE_STAGED": 18,
+      "ANCHOR": 17
+    },
+    "visible_backends": [
+      "CERTUTIL"
+    ],
+    "all_visible_phases_complete": true,
+    "visible_phases": [
+      {
+        "line": 1,
+        "phase": "RESTORE_DESTINATIONS",
+        "module": "RiemannHypothesis.Xi.UnconditionalLagariasEquivalence",
+        "files": 1,
+        "backend": "CERTUTIL",
+        "elapsed_ms": 34,
+        "outcome": "COMPLETE"
+      },
+      {
+        "line": 4,
+        "phase": "SAVE_ORIGINALS",
+        "module": "RiemannHypothesis.Xi.UnconditionalLagariasEquivalence",
+        "files": 1,
+        "backend": "CERTUTIL",
+        "elapsed_ms": 37,
+        "outcome": "COMPLETE"
+      },
+      {
+        "line": 5,
+        "phase": "SAVE_STAGED",
+        "module": "RiemannHypothesis.Xi.UnconditionalLagariasEquivalence",
+        "files": 3,
+        "backend": "CERTUTIL",
+        "elapsed_ms": 57,
+        "outcome": "COMPLETE"
+      },
+      {
+        "line": 10,
+        "phase": "ANCHOR",
+        "module": "RiemannHypothesis.Xi.CompletedLFunctionInstance",
+        "files": 3,
+        "backend": "CERTUTIL",
+        "elapsed_ms": 71,
+        "outcome": "COMPLETE"
+      },
+      {
+        "line": 11,
+        "phase": "RESTORE_DESTINATIONS",
+        "module": "RiemannHypothesis.Xi.CompletedLFunctionInstance",
+        "files": 1,
+        "backend": "CERTUTIL",
+        "elapsed_ms": 31,
+        "outcome": "COMPLETE"
+      },
+      {
+        "line": 14,
+        "phase": "SAVE_ORIGINALS",
+        "module": "RiemannHypothesis.Xi.CompletedLFunctionInstance",
+        "files": 1,
+        "backend": "CERTUTIL",
+        "elapsed_ms": 34,
+        "outcome": "COMPLETE"
+      },
+      {
+        "line": 15,
+        "phase": "SAVE_STAGED",
+        "module": "RiemannHypothesis.Xi.CompletedLFunctionInstance",
+        "files": 3,
+        "backend": "CERTUTIL",
+        "elapsed_ms": 50,
+        "outcome": "COMPLETE"
+      },
+      {
+        "line": 20,
+        "phase": "ANCHOR",
+        "module": "RiemannHypothesis.Xi.CanonicalProductPairedGrowth",
+        "files": 3,
+        "backend": "CERTUTIL",
+        "elapsed_ms": 64,
+        "outcome": "COMPLETE"
+      },
+      {
+        "line": 21,
+        "phase": "RESTORE_DESTINATIONS",
+        "module": "RiemannHypothesis.Xi.CanonicalProductPairedGrowth",
+        "files": 1,
+        "backend": "CERTUTIL",
+        "elapsed_ms": 32,
+        "outcome": "COMPLETE"
+      },
+      {
+        "line": 24,
+        "phase": "SAVE_ORIGINALS",
+        "module": "RiemannHypothesis.Xi.CanonicalProductPairedGrowth",
+        "files": 1,
+        "backend": "CERTUTIL",
+        "elapsed_ms": 28,
+        "outcome": "COMPLETE"
+      },
+      {
+        "line": 25,
+        "phase": "SAVE_STAGED",
+        "module": "RiemannHypothesis.Xi.CanonicalProductPairedGrowth",
+        "files": 3,
+        "backend": "CERTUTIL",
+        "elapsed_ms": 54,
+        "outcome": "COMPLETE"
+      },
+      {
+        "line": 30,
+        "phase": "ANCHOR",
+        "module": "AngularMaster.ActualHadamard",
+        "files": 3,
+        "backend": "CERTUTIL",
+        "elapsed_ms": 82,
+        "outcome": "COMPLETE"
+      },
+      {
+        "line": 31,
+        "phase": "RESTORE_DESTINATIONS",
+        "module": "AngularMaster.ActualHadamard",
+        "files": 1,
+        "backend": "CERTUTIL",
+        "elapsed_ms": 40,
+        "outcome": "COMPLETE"
+      },
+      {
+        "line": 34,
+        "phase": "SAVE_ORIGINALS",
+        "module": "AngularMaster.ActualHadamard",
+        "files": 1,
+        "backend": "CERTUTIL",
+        "elapsed_ms": 26,
+        "outcome": "COMPLETE"
+      },
+      {
+        "line": 35,
+        "phase": "SAVE_STAGED",
+        "module": "AngularMaster.ActualHadamard",
+        "files": 3,
+        "backend": "CERTUTIL",
+        "elapsed_ms": 58,
+        "outcome": "COMPLETE"
+      },
+      {
+        "line": 40,
+        "phase": "ANCHOR",
+        "module": "AngularMaster.ComplexScaleProduct",
+        "files": 3,
+        "backend": "CERTUTIL",
+        "elapsed_ms": 75,
+        "outcome": "COMPLETE"
+      },
+      {
+        "line": 41,
+        "phase": "RESTORE_DESTINATIONS",
+        "module": "AngularMaster.ComplexScaleProduct",
+        "files": 1,
+        "backend": "CERTUTIL",
+        "elapsed_ms": 37,
+        "outcome": "COMPLETE"
+      },
+      {
+        "line": 44,
+        "phase": "SAVE_ORIGINALS",
+        "module": "AngularMaster.ComplexScaleProduct",
+        "files": 1,
+        "backend": "CERTUTIL",
+        "elapsed_ms": 30,
+        "outcome": "COMPLETE"
+      },
+      {
+        "line": 45,
+        "phase": "SAVE_STAGED",
+        "module": "AngularMaster.ComplexScaleProduct",
+        "files": 3,
+        "backend": "CERTUTIL",
+        "elapsed_ms": 56,
+        "outcome": "COMPLETE"
+      },
+      {
+        "line": 50,
+        "phase": "ANCHOR",
+        "module": "AngularMaster.ZeroGeometry",
+        "files": 3,
+        "backend": "CERTUTIL",
+        "elapsed_ms": 71,
+        "outcome": "COMPLETE"
+      },
+      {
+        "line": 51,
+        "phase": "RESTORE_DESTINATIONS",
+        "module": "AngularMaster.ZeroGeometry",
+        "files": 1,
+        "backend": "CERTUTIL",
+        "elapsed_ms": 36,
+        "outcome": "COMPLETE"
+      },
+      {
+        "line": 54,
+        "phase": "SAVE_ORIGINALS",
+        "module": "AngularMaster.ZeroGeometry",
+        "files": 1,
+        "backend": "CERTUTIL",
+        "elapsed_ms": 28,
+        "outcome": "COMPLETE"
+      },
+      {
+        "line": 55,
+        "phase": "SAVE_STAGED",
+        "module": "AngularMaster.ZeroGeometry",
+        "files": 3,
+        "backend": "CERTUTIL",
+        "elapsed_ms": 54,
+        "outcome": "COMPLETE"
+      },
+      {
+        "line": 60,
+        "phase": "ANCHOR",
+        "module": "AngularMaster.QQRHGeometry",
+        "files": 3,
+        "backend": "CERTUTIL",
+        "elapsed_ms": 62,
+        "outcome": "COMPLETE"
+      },
+      {
+        "line": 61,
+        "phase": "RESTORE_DESTINATIONS",
+        "module": "AngularMaster.QQRHGeometry",
+        "files": 1,
+        "backend": "CERTUTIL",
+        "elapsed_ms": 32,
+        "outcome": "COMPLETE"
+      },
+      {
+        "line": 64,
+        "phase": "SAVE_ORIGINALS",
+        "module": "AngularMaster.QQRHGeometry",
+        "files": 1,
+        "backend": "CERTUTIL",
+        "elapsed_ms": 47,
+        "outcome": "COMPLETE"
+      },
+      {
+        "line": 65,
+        "phase": "SAVE_STAGED",
+        "module": "AngularMaster.QQRHGeometry",
+        "files": 3,
+        "backend": "CERTUTIL",
+        "elapsed_ms": 74,
+        "outcome": "COMPLETE"
+      },
+      {
+        "line": 70,
+        "phase": "ANCHOR",
+        "module": "AngularMaster.LowHeightGeometry",
+        "files": 3,
+        "backend": "CERTUTIL",
+        "elapsed_ms": 85,
+        "outcome": "COMPLETE"
+      },
+      {
+        "line": 71,
+        "phase": "RESTORE_DESTINATIONS",
+        "module": "AngularMaster.LowHeightGeometry",
+        "files": 1,
+        "backend": "CERTUTIL",
+        "elapsed_ms": 64,
+        "outcome": "COMPLETE"
+      },
+      {
+        "line": 74,
+        "phase": "SAVE_ORIGINALS",
+        "module": "AngularMaster.LowHeightGeometry",
+        "files": 1,
+        "backend": "CERTUTIL",
+        "elapsed_ms": 45,
+        "outcome": "COMPLETE"
+      },
+      {
+        "line": 75,
+        "phase": "SAVE_STAGED",
+        "module": "AngularMaster.LowHeightGeometry",
+        "files": 3,
+        "backend": "CERTUTIL",
+        "elapsed_ms": 91,
+        "outcome": "COMPLETE"
+      },
+      {
+        "line": 80,
+        "phase": "ANCHOR",
+        "module": "AngularMaster.ThetaKernelExplicitBound",
+        "files": 3,
+        "backend": "CERTUTIL",
+        "elapsed_ms": 72,
+        "outcome": "COMPLETE"
+      },
+      {
+        "line": 81,
+        "phase": "RESTORE_DESTINATIONS",
+        "module": "AngularMaster.ThetaKernelExplicitBound",
+        "files": 1,
+        "backend": "CERTUTIL",
+        "elapsed_ms": 37,
+        "outcome": "COMPLETE"
+      },
+      {
+        "line": 84,
+        "phase": "SAVE_ORIGINALS",
+        "module": "AngularMaster.ThetaKernelExplicitBound",
+        "files": 1,
+        "backend": "CERTUTIL",
+        "elapsed_ms": 24,
+        "outcome": "COMPLETE"
+      },
+      {
+        "line": 85,
+        "phase": "SAVE_STAGED",
+        "module": "AngularMaster.ThetaKernelExplicitBound",
+        "files": 3,
+        "backend": "CERTUTIL",
+        "elapsed_ms": 54,
+        "outcome": "COMPLETE"
+      },
+      {
+        "line": 90,
+        "phase": "ANCHOR",
+        "module": "AngularMaster.ZeroFreeSeed",
+        "files": 3,
+        "backend": "CERTUTIL",
+        "elapsed_ms": 64,
+        "outcome": "COMPLETE"
+      },
+      {
+        "line": 91,
+        "phase": "RESTORE_DESTINATIONS",
+        "module": "AngularMaster.ZeroFreeSeed",
+        "files": 1,
+        "backend": "CERTUTIL",
+        "elapsed_ms": 35,
+        "outcome": "COMPLETE"
+      },
+      {
+        "line": 94,
+        "phase": "SAVE_ORIGINALS",
+        "module": "AngularMaster.ZeroFreeSeed",
+        "files": 1,
+        "backend": "CERTUTIL",
+        "elapsed_ms": 27,
+        "outcome": "COMPLETE"
+      },
+      {
+        "line": 95,
+        "phase": "SAVE_STAGED",
+        "module": "AngularMaster.ZeroFreeSeed",
+        "files": 3,
+        "backend": "CERTUTIL",
+        "elapsed_ms": 51,
+        "outcome": "COMPLETE"
+      },
+      {
+        "line": 100,
+        "phase": "ANCHOR",
+        "module": "OriginTrace",
+        "files": 3,
+        "backend": "CERTUTIL",
+        "elapsed_ms": 85,
+        "outcome": "COMPLETE"
+      },
+      {
+        "line": 101,
+        "phase": "RESTORE_DESTINATIONS",
+        "module": "OriginTrace",
+        "files": 1,
+        "backend": "CERTUTIL",
+        "elapsed_ms": 45,
+        "outcome": "COMPLETE"
+      },
+      {
+        "line": 104,
+        "phase": "SAVE_ORIGINALS",
+        "module": "OriginTrace",
+        "files": 1,
+        "backend": "CERTUTIL",
+        "elapsed_ms": 31,
+        "outcome": "COMPLETE"
+      },
+      {
+        "line": 105,
+        "phase": "SAVE_STAGED",
+        "module": "OriginTrace",
+        "files": 3,
+        "backend": "CERTUTIL",
+        "elapsed_ms": 57,
+        "outcome": "COMPLETE"
+      },
+      {
+        "line": 110,
+        "phase": "ANCHOR",
+        "module": "RH_HilbertLimit.GrowthStep",
+        "files": 3,
+        "backend": "CERTUTIL",
+        "elapsed_ms": 67,
+        "outcome": "COMPLETE"
+      },
+      {
+        "line": 111,
+        "phase": "RESTORE_DESTINATIONS",
+        "module": "RH_HilbertLimit.GrowthStep",
+        "files": 1,
+        "backend": "CERTUTIL",
+        "elapsed_ms": 36,
+        "outcome": "COMPLETE"
+      },
+      {
+        "line": 114,
+        "phase": "SAVE_ORIGINALS",
+        "module": "RH_HilbertLimit.GrowthStep",
+        "files": 1,
+        "backend": "CERTUTIL",
+        "elapsed_ms": 35,
+        "outcome": "COMPLETE"
+      },
+      {
+        "line": 115,
+        "phase": "SAVE_STAGED",
+        "module": "RH_HilbertLimit.GrowthStep",
+        "files": 3,
+        "backend": "CERTUTIL",
+        "elapsed_ms": 59,
+        "outcome": "COMPLETE"
+      },
+      {
+        "line": 120,
+        "phase": "ANCHOR",
+        "module": "RH_HilbertLimit.FinitePrefix",
+        "files": 3,
+        "backend": "CERTUTIL",
+        "elapsed_ms": 63,
+        "outcome": "COMPLETE"
+      },
+      {
+        "line": 121,
+        "phase": "RESTORE_DESTINATIONS",
+        "module": "RH_HilbertLimit.FinitePrefix",
+        "files": 1,
+        "backend": "CERTUTIL",
+        "elapsed_ms": 49,
+        "outcome": "COMPLETE"
+      },
+      {
+        "line": 124,
+        "phase": "SAVE_ORIGINALS",
+        "module": "RH_HilbertLimit.FinitePrefix",
+        "files": 1,
+        "backend": "CERTUTIL",
+        "elapsed_ms": 39,
+        "outcome": "COMPLETE"
+      },
+      {
+        "line": 125,
+        "phase": "SAVE_STAGED",
+        "module": "RH_HilbertLimit.FinitePrefix",
+        "files": 3,
+        "backend": "CERTUTIL",
+        "elapsed_ms": 68,
+        "outcome": "COMPLETE"
+      },
+      {
+        "line": 130,
+        "phase": "ANCHOR",
+        "module": "RH_HilbertLimit.SpectralTail",
+        "files": 3,
+        "backend": "CERTUTIL",
+        "elapsed_ms": 67,
+        "outcome": "COMPLETE"
+      },
+      {
+        "line": 131,
+        "phase": "RESTORE_DESTINATIONS",
+        "module": "RH_HilbertLimit.SpectralTail",
+        "files": 1,
+        "backend": "CERTUTIL",
+        "elapsed_ms": 37,
+        "outcome": "COMPLETE"
+      },
+      {
+        "line": 134,
+        "phase": "SAVE_ORIGINALS",
+        "module": "RH_HilbertLimit.SpectralTail",
+        "files": 1,
+        "backend": "CERTUTIL",
+        "elapsed_ms": 24,
+        "outcome": "COMPLETE"
+      },
+      {
+        "line": 135,
+        "phase": "SAVE_STAGED",
+        "module": "RH_HilbertLimit.SpectralTail",
+        "files": 3,
+        "backend": "CERTUTIL",
+        "elapsed_ms": 57,
+        "outcome": "COMPLETE"
+      },
+      {
+        "line": 140,
+        "phase": "ANCHOR",
+        "module": "RH_HilbertLimit.ActualCalibrationProgress",
+        "files": 3,
+        "backend": "CERTUTIL",
+        "elapsed_ms": 65,
+        "outcome": "COMPLETE"
+      },
+      {
+        "line": 141,
+        "phase": "RESTORE_DESTINATIONS",
+        "module": "RH_HilbertLimit.ActualCalibrationProgress",
+        "files": 1,
+        "backend": "CERTUTIL",
+        "elapsed_ms": 34,
+        "outcome": "COMPLETE"
+      },
+      {
+        "line": 144,
+        "phase": "SAVE_ORIGINALS",
+        "module": "RH_HilbertLimit.ActualCalibrationProgress",
+        "files": 1,
+        "backend": "CERTUTIL",
+        "elapsed_ms": 30,
+        "outcome": "COMPLETE"
+      },
+      {
+        "line": 145,
+        "phase": "SAVE_STAGED",
+        "module": "RH_HilbertLimit.ActualCalibrationProgress",
+        "files": 3,
+        "backend": "CERTUTIL",
+        "elapsed_ms": 58,
+        "outcome": "COMPLETE"
+      },
+      {
+        "line": 150,
+        "phase": "ANCHOR",
+        "module": "RH_HilbertLimit.ActualMomentReality",
+        "files": 3,
+        "backend": "CERTUTIL",
+        "elapsed_ms": 57,
+        "outcome": "COMPLETE"
+      },
+      {
+        "line": 151,
+        "phase": "RESTORE_DESTINATIONS",
+        "module": "RH_HilbertLimit.ActualMomentReality",
+        "files": 1,
+        "backend": "CERTUTIL",
+        "elapsed_ms": 38,
+        "outcome": "COMPLETE"
+      },
+      {
+        "line": 154,
+        "phase": "SAVE_ORIGINALS",
+        "module": "RH_HilbertLimit.ActualMomentReality",
+        "files": 1,
+        "backend": "CERTUTIL",
+        "elapsed_ms": 37,
+        "outcome": "COMPLETE"
+      },
+      {
+        "line": 155,
+        "phase": "SAVE_STAGED",
+        "module": "RH_HilbertLimit.ActualMomentReality",
+        "files": 3,
+        "backend": "CERTUTIL",
+        "elapsed_ms": 54,
+        "outcome": "COMPLETE"
+      },
+      {
+        "line": 160,
+        "phase": "ANCHOR",
+        "module": "RH_HilbertLimit.CanonicalBridge",
+        "files": 3,
+        "backend": "CERTUTIL",
+        "elapsed_ms": 71,
+        "outcome": "COMPLETE"
+      },
+      {
+        "line": 161,
+        "phase": "RESTORE_DESTINATIONS",
+        "module": "RH_HilbertLimit.CanonicalBridge",
+        "files": 1,
+        "backend": "CERTUTIL",
+        "elapsed_ms": 35,
+        "outcome": "COMPLETE"
+      },
+      {
+        "line": 164,
+        "phase": "SAVE_ORIGINALS",
+        "module": "RH_HilbertLimit.CanonicalBridge",
+        "files": 1,
+        "backend": "CERTUTIL",
+        "elapsed_ms": 29,
+        "outcome": "COMPLETE"
+      },
+      {
+        "line": 165,
+        "phase": "SAVE_STAGED",
+        "module": "RH_HilbertLimit.CanonicalBridge",
+        "files": 3,
+        "backend": "CERTUTIL",
+        "elapsed_ms": 57,
+        "outcome": "COMPLETE"
+      },
+      {
+        "line": 172,
+        "phase": "ANCHOR",
+        "module": "EquivalenceAudit",
+        "files": 3,
+        "backend": "CERTUTIL",
+        "elapsed_ms": 75,
+        "outcome": "COMPLETE"
+      },
+      {
+        "line": 173,
+        "phase": "RESTORE_DESTINATIONS",
+        "module": "EquivalenceAudit",
+        "files": 1,
+        "backend": "CERTUTIL",
+        "elapsed_ms": 30,
+        "outcome": "COMPLETE"
+      },
+      {
+        "line": 176,
+        "phase": "SAVE_ORIGINALS",
+        "module": "EquivalenceAudit",
+        "files": 1,
+        "backend": "CERTUTIL",
+        "elapsed_ms": 40,
+        "outcome": "COMPLETE"
+      },
+      {
+        "line": 177,
+        "phase": "SAVE_STAGED",
+        "module": "EquivalenceAudit",
+        "files": 3,
+        "backend": "CERTUTIL",
+        "elapsed_ms": 55,
+        "outcome": "COMPLETE"
+      }
+    ],
+    "reported_totals": {
+      "batch_sets": 1,
+      "certutil_sets": 342,
+      "elapsed_ms": 46682,
+      "failed_sets": 0,
+      "files": 37820,
+      "sets": 343
+    },
+    "reported_set_arithmetic_matches": true,
+    "timing_limit": "The reported46682ms is the sum of timed hash-set phases, not total end-to-end runtime. File counts across phases are not a count of unique dependency files.",
+    "failure_count_limit": "failed_sets0 describes completed hash-set outcomes; it does not establish that no certutil error was recovered internally."
+  },
+  "optimization_evidence_limits": {
+    "dependency_graph_progress_visible": false,
+    "dependency_graph_stage_timing_visible": false,
+    "dependency_content_files_visible": false,
+    "empty_binary_recovery_marker_visible": false,
+    "graph_statement": "Successful completion is reported, but no graph-startup timing or graph counters are visible, so this tail does not quantify the graph optimization.",
+    "empty_recovery_statement": "No SHA256_EMPTY_FILE_VERIFIED record is visible. The tail does not prove that the narrow certutil empty-file recovery branch was exercised or that the previous failing build.log was empty.",
+    "runtime_identity_statement": "The final Logs paths name the v0.2.10 E: workspace and the log format is consistent with the current runner. Startup runner/source/toolchain fingerprint fields and native receipt contents are not included; exact native byte identity remains unverified."
+  },
+  "workspace_evidence": {
+    "expected_current_workspace": "E:\\RH-FAST\\workspaces\\RH_HILBERT_LIMIT_LEAN_v0_2_10_construction",
+    "visible_log_paths_line": "Logs: E:\\RH-FAST\\workspaces\\RH_HILBERT_LIMIT_LEAN_v0_2_10_construction\\run-build.log and E:\\RH-FAST\\workspaces\\RH_HILBERT_LIMIT_LEAN_v0_2_10_construction\\run-audit.log",
+    "matches_exact_v0210_workspace": true
+  },
+  "evidence_only_zip_recommendation": {
+    "recommendation": "Keep the exact existing top-level directory RH_HILBERT_LIMIT_LEAN_v0_2_10_construction and preserve all runtime, configuration and Lean source bytes; add only evidence/documentation files.",
+    "reason": "The source binds mutable working artifacts and locks to the package root. Reusing the same E: path retains the populated .native-build directory; a version-root bump would create another working tree requiring restoration even when semantic anchor keys still match.",
+    "packaging_boundary": "The outer ZIP filename may identify the evidence update. Do not include replacement .native-build directories or delete existing work/anchor data. Preserve the current runner and launcher labels/bytes solely for this evidence freeze.",
+    "warm_reuse_limit": "A subsequent unchanged run from this same workspace is eligible to retain verified matching working artifacts. That behavior remains to be observed and must not be reported as already demonstrated by this tail."
+  },
+  "mathematical_boundary": {
+    "reported_status": "CONDITIONAL_PARTIAL",
+    "actual_spectral_calibration": "OPEN",
+    "dominant_extraction": "OPEN",
+    "unconditional_actual_limit": "NOT_CERTIFIED",
+    "actual_subexponential_bound": "OPEN",
+    "unconditional_rh": "NOT_ESTABLISHED",
+    "finite_accepted_witness": "NOT_ESTABLISHED",
+    "finite_checker_equivalence": "OPEN",
+    "conclusion": "This is evidence recording and cache validation reporting only. It supplies no new proof of the remaining analytic premises, a finite accepted witness, a terminating finite-checker equivalence, or unconditional RH."
+  },
+  "inconsistencies_found": [],
+  "limits": {
+    "local_attachment_only": true,
+    "library_read_performed": false,
+    "native_receipt_contents_available": false,
+    "full_startup_and_graph_log_available": false,
+    "not_executed": [
+      "Lean",
+      "Lake",
+      "Windows native runner",
+      "C#",
+      "CI"
+    ],
+    "source_or_output_code_edits": false,
+    "only_written_file": "/workspace/scratch/f128c1434505/tmp/native_pass_v0210/independent_evidence_review.json"
+  }
+}

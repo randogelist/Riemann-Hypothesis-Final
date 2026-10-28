@@ -1,0 +1,30 @@
+CURRENT PACKAGE: v0.2.16 construction, reported cached-reuse record
+SOURCE AND RUNNER BASELINE: v0.2.16; exact bytes and canonical workspace preserved
+
+1. The user reports PROJECT_BUILD=PASS, RUN=PASS, all 90 active modules
+   frozen-reused, and a 370-declaration selected AnalyticAudit summary with
+   standard logical axioms only and no sorryAx. This delivery records that
+   evidence. It does not independently inspect the native receipt contents
+   or rerun Lean. Full original cache validation remains mandatory.
+
+2. The unchanged analytic package includes actual canonical calibration,
+   dominant extraction, the ordinary root-scale limit, and all-order RH
+   equivalences. No mathematical statement or assumption is changed here.
+
+3. Formal closure remains OPEN:
+     (exists W : FiniteWitness, check W = true) iff _root_.RiemannHypothesis
+   Remaining work: finite raw data format, terminating actual-RH checker,
+   soundness and completeness. An obtained witness is not required for the
+   equivalence, and no accepted witness has been supplied.
+
+4. A finite natural B or K with a universal all-order admissibility
+   condition is not itself a terminating finite raw checker. A finite
+   prefix has not been certified as an infinite tail bound.
+
+5. Actual subexponential growth and unconditional RH are not established.
+   Existence of the root-scale limit alone does not show its value is one.
+   Convergence of the unrooted variation sequence is not asserted.
+
+6. The same Windows workspace is retained for working-artifact reuse.
+   Future retention and elapsed times remain subject to native validation;
+   no speedup measurement is claimed from the supplied aggregate counters.

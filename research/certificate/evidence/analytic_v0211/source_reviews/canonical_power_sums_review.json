@@ -1,0 +1,351 @@
+{
+  "schema": "RH_HILBERT_CANONICAL_POWER_SUMS_SOURCE_REVIEW_V1",
+  "review_mode": "SOURCE_ONLY_UNCOMPILED_CANDIDATE",
+  "reviewer": "analytic_source",
+  "candidate_path": "/workspace/scratch/f128c1434505/tmp/proof_progress_v0211/CanonicalPowerSums.lean",
+  "candidate_sha256": "2aecbd7e10aa87c0ce726026d563d6a33caf0b99e58f824719cf5a99a6217169",
+  "candidate_lines": 324,
+  "direct_imports": [
+    "RH_HilbertLimit.CanonicalBridge",
+    "Mathlib.Analysis.Complex.LocallyUniformLimit",
+    "Mathlib.Analysis.Calculus.Deriv.Pow",
+    "Mathlib.Analysis.Calculus.Deriv.Inv",
+    "Mathlib.Analysis.Calculus.LogDerivUniformlyOn",
+    "Mathlib.Analysis.SpecialFunctions.Log.Summable"
+  ],
+  "baseline_project_import_closure_count": 83,
+  "baseline_project_import_closure": [
+    "AWPIRH.ThetaEntire",
+    "AWPIRH.XiCore",
+    "AngularMaster.ActualHadamard",
+    "AngularMaster.ComplexScaleProduct",
+    "AngularMaster.LowHeightGeometry",
+    "AngularMaster.QQRHGeometry",
+    "AngularMaster.ThetaKernelExplicitBound",
+    "AngularMaster.ZeroExclusion",
+    "AngularMaster.ZeroFreeSeed",
+    "AngularMaster.ZeroGeometry",
+    "OriginTrace",
+    "RH_HilbertLimit.ActualCalibrationProgress",
+    "RH_HilbertLimit.ActualMomentReality",
+    "RH_HilbertLimit.ActualXi",
+    "RH_HilbertLimit.Bernstein",
+    "RH_HilbertLimit.CanonicalBridge",
+    "RH_HilbertLimit.Geometry",
+    "RH_HilbertLimit.Growth",
+    "RH_HilbertLimit.GrowthStep",
+    "RH_HilbertLimit.Main",
+    "RH_HilbertLimit.Spectral",
+    "RH_HilbertLimit.SpectralTail",
+    "RH_HilbertLimit.Vandermonde",
+    "RiemannHypothesis.ComplexAnalysis.AntiHerglotz",
+    "RiemannHypothesis.ComplexAnalysis.EntireQuotient",
+    "RiemannHypothesis.ComplexAnalysis.EvenAnalyticOrder",
+    "RiemannHypothesis.ComplexAnalysis.FactorialDyadicGrowth",
+    "RiemannHypothesis.ComplexAnalysis.GrowthRigidity",
+    "RiemannHypothesis.ComplexAnalysis.LogDerivative",
+    "RiemannHypothesis.ComplexAnalysis.MellinGrowth",
+    "RiemannHypothesis.ComplexAnalysis.PoleProbe",
+    "RiemannHypothesis.ComplexAnalysis.ProximityGrowth",
+    "RiemannHypothesis.ComplexAnalysis.RealPartGrowth",
+    "RiemannHypothesis.ComplexAnalysis.RealSymmetry",
+    "RiemannHypothesis.GammaCancellation.CompletedZeta",
+    "RiemannHypothesis.GammaCancellation.PoleSet",
+    "RiemannHypothesis.GammaCancellation.TextbookXi",
+    "RiemannHypothesis.HadamardProduct.CanonicalProductDivisor",
+    "RiemannHypothesis.HadamardProduct.CanonicalProductDyadicGrowth",
+    "RiemannHypothesis.HadamardProduct.CanonicalProductGrowth",
+    "RiemannHypothesis.HadamardProduct.CanonicalProductMultiplicity",
+    "RiemannHypothesis.HadamardProduct.CompletedLFunction",
+    "RiemannHypothesis.HadamardProduct.DyadicZeroCount",
+    "RiemannHypothesis.HadamardProduct.ExponentialPrefactor",
+    "RiemannHypothesis.HadamardProduct.GenusOne",
+    "RiemannHypothesis.HadamardProduct.IndexedRealZeroSign",
+    "RiemannHypothesis.HadamardProduct.InfiniteProducts",
+    "RiemannHypothesis.HadamardProduct.LogDerivative",
+    "RiemannHypothesis.HadamardProduct.NatZeroData",
+    "RiemannHypothesis.HadamardProduct.OriginMultiplicityCriterion",
+    "RiemannHypothesis.HadamardProduct.PairedCanonicalProductGrowth",
+    "RiemannHypothesis.HadamardProduct.PairedGenusOne",
+    "RiemannHypothesis.HadamardProduct.RealZeroSign",
+    "RiemannHypothesis.HadamardProduct.StrictRealZeroCriterion",
+    "RiemannHypothesis.RealZeros.Engine",
+    "RiemannHypothesis.RealZeros.EntireFunctions",
+    "RiemannHypothesis.Reduction.BacklundCanonicalDivisor",
+    "RiemannHypothesis.Xi.BacklundTuringBridge",
+    "RiemannHypothesis.Xi.CanonicalDivisor",
+    "RiemannHypothesis.Xi.CanonicalProductCharacteristicGrowth",
+    "RiemannHypothesis.Xi.CanonicalProductPairedGrowth",
+    "RiemannHypothesis.Xi.CanonicalProductSymmetry",
+    "RiemannHypothesis.Xi.CanonicalQuotientCharacteristicGrowth",
+    "RiemannHypothesis.Xi.CanonicalQuotientCriterion",
+    "RiemannHypothesis.Xi.CanonicalQuotientLogNormGrowth",
+    "RiemannHypothesis.Xi.CanonicalQuotientThetaCharacteristicGrowth",
+    "RiemannHypothesis.Xi.CompletedLFunctionInstance",
+    "RiemannHypothesis.Xi.Definitions",
+    "RiemannHypothesis.Xi.DyadicZeroCountBridge",
+    "RiemannHypothesis.Xi.EntireXiLogNormGrowth",
+    "RiemannHypothesis.Xi.EntireXiMellinGrowth",
+    "RiemannHypothesis.Xi.FunctionalEquation",
+    "RiemannHypothesis.Xi.HadamardLogDerivativeCriterion",
+    "RiemannHypothesis.Xi.JensenDyadicCountBridge",
+    "RiemannHypothesis.Xi.Pullback",
+    "RiemannHypothesis.Xi.RiemannHypothesisBridge",
+    "RiemannHypothesis.Xi.SignTargets",
+    "RiemannHypothesis.Xi.StrictLagariasCriterion",
+    "RiemannHypothesis.Xi.ThetaKernelMellinGrowth",
+    "RiemannHypothesis.Xi.UnconditionalLagariasEquivalence",
+    "RiemannHypothesis.Xi.ZetaMultiplicityBridge",
+    "RiemannHypothesis.ZeroCounting.SmoothMainTerm",
+    "RiemannHypothesis.ZeroCounting.ZetaZeros"
+  ],
+  "public_declarations": [
+    {
+      "kind": "def",
+      "name": "RH_HilbertLimit.CanonicalPowerSumAnalysis.massBound"
+    },
+    {
+      "kind": "def",
+      "name": "RH_HilbertLimit.CanonicalPowerSumAnalysis.resolventDomain"
+    },
+    {
+      "kind": "def",
+      "name": "RH_HilbertLimit.CanonicalPowerSumAnalysis.resolvent"
+    },
+    {
+      "kind": "def",
+      "name": "RH_HilbertLimit.CanonicalPowerSumAnalysis.resolventSeries"
+    },
+    {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.CanonicalPowerSumAnalysis.one_le_massBound"
+    },
+    {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.CanonicalPowerSumAnalysis.norm_le_massBound"
+    },
+    {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.CanonicalPowerSumAnalysis.isOpen_resolventDomain"
+    },
+    {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.CanonicalPowerSumAnalysis.zero_mem_resolventDomain"
+    },
+    {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.CanonicalPowerSumAnalysis.norm_mul_lt_half"
+    },
+    {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.CanonicalPowerSumAnalysis.half_lt_norm_denominator"
+    },
+    {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.CanonicalPowerSumAnalysis.denominator_ne_zero"
+    },
+    {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.CanonicalPowerSumAnalysis.norm_resolvent_le"
+    },
+    {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.CanonicalPowerSumAnalysis.norm_resolvent_pow_le"
+    },
+    {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.CanonicalPowerSumAnalysis.summable_resolvent_pow"
+    },
+    {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.CanonicalPowerSumAnalysis.logDeriv_affineProduct_hasSum"
+    },
+    {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.CanonicalPowerSumAnalysis.hasDerivAt_resolvent"
+    },
+    {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.CanonicalPowerSumAnalysis.hasDerivAt_resolvent_pow"
+    },
+    {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.CanonicalPowerSumAnalysis.deriv_resolventSeries"
+    },
+    {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.CanonicalPowerSumAnalysis.iteratedDeriv_resolventSeries"
+    },
+    {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.CanonicalPowerSumAnalysis.iteratedDeriv_logDeriv_affineProduct_zero"
+    },
+    {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.CanonicalPowerSumAnalysis.summable_positive_powers"
+    },
+    {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.actualLogDerivative_eq_canonical_product_logDeriv"
+    },
+    {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.actualLogDerivative_resolvent_hasSum"
+    },
+    {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.actualComplexMoment_eq_canonical_powerSum"
+    },
+    {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.actualComplexMoment_hasSum_canonical_powers"
+    },
+    {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.canonicalNode_power_sum"
+    },
+    {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.canonicalPowerSums"
+    }
+  ],
+  "baseline_source_sha256": {
+    "RH_HilbertLimit/CanonicalBridge.lean": "103d1917e0fa30b2ec50fb03217176235ebd045d65c3740eba5914f4860822fd",
+    "RH_HilbertLimit/ActualCalibrationProgress.lean": "8d268760cc235fdcf95ea4514aec2dbf126d90056df5e06730ee5b06bd4a275e",
+    "RH_HilbertLimit/ActualMomentReality.lean": "992ce87c48b93143e50a81c1a5318992bef251589d94494de1fafe2beb5ba34e",
+    "RH_HilbertLimit/ActualXi.lean": "d1fe6b5d5a8a3d6caf398790fe4a6b519ad0510a229c3cf88e3e20267d003322",
+    "OriginTrace.lean": "01c0d483964ef1b3cff5883267eec10ad65830ac2251d8db206434e85c73bedf",
+    "AngularMaster/ComplexScaleProduct.lean": "2a25b446accead2b314877c8eace2764f775e8b6b8675aa9909be89f421f535d",
+    "AngularMaster/ActualHadamard.lean": "99f424e8e0e87247c76b9f638850de67dcaaf7a5559e7158eeb1883efcee3664",
+    "AWPIRH/ThetaEntire.lean": "cb1f0838f2d90a1ba30e696afd05337e721ee7cc7e021a30ec28cdf2f810533b",
+    "AWPIRH/XiCore.lean": "6bda1a14b59a508811b9f9a8bff400ed824d86f366b2ddeecd728571be7fd9db"
+  },
+  "reference_local_sha256": {
+    "Mathlib__Analysis__Normed__Module__MultipliableUniformlyOn.lean": "55041bbd5db455f73a7b3b66435fa449fc501541a1ad344f94f314ede0cd2f75",
+    "Mathlib__Analysis__Calculus__LogDerivUniformlyOn.lean": "f8ed1283c276ae4aaa20eb214dc7a7d0849ecdf8087902f7ef0b3b79dcb39a62",
+    "Mathlib__Analysis__Complex__LocallyUniformLimit.lean": "768cbfb10df0e8c1b440c01573969c53859932cae7ff0e65500d3c72eccf635a",
+    "Mathlib__Analysis__Calculus__UniformLimitsDeriv.lean": "48d74b4ebbe7b3012128f7088a48567b72af1ef0631d3d978e369ec0ab5c45d5",
+    "Mathlib__Analysis__Calculus__IteratedDeriv__Defs.lean": "dcc086c2ae5ed79e192efb44cf7fb4a7eadeb0a94bb6e1261f75fc58740675b2",
+    "Mathlib__Analysis__Calculus__Deriv__Basic.lean": "25a141aa96a09a24c9b5dd4b26bc805e1138b7d497358230e25fe2ae476bd89b",
+    "Mathlib__Analysis__SpecialFunctions__Log__Summable.lean": "8cd8a4c8e38e1295ee614780aea29203f708d0c6cd959911570733cceb5bdf41",
+    "Mathlib__Analysis__Calculus__Deriv__Mul.lean": "c1ef567846f88755bb2c9af6f4fac13773e54675f85e4c639d412ae1e855d363",
+    "Mathlib__Analysis__Calculus__Deriv__Pow.lean": "ae5a1450b3edbc14d44cadaabf3444fe6d2f1b1a52fc34e82871405f5d7a7829",
+    "Mathlib__Analysis__Calculus__Deriv__Inv.lean": "56a829d955be804bbf1adeeddf8051671e187baff974d722fd2d7594c5442fef",
+    "Mathlib__Analysis__Calculus__IteratedDeriv__Lemmas.lean": "341eebe3d95c336513dbc55c65b12b177d9b7a51bd0a377dd10339d0178078d5",
+    "Mathlib__Analysis__Normed__Group__FunctionSeries.lean": "5344e2ce9dd2dcbcbdf7624e7fa200bf8355a438888be37262d1bc89f784332c"
+  },
+  "pinned_primary_sources": [
+    {
+      "repository": "leanprover-community/mathlib4",
+      "ref": "v4.33.0",
+      "path": "Mathlib/Analysis/Calculus/LogDerivUniformlyOn.lean",
+      "git_blob_sha": "63327e43eca317de6222b54aa2006ea2d93ac9e8",
+      "url": "https://github.com/leanprover-community/mathlib4/blob/v4.33.0/Mathlib/Analysis/Calculus/LogDerivUniformlyOn.lean"
+    },
+    {
+      "repository": "leanprover-community/mathlib4",
+      "ref": "v4.33.0",
+      "path": "Mathlib/Analysis/Complex/LocallyUniformLimit.lean",
+      "git_blob_sha": "afc9908533c3076986a43c9d963c53899f0669c3",
+      "url": "https://github.com/leanprover-community/mathlib4/blob/v4.33.0/Mathlib/Analysis/Complex/LocallyUniformLimit.lean"
+    },
+    {
+      "repository": "leanprover-community/mathlib4",
+      "ref": "v4.33.0",
+      "path": "Mathlib/Analysis/Calculus/IteratedDeriv/Defs.lean",
+      "git_blob_sha": "301c2076a2ee07b61d38cacb1d0995e327a36500",
+      "url": "https://github.com/leanprover-community/mathlib4/blob/v4.33.0/Mathlib/Analysis/Calculus/IteratedDeriv/Defs.lean"
+    },
+    {
+      "repository": "leanprover-community/mathlib4",
+      "ref": "v4.33.0",
+      "path": "Mathlib/Analysis/Calculus/IteratedDeriv/Lemmas.lean",
+      "git_blob_sha": "aff008563104c5cf0dc9a22dc6d791f98ff188e6",
+      "url": "https://github.com/leanprover-community/mathlib4/blob/v4.33.0/Mathlib/Analysis/Calculus/IteratedDeriv/Lemmas.lean"
+    },
+    {
+      "repository": "leanprover-community/mathlib4",
+      "ref": "v4.33.0",
+      "path": "Mathlib/Analysis/SpecialFunctions/Log/Summable.lean",
+      "git_blob_sha": "60d8611ab55778e75511025fd1a035b86752fa48",
+      "url": "https://github.com/leanprover-community/mathlib4/blob/v4.33.0/Mathlib/Analysis/SpecialFunctions/Log/Summable.lean"
+    },
+    {
+      "repository": "leanprover-community/mathlib4",
+      "ref": "v4.33.0",
+      "path": "Mathlib/Analysis/Calculus/Deriv/Basic.lean",
+      "git_blob_sha": "99b298181811591362a2467cfd825017ac9d0fef",
+      "url": "https://github.com/leanprover-community/mathlib4/blob/v4.33.0/Mathlib/Analysis/Calculus/Deriv/Basic.lean"
+    },
+    {
+      "repository": "leanprover-community/mathlib4",
+      "ref": "v4.33.0",
+      "path": "Mathlib/Analysis/Calculus/Deriv/Pow.lean",
+      "git_blob_sha": "8576c79ea7fe0d0139893acd6dcf509a41efdbb3",
+      "url": "https://github.com/leanprover-community/mathlib4/blob/v4.33.0/Mathlib/Analysis/Calculus/Deriv/Pow.lean"
+    },
+    {
+      "repository": "leanprover-community/mathlib4",
+      "ref": "v4.33.0",
+      "path": "Mathlib/Analysis/Calculus/Deriv/Inv.lean",
+      "git_blob_sha": "9872e356f606bd1be308cc10127da3c716f7a6f8",
+      "url": "https://github.com/leanprover-community/mathlib4/blob/v4.33.0/Mathlib/Analysis/Calculus/Deriv/Inv.lean"
+    },
+    {
+      "repository": "leanprover-community/mathlib4",
+      "ref": "v4.33.0",
+      "path": "Mathlib/Analysis/Calculus/Deriv/Mul.lean",
+      "git_blob_sha": "f688112f3812e3f50cdf169956d6c1323d32c19a",
+      "url": "https://github.com/leanprover-community/mathlib4/blob/v4.33.0/Mathlib/Analysis/Calculus/Deriv/Mul.lean"
+    }
+  ],
+  "key_checked_APIs": [
+    "Summable.le_tsum (generated additive declaration in Mathlib.Topology.Algebra.InfiniteSum.Order)",
+    "Complex.hasSum_deriv_of_summable_norm",
+    "logDeriv_tprod_eq_tsum",
+    "tprod_one_add_ne_zero_of_summable",
+    "HasDerivAt.fun_div",
+    "HasDerivAt.fun_pow",
+    "deriv_const_mul_field",
+    "Filter.EventuallyEq.deriv_eq",
+    "Filter.EventuallyEq.iteratedDeriv_eq",
+    "iteratedDeriv_succ",
+    "HasSum.congr_fun",
+    "HasSum.mul_left",
+    "Complex.ofReal_div and Complex.ofReal_pow"
+  ],
+  "mathematical_review": {
+    "finding": "No concrete mathematical gap or added actual-premise found in source review.",
+    "generic_premise": "Summable (fun i => norm (b i)); specialized using the existing unconditional actualComplexScale_norm_inv_summable.",
+    "domain": "ball 0 1 intersect {z : norm(z)*(1+sum_i norm(b_i)) < 1/2}",
+    "uniform_majorant": "norm(resolvent_i(z)^(n+1)) <= norm(b_i)*2*(2*massBound(b))^n",
+    "derivative_step": "deriv S_n(z) = -(n+1)*S_(n+1)(z), justified by Complex.hasSum_deriv_of_summable_norm on the open domain.",
+    "all_order_step": "iteratedDeriv n (logDeriv product) 0 = (-1)^n*n!*sum_i b_i^(n+1).",
+    "actual_binding": "The normalized actual theta product identifies actualLogDerivative with the generic product logarithmic derivative; the existing actual moment definition removes the derivative sign and factorial; existing reality and literal kappa normalization identify canonical node sums.",
+    "new_unconditional_endpoints": [
+      "actualLogDerivative_resolvent_hasSum",
+      "actualComplexMoment_eq_canonical_powerSum",
+      "actualComplexMoment_hasSum_canonical_powers",
+      "canonicalNode_power_sum",
+      "canonicalPowerSums : CanonicalPowerSums"
+    ],
+    "new_actual_hypotheses": [],
+    "RH_or_positive_zero_location_assumed": false,
+    "same_actual_definitions_preserved": true
+  },
+  "validation_limits": {
+    "local_Lean_executed": false,
+    "local_Lake_executed": false,
+    "native_Windows_executed": false,
+    "CI_executed": false,
+    "baseline_sources_modified": false,
+    "compiler_status": "UNCOMPILED",
+    "axiom_audit_status": "NOT_RUN_FOR_THIS_NEW_MODULE",
+    "possible_remaining_elaboration_errors": "Source inspection is not a Lean kernel check; the new module still requires the authorized user's native compile and axiom audit.",
+    "remaining_mathematical_boundaries": [
+      "This file does not construct DominantExtraction; another isolated task owns that step.",
+      "The finite raw witness, terminating checker, and checker completeness equivalence with literal RH remain unconstructed.",
+      "No proof of RH is claimed."
+    ]
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "schema": "RH_HILBERT_V0215_SPECTRAL_PHASE_STATIC_REPAIR_V1",
+  "reviewer": "lock_review",
+  "baseline_file": "RH_HilbertLimit/SpectralPhase.lean",
+  "baseline_version": "v0.2.14",
+  "baseline_sha256": "bc21fd329ecce37ce7b4808ffa565d1b0cc7507c90cbc1965b1a540756db3a80",
+  "candidate_sha256": "e5d3e26af0da7eb222dac75252480975eb4fa46150ebb342a58c42ab20063db3",
+  "status": "SOURCE_ONLY_MINIMAL_PROOF_REPAIR",
+  "repairs": [
+    {
+      "theorem": "RH_HilbertLimit.SpectralPhase.affine_eq_iff",
+      "baseline_line": 64,
+      "change": "Introduce the fixed equality premise and apply affine_injective to that premise.",
+      "reason": "Instantiates the implicit node arguments of the Injective proposition at the fixed q and r."
+    },
+    {
+      "theorem": "RH_HilbertLimit.SpectralPhase.norm_affine_lt_ellipseRadius_of_norm_lt_one",
+      "baseline_line": 83,
+      "change": "Replace add_lt_add_left with add_lt_add_right.",
+      "reason": "The generic v4.33.0 add_lt_add_right theorem adds the fixed quantity on the left, matching the existing calc target."
+    }
+  ],
+  "theorem_declarations_preserved": 8,
+  "all_declaration_headers_byte_identical": true,
+  "imports_byte_identical": true,
+  "only_two_asserted_text_replacements": true,
+  "new_assumptions": [],
+  "new_placeholders": [],
+  "runtime_modified": false,
+  "primary_source": {
+    "repository": "leanprover-community/mathlib4",
+    "ref": "v4.33.0",
+    "path": "Mathlib/Algebra/Order/Monoid/Unbundled/Basic.lean",
+    "github_blob_sha": "0c4966c2040c1b78a31965141732f82cb8b6a79f",
+    "url": "https://github.com/leanprover-community/mathlib4/blob/v4.33.0/Mathlib/Algebra/Order/Monoid/Unbundled/Basic.lean",
+    "access": "GitHub fetch_file returned lines 1 through 220; no local compiler run.",
+    "verified_relation": "to_additive of mul_lt_mul_right yields add_lt_add_right: b<c implies a+b<a+c."
+  },
+  "native_execution": "NOT_RUN",
+  "lean_execution": "NOT_RUN",
+  "axiom_audit": "NOT_RUN",
+  "ci_execution": "NOT_RUN"
+}

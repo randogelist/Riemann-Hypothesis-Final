@@ -1,0 +1,42 @@
+{
+  "schema": "RH_HILBERT_V0222_SOURCE_BOUND_SIMULATED_RUNTIME_VALIDATION_V1",
+  "status": "20_FOCUSED_NODE_VM_TESTS_PASS; INDEPENDENT_STATIC_REVIEW_NO_BLOCKERS; NATIVE_NOT_RUN",
+  "runner_sha256": "8fc5a81e3802a52e3ec12fa2c94177a42b59b202a83b66c9609ea1356889e907",
+  "baseline_runner_sha256": "5362c7e1550711b7604682836aa220c429916c73761f5cef7a7014bebd11f81a",
+  "modified_existing_functions": [
+    "assertNoLockWorkers",
+    "parallelAssertShutdownInventory"
+  ],
+  "added_functions": [
+    "lockSimpleWshScriptArgument",
+    "relativeLockWorkerDetails",
+    "relativeLockWorkerError"
+  ],
+  "unchanged_existing_functions": 163,
+  "launcher_and_native_helpers": "EXACT_BYTES_PRESERVED",
+  "cache_hashing_compiler_audit_memory_and_admission_functions": "EXACT_BYTES_PRESERVED",
+  "node_syntax_check": "PASSED; NO_RUNNER_ENTRYPOINT_EXECUTION",
+  "focused_test_report": "evidence/relative_shutdown_v0222/tests/mock_report.json",
+  "focused_test_report_sha256": "490d5a79124ca558eadb229b14ee77a5cdbad47c21bcb74b427f71d0ba83b0ee",
+  "focused_tests_passed": 20,
+  "focused_tests_failed": 0,
+  "test_scope": "ACTUAL_FUNCTIONS_IN_NODE_VM_WITH_SYNTHETIC_WMI_SHELL_FILES_AND_CLOCK",
+  "candidate_native_execution": "NOT_PERFORMED",
+  "lean_execution": false,
+  "lake_execution": false,
+  "ci_execution": false,
+  "new_axiom_audit_execution": false,
+  "csharp_execution_or_compilation": false,
+  "independent_source_review": "evidence/relative_shutdown_v0222/INDEPENDENT_SAFETY_REVIEW.json",
+  "independent_source_review_sha256": "2a93cf9a19309031c9b35d122a2d35cca78f4aa6b5efa3848520ddef76179e9f",
+  "integration_review": "evidence/relative_shutdown_v0222/INTEGRATION_REVIEW.json",
+  "integration_review_sha256": "8c0b1c4c232d0b4b1ee3bde740251e30311043ca525492c04da66ee6e20bfd01",
+  "limitations": [
+    "No Lean, Lake, Windows, WSH/COM, native WMI, C#, Wine or CI execution occurred.",
+    "All process rows, native command outcomes, locks, clocks, receipts and compiler files are synthetic in memory.",
+    "A vanished unresolved relative host requires one fresh barrier inventory; new unresolved relative hosts at that barrier do not get another relative-host wait.",
+    "The at-most-two inventories are not an atomic Windows process census; no global process stability is asserted.",
+    "Bounded attempts and scheduled sleeps do not impose a hard wall-clock limit on real WMI calls.",
+    "The scenarios provide runtime-logic regression evidence, not a native runner PASS or mathematical proof certification."
+  ]
+}

@@ -1,0 +1,46 @@
+PACKAGE=RH_HILBERT_LIMIT_LEAN_v0_2_13_construction
+RUNNER=RH_HILBERT_NATIVE_RUNNER_v0_2_13_MEMORY_FALLBACK
+MODE=A_TIER_LEAN
+TARGET=LOCAL_COMPILER
+REQUIRED_COMPILER=Native Windows Lean 4.33.0
+NEW_NATIVE_EXECUTION_BY_ASSISTANT=NOT_RUN
+MATHEMATICAL_ENDPOINT=BYTE_IDENTICAL
+LEAN_SOURCE_FILES_PRESERVED=92
+NEW_PROOF_MODULES=0
+ORDINARY_MODULES=89
+SELECTED_FINAL_AUDIT=AnalyticAudit.lean
+FINAL_AUDIT_TARGETS=370
+PROOF_CACHE_IDENTITY_AND_AUDIT_ACCEPTANCE=PRESERVED
+LEAN_JOBS_DEFAULT=16
+RH_MODULE_WORKERS_DEFAULT=4
+RH_WORKER_MEMORY_MB_DEFAULT=4096
+PREFERRED_SYSTEM_RESERVE=MAX(4096 MiB,20_PERCENT_PHYSICAL_RAM)
+IDLE_SERIAL_RESERVE_DEFAULT_MIB=1024
+EXPLICIT_SYSTEM_RESERVE=PRESERVED_AS_MINIMUM
+SERIAL_FALLBACK_THRESHOLD_DEFAULT_MIB=5120
+REPORTED_FREE_MIB=5479
+FALLBACK=SERIAL_UNTIL_EXIT; OPTIONAL_RAM_WARMING_DISABLED
+RAM_ONLY_STOP_WAIT_MS=5000
+FULL_SHUTDOWN_WAIT_MS=30000
+FINAL_AUDIT_MEMORY_GATE=ONLY_AFTER_FROZEN_REUSE_FAST_PATH
+RELATIVE_RUNNER_EXCEPTION=FRESH_SAME_OWNER_EXACT_PREEXISTING_ADMITTED_HOST_ONLY
+STALE_LOCK_RECOVERY=UNCHANGED
+RESOURCE_FAILURE_STAGE=RESOURCE_ADMISSION
+FORMAL_CLOSURE=OPEN
+FINITE_CHECKER_EQUIVALENCE=OPEN
+UNCONDITIONAL_RH=NOT_ESTABLISHED
+
+The uploaded v0.2.12 tail is a failed partial run, not a new endpoint PASS.
+85/89 is the scheduler terminal-state counter. Exactly 41 frozen reuse
+records and 40 restored-artifact markers are visible in the supplied tail.
+SpectralGenerating reports frozen reuse; its receipt content is not supplied.
+The following memory error was labelled with that last module's stage.
+
+Use the new versioned E:\RH-FAST\workspaces\RH_HILBERT_LIMIT_LEAN_v0_2_13_construction
+workspace. The old retained lock is not deleted. Valid shared anchors remain
+under E:\RH-FAST\anchors\RH_HILBERT_LIMIT\LOCAL_COMPILER\lean-4.33.0.
+
+All startup/semantic/source/dependency/audit checks continue unchanged.
+Admission estimates and OS snapshots do not enforce a physical-memory ceiling.
+No Lean, Lake, C#, native Windows, Wine or CI was executed during preparation.
+Node mock results are control-flow evidence only, not native certification.

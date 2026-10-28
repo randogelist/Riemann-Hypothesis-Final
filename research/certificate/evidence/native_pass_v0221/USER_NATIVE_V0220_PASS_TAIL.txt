@@ -1,0 +1,106 @@
+'RH_HilbertLimit.subexponential_of_eventual_natural_growth_step' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+RH_HilbertLimit.subexponential_of_exists_eventual_natural_growth_step {V : ℕ → ℝ} (hV : ∀ (n : ℕ), 0 ≤ V n)
+  (hstep : ∃ N K, RH_HilbertLimit.EventualNaturalGrowthStep V N K) : RH_HilbertLimit.Subexponential V
+'RH_HilbertLimit.subexponential_of_exists_eventual_natural_growth_step' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+RH_HilbertLimit.CancellationBudget : Type
+'RH_HilbertLimit.CancellationBudget' does not depend on any axioms
+RH_HilbertLimit.CancellationBudget.Admissible (W : RH_HilbertLimit.CancellationBudget) : Prop
+'RH_HilbertLimit.CancellationBudget.Admissible' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.cancellationBudget_admissible_iff_eventual_growth_step (W : RH_HilbertLimit.CancellationBudget) :
+  W.Admissible ↔ RH_HilbertLimit.EventualNaturalGrowthStep RH_HilbertLimit.actualVariation W.cutoff W.coefficient
+'RH_HilbertLimit.cancellationBudget_admissible_iff_eventual_growth_step' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+RH_HilbertLimit.actual_subexponential_of_admissible_cancellationBudget (W : RH_HilbertLimit.CancellationBudget)
+  (hW : W.Admissible) : RH_HilbertLimit.Subexponential RH_HilbertLimit.actualVariation
+'RH_HilbertLimit.actual_subexponential_of_admissible_cancellationBudget' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+RH_HilbertLimit.nativeRH_of_admissible_cancellationBudget (W : RH_HilbertLimit.CancellationBudget) (hW : W.Admissible) :
+  RiemannHypothesis
+'RH_HilbertLimit.nativeRH_of_admissible_cancellationBudget' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.nativeRH_of_exists_admissible_cancellationBudget (hWitness : ∃ W, W.Admissible) : RiemannHypothesis
+'RH_HilbertLimit.nativeRH_of_exists_admissible_cancellationBudget' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+RH_HilbertLimit.zero_cancellationBudget_admissible_of_nativeRH (hRH : RiemannHypothesis) :
+  { cutoff := 0, coefficient := 0 }.Admissible
+'RH_HilbertLimit.zero_cancellationBudget_admissible_of_nativeRH' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+RH_HilbertLimit.exists_admissible_cancellationBudget_iff_nativeRH : (∃ W, W.Admissible) ↔ RiemannHypothesis
+'RH_HilbertLimit.exists_admissible_cancellationBudget_iff_nativeRH' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+RH_HilbertLimit.nativeRH_of_exists_eventual_cancellation_bound
+  (hWitness :
+    ∃ N K,
+      ∀ (n : ℕ),
+        N ≤ n →
+          RH_HilbertLimit.rowCancellation RH_HilbertLimit.actualNormalizedMoment n ≤
+            ↑K * RH_HilbertLimit.actualVariation n) :
+  RiemannHypothesis
+'RH_HilbertLimit.nativeRH_of_exists_eventual_cancellation_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+RH_HilbertLimit.CancellationBudget.LocalFlux (W : RH_HilbertLimit.CancellationBudget) (H : ℕ → ℕ → ℝ) : Prop
+'RH_HilbertLimit.CancellationBudget.LocalFlux' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.cancellationBudget_admissible_of_local_flux (W : RH_HilbertLimit.CancellationBudget) (H : ℕ → ℕ → ℝ)
+  (hH : W.LocalFlux H) : W.Admissible
+'RH_HilbertLimit.cancellationBudget_admissible_of_local_flux' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.nativeRH_of_exists_local_cancellation_flux (hWitness : ∃ W H, W.LocalFlux H) : RiemannHypothesis
+'RH_HilbertLimit.nativeRH_of_exists_local_cancellation_flux' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+HASH_PHASE=SAVE_ORIGINALS:CancellationAudit|FILES=1|BACKEND=CERTUTIL|ELAPSED_MS=51|COMPLETE
+HASH_PHASE=SAVE_STAGED:CancellationAudit|FILES=3|BACKEND=CERTUTIL|ELAPSED_MS=90|COMPLETE
+ANCHOR_SAVE_LAYOUT=COMPACT_V1
+ANCHOR_SAVED=E:\RH-FAST\anchors\RH_HILBERT_LIMIT\LOCAL_COMPILER\lean-4.33.0\c\dfb014b4edea4fa5\dfdde963255fcdf198c5fc8dcb8d5ad1\01a17f72f0e0b979\receipt.txt
+COMPILE_AND_AXIOM_AUDIT_PASS=CancellationAudit
+MODULE_ELAPSED_MS=CancellationAudit|9914|COMPILED_AUDITED
+FINAL_AUDIT_DECLARATIONS=394
+STAGE_ELAPSED_MS=FINAL_AUDIT|10036|RETURNED
+STAGE_START=WORKER_SHUTDOWN
+NATIVE_LAUNCH_INVENTORY=SEALED|RECORDS=420
+SHUTDOWN_PREEXISTING_ADMITTED_UNRESOLVED_HOST=PID:47992
+SHUTDOWN_PROCESS_SNAPSHOT=CAPTURED|ROWS=697|UNREADABLE=0
+SHUTDOWN_PREEXISTING_ADMITTED_UNRESOLVED_HOST=PID:47992
+WORKER_INVENTORY_RECHECK=CLEAR|ATTEMPTS:1|FULL_INVENTORIES:1|EXACT_WORKER_QUERIES:0
+STAGE_ELAPSED_MS=WORKER_SHUTDOWN|1044|RETURNED
+AXIOM_AUDIT=PASS_STANDARD_LOGICAL_AXIOMS_ONLY
+SORRYAX=NONE
+MATHEMATICAL_STATUS=ANALYTIC_AND_SEMANTIC_CANCELLATION_AUDITED_FINITE_CHECKER_OPEN
+CANONICAL_POWER_SUMS=EXACT_CONSTRUCTION_AUDITED
+ACTUAL_SPECTRAL_CALIBRATION=EXACT_CONSTRUCTION_AUDITED
+DOMINANT_EXTRACTION=EXACT_CONSTRUCTION_AUDITED
+UNCONDITIONAL_ACTUAL_LIMIT=ROOT_SCALE_LIMIT_DECLARATION_AUDITED
+ORDINARY_LIMIT_SEQUENCE=rootScale actualVariation
+ACTUAL_SUBEXPONENTIAL_BOUND=OPEN
+CANCELLATION_IDENTITY=DECLARATION_AUDITED
+SEMANTIC_CANCELLATION_WITNESS_FORWARD=DECLARATION_AUDITED
+SEMANTIC_CANCELLATION_WITNESS_EQUIVALENCE=DECLARATION_AUDITED
+WITNESS_ADMISSIBILITY=UNIVERSAL_AFTER_FINITE_CUTOFF_NOT_A_BOOL_CHECK
+FINITE_CHECKER_SOUNDNESS=OPEN
+UNCONDITIONAL_RH=NOT_ESTABLISHED
+FINITE_ACCEPTED_WITNESS=NOT_ESTABLISHED
+FINITE_CHECKER_EQUIVALENCE=OPEN
+FORMAL_CLOSURE=OPEN
+COMPILED_MODULES=2
+FROZEN_REUSED_MODULES=91
+AUDIT_ONLY_MODULES=0
+LEGACY_MIGRATED_MODULES=0
+PROJECT_BUILD=PASS
+RUN=PASS
+WORKING_ARTIFACT_MODULES_RETAINED=0
+RESTORED_ARTIFACT_FILES=91
+ANCHOR_HISTORY_SCANS=2
+COMPACT_ANCHORS_SAVED=2
+COMBINED_WORKING_DIGESTS_CONSUMED=0
+LOGICAL_TOOL_LAUNCHES={"certutil":413,"csc":0,"helper":2,"lean":5,"other":0,"ram_warm":0,"total":420}
+HASH_PHASE_TOTALS={"batch_sets":1,"certutil_sets":189,"elapsed_ms":41473,"failed_sets":0,"files":37524,"sets":190}
+Logs: E:\RH-FAST\workspaces\RH_HILBERT_LIMIT_LEAN_v0_2_20_construction\run-build.log and E:\RH-FAST\workspaces\RH_HILBERT_LIMIT_LEAN_v0_2_20_construction\run-audit.log
+
+C:\Users\Simon\Downloads>

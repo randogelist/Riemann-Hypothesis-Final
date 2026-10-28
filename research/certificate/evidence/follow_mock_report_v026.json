@@ -1,0 +1,95 @@
+{
+  "harness": "RH_HILBERT_READ_ONLY_FOLLOW_MOCK_QA_V1",
+  "follower": "output/RH_HILBERT_LIMIT_LEAN_v0_2_6_construction/tools/follow_active.js",
+  "follower_sha256": "beb08b78f7c8ef53d06db9e99b266f1fb5a33cbb21d936a71dd6b1a8354f024f",
+  "native_windows_execution": false,
+  "lean_execution": false,
+  "proof_certification": "NONE",
+  "filesystem_process_time": "SYNTHETIC_READ_ONLY_WSH_WMI_ADODB",
+  "wrapper_review": {
+    "wrapper": "/workspace/scratch/272122ae5c52/output/RH_HILBERT_LIMIT_LEAN_v0_2_6_construction/run.cmd",
+    "wrapper_sha256": "5e6c6561c370c904b13d165986f0c045c6e7732de1745744b03619cf4a4b9f16",
+    "default_native_body_byte_equivalent_after_line_ending_normalization": true,
+    "follow_dispatch_returns_before_native_path": true
+  },
+  "passed": 19,
+  "failed": 0,
+  "results": [
+    {
+      "name": "live_owner_log_growth_is_displayed_without_build_or_mutation",
+      "outcome": "PASS_SYNTHETIC_OBSERVER"
+    },
+    {
+      "name": "old_pass_text_and_result_never_become_observer_certification",
+      "outcome": "PASS_SYNTHETIC_OBSERVER"
+    },
+    {
+      "name": "no_existing_owner_returns_without_starting_any_worker",
+      "outcome": "PASS_SYNTHETIC_OBSERVER"
+    },
+    {
+      "name": "pid_reuse_stops_observing_the_original_owner",
+      "outcome": "PASS_SYNTHETIC_OBSERVER"
+    },
+    {
+      "name": "replacement_owner_is_not_automatically_followed",
+      "outcome": "PASS_SYNTHETIC_OBSERVER"
+    },
+    {
+      "name": "wmi_failure_is_uncertain_and_read_only",
+      "outcome": "PASS_SYNTHETIC_OBSERVER"
+    },
+    {
+      "name": "malformed_owner_metadata_is_not_followed_or_recovered",
+      "outcome": "PASS_SYNTHETIC_OBSERVER"
+    },
+    {
+      "name": "transient_read_error_and_partial_line_retry_preserve_complete_output",
+      "outcome": "PASS_SYNTHETIC_OBSERVER"
+    },
+    {
+      "name": "shrinking_mismatched_log_sample_is_not_treated_as_completion",
+      "outcome": "PASS_SYNTHETIC_OBSERVER"
+    },
+    {
+      "name": "removed_owner_lock_ends_observation_without_reacquiring",
+      "outcome": "PASS_SYNTHETIC_OBSERVER"
+    },
+    {
+      "name": "relative_target_is_rejected_without_process_or_file_changes",
+      "outcome": "PASS_SYNTHETIC_OBSERVER"
+    },
+    {
+      "name": "missing_target_directory_is_reported_without_starting_a_worker",
+      "outcome": "PASS_SYNTHETIC_OBSERVER"
+    },
+    {
+      "name": "active_pid_with_unreadable_creation_is_uncertain",
+      "outcome": "PASS_SYNTHETIC_OBSERVER"
+    },
+    {
+      "name": "final_error_appended_before_owner_exit_is_still_displayed",
+      "outcome": "PASS_SYNTHETIC_OBSERVER"
+    },
+    {
+      "name": "final_pass_appended_before_lock_release_remains_prefixed_observation",
+      "outcome": "PASS_SYNTHETIC_OBSERVER"
+    },
+    {
+      "name": "initial_finished_state_displays_historical_tail_as_explicitly_unbound",
+      "outcome": "PASS_SYNTHETIC_OBSERVER"
+    },
+    {
+      "name": "lock_disappearing_between_folder_exists_and_getfolder_is_not_false_uncertainty",
+      "outcome": "PASS_SYNTHETIC_OBSERVER"
+    },
+    {
+      "name": "terminal_log_sample_is_not_emitted_if_a_successor_takes_ownership_during_read",
+      "outcome": "PASS_SYNTHETIC_OBSERVER"
+    },
+    {
+      "name": "wrapper_follow_dispatch_has_no_fallthrough_into_native_build",
+      "outcome": "PASS_SYNTHETIC_OBSERVER"
+    }
+  ]
+}

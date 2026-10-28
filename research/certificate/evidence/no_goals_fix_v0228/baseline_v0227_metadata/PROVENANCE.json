@@ -1,0 +1,17 @@
+{
+  "package": "RH_HILBERT_LIMIT_LEAN_v0_2_27_construction",
+  "parent": "RH_HILBERT_LIMIT_LEAN_v0_2_26_construction",
+  "prepared_at": "2026-10-28T01:08:19.991533+01:00",
+  "revision_kind": "COMPILE_REPAIR_NOT_INIT",
+  "parent_zip_sha256": "3b24e3c08ec824085df024e516a59cabadd0a54a58ebe906ed6944368c052af3",
+  "parent_library_file_id": "libfile_0817910dca088191a7bca7550e7b6b01",
+  "parent_library_path": "/Riemann-Hypothesis-Final/RH_HILBERT_LIMIT_LEAN_v0_2_26_construction.zip",
+  "parent_selected_by": "Exact FiveSector/FiveAlgebra/FiveRows names and diagnostic line content match user log.",
+  "other_same_name_archive": "libfile_48346676be6481919f67e8f904a3bd73 contains ThirdSector branch; not used or modified.",
+  "changed_sources": {
+    "RH_HilbertLimit/ZeroBudgetSecondSector.lean": "974506ab55be6024d536caeb824ea80cf06a86687930c33aa42f7cdef63e1f72",
+    "RH_HilbertLimit/ZeroBudgetFiveSector.lean": "c903332a3da68997b77e6ce7960fd4e149a5c46449be63a4bffaa2fe8d95115c",
+    "RH_HilbertLimit/ZeroBudgetFiveAlgebra.lean": "4f15864c2e6125a4829489659f56436d74b325e682b7058b7f746b9d3214131c"
+  },
+  "assistant_lean_native_or_ci_execution": false
+}

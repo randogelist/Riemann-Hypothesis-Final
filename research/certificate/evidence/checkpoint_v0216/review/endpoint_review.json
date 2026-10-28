@@ -1,0 +1,165 @@
+{
+  "review": "READ_ONLY_ANALYTIC_ENDPOINT_AND_REPORTED_NATIVE_PASS_CHECKPOINT",
+  "baseline_package": "RH_HILBERT_LIMIT_LEAN_v0_2_15_construction",
+  "source_edits": "NONE",
+  "native_or_test_execution": "NONE",
+  "lean_source_count": 92,
+  "lean_inventory_sha256": "d37cc003d3330ae8718cb4a76ad15bc800118ede0689cf0b04287e04697d3c3d",
+  "lean_inventory_hash_method": "SHA256 of UTF-8 canonical JSON list with sorted keys, comma/colon separators, entries sorted by relative path and containing path/sha256.",
+  "read_source_sha256": {
+    "RH_HilbertLimit/AnalyticClosure.lean": "ed440ff35623939ee3b5b7d58b0c85836d0c3e425e9db60ed95e7cb3eb465c16",
+    "RH_HilbertLimit/Growth.lean": "5fce21c7df7955ab1146418865141e3f3f7d2df23a92994032bcfb7008fc87fb",
+    "RH_HilbertLimit/GrowthStep.lean": "07fa8dfc108c4dd5dabb844719d84a5b0f09c56f92960e90e085017a216839b5",
+    "AnalyticAudit.lean": "1f9993cfe9a7bf4eeb8af7bee5cdeff809ab208262dbf58979fed23d1eb6e98f",
+    "audit-targets.tsv": "d1fe5130c82c0c269159acbab6a396948df3ffd3d2f2469fb9a19f2adb10d752",
+    "tools/native_runner.js": "302d970e3d2ed04bfcaaeaa8fcefd15d24e4d0fe03d4dfe59095b94afa1ec680",
+    "final-audit.txt": "ef56956fc0eac80b3c281abd27a97bd054107ef9538e73b1cedb98c113b03bc5"
+  },
+  "exact_analytic_declarations": [
+    {
+      "kind": "def",
+      "name": "RH_HilbertLimit.actualCanonicalCalibration",
+      "type": "ActualSpectralCalibration AngularMaster.ActualPairIndex",
+      "selected_aggregate_check": true,
+      "selected_aggregate_axiom_print": true,
+      "target_manifest_present": true
+    },
+    {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.actualCanonicalDominantExtraction",
+      "type": "DominantExtraction actualCanonicalCalibration",
+      "selected_aggregate_check": true,
+      "selected_aggregate_axiom_print": true,
+      "target_manifest_present": true
+    },
+    {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.canonical_actual_root_tendsto_constructed",
+      "type": "Tendsto (rootScale actualVariation) atTop (𝓝 (spectralRadius canonicalNode))",
+      "selected_aggregate_check": true,
+      "selected_aggregate_axiom_print": true,
+      "target_manifest_present": true
+    },
+    {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.canonical_actual_root_limit_exists",
+      "type": "∃ R : ℝ, 1 ≤ R ∧ Tendsto (rootScale actualVariation) atTop (𝓝 R)",
+      "selected_aggregate_check": true,
+      "selected_aggregate_axiom_print": true,
+      "target_manifest_present": true
+    },
+    {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.canonical_actual_root_one_iff_nativeRH",
+      "type": "Tendsto (rootScale actualVariation) atTop (𝓝 1) ↔ _root_.RiemannHypothesis",
+      "selected_aggregate_check": true,
+      "selected_aggregate_axiom_print": true,
+      "target_manifest_present": true
+    },
+    {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.canonical_actual_subexponential_iff_nativeRH",
+      "type": "Subexponential actualVariation ↔ _root_.RiemannHypothesis",
+      "selected_aggregate_check": true,
+      "selected_aggregate_axiom_print": true,
+      "target_manifest_present": true
+    },
+    {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.canonical_actual_all_variation_one_iff_nativeRH",
+      "type": "(∀ N, actualVariation N = 1) ↔ _root_.RiemannHypothesis",
+      "selected_aggregate_check": true,
+      "selected_aggregate_axiom_print": true,
+      "target_manifest_present": true
+    },
+    {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.canonical_actual_weights_nonnegative_iff_nativeRH",
+      "type": "(∀ N j, j ≤ N → 0 ≤ actualWeight N j) ↔ _root_.RiemannHypothesis",
+      "selected_aggregate_check": true,
+      "selected_aggregate_axiom_print": true,
+      "target_manifest_present": true
+    },
+    {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.canonical_actual_natural_growth_step_iff_nativeRH_constructed",
+      "type": "(∃ K : ℕ, NaturalGrowthStep actualVariation K) ↔ _root_.RiemannHypothesis",
+      "selected_aggregate_check": true,
+      "selected_aggregate_axiom_print": true,
+      "target_manifest_present": true
+    },
+    {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.canonical_actual_natural_bound_iff_nativeRH_constructed",
+      "type": "(∃ B : ℕ, ∀ n : ℕ, actualVariation n ≤ (B : ℝ)) ↔ _root_.RiemannHypothesis",
+      "selected_aggregate_check": true,
+      "selected_aggregate_axiom_print": true,
+      "target_manifest_present": true
+    }
+  ],
+  "root_scale_definition": "rootScale (V : ℕ → ℝ) (n : ℕ) : ℝ := Real.rpow (V n) ((n : ℝ)⁻¹)",
+  "natural_growth_step_definition": "NaturalGrowthStep (V : ℕ → ℝ) (K : ℕ) : Prop := ∀ n : ℕ, ((n : ℝ) + 1) * (V (n + 1) - V n) ≤ (K : ℝ) * V n",
+  "analytic_endpoint_interpretation": [
+    "The constructed root-scale sequence has an ordinary limit equal to spectralRadius canonicalNode, with an existential limit value R ≥ 1.",
+    "A limit value of one, subexponential variation, all variation values equal to one, nonnegative weights, an existential natural growth step, and an existential natural uniform bound are each stated equivalent to the actual _root_.RiemannHypothesis.",
+    "These constructed endpoint declarations have no extra analytic input hypotheses in their signatures.",
+    "The root-scale limit declaration alone does not establish that its value is one, convergence of unrooted actualVariation, actual subexponential growth, or RH."
+  ],
+  "finite_checker_boundary": {
+    "formal_closure": "OPEN",
+    "requested_goal_schema": "(∃ W : FiniteWitness, check W = true) ↔ _root_.RiemannHypothesis",
+    "schema_is_existing_proved_declaration": false,
+    "missing_components": [
+      "finite raw witness format",
+      "terminating checker",
+      "soundness for actual RH",
+      "completeness under RH"
+    ],
+    "accepted_witness_required_for_equivalence": false,
+    "accepted_finite_witness": "NOT_ESTABLISHED",
+    "distinction": "A finite natural number B or K with a universally quantified all-order admissibility property does not supply a terminating Boolean check. The analytic equivalences do not close the separate raw finite-checker equivalence."
+  },
+  "selected_aggregate_audit": {
+    "source": "AnalyticAudit.lean",
+    "imports_analytic_closure": true,
+    "unique_axiom_print_targets": 370,
+    "all_ten_constructed_endpoint_declarations_covered": true,
+    "coverage_scope": "Static audit-source and manifest coverage; this is not inspected native audit output."
+  },
+  "runner_success_path_source_review": {
+    "ordinary_modules_fail_or_block_before_final_audit": true,
+    "selected_final_audit_required_before_pass": true,
+    "final_module_key_requires_compiled_or_accepted_reuse_and_audit": true,
+    "worker_shutdown_required_before_pass": true,
+    "axiom_policy_allowed": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "rejects_sorryAx": true,
+    "rejects_missing_expected_axiom_records": true,
+    "interpretation": "If the reported run used the reviewed package unchanged, its PASS markers imply that the selected aggregate audit and guarded worker shutdown succeeded along the reviewed path."
+  },
+  "latest_native_evidence_boundary": {
+    "source": "User-supplied partial v0.2.15 terminal PASS summary relayed in task context.",
+    "direct_reported_markers": {
+      "FORMAL_CLOSURE": "OPEN",
+      "COMPILED_MODULES": 5,
+      "FROZEN_REUSED_MODULES": 85,
+      "PROJECT_BUILD": "PASS",
+      "RUN": "PASS",
+      "COMPACT_ANCHORS_SAVED": 5
+    },
+    "count_interpretation": "5 compiled plus 85 reused is consistent with the 90 active modules including the selected aggregate audit; the tail alone does not identify individual newly compiled modules.",
+    "supported_label": "USER_REPORTED_NATIVE_PASS",
+    "independent_exact_native_audit_verification": "NOT_AVAILABLE",
+    "missing_from_supplied_tail": [
+      "direct per-declaration axiom output",
+      "anchor receipt contents",
+      "native compiler/toolchain identity",
+      "source and dependency hashes"
+    ],
+    "must_not_claim": "Independent inspection of receipts, exact native artifact hashes or per-declaration axiom output; an accepted finite witness; finite-checker equivalence; unconditional RH."
+  },
+  "checkpoint_guidance": "Record the newly reported native PASS and source-reviewed endpoint meanings without changing any Lean source, mathematical statement, runner acceptance policy, or formal-closure status."
+}

@@ -1,0 +1,55 @@
+{
+  "schema": "RH_V0213_FOCUSED_EVIDENCE_FILES_V1",
+  "status": "PASS",
+  "runner_sha256": "f6726db78ef9b532b24e2c09092e44e1e7f855c5eb84a6873c1dc519ef13803f",
+  "passed": 15,
+  "failed": 0,
+  "report": "mock_report.json",
+  "report_sha256": "e4ca6ac27f6efdeab215ffc39f3152ed73c534036f021be969931485f93cca85",
+  "entry": "focused_review.js",
+  "copy_files": [
+    {
+      "path": "candidate_sources.js",
+      "sha256": "92ddba93bcb792dc369b0774e38b8d5cebd20f1af68dc3628780452e52aa5eb8",
+      "bytes": 6724
+    },
+    {
+      "path": "focused_review.js",
+      "sha256": "968c0d86bb5bd152441c569669b80d101c65b4e6c801ef8ff3a6c709c9fade29",
+      "bytes": 19793
+    },
+    {
+      "path": "mock_host.js",
+      "sha256": "525da25dd590b785537bf6885a43df1e56462870a545cd9692159f4ced53e590",
+      "bytes": 13674
+    },
+    {
+      "path": "mock_report.json",
+      "sha256": "e4ca6ac27f6efdeab215ffc39f3152ed73c534036f021be969931485f93cca85",
+      "bytes": 6921
+    },
+    {
+      "path": "regression_plan.json",
+      "sha256": "646a1c0bed24b265dbfcf544c2b456ca23607c717eeedb6cb108cf2d2ee602b5",
+      "bytes": 3285
+    },
+    {
+      "path": "reported_case_fixture.js",
+      "sha256": "a4444b53c581f080da8f916d6616d64ae8e2e4dcf63902c32b105ba4449b4b7e",
+      "bytes": 648
+    },
+    {
+      "path": "runtime_host.js",
+      "sha256": "3805fac27c8bfefb147d475d960befd8e1859bade4cad677058d50a01da0c2d7",
+      "bytes": 11382
+    },
+    {
+      "path": "test_usage.json",
+      "sha256": "870a5ffb54eff50c5e9f4480acdb1b31fc59640e6a5d93895eabc62fbc3100b7",
+      "bytes": 2163
+    }
+  ],
+  "self_hash_omitted": true,
+  "native_execution": false,
+  "old22_rerun": false
+}

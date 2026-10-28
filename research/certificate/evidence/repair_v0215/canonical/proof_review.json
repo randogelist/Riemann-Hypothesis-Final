@@ -1,0 +1,43 @@
+{
+  "review": "CANONICAL_POWER_SUMS_DERIVATIVE_SCALAR_REPAIR",
+  "native_lean_execution": "NOT_RUN",
+  "proof_validation": "STATIC_SOURCE_REVIEW_ONLY",
+  "baseline_file": "/workspace/scratch/f128c1434505/output/RH_HILBERT_LIMIT_LEAN_v0_2_14_construction/RH_HilbertLimit/CanonicalPowerSums.lean",
+  "baseline_sha256": "6dac0ba1d627eae6c5a70d0bb2dbdc52f0fa6474e3984d34a2d53feb48fb2160",
+  "candidate_sha256": "55e10b78e84bb2ec7cfbd693e5275f46b4ada256bda0530ccb4c0e80337e65de",
+  "edit_scope": "Only bodies of hasDerivAt_resolvent and hasDerivAt_resolvent_pow.",
+  "declaration_signatures_preserved": true,
+  "imports_preserved": true,
+  "assumptions_preserved": true,
+  "previous_normalized_moment_cast_repair_preserved": true,
+  "new_axioms_or_sorry": false,
+  "diagnosis": "Generic convert followed by sequential no-progress-sensitive simplification exposes congruence/scalar obligations. Native output reports field_simp or simp failure before ring can solve the algebra. The derivative APIs themselves elaborate.",
+  "repair": "Keep the existing fun_div and fun_pow derivative facts; prove typed scalar identities by restricted algebraic simplification, rewrite each identity into its derivative fact, and exact the result.",
+  "quotient_scalar_identity": "(0 * d - b * b) / d ^ 2 = -((b / d) ^ 2)",
+  "quotient_scalar_normal_form": "-(b ^ 2 / d ^ 2)",
+  "power_scalar_identity": "c * r ^ (n + 1 - 1) * (-(r ^ 2)) = -c * r ^ (n + 2)",
+  "power_scalar_normal_form": "-(c * (r ^ n * r ^ 2))",
+  "additional_nonzero_premise": false,
+  "existing_denominator_nonzero_used": "The existing denominator_ne_zero hb hz i remains supplied to fun_div.",
+  "primary_sources": [
+    {
+      "repository": "leanprover-community/mathlib4",
+      "ref": "v4.33.0",
+      "path": "Mathlib/Analysis/Calculus/Deriv/Inv.lean",
+      "blob_sha": "9872e356f606bd1be308cc10127da3c716f7a6f8",
+      "url": "https://github.com/leanprover-community/mathlib4/blob/v4.33.0/Mathlib/Analysis/Calculus/Deriv/Inv.lean",
+      "declaration": "HasDerivAt.fun_div",
+      "derivative": "(c' * d x - c x * d') / d x ^ 2"
+    },
+    {
+      "repository": "leanprover-community/mathlib4",
+      "ref": "v4.33.0",
+      "path": "Mathlib/Analysis/Calculus/Deriv/Pow.lean",
+      "blob_sha": "8576c79ea7fe0d0139893acd6dcf509a41efdbb3",
+      "url": "https://github.com/leanprover-community/mathlib4/blob/v4.33.0/Mathlib/Analysis/Calculus/Deriv/Pow.lean",
+      "declaration": "HasDerivAt.pow with @[to_fun] producing fun_pow",
+      "derivative": "n * f x ^ (n - 1) * f'"
+    }
+  ],
+  "native_next_step": "Compile and audit the module and its dependents on the user native Windows runner; no compiler or axiom evidence is asserted by this review."
+}

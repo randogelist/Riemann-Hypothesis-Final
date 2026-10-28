@@ -1,0 +1,6 @@
+  have hd : HasDerivAt (fun w : ℂ => 1 + w * b i) (b i) z := by
+    simpa using ((hasDerivAt_id z).mul_const (b i)).const_add 1
+  have hne := denominator_ne_zero hb hz i
+  unfold resolvent
+  convert (hasDerivAt_const z (b i)).fun_div hd hne using 1 <;>
+    field_simp [hne] <;> ring

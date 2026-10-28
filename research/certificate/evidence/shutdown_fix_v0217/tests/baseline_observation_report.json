@@ -1,0 +1,39 @@
+{
+  "schema": "RH_V0217_BASELINE_SHUTDOWN_OBSERVATION_V1",
+  "runner_sha256": "d5eb2c1f33b4fafcd0b1d366850cc860c7e73552dd739ee9cdd238559e679c86",
+  "scope": "NODE_VM_SYNTHETIC_HOST_ONLY",
+  "status": "PASS_EXPECTED_BASELINE_BEHAVIOR",
+  "cases": [
+    {
+      "name": "six_unreadable_rows_from_same_admitted_parent_need_no_self_hash_launch",
+      "status": "PASS_EXPECTED_BASELINE_BEHAVIOR",
+      "evidence": {
+        "fresh_inventories": 6,
+        "different_unreadable_rows": 6,
+        "common_parent_pid": 34008,
+        "fake_scheduled_wait_ms": 1000,
+        "certutil_launched_during_shutdown": 0,
+        "total_tools_launched_during_shutdown": 0,
+        "lock_retained": true,
+        "exemption_did_not_extend_from_parent_to_child": true
+      }
+    },
+    {
+      "name": "diagnostic_logging_and_owner_snapshot_do_not_launch_hash_processes",
+      "status": "PASS_EXPECTED_BASELINE_BEHAVIOR",
+      "evidence": {
+        "diagnostic_logged": true,
+        "owner_snapshot_read": true,
+        "added_hashes": 0,
+        "added_native_launches": 0
+      }
+    }
+  ],
+  "limitations": [
+    "These are baseline behavior checks, not candidate-fix tests.",
+    "No Windows, WSH/COM, WMI, Lean/Lake, C# or CI execution occurred.",
+    "All process rows, parent identities, hashes, receipts, files and time are simulated in memory.",
+    "Synthetic parent34008 and rotating children reproduce the structural reported pattern only, not exact native process identities.",
+    "The observation rules out certutil launches in this simulated shutdown call path; it does not determine the actual native unreadable workers' commands or workspace."
+  ]
+}

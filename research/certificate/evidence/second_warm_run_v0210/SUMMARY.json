@@ -1,0 +1,44 @@
+{
+  "schema": "RH_HILBERT_SECOND_WARM_MESSAGE_V1",
+  "evidence_kind": "USER_MESSAGE_UTF8_LF_TRANSCRIPTION_NOT_ORIGINAL_NATIVE_LOG_BYTES",
+  "reported_package": "RH_HILBERT_LIMIT_LEAN_v0_2_10_construction",
+  "transcript_sha256": "aec5d5606a9cf9f08efcee9db4d00c34c27654e9245e353975cf6deb2f270d5a",
+  "transcript_bytes": 3298,
+  "reported_run": "PASS",
+  "reported_build": "PASS",
+  "reported_axiom_audit": "PASS_STANDARD_LOGICAL_AXIOMS_ONLY",
+  "reported_sorryax": "NONE",
+  "reported_final_audit_targets": 303,
+  "reported_compiled": 0,
+  "reported_frozen_reused": 85,
+  "reported_working_retained": 85,
+  "reported_restored_files": 0,
+  "reported_saved_anchors": 0,
+  "reported_history_scans": 0,
+  "reported_combined_working_digest_sets_consumed": 85,
+  "complete_visible_retention_records": 5,
+  "complete_E_source_receipt_paths_match_previous_saved_paths": true,
+  "independent_review_sha256": "34595fe255f97b944c7d04d6efdab292265dbc9a2d9e56d1d6eaf0cbf632fbd7",
+  "logical_tool_launches": {
+    "certutil": 381,
+    "csc": 0,
+    "helper": 2,
+    "lean": 2,
+    "other": 0,
+    "total": 385
+  },
+  "hash_phase_totals": {
+    "batch_sets": 1,
+    "certutil_sets": 88,
+    "elapsed_ms": 37781,
+    "failed_sets": 0,
+    "files": 37484,
+    "sets": 89
+  },
+  "limitations": [
+    "The excerpt reports a prior package warm run, not compilation of the five new modules.",
+    "No original receipt contents, direct axiom records, new theorem types, or startup fingerprints are supplied.",
+    "Hash elapsed_ms is an aggregate of hash phases, not whole-run or dependency-graph time.",
+    "The difference from the preceding 38326 ms hash total is not a controlled speedup measurement."
+  ]
+}

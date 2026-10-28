@@ -1,0 +1,76 @@
+{
+  "reviewed_on": "2026-10-27",
+  "scope": "Primary sources for optional Windows mapped-file cache warming; no native experiment performed.",
+  "sources": [
+    {
+      "id": "lean_module_v433",
+      "url": "https://github.com/leanprover/lean4/blob/v4.33.0/src/library/module.cpp",
+      "github_blob_sha": "be31567876a7965f01e6ff17f19709298b70caa8",
+      "relevant_lines": "448-577",
+      "supports": "CompactedRegion reading opens the local file read-only; under LEAN_MMAP the Windows branch uses PAGE_WRITECOPY and FILE_MAP_COPY at the saved base address. It can fall back to allocation plus read. Relocation/fixups can make pages private. Source inspection does not prove which path the user's binary takes."
+    },
+    {
+      "id": "lean_environment_v433",
+      "url": "https://github.com/leanprover/lean4/blob/v4.33.0/src/Lean/Environment.lean",
+      "github_blob_sha": "33928512dadcfa2e42a307499e9228596da0341a",
+      "relevant_lines": "1768-1795, 2008-2010, 2230-2244, 2371",
+      "supports": "Module-data import tracks .olean parts and optional IR parts as compacted regions. This is not a contract for sharing a complete constructed Lean environment between separate compiler processes."
+    },
+    {
+      "id": "lean_setup_v433",
+      "url": "https://github.com/leanprover/lean4/blob/v4.33.0/src/Lean/Setup.lean",
+      "github_blob_sha": "fb9fbd413e65ea6c1eded3dcab8a8200be827994",
+      "relevant_lines": "72-108",
+      "supports": "The loaded compiled-data parts depend on import/server/private requirements; not every artifact companion is necessarily used by every invocation."
+    },
+    {
+      "id": "win32_mapview",
+      "url": "https://learn.microsoft.com/en-us/windows/win32/api/memoryapi/nf-memoryapi-mapviewoffile",
+      "supports": "Read-only views cannot write the file. Local views backed by the same file are coherent. Copy-on-write modifications become private pages. Mapping is virtual-address access, not a residency guarantee."
+    },
+    {
+      "id": "win32_working_set",
+      "url": "https://learn.microsoft.com/en-us/windows/win32/memory/working-set",
+      "supports": "Pages may be shared between processes, faults may be soft when data is resident elsewhere, and Windows may trim working sets or repurpose cached transition pages."
+    },
+    {
+      "id": "win32_memory_status",
+      "url": "https://learn.microsoft.com/en-us/windows/win32/api/sysinfoapi/nf-sysinfoapi-globalmemorystatusex",
+      "supports": "Provides current physical-memory availability; values are volatile, so an initial free-RAM snapshot is not a lasting resource guarantee."
+    },
+    {
+      "id": "framework_mmf_reference",
+      "url": "https://github.com/microsoft/referencesource/blob/ec9fa9ae770d522a5b5f0607898044b7478574a3/System.Core/System/IO/MemoryMappedFiles/MemoryMappedFile.cs",
+      "github_blob_sha": "274d98ad1072b29d2bb5aba9621677ca72f831e3",
+      "relevant_lines": "184-244",
+      "supports": "The Framework overload accepts FileStream, null mapping name, capacity zero, Read access, null security, no inheritance, and leaveOpen. Zero capacity uses the existing file length; zero-length files need explicit handling."
+    },
+    {
+      "id": "framework_process_reference",
+      "url": "https://github.com/microsoft/referencesource/blob/ec9fa9ae770d522a5b5f0607898044b7478574a3/System/services/monitoring/system/diagnosticts/Process.cs",
+      "github_blob_sha": "3096cb509f6881646098c6e20ed2d02aba79f410",
+      "relevant_lines": "223-265, 350-355, 998-1002, 1651-1680, 1725-1738",
+      "supports": "Accessing Process.Handle obtains a retained process handle; subsequent exit queries reuse it. StartTime is obtained from process times. The helper additionally checks exact floored UTC creation milliseconds."
+    },
+    {
+      "id": "framework_createfromfile_docs",
+      "url": "https://learn.microsoft.com/en-us/dotnet/api/system.io.memorymappedfiles.memorymappedfile.createfromfile?view=netframework-4.8.1",
+      "supports": "Documents the managed mapping overload and zero-capacity behavior; the Framework source above resolves access-mode detail."
+    },
+    {
+      "id": "framework_fileshare",
+      "url": "https://learn.microsoft.com/en-us/dotnet/api/system.io.fileshare?view=netframework-4.8.1",
+      "supports": "FileShare.ReadWrite and FileShare.Delete allow corresponding subsequent opens/deletion; these flags do not remove all mapped-file mutation restrictions."
+    },
+    {
+      "id": "win32_truncation",
+      "url": "https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-setendoffile",
+      "supports": "Views must be unmapped and mapping handles closed before changing file size with SetEndOfFile. Scheduled-to-change project outputs must therefore be excluded from the warm manifest."
+    },
+    {
+      "id": "win32_virtual_lock",
+      "url": "https://learn.microsoft.com/en-us/windows/win32/api/memoryapi/nf-memoryapi-virtuallock",
+      "supports": "Locking is the stronger residency operation and can harm system memory availability. This candidate does not call VirtualLock or alter working-set privileges or limits."
+    }
+  ]
+}

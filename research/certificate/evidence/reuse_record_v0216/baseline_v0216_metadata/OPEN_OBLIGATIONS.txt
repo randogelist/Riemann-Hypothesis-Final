@@ -1,0 +1,27 @@
+CURRENT PACKAGE: v0.2.16 construction, reported-pass checkpoint
+SOURCE BASELINE: v0.2.15; all 92 Lean files and exact theorem statements preserved
+
+1. The user supplied PROJECT_BUILD=PASS and RUN=PASS, with 5 compiled and
+   85 reused modules. This supersedes the previous reported compilation
+   failure. Direct axiom output, receipt contents, native source/dependency
+   hashes and compiler identity are not included in that short excerpt.
+   Preserve the result as USER_REPORTED_NATIVE_PASS. Cache reuse still
+   requires all original native validation checks.
+
+2. The analytic source package includes the actual canonical calibration,
+   dominant extraction, ordinary root-scale limit, and all-order RH criteria.
+   The current checkpoint adds no mathematical statement or assumption.
+
+3. Formal closure remains OPEN:
+     (exists W : FiniteWitness, check W = true) iff _root_.RiemannHypothesis
+   Remaining work is the finite raw format, terminating actual-RH checker,
+   soundness and completeness proofs. An obtained witness is not required
+   to prove this equivalence; no accepted finite witness is supplied here.
+
+4. A natural B or K with a universal all-order admissibility condition is
+   not itself a terminating finite checker. No finite prefix is promoted
+   to a certified infinite tail bound.
+
+5. Actual subexponential growth and unconditional RH are not established.
+   The root-scale limit need not have value one merely because it exists.
+   Convergence of the unrooted variation sequence is not asserted.

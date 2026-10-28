@@ -1,0 +1,633 @@
+--- RH_HILBERT_LIMIT_LEAN_v0_2_6_construction/tools/native_runner.js
++++ RH_HILBERT_LIMIT_LEAN_v0_2_7_construction/tools/native_runner.js
+@@ -5,8 +5,8 @@
+ var shell = new ActiveXObject("WScript.Shell");
+ var env = shell.Environment("PROCESS");
+ var root = fso.GetAbsolutePathName(".");
+-var PACKAGE = "RH_HILBERT_LIMIT_LEAN_v0_2_6_construction";
+-var RUNNER_VERSION = "RH_HILBERT_NATIVE_RUNNER_v0_2_3";
++var PACKAGE = "RH_HILBERT_LIMIT_LEAN_v0_2_7_construction";
++var RUNNER_VERSION = "RH_HILBERT_NATIVE_RUNNER_v0_2_7";
+ var SCHEMA = "RH_HILBERT_LOCAL_ANCHOR_V2";
+ var CACHE_LAYOUT = "COMPACT_V1";
+ var HELPER_SCHEMA = "RH_HILBERT_SHA256_HELPER_CACHE_V1";
+@@ -42,6 +42,12 @@
+ var LOCK_SCHEMA = "RH_HILBERT_RUN_LOCK_V1";
+ var lockOwnerText = "", lockSelf = null, lockEvents = [], lockRecovered = 0;
+ var lockEverHeld = false;
++var activeHasher = null, hashBackendMode = "AUTO", hashBatchSerial = 0, workingDigestConsumed = 0;
++var HASH_BATCH_MIN_FILES = 6;
++var directLaunchCounts = {certutil:0,helper:0,csc:0,lean:0,other:0,total:0};
++var hashPhaseRecords = [], stagePhaseRecords = [], modulePhaseRecords = [];
++var hashPhaseTotals = {sets:0,files:0,batch_sets:0,certutil_sets:0,elapsed_ms:0,failed_sets:0};
++var runtimeStarted = new Date().getTime();
+ 
+ function trim(s) { return String(s).replace(/^\s+|\s+$/g, ""); }
+ function norm(p) { return fso.GetAbsolutePathName(p).replace(/\\+$/g, ""); }
+@@ -91,6 +97,16 @@
+     "T" + two(d.getUTCHours()) + two(d.getUTCMinutes()) + two(d.getUTCSeconds()) + "Z";
+ }
+ function error(s) { throw new Error(s); }
++function fatalHashError(s) { var e=new Error("HASH_INFRASTRUCTURE_FATAL: "+s);e.rhFatalHash=true;throw e; }
++function isFatalHashError(e) { return !!(e&&e.rhFatalHash===true); }
++function helperUnavailableError(s) { var e=new Error(s);e.rhHelperUnavailable=true;throw e; }
++function elapsedSince(start) { return Math.max(0,new Date().getTime()-start); }
++function diagnosticLog(s) { try{log(s);}catch(ignoredTimingLog){try{WScript.Echo(s);}catch(ignoredEcho){}} }
++function timedStage(name,action) {
++  stage=name;var start=new Date().getTime(),outcome="ERROR";
++  try{var value=action();outcome="RETURNED";return value;}
++  finally{var ms=elapsedSince(start);stagePhaseRecords.push({name:name,elapsed_ms:ms,outcome:outcome});diagnosticLog("STAGE_ELAPSED_MS="+name+"|"+ms+"|"+outcome);}
++}
+ function keys(obj) { var a=[]; for(var k in obj) if(obj.hasOwnProperty(k)) a.push(k); return a.sort(); }
+ function unique(a) { var o={}, r=[]; for(var i=0;i<a.length;i++) if(!o[a[i]]) {o[a[i]]=true;r.push(a[i]);} return r; }
+ function quote(s) {
+@@ -103,6 +119,14 @@
+   for(i=0;i<args.length;i++) command += " " + quote(args[i]);
+   command += " > " + quote(output) + " 2>&1";
+   return shell.Run(quote(comspec) + ' /d /v:off /s /c "' + command + '"', 0, true);
++}
++function invokeNative(exe,args,output) {
++  var leaf=fso.GetFileName(exe).toLowerCase(),kind="other";
++  if(leaf==="lean.exe")kind="lean";
++  else if(leaf==="csc.exe")kind="csc";
++  else if(leaf==="helper.exe"||/^sha256-.*\.exe$/.test(leaf))kind="helper";
++  directLaunchCounts[kind]++;directLaunchCounts.total++;
++  return runToFile(exe,args,output);
+ }
+ function lockString(value) { return value===null||typeof value==="undefined"?"":String(value); }
+ function validProcessCreation(value) { return /^\d{14}\.\d{6}[+-]\d{3}$/.test(value); }
+@@ -309,35 +333,75 @@
+ }
+ function fileHash(path) {
+   if(!exists(path))error("Cannot fingerprint missing file: " + path);
+-  var proc=shell.Exec(quote(certutil)+" -hashfile "+quote(path)+" SHA256");
+-  var output=proc.StdOut.ReadAll()+proc.StdErr.ReadAll();
+-  while(proc.Status===0)WScript.Sleep(10);
+-  return hashOutput(output,proc.ExitCode,path);
++  try{
++    var proc=launchCertutil(path),output=proc.StdOut.ReadAll()+proc.StdErr.ReadAll();
++    while(proc.Status===0)WScript.Sleep(10);
++    return hashOutput(output,proc.ExitCode,path);
++  }catch(e){if(isFatalHashError(e))throw e;fatalHashError(e.message);}
+ }
+ function requestHash(path) { hashFiles[keyPath(path)]=norm(path); }
++function launchCertutil(path) {
++  directLaunchCounts.certutil++;directLaunchCounts.total++;
++  return shell.Exec(quote(certutil)+" -hashfile "+quote(path)+" SHA256");
++}
++function certutilHashSet(todo,requested,purpose) {
++  var active=[],cursor=0,done=0,lastReport=0,out={},failure="",limit=Math.min(jobs,16);
++  while((cursor<todo.length&&!failure)||active.length){
++    while(!failure&&cursor<todo.length&&active.length<limit){
++      var key=todo[cursor++],p=requested[key];
++      try{active.push({key:key,path:p,proc:launchCertutil(p)});}
++      catch(startError){failure=startError.message;}
++    }
++    for(var i=active.length-1;i>=0;i--){
++      var x=active[i];if(x.proc.Status===0)continue;
++      try{
++        var output=x.proc.StdOut.ReadAll()+x.proc.StdErr.ReadAll();
++        out[x.key]=hashOutput(output,x.proc.ExitCode,x.path);
++      }catch(hashError){if(!failure)failure=hashError.message;}
++      active.splice(i,1);done++;
++    }
++    if(purpose==="DEPENDENCIES"&&(done-lastReport>=256||done===todo.length)){
++      log("DEPENDENCY_HASH_PROGRESS="+done+"/"+todo.length);lastReport=done;
++    }
++    if(active.length)WScript.Sleep(10);
++  }
++  if(failure)fatalHashError(failure);
++  if(done!==todo.length)fatalHashError("Incomplete independent certutil hash set.");
++  return out;
++}
+ function certutilHashes(todo) {
+-  var active=[], cursor=0, done=0, lastReport=0;
+-  log("DEPENDENCY_HASH_MODE=SHA256_CONTENT_PARALLEL_"+jobs);
+-  while(cursor<todo.length || active.length){
+-    while(cursor<todo.length && active.length<jobs){
+-      var key=todo[cursor++],p=hashFiles[key];
+-      active.push({key:key,path:p,proc:shell.Exec(quote(certutil)+" -hashfile "+quote(p)+" SHA256")});
+-    }
+-    for(var i=active.length-1;i>=0;i--){
+-      var x=active[i]; if(x.proc.Status===0)continue;
+-      var output=x.proc.StdOut.ReadAll()+x.proc.StdErr.ReadAll();
+-      fileHashes[x.key]=hashOutput(output,x.proc.ExitCode,x.path);
+-      active.splice(i,1);done++;
+-    }
+-    if(done-lastReport>=256 || done===todo.length){log("DEPENDENCY_HASH_PROGRESS="+done+"/"+todo.length);lastReport=done;}
+-    if(active.length)WScript.Sleep(10);
++  var completed=certutilHashSet(todo,hashFiles,"DEPENDENCIES");
++  for(var i=0;i<todo.length;i++)fileHashes[todo[i]]=completed[todo[i]];
++}
++function freshHashSet(paths,purpose,forceCertutil) {
++  var started=new Date().getTime(),requested={},todo=[],backend="PREFLIGHT",outcome="ERROR",out;
++  purpose=String(purpose||"FILES");
++  try{
++    for(var i=0;i<paths.length;i++)requested[keyPath(paths[i])]=norm(paths[i]);
++    todo=keys(requested);
++    for(i=0;i<todo.length;i++)if(!exists(requested[todo[i]]))error("Cannot fingerprint missing file: "+requested[todo[i]]);
++    if(!todo.length){backend="NONE";out={};}
++    else{
++      if(!forceCertutil&&hashBackendMode==="BATCH"&&!activeHasher)fatalHashError("Required validated batch helper is unavailable.");
++      backend=!forceCertutil&&activeHasher&&hashBackendMode!=="CERTUTIL"&&todo.length>=HASH_BATCH_MIN_FILES?"BATCH":"CERTUTIL";
++      try{
++        if(backend==="BATCH")out=batchHashes(todo,activeHasher,requested,purpose);
++        else out=certutilHashSet(todo,requested,purpose);
++      }catch(transportError){if(isFatalHashError(transportError))throw transportError;fatalHashError(transportError.message);}
++    }
++    outcome="COMPLETE";return out;
++  }finally{
++    var ms=elapsedSince(started);
++    hashPhaseTotals.sets++;hashPhaseTotals.files+=todo.length;hashPhaseTotals.elapsed_ms+=ms;
++    if(backend==="BATCH")hashPhaseTotals.batch_sets++;
++    if(backend==="CERTUTIL")hashPhaseTotals.certutil_sets++;
++    if(outcome!=="COMPLETE")hashPhaseTotals.failed_sets++;
++    hashPhaseRecords.push({name:purpose,files:todo.length,backend:backend,elapsed_ms:ms,outcome:outcome});
++    diagnosticLog("HASH_PHASE="+purpose+"|FILES="+todo.length+"|BACKEND="+backend+"|ELAPSED_MS="+ms+"|"+outcome);
+   }
+ }
+ function hasherInput(source,csc) {
+-  var dir=fso.GetParentFolderName(csc),files=[],sourceSHA=fileHash(source);
+-  var manifest=HELPER_SCHEMA+"\nTARGET="+TARGET+"\nSOURCE_SHA256="+sourceSHA+
+-    "\nFLAGS=/nologo /noconfig /target:exe /optimize+ /platform:anycpu;System.dll;System.Core.dll;implicit-mscorlib\n";
+-  files.push({path:source,sha:sourceSHA});
++  var dir=fso.GetParentFolderName(csc),files=[],presentPaths=[source],presence={};
+   var required=[csc,dir+"\\mscorlib.dll",dir+"\\System.dll",dir+"\\System.Core.dll"];
+   var optional=[dir+"\\csc.exe.config",dir+"\\cscomp.dll",dir+"\\Microsoft.CSharp.dll",
+     dir+"\\clr.dll",dir+"\\clrjit.dll",dir+"\\mscoreei.dll",dir+"\\System.Security.dll",
+@@ -348,19 +412,35 @@
+     var p=paths[i],present=exists(p),must=false;
+     for(var j=0;j<required.length;j++)if(keyPath(p)===keyPath(required[j]))must=true;
+     if(!present&&must)error("Missing installed hash-helper compiler/reference input: "+p);
+-    var sha=present?fileHash(p):"ABSENT";
++    presence[keyPath(p)]=present;if(present)presentPaths.push(p);
++  }
++  var digests=freshHashSet(presentPaths,"HELPER_INPUTS",true),sourceSHA=digests[keyPath(source)];
++  var manifest=HELPER_SCHEMA+"\nTARGET="+TARGET+"\nSOURCE_SHA256="+sourceSHA+
++    "\nFLAGS=/nologo /noconfig /target:exe /optimize+ /platform:anycpu;System.dll;System.Core.dll;implicit-mscorlib\n";
++  files.push({path:source,sha:sourceSHA});
++  for(i=0;i<paths.length;i++){
++    p=paths[i];var sha=presence[keyPath(p)]?digests[keyPath(p)]:"ABSENT";
+     files.push({path:p,sha:sha});manifest+=keyPath(p)+"="+sha+"\n";
+   }
+   return {key:textHash(manifest),manifest:manifest,files:files,sourceSHA:sourceSHA,dir:dir};
+ }
+ function recheckHasherInput(input) {
+-  for(var i=0;i<input.files.length;i++){
+-    var f=input.files[i],now=exists(f.path)?fileHash(f.path):"ABSENT";
+-    if(now!==f.sha)error("Hash-helper source, compiler, reference or runtime input changed: "+f.path);
++  var presentPaths=[],i;
++  for(i=0;i<input.files.length;i++){
++    var f=input.files[i],present=exists(f.path);
++    if(present!==(f.sha!=="ABSENT"))fatalHashError("Hash-helper input presence changed: "+f.path);
++    if(present)presentPaths.push(f.path);
++  }
++  var digests=freshHashSet(presentPaths,"HELPER_INPUTS_RECHECK",true);
++  for(i=0;i<input.files.length;i++){
++    f=input.files[i];var now=f.sha==="ABSENT"?"ABSENT":digests[keyPath(f.path)];
++    if(now!==f.sha)fatalHashError("Hash-helper source, compiler, reference or runtime input changed: "+f.path);
+   }
+ }
+ function selfTestHasher(exe,output) {
+-  if(runToFile(exe,["--self-test"],output)!==0||!exists(output)||trim(read(output))!=="BATCH_SHA256_SELF_TEST=PASS")error("Native SHA256 helper self-test failed: "+exe);
++  try{
++    if(invokeNative(exe,["--self-test"],output)!==0||!exists(output)||trim(read(output))!=="BATCH_SHA256_SELF_TEST=PASS")helperUnavailableError("Native SHA256 helper self-test failed: "+exe);
++  }catch(e){if(isFatalHashError(e)||e.rhHelperUnavailable)throw e;helperUnavailableError(e.message);}
+ }
+ function useHasher(exe,exeSHA,source,input,state,receipt) {
+   helperCacheState=state;
+@@ -379,23 +459,28 @@
+   }
+   var source=root+"\\tools\\NativeSha256.cs",input;
+   try{input=hasherInput(source,csc);}
+-  catch(inputError){if(strict)throw inputError;log("BATCH_HASH_FALLBACK="+inputError.message);return null;}
++  catch(inputError){if(strict||isFatalHashError(inputError))throw inputError;log("BATCH_HASH_FALLBACK="+inputError.message);return null;}
+   var parent=shortCacheGroup("hashers",input.key),entries=subfolders(parent).reverse();
+   for(i=0;i<entries.length;i++){
+-    var folder=entries[i];if(/\.pending$/.test(folder)||!exists(folder+"\\receipt.txt"))continue;
++    var folder=entries[i],selfTestStarted=false;if(/\.pending$/.test(folder)||!exists(folder+"\\receipt.txt"))continue;
+     try{
+       var r=parseReceipt(read(folder+"\\receipt.txt")),exe=folder+"\\helper.exe";
+       if(r.SCHEMA!==HELPER_SCHEMA||r.TARGET!==TARGET||r.INPUT_SHA256!==input.key||r.SOURCE_SHA256!==input.sourceSHA||r.BUILD_PASS!=="1"||r.SELF_TEST_PASS!=="1")error("Hash-helper receipt identity or success fields do not match.");
+-      if(read(folder+"\\input.txt")!==input.manifest||fileHash(folder+"\\source.cs")!==input.sourceSHA)error("Cached hash-helper inputs do not match.");
+-      if(fileHash(exe)!==r.EXE_SHA256||fileHash(folder+"\\build.log")!==r.BUILD_LOG_SHA256||fileHash(folder+"\\selftest.log")!==r.SELF_TEST_LOG_SHA256)error("Cached hash-helper content is corrupt.");
++      var checked=freshHashSet([folder+"\\source.cs",exe,folder+"\\build.log",folder+"\\selftest.log"],"HELPER_CACHE",true);
++      if(read(folder+"\\input.txt")!==input.manifest||checked[keyPath(folder+"\\source.cs")]!==input.sourceSHA)error("Cached hash-helper inputs do not match.");
++      if(checked[keyPath(exe)]!==r.EXE_SHA256||checked[keyPath(folder+"\\build.log")]!==r.BUILD_LOG_SHA256||checked[keyPath(folder+"\\selftest.log")]!==r.SELF_TEST_LOG_SHA256)error("Cached hash-helper content is corrupt.");
+       if(trim(read(folder+"\\selftest.log"))!=="BATCH_SHA256_SELF_TEST=PASS")error("Cached hash-helper has no exact successful self-test.");
+-      selfTestHasher(exe,helpers+"\\hasher-selftest-"+runTag+".log");
++      selfTestStarted=true;selfTestHasher(exe,helpers+"\\hasher-selftest-"+runTag+".log");
+       recheckHasherInput(input);
+-      if(fileHash(exe)!==r.EXE_SHA256)error("Cached hash helper changed during validation.");
++      if(fileHash(exe)!==r.EXE_SHA256)fatalHashError("Cached hash helper changed during validation.");
+       return useHasher(exe,r.EXE_SHA256,source,input,"HIT",folder+"\\receipt.txt");
+-    }catch(cacheError){log("BATCH_HASH_HELPER_REJECTED="+folder+" : "+cacheError.message);}
+-  }
+-  var dest=parent+"\\"+compactToken("hasher"),temp=dest+".pending";
++    }catch(cacheError){
++      if(isFatalHashError(cacheError))throw cacheError;
++      if((strict&&cacheError.rhHelperUnavailable)||(selfTestStarted&&!cacheError.rhHelperUnavailable))fatalHashError(cacheError.message);
++      log("BATCH_HASH_HELPER_REJECTED="+folder+" : "+cacheError.message);
++    }
++  }
++  var dest=parent+"\\"+compactToken("hasher"),temp=dest+".pending",builtSelfTestStarted=false;
+   try{
+     requireShortPath(temp+"\\selftest.log","Hash-helper cache path");
+     if(directory(dest)||directory(temp))error("Unique hash-helper cache directory collision.");mkdir(temp);
+@@ -405,13 +490,13 @@
+     var args=["/nologo","/noconfig","/target:exe","/optimize+","/platform:anycpu",
+       "/reference:"+input.dir+"\\System.dll","/reference:"+input.dir+"\\System.Core.dll","/out:"+helper,sourceCopy];
+     log("BATCH_HASH_HELPER_BUILD=EXISTING_NET_FRAMEWORK_CSC");
+-    var rc=runToFile(csc,args,compileLog);
++    var rc=invokeNative(csc,args,compileLog);
+     if(rc!==0||!exists(helper)){
+       if(exists(compileLog))log(read(compileLog));
+       error("Native SHA256 helper compilation failed.");
+     }
+-    var helperSHA=fileHash(helper);selfTestHasher(helper,testLog);recheckHasherInput(input);
+-    if(fileHash(sourceCopy)!==input.sourceSHA||fileHash(helper)!==helperSHA)error("Hash-helper artifacts changed during validation.");
++    var helperSHA=fileHash(helper);builtSelfTestStarted=true;selfTestHasher(helper,testLog);recheckHasherInput(input);
++    if(fileHash(sourceCopy)!==input.sourceSHA||fileHash(helper)!==helperSHA)fatalHashError("Hash-helper artifacts changed during validation.");
+     write(temp+"\\input.txt",input.manifest);
+     write(temp+"\\receipt.txt","SCHEMA="+HELPER_SCHEMA+"\nTARGET="+TARGET+"\nINPUT_SHA256="+input.key+
+       "\nSOURCE_SHA256="+input.sourceSHA+"\nEXE_SHA256="+helperSHA+"\nBUILD_LOG_SHA256="+fileHash(compileLog)+
+@@ -420,11 +505,14 @@
+     return useHasher(dest+"\\helper.exe",helperSHA,source,input,"BUILT_AND_SAVED",dest+"\\receipt.txt");
+   }catch(buildError){
+     if(directory(temp)){try{fso.DeleteFolder(temp,true);}catch(ignoredCleanup){}}
++    if(isFatalHashError(buildError))throw buildError;
++    if((strict&&buildError.rhHelperUnavailable)||(builtSelfTestStarted&&!buildError.rhHelperUnavailable))fatalHashError(buildError.message);
+     if(strict)throw buildError;
+     log("BATCH_HASH_FALLBACK="+buildError.message);return null;
+   }
+ }
+-function parseBatchHashes(todo,text,token,requestSHA) {
++function parseBatchHashes(todo,text,token,requestSHA,requested) {
++  requested=requested||hashFiles;
+   var lines=String(text).split(/\r?\n/),n=todo.length,out={};
+   if(lines.length&&lines[lines.length-1]==="")lines.pop();
+   if(lines.length!==n+2)error("Batch SHA256 result has missing or extra rows.");
+@@ -433,39 +521,50 @@
+   for(var i=0;i<n;i++){
+     var pair=lines[i+1].split("|");
+     if(pair.length!==2||pair[0]!==String(i)||!/^[a-f0-9]{64}$/.test(pair[1]))error("Batch SHA256 result has a duplicate, unknown, unordered or invalid row: "+i);
+-    if(!hashFiles[todo[i]]||out.hasOwnProperty(todo[i]))error("Batch SHA256 request identity is inconsistent.");
++    if(!requested[todo[i]]||out.hasOwnProperty(todo[i]))error("Batch SHA256 request identity is inconsistent.");
+     out[todo[i]]=pair[1];
+   }
+   return out;
+ }
+-function batchHashes(todo,helper) {
+-  var token=runTag,request=helpers+"\\sha256-"+token+".request.tsv",resultFile=helpers+"\\sha256-"+token+".result.tsv",output=helpers+"\\sha256-"+token+".run.log";
+-  if(exists(request)||exists(resultFile)||exists(resultFile+".pending"))error("Unique batch hash request/result collision.");
+-  var requestRows=["RH_HILBERT_SHA256_REQUEST_V1|"+token+"|"+todo.length];
+-  for(var i=0;i<todo.length;i++){
+-    var path=hashFiles[todo[i]];
+-    if(/[\x00-\x1f|]/.test(path))error("Unsupported control character or delimiter in dependency path.");
+-    requestRows.push(i+"|"+path);
+-  }
+-  write(request,requestRows.join("\n")+"\n");var requestSHA=fileHash(request),workers=Math.min(jobs,16);
+-  log("DEPENDENCY_HASH_MODE=SHA256_CONTENT_BATCH_"+workers);
+-  log("DEPENDENCY_HASH_PROGRESS_LOG="+output);
+-  /* Redirect stdout/stderr to a file: 36,000 result rows never fill a WSH pipe. */
+-  var rc=runToFile(helper.exe,[request,resultFile,String(workers),token],output);
+-  if(exists(output)){var contents=read(output);if(contents)log(contents);}
+-  if(rc!==0)error("Native batch SHA256 helper failed; no partial hashes are accepted.");
+-  if(fileHash(helper.exe)!==helper.exeSHA||fileHash(helper.source)!==helper.sourceSHA||fileHash(request)!==requestSHA)error("Batch hash helper, source or request changed during hashing.");
+-  if(!exists(resultFile))error("Batch SHA256 helper returned without a result manifest.");
+-  var completed=parseBatchHashes(todo,read(resultFile),token,requestSHA);
+-  for(i=0;i<todo.length;i++)fileHashes[todo[i]]=completed[todo[i]];
+-  log("DEPENDENCY_HASH_PROGRESS="+todo.length+"/"+todo.length);
++function batchHashes(todo,helper,requested,purpose) {
++  requested=requested||hashFiles;purpose=purpose||"DEPENDENCIES";
++  try{
++    var token=compactToken("hash-"+(++hashBatchSerial)),request=helpers+"\\sha256-"+token+".request.tsv";
++    var resultFile=helpers+"\\sha256-"+token+".result.tsv",output=helpers+"\\sha256-"+token+".run.log";
++    requireShortPath(resultFile+".pending","Batch SHA256 request/result path");
++    if(exists(request)||exists(resultFile)||exists(resultFile+".pending"))error("Unique batch hash request/result collision.");
++    var requestRows=["RH_HILBERT_SHA256_REQUEST_V1|"+token+"|"+todo.length];
++    for(var i=0;i<todo.length;i++){
++      var path=requested[todo[i]];
++      if(!path||/[\x00-\x1f|]/.test(path))error("Unsupported or missing path in hash request.");
++      requestRows.push(i+"|"+path);
++    }
++    write(request,requestRows.join("\n")+"\n");var requestSHA=fileHash(request),workers=Math.min(jobs,16);
++    if(purpose==="DEPENDENCIES")log("DEPENDENCY_HASH_MODE=SHA256_CONTENT_BATCH_"+workers);
++    log("HASH_PROGRESS_LOG="+purpose+"|"+output);
++    /* The validated helper is reused; request/result maps are fresh for each phase. */
++    var rc=invokeNative(helper.exe,[request,resultFile,String(workers),token],output);
++    if(exists(output)){var contents=read(output);if(contents)log(contents);}
++    if(rc!==0)fatalHashError("Native batch SHA256 helper failed; no partial hashes are accepted.");
++    var guards={};guards[keyPath(helper.exe)]=helper.exe;guards[keyPath(helper.source)]=helper.source;guards[keyPath(request)]=request;
++    var checked=certutilHashSet(keys(guards),guards,"BATCH_GUARDS");
++    if(checked[keyPath(helper.exe)]!==helper.exeSHA||checked[keyPath(helper.source)]!==helper.sourceSHA||checked[keyPath(request)]!==requestSHA)fatalHashError("Batch hash helper, source or request changed during hashing.");
++    if(!exists(resultFile))fatalHashError("Batch SHA256 helper returned without a result manifest.");
++    var completed=parseBatchHashes(todo,read(resultFile),token,requestSHA,requested);
++    if(purpose==="DEPENDENCIES")log("DEPENDENCY_HASH_PROGRESS="+todo.length+"/"+todo.length);
++    return completed;
++  }catch(e){if(isFatalHashError(e))throw e;fatalHashError(e.message);}
+ }
+ function parallelHashes() {
+   var todo=keys(hashFiles),mode=trim(env("RH_HASH_MODE")||"AUTO").toUpperCase();
+   if(mode!=="AUTO"&&mode!=="CERTUTIL"&&mode!=="BATCH")error("RH_HASH_MODE must be AUTO, CERTUTIL or BATCH.");
+-  log("DEPENDENCY_CONTENT_FILES="+todo.length);log("RH_HASH_MODE="+mode);
+-  var helper=mode==="CERTUTIL"?null:prepareBatchHasher(mode==="BATCH");
+-  if(helper)batchHashes(todo,helper);else certutilHashes(todo);
++  hashBackendMode=mode;activeHasher=null;
++  log("DEPENDENCY_CONTENT_FILES="+todo.length);log("RH_HASH_MODE="+mode);log("HASH_BATCH_MIN_FILES="+HASH_BATCH_MIN_FILES);
++  activeHasher=mode==="CERTUTIL"?null:prepareBatchHasher(mode==="BATCH");
++  var paths=[];for(var i=0;i<todo.length;i++)paths.push(hashFiles[todo[i]]);
++  if(!activeHasher)log("DEPENDENCY_HASH_MODE=SHA256_CONTENT_PARALLEL_"+Math.min(jobs,16));
++  var completed=freshHashSet(paths,"DEPENDENCIES",false);
++  for(i=0;i<todo.length;i++)fileHashes[todo[i]]=completed[todo[i]];
+ }
+ function sourceClean(s, strict) {
+   /* Preserve newlines while removing nested comments and string literals. */
+@@ -538,7 +637,7 @@
+   if(visiting[name])error("Import cycle detected at "+name);
+   visiting[name]=true;
+   var rel=name.replace(/\./g,"\\"),matches=[],i;
+-  for(i=0;i<packages.length;i++)if(exists(packages[i].artifacts+"\\"+rel+".olean"))matches.push(packages[i]);
++  for(i=0;i<packages.length;i++)if(exists(packages[i].artifacts+"\\"+rel+".olean")){matches.push(packages[i]);break;}
+   if(!matches.length)error("Missing cached artifact for "+name);
+   /* The search order is exactly the LEAN_PATH order, including duplicate caches. */
+   var pkg=matches[0],src=pkg.source+"\\"+rel+".lean",ole=pkg.artifacts+"\\"+rel+".olean";
+@@ -567,11 +666,11 @@
+   compiler=norm(compiler);
+   if(!exists(compiler)||/\\\.elan\\bin\\lean\.exe$/i.test(compiler))error("Set AWPIRH_LEAN_EXE to the native Lean 4.33.0 executable, not an elan shim: "+compiler);
+   var versionFile=root+"\\lean_version.log";
+-  if(runToFile(compiler,["--version"],versionFile)!==0)error("Native Lean version command failed; see lean_version.log.");
++  if(invokeNative(compiler,["--version"],versionFile)!==0)error("Native Lean version command failed; see lean_version.log.");
+   leanVersion=trim(read(versionFile));log(leanVersion);
+   if(!/version 4\.33\.0,/.test(leanVersion))error("Expected exact native Lean 4.33.0; found "+leanVersion);
+   var prefixFile=root+"\\lean_prefix.log";
+-  if(runToFile(compiler,["--print-prefix"],prefixFile)!==0)error("Native Lean prefix query failed.");
++  if(invokeNative(compiler,["--print-prefix"],prefixFile)!==0)error("Native Lean prefix query failed.");
+   prefix=norm(trim(read(prefixFile)));
+   if(!exists(prefix+"\\lib\\lean\\Init.olean"))error("Native Lean prefix has no Init.olean: "+prefix);
+   if(env("LEAN_JOBS")){jobs=Number(env("LEAN_JOBS"));if(!(jobs>=1&&jobs<=64&&Math.floor(jobs)===jobs))error("LEAN_JOBS must be an integer from 1 to 64.");}
+@@ -842,7 +941,7 @@
+   for(var i=0;i<out.length;i++)seen[keyPath(out[i])]=true;
+   return out.concat(historicalAnchorCandidates(name,seen));
+ }
+-function readAnchorCore(name,folder) {
++function readAnchorCore(name,folder,workingOutput,scope) {
+   if(/\.pending$/.test(folder))error("Uncommitted anchoring entry.");
+   var receiptFile=folder+"\\receipt.txt";
+   if(!exists(receiptFile))error("Missing anchoring receipt.");
+@@ -850,8 +949,6 @@
+   if(r.SCHEMA!==SCHEMA&&r.SCHEMA!==LEGACY_SCHEMA)error("Unsupported anchoring schema.");
+   if(r.TARGET!==TARGET||r.MODULE!==name||r.BUILD_PASS!=="1"||r.AUDIT_PASS!=="1"||r.LEAN_VERSION!=="4.33.0")error("Anchoring target, module, version or PASS fields do not match.");
+   if(r.SOURCE_SHA256!==fileHashes[keyPath(modules[name].source)])error("Anchoring source does not match current source.");
+-  if(fileHash(folder+"\\source.lean")!==r.SOURCE_SHA256)error("Anchoring source content was changed.");
+-  if(fileHash(folder+"\\audit.log")!==r.AUDIT_LOG_SHA256)error("Anchoring audit log content was changed.");
+   var inputText=read(folder+"\\input.txt");
+   if(textHash(inputText)!==r.INPUT_SHA256)error("Anchoring input manifest hash is inconsistent.");
+   var inputFields=parseReceipt(inputText),targets=parseTargets(r.SCHEMA===LEGACY_SCHEMA?inputFields.AUDIT:r.AUDIT_TARGETS);
+@@ -862,11 +959,31 @@
+     if(!trim(lines[i]))continue;var pair=lines[i].split("|"),fn=pair[0];
+     if(pair.length!==2||!/^[A-Za-z0-9_.]+$/.test(fn)||!/^[a-f0-9]{64}$/.test(pair[1])||seen[fn])error("Invalid anchoring artifact manifest.");
+     if(!(fn===stem+".olean"||fn.indexOf(stem+".olean.")===0||fn===stem+".ir"||fn===stem+".dll"))error("Anchoring includes an artifact belonging to another module.");
+-    seen[fn]=true;if(fileHash(folder+"\\artifacts\\"+fn)!==pair[1])error("Anchoring artifact content hash mismatch.");
++    seen[fn]=true;
+     verified.push(fn);expectedHashes[fn]=pair[1];canonical+=fn+"="+pair[1]+"\n";
+   }
+   if(!seen[stem+".olean"]||textHash(canonical)!==r.ARTIFACTS_SHA256)error("Anchoring output fingerprint is inconsistent.");
+-  return {r:r,folder:folder,receipt:receiptFile,inputText:inputText,inputFields:inputFields,targets:targets,auditText:auditText,files:verified,expectedHashes:expectedHashes,artifactKey:r.ARTIFACTS_SHA256};
++  var paths=[folder+"\\source.lean",folder+"\\audit.log"],workingFiles=[],workingDigest=null;
++  for(i=0;i<verified.length;i++)paths.push(folder+"\\artifacts\\"+verified[i]);
++  /* A current-V2 restore may request one combined snapshot. Legacy validation
++     never supplies a scope, so its memoized objects cannot retain working hashes. */
++  if(r.SCHEMA===SCHEMA&&workingOutput&&scope&&scope.active&&scope.module===name&&scope.outputKey===keyPath(workingOutput)){
++    var candidates=artifactFamily(workingOutput),exact=candidates.length===verified.length;
++    for(i=0;i<candidates.length;i++)if(!expectedHashes.hasOwnProperty(fso.GetFileName(candidates[i])))exact=false;
++    if(exact){workingFiles=candidates;paths=paths.concat(workingFiles);}
++  }
++  var digests=freshHashSet(paths,"ANCHOR:"+name,false);
++  if(digests[keyPath(folder+"\\source.lean")]!==r.SOURCE_SHA256)error("Anchoring source content was changed.");
++  if(digests[keyPath(folder+"\\audit.log")]!==r.AUDIT_LOG_SHA256)error("Anchoring audit log content was changed.");
++  for(i=0;i<verified.length;i++)if(digests[keyPath(folder+"\\artifacts\\"+verified[i])]!==expectedHashes[verified[i]])error("Anchoring artifact content hash mismatch.");
++  if(workingFiles.length){
++    var workingHashes={},workingNames=[];
++    for(i=0;i<workingFiles.length;i++){
++      workingNames.push(fso.GetFileName(workingFiles[i]));workingHashes[keyPath(workingFiles[i])]=digests[keyPath(workingFiles[i])];
++    }
++    workingDigest={scope:scope,outputKey:keyPath(workingOutput),files:workingNames,digests:workingHashes,consumed:false};
++  }
++  return {r:r,folder:folder,receipt:receiptFile,inputText:inputText,inputFields:inputFields,targets:targets,auditText:auditText,files:verified,expectedHashes:expectedHashes,artifactKey:r.ARTIFACTS_SHA256,workingDigest:workingDigest};
+ }
+ function verifyLegacy(name,folder,stack) {
+   var cacheKey=keyPath(folder);if(legacyVerified[cacheKey])return legacyVerified[cacheKey];
+@@ -883,7 +1000,7 @@
+       var candidates=entryFolders(dep,parts[0]),found=false;
+       for(var j=0;j<candidates.length;j++){
+         try{var dc=verifyLegacy(dep,candidates[j],stack);if(dc.r.INPUT_SHA256===parts[0]&&dc.artifactKey===parts[1]){found=true;break;}}
+-        catch(ignoredDependency){/* A different candidate may be valid. */}
++        catch(ignoredDependency){if(isFatalHashError(ignoredDependency))throw ignoredDependency;/* A different candidate may be valid. */}
+       }
+       if(!found)error("No verified same-target legacy dependency receipt for "+dep);
+       s+=dep+"="+parts[0]+";"+parts[1]+"\n";
+@@ -892,21 +1009,31 @@
+   if(c.inputText!==s||r.INPUT_SHA256!==textHash(s))error("Legacy native compiler, flags, source, dependencies or pinned runner provenance do not match.");
+   stack[cacheKey]=false;legacyVerified[cacheKey]=c;return c;
+ }
+-function verifyCurrent(name,folder,input) {
+-  var c=readAnchorCore(name,folder),r=c.r;
++function verifyCurrent(name,folder,input,workingOutput,scope) {
++  var c=readAnchorCore(name,folder,workingOutput,scope),r=c.r;
+   if(r.SCHEMA!==SCHEMA||r.COMPILE_POLICY!==COMPILE_POLICY||r.INPUT_SHA256!==input.key||c.inputText!==input.manifest)error("Current build identity does not match.");
+   /* Only this documented policy is recognized; unknown audit formats are never imported. */
+   if(r.AUDIT_POLICY!=="RH_HILBERT_STANDARD_AXIOMS_V1")error("Unsupported prior audit policy.");
+   if(r.AUDIT_KEY!==auditKey(input.key,c.artifactKey,c.targets,r.AUDIT_POLICY))error("Prior audit identity is inconsistent.");
+   return c;
+ }
+-function workingArtifactsMatch(name,output,c) {
++function workingArtifactsMatch(name,output,c,scope) {
++  var snapshot=c.workingDigest,eligible=!!(snapshot&&!snapshot.consumed&&scope&&scope.active&&snapshot.scope===scope&&
++    scope.module===name&&scope.outputKey===keyPath(output)&&snapshot.outputKey===keyPath(output));
++  /* Consume before any early return or mutation. No subsequent call may reuse it. */
++  c.workingDigest=null;if(snapshot)snapshot.consumed=true;if(scope)scope.active=false;
+   var files=artifactFamily(output);
+   if(files.length!==c.files.length)return false;
+   for(var i=0;i<files.length;i++)if(!c.expectedHashes.hasOwnProperty(fso.GetFileName(files[i])))return false;
++  if(eligible){
++    if(snapshot.files.length!==files.length)eligible=false;
++    else for(i=0;i<files.length;i++)if(snapshot.files[i]!==fso.GetFileName(files[i]))eligible=false;
++  }
+   try{
+-    for(i=0;i<files.length;i++)if(fileHash(files[i])!==c.expectedHashes[fso.GetFileName(files[i])])return false;
+-  }catch(e){log("WORKING_ARTIFACT_RECHECK_FAILED="+name+" : "+e.message);return false;}
++    var digests=eligible?snapshot.digests:freshHashSet(files,"WORKING:"+name,false);
++    if(eligible)workingDigestConsumed++;
++    for(i=0;i<files.length;i++)if(digests[keyPath(files[i])]!==c.expectedHashes[fso.GetFileName(files[i])])return false;
++  }catch(e){if(isFatalHashError(e))throw e;log("WORKING_ARTIFACT_RECHECK_FAILED="+name+" : "+e.message);return false;}
+   return true;
+ }
+ function restoreAnchor(name,input) {
+@@ -914,31 +1041,40 @@
+   for(var phase=0;phase<2;phase++){
+     if(phase===1){anchorHistoryScans++;entries=historicalAnchorCandidates(name,seen);}
+     for(var i=0;i<entries.length;i++){
+-      var folder=entries[i],copyStarted=false;seen[keyPath(folder)]=true;
++      var folder=entries[i],copyStarted=false,scope=null;seen[keyPath(folder)]=true;
+       if(/\.pending$/.test(folder)||!exists(folder+"\\receipt.txt"))continue;
+       try{
+         var summary=parseReceipt(read(folder+"\\receipt.txt"));
+         if(summary.SOURCE_SHA256!==fileHashes[keyPath(modules[name].source)])continue;
+         if(summary.SCHEMA===SCHEMA&&summary.INPUT_SHA256!==input.key)continue;
+         var legacy=summary.SCHEMA===LEGACY_SCHEMA;
+-        var c=legacy?verifyLegacy(name,folder,{}):verifyCurrent(name,folder,input);
+         var output=work+"\\"+name.replace(/\./g,"\\")+".olean";
+-        var retained=workingArtifactsMatch(name,output,c),outputDir=fso.GetParentFolderName(output);
++        scope={module:name,outputKey:keyPath(output),active:true};
++        var c=legacy?verifyLegacy(name,folder,{}):verifyCurrent(name,folder,input,output,scope);
++        var retained=workingArtifactsMatch(name,output,c,scope),outputDir=fso.GetParentFolderName(output);
+         if(retained){workingRetained++;log("WORKING_ARTIFACTS_RETAINED="+name);}
+         else{
+           clearOutputs(name);mkdir(outputDir);copyStarted=true;
++          var destinations=[];
+           for(var j=0;j<c.files.length;j++){
+             var destination=outputDir+"\\"+c.files[j];
+             fso.CopyFile(folder+"\\artifacts\\"+c.files[j],destination,false);
+-            if(fileHash(destination)!==c.expectedHashes[c.files[j]])error("Restored working artifact does not match its verified anchoring hash.");
++            destinations.push(destination);
+           }
++          var copied=freshHashSet(destinations,"RESTORE_DESTINATIONS:"+name,false);
++          for(j=0;j<destinations.length;j++)if(copied[keyPath(destinations[j])]!==c.expectedHashes[c.files[j]])error("Restored working artifact does not match its verified anchoring hash.");
+           restoredArtifactFiles+=c.files.length;log("BUILD_ARTIFACT_RESTORED="+name);
+         }
+         var imported=keyPath(folder).indexOf(keyPath(anchorRoot)+"\\")!==0;
+         var policy=legacy?"RH_HILBERT_STANDARD_AXIOMS_V1":c.r.AUDIT_POLICY;
+         log("SOURCE_ANCHOR_RECEIPT="+c.receipt);
+         return {restored:true,retained:retained,needsAudit:policy!==AUDIT_POLICY||!coversTargets(c.targets,auditTargets[name]),legacy:legacy,imported:imported,receipt:c.receipt,folder:folder,artifactKey:c.artifactKey,auditText:c.auditText,auditLog:folder+"\\audit.log",output:output};
+-      }catch(e){if(copyStarted)clearOutputs(name);log("ANCHOR_REJECTED="+folder+" : "+e.message);}
++      }catch(e){
++        if(scope)scope.active=false;
++        if(copyStarted){try{clearOutputs(name);}catch(cleanupError){if(!isFatalHashError(e))throw cleanupError;}}
++        if(isFatalHashError(e))throw e;
++        log("ANCHOR_REJECTED="+folder+" : "+e.message);
++      }
+     }
+   }
+   return null;
+@@ -951,18 +1087,23 @@
+   var files=artifactFamily(output),manifest="",canonical="";
+   if(!exists(output))error("Compiler did not create "+output);
+   preflightAnchorPaths(parent,dest,temp,files);
++  var originalHashes=freshHashSet(files,"SAVE_ORIGINALS:"+name,false);
+   if(directory(dest)||directory(temp))error("Unique anchor directory collision.");mkdir(temp+"\\artifacts");
++  var stagedPaths=[];
+   for(var i=0;i<files.length;i++){
+-    var fileName=fso.GetFileName(files[i]),hash=fileHash(files[i]);
++    var fileName=fso.GetFileName(files[i]),hash=originalHashes[keyPath(files[i])];
+     fso.CopyFile(files[i],temp+"\\artifacts\\"+fileName,false);
+-    if(fileHash(temp+"\\artifacts\\"+fileName)!==hash)error("Anchor output copy verification failed.");
++    stagedPaths.push(temp+"\\artifacts\\"+fileName);
+     manifest+=fileName+"|"+hash+"\n";canonical+=fileName+"="+hash+"\n";
+   }
+   fso.CopyFile(modules[name].source,temp+"\\source.lean",false);fso.CopyFile(auditLog,temp+"\\audit.log",false);
+-  if(fileHash(temp+"\\source.lean")!==fileHashes[keyPath(modules[name].source)])error("Source changed during compilation; no anchor is accepted.");
++  stagedPaths.push(temp+"\\source.lean");stagedPaths.push(temp+"\\audit.log");
++  var stagedHashes=freshHashSet(stagedPaths,"SAVE_STAGED:"+name,false);
++  for(i=0;i<files.length;i++)if(stagedHashes[keyPath(temp+"\\artifacts\\"+fso.GetFileName(files[i]))]!==originalHashes[keyPath(files[i])])error("Anchor output copy verification failed.");
++  if(stagedHashes[keyPath(temp+"\\source.lean")]!==fileHashes[keyPath(modules[name].source)])error("Source changed during compilation; no anchor is accepted.");
+   checkAxioms(read(temp+"\\audit.log"),auditTargets[name]);
+   write(temp+"\\input.txt",input.manifest);write(temp+"\\artifacts.tsv",manifest);
+-  var artifactKey=textHash(canonical),auditHash=fileHash(temp+"\\audit.log");
++  var artifactKey=textHash(canonical),auditHash=stagedHashes[keyPath(temp+"\\audit.log")];
+   var receipt="SCHEMA="+SCHEMA+"\nCACHE_LAYOUT="+CACHE_LAYOUT+"\nTARGET="+TARGET+"\nLEAN_VERSION=4.33.0\nCOMPILE_POLICY="+COMPILE_POLICY+"\nMODULE="+name+"\nINPUT_SHA256="+input.key+
+     "\nSOURCE_SHA256="+fileHashes[keyPath(modules[name].source)]+"\nARTIFACTS_SHA256="+artifactKey+"\nAUDIT_LOG_SHA256="+auditHash+
+     "\nBUILD_PASS=1\nAUDIT_PASS=1\nAUDIT_POLICY="+AUDIT_POLICY+"\nAUDIT_TARGETS="+auditTargets[name].join(",")+
+@@ -983,7 +1124,7 @@
+   append(auditLogPath,"FROZEN_AUDIT="+name+"\r\n"+restored.auditText+"\r\n");
+   reused++;audited+=auditTargets[name].length;log("FROZEN_REUSE="+name);
+ }
+-function processModule(name,isFinalAudit) {
++function processModuleBody(name,isFinalAudit) {
+   var n=modules[name],i;
+   for(i=0;i<n.imports.length;i++)if(modules[n.imports[i]].local&&!moduleKeys[n.imports[i]]){
+     clearOutputs(name);buildStates[name]="BLOCKED_DEPENDENCY";blocked++;log("MODULE_BLOCKED="+name+" DEPENDENCY="+n.imports[i]);return;
+@@ -996,7 +1137,7 @@
+   requireShortPath(auditSource,"Generated audit source path");requireShortPath(auditLog,"Audit log path");
+   if(!restored){
+     log("COMPILE_START="+name);
+-    if(runToFile(compiler,["-j"+jobs,"-o",output,n.source],compileLog)!==0){log(read(compileLog));clearOutputs(name);buildStates[name]="COMPILE_FAILED";failed++;log("COMPILE_FAIL="+name);return;}
++    if(invokeNative(compiler,["-j"+jobs,"-o",output,n.source],compileLog)!==0){log(read(compileLog));clearOutputs(name);buildStates[name]="COMPILE_FAILED";failed++;log("COMPILE_FAIL="+name);return;}
+     var compileContents=read(compileLog);if(compileContents)log(compileContents);
+     if(/sorryAx/.test(compileContents))error("Compiler reported sorryAx in "+name);
+   }else{auditOnly++;log("AUDIT_ONLY_START="+name);}
+@@ -1005,7 +1146,7 @@
+     var audit="import "+name+"\n";
+     for(i=0;i<auditTargets[name].length;i++)audit+="#check "+auditTargets[name][i]+"\n#print axioms "+auditTargets[name][i]+"\n";
+     writeAscii(auditSource,audit);log("AXIOM_AUDIT_START="+name);
+-    if(runToFile(compiler,["-j"+jobs,auditSource],auditLog)!==0){log(read(auditLog));clearOutputs(name);buildStates[name]="AUDIT_COMPILE_FAILED";failed++;return;}
++    if(invokeNative(compiler,["-j"+jobs,auditSource],auditLog)!==0){log(read(auditLog));clearOutputs(name);buildStates[name]="AUDIT_COMPILE_FAILED";failed++;return;}
+   }
+   try{audited+=checkAxioms(read(auditLog),auditTargets[name]);}
+   catch(e){clearOutputs(name);buildStates[name]="AUDIT_FAILED";failed++;log("AXIOM_AUDIT_FAIL="+name+" : "+e.message);return;}
+@@ -1014,12 +1155,34 @@
+   if(restored){reused++;buildStates[name]="FROZEN_REUSED_REAUDITED";if(restored.legacy){migrated++;log("LEGACY_ANCHOR_MIGRATED="+name);}log("AUDIT_ONLY_PASS="+name);}
+   else{compiled++;buildStates[name]="COMPILED_AUDITED";log("COMPILE_AND_AXIOM_AUDIT_PASS="+name);}
+ }
++function processModule(name,isFinalAudit) {
++  var started=new Date().getTime(),outcome="ERROR";
++  try{var value=processModuleBody(name,isFinalAudit);outcome=buildStates[name]||"RETURNED";return value;}
++  finally{
++    var ms=elapsedSince(started);modulePhaseRecords.push({name:name,elapsed_ms:ms,outcome:outcome});
++    diagnosticLog("MODULE_ELAPSED_MS="+name+"|"+ms+"|"+outcome);
++  }
++}
+ function finalAudit() {
+   log("FINAL_AUDIT_START="+finalAuditRelative);processModule(finalAuditName,true);
+   if(!moduleKeys[finalAuditName])error("Final "+finalAuditRelative+" was not successfully compiled/reused and audited.");
+   log("FINAL_AUDIT_DECLARATIONS="+auditTargets[finalAuditName].length);
+ }
+ function quoteJSON(s) {return '"'+String(s).replace(/\\/g,"\\\\").replace(/"/g,'\\"').replace(/\r/g,"\\r").replace(/\n/g,"\\n").replace(/\t/g,"\\t")+'"';}
++function numericMapJSON(values) {
++  var out=[],names=keys(values);for(var i=0;i<names.length;i++)out.push(quoteJSON(names[i])+":"+values[names[i]]);
++  return "{"+out.join(",")+"}";
++}
++function phaseRecordsJSON(records) {
++  var out=[];
++  for(var i=0;i<records.length;i++){
++    var r=records[i],s="{\"name\":"+quoteJSON(r.name)+",\"elapsed_ms\":"+r.elapsed_ms+",\"outcome\":"+quoteJSON(r.outcome);
++    if(typeof r.files==="number")s+=",\"files\":"+r.files;
++    if(typeof r.backend==="string")s+=",\"backend\":"+quoteJSON(r.backend);
++    out.push(s+"}");
++  }
++  return "["+out.join(",")+"]";
++}
+ function result(pass,message) {
+   var lines=["{",'  "package": '+quoteJSON(PACKAGE)+",",'  "target": "LOCAL_COMPILER",',
+     '  "lean_version": '+quoteJSON(leanVersion)+",",'  "build": '+quoteJSON(pass?"PASS":"FAIL")+",",
+@@ -1032,6 +1195,9 @@
+     '  "compiled": '+compiled+",",'  "frozen_reused": '+reused+",",'  "audit_only": '+auditOnly+",",'  "legacy_migrated": '+migrated+",",'  "failed": '+failed+",",'  "blocked": '+blocked+",",
+     '  "runner_profile": "LOCAL_FAST_CACHED",','  "cache_validation": "FRESH_CONTENT_HASHES_SAME_TARGET_AUDIT",','  "anchor_write_layout": "COMPACT_V1",',
+     '  "working_artifact_modules_retained": '+workingRetained+",",'  "restored_artifact_files": '+restoredArtifactFiles+",",'  "anchor_history_scans": '+anchorHistoryScans+",",'  "compact_anchors_saved": '+compactAnchorsSaved+",",
++    '  "combined_working_digests_consumed": '+workingDigestConsumed+",",'  "runtime_elapsed_ms": '+elapsedSince(runtimeStarted)+",",
++    '  "logical_tool_launches": '+numericMapJSON(directLaunchCounts)+",",'  "hash_phase_totals": '+numericMapJSON(hashPhaseTotals)+",",
++    '  "stage_timings": '+phaseRecordsJSON(stagePhaseRecords)+",",'  "module_timings": '+phaseRecordsJSON(modulePhaseRecords)+",",'  "hash_timings": '+phaseRecordsJSON(hashPhaseRecords)+",",
+     '  "audited_declarations_with_module_multiplicity": '+audited+",",'  "time_utc": '+quoteJSON(stamp())+",",'  "message": '+quoteJSON(message)+",",'  "modules": {'];
+   var names=keys(buildStates);for(var i=0;i<names.length;i++)lines.push("    "+quoteJSON(names[i])+": "+quoteJSON(buildStates[names[i]])+(i+1<names.length?",":""));
+   lines.push("  }","}");write(root+"\\run-result.json",lines.join("\r\n")+"\r\n");
+@@ -1047,15 +1213,17 @@
+   log("RUNNER_LOCK_POLICY=PID_CREATION_AND_PERMANENT_QUARANTINE_V1");
+   log("RUNNER_PROFILE=LOCAL_FAST_CACHED");log("CACHE_VALIDATION=FRESH_CONTENT_HASHES_SAME_TARGET_AUDIT");log("ANCHOR_WRITE_LAYOUT=COMPACT_V1");
+   log("NETWORK=NOT_USED");log("LAKE=NOT_USED");log("PYTHON=NOT_USED");log("POWERSHELL=NOT_USED");log("WSL=NOT_USED");
+-  stage="COMPILER";selectCompiler();stage="MATHLIB_REQUIREMENTS";loadMathlibRequirements();stage="MATHLIB_CACHE";selectCache();stage="DEPENDENCY_GRAPH";loadPlan();
+-  stage="CONTENT_FINGERPRINTS";parallelHashes();makeGlobalKey();
++  timedStage("COMPILER",selectCompiler);timedStage("MATHLIB_REQUIREMENTS",loadMathlibRequirements);
++  timedStage("MATHLIB_CACHE",selectCache);timedStage("DEPENDENCY_GRAPH",loadPlan);
++  timedStage("CONTENT_FINGERPRINTS",function(){parallelHashes();makeGlobalKey();});
+   for(var mi=0;mi<ordered.length;mi++){stage="MODULE:"+ordered[mi];processModule(ordered[mi]);}
+   if(failed||blocked)error("Some modules failed or were blocked. Independent modules were still attempted.");
+-  stage="FINAL_AUDIT";finalAudit();
++  timedStage("FINAL_AUDIT",finalAudit);
+   log("AXIOM_AUDIT=PASS_STANDARD_LOGICAL_AXIOMS_ONLY");log("SORRYAX=NONE");
+   log("MATHEMATICAL_STATUS=CONDITIONAL_PARTIAL");log("ACTUAL_SPECTRAL_CALIBRATION=OPEN");log("DOMINANT_EXTRACTION=OPEN");log("UNCONDITIONAL_ACTUAL_LIMIT=NOT_CERTIFIED");log("ACTUAL_SUBEXPONENTIAL_BOUND=OPEN");log("UNCONDITIONAL_RH=NOT_ESTABLISHED");log("FINITE_ACCEPTED_WITNESS=NOT_ESTABLISHED");log("FINITE_CHECKER_EQUIVALENCE=OPEN");
+   log("COMPILED_MODULES="+compiled);log("FROZEN_REUSED_MODULES="+reused);log("AUDIT_ONLY_MODULES="+auditOnly);log("LEGACY_MIGRATED_MODULES="+migrated);log("PROJECT_BUILD=PASS");log("RUN=PASS");
+   log("WORKING_ARTIFACT_MODULES_RETAINED="+workingRetained);log("RESTORED_ARTIFACT_FILES="+restoredArtifactFiles);log("ANCHOR_HISTORY_SCANS="+anchorHistoryScans);log("COMPACT_ANCHORS_SAVED="+compactAnchorsSaved);
++  log("COMBINED_WORKING_DIGESTS_CONSUMED="+workingDigestConsumed);log("LOGICAL_TOOL_LAUNCHES="+numericMapJSON(directLaunchCounts));log("HASH_PHASE_TOTALS="+numericMapJSON(hashPhaseTotals));
+   result(true,"Exact supplied declarations compiled and passed their recorded axiom audits; theorem hypotheses remain explicit.");exitCode=0;
+ }catch(e){
+   if(lockHeld){try{log("PROJECT_BUILD=FAIL");log("FAILED_STAGE="+stage);log("REASON="+e.message);log("RUN=FAIL");result(false,e.message);}catch(ignore){WScript.Echo("RUN=FAIL : "+e.message);}}

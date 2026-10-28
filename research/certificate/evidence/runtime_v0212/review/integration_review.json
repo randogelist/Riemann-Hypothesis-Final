@@ -1,0 +1,84 @@
+{
+  "schema": "RH_HILBERT_RAM_PARALLEL_INTEGRATION_REVIEW_V1",
+  "reviewer": "analytic_source",
+  "mode": "BOUNDED_READ_ONLY_SOURCE_REVIEW",
+  "runner": {
+    "path": "/workspace/scratch/f128c1434505/output/RH_HILBERT_LIMIT_LEAN_v0_2_12_construction/tools/native_runner.js",
+    "sha256": "b11c97c591c5e200978fcfff5f37d6f6cd4b9388a464697a673174ab20c5a632"
+  },
+  "assembly_source": "/workspace/scratch/f128c1434505/tmp/ram_parallel_v0212/assemble_runtime.py",
+  "findings": [
+    {
+      "id": "RAM_COUNTER_UNINITIALIZED",
+      "severity": "BLOCKER_FOR_VALID_RESULT_JSON_WHEN_RAM_HELPER_RUNS",
+      "status": "RESOLVED_IN_FINAL_RUNNER_AND_ASSEMBLER_SOURCE",
+      "locations": [
+        "native_runner.js:48",
+        "native_runner.js:140-147",
+        "assemble_runtime.py:48"
+      ],
+      "detail": "invokeNative now categorizes ramwarm.exe as ram_warm but directLaunchCounts lacks ram_warm:0. The synchronous helper self-test increments undefined to NaN. The asynchronous launcher sees an existing property and preserves NaN; numericMapJSON serializes NaN as an unquoted JSON token.",
+      "minimal_fix": "Initialize ram_warm:0 in directLaunchCounts, or normalize any missing per-kind counter before invokeNative increments it; preserve the change in the assembler.",
+      "verified_resolution": "native_runner.js line48 initializes ram_warm:0; assemble_runtime.py lines48-49 preserve this replacement."
+    },
+    {
+      "id": "SHUTDOWN_COMPLETION_FIELD_MISSTATES_FALSE_RESULT",
+      "severity": "INCORRECT_FAILURE_METADATA",
+      "status": "RESOLVED_IN_FINAL_RUNNER_AND_ASSEMBLER_SOURCE",
+      "locations": [
+        "native_runner.js:1554-1565",
+        "native_runner.js:1876",
+        "assemble_runtime.py:67"
+      ],
+      "detail": "shutdownComplete means the drain attempt has completed and is true for the idempotent false result with live or uncertain workers. Mapping it to owned_worker_shutdown_complete reports completed worker shutdown even while the retained lock protects surviving workers.",
+      "minimal_fix": "Bind owned_worker_shutdown_complete to shutdownClean, or expose distinct shutdown_attempt_complete and shutdown_clean fields with accurate meanings.",
+      "verified_resolution": "native_runner.js line1876 binds owned_worker_shutdown_complete to shutdownClean; assemble_runtime.py line71 preserves this replacement."
+    }
+  ],
+  "bounded_checks": [
+    {
+      "area": "Hash budgets",
+      "result": "certutilHashSet and batchHashes both call resourceHashJobs; initialization precedes main startup calls."
+    },
+    {
+      "area": "Native RAM process recognition",
+      "result": "ramwarm.exe is included in assertNoLockWorkers relevant-process regex; invokeNative routing exists, with the counter-initialization finding above."
+    },
+    {
+      "area": "Ordinary and aggregate barrier",
+      "result": "processModulesParallel completes ordinary terminal states before failure/blocked gate and finalAudit. No aggregate launches on failed or blocked ordinary modules."
+    },
+    {
+      "area": "Success ordering",
+      "result": "Final audit is followed by successful WORKER_SHUTDOWN before axiom/mathematical/project/run PASS markers and successful result serialization."
+    },
+    {
+      "area": "Final RAM values",
+      "result": "ram_warm_status reads the final parallelRuntime.ramStatus; ram_warm_exit_code emits null or the actual recorded integer. Shutdown refreshes these before success or failure result writing."
+    },
+    {
+      "area": "Fatal cleanup",
+      "result": "Catch records failure; lock-held tail invokes parallelShutdown, writes failure result, and releases only if its return is true. Early failures before lock ownership do not attempt lock release."
+    },
+    {
+      "area": "Idempotent false shutdown",
+      "result": "A false pre-PASS shutdown causes failure; the tail receives the same false result without another drain and retains the lock."
+    }
+  ],
+  "execution": {
+    "source_edits": false,
+    "tests_by_this_reviewer": false,
+    "JavaScript_execution": false,
+    "Lean": false,
+    "Lake": false,
+    "native_Windows": false,
+    "CSharp": false,
+    "Wine": false,
+    "CI": false
+  },
+  "limits": "Review is restricted to requested integration sites. Portable mocks are owned by moment_induction; no native or performance result is claimed.",
+  "initial_reviewed_runner_sha256": "b9954ea4472acd35d49e063c7588f0c52108fb155b1427e88fbc4b5e2d7e3bb3",
+  "final_narrow_recheck": "Verified only the two reported fixes and exact final runner SHA256. No review expansion or execution.",
+  "remaining_findings": [],
+  "conclusion": "Both concrete integration findings are resolved in the final source; no remaining concrete issue found within the bounded requested integration scope."
+}

@@ -1,0 +1,67 @@
+{
+  "schema": "RH_V0216_USER_NATIVE_PASS_TAIL_REVIEW_V1",
+  "source": "Exact text supplied by the parent from the user message, transcribed as UTF-8 with LF and one terminal newline. No original uploaded byte file was supplied for this turn.",
+  "transcript_sha256": "06566411d1665dd1f45dc0e8876c0597e95f343c84321453a735ff75af0a568c",
+  "transcript_bytes": 671,
+  "transcript_lines": 15,
+  "package_reported_by_log_path": "RH_HILBERT_LIMIT_LEAN_v0_2_15_construction",
+  "evidence_class": "USER_REPORTED_NATIVE_SUCCESS_TAIL",
+  "reported": {
+    "formal_closure": "OPEN",
+    "compiled_modules": 5,
+    "frozen_reused_modules": 85,
+    "audit_only_modules": 0,
+    "legacy_migrated_modules": 0,
+    "project_build": "PASS",
+    "run": "PASS",
+    "working_artifact_modules_retained": 0,
+    "restored_artifact_files": 85,
+    "anchor_history_scans": 5,
+    "compact_anchors_saved": 5,
+    "combined_working_digests_consumed": 0,
+    "logical_tool_launches": {
+      "certutil": 401,
+      "csc": 0,
+      "helper": 2,
+      "lean": 11,
+      "other": 0,
+      "ram_warm": 0,
+      "total": 414
+    },
+    "hash_phase_totals": {
+      "batch_sets": 1,
+      "certutil_sets": 183,
+      "elapsed_ms": 51231,
+      "failed_sets": 0,
+      "files": 37509,
+      "sets": 184
+    }
+  },
+  "arithmetic_checks": {
+    "compiled_plus_frozen_modules": 90,
+    "matches_known_package_active_total_of_89_ordinary_plus_one_aggregate": true,
+    "logical_tool_launch_counts_sum_to_total": true,
+    "batch_plus_certutil_hash_sets_sum_to_sets": true
+  },
+  "missing_evidence": [
+    "Full build and audit logs, including the exact native compiler/version/prefix and startup flags.",
+    "Exact native source, dependency and toolchain fingerprints or matching compiler/audit receipt contents.",
+    "The identities of the five compiled modules and 85 frozen-reused modules.",
+    "Selected final aggregate and direct #print axioms outputs for its expected 370 targets.",
+    "Explicit final AXIOM_AUDIT and SORRYAX summary lines, which are not present in this excerpt.",
+    "Final shutdown/lock-release records and whole-run elapsed time."
+  ],
+  "interpretation": [
+    "The user reports PROJECT_BUILD=PASS and RUN=PASS for a path named v0.2.15. This is a successful-run observation, not a locally executed or independently source-matched certification.",
+    "The 5 compiled and 85 frozen-reused count sums to 90, matching the known active module plan including its aggregate. Counts do not identify individual modules or substitute for audit receipts.",
+    "FORMAL_CLOSURE=OPEN remains explicitly reported. No finite accepted checker witness or finite-checker equivalence is established by this tail.",
+    "The reported 51231 ms is the hash-phase elapsed aggregate; it is not whole-run wall-clock time or a measured end-to-end performance improvement.",
+    "The 11 logical Lean launches and other tool counters cannot by themselves identify invocation arguments or certify particular theorem statements.",
+    "No new axiom/declaration evidence or mathematical promotion is inferred from package naming or build counters."
+  ],
+  "native_execution_performed_here": false,
+  "new_tests_performed_here": false,
+  "mathematical_promotion": "NONE_BEYOND_USER_REPORTED_RUN_SUCCESS",
+  "mode": "A_TIER_LEAN",
+  "target": "LOCAL_COMPILER"
+}

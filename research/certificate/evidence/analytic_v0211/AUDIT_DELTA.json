@@ -1,0 +1,11 @@
+{
+  "previous_selected_root": "EquivalenceAudit.lean",
+  "new_selected_root": "AnalyticAudit.lean",
+  "previous_targets_retained": 303,
+  "new_targets": 67,
+  "total_targets": 370,
+  "new_target_inventory": "NEW_DECLARATIONS.json",
+  "old_compile_order_byte_prefix_retained": true,
+  "old_audit_targets_byte_prefix_retained": true,
+  "previous_aggregate_file_preserved_unchanged": true
+}

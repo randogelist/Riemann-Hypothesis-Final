@@ -1,0 +1,446 @@
+{
+  "schema": "RH_HILBERT_SCOPED_FRESH_HASH_NODE_REVIEW_V026",
+  "runner_sha256": "14e084bcc689b16da6ad37b38b549dda8ca3d849c2f36a969eb5c3b92c8ef4eb",
+  "baseline_runner_sha256": "00c97331f102c2415c9b884ee43ec47d969a20d1b32f2a583037bb5a6b8f7270",
+  "legacy_runner_sha256": "413a421e81441f7161af501612bf9555e4e60d588d83f162eb2fda295834d020",
+  "legacy_cmd_sha256": "3f7df94bd9fb4c8adf1c8733792c02f002f4122d681a375cf2ee6343591b6ef5",
+  "mock_host_sha256": "4028eb36105d4fb59facd32cdc0fb7502a98112cafa850e98998d7af101f0b06",
+  "helper_source_sha256": "d8cd2d616ed2b7a64931fe391bd6e25b236a1c450e5b7c669df26c2974dd9f18",
+  "method": "Node VM runs actual runner functions; in-memory filesystem and synthetic certutil/C#/compiler responses only",
+  "node_version": "v24.22.1",
+  "native_windows_execution": false,
+  "lean_execution": false,
+  "lake_execution": false,
+  "csharp_compilation_or_execution": false,
+  "ci_execution": false,
+  "native_child_processes": 0,
+  "source_edits": "Only this temporary review harness; no runner, helper, output package or Lean source edits",
+  "limitations": [
+    "No Windows Script Host, CMD quoting, native filesystem locking or native timing validation",
+    "Fault injection occurs at explicit operation boundaries; no atomic filesystem snapshot is claimed",
+    "Synthetic receipts and compiled bytes are not native PASS or Lean proof evidence"
+  ],
+  "passed": 19,
+  "failed": 0,
+  "results": [
+    {
+      "name": "fresh_batch_transport_returns_complete_isolated_map_and_unique_operations",
+      "status": "PASS",
+      "details": {
+        "operations": 2,
+        "startup_map_unchanged": true,
+        "counts": {
+          "certutil": 8,
+          "helper": 2,
+          "compiles": 0,
+          "audits": 0,
+          "copies": 0
+        },
+        "real_transport_parser_and_fileHash_executed": true
+      }
+    },
+    {
+      "name": "batch_and_forced_certutil_return_identical_fresh_hashes",
+      "status": "PASS",
+      "details": {
+        "certutil": 12,
+        "helper": 1,
+        "compiles": 0,
+        "audits": 0,
+        "copies": 0
+      }
+    },
+    {
+      "name": "auto_without_csc_uses_fresh_certutil_and_strict_batch_refuses_unavailable_helper",
+      "status": "PASS",
+      "details": {
+        "fallback_counts": {
+          "certutil": 8,
+          "helper": 0,
+          "compiles": 0,
+          "audits": 0,
+          "copies": 0
+        },
+        "strict_unavailable_rejected": true
+      }
+    },
+    {
+      "name": "helper_protocol_or_integrity_failure_is_fatal_and_never_publishes_partial_hashes",
+      "status": "PASS",
+      "details": [
+        {
+          "variant": "nonzero",
+          "fatal": true,
+          "no_partial_or_fallback": true
+        },
+        {
+          "variant": "missing_result",
+          "fatal": true,
+          "no_partial_or_fallback": true
+        },
+        {
+          "variant": "missing_footer",
+          "fatal": true,
+          "no_partial_or_fallback": true
+        },
+        {
+          "variant": "wrong_token",
+          "fatal": true,
+          "no_partial_or_fallback": true
+        },
+        {
+          "variant": "duplicate_id",
+          "fatal": true,
+          "no_partial_or_fallback": true
+        },
+        {
+          "variant": "unknown_id",
+          "fatal": true,
+          "no_partial_or_fallback": true
+        },
+        {
+          "variant": "malformed_digest",
+          "fatal": true,
+          "no_partial_or_fallback": true
+        },
+        {
+          "variant": "wrong_request_sha",
+          "fatal": true,
+          "no_partial_or_fallback": true
+        },
+        {
+          "variant": "extra_row",
+          "fatal": true,
+          "no_partial_or_fallback": true
+        },
+        {
+          "variant": "changed_request",
+          "fatal": true,
+          "no_partial_or_fallback": true
+        },
+        {
+          "variant": "changed_helper",
+          "fatal": true,
+          "no_partial_or_fallback": true
+        },
+        {
+          "variant": "changed_source",
+          "fatal": true,
+          "no_partial_or_fallback": true
+        },
+        {
+          "variant": "file_disappears_after_launch",
+          "fatal": true,
+          "no_partial_or_fallback": true
+        }
+      ]
+    },
+    {
+      "name": "warm_reuse_operation_counts_improve_on_same_five_artifact_fixture",
+      "status": "PASS",
+      "details": {
+        "synthetic_modules": 3,
+        "artifact_files_per_module": 5,
+        "observed": {
+          "baseline": {
+            "certutil": 36,
+            "helper": 0,
+            "compiles": 0,
+            "audits": 0,
+            "copies": 0
+          },
+          "candidate": {
+            "certutil": 12,
+            "helper": 3,
+            "compiles": 0,
+            "audits": 0,
+            "copies": 0
+          }
+        },
+        "native_timing_claim": false
+      }
+    },
+    {
+      "name": "current_legacy_audit_and_helper_identities_are_unchanged_without_global_pollution",
+      "status": "PASS",
+      "details": {
+        "identities": {
+          "globalKey": "963c66013a5c7cbdb6d050d162b3a9f7f2c354388f2869b00e59fd7066f44474",
+          "legacyGlobalKey": "b53943e4ab37ef9e460dd8ed0d9f4eb3aa6cc900807e75c0c84de32c518ce278",
+          "helperInputKey": "1d700f0bda93ef78a31e7c8d5f0b3203ebb2a7550db07d495990acd10a1e1783",
+          "modules": {
+            "Review.Base": {
+              "input": "9e6ae9e9932d09416646cfee576588e1e67f081f7f439c3f0fe9960cee116ef5",
+              "artifact": "8612a9583d3227c7782a4dbcb0685619ab03751636e7aafc79477236d59c07d2",
+              "audit": "dc7de189651d1a61071d5ba68e538b25e2a4c6685fbb3f8e742e69ddd73316f9"
+            },
+            "Review.Leaf": {
+              "input": "977703e082d2b752e47f968eda5f4feadc6c8b65de13f374e9c5eb7cdf3b1090",
+              "artifact": "f06d1f083c83af7230512b7d13ce6e7be473563812836d500a485b5bcabad9c6",
+              "audit": "5464fbfab187e02ad065b00b3c69e2506fe212eb7aadfae0ca4d5c86ba56fff4"
+            },
+            "Review.Independent": {
+              "input": "2b11a25f2f23d677b3f06c82a826e490e544fe34025d2031b9294f0e7e9e43d7",
+              "artifact": "993801f9030c27c08ab6ea05eb9f85feba500e8e1cd13f668f435d9e6809e2c5",
+              "audit": "0fba1868b27ed133a76b365e0bcf1ec644088870a306e3d1c4874981dd3f671b"
+            }
+          }
+        },
+        "legacy_receipt_identities": [
+          {
+            "module": "Review.Base",
+            "input": "97f51af1821b1213c75d336770fd3d8818aa70ce917a592bd3dbc12976a653cb",
+            "artifact": "3a6dc4c1d0784e69a1b810f3435142cf994aed439b68c2512ae9e800374b5b2e",
+            "targets": [
+              "Review.base"
+            ]
+          },
+          {
+            "module": "Review.Independent",
+            "input": "f3769f952a84925883a1d82465ccb57be768b35b654d5f9ceb34ad90c6f44583",
+            "artifact": "b3337634b7daa2cc5d1fb0cd125f81c236e19aeef1fce9f43d15e83ed3813319",
+            "targets": [
+              "Review.independent"
+            ]
+          },
+          {
+            "module": "Review.Leaf",
+            "input": "801d7a78c14051500f9eea7075b455b808d060ac3afadbc486d8caea54f84c9a",
+            "artifact": "e91950f2f07e9a2dbef65e42d283c05f13e2075933043627320970ca4abaf87d",
+            "targets": [
+              "Review.leaf"
+            ]
+          }
+        ],
+        "helper_paths_absent_from_global_hashFiles": true
+      }
+    },
+    {
+      "name": "corrupt_missing_or_tampered_anchor_cannot_be_bypassed_by_valid_work_or_stale_hashes",
+      "status": "PASS",
+      "details": [
+        {
+          "variant": "artifact",
+          "rejected": true
+        },
+        {
+          "variant": "missing_artifact",
+          "rejected": true
+        },
+        {
+          "variant": "source",
+          "rejected": true
+        },
+        {
+          "variant": "audit",
+          "rejected": true
+        },
+        {
+          "variant": "unclean_rehashed_audit",
+          "rejected": true
+        },
+        {
+          "variant": "wrong_target",
+          "rejected": true
+        },
+        {
+          "variant": "wrong_module",
+          "rejected": true
+        },
+        {
+          "variant": "build_pass",
+          "rejected": true
+        },
+        {
+          "variant": "audit_pass",
+          "rejected": true
+        },
+        {
+          "variant": "audit_key",
+          "rejected": true
+        }
+      ]
+    },
+    {
+      "name": "working_snapshot_is_one_use_then_changed_bytes_are_freshly_rechecked",
+      "status": "PASS",
+      "details": {
+        "second_consumption_fresh": true,
+        "counts": {
+          "certutil": 4,
+          "helper": 1,
+          "compiles": 0,
+          "audits": 0,
+          "copies": 0
+        }
+      }
+    },
+    {
+      "name": "different_scope_identity_cannot_consume_a_prior_working_snapshot",
+      "status": "PASS",
+      "details": {
+        "different_object_identity_forces_fresh_hashes": true
+      }
+    },
+    {
+      "name": "missing_changed_extra_and_renamed_working_files_restore_exact_fresh_family",
+      "status": "PASS",
+      "details": [
+        {
+          "variant": "missing",
+          "exact_restored_family": true,
+          "counts": {
+            "certutil": 8,
+            "helper": 2,
+            "compiles": 0,
+            "audits": 0,
+            "copies": 7
+          }
+        },
+        {
+          "variant": "changed",
+          "exact_restored_family": true,
+          "counts": {
+            "certutil": 8,
+            "helper": 2,
+            "compiles": 0,
+            "audits": 0,
+            "copies": 7
+          }
+        },
+        {
+          "variant": "extra",
+          "exact_restored_family": true,
+          "counts": {
+            "certutil": 8,
+            "helper": 2,
+            "compiles": 0,
+            "audits": 0,
+            "copies": 7
+          }
+        },
+        {
+          "variant": "renamed",
+          "exact_restored_family": true,
+          "counts": {
+            "certutil": 8,
+            "helper": 2,
+            "compiles": 0,
+            "audits": 0,
+            "copies": 7
+          }
+        }
+      ]
+    },
+    {
+      "name": "changed_anchor_between_validation_and_copy_and_corrupt_destination_are_rejected",
+      "status": "PASS",
+      "details": [
+        {
+          "variant": "anchor_changed_before_copy",
+          "rejected_and_partial_work_cleared": true
+        },
+        {
+          "variant": "destination_corrupted",
+          "rejected_and_partial_work_cleared": true
+        }
+      ]
+    },
+    {
+      "name": "rejected_candidate_does_not_leak_working_hashes_into_next_candidate",
+      "status": "PASS",
+      "details": {
+        "rejected_candidate_snapshot_discarded": true,
+        "second_candidate_restored": true
+      }
+    },
+    {
+      "name": "staged_copy_change_never_commits_anchor_or_module_key",
+      "status": "PASS",
+      "details": {
+        "staged_copy_mismatch_rejected": true,
+        "no_committed_receipt": true
+      }
+    },
+    {
+      "name": "operational_helper_failure_escapes_restore_and_working_broad_catches",
+      "status": "PASS",
+      "details": [
+        {
+          "where": "restore",
+          "fatal_propagated": true
+        },
+        {
+          "where": "working",
+          "fatal_propagated": true
+        }
+      ]
+    },
+    {
+      "name": "operational_helper_failure_escapes_legacy_restore_and_recursive_dependency_catches",
+      "status": "PASS",
+      "details": [
+        {
+          "where": "legacy_restore",
+          "fatal_propagated": true
+        },
+        {
+          "where": "legacy_dependency_recursion",
+          "fatal_propagated": true
+        }
+      ]
+    },
+    {
+      "name": "audit_only_refresh_still_reuses_objects_then_reuses_refreshed_receipt",
+      "status": "PASS",
+      "details": {
+        "refresh": {
+          "certutil": 21,
+          "helper": 4,
+          "compiles": 0,
+          "audits": 1,
+          "copies": 7
+        },
+        "subsequent_warm": {
+          "certutil": 12,
+          "helper": 3,
+          "compiles": 0,
+          "audits": 0,
+          "copies": 0
+        }
+      }
+    },
+    {
+      "name": "next_run_never_reuses_previous_working_hash_snapshot",
+      "status": "PASS",
+      "details": {
+        "previous_run_snapshot_not_used": true,
+        "counts": {
+          "certutil": 9,
+          "helper": 1,
+          "compiles": 0,
+          "audits": 0,
+          "copies": 5
+        }
+      }
+    },
+    {
+      "name": "legacy_migration_does_not_cache_working_snapshots_in_legacyVerified",
+      "status": "PASS",
+      "details": {
+        "legacy_modules_migrated": 3,
+        "no_legacy_working_snapshot": true
+      }
+    },
+    {
+      "name": "timed_result_json_preserves_success_failure_error_stage_and_compilation_identity",
+      "status": "PASS",
+      "details": {
+        "success_and_failure_json_parse": true,
+        "original_error_object_preserved": true,
+        "failed_stage_preserved": true,
+        "counters_not_in_compilation_identity": true
+      }
+    }
+  ]
+}

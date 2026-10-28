@@ -1,0 +1,5 @@
+affine_eq_iff forward direction:
+  · exact affine_injective hx
+
+Interior phase strict inequality:
+      add_lt_add_left (mul_lt_mul_of_pos_right hx (norm_pos_iff.mpr hq)) _

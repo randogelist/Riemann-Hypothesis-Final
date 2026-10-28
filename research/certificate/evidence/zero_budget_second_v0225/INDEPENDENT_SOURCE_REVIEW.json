@@ -1,0 +1,99 @@
+{
+  "review_kind": "INDEPENDENT_STATIC_MATHEMATICAL_AND_SOURCE_REVIEW",
+  "compiled": false,
+  "axiom_audit_executed": false,
+  "native_target": "LOCAL_COMPILER",
+  "current_native_audit": "PENDING",
+  "source_sha256": {
+    "RH_HilbertLimit/ZeroBudgetSecondSector.lean": "e3a809b8cf16e255288f70f9d6f27e570a365dcf2e631455e3708db28b55287f",
+    "RH_HilbertLimit/ZeroBudgetSecondMoment.lean": "396ffd69ec0ec05b70c7fd2a0324589a18298e45b27d4cc98f09d2102f730638"
+  },
+  "scope": "Second cancellation index only; full universal admissibility remains open.",
+  "blockers": [],
+  "mathematical_checks": [
+    "exp(3x)>=16x^2 for x>=1 follows from exp1>=8/3, exp(x-1)>=x, and cubing.",
+    "Theta inverse-square envelope is <=1/(6x^2); inversion gives <=x^(3/2)/6 below one.",
+    "Mellin split gives norm<=1/3 and completed zeta norm<=1/6 on the closed critical strip.",
+    "Norm s(s-1)<=5 at |im s|<=2 gives xi correction norm<=5/6 and no zero there.",
+    "Scale sector re/norm>=15/17 implies re^2>3im^2 and positive real cubic powers; inversion and positive normalization preserve this.",
+    "Unit complex canonical mass plus |im q|<=re q gives |im q|<=1-re q by nonnegative sum bounds on re+im and re-im.",
+    "The two case-split cubic polynomial inequalities hold on their respective wedges.",
+    "Exact canonical power sums transport cubic positivity and both inequalities to normalized moment two.",
+    "Existing exact row2 criterion yields variation2=1 and cancellation1=0 without an RH premise."
+  ],
+  "api_review": {
+    "status": "SOURCE_ONLY; relevant v4.33.0 API source retrieved by root and inspected; offline native cache not inspected",
+    "official_current_docs": "https://leanprover-community.github.io/mathlib4_docs/Mathlib/Analysis/SpecialFunctions/ImproperIntegrals.html",
+    "verified_current_signatures": [
+      "integrableOn_Ioi_rpow_of_lt {a c} (ha:a < -1) (hc:0<c)",
+      "integral_Ioi_rpow_of_lt {a} (ha:a < -1) {c} (hc:0<c)"
+    ],
+    "remaining_validation": "Native Lean 4.33.0 compilation and exact theorem/axiom audit are required; static review is not PASS.",
+    "pinned_source_evidence": {
+      "evidence/second_moment_v0225/pinned_mathlib/Mathlib_ImproperIntegrals.lean.txt": "1520a0e7c66371fd364c685480dd450a4b3078a1cf6e302eb790ebe0058f8c7c",
+      "evidence/second_moment_v0225/pinned_mathlib/Mathlib_ComplexBasic.lean.txt": "9c7fa21dc5fb9084746f5079e149bb6400091c121e50c72637f152228968e40e"
+    },
+    "pinned_signatures_inspected": [
+      "integrableOn_Ioi_rpow_of_lt",
+      "integral_Ioi_rpow_of_lt",
+      "Complex.hasSum_im"
+    ]
+  },
+  "universal_frontier": {
+    "exact_goal": "zeroBudgetCandidate.Admissible",
+    "equivalence_references": [
+      {
+        "file": "RH_HilbertLimit/ZeroBudgetCandidate.lean",
+        "theorem": "zeroBudgetCandidate_admissible_iff_all_cancellation_zero"
+      },
+      {
+        "file": "RH_HilbertLimit/ZeroBudgetCandidate.lean",
+        "theorem": "zeroBudgetCandidate_admissible_iff_nativeRH"
+      },
+      {
+        "file": "RH_HilbertLimit/AnalyticClosure.lean",
+        "theorem": "canonical_actual_weights_nonnegative_iff_nativeRH"
+      },
+      {
+        "file": "RH_HilbertLimit/AnalyticClosure.lean",
+        "theorem": "canonical_actual_all_variation_one_iff_nativeRH"
+      },
+      {
+        "file": "RH_HilbertLimit/AnalyticClosure.lean",
+        "theorem": "canonical_actual_subexponential_iff_nativeRH"
+      },
+      {
+        "file": "RH_HilbertLimit/ActualXi.lean",
+        "theorem": "ActualSpectralCalibration.nodes_segment_iff_nativeRH"
+      },
+      {
+        "file": "RH_HilbertLimit/Geometry.lean",
+        "theorem": "spectralRadius_eq_one_iff"
+      }
+    ],
+    "missing_premise": "No current unconditional theorem supplies all-order Bernstein positivity, zero imaginary canonical nodes, uniform cancellation propagation, or subexponential actual variation.",
+    "finite_sector_obstruction": {
+      "model": "Two generic nodes q=1/2+i*epsilon and conjugate(q), epsilon>0.",
+      "properties": "Unit complex mass, real power sums and arbitrarily narrow nonzero sector; this is not actual xi data.",
+      "failure": "Some positive integral power has negative real part, so some diagonal Bernstein weight is negative. Its ellipse radius equals 2*sqrt(1/4+epsilon^2)>1.",
+      "finite_prefix": "For every fixed finite row bound M, sufficiently small positive epsilon leaves all weights up to M positive by continuity from epsilon=0, where all are strictly positive.",
+      "conclusion": "No fixed positive-width sector, even combined with unit mass and real power sums, proves all-order nonnegative rows. This does not refute an actual-xi-specific argument or provide an actual-xi counterexample."
+    },
+    "existing_prefix_obstruction": {
+      "file": "RH_HilbertLimit/FinitePrefix.lean",
+      "theorem": "arbitrarily_long_positive_prefix",
+      "scope": "Arbitrary moment sequences only; not actual xi."
+    },
+    "sensible_uniform_obligation": "Supply a new actual-xi-specific analytic argument for subexponential actualVariation (or the exact universal cancellation successor law). Existing low-height estimates alone do not supply that argument.",
+    "local_flux_note": "For coefficient zero, nonnegative cancellation defects and the closed boundary condition force all defects zero. The local-flux interface preserves rather than discharges the universal obligation."
+  },
+  "integration_check": "Public helper renamed to ASCII zeroBudget_completedZeta0_norm_le_one_sixth; all public new names satisfy the runner ASCII audit-target pattern.",
+  "specific_integral_review": [
+    "The upper domain is Ioi 1 and x^(s.re/2-1)<=1 for s.re<=1. The integral of x^-2 is 1.",
+    "Below one, inversion changes inverse-square decay to x^(3/2); multiplication by the Mellin factor gives x^(s.re/2+1/2)<=1 for s.re>=0.",
+    "The finite-measure constant integrability proof uses simp [integrableOn_const]. The constant integral over Ioc 0 1 is 1/6.",
+    "The splitting identity uses existing MellinGrowth pattern: Ioc 0 1 union Ioi 1 equals Ioi 0, with disjoint pieces and inherited integrability.",
+    "No assumed RH, all-order positivity, or fabricated zero data enters these arguments."
+  ],
+  "specific_final_revision": "The abs-im wedge contradiction now uses mul_self_le_mul_self hre.le hlt.le; this non-strict squared bound contradicts strict square positivity and is mathematically sufficient."
+}

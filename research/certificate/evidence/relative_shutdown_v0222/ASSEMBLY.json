@@ -1,0 +1,12 @@
+{
+  "package": "RH_HILBERT_LIMIT_LEAN_v0_2_22_construction",
+  "parent_package": "RH_HILBERT_LIMIT_LEAN_v0_2_21_construction",
+  "runner_sha256": "8fc5a81e3802a52e3ec12fa2c94177a42b59b202a83b66c9609ea1356889e907",
+  "changed_lean_sources": [],
+  "lean_sources_byte_preserved": 96,
+  "active_modules": 93,
+  "audit_targets": 394,
+  "declaration_inventory_byte_preserved": 1129,
+  "new_native_or_lean_execution": false,
+  "simulated_tests": 20
+}

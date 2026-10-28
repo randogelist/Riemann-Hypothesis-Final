@@ -1,0 +1,72 @@
+{
+  "package": "RH_HILBERT_LIMIT_LEAN_v0_2_15_construction",
+  "prepared_at": "2026-10-27T21:47:56.404852+01:00",
+  "mode": "A_TIER_LEAN",
+  "target": "LOCAL_COMPILER",
+  "parent_package": "RH_HILBERT_LIMIT_LEAN_v0_2_14_construction",
+  "parent_zip_sha256": "7c54d3341572f2e63d1853cd3a1edc86095915354752886047a506c4392535e4",
+  "parent_library_file_id": "libfile_48346676be6481919f67e8f904a3bd73",
+  "parent_library_version": 16,
+  "scope": "Four proof-body repairs; all mathematical statements and functional runtime preserved",
+  "runner_sha256": "302d970e3d2ed04bfcaaeaa8fcefd15d24e4d0fe03d4dfe59095b94afa1ec680",
+  "source_changes": [
+    {
+      "path": "RH_HilbertLimit/CanonicalPowerSums.lean",
+      "before_sha256": "6dac0ba1d627eae6c5a70d0bb2dbdc52f0fa6474e3984d34a2d53feb48fb2160",
+      "after_sha256": "55e10b78e84bb2ec7cfbd693e5275f46b4ada256bda0530ccb4c0e80337e65de",
+      "declaration_headers_preserved": 27,
+      "imports_preserved": true
+    },
+    {
+      "path": "RH_HilbertLimit/SpectralPhase.lean",
+      "before_sha256": "bc21fd329ecce37ce7b4808ffa565d1b0cc7507c90cbc1965b1a540756db3a80",
+      "after_sha256": "e5d3e26af0da7eb222dac75252480975eb4fa46150ebb342a58c42ab20063db3",
+      "declaration_headers_preserved": 8,
+      "imports_preserved": true
+    }
+  ],
+  "invalidation_cone": [
+    "AnalyticAudit",
+    "RH_HilbertLimit.AnalyticClosure",
+    "RH_HilbertLimit.CanonicalPowerSums",
+    "RH_HilbertLimit.SpectralExtraction",
+    "RH_HilbertLimit.SpectralPhase"
+  ],
+  "lean_sources_total": 92,
+  "lean_sources_byte_preserved": 90,
+  "unchanged_manifest_inputs": 100,
+  "prior_evidence_files_preserved": 281,
+  "user_tail_transcript_sha256": "6f059857b09ad7d9b2f12cab72ee120f2d710624086ab17ee403ef80b006f824",
+  "assistant_lean_execution": false,
+  "assistant_native_windows_execution": false,
+  "assistant_csharp_execution": false,
+  "lake_executed": false,
+  "ci_executed": false,
+  "new_runtime_tests_run": false,
+  "native_validation": "PENDING_USER_RUN",
+  "formal_closure": "OPEN",
+  "finite_checker_equivalence": "OPEN",
+  "repair_evidence_sha256": {
+    "ASSEMBLY.json": "50d8b240991f8f9fd19b89dc820d1e7704db51e1ebb91d093729b5e084c358db",
+    "NATIVE_RUNNER_IDENTITY_DIFF.txt": "c508fca49964ec2c791fd7824c75b5ce0625d8e2fe64e933b41969cc975f2d1c",
+    "PRESERVED_PRIOR_EVIDENCE.json": "8c7c72b1ae66852246fc7d765a30504d33eb8538c99590330a0274d47448dbf2",
+    "PRESERVED_PROOF_AND_CACHE_INPUTS.json": "3c3088ce2519835616be4c6eea4d67b19b43f8cddb6557cd5c0b507967ce8580",
+    "SOURCE_CHANGES.json": "19c940369d56079e5150034e2ed08635862d357d9e414101601cf6a5f1dceced",
+    "assemble.py": "e027964b00fd70fd3d8fa1bee44b16e7ee4f8ea9b6ba5224d23e126e932d1d30",
+    "canonical/CANONICAL_DERIVATIVE_REPAIR.diff": "ace0264411717f8f9b76f5edfa486f4dcd9fe2a5584a9cfd01dbffe0be04ebac",
+    "canonical/hasDerivAt_resolvent_after.txt": "706ebe9d2d0645e99fa47398ee229ec4a9336ba25d20cd9bcaf0be22efd4179d",
+    "canonical/hasDerivAt_resolvent_before.txt": "196a374fa0e3459efb02a89e56d0b4ee5b45ba565d209db04769b403561878b5",
+    "canonical/hasDerivAt_resolvent_pow_after.txt": "32861f6fc55f3ff8bc526533de6b83cbd12bbddfc1fbbaf9f3f72b5ba82d3fc2",
+    "canonical/hasDerivAt_resolvent_pow_before.txt": "3d95790591d1123a3e0a060f1b3f061ec9065fe3635534adf10339a889b4dbe6",
+    "canonical/proof_review.json": "e9f92c02491bf2b2743787478e57a1844c830fab80ff02aa2b2d822dd39c5f19",
+    "evidence/NATIVE_TAIL_REVIEW.json": "7df9697352eca39a0fa0f10c63fe4e183e11ffbdd0ccec0f7ec20e54b8117938",
+    "evidence/RUNTIME_IDENTITY_ONLY_REVIEW.json": "1c5d4695380b68096c2f25e95ae440118a863efba14e68deded24eb1d92979f4",
+    "evidence/USER_NATIVE_TAIL.txt": "6f059857b09ad7d9b2f12cab72ee120f2d710624086ab17ee403ef80b006f824",
+    "evidence/verify_runtime_identity_only.py": "257e5d79f50715766b439aa3648c7d9dc7f9850f2e3e631e6a44f91876cbe168",
+    "phase/STATIC_REVIEW.json": "931fd249cabbff831a7864c2b85747f74ceb96a1b3d9064001d15921c0a8b58c",
+    "phase/SpectralPhase.diff": "d562f62d24d06577c00ddc9a9ea3822a2bfd70eb4f935ac6777f53e1b86c4b15",
+    "phase/after.lean.txt": "20f79fc9f88bbd56658f5441245369982ef44568d5b2fcd27895fb6ce3352a20",
+    "phase/before.lean.txt": "0103cfe1c7bba9daaefb1e5664767f971351b10118b4a2d6eaf50bf6cfd6c0f7",
+    "phase/independent_canonical_review.json": "2fa6d5c2068c6f6d71f8e40f3d6624424409e3fb8a09940bddd4deba04661f69"
+  }
+}

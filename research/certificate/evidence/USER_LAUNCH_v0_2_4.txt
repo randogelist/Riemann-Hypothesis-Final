@@ -1,0 +1,4 @@
+C:\Users\Simon\Downloads>cd /d "%USERPROFILE%\Downloads" && tar -xf "RH_HILBERT_LIMIT_LEAN_v0_2_4_construction.zip" && cmd /k call "RH_HILBERT_LIMIT_LEAN_v0_2_4_construction\run.cmd"
+Eingabefehler: Die Skriptdatei "C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_2_4_construction\RH_HILBERT_LIMIT_LEAN_v0_2_4_construction\tools\native_runner.js" wurde nicht gefunden.
+
+C:\Users\Simon\Downloads>

@@ -1,0 +1,26 @@
+{
+  "title": "v0.2.13 focused memory-admission and fresh-lock admission simulations",
+  "scope": "Node VM with simulated files, process metadata, RAM readings and clock; not native execution.",
+  "entry": "focused_review.js",
+  "command_from_any_directory": "node \"PATH_TO_THIS_EVIDENCE_DIRECTORY/focused_review.js\" --package-root \"PATH_TO_EXTRACTED_PACKAGE\" --report \"PATH_TO_NEW_MOCK_REPORT.json\"",
+  "required_local_dependencies": [
+    "focused_review.js",
+    "runtime_host.js",
+    "mock_host.js",
+    "candidate_sources.js",
+    "reported_case_fixture.js"
+  ],
+  "fixture_binding": "The assembled package runner must contain the exact frozen memory and admitted-relative-host snippets embedded in candidate_sources.js. No scratch directory or separate old package is needed.",
+  "COM_adaptation": "The seven WSH env(\"NAME\") property-put assignments are adapted to the mock environment setter; both new snippets contain zero such setters.",
+  "runner_entry_point": "Never evaluated. Tests invoke bounded actual functions within an in-memory host.",
+  "real_log_boundary": "The uploaded native tail remains whole-build FAIL. Reported free5479 and required10476 are authentic text evidence; synthetic total31900/reserve6380 is only one consistent test fixture.",
+  "old_suites": "The old22 scenarios were not rerun; only host support code was reused.",
+  "native_launcher": "The Windows run.cmd does not invoke Node or this optional evidence harness.",
+  "limitations": [
+    "No native Windows, WSH/COM, WMI, process-tree, C#, Lean/Lake, CI, memory mapping, or performance execution.",
+    "Compiler outputs, receipts, process identities, RAM readings, and time are simulated in memory.",
+    "Actual runner functions are used for admission, scheduling, cache acceptance, acquisition, inventory guards and shutdown; WSH host boundaries are substituted.",
+    "The fresh-admission exception records an unresolved previously admitted host; these tests do not establish a different workspace or a general ancestry proof.",
+    "The native user run remains FAIL. These tests do not certify the mathematical endpoint or finite checker equivalence."
+  ]
+}

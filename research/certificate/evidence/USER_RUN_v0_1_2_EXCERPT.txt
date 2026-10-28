@@ -1,0 +1,63 @@
+rnstein\9c328a6c1193c0008c2e804481b1b8088d0518d1cc58b625fa1e1401c0d4406c\20261027T153044Z-105463766-300803988\receipt.txt
+COMPILE_AND_AXIOM_AUDIT_PASS=RH_HilbertLimit.Bernstein
+COMPILE_START=RH_HilbertLimit.Growth
+C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_1_2_construction\RH_HilbertLimit\Growth.lean:91:23: warning: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_1_2_construction\RH_HilbertLimit\Growth.lean:91:23: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_1_2_construction\RH_HilbertLimit\Growth.lean:163:42: warning: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_1_2_construction\RH_HilbertLimit\Growth.lean:163:42: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_1_2_construction\RH_HilbertLimit\Growth.lean:227:25: warning: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_1_2_construction\RH_HilbertLimit\Growth.lean:227:25: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+
+AXIOM_AUDIT_START=RH_HilbertLimit.Growth
+ANCHOR_SAVED=C:\Users\Simon\AppData\Local\LEAN_ANCHORINGS\RH_HILBERT_LIMIT\LOCAL_COMPILER\lean-4.33.0\RH_HilbertLimit.Growth\b9f8281bd16888ba0a5e616468789782b445ceae0e6c48bfa2548d9970a898b1\20261027T153044Z-105463766-976130076\receipt.txt
+COMPILE_AND_AXIOM_AUDIT_PASS=RH_HilbertLimit.Growth
+COMPILE_START=RH_HilbertLimit.Geometry
+C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_1_2_construction\RH_HilbertLimit\Geometry.lean:56:16: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+
+AXIOM_AUDIT_START=RH_HilbertLimit.Geometry
+ANCHOR_SAVED=C:\Users\Simon\AppData\Local\LEAN_ANCHORINGS\RH_HILBERT_LIMIT\LOCAL_COMPILER\lean-4.33.0\RH_HilbertLimit.Geometry\7c1cbeaeb1fd5b82ce5915bddf67414cd22331866ae1a2f34cce3ded8cbebc26\20261027T153044Z-105463766-999097390\receipt.txt
+COMPILE_AND_AXIOM_AUDIT_PASS=RH_HilbertLimit.Geometry
+COMPILE_START=RH_HilbertLimit.ActualXi
+C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_1_2_construction\RH_HilbertLimit\ActualXi.lean:49:12: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_1_2_construction\RH_HilbertLimit\ActualXi.lean:49:12: warning: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_1_2_construction\RH_HilbertLimit\ActualXi.lean:145:16: error(lean.unknownIdentifier): Unknown identifier `D.moment_real`
+
+COMPILE_FAIL=RH_HilbertLimit.ActualXi
+MODULE_BLOCKED=RH_HilbertLimit.Spectral DEPENDENCY=RH_HilbertLimit.ActualXi
+COMPILE_START=RH_HilbertLimit.Vandermonde
+C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_1_2_construction\RH_HilbertLimit\Vandermonde.lean:155:40: warning: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_1_2_construction\RH_HilbertLimit\Vandermonde.lean:155:40: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+
+AXIOM_AUDIT_START=RH_HilbertLimit.Vandermonde
+ANCHOR_SAVED=C:\Users\Simon\AppData\Local\LEAN_ANCHORINGS\RH_HILBERT_LIMIT\LOCAL_COMPILER\lean-4.33.0\RH_HilbertLimit.Vandermonde\4c3c97c66c098390baa7ca6a42c10f03fd4f5746f5ac386573082534ea065e32\20261027T153044Z-105463766-961497305\receipt.txt
+COMPILE_AND_AXIOM_AUDIT_PASS=RH_HilbertLimit.Vandermonde
+MODULE_BLOCKED=RH_HilbertLimit.Main DEPENDENCY=RH_HilbertLimit.Spectral
+PROJECT_BUILD=FAIL
+FAILED_STAGE=MODULE:RH_HilbertLimit.Main
+REASON=Some modules failed or were blocked. Independent modules were still attempted.
+RUN=FAIL
+Logs: C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_1_2_construction\run-build.log and C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_1_2_construction\run-audit.log
+
+C:\Users\Simon\Downloads>

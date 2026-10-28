@@ -1,0 +1,28 @@
+PACKAGE=v0.2.18 construction
+MODE=A_TIER_LEAN
+TARGET=LOCAL_COMPILER
+
+1. Compile and axiom-audit the three new ordinary Lean modules and the new
+   CancellationAudit on the user's native Windows Lean 4.33.0 compiler.
+   No local Lean/Lake/compiler/CI execution was performed during preparation.
+
+2. The new forward theorem assumes existence of a CancellationBudget satisfying
+   its explicit universal admissibility predicate. The record has two natural
+   fields. No all-order proof is hidden as a record field and no Bool checker
+   is supplied for the predicate.
+
+3. Derive the actual-theta invariant/forcing bound needed to turn a finite
+   arithmetic certificate into this universal cancellation budget. The local
+   telescoping adapter is proved conditionally on its displayed local and
+   boundary inequalities; these are still semantic all-order hypotheses.
+
+4. Implement a terminating finite raw checker and prove its actual-source
+   soundness. Prove completeness separately for the full equivalence:
+      (exists W : FiniteWitness, check W = true) iff RiemannHypothesis.
+   No accepted witness needs to be obtained to prove soundness/equivalence.
+
+5. Actual subexponential growth, an unconditional admissible budget, a concrete
+   accepted finite witness and unconditional RH are not established.
+
+6. Existing native source/dependency/toolchain/artifact/audit cache requirements
+   and safe worker-lock policy remain in effect. Other workspaces are untouched.

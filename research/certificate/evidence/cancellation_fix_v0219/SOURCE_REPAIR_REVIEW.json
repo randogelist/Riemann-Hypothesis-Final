@@ -1,0 +1,17 @@
+{
+  "schema": "RH_HILBERT_V0219_CANCELLATION_REPAIR_SOURCE_REVIEW_V1",
+  "status": "SOURCE_REVIEW_ONLY_NATIVE_COMPILATION_PENDING",
+  "source": "RH_HilbertLimit/Cancellation.lean",
+  "old_source_sha256": "53c9c4ab1733ec4f20190826dcb74d47b18dcd1942b78bb06b319178419311c6",
+  "new_source_sha256": "985602ead4c4b3581b6aef194a36da6ca1f78defbeaaadf328e0cf97749b9528",
+  "declaration": "RH_HilbertLimit.rowCancellation_le_of_local_flux",
+  "repair": "EXPLICIT_ROWVARIATION_UNFOLD_BEFORE_FINITE_SUM_AND_TELESCOPING_REWRITES",
+  "remaining_goal": "The right-hand rowVariation definition is exactly the left-hand finite sum shown by the user.",
+  "subsequent_step": "hboundary implies H (n + 1) - H 0 <= 0; existing linarith needs no additional hypothesis on K.",
+  "reviewed_independently_by": "/root/proof_repair",
+  "theorem_statement_definitions_and_assumptions": "UNCHANGED",
+  "previous_static_review": "HISTORICAL_ONLY; V0218_NATIVE_COMPILATION_EXPOSED_THIS_MISSING_UNFOLD",
+  "lean_execution": false,
+  "native_compilation": false,
+  "axiom_audit_execution": false
+}

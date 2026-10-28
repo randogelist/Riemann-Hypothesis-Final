@@ -1,0 +1,294 @@
+--- RH_HILBERT_LIMIT_LEAN_v0_2_9_construction/tools/native_runner.js
++++ RH_HILBERT_LIMIT_LEAN_v0_2_10_construction/tools/native_runner.js
+@@ -5,8 +5,8 @@
+ var shell = new ActiveXObject("WScript.Shell");
+ var env = shell.Environment("PROCESS");
+ var root = fso.GetAbsolutePathName(".");
+-var PACKAGE = "RH_HILBERT_LIMIT_LEAN_v0_2_9_construction";
+-var RUNNER_VERSION = "RH_HILBERT_NATIVE_RUNNER_v0_2_9";
++var PACKAGE = "RH_HILBERT_LIMIT_LEAN_v0_2_10_construction";
++var RUNNER_VERSION = "RH_HILBERT_NATIVE_RUNNER_v0_2_10";
+ var SCHEMA = "RH_HILBERT_LOCAL_ANCHOR_V2";
+ var CACHE_LAYOUT = "COMPACT_V1";
+ var HELPER_SCHEMA = "RH_HILBERT_SHA256_HELPER_CACHE_V1";
+@@ -32,7 +32,8 @@
+ var hashFiles = {}, fileHashes = {}, moduleKeys = {}, buildStates = {};
+ var artifactHashes = {}, dependencyKeys = {}, globalKey = "";
+ var legacyGlobalKey = "", provenance = {}, anchorRoots = [], requiredMathlib = [];
+-var externalDirectoryFiles = {}, legacyVerified = {};
++var externalDirectoryFiles = {}, externalDirectoryFamilies = {}, externalPackageLocks = {}, legacyVerified = {};
++var dependencyGraphState = null;
+ var compiled = 0, reused = 0, failed = 0, blocked = 0, audited = 0, auditOnly = 0, migrated = 0;
+ var workingRetained = 0, restoredArtifactFiles = 0, anchorHistoryScans = 0, compactAnchorsSaved = 0;
+ var anchorSerial = 0;
+@@ -119,6 +120,7 @@
+ function diagnosticLog(s) { try{log(s);}catch(ignoredTimingLog){try{WScript.Echo(s);}catch(ignoredEcho){}} }
+ function timedStage(name,action) {
+   stage=name;var start=new Date().getTime(),outcome="ERROR";
++  diagnosticLog("STAGE_START="+name);
+   try{var value=action();outcome="RETURNED";return value;}
+   finally{var ms=elapsedSince(start);stagePhaseRecords.push({name:name,elapsed_ms:ms,outcome:outcome});diagnosticLog("STAGE_ELAPSED_MS="+name+"|"+ms+"|"+outcome);}
+ }
+@@ -339,8 +341,31 @@
+   }
+   var out="";for(i=0;i<8;i++)out+=("00000000"+(H[i]>>>0).toString(16)).slice(-8);return out;
+ }
++function isCertutilInvalidFileError(output,code) {
++  if(typeof code!=="number"||!isFinite(code)||code===0)return false;
++  if(code===1006||(code>>>0)===0x800703ee)return true;
++  return /(?:^|\r?\n)CertUtil:[^\r\n]*\b0x800703ee\b[^\r\n]*\(\s*WIN32:\s*1006\s+ERROR_FILE_INVALID\s*\)/i.test(String(output));
++}
++function verifiedEmptyFileHash(path) {
++  /* Metadata is only a prefilter. Load actual bytes into a fresh binary
++     stream; neither decoded text nor a file-size record establishes emptiness. */
++  if(Number(fso.GetFile(path).Size)!==0)return "";
++  var stream=new ActiveXObject("ADODB.Stream"),opened=false;
++  try{
++    stream.Type=1;stream.Open();opened=true;stream.LoadFromFile(path);
++    if(Number(stream.Size)!==0||Number(stream.Position)!==0||stream.EOS!==true)return "";
++  }finally{if(opened)stream.Close();}
++  if(Number(fso.GetFile(path).Size)!==0)error("File changed while verifying an empty SHA256 input: "+path);
++  diagnosticLog("SHA256_EMPTY_FILE_VERIFIED="+path+"|BYTES=0|BACKEND=ADODB_BINARY");
++  return textHash("");
++}
+ function hashOutput(output, code, path) {
+-  if(code!==0) error("SHA256 command failed for " + path + " : " + output);
++  if(code!==0){
++    if(isCertutilInvalidFileError(output,code)){
++      var emptySHA=verifiedEmptyFileHash(path);if(emptySHA!=="")return emptySHA;
++    }
++    error("SHA256 command failed for " + path + " : " + output);
++  }
+   var lines=output.split(/\r?\n/), found=[];
+   for(var i=0;i<lines.length;i++) {var x=lines[i].replace(/\s/g,"");if(/^[a-fA-F0-9]{64}$/.test(x))found.push(x.toLowerCase());}
+   if(found.length!==1)error("Unrecognized certutil SHA256 result for " + path);
+@@ -354,7 +379,7 @@
+     return hashOutput(output,proc.ExitCode,path);
+   }catch(e){if(isFatalHashError(e))throw e;fatalHashError(e.message);}
+ }
+-function requestHash(path) { hashFiles[keyPath(path)]=norm(path); }
++function requestHash(path) { var normalized=norm(path);hashFiles[normalized.toLowerCase()]=normalized; }
+ function launchCertutil(path) {
+   directLaunchCounts.certutil++;directLaunchCounts.total++;
+   return shell.Exec(quote(certutil)+" -hashfile "+quote(path)+" SHA256");
+@@ -595,22 +620,104 @@
+   if(strict!==false && (depth||inString))error("Unclosed comment or string in Lean source scan.");
+   return out;
+ }
++function beginDependencyGraph() {
++  /* These indexes belong only to this graph walk. No source text or digest is
++     reused from the earlier requirements check or from any previous run. */
++  externalDirectoryFiles={};externalDirectoryFamilies={};externalPackageLocks={};
++  var now=new Date().getTime();
++  dependencyGraphState={active:true,started:now,lastProgress:now,local_modules:0,external_modules:0,
++    source_files:0,source_chars:0,import_prefix_chars:0,strict_scan_chars:0,
++    artifact_directories:0,artifact_entries:0,package_lock_sets:0,current_module:""};
++  dependencyGraphProgress("START",true);
++}
++function dependencyGraphProgress(status,force) {
++  var g=dependencyGraphState;if(!g||!g.active)return;
++  var now=new Date().getTime();if(!force&&now-g.lastProgress<5000)return;g.lastProgress=now;
++  diagnosticLog("DEPENDENCY_GRAPH_PROGRESS="+status+"|elapsed_ms="+Math.max(0,now-g.started)+
++    "|local_modules="+g.local_modules+"|external_modules="+g.external_modules+
++    "|source_files="+g.source_files+"|source_chars="+g.source_chars+
++    "|import_prefix_chars="+g.import_prefix_chars+"|strict_scan_chars="+g.strict_scan_chars+
++    "|artifact_directories="+g.artifact_directories+"|artifact_entries="+g.artifact_entries+
++    "|package_lock_sets="+g.package_lock_sets+"|current_module="+g.current_module);
++}
++function graphSourceRead(text,strict) {
++  var g=dependencyGraphState;if(!g||!g.active)return;
++  g.source_files++;g.source_chars+=text.length;if(strict)g.strict_scan_chars+=text.length;
++  dependencyGraphProgress("RUNNING",false);
++}
++function graphImportScan(chars) {
++  var g=dependencyGraphState;if(!g||!g.active)return;
++  g.import_prefix_chars+=chars;dependencyGraphProgress("RUNNING",false);
++}
++function graphModuleStart(name) {
++  var g=dependencyGraphState;if(!g||!g.active)return;
++  g.current_module=name;dependencyGraphProgress("RUNNING",false);
++}
++function graphModuleAdded(local) {
++  var g=dependencyGraphState;if(!g||!g.active)return;
++  if(local)g.local_modules++;else g.external_modules++;
++}
++function importHeaderLine(header,line) {
++  line=trim(line);if(!line)return true;
++  if(line==="prelude"){header.prelude=true;return true;}
++  if(line==="module")return true;
++  var match=/^(?:(?:public|private|meta)\s+)*import\s+(.+)$/.exec(line);
++  if(!match){if(/\bimport\b/.test(line))error("Unsupported import header in "+header.source+": "+line);return false;}
++  var items=trim(match[1]).split(/\s+/);
++  for(var j=0;j<items.length;j++){
++    if(items[j]==="all")continue;
++    if(!/^[A-Za-z_][A-Za-z0-9_'.]*$/.test(items[j]))error("Unsupported import name in "+header.source+": "+items[j]);
++    header.imports.push(items[j]);
++  }
++  return true;
++}
++function finishImportHeader(header,scannedChars) {
++  if(!header.prelude)header.imports.unshift("Init");
++  return {imports:unique(header.imports),scannedChars:scannedChars};
++}
++function scanCleanImportHeader(source,clean) {
++  var header={source:source,imports:[],prelude:false},start=0,consumed=0;
++  while(true){
++    var end=clean.indexOf("\n",start),next=end<0?clean.length:end+1;
++    consumed=next;
++    if(!importHeaderLine(header,clean.slice(start,end<0?clean.length:end))||end<0)break;
++    start=next;
++  }
++  return finishImportHeader(header,consumed);
++}
++function scanImportHeader(source,text) {
++  /* Match sourceClean(text,false) exactly through the first substantive cleaned
++     nonheader line, including its escaped-newline behavior. The unread body
++     cannot affect the old header parser, and no full-source scan is skipped
++     for project proof sources (those use strict sourceClean separately). */
++  var header={source:source,imports:[],prelude:false},line="",depth=0,inString=false,i=0,stopped=false;
++  while(i<text.length){
++    var a=text.charAt(i),b=text.charAt(i+1),emitted;
++    if(depth){
++      if(a==="/"&&b==="-"){depth++;emitted="  ";i+=2;}
++      else if(a==="-"&&b==="/"){depth--;emitted="  ";i+=2;}
++      else{emitted=a==="\n"?"\n":" ";i++;}
++    }else if(inString){
++      if(a==="\\"){emitted="  ";i+=2;}
++      else{if(a==='"')inString=false;emitted=a==="\n"?"\n":" ";i++;}
++    }else if(a==="/"&&b==="-"){depth=1;emitted="  ";i+=2;}
++    else if(a==="-"&&b==="-"){
++      while(i<text.length&&text.charAt(i)!=="\n"){line+=" ";i++;}continue;
++    }else if(a==='"'){inString=true;emitted=" ";i++;}
++    else{emitted=a;i++;}
++    if(emitted==="\n"){
++      if(!importHeaderLine(header,line)){stopped=true;break;}line="";
++    }else line+=emitted;
++  }
++  if(!stopped)importHeaderLine(header,line);
++  return finishImportHeader(header,Math.min(i,text.length));
++}
++function importsFromClean(source,clean) {
++  var parsed=scanCleanImportHeader(source,clean);graphImportScan(parsed.scannedChars);return parsed.imports;
++}
+ function importsOf(source) {
+-  var lines=sourceClean(read(source),false).split(/\r?\n/),imports=[],prelude=false;
+-  for(var i=0;i<lines.length;i++){
+-    var line=trim(lines[i]);if(!line)continue;
+-    if(line==="prelude"){prelude=true;continue;}
+-    if(line==="module")continue;
+-    var match=/^(?:(?:public|private|meta)\s+)*import\s+(.+)$/.exec(line);
+-    if(!match){if(/\bimport\b/.test(line))error("Unsupported import header in "+source+": "+line);break;}
+-    var items=trim(match[1]).split(/\s+/);
+-    for(var j=0;j<items.length;j++){
+-      if(items[j]==="all")continue;
+-      if(!/^[A-Za-z_][A-Za-z0-9_'.]*$/.test(items[j]))error("Unsupported import name in "+source+": "+items[j]);
+-      imports.push(items[j]);
+-    }
+-  }
+-  if(!prelude)imports.unshift("Init");return unique(imports);
++  var text=read(source);graphSourceRead(text,false);
++  var parsed=scanImportHeader(source,text);graphImportScan(parsed.scannedChars);return parsed.imports;
+ }
+ function listFiles(folder) {
+   var out=[];if(!directory(folder))return out;
+@@ -641,16 +748,34 @@
+ function artifactFamily(base) {
+   return artifactsFromList(base,listFiles(fso.GetParentFolderName(base)));
+ }
++function indexArtifactFamilies(files) {
++  var families={};
++  function add(stem,path){var key="$"+stem;if(!families[key])families[key]=[];families[key].push(path);}
++  for(var i=0;i<files.length;i++){
++    var path=files[i],name=fso.GetFileName(path);
++    if(name.slice(-6)===".olean")add(name.slice(0,-6),path);
++    for(var at=name.indexOf(".olean.");at>=0;at=name.indexOf(".olean.",at+1))add(name.slice(0,at),path);
++    if(name.slice(-3)===".ir")add(name.slice(0,-3),path);
++    if(name.slice(-4)===".dll")add(name.slice(0,-4),path);
++  }
++  return families;
++}
+ function externalArtifactFamily(base) {
+-  /* Cache enumeration only within this run and only for read-only dependency directories. */
++  /* Enumerate and classify only once per graph walk, only in read-only
++     dependency directories. Mutable working artifactFamily stays uncached. */
+   var folder=fso.GetParentFolderName(base),key=keyPath(folder);
+-  if(!externalDirectoryFiles[key])externalDirectoryFiles[key]=listFiles(folder);
+-  return artifactsFromList(base,externalDirectoryFiles[key]);
++  if(!externalDirectoryFiles[key]){
++    var files=listFiles(folder);externalDirectoryFiles[key]=files;
++    externalDirectoryFamilies[key]=indexArtifactFamilies(files);
++    if(dependencyGraphState&&dependencyGraphState.active){dependencyGraphState.artifact_directories++;dependencyGraphState.artifact_entries+=files.length;}
++  }
++  var family=externalDirectoryFamilies[key]["$"+fso.GetBaseName(base)];return family?family.slice():[];
+ }
+ function externalModule(name, visiting) {
+   if(modules[name])return;
+   if(visiting[name])error("Import cycle detected at "+name);
+   visiting[name]=true;
++  graphModuleStart(name);
+   var rel=name.replace(/\./g,"\\"),matches=[],i;
+   for(i=0;i<packages.length;i++)if(exists(packages[i].artifacts+"\\"+rel+".olean")){matches.push(packages[i]);break;}
+   if(!matches.length)error("Missing cached artifact for "+name);
+@@ -659,9 +784,13 @@
+   if(!exists(src))error("Source needed to fingerprint cached dependency imports is missing: "+src);
+   var deps=importsOf(src),artifacts=externalArtifactFamily(ole);
+   var node={name:name,local:false,source:src,imports:deps,artifacts:artifacts,package:pkg};
+-  modules[name]=node;requestHash(src);
++  modules[name]=node;graphModuleAdded(false);requestHash(src);
+   for(i=0;i<artifacts.length;i++)requestHash(artifacts[i]);
+-  for(i=0;i<pkg.locks.length;i++)requestHash(pkg.locks[i]);
++  var lockKey="$"+pkg.id;
++  if(!externalPackageLocks[lockKey]){
++    for(i=0;i<pkg.locks.length;i++)requestHash(pkg.locks[i]);externalPackageLocks[lockKey]=true;
++    if(dependencyGraphState&&dependencyGraphState.active)dependencyGraphState.package_lock_sets++;
++  }
+   for(i=0;i<deps.length;i++)externalModule(deps[i],visiting);
+   visiting[name]=false;
+ }
+@@ -772,6 +901,8 @@
+   log("PROJECT_CACHE_REUSE=VERIFIED_SAME_TARGET_SOURCE_DEPENDENCIES_TOOLCHAIN_AND_AUDIT");
+ }
+ function loadPlan() {
++  beginDependencyGraph();var graphComplete=false;
++  try{
+   var plan=root+"\\compile-order.txt",targets=root+"\\audit-targets.tsv",i,j;
+   if(!exists(plan)||!exists(targets)||!exists(finalAuditSource))error("compile-order.txt, audit-targets.tsv, and the selected final audit source are required.");
+   var lines=read(plan).split(/\r?\n/),seen={};
+@@ -782,9 +913,10 @@
+     var name=rel.slice(0,-5).replace(/\\/g,".");
+     if(seen[name])error("Duplicate module in compile-order: "+name);seen[name]=true;
+     var src=root+"\\"+rel;if(!exists(src))error("Missing local module source: "+rel);
+-    var clean=sourceClean(read(src));
++    graphModuleStart(name);var sourceText=read(src);graphSourceRead(sourceText,true);
++    var clean=sourceClean(sourceText);
+     if(/\b(?:sorry|admit|axiom)\b/.test(clean)||/debug\.skipKernel/.test(clean))error("Prohibited proof placeholder or kernel bypass in "+rel);
+-    modules[name]={name:name,local:true,source:src,relative:rel,imports:importsOf(src)};
++    modules[name]={name:name,local:true,source:src,relative:rel,imports:importsFromClean(src,clean)};graphModuleAdded(true);
+     ordered.push(name);requestHash(src);
+   }
+   if(!ordered.length)error("Empty compile-order.txt.");
+@@ -808,11 +940,12 @@
+     }
+     seen[n.name]=true;
+   }
+-  var auditClean=sourceClean(read(finalAuditSource));
++  graphModuleStart(finalAuditName);var auditText=read(finalAuditSource);graphSourceRead(auditText,true);
++  var auditClean=sourceClean(auditText);
+   if(/\b(?:sorry|admit|axiom)\b/.test(auditClean)||/debug\.skipKernel/.test(auditClean))error("Prohibited proof placeholder or kernel bypass in "+finalAuditRelative);
+-  var auditImports=importsOf(finalAuditSource);
++  var auditImports=importsFromClean(finalAuditSource,auditClean);
+   for(i=0;i<auditImports.length;i++)if(!modules[auditImports[i]])externalModule(auditImports[i],{});
+-  modules[finalAuditName]={name:finalAuditName,local:true,source:finalAuditSource,relative:finalAuditRelative,imports:auditImports};
++  modules[finalAuditName]={name:finalAuditName,local:true,source:finalAuditSource,relative:finalAuditRelative,imports:auditImports};graphModuleAdded(true);
+   auditTargets[finalAuditName]=[];
+   for(i=0;i<ordered.length;i++)auditTargets[finalAuditName]=auditTargets[finalAuditName].concat(auditTargets[ordered[i]]);
+   auditTargets[finalAuditName].sort();
+@@ -822,6 +955,8 @@
+   var dllDirs=[prefix+"\\bin",prefix+"\\lib\\lean"];
+   for(i=0;i<dllDirs.length;i++){var files=listFiles(dllDirs[i]);for(j=0;j<files.length;j++)if(/\.dll$/i.test(files[j]))requestHash(files[j]);}
+   log("PROJECT_SOURCE_SCAN=PASS");log("PROJECT_MODULES="+ordered.length);
++  graphComplete=true;
++  }finally{dependencyGraphProgress(graphComplete?"COMPLETE":"INTERRUPTED",true);if(dependencyGraphState)dependencyGraphState.active=false;}
+ }
+ function makeGlobalKey() {
+   var s=COMPILE_POLICY+"\nTARGET="+TARGET+"\nLEAN="+leanVersion+"\nFLAGS="+COMPILE_FLAGS+"\n";

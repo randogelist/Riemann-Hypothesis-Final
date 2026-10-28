@@ -1,0 +1,32 @@
+{
+  "evidence_kind": "USER_MESSAGE_UTF8_LF_TRANSCRIPTION_NOT_ORIGINAL_NATIVE_LOG_BYTES",
+  "reported_package": "RH_HILBERT_LIMIT_LEAN_v0_2_18_construction",
+  "reported_build": "FAIL",
+  "reported_run": "FAIL",
+  "visible_failed_module": "RH_HilbertLimit.Cancellation",
+  "visible_blocked_module": "RH_HilbertLimit.ActualCancellationWitness",
+  "reported_failed_stage_label": "MODULE:RH_HilbertLimit.EventualGrowth",
+  "failed_stage_interpretation": "LAST_ATTEMPTED_MODULE_LABEL; EVENTUALGROWTH_HAS_EXPLICIT_COMPILE_AND_AXIOM_AUDIT_PASS",
+  "reported_passed_module": "RH_HilbertLimit.EventualGrowth",
+  "reported_passed_module_elapsed_ms": 22161,
+  "passed_module_source_in_delivered_package_sha256": "f846d1a1b897542c460783a9ab5702ff1b713e5788fe149034d1ead5f0d178c0",
+  "passed_module_source_in_candidate_is_byte_identical": true,
+  "reported_anchor_receipt_path": "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\c6870f025216435e\\807c325eeddcdaf0dd2685bd33df9688\\01a17f5f3ea2a10b\\receipt.txt",
+  "reported_project_modules_elapsed_ms": 76267,
+  "reported_shutdown": {
+    "clear": true,
+    "attempts": 1,
+    "full_inventories": 1,
+    "exact_worker_queries": 0
+  },
+  "aggregate_module_counts": "NOT_SUPPLIED_IN_EXCERPT",
+  "final_audit": "NOT_REACHED_AFTER_PROJECT_MODULE_FAILURE",
+  "source": "evidence/cancellation_fix_v0219/USER_NATIVE_V0218_FAIL_TAIL.txt",
+  "source_sha256": "5b8022f73f1b1c4725afa2ae61c864a99d1727a6d558a884e4e9ed8c2ce033b9",
+  "first_marker": "CLIPPED_PREFIX_ED_GOALS_PRESERVED_WITHOUT_RECONSTRUCTION",
+  "direct_native_receipt_contents": "NOT_SUPPLIED; PATH_ONLY",
+  "native_source_dependency_toolchain_and_artifact_fingerprints": "NOT_SUPPLIED_IN_EXCERPT",
+  "direct_per_declaration_axiom_output": "NOT_SUPPLIED; MODULE_PASS_MARKER_ONLY",
+  "independent_native_verification": "NOT_PERFORMED",
+  "reuse_requirement": "NATIVE_RUNNER_REVALIDATES_SAME_TARGET_SOURCE_DEPENDENCIES_TOOLCHAIN_ARTIFACTS_AND_AUDIT"
+}

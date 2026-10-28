@@ -1,0 +1,117 @@
+{
+  "harness": "RH_HILBERT_CACHE_MOCK_HOST_QA_V1",
+  "runner": "tmp/runtime_opt_v026/native_runner.js",
+  "runner_sha256": "14e084bcc689b16da6ad37b38b549dda8ca3d849c2f36a969eb5c3b92c8ef4eb",
+  "native_windows_execution": false,
+  "lean_execution": false,
+  "compiler_invocations": "SYNTHETIC_JS_MOCK_ONLY",
+  "proof_certification": "NONE",
+  "passed": 25,
+  "failed": 0,
+  "results": [
+    {
+      "name": "save_restore_same_target_content_verified",
+      "outcome": "PASS_MOCK_HOST",
+      "cache_save_path_length": 157,
+      "max_generated_path": 204
+    },
+    {
+      "name": "legacy_v2_directory_layout_remains_reusable",
+      "outcome": "PASS_MOCK_HOST"
+    },
+    {
+      "name": "changed_source_never_reuses_prior_pass",
+      "outcome": "PASS_MOCK_HOST"
+    },
+    {
+      "name": "changed_dependency_never_reuses_prior_pass",
+      "outcome": "PASS_MOCK_HOST"
+    },
+    {
+      "name": "changed_native_compiler_never_reuses_prior_pass",
+      "outcome": "PASS_MOCK_HOST"
+    },
+    {
+      "name": "changed_launcher_provenance_does_not_invalidate_build",
+      "outcome": "PASS_MOCK_HOST"
+    },
+    {
+      "name": "unchanged_module_reused_from_a_different_package_directory",
+      "outcome": "PASS_MOCK_HOST"
+    },
+    {
+      "name": "changed_compile_policy_never_reuses_prior_pass",
+      "outcome": "PASS_MOCK_HOST"
+    },
+    {
+      "name": "wrong_target_receipt_rejected",
+      "outcome": "PASS_MOCK_HOST"
+    },
+    {
+      "name": "nonpassing_receipt_rejected",
+      "outcome": "PASS_MOCK_HOST"
+    },
+    {
+      "name": "corrupt_cached_artifact_rejected",
+      "outcome": "PASS_MOCK_HOST"
+    },
+    {
+      "name": "corrupt_cached_audit_log_rejected",
+      "outcome": "PASS_MOCK_HOST"
+    },
+    {
+      "name": "copied_artifact_corruption_rejected_and_removed",
+      "outcome": "PASS_MOCK_HOST"
+    },
+    {
+      "name": "expanded_audit_runs_audit_without_recompiling",
+      "outcome": "PASS_MOCK_HOST"
+    },
+    {
+      "name": "uncommitted_pending_entry_is_never_reused",
+      "outcome": "PASS_MOCK_HOST"
+    },
+    {
+      "name": "missing_receipt_is_never_reused",
+      "outcome": "PASS_MOCK_HOST"
+    },
+    {
+      "name": "missing_cached_artifact_is_safe_miss",
+      "outcome": "PASS_MOCK_HOST"
+    },
+    {
+      "name": "final_audit_module_is_persisted_and_reused",
+      "outcome": "PASS_MOCK_HOST"
+    },
+    {
+      "name": "longest_package_leaf_and_private_object_fit_windows_path",
+      "outcome": "PASS_MOCK_HOST",
+      "maximum_path_length": 232,
+      "cache_directory_length": 157
+    },
+    {
+      "name": "verified_unchanged_working_objects_are_retained_without_copy",
+      "outcome": "PASS_MOCK_HOST"
+    },
+    {
+      "name": "changed_working_objects_are_repaired_from_verified_cache",
+      "outcome": "PASS_MOCK_HOST"
+    },
+    {
+      "name": "exact_cache_hit_avoids_scanning_historical_inputs",
+      "outcome": "PASS_MOCK_HOST"
+    },
+    {
+      "name": "compact_input_prefix_collision_does_not_authorize_reuse",
+      "outcome": "PASS_MOCK_HOST"
+    },
+    {
+      "name": "working_objects_without_receipt_are_not_trusted",
+      "outcome": "PASS_MOCK_HOST"
+    },
+    {
+      "name": "valid_working_object_cannot_bypass_corrupt_anchor_evidence",
+      "outcome": "PASS_MOCK_HOST"
+    }
+  ]
+}

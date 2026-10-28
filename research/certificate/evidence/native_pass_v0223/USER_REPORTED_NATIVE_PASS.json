@@ -1,0 +1,91 @@
+{
+  "evidence_kind": "USER_MESSAGE_UTF8_LF_TRANSCRIPTION_NOT_ORIGINAL_NATIVE_LOG_BYTES",
+  "reported_package": "RH_HILBERT_LIMIT_LEAN_v0_2_22_construction",
+  "reported_build": "PASS",
+  "reported_run": "PASS",
+  "reported_final_audit": "CancellationAudit.lean",
+  "reported_final_audit_state": "FROZEN_REUSED",
+  "reported_final_audit_declarations": 394,
+  "explicitly_printed_axiom_declarations": 0,
+  "reported_axiom_audit": "PASS_STANDARD_LOGICAL_AXIOMS_ONLY",
+  "reported_sorryax": "NONE",
+  "reported_final_audit_module_elapsed_ms": 376,
+  "reported_stages_ms": {
+    "FINAL_AUDIT": 478,
+    "WORKER_SHUTDOWN": 1422
+  },
+  "reported_counts": {
+    "COMPILED_MODULES": 0,
+    "FROZEN_REUSED_MODULES": 93,
+    "AUDIT_ONLY_MODULES": 0,
+    "LEGACY_MIGRATED_MODULES": 0,
+    "WORKING_ARTIFACT_MODULES_RETAINED": 0,
+    "RESTORED_ARTIFACT_FILES": 93,
+    "ANCHOR_HISTORY_SCANS": 0,
+    "COMPACT_ANCHORS_SAVED": 0,
+    "COMBINED_WORKING_DIGESTS_CONSUMED": 0
+  },
+  "reported_logical_tool_launches": {
+    "certutil": 413,
+    "csc": 0,
+    "helper": 2,
+    "lean": 2,
+    "other": 0,
+    "ram_warm": 0,
+    "total": 417
+  },
+  "reported_hash_phase_totals": {
+    "batch_sets": 1,
+    "certutil_sets": 189,
+    "elapsed_ms": 44921,
+    "failed_sets": 0,
+    "files": 37524,
+    "sets": 190
+  },
+  "reported_shutdown": {
+    "clear": true,
+    "attempts": 1,
+    "full_inventories": 1,
+    "exact_worker_queries": 2,
+    "launch_inventory_sealed": true,
+    "launch_records": 417,
+    "snapshot_rows": 748,
+    "initial_unreadable_rows": 2,
+    "initial_unresolved_relative_runners": 0,
+    "preexisting_admitted_host_pid": 45652,
+    "absent_workers": [
+      {
+        "pid": 41244,
+        "created": "20261027234922.167689+060",
+        "name": "certutil.exe"
+      },
+      {
+        "pid": 44548,
+        "created": "20261027234922.181459+060",
+        "name": "certutil.exe"
+      }
+    ],
+    "admitted_host_termination_claimed": false,
+    "relative_runner_absence_and_second_inventory_branch_exercised": false
+  },
+  "reported_mathematical_status": "ANALYTIC_AND_SEMANTIC_CANCELLATION_AUDITED_FINITE_CHECKER_OPEN",
+  "reported_semantic_forward": "DECLARATION_AUDITED",
+  "reported_semantic_equivalence": "DECLARATION_AUDITED",
+  "reported_witness_admissibility": "UNIVERSAL_AFTER_FINITE_CUTOFF_NOT_A_BOOL_CHECK",
+  "reported_formal_closure": "OPEN",
+  "reported_finite_checker_soundness": "OPEN",
+  "reported_finite_checker_equivalence": "OPEN",
+  "reported_accepted_finite_witness": "NOT_ESTABLISHED",
+  "reported_unconditional_rh": "NOT_ESTABLISHED",
+  "reported_anchor_receipt_path": "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\dfb014b4edea4fa5\\dfdde963255fcdf198c5fc8dcb8d5ad1\\01a17f72f0e0b979\\receipt.txt",
+  "source": "evidence/native_pass_v0223/USER_NATIVE_V0222_PASS_TAIL.txt",
+  "source_sha256": "d26ae674fc97df7e732de0853c957f1e679e6d3b1b9e2f7558a3dbac4bfadbfb",
+  "source_bytes": 2446,
+  "first_marker": "BUILD_ARTIFACT_RESTORED=CancellationAudit",
+  "direct_native_receipt_contents": "NOT_SUPPLIED; PATH_ONLY",
+  "native_source_dependency_toolchain_and_artifact_fingerprints": "NOT_SUPPLIED_IN_EXCERPT",
+  "independent_native_verification": "NOT_PERFORMED",
+  "aggregate_coverage_scope": "394_SELECTED_TARGETS_REUSED_PRIOR_AUDIT; NO_FRESH_PER_DECLARATION_PRINTS_IN_THIS_TAIL",
+  "reuse_requirement": "EXACT_SAME_TARGET_SOURCE_DEPENDENCIES_TOOLCHAIN_ARTIFACTS_AND_PRIOR_AUDIT_PASS_VALIDATION",
+  "timing_scope": "REPORTED_STAGES_AND_HASH_AGGREGATES_ONLY; NO_WHOLE_RUN_WALL_TIME"
+}

@@ -1,0 +1,14 @@
+{
+  "package": "RH_HILBERT_LIMIT_LEAN_v0_2_28_SECOND_MOMENT_FIX_construction",
+  "parent": "RH_HILBERT_LIMIT_LEAN_v0_2_27_construction",
+  "prepared_at": "2026-10-28T01:21:53.139981+01:00",
+  "revision_kind": "PARTIAL_COMPILE_REPAIR_NOT_INIT",
+  "parent_zip_sha256": "f814f2ff16b98fbcfd49363b2334571e42f69573ee5a52f0de6b8ad9beda5cfe",
+  "parent_library_file_id": "libfile_0817910dca088191a7bca7550e7b6b01",
+  "parent_library_version": 1,
+  "changed_sources": {
+    "RH_HilbertLimit/ZeroBudgetSecondMoment.lean": "f751b4dffd88a2f40fc41f951abdcc9f5c75c5f73c57010859d9f4635a7c3a77"
+  },
+  "source_repair_limit": "Only two explicitly reported SecondMoment errors addressed. FiveSector error is missing.",
+  "assistant_lean_native_or_ci_execution": false
+}

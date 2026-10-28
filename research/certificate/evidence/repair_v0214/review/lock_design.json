@@ -1,0 +1,40 @@
+{
+  "schema": "RH_HILBERT_V0214_LOCK_DESIGN_REVIEW_V1",
+  "reviewer": "lock_review",
+  "baseline_runner_sha256": "f6726db78ef9b532b24e2c09092e44e1e7f855c5eb84a6873c1dc519ef13803f",
+  "input_status": "USER_PARTIAL_NATIVE_FAIL_TAIL",
+  "native_cause_established": false,
+  "recommended_change": "BOUNDED_FRESH_FULL_INVENTORY_RETRY_AT_OWNED_SHUTDOWN_ONLY",
+  "hard_wall_clock_bound_claimed": false,
+  "persistent_ambiguity_action": "PRESERVE_LOCK",
+  "process_termination_allowed": false,
+  "pid_only_exemptions_allowed": false,
+  "unknown_command_exemptions_allowed": false,
+  "original_full_worker_guard_required_each_attempt": true,
+  "stale_or_legacy_recovery_change_allowed": false,
+  "prior_v0213_retained_lock_deletion_authorized": false,
+  "proof_cache_audit_acceptance_change_allowed": false,
+  "native_execution": "NOT_RUN",
+  "lean_execution": "NOT_RUN",
+  "cases": [
+    "TRANSIENT_UNKNOWN_DISAPPEARS_AND_FULL_GUARD_PASSES",
+    "PERSISTENT_UNKNOWN_RETAINS_LOCK",
+    "REUSED_PID_WITH_UNKNOWN_COMMAND_RETAINS_LOCK",
+    "READABLE_CURRENT_ROOT_WORKER_RETAINS_LOCK",
+    "OLD_PID_GONE_NEW_BLOCKER_RETAINS_LOCK",
+    "WMI_FAILURE_RETAINS_LOCK",
+    "OWNER_CHANGED_RETAINS_LOCK",
+    "OWNED_LEAN_OR_RAM_DRAIN_STILL_REQUIRED",
+    "RELATIVE_HOST_ADMISSION_DOES_NOT_HIDE_NATIVE_CHILD",
+    "STALE_LEGACY_RECOVERY_UNCHANGED"
+  ],
+  "primary_sources": [
+    "https://learn.microsoft.com/en-us/windows/win32/cimwin32prov/win32-process",
+    "https://devblogs.microsoft.com/oldnewthing/20110107-00/?p=11803",
+    "https://learn.microsoft.com/en-us/archive/msdn-magazine/2002/may/scripting-windows-script-host-5-6-boasts-windows-xp-integration-security-new-object-model"
+  ],
+  "selected_max_attempts": 6,
+  "selected_sleep_ms": 200,
+  "maximum_scheduled_sleep_ms": 1000,
+  "exact_owner_self_and_tracked_worker_checks_each_attempt": true
+}

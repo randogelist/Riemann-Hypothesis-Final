@@ -1,0 +1,20 @@
+{
+  "normalized_execution_logic_byte_identical": true,
+  "runner_sha256": "4500afe640f4e0f0b1121a9aae087713a1f8068a44e798f330414921465c83a8",
+  "baseline_runner_sha256": "80c985862ee99b15e589c1a76ee7d6d8e28504ad6c2235e404afbc356b8459ff",
+  "changed_literals": [
+    [
+      "RH_HILBERT_LIMIT_LEAN_v0_2_27_construction",
+      "RH_HILBERT_LIMIT_LEAN_v0_2_28_SECOND_MOMENT_FIX_construction"
+    ],
+    [
+      "RH_HILBERT_NATIVE_RUNNER_v0_2_27_ZERO_BUDGET_FIRST_FIVE_FIX",
+      "RH_HILBERT_NATIVE_RUNNER_v0_2_28_SECOND_MOMENT_NO_GOALS_FIX"
+    ]
+  ],
+  "runner_entrypoint_executed": false,
+  "compiler_cache_audit_lock_shutdown_policy_changed": false,
+  "run_cmd_byte_identical": true,
+  "node_syntax_exit_code": 0,
+  "node_syntax_check_only": true
+}

@@ -1,0 +1,70 @@
+{
+  "schema": "RH_V0222_READ_ONLY_PROOF_METADATA_INTEGRATION_REVIEW_V1",
+  "status": "PASS",
+  "blockers": [],
+  "runner_sha256": "8fc5a81e3802a52e3ec12fa2c94177a42b59b202a83b66c9609ea1356889e907",
+  "baseline": "RH_HILBERT_LIMIT_LEAN_v0_2_21_construction",
+  "candidate": "RH_HILBERT_LIMIT_LEAN_v0_2_22_construction",
+  "scope": "Frozen proof sources, launcher/manifests/declarations, and evidence wording; no runtime safety certification.",
+  "lean_source_files_byte_preserved": 96,
+  "lean_source_set_sha256": "a09fa592956fe8b28cc91698326a6dba760bb42431848c9000ed3a77157bab8b",
+  "source_set_digest_encoding": "UTF-8 compact JSON object mapping sorted relative paths to SHA256, excluding evidence directory",
+  "preserved_non_lean_files": [
+    "run.cmd",
+    "compile-order.txt",
+    "audit-targets.tsv",
+    "mathlib-imports.txt",
+    "final-audit.txt",
+    "DECLARATIONS.json",
+    "lean-toolchain"
+  ],
+  "selected_audit": "CancellationAudit.lean",
+  "selected_axiom_targets": 394,
+  "semantic_endpoints": "Source-unchanged implication and equivalence (exists W : CancellationBudget, W.Admissible) with actual RH; v0.2.20 user-supplied explicit axiom audit PASS retained.",
+  "admissibility_limitation": "Explicit forall n bound after a natural cutoff; no terminating finite Bool checker or unconditionally obtained admissible witness.",
+  "latest_native_evidence": "v0.2.21 WORKER_SHUTDOWN FAIL after reused CancellationAudit; final aggregate module summary counts are null and not inferred.",
+  "current_native_execution": "NOT_RUN",
+  "finite_checker_equivalence": "OPEN",
+  "formal_closure_for_finite_checker_goal": "OPEN",
+  "focused_mock_evidence": {
+    "status": "PASS",
+    "passed": 20,
+    "failed": 0,
+    "scope": "NODE_VM_SYNTHETIC_HOST_ONLY",
+    "reviewer_reran_tests": false
+  },
+  "reviewer_execution": {
+    "lean": false,
+    "lake": false,
+    "native_runner": false,
+    "windows": false,
+    "ci": false,
+    "new_tests": false
+  },
+  "native_receipt_contents_independently_verified": false,
+  "reviewed_file_sha256": {
+    "run.cmd": "5e6c6561c370c904b13d165986f0c045c6e7732de1745744b03619cf4a4b9f16",
+    "compile-order.txt": "c9fa315ade1df77f184f323175e1ec96cf53e5b6c054ef441ba78ce4591f974b",
+    "audit-targets.tsv": "b34e9fb2e855e03ab8e68d66883a3534bdd225aa77c6e1a02d21eccbcb1c4c9a",
+    "mathlib-imports.txt": "0c2ef006a5917ffe890cf1483b524435038824c7116ca8fe49533d4d9a4da31c",
+    "final-audit.txt": "b4f96eed934280134dda30493f695a985527438f4ec6511930b68368b616fdbf",
+    "DECLARATIONS.json": "e2e0169ab779090455ded647f1f8aec26168b40befbf1d2465cb8235b19fdee3",
+    "lean-toolchain": "302cd63c54178885b89e669f33b38f12f4dd7ae7e5cac537b3203e3768d8fb2b",
+    "STATUS.json": "c0c511e93be619d10e48a8e725abd974be24c49792a26543abe99ad189768fcb",
+    "CHECKPOINT.json": "4c4e779f0f05c4b54dc6c04b163a644535023694c5806ddc852d05960acc3a28",
+    "README.md": "f2a32c42067f78f3f131bba1e238b7e00374e667538d5bf7cd804f6bc41dd31b",
+    "RH_HilbertLimit/ActualCancellationWitness.lean": "0daeeb9fab456f2d399cc95cfda2b94c55f03d2c403b92d3a18579a0a7d622d6",
+    "CancellationAudit.lean": "2da7bb304576e2a592de29e8781685b621c28ffe794a85ae65fa50e1bcdc5891",
+    "evidence/relative_shutdown_v0222/USER_REPORTED_NATIVE_FAILURE.json": "a625098d6a137ad52ac2c76cb8c887ee4aa1128a2282ed4912719195d0134282",
+    "evidence/relative_shutdown_v0222/USER_NATIVE_V0221_SHUTDOWN_FAIL_EXCERPT.txt": "da785e35f7c225ad780a5d850270428b9768b38ff94fbebacd5155f596a814ad",
+    "evidence/relative_shutdown_v0222/tests/mock_report.json": "490d5a79124ca558eadb229b14ee77a5cdbad47c21bcb74b427f71d0ba83b0ee"
+  },
+  "excluded_pending_regeneration": [
+    "ZIP",
+    "SHA256SUMS.txt",
+    "PROVENANCE.json",
+    "STATIC_REVIEW.json",
+    "RUNNER_LOGIC_VALIDATION.json"
+  ],
+  "source_or_runtime_edits_by_reviewer": false
+}

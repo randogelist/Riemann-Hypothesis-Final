@@ -1,0 +1,186 @@
+{
+  "schema": "RH_HILBERT_V0219_SINGLE_PROOF_REPAIR_CHECKPOINT_V1",
+  "branch": "RH_HILBERT_LIMIT",
+  "mode": "A_TIER_LEAN",
+  "target": "LOCAL_COMPILER",
+  "source_package": "RH_HILBERT_LIMIT_LEAN_v0_2_18_construction",
+  "source_zip_sha256": "f7dcae7d6855b303ee9489b09cb473460cba30ca6118306af56fe6429b41a8be",
+  "checkpoint_package": "RH_HILBERT_LIMIT_LEAN_v0_2_19_construction",
+  "evidence_class": "USER_REPORTED_V0218_PARTIAL_FAILURE_AND_EVENTUALGROWTH_PASS; REPAIR_NATIVE_PENDING",
+  "latest_user_run": {
+    "evidence_kind": "USER_MESSAGE_UTF8_LF_TRANSCRIPTION_NOT_ORIGINAL_NATIVE_LOG_BYTES",
+    "reported_package": "RH_HILBERT_LIMIT_LEAN_v0_2_18_construction",
+    "reported_build": "FAIL",
+    "reported_run": "FAIL",
+    "visible_failed_module": "RH_HilbertLimit.Cancellation",
+    "visible_blocked_module": "RH_HilbertLimit.ActualCancellationWitness",
+    "reported_failed_stage_label": "MODULE:RH_HilbertLimit.EventualGrowth",
+    "failed_stage_interpretation": "LAST_ATTEMPTED_MODULE_LABEL; EVENTUALGROWTH_HAS_EXPLICIT_COMPILE_AND_AXIOM_AUDIT_PASS",
+    "reported_passed_module": "RH_HilbertLimit.EventualGrowth",
+    "reported_passed_module_elapsed_ms": 22161,
+    "passed_module_source_in_delivered_package_sha256": "f846d1a1b897542c460783a9ab5702ff1b713e5788fe149034d1ead5f0d178c0",
+    "passed_module_source_in_candidate_is_byte_identical": true,
+    "reported_anchor_receipt_path": "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\c6870f025216435e\\807c325eeddcdaf0dd2685bd33df9688\\01a17f5f3ea2a10b\\receipt.txt",
+    "reported_project_modules_elapsed_ms": 76267,
+    "reported_shutdown": {
+      "clear": true,
+      "attempts": 1,
+      "full_inventories": 1,
+      "exact_worker_queries": 0
+    },
+    "aggregate_module_counts": "NOT_SUPPLIED_IN_EXCERPT",
+    "final_audit": "NOT_REACHED_AFTER_PROJECT_MODULE_FAILURE",
+    "source": "evidence/cancellation_fix_v0219/USER_NATIVE_V0218_FAIL_TAIL.txt",
+    "source_sha256": "5b8022f73f1b1c4725afa2ae61c864a99d1727a6d558a884e4e9ed8c2ce033b9",
+    "first_marker": "CLIPPED_PREFIX_ED_GOALS_PRESERVED_WITHOUT_RECONSTRUCTION",
+    "direct_native_receipt_contents": "NOT_SUPPLIED; PATH_ONLY",
+    "native_source_dependency_toolchain_and_artifact_fingerprints": "NOT_SUPPLIED_IN_EXCERPT",
+    "direct_per_declaration_axiom_output": "NOT_SUPPLIED; MODULE_PASS_MARKER_ONLY",
+    "independent_native_verification": "NOT_PERFORMED",
+    "reuse_requirement": "NATIVE_RUNNER_REVALIDATES_SAME_TARGET_SOURCE_DEPENDENCIES_TOOLCHAIN_ARTIFACTS_AND_AUDIT"
+  },
+  "latest_successful_full_run": {
+    "evidence_kind": "USER_MESSAGE_UTF8_LF_TRANSCRIPTION_NOT_ORIGINAL_NATIVE_LOG_BYTES",
+    "reported_package": "RH_HILBERT_LIMIT_LEAN_v0_2_17_construction",
+    "reported_build": "PASS",
+    "reported_run": "PASS",
+    "reported_axiom_audit": "PASS_STANDARD_LOGICAL_AXIOMS_ONLY",
+    "reported_sorryax": "NONE",
+    "reported_compiled_modules": 0,
+    "reported_frozen_reused_modules": 90,
+    "reported_restored_artifact_files": 90,
+    "reported_working_artifact_modules_retained": 0,
+    "reported_shutdown_elapsed_ms": 1062,
+    "reported_shutdown_full_inventories": 1,
+    "reported_shutdown_exact_worker_queries": 2,
+    "reported_formal_closure": "OPEN",
+    "reported_finite_checker_equivalence": "OPEN",
+    "source": "evidence/cancellation_v0218/USER_NATIVE_V0217_PASS_TAIL.txt",
+    "source_sha256": "763d6e2f3de75404513bc622e63915847f7ad55a4be2e84abf9dfed53ed87de5",
+    "direct_receipt_contents_and_per_declaration_axiom_output": "NOT_SUPPLIED",
+    "independent_native_verification": "NOT_PERFORMED",
+    "new_v0218_source_execution": "NOT_PERFORMED"
+  },
+  "lean_sources_byte_preserved": 95,
+  "changed_source": "RH_HilbertLimit/Cancellation.lean",
+  "changed_source_sha256": "985602ead4c4b3581b6aef194a36da6ca1f78defbeaaadf328e0cf97749b9528",
+  "changed_proof_bodies": [
+    "RH_HilbertLimit.rowCancellation_le_of_local_flux"
+  ],
+  "added_or_removed_mathematical_declarations": [],
+  "definitions_theorem_statements_and_assumptions": "UNCHANGED",
+  "eventual_growth_source_sha256": "f846d1a1b897542c460783a9ab5702ff1b713e5788fe149034d1ead5f0d178c0",
+  "changed_runtime_policy": false,
+  "runner_changes": "TWO_PACKAGE_AND_VERSION_CONSTANTS_ONLY",
+  "source_manifest": "evidence/cancellation_fix_v0219/FROZEN_SOURCE_MANIFEST.json",
+  "selected_final_audit": "CancellationAudit.lean",
+  "selected_axiom_targets": 394,
+  "exact_endpoint_declarations": [
+    {
+      "kind": "def",
+      "name": "RH_HilbertLimit.actualCanonicalCalibration",
+      "type": "ActualSpectralCalibration AngularMaster.ActualPairIndex",
+      "selected_aggregate_check": true,
+      "selected_aggregate_axiom_print": true,
+      "target_manifest_present": true
+    },
+    {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.actualCanonicalDominantExtraction",
+      "type": "DominantExtraction actualCanonicalCalibration",
+      "selected_aggregate_check": true,
+      "selected_aggregate_axiom_print": true,
+      "target_manifest_present": true
+    },
+    {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.canonical_actual_root_tendsto_constructed",
+      "type": "Tendsto (rootScale actualVariation) atTop (𝓝 (spectralRadius canonicalNode))",
+      "selected_aggregate_check": true,
+      "selected_aggregate_axiom_print": true,
+      "target_manifest_present": true
+    },
+    {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.canonical_actual_root_limit_exists",
+      "type": "∃ R : ℝ, 1 ≤ R ∧ Tendsto (rootScale actualVariation) atTop (𝓝 R)",
+      "selected_aggregate_check": true,
+      "selected_aggregate_axiom_print": true,
+      "target_manifest_present": true
+    },
+    {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.canonical_actual_root_one_iff_nativeRH",
+      "type": "Tendsto (rootScale actualVariation) atTop (𝓝 1) ↔ _root_.RiemannHypothesis",
+      "selected_aggregate_check": true,
+      "selected_aggregate_axiom_print": true,
+      "target_manifest_present": true
+    },
+    {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.canonical_actual_subexponential_iff_nativeRH",
+      "type": "Subexponential actualVariation ↔ _root_.RiemannHypothesis",
+      "selected_aggregate_check": true,
+      "selected_aggregate_axiom_print": true,
+      "target_manifest_present": true
+    },
+    {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.canonical_actual_all_variation_one_iff_nativeRH",
+      "type": "(∀ N, actualVariation N = 1) ↔ _root_.RiemannHypothesis",
+      "selected_aggregate_check": true,
+      "selected_aggregate_axiom_print": true,
+      "target_manifest_present": true
+    },
+    {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.canonical_actual_weights_nonnegative_iff_nativeRH",
+      "type": "(∀ N j, j ≤ N → 0 ≤ actualWeight N j) ↔ _root_.RiemannHypothesis",
+      "selected_aggregate_check": true,
+      "selected_aggregate_axiom_print": true,
+      "target_manifest_present": true
+    },
+    {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.canonical_actual_natural_growth_step_iff_nativeRH_constructed",
+      "type": "(∃ K : ℕ, NaturalGrowthStep actualVariation K) ↔ _root_.RiemannHypothesis",
+      "selected_aggregate_check": true,
+      "selected_aggregate_axiom_print": true,
+      "target_manifest_present": true
+    },
+    {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.canonical_actual_natural_bound_iff_nativeRH_constructed",
+      "type": "(∃ B : ℕ, ∀ n : ℕ, actualVariation n ≤ (B : ℝ)) ↔ _root_.RiemannHypothesis",
+      "selected_aggregate_check": true,
+      "selected_aggregate_axiom_print": true,
+      "target_manifest_present": true
+    }
+  ],
+  "forward_endpoint": "RH_HilbertLimit.nativeRH_of_exists_admissible_cancellationBudget",
+  "forward_endpoint_type": "(exists W : CancellationBudget, W.Admissible) -> _root_.RiemannHypothesis",
+  "forward_endpoint_status": "SOURCE_UNCHANGED; NATIVE_AUDIT_PENDING",
+  "formal_closure": "OPEN",
+  "finite_checker_soundness": "OPEN",
+  "finite_checker_equivalence": "OPEN",
+  "accepted_finite_witness": null,
+  "unconditional_rh": "NOT_ESTABLISHED",
+  "obtained_witness_required_for_formal_closure": false,
+  "expected_first_run_if_all_relevant_anchors_validate": {
+    "frozen_reused": 90,
+    "compiled_and_audited": 3
+  },
+  "counts_are_observed": false,
+  "source_change_invalidation_cone": [
+    "RH_HilbertLimit/Cancellation.lean",
+    "RH_HilbertLimit/ActualCancellationWitness.lean",
+    "CancellationAudit.lean"
+  ],
+  "cache_reuse": "MATCHING_SAME_TARGET_SOURCE_DEPENDENCIES_TOOLCHAIN_ARTIFACTS_AND_AUDIT_REQUIRED",
+  "new_native_or_lean_execution": false,
+  "new_runtime_test_execution": false,
+  "not_an_init_record": true,
+  "previous_checkpoint": "evidence/cancellation_fix_v0219/baseline_v0218_metadata/CHECKPOINT.json",
+  "delivery_filename": "RH_HILBERT_LIMIT_LEAN_v0_2_19_construction.zip",
+  "canonical_archive_root": "RH_HILBERT_LIMIT_LEAN_v0_2_19_construction"
+}

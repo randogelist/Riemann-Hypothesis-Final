@@ -1,0 +1,16 @@
+{
+  "runner_sha256": "bcb5911d6b9c6c87a8d4271948546c6632591c5bced36b3b96037a7b0a5a6104",
+  "baseline_runner_sha256": "3dd2f760861c2cad12cfae1c5e37dc38f009f6f22037dddaaaa407acad8850f5",
+  "normalization_exact_bytes_match": true,
+  "changes": [
+    "PACKAGE",
+    "RUNNER_VERSION",
+    "two mathematical-status literals",
+    "six JSON reporting fields",
+    "six post-success log lines"
+  ],
+  "json_addition": "    '  \"zero_budget_candidate\": {\"cutoff\":0,\"coefficient\":0},',\n    '  \"zero_budget_first_moment_bounds\": '+quoteJSON(pass?\"DECLARATIONS_AUDITED\":\"NATIVE_AUDIT_PENDING\")+\",\",\n    '  \"zero_budget_first_refinement_cancellation\": '+quoteJSON(pass?\"ZERO_DECLARATION_AUDITED\":\"NATIVE_AUDIT_PENDING\")+\",\",\n    '  \"zero_budget_verified_refinement_scope\": '+quoteJSON(pass?\"INDEX_0_ONLY\":\"NOT_CERTIFIED\")+\",\",\n    '  \"zero_budget_universal_propagation\": \"OPEN\",',\n    '  \"zero_budget_admissibility\": \"OPEN\",',\n",
+  "log_addition": "  log(\"ZERO_BUDGET_CANDIDATE=CUTOFF_0_COEFFICIENT_0\");\n  log(\"ZERO_BUDGET_FIRST_MOMENT_BOUNDS=DECLARATIONS_AUDITED\");\n  log(\"ZERO_BUDGET_FIRST_REFINEMENT_CANCELLATION=ZERO_DECLARATION_AUDITED\");\n  log(\"ZERO_BUDGET_VERIFIED_REFINEMENT_SCOPE=INDEX_0_ONLY\");\n  log(\"ZERO_BUDGET_UNIVERSAL_PROPAGATION=OPEN\");\n  log(\"ZERO_BUDGET_ADMISSIBILITY=OPEN\");\n",
+  "execution_cache_audit_memory_lock_shutdown_policy_changed": false,
+  "native_or_whole_runner_execution": false
+}

@@ -1,0 +1,65 @@
+{
+  "reviewer": "/root/lock_review",
+  "verdict": "STATIC_REVIEW_NO_BLOCKER_FOUND",
+  "scope": "Independent read-only source and safety review of v0.2.22 relative-runner shutdown repair; no candidate source edits.",
+  "baseline_path": "/workspace/scratch/f128c1434505/output/RH_HILBERT_LIMIT_LEAN_v0_2_21_construction/tools/native_runner.js",
+  "baseline_sha256": "5362c7e1550711b7604682836aa220c429916c73761f5cef7a7014bebd11f81a",
+  "candidate_path": "/workspace/scratch/f128c1434505/output/RH_HILBERT_LIMIT_LEAN_v0_2_22_construction/tools/native_runner.js",
+  "candidate_sha256": "8fc5a81e3802a52e3ec12fa2c94177a42b59b202a83b66c9609ea1356889e907",
+  "blocking_findings": [],
+  "resolved_before_final_review": [
+    {
+      "topic": "Drive-relative script basename",
+      "detail": "The final hash includes the ^[a-z]: alternative, so C:native_runner.js remains a relative runner instead of being mistaken for a different script."
+    }
+  ],
+  "verified_invariants": [
+    "The original absolute-workspace command occurrence guard executes before actual-script parsing.",
+    "Simple parsing fully consumes the command; unsupported, unbalanced, mixed, escaped-closing-quote, control-character, executable-mismatch, or unsupported-option forms use the old broad matcher.",
+    "Actual-script classification recognizes the exact native_runner.js basename, including drive-relative C:native_runner.js; later script arguments are not mistaken for the directly executed script when parsing succeeds.",
+    "Every included non-ancestor original row is strictly preflighted before any exact disappearance query; an already readable current-workspace worker cannot be retired by a later absence.",
+    "Relative rows retain exact PID, full CreationDate, executable name, parent PID, and known command binding. Command mutation and identity mutation fail conservatively.",
+    "Unreadable-to-relative transitions remain pending and bind the first readable command instead of being marked resolved.",
+    "Relative ambiguity can resolve only by exact successfully enumerated absence; persistent ambiguity retains the lock.",
+    "After relative absence and clearance of the first retained inventory, exactly one fresh complete inventory is required before success.",
+    "The post-exit complete inventory rejects a new relative ambiguity immediately; it does not initiate a second relative-host waiting phase.",
+    "The post-exit inventory rejects reappearance or contradictory identity of an already checked absent PID and compares bound relative commands.",
+    "Sealed own-launch and exact owner-generation/self-identity guards execute before and after every inventory iteration, including the post-exit iteration.",
+    "Fresh admitted-host and read-only-follower exceptions remain byte-identical; there is no new parent/PID/name allowlist or foreign-workspace inference.",
+    "Acquisition and stale-recovery function bodies remain byte-identical and receive no shutdown retry mechanism; their common guard receives the deliberate actual-script classification correction.",
+    "Failure is caught by the unchanged parallelShutdown path, which marks shutdown unclean; the unchanged main cleanup releases the lock only when shutdown is clean.",
+    "Compiler, cache key, anchor reuse, axiom audit, memory policy, and mathematical status function bodies remain byte-identical."
+  ],
+  "static_bounds_per_shutdown_call": {
+    "outer_attempts_max": 6,
+    "total_queued_row_instances_max": 64,
+    "targeted_worker_queries_upper_bound": 384,
+    "targeted_self_queries_upper_bound": 14,
+    "complete_process_inventory_queries_max": 2,
+    "scheduled_inter_round_sleeps_max": 5,
+    "scheduled_inter_round_sleep_total_ms_max": 1000,
+    "bound_note": "The second complete inventory may run in the same outer attempt. It adds two owner/self guard queries, so the self-query bound is 14 rather than 12. Rows re-queued in the final inventory consume the same cumulative 64-row budget."
+  },
+  "remaining_limits": [
+    "This is a conservative WMI snapshot and ownership guard, not an atomic operating-system process-tree containment guarantee.",
+    "WMI query wall-clock duration is not hard-bounded by the retry/sleep budgets.",
+    "Unsupported command syntax retains the old broad matcher and can still produce conservative false positives.",
+    "A persistent ambiguous host, a newly ambiguous host in the final inventory, an identity contradiction, or an exhausted budget intentionally retains the lock.",
+    "The review does not establish which process caused the original user failure; the old log omitted the offending identity and command shape."
+  ],
+  "verification_performed": [
+    "Full candidate-versus-parent source diff review",
+    "Exact SHA-256 binding",
+    "Exact top-level function preservation comparison",
+    "Manual transition and query-budget review",
+    "Manual unchanged shutdown-failure and release-path review"
+  ],
+  "verification_not_performed": [
+    "No candidate JavaScript execution by this reviewer",
+    "No native Windows or WSH execution",
+    "No Lean or Lake execution",
+    "No C# or native compilation",
+    "No GitHub CI execution"
+  ],
+  "regression_status": "Separate implementation-bound Node-VM mock suite is owned by /root/regression_review; no mock result is claimed by this review."
+}

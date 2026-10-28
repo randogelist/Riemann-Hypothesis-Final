@@ -1,0 +1,47 @@
+{
+  "schema": "RH_V0222_FOCUSED_TEST_FREEZE_V1",
+  "scope": "NODE_VM_SYNTHETIC_HOST_ONLY",
+  "runner_sha256": "8fc5a81e3802a52e3ec12fa2c94177a42b59b202a83b66c9609ea1356889e907",
+  "passed": 20,
+  "failed": 0,
+  "old_reports_copied": false,
+  "files": [
+    {
+      "path": "HOST_DEPENDENCIES.json",
+      "sha256": "83ff1da4a285462bfc370a94a37472103db3aa93acf60674a74bf956617ccbbf",
+      "bytes": 935
+    },
+    {
+      "path": "README.txt",
+      "sha256": "e78596a7d286a80f15f28f4cbb5b7f1674d903a6fa924629ee6632ccd2a1c099",
+      "bytes": 2014
+    },
+    {
+      "path": "candidate_sources.js",
+      "sha256": "92ddba93bcb792dc369b0774e38b8d5cebd20f1af68dc3628780452e52aa5eb8",
+      "bytes": 6724
+    },
+    {
+      "path": "focused_review.js",
+      "sha256": "6479c9b1ec5ede4bb7c52322b4379e1d431ffd2e72ae15a08b0c9665d88427fa",
+      "bytes": 22828
+    },
+    {
+      "path": "mock_host.js",
+      "sha256": "06cb5ada2df8abbf19477d374996a9c0c7e10b49f55bad5a0bbd3cfe9e1b835a",
+      "bytes": 14379
+    },
+    {
+      "path": "mock_report.json",
+      "sha256": "490d5a79124ca558eadb229b14ee77a5cdbad47c21bcb74b427f71d0ba83b0ee",
+      "bytes": 7299
+    },
+    {
+      "path": "runtime_host.js",
+      "sha256": "a516a5882dcb9ffb43277916bebc710ac8a873213962f0b201a55bd4a74b5d30",
+      "bytes": 11903
+    }
+  ],
+  "native_execution": false,
+  "native_or_mathematical_acceptance_claimed": false
+}

@@ -1,0 +1,66 @@
+{
+  "schema": "RH_V0213_FOCUSED_REGRESSION_PLAN_V1",
+  "status": "HISTORICAL_PLAN_EXECUTION_RECORDED_SEPARATELY",
+  "native_tail_sha256": "fe90ee4f2db2f779539b422cd6884ed16482dc860a3b9048c447885785faa541",
+  "host_basis": "v0.2.12 Node VM mock_host.js/runtime_host.js; reuse support code only, not the old 22-case suite.",
+  "runner_edits_by_test_owner": false,
+  "memory_fixture": {
+    "freeMB": 5479,
+    "requiredMB": 10476,
+    "activeWorkers": 0,
+    "readyTasks": 2,
+    "leanThreads": 0,
+    "old_expected_error": "PARALLEL_RESOURCE_BLOCKED",
+    "synthetic_policy_one_consistent_realization": {
+      "totalMB": 31900,
+      "reserveMB": 6380,
+      "workerMemoryMB": 4096,
+      "sidecarBudgetMB": 0
+    },
+    "qualification": "totalMB and the reserve breakdown are chosen synthetic inputs reproducing the logged sum; the native tail does not report them."
+  },
+  "relative_runner_fixture": {
+    "name": "cscript.exe",
+    "script_argument": "tools\\native_runner.js",
+    "absolute_workspace_path_present": false,
+    "recorded_native_pid_known": false,
+    "old_shutdown_call": "assertNoLockWorkers(parallelShutdownInventory(), {owner:null}, lockSelf)",
+    "old_expected_error": "LOCK_STATE_UNKNOWN: a legacy relative-path native_runner.js is active; its package cannot be distinguished."
+  },
+  "focused_cases": [
+    {
+      "name": "reported_memory_numbers_baseline_reproduction",
+      "assertion": "The v0.2.12 admission path reproduces FREE5479/REQUIRED10476/LIVE0 before any compiler launch."
+    },
+    {
+      "name": "reported_memory_numbers_candidate_policy",
+      "assertion": "Exercise the root-approved v0.2.13 idle/adaptive policy on the same observed numbers; assert its exact documented outcome, thread budget and no false PASS. Candidate policy is pending."
+    },
+    {
+      "name": "memory_recovery_guard",
+      "assertion": "An adaptive serial exception must not admit an extra worker while another worker is live, or bypass the explicitly selected critical-memory floor."
+    },
+    {
+      "name": "legacy_relative_global_block_baseline_reproduction",
+      "assertion": "A readable relative native_runner.js with no root evidence reproduces the v0.2.12 ownerless-shutdown inventory rejection; do not label it unrelated without independent evidence."
+    },
+    {
+      "name": "scoped_shutdown_candidate_policy",
+      "assertion": "Exercise the approved ownership-scope change using exact PID+creation, workspace paths, and descendant evidence. An unresolved command is not itself proof of a different workspace."
+    },
+    {
+      "name": "owned_live_or_unknown_worker_lock_guard",
+      "assertion": "The targeted shutdown change continues retaining the lock for a known workspace worker, live owned descendant, or unresolved owned process status."
+    }
+  ],
+  "not_in_scope": [
+    "Full old22 regression rerun",
+    "New Lean mathematical proofs",
+    "Native Windows/WSH/WMI behavior",
+    "C# or sidecar execution",
+    "Performance or RAM residency claims"
+  ],
+  "awaiting": null,
+  "execution_report": "mock_report.json",
+  "execution_note": "The candidate received 15 focused Node VM scenarios. The original six planning entries are retained as planning history; the old 22-case suite and the old native runner were not rerun."
+}

@@ -1,0 +1,31 @@
+CURRENT PACKAGE: v0.2.17 construction, exact-process shutdown repair
+PROOF BASELINE: v0.2.16 reported successful standard-axiom reuse audit
+
+1. Run the changed runner on the user's native Windows target. The latest
+   v0.2.16 run reused the final 370-declaration audit but failed at shutdown.
+   The v0.2.17 repair has no native PASS yet. Static/Node mock checks are
+   not Windows, WMI, Lean or axiom-audit execution.
+
+2. All 92 Lean sources, exact theorem statements, hypotheses, audit targets
+   and declaration inventory remain unchanged. The earlier reported
+   successful proof-audit evidence is preserved separately from this failure.
+
+3. Formal closure remains OPEN:
+     (exists W : FiniteWitness, check W = true) iff _root_.RiemannHypothesis
+   Remaining work: finite raw data format, terminating actual-RH checker,
+   soundness and completeness. An obtained witness is not required to prove
+   the equivalence; no accepted witness has been supplied.
+
+4. A finite natural B or K whose admissibility is quantified over all orders
+   is not itself a terminating finite raw checker. A finite prefix has not
+   been certified as an infinite tail bound.
+
+5. Actual subexponential growth and unconditional RH are not established.
+   The ordinary root-scale limit exists in the frozen source; its existence
+   alone does not establish value one. Unrooted variation convergence is
+   not asserted.
+
+6. Native process queries must resolve each uncertain row or retain the
+   lock. Parent identity, executable name or a retry timeout alone never
+   establishes that an unreadable live worker is unrelated or terminated.
+   The old retained lock is preserved; no forced cleanup is introduced.

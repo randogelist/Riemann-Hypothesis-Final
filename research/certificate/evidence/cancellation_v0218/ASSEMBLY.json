@@ -1,0 +1,31 @@
+{
+  "package": "RH_HILBERT_LIMIT_LEAN_v0_2_18_construction",
+  "mode": "A_TIER_LEAN",
+  "target": "LOCAL_COMPILER",
+  "new_source_sha256": {
+    "RH_HilbertLimit/Cancellation.lean": "53c9c4ab1733ec4f20190826dcb74d47b18dcd1942b78bb06b319178419311c6",
+    "RH_HilbertLimit/EventualGrowth.lean": "f846d1a1b897542c460783a9ab5702ff1b713e5788fe149034d1ead5f0d178c0",
+    "RH_HilbertLimit/ActualCancellationWitness.lean": "e8281816a7dc16ca30dfe0009df97ea201c5259f0a137f41ca768f6da3c8c6f8",
+    "CancellationAudit.lean": "2da7bb304576e2a592de29e8781685b621c28ffe794a85ae65fa50e1bcdc5891"
+  },
+  "old_lean_sources_byte_preserved": 92,
+  "new_lean_sources": 4,
+  "ordinary_modules": 92,
+  "active_modules_including_final_audit": 93,
+  "old_ordinary_modules_eligible_for_reuse": 89,
+  "old_final_audit": "AnalyticAudit.lean",
+  "old_final_audit_preserved_but_unselected": true,
+  "new_final_audit": "CancellationAudit.lean",
+  "audit_targets": 394,
+  "old_audit_targets_preserved": 370,
+  "new_public_declarations": 24,
+  "declaration_inventory_entries": 1129,
+  "mathlib_requirements_byte_preserved": true,
+  "runner_change_scope": "PACKAGE_IDENTITY_AND_ACCURATE_STATUS_REPORTING_ONLY",
+  "runtime_algorithm_changes": false,
+  "native_or_lean_execution": false,
+  "formal_closure": "OPEN",
+  "finite_checker_soundness": "OPEN",
+  "semantic_hypothesis": "exists W : CancellationBudget, W.Admissible",
+  "admissibility": "forall n, W.cutoff <= n -> rowCancellation actualNormalizedMoment n <= W.coefficient * actualVariation n"
+}

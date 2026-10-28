@@ -1,0 +1,18 @@
+{
+  "schema": "RH_HILBERT_V0218_RUNTIME_METADATA_REVIEW_V1",
+  "status": "STATIC_ONLY_NO_NEW_NATIVE_OR_RUNTIME_TEST_EXECUTION",
+  "runner_sha256": "e27b634a8625a35d05ede552b3089232097ffdbcbb020ddb881d5b2f34904ccd",
+  "baseline_runner_sha256": "3d9233a9dd98ecd6549860716c338d11f5aedb44d9146b0835941d3b171e030c",
+  "changes": "PACKAGE_AND_VERSION_IDENTITY_AND_SEMANTIC_THEOREM_STATUS_REPORTING_ONLY",
+  "node_syntax_check": "NODE_CHECK_PASSED; DOES_NOT_EXECUTE_RUNNER_OR_WINDOWS_APIS",
+  "integration_review": "evidence/cancellation_v0218/INTEGRATION_REVIEW.json",
+  "integration_review_sha256": "1ca8f5a609cc7da16300463fd00bec3ba3caefdb56ec9a7c71ffb30b2c81e209",
+  "cache_acceptance_compile_flags_scheduling_hashing_locks_and_shutdown": "EXACT_BASELINE_LOGIC_PRESERVED",
+  "run_cmd_and_native_helpers": "EXACT_BYTES_PRESERVED",
+  "native_baseline": "USER_REPORTED_V0_2_17_PASS",
+  "candidate_native_execution": "NOT_PERFORMED",
+  "lean_execution": false,
+  "lake_execution": false,
+  "ci_execution": false,
+  "new_axiom_audit_execution": false
+}

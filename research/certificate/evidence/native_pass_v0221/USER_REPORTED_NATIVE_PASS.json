@@ -1,0 +1,137 @@
+{
+  "evidence_kind": "USER_MESSAGE_UTF8_LF_TRANSCRIPTION_NOT_ORIGINAL_NATIVE_LOG_BYTES",
+  "reported_package": "RH_HILBERT_LIMIT_LEAN_v0_2_20_construction",
+  "reported_build": "PASS",
+  "reported_run": "PASS",
+  "reported_final_audit": "CancellationAudit.lean",
+  "reported_final_audit_declarations": 394,
+  "explicitly_printed_axiom_declarations": 14,
+  "explicit_axioms": {
+    "RH_HilbertLimit.subexponential_of_eventual_natural_growth_step": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RH_HilbertLimit.subexponential_of_exists_eventual_natural_growth_step": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RH_HilbertLimit.CancellationBudget": [],
+    "RH_HilbertLimit.CancellationBudget.Admissible": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RH_HilbertLimit.cancellationBudget_admissible_iff_eventual_growth_step": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RH_HilbertLimit.actual_subexponential_of_admissible_cancellationBudget": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RH_HilbertLimit.nativeRH_of_admissible_cancellationBudget": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RH_HilbertLimit.nativeRH_of_exists_admissible_cancellationBudget": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RH_HilbertLimit.zero_cancellationBudget_admissible_of_nativeRH": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RH_HilbertLimit.exists_admissible_cancellationBudget_iff_nativeRH": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RH_HilbertLimit.nativeRH_of_exists_eventual_cancellation_bound": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RH_HilbertLimit.CancellationBudget.LocalFlux": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RH_HilbertLimit.cancellationBudget_admissible_of_local_flux": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "RH_HilbertLimit.nativeRH_of_exists_local_cancellation_flux": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "reported_axiom_audit": "PASS_STANDARD_LOGICAL_AXIOMS_ONLY",
+  "reported_sorryax": "NONE",
+  "reported_final_audit_module_elapsed_ms": 9914,
+  "reported_stages": {
+    "FINAL_AUDIT": 10036,
+    "WORKER_SHUTDOWN": 1044
+  },
+  "reported_counts": {
+    "COMPILED_MODULES": 2,
+    "FROZEN_REUSED_MODULES": 91,
+    "AUDIT_ONLY_MODULES": 0,
+    "LEGACY_MIGRATED_MODULES": 0,
+    "WORKING_ARTIFACT_MODULES_RETAINED": 0,
+    "RESTORED_ARTIFACT_FILES": 91,
+    "ANCHOR_HISTORY_SCANS": 2,
+    "COMPACT_ANCHORS_SAVED": 2,
+    "COMBINED_WORKING_DIGESTS_CONSUMED": 0
+  },
+  "reported_logical_tool_launches": {
+    "certutil": 413,
+    "csc": 0,
+    "helper": 2,
+    "lean": 5,
+    "other": 0,
+    "ram_warm": 0,
+    "total": 420
+  },
+  "reported_hash_phase_totals": {
+    "batch_sets": 1,
+    "certutil_sets": 189,
+    "elapsed_ms": 41473,
+    "failed_sets": 0,
+    "files": 37524,
+    "sets": 190
+  },
+  "reported_shutdown": {
+    "clear": true,
+    "attempts": 1,
+    "full_inventories": 1,
+    "exact_worker_queries": 0
+  },
+  "reported_mathematical_status": "ANALYTIC_AND_SEMANTIC_CANCELLATION_AUDITED_FINITE_CHECKER_OPEN",
+  "reported_semantic_forward": "DECLARATION_AUDITED",
+  "reported_semantic_equivalence": "DECLARATION_AUDITED",
+  "reported_formal_closure": "OPEN",
+  "reported_finite_checker_soundness": "OPEN",
+  "reported_finite_checker_equivalence": "OPEN",
+  "reported_accepted_finite_witness": "NOT_ESTABLISHED",
+  "reported_unconditional_rh": "NOT_ESTABLISHED",
+  "reported_anchor_receipt_path": "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\dfb014b4edea4fa5\\dfdde963255fcdf198c5fc8dcb8d5ad1\\01a17f72f0e0b979\\receipt.txt",
+  "source": "evidence/native_pass_v0221/USER_NATIVE_V0220_PASS_TAIL.txt",
+  "source_sha256": "a3c8671ca646ca1e0fc601a0b952a2cbb3f1a0c95a1b8dd5fa89b2df44bf53d6",
+  "source_bytes": 6087,
+  "first_marker": "AXIOM_OUTPUT_TAIL_STARTS_WITHOUT_THE_PRECEDING_DECLARATION_SIGNATURE",
+  "direct_native_receipt_contents": "NOT_SUPPLIED; PATH_ONLY",
+  "native_source_dependency_toolchain_and_artifact_fingerprints": "NOT_SUPPLIED_IN_EXCERPT",
+  "independent_native_verification": "NOT_PERFORMED",
+  "aggregate_coverage_scope": "394_SELECTED_TARGETS; 14_EXPLICIT_AXIOM_LISTS_IN_THIS_TAIL",
+  "reuse_requirement": "EXACT_SAME_TARGET_SOURCE_DEPENDENCIES_TOOLCHAIN_ARTIFACTS_AND_PRIOR_AUDIT_PASS_VALIDATION",
+  "timing_scope": "REPORTED_STAGES_AND_HASH_AGGREGATES_ONLY; NO_WHOLE_RUN_WALL_TIME"
+}

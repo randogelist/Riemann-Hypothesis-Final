@@ -1,0 +1,26 @@
+{
+  "package": "RH_HILBERT_LIMIT_LEAN_v0_2_23_construction",
+  "parent_package": "RH_HILBERT_LIMIT_LEAN_v0_2_22_construction",
+  "revision_kind": "EVIDENCE_ONLY_NOT_INIT",
+  "runner_sha256": "3dd2f760861c2cad12cfae1c5e37dc38f009f6f22037dddaaaa407acad8850f5",
+  "baseline_runner_sha256": "8fc5a81e3802a52e3ec12fa2c94177a42b59b202a83b66c9609ea1356889e907",
+  "changed_lean_sources": [],
+  "lean_sources_byte_preserved": 96,
+  "active_modules": 93,
+  "audit_targets": 394,
+  "declaration_inventory_byte_preserved": 1129,
+  "reported_parent_native_counts": {
+    "COMPILED_MODULES": 0,
+    "FROZEN_REUSED_MODULES": 93,
+    "AUDIT_ONLY_MODULES": 0,
+    "LEGACY_MIGRATED_MODULES": 0,
+    "WORKING_ARTIFACT_MODULES_RETAINED": 0,
+    "RESTORED_ARTIFACT_FILES": 93,
+    "ANCHOR_HISTORY_SCANS": 0,
+    "COMPACT_ANCHORS_SAVED": 0,
+    "COMBINED_WORKING_DIGESTS_CONSUMED": 0
+  },
+  "runtime_algorithm_changes": false,
+  "new_native_or_lean_execution": false,
+  "new_runtime_mock_tests": false
+}

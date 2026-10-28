@@ -1,0 +1,487 @@
+{
+  "schema": "RH_NATIVE_V0212_TAIL_REVIEW_V1",
+  "source": {
+    "filename": "Pasted text(20261027-200359).txt",
+    "sha256": "fe90ee4f2db2f779539b422cd6884ed16482dc860a3b9048c447885785faa541",
+    "bytes": 25112,
+    "line_count": 253,
+    "copied_verbatim": "USER_NATIVE_TAIL.txt"
+  },
+  "prepared_runner_source_used_for_interpretation": {
+    "package": "RH_HILBERT_LIMIT_LEAN_v0_2_12_construction",
+    "sha256": "b11c97c591c5e200978fcfff5f37d6f6cd4b9388a464697a673174ab20c5a632",
+    "native_run_source_identity_independently_bound": false
+  },
+  "observed_outcome": {
+    "project_build": "FAIL",
+    "run": "FAIL",
+    "failure_class": "RUNNER_RESOURCE_ADMISSION",
+    "lean_error_observed": false,
+    "whole_project_axiom_audit_pass_observed": false,
+    "final_aggregate_observed": false
+  },
+  "progress": {
+    "reported_terminal_ordinary_modules": 85,
+    "ordinary_total": 89,
+    "active_lean_module_workers": 0,
+    "ready_module_tasks": 2,
+    "allocated_lean_threads": 0,
+    "evidence": [
+      {
+        "line": 244,
+        "text": "PARALLEL_PROGRESS=85/89|ACTIVE=0|READY=2|LEAN_THREADS=0"
+      }
+    ],
+    "meaning": "The scheduler count includes DONE, FAILED, and BLOCKED terminal states; this excerpt alone does not establish that all 85 were frozen reuses or successful compilations."
+  },
+  "visible_counts": {
+    "frozen_reuse_lines": 41,
+    "distinct_frozen_reuse_modules": 41,
+    "source_receipt_paths": 41,
+    "restored_module_markers": 40,
+    "completed_hash_phase_lines": 80,
+    "compile_start_lines": 0,
+    "compile_and_axiom_audit_pass_lines": 0,
+    "compile_fail_lines": 0,
+    "audit_fail_lines": 0
+  },
+  "visible_reuse_records": [
+    {
+      "module": "RiemannHypothesis.Xi.ZetaMultiplicityBridge",
+      "reuse_line": 2,
+      "reported_receipt": {
+        "line": 1,
+        "path": "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\fab7c48a1126c9ed\\f6b994df654384c08d805569f04da8a2\\01a17eab413d355b\\receipt.txt"
+      }
+    },
+    {
+      "module": "RiemannHypothesis.ZeroCounting.SmoothMainTerm",
+      "reuse_line": 8,
+      "reported_receipt": {
+        "line": 7,
+        "path": "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\3c8bfacd5ce08f05\\12caaefd0aae7f0bfa6326b68c7f136d\\01a17eab43f1a596\\receipt.txt"
+      }
+    },
+    {
+      "module": "RiemannHypothesis.ZeroCounting.ZetaZeros",
+      "reuse_line": 14,
+      "reported_receipt": {
+        "line": 13,
+        "path": "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\9fef0c9b27a6e721\\b4f39232cc5563acd9e7b66097b9f5b5\\01a17eab469f6446\\receipt.txt"
+      }
+    },
+    {
+      "module": "RiemannHypothesis.Reduction.BacklundCanonicalDivisor",
+      "reuse_line": 20,
+      "reported_receipt": {
+        "line": 19,
+        "path": "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\becff8f15effb806\\126c83b2db700bcb1adb5f1ea60e1fa1\\01a17eab493e6f3b\\receipt.txt"
+      }
+    },
+    {
+      "module": "RiemannHypothesis.Xi.DyadicZeroCountBridge",
+      "reuse_line": 26,
+      "reported_receipt": {
+        "line": 25,
+        "path": "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\9e53feefc8c65730\\826aae6aebf6bfc39a85b292613cbe6f\\01a17eab4c15d52b\\receipt.txt"
+      }
+    },
+    {
+      "module": "RiemannHypothesis.HadamardProduct.ExponentialPrefactor",
+      "reuse_line": 32,
+      "reported_receipt": {
+        "line": 31,
+        "path": "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\64594939a035d8d7\\4b6739b896b6009f83af12a89afb3b22\\01a17eab4e97ff99\\receipt.txt"
+      }
+    },
+    {
+      "module": "RiemannHypothesis.HadamardProduct.NatZeroData",
+      "reuse_line": 38,
+      "reported_receipt": {
+        "line": 37,
+        "path": "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\d7494c9293308f7b\\bf31c794b38f4b94faf0c9f274afd902\\01a17eab51398293\\receipt.txt"
+      }
+    },
+    {
+      "module": "RiemannHypothesis.HadamardProduct.RealZeroSign",
+      "reuse_line": 44,
+      "reported_receipt": {
+        "line": 43,
+        "path": "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\a7b509483c633f8f\\acba077f0dcbf2014bfaf5468951ddac\\01a17eab53c81cd5\\receipt.txt"
+      }
+    },
+    {
+      "module": "RiemannHypothesis.HadamardProduct.StrictRealZeroCriterion",
+      "reuse_line": 50,
+      "reported_receipt": {
+        "line": 49,
+        "path": "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\3e1e93377dddae8f\\a6e9fdc53a7aa39e2493700c9ad4b529\\01a17eab5675cf14\\receipt.txt"
+      }
+    },
+    {
+      "module": "RiemannHypothesis.HadamardProduct.OriginMultiplicityCriterion",
+      "reuse_line": 56,
+      "reported_receipt": {
+        "line": 55,
+        "path": "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\17bb5d533422324b\\db23169ea4b7e762a3007334bb550de8\\01a17eab594c22bb\\receipt.txt"
+      }
+    },
+    {
+      "module": "RiemannHypothesis.Xi.StrictLagariasCriterion",
+      "reuse_line": 62,
+      "reported_receipt": {
+        "line": 61,
+        "path": "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\76501720a406eb22\\e143da7a7d10ef4b55ec508f1afc119e\\01a17eab5c286e6f\\receipt.txt"
+      }
+    },
+    {
+      "module": "RiemannHypothesis.Xi.HadamardLogDerivativeCriterion",
+      "reuse_line": 68,
+      "reported_receipt": {
+        "line": 67,
+        "path": "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\05be10f1ee2bcc19\\1567a2c3ed696e8f99208f8b7e6bd86a\\01a17eab5fb3a8eb\\receipt.txt"
+      }
+    },
+    {
+      "module": "RiemannHypothesis.Xi.CanonicalQuotientCriterion",
+      "reuse_line": 74,
+      "reported_receipt": {
+        "line": 73,
+        "path": "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\59659557d4f5d3b9\\7785cfa720bbd4a39b8bb66aafc092a3\\01a17eab6270a212\\receipt.txt"
+      }
+    },
+    {
+      "module": "RiemannHypothesis.Xi.CanonicalProductSymmetry",
+      "reuse_line": 80,
+      "reported_receipt": {
+        "line": 79,
+        "path": "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\267602b3af2f235f\\c5777c904a87897fae457143823782c6\\01a17eab6524ff16\\receipt.txt"
+      }
+    },
+    {
+      "module": "RiemannHypothesis.Xi.CanonicalQuotientLogNormGrowth",
+      "reuse_line": 86,
+      "reported_receipt": {
+        "line": 85,
+        "path": "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\3d14f939e843d162\\e18c0ee5a5aa534ad7119d22c654fea4\\01a17eab67eaa0ce\\receipt.txt"
+      }
+    },
+    {
+      "module": "RiemannHypothesis.Xi.CanonicalQuotientCharacteristicGrowth",
+      "reuse_line": 92,
+      "reported_receipt": {
+        "line": 91,
+        "path": "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\cfe1146cb2c63dbe\\ff6bb5c2e13aef45b6c81a514f0427de\\01a17eab6a98440e\\receipt.txt"
+      }
+    },
+    {
+      "module": "RiemannHypothesis.ComplexAnalysis.MellinGrowth",
+      "reuse_line": 98,
+      "reported_receipt": {
+        "line": 97,
+        "path": "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\30f5ea578d5f8172\\5e2789cd10c715b6ac2b68677a2f754d\\01a17eab6d17f8d2\\receipt.txt"
+      }
+    },
+    {
+      "module": "RiemannHypothesis.Xi.ThetaKernelMellinGrowth",
+      "reuse_line": 104,
+      "reported_receipt": {
+        "line": 103,
+        "path": "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\aba910e16bcf054b\\5237bf2018331c098a298f640a5fd1e4\\01a17eab6fde4cb6\\receipt.txt"
+      }
+    },
+    {
+      "module": "RiemannHypothesis.ComplexAnalysis.FactorialDyadicGrowth",
+      "reuse_line": 110,
+      "reported_receipt": {
+        "line": 109,
+        "path": "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\64b54ed9e9873153\\7955182df7b57a7b83e80ed7dfcc5028\\01a17eab727b339b\\receipt.txt"
+      }
+    },
+    {
+      "module": "RiemannHypothesis.Xi.JensenDyadicCountBridge",
+      "reuse_line": 116,
+      "reported_receipt": {
+        "line": 115,
+        "path": "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\aa8765b157cb566d\\648725ba1a6af47ef9e7525b27dc09ce\\01a17eab75495aec\\receipt.txt"
+      }
+    },
+    {
+      "module": "RiemannHypothesis.Xi.EntireXiMellinGrowth",
+      "reuse_line": 122,
+      "reported_receipt": {
+        "line": 121,
+        "path": "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\ea3ad60fd8602b66\\55fd53f428aecdf2e7d6099ed9e04704\\01a17eab78268705\\receipt.txt"
+      }
+    },
+    {
+      "module": "RiemannHypothesis.Xi.EntireXiLogNormGrowth",
+      "reuse_line": 128,
+      "reported_receipt": {
+        "line": 127,
+        "path": "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\2f22c427bce6b115\\622552a7546afbe7f694ccacd8bf4138\\01a17eab7af700b1\\receipt.txt"
+      }
+    },
+    {
+      "module": "RiemannHypothesis.Xi.CanonicalQuotientThetaCharacteristicGrowth",
+      "reuse_line": 134,
+      "reported_receipt": {
+        "line": 133,
+        "path": "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\0615d78875262086\\531f7a7b3c608d91b8215978d5e2f1e7\\01a17eab7dbbfb52\\receipt.txt"
+      }
+    },
+    {
+      "module": "RiemannHypothesis.Xi.UnconditionalLagariasEquivalence",
+      "reuse_line": 140,
+      "reported_receipt": {
+        "line": 139,
+        "path": "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\40f21c3794d7cd2e\\d9cead516a36a9468396d5dd2eb32f42\\01a17eab808196f2\\receipt.txt"
+      }
+    },
+    {
+      "module": "RiemannHypothesis.Xi.CompletedLFunctionInstance",
+      "reuse_line": 146,
+      "reported_receipt": {
+        "line": 145,
+        "path": "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\15389568fb8f23ac\\bc4bd2616c0996a4963dd097e4510c95\\01a17eab8355a99a\\receipt.txt"
+      }
+    },
+    {
+      "module": "RiemannHypothesis.Xi.CanonicalProductPairedGrowth",
+      "reuse_line": 152,
+      "reported_receipt": {
+        "line": 151,
+        "path": "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\eab7eaa876857e59\\0c992ed1e72fd091599af49059dd1aea\\01a17eab861894df\\receipt.txt"
+      }
+    },
+    {
+      "module": "AngularMaster.ActualHadamard",
+      "reuse_line": 158,
+      "reported_receipt": {
+        "line": 157,
+        "path": "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\0bf2fd0379c9a014\\2bc14b03d9aa18fc04bf0af1fc8ef7db\\01a17eab88ebd05e\\receipt.txt"
+      }
+    },
+    {
+      "module": "AngularMaster.ComplexScaleProduct",
+      "reuse_line": 164,
+      "reported_receipt": {
+        "line": 163,
+        "path": "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\8a892a19d68417b7\\2c826276f2d5d5a28b273480ee570757\\01a17eab8ba56d88\\receipt.txt"
+      }
+    },
+    {
+      "module": "AngularMaster.ZeroGeometry",
+      "reuse_line": 170,
+      "reported_receipt": {
+        "line": 169,
+        "path": "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\7279654f4fa726c4\\aee262883c8c5ed58d6a4e75fefd0eeb\\01a17eab8e68d626\\receipt.txt"
+      }
+    },
+    {
+      "module": "AngularMaster.QQRHGeometry",
+      "reuse_line": 176,
+      "reported_receipt": {
+        "line": 175,
+        "path": "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\d7648884855fc7e1\\77ef971aa7a867c0e6251bde2ea54b9c\\01a17eab914f6272\\receipt.txt"
+      }
+    },
+    {
+      "module": "AngularMaster.LowHeightGeometry",
+      "reuse_line": 182,
+      "reported_receipt": {
+        "line": 181,
+        "path": "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\d140b18fdccef532\\4a411d74f2f34fd5e8a9dba1d6f1ad59\\01a17eab95034980\\receipt.txt"
+      }
+    },
+    {
+      "module": "AngularMaster.ThetaKernelExplicitBound",
+      "reuse_line": 188,
+      "reported_receipt": {
+        "line": 187,
+        "path": "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\8ec56becf1e847d0\\1345e92f16287ab175b8fb4e45373937\\01a17eab987c86c8\\receipt.txt"
+      }
+    },
+    {
+      "module": "AngularMaster.ZeroFreeSeed",
+      "reuse_line": 194,
+      "reported_receipt": {
+        "line": 193,
+        "path": "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\334d3f3c3e432d90\\06a9dace047f95848109fe8e90662844\\01a17eab9b3262e1\\receipt.txt"
+      }
+    },
+    {
+      "module": "OriginTrace",
+      "reuse_line": 200,
+      "reported_receipt": {
+        "line": 199,
+        "path": "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\c06015cc761fc48a\\fd0908e8903b3e58ca2b220e59152774\\01a17eab9e12ca24\\receipt.txt"
+      }
+    },
+    {
+      "module": "RH_HilbertLimit.GrowthStep",
+      "reuse_line": 206,
+      "reported_receipt": {
+        "line": 205,
+        "path": "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\0d707d9af456b64b\\0dcb5d7984519257a0047d9bb555a06e\\01a17eaba097aad6\\receipt.txt"
+      }
+    },
+    {
+      "module": "RH_HilbertLimit.FinitePrefix",
+      "reuse_line": 212,
+      "reported_receipt": {
+        "line": 211,
+        "path": "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\0e52a585e1fe1674\\f461b755c93df0c6dd5f11f2d6ae91a7\\01a17eaba3743230\\receipt.txt"
+      }
+    },
+    {
+      "module": "RH_HilbertLimit.SpectralTail",
+      "reuse_line": 218,
+      "reported_receipt": {
+        "line": 217,
+        "path": "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\dce44f38e301ce87\\5564a73f9b5e780bb50128b304cd11e3\\01a17eaba656c181\\receipt.txt"
+      }
+    },
+    {
+      "module": "RH_HilbertLimit.ActualCalibrationProgress",
+      "reuse_line": 224,
+      "reported_receipt": {
+        "line": 223,
+        "path": "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\b96a29859eecc947\\ec2a960ca66e0319c38fa7047c4efc15\\01a17eaba8f460da\\receipt.txt"
+      }
+    },
+    {
+      "module": "RH_HilbertLimit.ActualMomentReality",
+      "reuse_line": 230,
+      "reported_receipt": {
+        "line": 229,
+        "path": "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\93fc514e58db55d9\\590803a0fe178cb6038187afb0cdfdcd\\01a17eabab7c82a4\\receipt.txt"
+      }
+    },
+    {
+      "module": "RH_HilbertLimit.CanonicalBridge",
+      "reuse_line": 236,
+      "reported_receipt": {
+        "line": 235,
+        "path": "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\52e47af6a403a560\\f7590e7eee15dd85fc697f30c176c9ab\\01a17eabae30109b\\receipt.txt"
+      }
+    },
+    {
+      "module": "RH_HilbertLimit.SpectralGenerating",
+      "reuse_line": 242,
+      "reported_receipt": {
+        "line": 241,
+        "path": "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\08a37e641649fc73\\ba2970398c5b33f4377a3a6de207b86f\\01a17ed59225a473\\receipt.txt"
+      }
+    }
+  ],
+  "spectral_generating": {
+    "module": "RH_HilbertLimit.SpectralGenerating",
+    "newly_reported_reuse": true,
+    "record": {
+      "module": "RH_HilbertLimit.SpectralGenerating",
+      "reuse_line": 242,
+      "reported_receipt": {
+        "line": 241,
+        "path": "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\08a37e641649fc73\\ba2970398c5b33f4377a3a6de207b86f\\01a17ed59225a473\\receipt.txt"
+      }
+    },
+    "evidence": [
+      {
+        "line": 238,
+        "text": "HASH_PHASE=ANCHOR:RH_HilbertLimit.SpectralGenerating|FILES=3|BACKEND=CERTUTIL|ELAPSED_MS=63|COMPLETE"
+      },
+      {
+        "line": 239,
+        "text": "HASH_PHASE=RESTORE_DESTINATIONS:RH_HilbertLimit.SpectralGenerating|FILES=1|BACKEND=CERTUTIL|ELAPSED_MS=37|COMPLETE"
+      },
+      {
+        "line": 240,
+        "text": "BUILD_ARTIFACT_RESTORED=RH_HilbertLimit.SpectralGenerating"
+      },
+      {
+        "line": 241,
+        "text": "SOURCE_ANCHOR_RECEIPT=E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\08a37e641649fc73\\ba2970398c5b33f4377a3a6de207b86f\\01a17ed59225a473\\receipt.txt"
+      },
+      {
+        "line": 242,
+        "text": "FROZEN_REUSE=RH_HilbertLimit.SpectralGenerating"
+      },
+      {
+        "line": 243,
+        "text": "MODULE_ELAPSED_MS=RH_HilbertLimit.SpectralGenerating|346|FROZEN_REUSED"
+      },
+      {
+        "line": 247,
+        "text": "FAILED_STAGE=MODULE:RH_HilbertLimit.SpectralGenerating"
+      }
+    ],
+    "classification": "Reported restoration and FROZEN_REUSE of an existing anchor, not a new compile in this excerpt.",
+    "receipt_contents_received": false,
+    "prior_compile_time_or_run_known": false,
+    "whole_endpoint_promotion_permitted": false
+  },
+  "memory_failure": {
+    "free_mb_as_logged": 5479,
+    "required_mb_as_logged": 10476,
+    "reported_deficit_mb": 4997,
+    "live_workers": 0,
+    "evidence": [
+      {
+        "line": 248,
+        "text": "REASON=PARALLEL_RESOURCE_BLOCKED: FREE_MB=5479|REQUIRED_MB=10476|LIVE_WORKERS=0"
+      }
+    ],
+    "unit_note": "The source labels these MB after dividing WMI kilobytes by 1024; no startup memory totals or policy settings are supplied here.",
+    "exact_reserve_worker_sidecar_breakdown_known": false,
+    "failed_stage_caveat": "MODULE:RH_HilbertLimit.SpectralGenerating is the last processed module context. The immediate failure reason is the subsequent scheduler admission guard, after that module reports FROZEN_REUSE."
+  },
+  "timing": {
+    "project_modules_stage_ms": 58646,
+    "outcome": "ERROR",
+    "evidence": [
+      {
+        "line": 245,
+        "text": "STAGE_ELAPSED_MS=PROJECT_MODULES|58646|ERROR"
+      }
+    ],
+    "whole_run_duration_known": false,
+    "performance_improvement_established": false
+  },
+  "lock_retention": {
+    "retained": true,
+    "reason": "WORKER_INVENTORY_UNCERTAIN / unresolved legacy relative-path native_runner.js",
+    "evidence": [
+      {
+        "line": 250,
+        "text": "RUNNER_LOCK_RETAINED=WORKER_INVENTORY_UNCERTAIN : LOCK_STATE_UNKNOWN: a legacy relative-path native_runner.js is active; its package cannot be distinguished. No lock was changed."
+      }
+    ],
+    "pid_or_creation_identity_supplied": false,
+    "same_workspace_or_other_workspace_established": false,
+    "source_interpretation": "The existing lock guard rejects unresolved relative native_runner.js when its snapshot argument is truthy; shutdown passes an ownerless truthy snapshot. The tail does not prove the observed process belongs to another workspace."
+  },
+  "missing_evidence": [
+    "Startup PACKAGE/RUNNER and runner-source fingerprint",
+    "Native compiler version and toolchain fingerprint",
+    "Initial total/free RAM, worker cap, reserve/worker allowance, sidecar mode and budget",
+    "The first part of the module log and full compile/reuse/failure totals",
+    "Receipt, audit-log and artifact bytes for the reported anchors",
+    "The selected final aggregate output and 370-target axiom audit",
+    "A complete run-result.json",
+    "PID/creation/command ancestry for the unresolved relative runner"
+  ],
+  "mathematical_status": {
+    "whole_build": "FAIL",
+    "current_endpoint_promoted": false,
+    "unconditional_RH": "NOT_ESTABLISHED",
+    "finite_checker_equivalence": "OPEN"
+  },
+  "review_execution": {
+    "source_and_text_reads_only": true,
+    "native_execution": false,
+    "lean_lake_execution": false,
+    "csharp_execution": false,
+    "new_regression_execution": false
+  }
+}

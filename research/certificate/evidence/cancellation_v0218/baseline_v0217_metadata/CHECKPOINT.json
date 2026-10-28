@@ -1,0 +1,317 @@
+{
+  "schema": "RH_HILBERT_V0217_RUNTIME_REPAIR_FROZEN_PROOF_CHECKPOINT_V1",
+  "branch": "RH_HILBERT_LIMIT",
+  "mode": "A_TIER_LEAN",
+  "target": "LOCAL_COMPILER",
+  "source_package": "RH_HILBERT_LIMIT_LEAN_v0_2_16_construction",
+  "source_zip_sha256": "03c16d7cd2cdfb9e6fa5081d7084a667e2f27f34bb313c8993d55f379b24074d",
+  "checkpoint_package": "RH_HILBERT_LIMIT_LEAN_v0_2_17_construction",
+  "evidence_class": "V0_2_16_REPORTED_STANDARD_AXIOM_AUDIT_PASS_PRESERVED; V0_2_17_RUNTIME_REPAIR_NOT_NATIVELY_RUN",
+  "reported_run": {
+    "evidence_kind": "USER_MESSAGE_UTF8_LF_TRANSCRIPTION_NOT_ORIGINAL_NATIVE_LOG_BYTES",
+    "reported_package": "RH_HILBERT_LIMIT_LEAN_v0_2_16_construction",
+    "reported_build": "PASS",
+    "reported_run": "PASS",
+    "reported_axiom_audit": "PASS_STANDARD_LOGICAL_AXIOMS_ONLY",
+    "reported_sorryax": "NONE",
+    "reported_final_audit": "AnalyticAudit.lean",
+    "reported_formal_closure": "OPEN",
+    "reported_finite_checker_equivalence": "OPEN",
+    "reported_compiled_modules": 0,
+    "reported_frozen_reused_modules": 90,
+    "reported_counts": {
+      "compiled_modules": 0,
+      "frozen_reused_modules": 90,
+      "audit_only_modules": 0,
+      "legacy_migrated_modules": 0,
+      "working_artifact_modules_retained": 0,
+      "restored_artifact_files": 90,
+      "anchor_history_scans": 0,
+      "compact_anchors_saved": 0,
+      "combined_working_digests_consumed": 0,
+      "final_audit_declarations": 370
+    },
+    "reported_stages": {
+      "PROJECT_MODULES": {
+        "elapsed_ms": 53350,
+        "result": "RETURNED"
+      },
+      "FINAL_AUDIT": {
+        "elapsed_ms": 469,
+        "result": "RETURNED"
+      },
+      "WORKER_SHUTDOWN": {
+        "elapsed_ms": 270,
+        "result": "RETURNED"
+      }
+    },
+    "reported_logical_tool_launches": {
+      "certutil": 401,
+      "csc": 0,
+      "helper": 2,
+      "lean": 2,
+      "other": 0,
+      "ram_warm": 0,
+      "total": 405
+    },
+    "reported_hash_phase_totals": {
+      "batch_sets": 1,
+      "certutil_sets": 183,
+      "elapsed_ms": 34526,
+      "failed_sets": 0,
+      "files": 37509,
+      "sets": 184
+    },
+    "reported_ram_warm": "SKIPPED_NO_ELIGIBLE_DIRTY_FRONTIER",
+    "source_sha256": "d4c7ca9f9d6b20e4d0085f7c3cbdd2105957263746b2bb0bb6668bdb81d07f15",
+    "source_bytes": 2014,
+    "source": "evidence/reuse_record_v0216/evidence/USER_NATIVE_REUSE_TAIL.txt",
+    "review": "evidence/reuse_record_v0216/evidence/NATIVE_REUSE_TAIL_REVIEW.json",
+    "source_anchor_receipt_path_as_reported": "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\306d31ec023b7765\\efe6a0ea0d5554bca15985613c6d0eb2\\01a17f23ecf728ce\\receipt.txt",
+    "native_receipt_contents": "NOT_SUPPLIED; PATH_ONLY",
+    "native_source_dependency_toolchain_and_artifact_fingerprints": "NOT_SUPPLIED_IN_EXCERPT",
+    "direct_per_declaration_axiom_output": "NOT_SUPPLIED; EXPLICIT_AGGREGATE_AUDIT_SUMMARY_PRESENT",
+    "independent_exact_native_verification": "NOT_PERFORMED",
+    "first_marker": "CLIPPED_PREFIX_PRESERVED_VERBATIM; NOT_RECONSTRUCTED",
+    "timing_scope": "Stage and hash aggregate counters only; whole-run wall time is absent."
+  },
+  "all_lean_sources_byte_preserved": 92,
+  "changed_mathematical_declarations": [],
+  "changed_runtime_policy": true,
+  "source_manifest": "evidence/checkpoint_v0216/FROZEN_LEAN_SOURCE_HASHES_V0215.json",
+  "selected_final_audit": "AnalyticAudit.lean",
+  "selected_axiom_targets": 370,
+  "exact_endpoint_declarations": [
+    {
+      "kind": "def",
+      "name": "RH_HilbertLimit.actualCanonicalCalibration",
+      "type": "ActualSpectralCalibration AngularMaster.ActualPairIndex",
+      "selected_aggregate_check": true,
+      "selected_aggregate_axiom_print": true,
+      "target_manifest_present": true
+    },
+    {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.actualCanonicalDominantExtraction",
+      "type": "DominantExtraction actualCanonicalCalibration",
+      "selected_aggregate_check": true,
+      "selected_aggregate_axiom_print": true,
+      "target_manifest_present": true
+    },
+    {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.canonical_actual_root_tendsto_constructed",
+      "type": "Tendsto (rootScale actualVariation) atTop (𝓝 (spectralRadius canonicalNode))",
+      "selected_aggregate_check": true,
+      "selected_aggregate_axiom_print": true,
+      "target_manifest_present": true
+    },
+    {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.canonical_actual_root_limit_exists",
+      "type": "∃ R : ℝ, 1 ≤ R ∧ Tendsto (rootScale actualVariation) atTop (𝓝 R)",
+      "selected_aggregate_check": true,
+      "selected_aggregate_axiom_print": true,
+      "target_manifest_present": true
+    },
+    {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.canonical_actual_root_one_iff_nativeRH",
+      "type": "Tendsto (rootScale actualVariation) atTop (𝓝 1) ↔ _root_.RiemannHypothesis",
+      "selected_aggregate_check": true,
+      "selected_aggregate_axiom_print": true,
+      "target_manifest_present": true
+    },
+    {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.canonical_actual_subexponential_iff_nativeRH",
+      "type": "Subexponential actualVariation ↔ _root_.RiemannHypothesis",
+      "selected_aggregate_check": true,
+      "selected_aggregate_axiom_print": true,
+      "target_manifest_present": true
+    },
+    {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.canonical_actual_all_variation_one_iff_nativeRH",
+      "type": "(∀ N, actualVariation N = 1) ↔ _root_.RiemannHypothesis",
+      "selected_aggregate_check": true,
+      "selected_aggregate_axiom_print": true,
+      "target_manifest_present": true
+    },
+    {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.canonical_actual_weights_nonnegative_iff_nativeRH",
+      "type": "(∀ N j, j ≤ N → 0 ≤ actualWeight N j) ↔ _root_.RiemannHypothesis",
+      "selected_aggregate_check": true,
+      "selected_aggregate_axiom_print": true,
+      "target_manifest_present": true
+    },
+    {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.canonical_actual_natural_growth_step_iff_nativeRH_constructed",
+      "type": "(∃ K : ℕ, NaturalGrowthStep actualVariation K) ↔ _root_.RiemannHypothesis",
+      "selected_aggregate_check": true,
+      "selected_aggregate_axiom_print": true,
+      "target_manifest_present": true
+    },
+    {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.canonical_actual_natural_bound_iff_nativeRH_constructed",
+      "type": "(∃ B : ℕ, ∀ n : ℕ, actualVariation n ≤ (B : ℝ)) ↔ _root_.RiemannHypothesis",
+      "selected_aggregate_check": true,
+      "selected_aggregate_axiom_print": true,
+      "target_manifest_present": true
+    }
+  ],
+  "formal_closure": "OPEN",
+  "finite_checker_equivalence": "OPEN",
+  "accepted_finite_witness": null,
+  "unconditional_rh": "NOT_ESTABLISHED",
+  "obtained_witness_required_for_formal_closure": false,
+  "cache_reuse": "Only matching same-target source/dependency/toolchain/artifact/audit identities are reusable.",
+  "expected_warm_counts_if_all_90_anchors_validate": {
+    "compiled_modules": 0,
+    "frozen_reused_modules": 90
+  },
+  "warm_counts_are_observed": false,
+  "new_native_or_test_execution": true,
+  "not_an_init_record": true,
+  "previous_reported_run": {
+    "evidence_kind": "USER_MESSAGE_UTF8_LF_TRANSCRIPTION_NOT_ORIGINAL_NATIVE_LOG_BYTES",
+    "reported_package": "RH_HILBERT_LIMIT_LEAN_v0_2_15_construction",
+    "reported_build": "PASS",
+    "reported_run": "PASS",
+    "reported_formal_closure": "OPEN",
+    "reported_compiled_modules": 5,
+    "reported_frozen_reused_modules": 85,
+    "reported_compact_anchors_saved": 5,
+    "reported_counts": {
+      "formal_closure": "OPEN",
+      "compiled_modules": 5,
+      "frozen_reused_modules": 85,
+      "audit_only_modules": 0,
+      "legacy_migrated_modules": 0,
+      "project_build": "PASS",
+      "run": "PASS",
+      "working_artifact_modules_retained": 0,
+      "restored_artifact_files": 85,
+      "anchor_history_scans": 5,
+      "compact_anchors_saved": 5,
+      "combined_working_digests_consumed": 0,
+      "logical_tool_launches": {
+        "certutil": 401,
+        "csc": 0,
+        "helper": 2,
+        "lean": 11,
+        "other": 0,
+        "ram_warm": 0,
+        "total": 414
+      },
+      "hash_phase_totals": {
+        "batch_sets": 1,
+        "certutil_sets": 183,
+        "elapsed_ms": 51231,
+        "failed_sets": 0,
+        "files": 37509,
+        "sets": 184
+      }
+    },
+    "source_sha256": "06566411d1665dd1f45dc0e8876c0597e95f343c84321453a735ff75af0a568c",
+    "source_bytes": 671,
+    "review": "evidence/checkpoint_v0216/evidence/NATIVE_PASS_TAIL_REVIEW.json",
+    "direct_axiom_output": "NOT_IN_SUPPLIED_EXCERPT",
+    "native_receipts_and_fingerprints": "NOT_SUPPLIED",
+    "audit_inference": "If the reported run used the reviewed package unchanged, PASS occurs after its selected audit and guarded shutdown.",
+    "independent_exact_native_verification": "NOT_PERFORMED"
+  },
+  "delivery_filename": "RH_HILBERT_LIMIT_LEAN_v0_2_17_construction.zip",
+  "canonical_archive_root": "RH_HILBERT_LIMIT_LEAN_v0_2_17_construction",
+  "warm_count_observation_scope": "NOT_OBSERVED_FOR_V0_2_17",
+  "package_and_runner_identity_changed": true,
+  "all_runner_and_helper_bytes_preserved": false,
+  "previous_checkpoint": "evidence/shutdown_fix_v0217/baseline_v0216_metadata/CHECKPOINT.json",
+  "latest_user_run": {
+    "evidence_kind": "USER_MESSAGE_UTF8_LF_TRANSCRIPTION_NOT_ORIGINAL_NATIVE_LOG_BYTES",
+    "reported_package": "RH_HILBERT_LIMIT_LEAN_v0_2_16_construction",
+    "reported_build": "FAIL",
+    "reported_run": "FAIL",
+    "failed_stage": "WORKER_SHUTDOWN",
+    "reported_parallel_peak_module_workers": 0,
+    "reported_new_or_reaudited_tasks": 0,
+    "reported_selected_final_audit": "AnalyticAudit.lean",
+    "reported_final_audit_declarations": 370,
+    "reported_retained_and_reused_final_module": "AnalyticAudit",
+    "reported_stage_elapsed_ms": {
+      "PROJECT_MODULES": 51424,
+      "FINAL_AUDIT": 395,
+      "WORKER_SHUTDOWN": 3089
+    },
+    "reported_shutdown_inventory": {
+      "reported_admitted_host_pid": 34008,
+      "worker_observations": [
+        {
+          "pid": 36224,
+          "parent_pid_as_reported": 34008,
+          "creation_string_as_reported": "20261027221141.871213+060",
+          "name": "certutil.exe",
+          "attempt": 1
+        },
+        {
+          "pid": 39212,
+          "parent_pid_as_reported": 34008,
+          "creation_string_as_reported": "20261027221142.436092+060",
+          "name": "certutil.exe",
+          "attempt": 2
+        },
+        {
+          "pid": 24364,
+          "parent_pid_as_reported": 34008,
+          "creation_string_as_reported": "20261027221142.965889+060",
+          "name": "certutil.exe",
+          "attempt": 3
+        },
+        {
+          "pid": 38276,
+          "parent_pid_as_reported": 34008,
+          "creation_string_as_reported": "20261027221143.494456+060",
+          "name": "certutil.exe",
+          "attempt": 4
+        },
+        {
+          "pid": 39088,
+          "parent_pid_as_reported": 34008,
+          "creation_string_as_reported": "20261027221144.050284+060",
+          "name": "certutil.exe",
+          "attempt": 5
+        },
+        {
+          "pid": 8836,
+          "parent_pid_as_reported": 34008,
+          "creation_string_as_reported": "20261027221144.609267+060",
+          "name": "certutil.exe",
+          "attempt": 6
+        }
+      ],
+      "distinct_observed_worker_pids": 6,
+      "attempt_count": 6,
+      "common_parent_pid_as_reported": 34008,
+      "inventory_recheck_count": 5,
+      "interpretation": "Six distinct certutil.exe PID observations across six attempts share the reported numeric parent field. Their unreadable command lines prevented exclusion by the shutdown inventory. The parent field alone does not establish current process identity, process ownership, or a foreign/current workspace."
+    },
+    "source": "evidence/shutdown_fix_v0217/evidence/USER_NATIVE_SHUTDOWN_FAIL_TAIL.txt",
+    "source_sha256": "d5d0f7e509bbf1eec992b010752aaf76a57422472e2f228cd70cc1424e427d6f",
+    "source_bytes": 2553,
+    "review": "evidence/shutdown_fix_v0217/evidence/NATIVE_SHUTDOWN_FAIL_REVIEW.json",
+    "final_overall_axiom_summary": "NOT_EMITTED_IN_FAILED_EXCERPT",
+    "aggregate_compiled_and_reused_module_counts": "NOT_SUPPLIED_IN_FAILED_EXCERPT",
+    "all_90_working_artifacts_retained": "NOT_INFERRED_FROM_FINAL_AUDIT_RETENTION_LINE",
+    "native_receipt_contents_or_exact_fingerprints": "NOT_SUPPLIED",
+    "independent_native_verification": "NOT_PERFORMED",
+    "first_marker": "CLIPPED_PREFIX_PRESERVED_VERBATIM"
+  },
+  "reported_run_scope": "Historical successful v0.2.16 report, preserved separately from latest shutdown failure.",
+  "helper_and_launcher_bytes_preserved": true,
+  "runtime_change_scope": "Process lifetime accounting and shutdown-only exact-row revalidation; source/cache/audit policies preserved.",
+  "new_native_execution": false,
+  "new_runtime_test_scope": "TARGETED_NODE_VM_MOCKS_ONLY"
+}

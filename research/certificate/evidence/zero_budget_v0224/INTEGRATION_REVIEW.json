@@ -1,0 +1,140 @@
+{
+  "schema": "RH_HILBERT_V0224_INDEPENDENT_INTEGRATION_REVIEW_V1",
+  "reviewer": "/root/lock_review",
+  "status": "STATIC_INTEGRATION_CHECKS_PASS; NATIVE_AUDIT_PENDING",
+  "blockers": [],
+  "package": "RH_HILBERT_LIMIT_LEAN_v0_2_24_construction",
+  "baseline_package": "RH_HILBERT_LIMIT_LEAN_v0_2_23_construction",
+  "runner_sha256": "bcb5911d6b9c6c87a8d4271948546c6632591c5bced36b3b96037a7b0a5a6104",
+  "baseline_runner_sha256": "3dd2f760861c2cad12cfae1c5e37dc38f009f6f22037dddaaaa407acad8850f5",
+  "new_source_sha256": {
+    "RH_HilbertLimit/ZeroBudgetCandidate.lean": "6bd77ae2b11382699d612b90205a3c31c0db6055163dcdd85dfa3a72f6835f65",
+    "RH_HilbertLimit/ZeroBudgetFirstMoment.lean": "6d542388e484a68a5d0c0eb4d19939aacaa071a0bba3b258cd6f8cd4a0e359eb",
+    "ZeroBudgetAudit.lean": "b86be6ddf2581c99acd32bbafd4412b80c44e710f44ec2221f6e923c7c636285"
+  },
+  "reviewed_manifest_sha256": {
+    "compile-order.txt": "5f215628630ec35b5f0bb9a6f28839af1ddbbb6b12dd239a1a328ab2871086e0",
+    "final-audit.txt": "8f586a0ffa546db38e46a6b380a814cb3ec7318d07f0f8a670758281bc4e5809",
+    "audit-targets.tsv": "6127e11e5b9e88cd954356585334cb37d72b8b93696018938fbb016d93debeba",
+    "mathlib-imports.txt": "0c2ef006a5917ffe890cf1483b524435038824c7116ca8fe49533d4d9a4da31c",
+    "DECLARATIONS.json": "f4fd5411773619cd3065abdd05303d219a592cb101e8456159c117a9a1a70ec0",
+    "STATUS.json": "a27e7a207a726ac6026d410859f9c56801e4becb0a97a64d7a5e1bc5d6c7b056",
+    "CHECKPOINT.json": "72e5aa617e3bd91fb590debcfff85807d5ad683d757ed0226404fa1011364ce7"
+  },
+  "source_preservation": {
+    "inherited_lean_files": 96,
+    "inherited_lean_files_byte_identical": 96,
+    "added_lean_files": [
+      "RH_HilbertLimit/ZeroBudgetCandidate.lean",
+      "RH_HilbertLimit/ZeroBudgetFirstMoment.lean",
+      "ZeroBudgetAudit.lean"
+    ],
+    "total_lean_files": 99,
+    "old_declaration_records_preserved": 1129,
+    "new_declaration_records": 34,
+    "new_declarations_by_module": {
+      "RH_HilbertLimit.ZeroBudgetCandidate": 19,
+      "RH_HilbertLimit.ZeroBudgetFirstMoment": 15
+    },
+    "all_new_records_native_audit_pending": true,
+    "new_record_names_source_lines_and_hashes_checked": true
+  },
+  "manifest_checks": {
+    "ordinary_modules": 94,
+    "active_modules_including_final": 95,
+    "selected_final_audit": "ZeroBudgetAudit.lean",
+    "prior_ordinary_plan_preserved_in_order": 92,
+    "prior_audit_rows_preserved_in_order": 394,
+    "selected_unique_audit_targets": 428,
+    "exact_check_commands": 428,
+    "exact_print_axioms_commands": 428,
+    "registry_and_command_sequences_identical": true,
+    "all_ordinary_modules_have_targets": true,
+    "topological_local_import_order": true,
+    "all_ordinary_modules_in_final_import_closure": true,
+    "direct_mathlib_requirements": 91,
+    "direct_mathlib_set_equals_manifest": true,
+    "mathlib_manifest_byte_preserved": true,
+    "inventory_records": 1163,
+    "compiled_artifacts_supplied": false
+  },
+  "runtime_review": {
+    "normalized_raw_bytes_match": true,
+    "allowed_changes": [
+      "two package/version constants",
+      "two mathematical-status literals",
+      "six JSON reporting fields",
+      "six post-success log lines"
+    ],
+    "compile_cache_audit_scheduling_memory_lock_shutdown_decisions": "BYTE_PRESERVED",
+    "launcher_toolchain_mathlib_manifest_follower_and_native_helpers": "BYTE_PRESERVED",
+    "new_runtime_tests": false,
+    "whole_runner_execution": false,
+    "reporting_success_requires_existing_final_audit_and_shutdown_success": true,
+    "failure_reporting_keeps_first_refinement_native_pending": true
+  },
+  "mathematical_reporting": {
+    "candidate": {
+      "cutoff": 0,
+      "coefficient": 0
+    },
+    "first_refinement_goal": "rowCancellation actualNormalizedMoment 0 = 0",
+    "current_first_refinement_status": "PROOF_SOURCE_PREPARED_WITHOUT_RH_HYPOTHESIS; NATIVE_AUDIT_PENDING",
+    "first_refinement_verified_here": false,
+    "future_success_refinement_scope": "INDEX_0_ONLY",
+    "universal_propagation": "OPEN",
+    "zero_budget_admissibility": "OPEN",
+    "finite_checker_soundness": "OPEN",
+    "finite_checker_equivalence": "OPEN",
+    "formal_closure": "OPEN",
+    "accepted_finite_witness": "NOT_ESTABLISHED",
+    "unconditional_rh": "NOT_ESTABLISHED"
+  },
+  "historical_evidence": {
+    "latest_reported_package": "RH_HILBERT_LIMIT_LEAN_v0_2_23_construction",
+    "latest_reported_run": "PASS",
+    "latest_reported_compiled": 0,
+    "latest_reported_frozen_reused": 93,
+    "latest_reported_final_targets": 394,
+    "latest_explicit_axiom_prints": 0,
+    "latest_transcription_sha256": "bc979cc99ecc92df001d89d5b06ef7710cd21c400dcff6ef71e8c3d1c4d1c228",
+    "latest_evidence_is_cached_aggregate_not_new_v024_proof_audit": true,
+    "prior_explicit_package": "RH_HILBERT_LIMIT_LEAN_v0_2_20_construction",
+    "prior_explicit_axiom_prints_preserved": 14,
+    "prior_explicit_evidence_unchanged": true,
+    "native_receipt_contents_independently_inspected": false,
+    "current_candidate_native_execution": "NOT_RUN"
+  },
+  "expected_work_if_old_anchors_validate": {
+    "old_ordinary_reuse": 92,
+    "new_source_driven_tasks": 3,
+    "counts_observed_for_v024": false
+  },
+  "proof_review_reference": {
+    "path": "tmp/zero_budget_v0224/review/PROOF_SOURCE_REVIEW.json",
+    "sha256": "8d109d28ea6d867a19a70e90a7e93bfb1f12ece0ad4711fad0bb47557307c2c3",
+    "scope": "Separate independent proof-source review, not kernel/native acceptance"
+  },
+  "pending_packaging_steps_excluded_from_this_review": [
+    "package.py copies PROOF_SOURCE_REVIEW.json to evidence/zero_budget_v0224/SOURCE_REVIEW.json and copies this integration review and syntax/reporting evidence",
+    "Regeneration of root STATIC_REVIEW.json, PROVENANCE.json and RUNNER_LOGIC_VALIDATION.json from the v0.2.24 source and review hashes",
+    "Regeneration and verification of SHA256SUMS.txt, ZIP bytes/member integrity and final archive digest",
+    "Delivery/save operation"
+  ],
+  "packaging_followthrough": {
+    "script": "tmp/zero_budget_v0224/package.py",
+    "sha256": "6e4bc5b608b45d5dbab068cdb17f5d2dfae91288d390587648e627a7e558a014",
+    "source_inspected": true,
+    "script_executed_by_reviewer": false,
+    "pending_steps_are_explicit_pre_delivery_requirements": true
+  },
+  "execution": {
+    "Lean": false,
+    "Lake": false,
+    "native_Windows_WSH": false,
+    "native_CSharp_compilation": false,
+    "CI": false,
+    "new_runtime_tests": false
+  },
+  "conclusion": "No integration or reporting blocker found. The two new proof modules and aggregate audit are source-prepared only. Old proof sources and execution policies are preserved; current source-review evidence must not be presented as native acceptance."
+}

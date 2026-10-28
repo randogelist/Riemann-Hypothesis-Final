@@ -1,0 +1,20 @@
+{
+  "current_parent_package": "RH_HILBERT_LIMIT_LEAN_v0_2_6_construction",
+  "current_parent_zip_sha256": "a418f966055d527df4c2e10bcd035d81052e93ec63fed23b5364c589d6b25227",
+  "current_parent_version": 6,
+  "native_runner_change_from_v025": "PACKAGE_LABEL_ONLY_VERIFIED",
+  "parent_runner_sha256": "de355f04fe3f59fad64c90613c7731dd37dfe795298769465d08c83482d7a165",
+  "all_86_lean_sources_byte_identical": true,
+  "native_helper_and_proof_manifests_byte_identical": true,
+  "new_parent_features_preserved": [
+    "Read-only tools/follow_active.js",
+    "run.cmd --follow-root dispatch",
+    "19-case inherited observer report",
+    "Active-owner evidence and documentation"
+  ],
+  "cmd_sha256": "5e6c6561c370c904b13d165986f0c045c6e7732de1745744b03619cf4a4b9f16",
+  "observer_sha256": "beb08b78f7c8ef53d06db9e99b266f1fb5a33cbb21d936a71dd6b1a8354f024f",
+  "observer_tests_inherited": 19,
+  "observer_tests_rerun": false,
+  "guarded_replacement_required": true
+}

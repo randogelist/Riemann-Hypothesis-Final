@@ -1,0 +1,40 @@
+{
+  "schema": "RH_HILBERT_USER_NATIVE_HASH_FAILURE_V1",
+  "evidence_type": "TRANSCRIPTION_OF_USER_MESSAGE_WITH_NATIVE_CONSOLE_TAIL",
+  "raw_file": "evidence/USER_HASH_FAILURE_v029.txt",
+  "raw_sha256": "c401da6b4a64f164e99f559957a42010532ac8a13984fb1df4875f1071c00481",
+  "bytes": 986,
+  "package_path_reported": "RH_HILBERT_LIMIT_LEAN_v0_2_9_construction",
+  "package_identity_basis": "Final Logs paths; no runner source fingerprint in excerpt",
+  "reported_dependency_content_files": 37108,
+  "reported_hash_mode": "AUTO",
+  "reported_helper_inputs": {
+    "files": 16,
+    "backend": "CERTUTIL",
+    "elapsed_ms": 247,
+    "outcome": "COMPLETE"
+  },
+  "reported_helper_inputs_recheck": {
+    "files": 16,
+    "backend": "CERTUTIL",
+    "elapsed_ms": 138,
+    "outcome": "COMPLETE"
+  },
+  "reported_content_fingerprints_elapsed_ms": 1088,
+  "reported_project_build": "FAIL",
+  "reported_run": "FAIL",
+  "reported_failed_stage": "CONTENT_FINGERPRINTS",
+  "reported_failed_file_kind": "New hash-helper staging build.log",
+  "reported_error_hex": "0x800703ee",
+  "reported_win32_error": 1006,
+  "reported_error_name": "ERROR_FILE_INVALID",
+  "dependency_discovery_completed_before_hashing": "Supported by37108-file hash-stage entry and reviewed runner control flow",
+  "native_graph_elapsed_ms": null,
+  "actual_failed_file_size_or_content_supplied": false,
+  "empty_build_log_hypothesis": "PLAUSIBLE_FROM_QUIET_HELPER_BUILD; NOT_ESTABLISHED_BY_THE_ERROR_CODE",
+  "new_recovery_condition": "Recognized certutil error plus current binary LoadFromFile with Size0 Position0 EOStrue and FSO Size0 before/after",
+  "nonempty_or_unreadable_file_recovery_allowed": false,
+  "new_proof_build_or_axiom_audit_pass_in_excerpt": false,
+  "previous_v025_proof_pass_evidence": "PRESERVED_SEPARATELY; THIS_STARTUP_FAILURE_DOES_NOT_SUPERSEDE_ITS_CONTENT",
+  "current_preparation_native_execution": false
+}

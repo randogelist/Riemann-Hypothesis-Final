@@ -1,0 +1,11 @@
+{
+  "package": "RH_HILBERT_LIMIT_LEAN_v0_2_12_construction",
+  "runner_sha256": "b11c97c591c5e200978fcfff5f37d6f6cd4b9388a464697a673174ab20c5a632",
+  "old_lean_files_preserved": 92,
+  "frozen_inputs": 102,
+  "replacement_sites": 18,
+  "native_build": "NOT_RUN",
+  "proof_statements_and_audit_targets": "BYTE_IDENTICAL",
+  "javascript_syntax": "PASS",
+  "ram_helper_present": true
+}

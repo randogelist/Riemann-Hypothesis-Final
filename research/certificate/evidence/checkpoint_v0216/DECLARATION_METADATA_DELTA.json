@@ -1,0 +1,1811 @@
+[
+  {
+    "name": "RH_HilbertLimit.CanonicalPowerSumAnalysis.massBound",
+    "before": {
+      "kind": "def",
+      "name": "RH_HilbertLimit.CanonicalPowerSumAnalysis.massBound",
+      "source_line": 35,
+      "module": "RH_HilbertLimit.CanonicalPowerSums",
+      "source": "RH_HilbertLimit/CanonicalPowerSums.lean",
+      "source_sha256": "2aecbd7e10aa87c0ce726026d563d6a33caf0b99e58f824719cf5a99a6217169",
+      "status": "NEW_SOURCE_CANDIDATE_NATIVE_COMPILE_AND_AXIOM_AUDIT_NOT_RUN",
+      "evidence": "evidence/analytic_v0211/source_reviews",
+      "receipt_validation": "NEW_SAME_TARGET_NATIVE_RECEIPT_REQUIRED"
+    },
+    "after": {
+      "kind": "def",
+      "name": "RH_HilbertLimit.CanonicalPowerSumAnalysis.massBound",
+      "source_line": 35,
+      "module": "RH_HilbertLimit.CanonicalPowerSums",
+      "source": "RH_HilbertLimit/CanonicalPowerSums.lean",
+      "source_sha256": "55e10b78e84bb2ec7cfbd693e5275f46b4ada256bda0530ccb4c0e80337e65de",
+      "status": "USER_REPORTED_V0_2_15_AGGREGATE_RUN_PASS",
+      "evidence": "evidence/checkpoint_v0216/evidence/NATIVE_PASS_TAIL_REVIEW.json",
+      "receipt_validation": "REQUIRED_ON_USER_MACHINE_FOR_REUSE",
+      "evidence_scope": "Aggregate PASS summary only; expected selected audit coverage verified in source. Direct native declaration/audit/receipt/hash records not supplied.",
+      "source_hash_origin": "LOCAL_PACKAGE_BYTES; NOT_A_NATIVE_HASH_FROM_THE_PASTED_TAIL"
+    }
+  },
+  {
+    "name": "RH_HilbertLimit.CanonicalPowerSumAnalysis.resolventDomain",
+    "before": {
+      "kind": "def",
+      "name": "RH_HilbertLimit.CanonicalPowerSumAnalysis.resolventDomain",
+      "source_line": 38,
+      "module": "RH_HilbertLimit.CanonicalPowerSums",
+      "source": "RH_HilbertLimit/CanonicalPowerSums.lean",
+      "source_sha256": "2aecbd7e10aa87c0ce726026d563d6a33caf0b99e58f824719cf5a99a6217169",
+      "status": "NEW_SOURCE_CANDIDATE_NATIVE_COMPILE_AND_AXIOM_AUDIT_NOT_RUN",
+      "evidence": "evidence/analytic_v0211/source_reviews",
+      "receipt_validation": "NEW_SAME_TARGET_NATIVE_RECEIPT_REQUIRED"
+    },
+    "after": {
+      "kind": "def",
+      "name": "RH_HilbertLimit.CanonicalPowerSumAnalysis.resolventDomain",
+      "source_line": 38,
+      "module": "RH_HilbertLimit.CanonicalPowerSums",
+      "source": "RH_HilbertLimit/CanonicalPowerSums.lean",
+      "source_sha256": "55e10b78e84bb2ec7cfbd693e5275f46b4ada256bda0530ccb4c0e80337e65de",
+      "status": "USER_REPORTED_V0_2_15_AGGREGATE_RUN_PASS",
+      "evidence": "evidence/checkpoint_v0216/evidence/NATIVE_PASS_TAIL_REVIEW.json",
+      "receipt_validation": "REQUIRED_ON_USER_MACHINE_FOR_REUSE",
+      "evidence_scope": "Aggregate PASS summary only; expected selected audit coverage verified in source. Direct native declaration/audit/receipt/hash records not supplied.",
+      "source_hash_origin": "LOCAL_PACKAGE_BYTES; NOT_A_NATIVE_HASH_FROM_THE_PASTED_TAIL"
+    }
+  },
+  {
+    "name": "RH_HilbertLimit.CanonicalPowerSumAnalysis.resolvent",
+    "before": {
+      "kind": "def",
+      "name": "RH_HilbertLimit.CanonicalPowerSumAnalysis.resolvent",
+      "source_line": 41,
+      "module": "RH_HilbertLimit.CanonicalPowerSums",
+      "source": "RH_HilbertLimit/CanonicalPowerSums.lean",
+      "source_sha256": "2aecbd7e10aa87c0ce726026d563d6a33caf0b99e58f824719cf5a99a6217169",
+      "status": "NEW_SOURCE_CANDIDATE_NATIVE_COMPILE_AND_AXIOM_AUDIT_NOT_RUN",
+      "evidence": "evidence/analytic_v0211/source_reviews",
+      "receipt_validation": "NEW_SAME_TARGET_NATIVE_RECEIPT_REQUIRED"
+    },
+    "after": {
+      "kind": "def",
+      "name": "RH_HilbertLimit.CanonicalPowerSumAnalysis.resolvent",
+      "source_line": 41,
+      "module": "RH_HilbertLimit.CanonicalPowerSums",
+      "source": "RH_HilbertLimit/CanonicalPowerSums.lean",
+      "source_sha256": "55e10b78e84bb2ec7cfbd693e5275f46b4ada256bda0530ccb4c0e80337e65de",
+      "status": "USER_REPORTED_V0_2_15_AGGREGATE_RUN_PASS",
+      "evidence": "evidence/checkpoint_v0216/evidence/NATIVE_PASS_TAIL_REVIEW.json",
+      "receipt_validation": "REQUIRED_ON_USER_MACHINE_FOR_REUSE",
+      "evidence_scope": "Aggregate PASS summary only; expected selected audit coverage verified in source. Direct native declaration/audit/receipt/hash records not supplied.",
+      "source_hash_origin": "LOCAL_PACKAGE_BYTES; NOT_A_NATIVE_HASH_FROM_THE_PASTED_TAIL"
+    }
+  },
+  {
+    "name": "RH_HilbertLimit.CanonicalPowerSumAnalysis.resolventSeries",
+    "before": {
+      "kind": "def",
+      "name": "RH_HilbertLimit.CanonicalPowerSumAnalysis.resolventSeries",
+      "source_line": 44,
+      "module": "RH_HilbertLimit.CanonicalPowerSums",
+      "source": "RH_HilbertLimit/CanonicalPowerSums.lean",
+      "source_sha256": "2aecbd7e10aa87c0ce726026d563d6a33caf0b99e58f824719cf5a99a6217169",
+      "status": "NEW_SOURCE_CANDIDATE_NATIVE_COMPILE_AND_AXIOM_AUDIT_NOT_RUN",
+      "evidence": "evidence/analytic_v0211/source_reviews",
+      "receipt_validation": "NEW_SAME_TARGET_NATIVE_RECEIPT_REQUIRED"
+    },
+    "after": {
+      "kind": "def",
+      "name": "RH_HilbertLimit.CanonicalPowerSumAnalysis.resolventSeries",
+      "source_line": 44,
+      "module": "RH_HilbertLimit.CanonicalPowerSums",
+      "source": "RH_HilbertLimit/CanonicalPowerSums.lean",
+      "source_sha256": "55e10b78e84bb2ec7cfbd693e5275f46b4ada256bda0530ccb4c0e80337e65de",
+      "status": "USER_REPORTED_V0_2_15_AGGREGATE_RUN_PASS",
+      "evidence": "evidence/checkpoint_v0216/evidence/NATIVE_PASS_TAIL_REVIEW.json",
+      "receipt_validation": "REQUIRED_ON_USER_MACHINE_FOR_REUSE",
+      "evidence_scope": "Aggregate PASS summary only; expected selected audit coverage verified in source. Direct native declaration/audit/receipt/hash records not supplied.",
+      "source_hash_origin": "LOCAL_PACKAGE_BYTES; NOT_A_NATIVE_HASH_FROM_THE_PASTED_TAIL"
+    }
+  },
+  {
+    "name": "RH_HilbertLimit.CanonicalPowerSumAnalysis.one_le_massBound",
+    "before": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.CanonicalPowerSumAnalysis.one_le_massBound",
+      "source_line": 47,
+      "module": "RH_HilbertLimit.CanonicalPowerSums",
+      "source": "RH_HilbertLimit/CanonicalPowerSums.lean",
+      "source_sha256": "2aecbd7e10aa87c0ce726026d563d6a33caf0b99e58f824719cf5a99a6217169",
+      "status": "NEW_SOURCE_CANDIDATE_NATIVE_COMPILE_AND_AXIOM_AUDIT_NOT_RUN",
+      "evidence": "evidence/analytic_v0211/source_reviews",
+      "receipt_validation": "NEW_SAME_TARGET_NATIVE_RECEIPT_REQUIRED"
+    },
+    "after": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.CanonicalPowerSumAnalysis.one_le_massBound",
+      "source_line": 47,
+      "module": "RH_HilbertLimit.CanonicalPowerSums",
+      "source": "RH_HilbertLimit/CanonicalPowerSums.lean",
+      "source_sha256": "55e10b78e84bb2ec7cfbd693e5275f46b4ada256bda0530ccb4c0e80337e65de",
+      "status": "USER_REPORTED_V0_2_15_AGGREGATE_RUN_PASS",
+      "evidence": "evidence/checkpoint_v0216/evidence/NATIVE_PASS_TAIL_REVIEW.json",
+      "receipt_validation": "REQUIRED_ON_USER_MACHINE_FOR_REUSE",
+      "evidence_scope": "Aggregate PASS summary only; expected selected audit coverage verified in source. Direct native declaration/audit/receipt/hash records not supplied.",
+      "source_hash_origin": "LOCAL_PACKAGE_BYTES; NOT_A_NATIVE_HASH_FROM_THE_PASTED_TAIL"
+    }
+  },
+  {
+    "name": "RH_HilbertLimit.CanonicalPowerSumAnalysis.norm_le_massBound",
+    "before": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.CanonicalPowerSumAnalysis.norm_le_massBound",
+      "source_line": 52,
+      "module": "RH_HilbertLimit.CanonicalPowerSums",
+      "source": "RH_HilbertLimit/CanonicalPowerSums.lean",
+      "source_sha256": "2aecbd7e10aa87c0ce726026d563d6a33caf0b99e58f824719cf5a99a6217169",
+      "status": "NEW_SOURCE_CANDIDATE_NATIVE_COMPILE_AND_AXIOM_AUDIT_NOT_RUN",
+      "evidence": "evidence/analytic_v0211/source_reviews",
+      "receipt_validation": "NEW_SAME_TARGET_NATIVE_RECEIPT_REQUIRED"
+    },
+    "after": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.CanonicalPowerSumAnalysis.norm_le_massBound",
+      "source_line": 52,
+      "module": "RH_HilbertLimit.CanonicalPowerSums",
+      "source": "RH_HilbertLimit/CanonicalPowerSums.lean",
+      "source_sha256": "55e10b78e84bb2ec7cfbd693e5275f46b4ada256bda0530ccb4c0e80337e65de",
+      "status": "USER_REPORTED_V0_2_15_AGGREGATE_RUN_PASS",
+      "evidence": "evidence/checkpoint_v0216/evidence/NATIVE_PASS_TAIL_REVIEW.json",
+      "receipt_validation": "REQUIRED_ON_USER_MACHINE_FOR_REUSE",
+      "evidence_scope": "Aggregate PASS summary only; expected selected audit coverage verified in source. Direct native declaration/audit/receipt/hash records not supplied.",
+      "source_hash_origin": "LOCAL_PACKAGE_BYTES; NOT_A_NATIVE_HASH_FROM_THE_PASTED_TAIL"
+    }
+  },
+  {
+    "name": "RH_HilbertLimit.CanonicalPowerSumAnalysis.isOpen_resolventDomain",
+    "before": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.CanonicalPowerSumAnalysis.isOpen_resolventDomain",
+      "source_line": 58,
+      "module": "RH_HilbertLimit.CanonicalPowerSums",
+      "source": "RH_HilbertLimit/CanonicalPowerSums.lean",
+      "source_sha256": "2aecbd7e10aa87c0ce726026d563d6a33caf0b99e58f824719cf5a99a6217169",
+      "status": "NEW_SOURCE_CANDIDATE_NATIVE_COMPILE_AND_AXIOM_AUDIT_NOT_RUN",
+      "evidence": "evidence/analytic_v0211/source_reviews",
+      "receipt_validation": "NEW_SAME_TARGET_NATIVE_RECEIPT_REQUIRED"
+    },
+    "after": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.CanonicalPowerSumAnalysis.isOpen_resolventDomain",
+      "source_line": 58,
+      "module": "RH_HilbertLimit.CanonicalPowerSums",
+      "source": "RH_HilbertLimit/CanonicalPowerSums.lean",
+      "source_sha256": "55e10b78e84bb2ec7cfbd693e5275f46b4ada256bda0530ccb4c0e80337e65de",
+      "status": "USER_REPORTED_V0_2_15_AGGREGATE_RUN_PASS",
+      "evidence": "evidence/checkpoint_v0216/evidence/NATIVE_PASS_TAIL_REVIEW.json",
+      "receipt_validation": "REQUIRED_ON_USER_MACHINE_FOR_REUSE",
+      "evidence_scope": "Aggregate PASS summary only; expected selected audit coverage verified in source. Direct native declaration/audit/receipt/hash records not supplied.",
+      "source_hash_origin": "LOCAL_PACKAGE_BYTES; NOT_A_NATIVE_HASH_FROM_THE_PASTED_TAIL"
+    }
+  },
+  {
+    "name": "RH_HilbertLimit.CanonicalPowerSumAnalysis.zero_mem_resolventDomain",
+    "before": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.CanonicalPowerSumAnalysis.zero_mem_resolventDomain",
+      "source_line": 62,
+      "module": "RH_HilbertLimit.CanonicalPowerSums",
+      "source": "RH_HilbertLimit/CanonicalPowerSums.lean",
+      "source_sha256": "2aecbd7e10aa87c0ce726026d563d6a33caf0b99e58f824719cf5a99a6217169",
+      "status": "NEW_SOURCE_CANDIDATE_NATIVE_COMPILE_AND_AXIOM_AUDIT_NOT_RUN",
+      "evidence": "evidence/analytic_v0211/source_reviews",
+      "receipt_validation": "NEW_SAME_TARGET_NATIVE_RECEIPT_REQUIRED"
+    },
+    "after": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.CanonicalPowerSumAnalysis.zero_mem_resolventDomain",
+      "source_line": 62,
+      "module": "RH_HilbertLimit.CanonicalPowerSums",
+      "source": "RH_HilbertLimit/CanonicalPowerSums.lean",
+      "source_sha256": "55e10b78e84bb2ec7cfbd693e5275f46b4ada256bda0530ccb4c0e80337e65de",
+      "status": "USER_REPORTED_V0_2_15_AGGREGATE_RUN_PASS",
+      "evidence": "evidence/checkpoint_v0216/evidence/NATIVE_PASS_TAIL_REVIEW.json",
+      "receipt_validation": "REQUIRED_ON_USER_MACHINE_FOR_REUSE",
+      "evidence_scope": "Aggregate PASS summary only; expected selected audit coverage verified in source. Direct native declaration/audit/receipt/hash records not supplied.",
+      "source_hash_origin": "LOCAL_PACKAGE_BYTES; NOT_A_NATIVE_HASH_FROM_THE_PASTED_TAIL"
+    }
+  },
+  {
+    "name": "RH_HilbertLimit.CanonicalPowerSumAnalysis.norm_mul_lt_half",
+    "before": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.CanonicalPowerSumAnalysis.norm_mul_lt_half",
+      "source_line": 66,
+      "module": "RH_HilbertLimit.CanonicalPowerSums",
+      "source": "RH_HilbertLimit/CanonicalPowerSums.lean",
+      "source_sha256": "2aecbd7e10aa87c0ce726026d563d6a33caf0b99e58f824719cf5a99a6217169",
+      "status": "NEW_SOURCE_CANDIDATE_NATIVE_COMPILE_AND_AXIOM_AUDIT_NOT_RUN",
+      "evidence": "evidence/analytic_v0211/source_reviews",
+      "receipt_validation": "NEW_SAME_TARGET_NATIVE_RECEIPT_REQUIRED"
+    },
+    "after": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.CanonicalPowerSumAnalysis.norm_mul_lt_half",
+      "source_line": 66,
+      "module": "RH_HilbertLimit.CanonicalPowerSums",
+      "source": "RH_HilbertLimit/CanonicalPowerSums.lean",
+      "source_sha256": "55e10b78e84bb2ec7cfbd693e5275f46b4ada256bda0530ccb4c0e80337e65de",
+      "status": "USER_REPORTED_V0_2_15_AGGREGATE_RUN_PASS",
+      "evidence": "evidence/checkpoint_v0216/evidence/NATIVE_PASS_TAIL_REVIEW.json",
+      "receipt_validation": "REQUIRED_ON_USER_MACHINE_FOR_REUSE",
+      "evidence_scope": "Aggregate PASS summary only; expected selected audit coverage verified in source. Direct native declaration/audit/receipt/hash records not supplied.",
+      "source_hash_origin": "LOCAL_PACKAGE_BYTES; NOT_A_NATIVE_HASH_FROM_THE_PASTED_TAIL"
+    }
+  },
+  {
+    "name": "RH_HilbertLimit.CanonicalPowerSumAnalysis.half_lt_norm_denominator",
+    "before": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.CanonicalPowerSumAnalysis.half_lt_norm_denominator",
+      "source_line": 73,
+      "module": "RH_HilbertLimit.CanonicalPowerSums",
+      "source": "RH_HilbertLimit/CanonicalPowerSums.lean",
+      "source_sha256": "2aecbd7e10aa87c0ce726026d563d6a33caf0b99e58f824719cf5a99a6217169",
+      "status": "NEW_SOURCE_CANDIDATE_NATIVE_COMPILE_AND_AXIOM_AUDIT_NOT_RUN",
+      "evidence": "evidence/analytic_v0211/source_reviews",
+      "receipt_validation": "NEW_SAME_TARGET_NATIVE_RECEIPT_REQUIRED"
+    },
+    "after": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.CanonicalPowerSumAnalysis.half_lt_norm_denominator",
+      "source_line": 73,
+      "module": "RH_HilbertLimit.CanonicalPowerSums",
+      "source": "RH_HilbertLimit/CanonicalPowerSums.lean",
+      "source_sha256": "55e10b78e84bb2ec7cfbd693e5275f46b4ada256bda0530ccb4c0e80337e65de",
+      "status": "USER_REPORTED_V0_2_15_AGGREGATE_RUN_PASS",
+      "evidence": "evidence/checkpoint_v0216/evidence/NATIVE_PASS_TAIL_REVIEW.json",
+      "receipt_validation": "REQUIRED_ON_USER_MACHINE_FOR_REUSE",
+      "evidence_scope": "Aggregate PASS summary only; expected selected audit coverage verified in source. Direct native declaration/audit/receipt/hash records not supplied.",
+      "source_hash_origin": "LOCAL_PACKAGE_BYTES; NOT_A_NATIVE_HASH_FROM_THE_PASTED_TAIL"
+    }
+  },
+  {
+    "name": "RH_HilbertLimit.CanonicalPowerSumAnalysis.denominator_ne_zero",
+    "before": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.CanonicalPowerSumAnalysis.denominator_ne_zero",
+      "source_line": 84,
+      "module": "RH_HilbertLimit.CanonicalPowerSums",
+      "source": "RH_HilbertLimit/CanonicalPowerSums.lean",
+      "source_sha256": "2aecbd7e10aa87c0ce726026d563d6a33caf0b99e58f824719cf5a99a6217169",
+      "status": "NEW_SOURCE_CANDIDATE_NATIVE_COMPILE_AND_AXIOM_AUDIT_NOT_RUN",
+      "evidence": "evidence/analytic_v0211/source_reviews",
+      "receipt_validation": "NEW_SAME_TARGET_NATIVE_RECEIPT_REQUIRED"
+    },
+    "after": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.CanonicalPowerSumAnalysis.denominator_ne_zero",
+      "source_line": 84,
+      "module": "RH_HilbertLimit.CanonicalPowerSums",
+      "source": "RH_HilbertLimit/CanonicalPowerSums.lean",
+      "source_sha256": "55e10b78e84bb2ec7cfbd693e5275f46b4ada256bda0530ccb4c0e80337e65de",
+      "status": "USER_REPORTED_V0_2_15_AGGREGATE_RUN_PASS",
+      "evidence": "evidence/checkpoint_v0216/evidence/NATIVE_PASS_TAIL_REVIEW.json",
+      "receipt_validation": "REQUIRED_ON_USER_MACHINE_FOR_REUSE",
+      "evidence_scope": "Aggregate PASS summary only; expected selected audit coverage verified in source. Direct native declaration/audit/receipt/hash records not supplied.",
+      "source_hash_origin": "LOCAL_PACKAGE_BYTES; NOT_A_NATIVE_HASH_FROM_THE_PASTED_TAIL"
+    }
+  },
+  {
+    "name": "RH_HilbertLimit.CanonicalPowerSumAnalysis.norm_resolvent_le",
+    "before": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.CanonicalPowerSumAnalysis.norm_resolvent_le",
+      "source_line": 91,
+      "module": "RH_HilbertLimit.CanonicalPowerSums",
+      "source": "RH_HilbertLimit/CanonicalPowerSums.lean",
+      "source_sha256": "2aecbd7e10aa87c0ce726026d563d6a33caf0b99e58f824719cf5a99a6217169",
+      "status": "NEW_SOURCE_CANDIDATE_NATIVE_COMPILE_AND_AXIOM_AUDIT_NOT_RUN",
+      "evidence": "evidence/analytic_v0211/source_reviews",
+      "receipt_validation": "NEW_SAME_TARGET_NATIVE_RECEIPT_REQUIRED"
+    },
+    "after": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.CanonicalPowerSumAnalysis.norm_resolvent_le",
+      "source_line": 91,
+      "module": "RH_HilbertLimit.CanonicalPowerSums",
+      "source": "RH_HilbertLimit/CanonicalPowerSums.lean",
+      "source_sha256": "55e10b78e84bb2ec7cfbd693e5275f46b4ada256bda0530ccb4c0e80337e65de",
+      "status": "USER_REPORTED_V0_2_15_AGGREGATE_RUN_PASS",
+      "evidence": "evidence/checkpoint_v0216/evidence/NATIVE_PASS_TAIL_REVIEW.json",
+      "receipt_validation": "REQUIRED_ON_USER_MACHINE_FOR_REUSE",
+      "evidence_scope": "Aggregate PASS summary only; expected selected audit coverage verified in source. Direct native declaration/audit/receipt/hash records not supplied.",
+      "source_hash_origin": "LOCAL_PACKAGE_BYTES; NOT_A_NATIVE_HASH_FROM_THE_PASTED_TAIL"
+    }
+  },
+  {
+    "name": "RH_HilbertLimit.CanonicalPowerSumAnalysis.norm_resolvent_pow_le",
+    "before": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.CanonicalPowerSumAnalysis.norm_resolvent_pow_le",
+      "source_line": 102,
+      "module": "RH_HilbertLimit.CanonicalPowerSums",
+      "source": "RH_HilbertLimit/CanonicalPowerSums.lean",
+      "source_sha256": "2aecbd7e10aa87c0ce726026d563d6a33caf0b99e58f824719cf5a99a6217169",
+      "status": "NEW_SOURCE_CANDIDATE_NATIVE_COMPILE_AND_AXIOM_AUDIT_NOT_RUN",
+      "evidence": "evidence/analytic_v0211/source_reviews",
+      "receipt_validation": "NEW_SAME_TARGET_NATIVE_RECEIPT_REQUIRED"
+    },
+    "after": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.CanonicalPowerSumAnalysis.norm_resolvent_pow_le",
+      "source_line": 102,
+      "module": "RH_HilbertLimit.CanonicalPowerSums",
+      "source": "RH_HilbertLimit/CanonicalPowerSums.lean",
+      "source_sha256": "55e10b78e84bb2ec7cfbd693e5275f46b4ada256bda0530ccb4c0e80337e65de",
+      "status": "USER_REPORTED_V0_2_15_AGGREGATE_RUN_PASS",
+      "evidence": "evidence/checkpoint_v0216/evidence/NATIVE_PASS_TAIL_REVIEW.json",
+      "receipt_validation": "REQUIRED_ON_USER_MACHINE_FOR_REUSE",
+      "evidence_scope": "Aggregate PASS summary only; expected selected audit coverage verified in source. Direct native declaration/audit/receipt/hash records not supplied.",
+      "source_hash_origin": "LOCAL_PACKAGE_BYTES; NOT_A_NATIVE_HASH_FROM_THE_PASTED_TAIL"
+    }
+  },
+  {
+    "name": "RH_HilbertLimit.CanonicalPowerSumAnalysis.summable_resolvent_pow",
+    "before": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.CanonicalPowerSumAnalysis.summable_resolvent_pow",
+      "source_line": 121,
+      "module": "RH_HilbertLimit.CanonicalPowerSums",
+      "source": "RH_HilbertLimit/CanonicalPowerSums.lean",
+      "source_sha256": "2aecbd7e10aa87c0ce726026d563d6a33caf0b99e58f824719cf5a99a6217169",
+      "status": "NEW_SOURCE_CANDIDATE_NATIVE_COMPILE_AND_AXIOM_AUDIT_NOT_RUN",
+      "evidence": "evidence/analytic_v0211/source_reviews",
+      "receipt_validation": "NEW_SAME_TARGET_NATIVE_RECEIPT_REQUIRED"
+    },
+    "after": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.CanonicalPowerSumAnalysis.summable_resolvent_pow",
+      "source_line": 121,
+      "module": "RH_HilbertLimit.CanonicalPowerSums",
+      "source": "RH_HilbertLimit/CanonicalPowerSums.lean",
+      "source_sha256": "55e10b78e84bb2ec7cfbd693e5275f46b4ada256bda0530ccb4c0e80337e65de",
+      "status": "USER_REPORTED_V0_2_15_AGGREGATE_RUN_PASS",
+      "evidence": "evidence/checkpoint_v0216/evidence/NATIVE_PASS_TAIL_REVIEW.json",
+      "receipt_validation": "REQUIRED_ON_USER_MACHINE_FOR_REUSE",
+      "evidence_scope": "Aggregate PASS summary only; expected selected audit coverage verified in source. Direct native declaration/audit/receipt/hash records not supplied.",
+      "source_hash_origin": "LOCAL_PACKAGE_BYTES; NOT_A_NATIVE_HASH_FROM_THE_PASTED_TAIL"
+    }
+  },
+  {
+    "name": "RH_HilbertLimit.CanonicalPowerSumAnalysis.logDeriv_affineProduct_hasSum",
+    "before": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.CanonicalPowerSumAnalysis.logDeriv_affineProduct_hasSum",
+      "source_line": 129,
+      "module": "RH_HilbertLimit.CanonicalPowerSums",
+      "source": "RH_HilbertLimit/CanonicalPowerSums.lean",
+      "source_sha256": "2aecbd7e10aa87c0ce726026d563d6a33caf0b99e58f824719cf5a99a6217169",
+      "status": "NEW_SOURCE_CANDIDATE_NATIVE_COMPILE_AND_AXIOM_AUDIT_NOT_RUN",
+      "evidence": "evidence/analytic_v0211/source_reviews",
+      "receipt_validation": "NEW_SAME_TARGET_NATIVE_RECEIPT_REQUIRED"
+    },
+    "after": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.CanonicalPowerSumAnalysis.logDeriv_affineProduct_hasSum",
+      "source_line": 129,
+      "module": "RH_HilbertLimit.CanonicalPowerSums",
+      "source": "RH_HilbertLimit/CanonicalPowerSums.lean",
+      "source_sha256": "55e10b78e84bb2ec7cfbd693e5275f46b4ada256bda0530ccb4c0e80337e65de",
+      "status": "USER_REPORTED_V0_2_15_AGGREGATE_RUN_PASS",
+      "evidence": "evidence/checkpoint_v0216/evidence/NATIVE_PASS_TAIL_REVIEW.json",
+      "receipt_validation": "REQUIRED_ON_USER_MACHINE_FOR_REUSE",
+      "evidence_scope": "Aggregate PASS summary only; expected selected audit coverage verified in source. Direct native declaration/audit/receipt/hash records not supplied.",
+      "source_hash_origin": "LOCAL_PACKAGE_BYTES; NOT_A_NATIVE_HASH_FROM_THE_PASTED_TAIL"
+    }
+  },
+  {
+    "name": "RH_HilbertLimit.CanonicalPowerSumAnalysis.hasDerivAt_resolvent",
+    "before": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.CanonicalPowerSumAnalysis.hasDerivAt_resolvent",
+      "source_line": 159,
+      "module": "RH_HilbertLimit.CanonicalPowerSums",
+      "source": "RH_HilbertLimit/CanonicalPowerSums.lean",
+      "source_sha256": "2aecbd7e10aa87c0ce726026d563d6a33caf0b99e58f824719cf5a99a6217169",
+      "status": "NEW_SOURCE_CANDIDATE_NATIVE_COMPILE_AND_AXIOM_AUDIT_NOT_RUN",
+      "evidence": "evidence/analytic_v0211/source_reviews",
+      "receipt_validation": "NEW_SAME_TARGET_NATIVE_RECEIPT_REQUIRED"
+    },
+    "after": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.CanonicalPowerSumAnalysis.hasDerivAt_resolvent",
+      "source_line": 159,
+      "module": "RH_HilbertLimit.CanonicalPowerSums",
+      "source": "RH_HilbertLimit/CanonicalPowerSums.lean",
+      "source_sha256": "55e10b78e84bb2ec7cfbd693e5275f46b4ada256bda0530ccb4c0e80337e65de",
+      "status": "USER_REPORTED_V0_2_15_AGGREGATE_RUN_PASS",
+      "evidence": "evidence/checkpoint_v0216/evidence/NATIVE_PASS_TAIL_REVIEW.json",
+      "receipt_validation": "REQUIRED_ON_USER_MACHINE_FOR_REUSE",
+      "evidence_scope": "Aggregate PASS summary only; expected selected audit coverage verified in source. Direct native declaration/audit/receipt/hash records not supplied.",
+      "source_hash_origin": "LOCAL_PACKAGE_BYTES; NOT_A_NATIVE_HASH_FROM_THE_PASTED_TAIL"
+    }
+  },
+  {
+    "name": "RH_HilbertLimit.CanonicalPowerSumAnalysis.hasDerivAt_resolvent_pow",
+    "before": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.CanonicalPowerSumAnalysis.hasDerivAt_resolvent_pow",
+      "source_line": 170,
+      "module": "RH_HilbertLimit.CanonicalPowerSums",
+      "source": "RH_HilbertLimit/CanonicalPowerSums.lean",
+      "source_sha256": "2aecbd7e10aa87c0ce726026d563d6a33caf0b99e58f824719cf5a99a6217169",
+      "status": "NEW_SOURCE_CANDIDATE_NATIVE_COMPILE_AND_AXIOM_AUDIT_NOT_RUN",
+      "evidence": "evidence/analytic_v0211/source_reviews",
+      "receipt_validation": "NEW_SAME_TARGET_NATIVE_RECEIPT_REQUIRED"
+    },
+    "after": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.CanonicalPowerSumAnalysis.hasDerivAt_resolvent_pow",
+      "source_line": 174,
+      "module": "RH_HilbertLimit.CanonicalPowerSums",
+      "source": "RH_HilbertLimit/CanonicalPowerSums.lean",
+      "source_sha256": "55e10b78e84bb2ec7cfbd693e5275f46b4ada256bda0530ccb4c0e80337e65de",
+      "status": "USER_REPORTED_V0_2_15_AGGREGATE_RUN_PASS",
+      "evidence": "evidence/checkpoint_v0216/evidence/NATIVE_PASS_TAIL_REVIEW.json",
+      "receipt_validation": "REQUIRED_ON_USER_MACHINE_FOR_REUSE",
+      "evidence_scope": "Aggregate PASS summary only; expected selected audit coverage verified in source. Direct native declaration/audit/receipt/hash records not supplied.",
+      "source_hash_origin": "LOCAL_PACKAGE_BYTES; NOT_A_NATIVE_HASH_FROM_THE_PASTED_TAIL"
+    }
+  },
+  {
+    "name": "RH_HilbertLimit.CanonicalPowerSumAnalysis.deriv_resolventSeries",
+    "before": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.CanonicalPowerSumAnalysis.deriv_resolventSeries",
+      "source_line": 180,
+      "module": "RH_HilbertLimit.CanonicalPowerSums",
+      "source": "RH_HilbertLimit/CanonicalPowerSums.lean",
+      "source_sha256": "2aecbd7e10aa87c0ce726026d563d6a33caf0b99e58f824719cf5a99a6217169",
+      "status": "NEW_SOURCE_CANDIDATE_NATIVE_COMPILE_AND_AXIOM_AUDIT_NOT_RUN",
+      "evidence": "evidence/analytic_v0211/source_reviews",
+      "receipt_validation": "NEW_SAME_TARGET_NATIVE_RECEIPT_REQUIRED"
+    },
+    "after": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.CanonicalPowerSumAnalysis.deriv_resolventSeries",
+      "source_line": 189,
+      "module": "RH_HilbertLimit.CanonicalPowerSums",
+      "source": "RH_HilbertLimit/CanonicalPowerSums.lean",
+      "source_sha256": "55e10b78e84bb2ec7cfbd693e5275f46b4ada256bda0530ccb4c0e80337e65de",
+      "status": "USER_REPORTED_V0_2_15_AGGREGATE_RUN_PASS",
+      "evidence": "evidence/checkpoint_v0216/evidence/NATIVE_PASS_TAIL_REVIEW.json",
+      "receipt_validation": "REQUIRED_ON_USER_MACHINE_FOR_REUSE",
+      "evidence_scope": "Aggregate PASS summary only; expected selected audit coverage verified in source. Direct native declaration/audit/receipt/hash records not supplied.",
+      "source_hash_origin": "LOCAL_PACKAGE_BYTES; NOT_A_NATIVE_HASH_FROM_THE_PASTED_TAIL"
+    }
+  },
+  {
+    "name": "RH_HilbertLimit.CanonicalPowerSumAnalysis.iteratedDeriv_resolventSeries",
+    "before": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.CanonicalPowerSumAnalysis.iteratedDeriv_resolventSeries",
+      "source_line": 206,
+      "module": "RH_HilbertLimit.CanonicalPowerSums",
+      "source": "RH_HilbertLimit/CanonicalPowerSums.lean",
+      "source_sha256": "2aecbd7e10aa87c0ce726026d563d6a33caf0b99e58f824719cf5a99a6217169",
+      "status": "NEW_SOURCE_CANDIDATE_NATIVE_COMPILE_AND_AXIOM_AUDIT_NOT_RUN",
+      "evidence": "evidence/analytic_v0211/source_reviews",
+      "receipt_validation": "NEW_SAME_TARGET_NATIVE_RECEIPT_REQUIRED"
+    },
+    "after": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.CanonicalPowerSumAnalysis.iteratedDeriv_resolventSeries",
+      "source_line": 215,
+      "module": "RH_HilbertLimit.CanonicalPowerSums",
+      "source": "RH_HilbertLimit/CanonicalPowerSums.lean",
+      "source_sha256": "55e10b78e84bb2ec7cfbd693e5275f46b4ada256bda0530ccb4c0e80337e65de",
+      "status": "USER_REPORTED_V0_2_15_AGGREGATE_RUN_PASS",
+      "evidence": "evidence/checkpoint_v0216/evidence/NATIVE_PASS_TAIL_REVIEW.json",
+      "receipt_validation": "REQUIRED_ON_USER_MACHINE_FOR_REUSE",
+      "evidence_scope": "Aggregate PASS summary only; expected selected audit coverage verified in source. Direct native declaration/audit/receipt/hash records not supplied.",
+      "source_hash_origin": "LOCAL_PACKAGE_BYTES; NOT_A_NATIVE_HASH_FROM_THE_PASTED_TAIL"
+    }
+  },
+  {
+    "name": "RH_HilbertLimit.CanonicalPowerSumAnalysis.iteratedDeriv_logDeriv_affineProduct_zero",
+    "before": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.CanonicalPowerSumAnalysis.iteratedDeriv_logDeriv_affineProduct_zero",
+      "source_line": 227,
+      "module": "RH_HilbertLimit.CanonicalPowerSums",
+      "source": "RH_HilbertLimit/CanonicalPowerSums.lean",
+      "source_sha256": "2aecbd7e10aa87c0ce726026d563d6a33caf0b99e58f824719cf5a99a6217169",
+      "status": "NEW_SOURCE_CANDIDATE_NATIVE_COMPILE_AND_AXIOM_AUDIT_NOT_RUN",
+      "evidence": "evidence/analytic_v0211/source_reviews",
+      "receipt_validation": "NEW_SAME_TARGET_NATIVE_RECEIPT_REQUIRED"
+    },
+    "after": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.CanonicalPowerSumAnalysis.iteratedDeriv_logDeriv_affineProduct_zero",
+      "source_line": 236,
+      "module": "RH_HilbertLimit.CanonicalPowerSums",
+      "source": "RH_HilbertLimit/CanonicalPowerSums.lean",
+      "source_sha256": "55e10b78e84bb2ec7cfbd693e5275f46b4ada256bda0530ccb4c0e80337e65de",
+      "status": "USER_REPORTED_V0_2_15_AGGREGATE_RUN_PASS",
+      "evidence": "evidence/checkpoint_v0216/evidence/NATIVE_PASS_TAIL_REVIEW.json",
+      "receipt_validation": "REQUIRED_ON_USER_MACHINE_FOR_REUSE",
+      "evidence_scope": "Aggregate PASS summary only; expected selected audit coverage verified in source. Direct native declaration/audit/receipt/hash records not supplied.",
+      "source_hash_origin": "LOCAL_PACKAGE_BYTES; NOT_A_NATIVE_HASH_FROM_THE_PASTED_TAIL"
+    }
+  },
+  {
+    "name": "RH_HilbertLimit.CanonicalPowerSumAnalysis.summable_positive_powers",
+    "before": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.CanonicalPowerSumAnalysis.summable_positive_powers",
+      "source_line": 241,
+      "module": "RH_HilbertLimit.CanonicalPowerSums",
+      "source": "RH_HilbertLimit/CanonicalPowerSums.lean",
+      "source_sha256": "2aecbd7e10aa87c0ce726026d563d6a33caf0b99e58f824719cf5a99a6217169",
+      "status": "NEW_SOURCE_CANDIDATE_NATIVE_COMPILE_AND_AXIOM_AUDIT_NOT_RUN",
+      "evidence": "evidence/analytic_v0211/source_reviews",
+      "receipt_validation": "NEW_SAME_TARGET_NATIVE_RECEIPT_REQUIRED"
+    },
+    "after": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.CanonicalPowerSumAnalysis.summable_positive_powers",
+      "source_line": 250,
+      "module": "RH_HilbertLimit.CanonicalPowerSums",
+      "source": "RH_HilbertLimit/CanonicalPowerSums.lean",
+      "source_sha256": "55e10b78e84bb2ec7cfbd693e5275f46b4ada256bda0530ccb4c0e80337e65de",
+      "status": "USER_REPORTED_V0_2_15_AGGREGATE_RUN_PASS",
+      "evidence": "evidence/checkpoint_v0216/evidence/NATIVE_PASS_TAIL_REVIEW.json",
+      "receipt_validation": "REQUIRED_ON_USER_MACHINE_FOR_REUSE",
+      "evidence_scope": "Aggregate PASS summary only; expected selected audit coverage verified in source. Direct native declaration/audit/receipt/hash records not supplied.",
+      "source_hash_origin": "LOCAL_PACKAGE_BYTES; NOT_A_NATIVE_HASH_FROM_THE_PASTED_TAIL"
+    }
+  },
+  {
+    "name": "RH_HilbertLimit.actualLogDerivative_eq_canonical_product_logDeriv",
+    "before": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.actualLogDerivative_eq_canonical_product_logDeriv",
+      "source_line": 253,
+      "module": "RH_HilbertLimit.CanonicalPowerSums",
+      "source": "RH_HilbertLimit/CanonicalPowerSums.lean",
+      "source_sha256": "2aecbd7e10aa87c0ce726026d563d6a33caf0b99e58f824719cf5a99a6217169",
+      "status": "NEW_SOURCE_CANDIDATE_NATIVE_COMPILE_AND_AXIOM_AUDIT_NOT_RUN",
+      "evidence": "evidence/analytic_v0211/source_reviews",
+      "receipt_validation": "NEW_SAME_TARGET_NATIVE_RECEIPT_REQUIRED"
+    },
+    "after": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.actualLogDerivative_eq_canonical_product_logDeriv",
+      "source_line": 262,
+      "module": "RH_HilbertLimit.CanonicalPowerSums",
+      "source": "RH_HilbertLimit/CanonicalPowerSums.lean",
+      "source_sha256": "55e10b78e84bb2ec7cfbd693e5275f46b4ada256bda0530ccb4c0e80337e65de",
+      "status": "USER_REPORTED_V0_2_15_AGGREGATE_RUN_PASS",
+      "evidence": "evidence/checkpoint_v0216/evidence/NATIVE_PASS_TAIL_REVIEW.json",
+      "receipt_validation": "REQUIRED_ON_USER_MACHINE_FOR_REUSE",
+      "evidence_scope": "Aggregate PASS summary only; expected selected audit coverage verified in source. Direct native declaration/audit/receipt/hash records not supplied.",
+      "source_hash_origin": "LOCAL_PACKAGE_BYTES; NOT_A_NATIVE_HASH_FROM_THE_PASTED_TAIL"
+    }
+  },
+  {
+    "name": "RH_HilbertLimit.actualLogDerivative_resolvent_hasSum",
+    "before": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.actualLogDerivative_resolvent_hasSum",
+      "source_line": 266,
+      "module": "RH_HilbertLimit.CanonicalPowerSums",
+      "source": "RH_HilbertLimit/CanonicalPowerSums.lean",
+      "source_sha256": "2aecbd7e10aa87c0ce726026d563d6a33caf0b99e58f824719cf5a99a6217169",
+      "status": "NEW_SOURCE_CANDIDATE_NATIVE_COMPILE_AND_AXIOM_AUDIT_NOT_RUN",
+      "evidence": "evidence/analytic_v0211/source_reviews",
+      "receipt_validation": "NEW_SAME_TARGET_NATIVE_RECEIPT_REQUIRED"
+    },
+    "after": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.actualLogDerivative_resolvent_hasSum",
+      "source_line": 275,
+      "module": "RH_HilbertLimit.CanonicalPowerSums",
+      "source": "RH_HilbertLimit/CanonicalPowerSums.lean",
+      "source_sha256": "55e10b78e84bb2ec7cfbd693e5275f46b4ada256bda0530ccb4c0e80337e65de",
+      "status": "USER_REPORTED_V0_2_15_AGGREGATE_RUN_PASS",
+      "evidence": "evidence/checkpoint_v0216/evidence/NATIVE_PASS_TAIL_REVIEW.json",
+      "receipt_validation": "REQUIRED_ON_USER_MACHINE_FOR_REUSE",
+      "evidence_scope": "Aggregate PASS summary only; expected selected audit coverage verified in source. Direct native declaration/audit/receipt/hash records not supplied.",
+      "source_hash_origin": "LOCAL_PACKAGE_BYTES; NOT_A_NATIVE_HASH_FROM_THE_PASTED_TAIL"
+    }
+  },
+  {
+    "name": "RH_HilbertLimit.actualComplexMoment_eq_canonical_powerSum",
+    "before": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.actualComplexMoment_eq_canonical_powerSum",
+      "source_line": 276,
+      "module": "RH_HilbertLimit.CanonicalPowerSums",
+      "source": "RH_HilbertLimit/CanonicalPowerSums.lean",
+      "source_sha256": "2aecbd7e10aa87c0ce726026d563d6a33caf0b99e58f824719cf5a99a6217169",
+      "status": "NEW_SOURCE_CANDIDATE_NATIVE_COMPILE_AND_AXIOM_AUDIT_NOT_RUN",
+      "evidence": "evidence/analytic_v0211/source_reviews",
+      "receipt_validation": "NEW_SAME_TARGET_NATIVE_RECEIPT_REQUIRED"
+    },
+    "after": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.actualComplexMoment_eq_canonical_powerSum",
+      "source_line": 285,
+      "module": "RH_HilbertLimit.CanonicalPowerSums",
+      "source": "RH_HilbertLimit/CanonicalPowerSums.lean",
+      "source_sha256": "55e10b78e84bb2ec7cfbd693e5275f46b4ada256bda0530ccb4c0e80337e65de",
+      "status": "USER_REPORTED_V0_2_15_AGGREGATE_RUN_PASS",
+      "evidence": "evidence/checkpoint_v0216/evidence/NATIVE_PASS_TAIL_REVIEW.json",
+      "receipt_validation": "REQUIRED_ON_USER_MACHINE_FOR_REUSE",
+      "evidence_scope": "Aggregate PASS summary only; expected selected audit coverage verified in source. Direct native declaration/audit/receipt/hash records not supplied.",
+      "source_hash_origin": "LOCAL_PACKAGE_BYTES; NOT_A_NATIVE_HASH_FROM_THE_PASTED_TAIL"
+    }
+  },
+  {
+    "name": "RH_HilbertLimit.actualComplexMoment_hasSum_canonical_powers",
+    "before": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.actualComplexMoment_hasSum_canonical_powers",
+      "source_line": 299,
+      "module": "RH_HilbertLimit.CanonicalPowerSums",
+      "source": "RH_HilbertLimit/CanonicalPowerSums.lean",
+      "source_sha256": "2aecbd7e10aa87c0ce726026d563d6a33caf0b99e58f824719cf5a99a6217169",
+      "status": "NEW_SOURCE_CANDIDATE_NATIVE_COMPILE_AND_AXIOM_AUDIT_NOT_RUN",
+      "evidence": "evidence/analytic_v0211/source_reviews",
+      "receipt_validation": "NEW_SAME_TARGET_NATIVE_RECEIPT_REQUIRED"
+    },
+    "after": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.actualComplexMoment_hasSum_canonical_powers",
+      "source_line": 308,
+      "module": "RH_HilbertLimit.CanonicalPowerSums",
+      "source": "RH_HilbertLimit/CanonicalPowerSums.lean",
+      "source_sha256": "55e10b78e84bb2ec7cfbd693e5275f46b4ada256bda0530ccb4c0e80337e65de",
+      "status": "USER_REPORTED_V0_2_15_AGGREGATE_RUN_PASS",
+      "evidence": "evidence/checkpoint_v0216/evidence/NATIVE_PASS_TAIL_REVIEW.json",
+      "receipt_validation": "REQUIRED_ON_USER_MACHINE_FOR_REUSE",
+      "evidence_scope": "Aggregate PASS summary only; expected selected audit coverage verified in source. Direct native declaration/audit/receipt/hash records not supplied.",
+      "source_hash_origin": "LOCAL_PACKAGE_BYTES; NOT_A_NATIVE_HASH_FROM_THE_PASTED_TAIL"
+    }
+  },
+  {
+    "name": "RH_HilbertLimit.canonicalNode_power_sum",
+    "before": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.canonicalNode_power_sum",
+      "source_line": 306,
+      "module": "RH_HilbertLimit.CanonicalPowerSums",
+      "source": "RH_HilbertLimit/CanonicalPowerSums.lean",
+      "source_sha256": "2aecbd7e10aa87c0ce726026d563d6a33caf0b99e58f824719cf5a99a6217169",
+      "status": "NEW_SOURCE_CANDIDATE_NATIVE_COMPILE_AND_AXIOM_AUDIT_NOT_RUN",
+      "evidence": "evidence/analytic_v0211/source_reviews",
+      "receipt_validation": "NEW_SAME_TARGET_NATIVE_RECEIPT_REQUIRED"
+    },
+    "after": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.canonicalNode_power_sum",
+      "source_line": 315,
+      "module": "RH_HilbertLimit.CanonicalPowerSums",
+      "source": "RH_HilbertLimit/CanonicalPowerSums.lean",
+      "source_sha256": "55e10b78e84bb2ec7cfbd693e5275f46b4ada256bda0530ccb4c0e80337e65de",
+      "status": "USER_REPORTED_V0_2_15_AGGREGATE_RUN_PASS",
+      "evidence": "evidence/checkpoint_v0216/evidence/NATIVE_PASS_TAIL_REVIEW.json",
+      "receipt_validation": "REQUIRED_ON_USER_MACHINE_FOR_REUSE",
+      "evidence_scope": "Aggregate PASS summary only; expected selected audit coverage verified in source. Direct native declaration/audit/receipt/hash records not supplied.",
+      "source_hash_origin": "LOCAL_PACKAGE_BYTES; NOT_A_NATIVE_HASH_FROM_THE_PASTED_TAIL"
+    }
+  },
+  {
+    "name": "RH_HilbertLimit.canonicalPowerSums",
+    "before": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.canonicalPowerSums",
+      "source_line": 322,
+      "module": "RH_HilbertLimit.CanonicalPowerSums",
+      "source": "RH_HilbertLimit/CanonicalPowerSums.lean",
+      "source_sha256": "2aecbd7e10aa87c0ce726026d563d6a33caf0b99e58f824719cf5a99a6217169",
+      "status": "NEW_SOURCE_CANDIDATE_NATIVE_COMPILE_AND_AXIOM_AUDIT_NOT_RUN",
+      "evidence": "evidence/analytic_v0211/source_reviews",
+      "receipt_validation": "NEW_SAME_TARGET_NATIVE_RECEIPT_REQUIRED"
+    },
+    "after": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.canonicalPowerSums",
+      "source_line": 331,
+      "module": "RH_HilbertLimit.CanonicalPowerSums",
+      "source": "RH_HilbertLimit/CanonicalPowerSums.lean",
+      "source_sha256": "55e10b78e84bb2ec7cfbd693e5275f46b4ada256bda0530ccb4c0e80337e65de",
+      "status": "USER_REPORTED_V0_2_15_AGGREGATE_RUN_PASS",
+      "evidence": "evidence/checkpoint_v0216/evidence/NATIVE_PASS_TAIL_REVIEW.json",
+      "receipt_validation": "REQUIRED_ON_USER_MACHINE_FOR_REUSE",
+      "evidence_scope": "Aggregate PASS summary only; expected selected audit coverage verified in source. Direct native declaration/audit/receipt/hash records not supplied.",
+      "source_hash_origin": "LOCAL_PACKAGE_BYTES; NOT_A_NATIVE_HASH_FROM_THE_PASTED_TAIL"
+    }
+  },
+  {
+    "name": "RH_HilbertLimit.SpectralPhase.exists_unit_phase",
+    "before": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.SpectralPhase.exists_unit_phase",
+      "source_line": 32,
+      "module": "RH_HilbertLimit.SpectralPhase",
+      "source": "RH_HilbertLimit/SpectralPhase.lean",
+      "source_sha256": "bc21fd329ecce37ce7b4808ffa565d1b0cc7507c90cbc1965b1a540756db3a80",
+      "status": "NEW_SOURCE_CANDIDATE_NATIVE_COMPILE_AND_AXIOM_AUDIT_NOT_RUN",
+      "evidence": "evidence/analytic_v0211/source_reviews",
+      "receipt_validation": "NEW_SAME_TARGET_NATIVE_RECEIPT_REQUIRED"
+    },
+    "after": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.SpectralPhase.exists_unit_phase",
+      "source_line": 32,
+      "module": "RH_HilbertLimit.SpectralPhase",
+      "source": "RH_HilbertLimit/SpectralPhase.lean",
+      "source_sha256": "e5d3e26af0da7eb222dac75252480975eb4fa46150ebb342a58c42ab20063db3",
+      "status": "USER_REPORTED_V0_2_15_AGGREGATE_RUN_PASS",
+      "evidence": "evidence/checkpoint_v0216/evidence/NATIVE_PASS_TAIL_REVIEW.json",
+      "receipt_validation": "REQUIRED_ON_USER_MACHINE_FOR_REUSE",
+      "evidence_scope": "Aggregate PASS summary only; expected selected audit coverage verified in source. Direct native declaration/audit/receipt/hash records not supplied.",
+      "source_hash_origin": "LOCAL_PACKAGE_BYTES; NOT_A_NATIVE_HASH_FROM_THE_PASTED_TAIL"
+    }
+  },
+  {
+    "name": "RH_HilbertLimit.SpectralPhase.phase_ne_one",
+    "before": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.SpectralPhase.phase_ne_one",
+      "source_line": 47,
+      "module": "RH_HilbertLimit.SpectralPhase",
+      "source": "RH_HilbertLimit/SpectralPhase.lean",
+      "source_sha256": "bc21fd329ecce37ce7b4808ffa565d1b0cc7507c90cbc1965b1a540756db3a80",
+      "status": "NEW_SOURCE_CANDIDATE_NATIVE_COMPILE_AND_AXIOM_AUDIT_NOT_RUN",
+      "evidence": "evidence/analytic_v0211/source_reviews",
+      "receipt_validation": "NEW_SAME_TARGET_NATIVE_RECEIPT_REQUIRED"
+    },
+    "after": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.SpectralPhase.phase_ne_one",
+      "source_line": 47,
+      "module": "RH_HilbertLimit.SpectralPhase",
+      "source": "RH_HilbertLimit/SpectralPhase.lean",
+      "source_sha256": "e5d3e26af0da7eb222dac75252480975eb4fa46150ebb342a58c42ab20063db3",
+      "status": "USER_REPORTED_V0_2_15_AGGREGATE_RUN_PASS",
+      "evidence": "evidence/checkpoint_v0216/evidence/NATIVE_PASS_TAIL_REVIEW.json",
+      "receipt_validation": "REQUIRED_ON_USER_MACHINE_FOR_REUSE",
+      "evidence_scope": "Aggregate PASS summary only; expected selected audit coverage verified in source. Direct native declaration/audit/receipt/hash records not supplied.",
+      "source_hash_origin": "LOCAL_PACKAGE_BYTES; NOT_A_NATIVE_HASH_FROM_THE_PASTED_TAIL"
+    }
+  },
+  {
+    "name": "RH_HilbertLimit.SpectralPhase.affine_injective",
+    "before": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.SpectralPhase.affine_injective",
+      "source_line": 54,
+      "module": "RH_HilbertLimit.SpectralPhase",
+      "source": "RH_HilbertLimit/SpectralPhase.lean",
+      "source_sha256": "bc21fd329ecce37ce7b4808ffa565d1b0cc7507c90cbc1965b1a540756db3a80",
+      "status": "NEW_SOURCE_CANDIDATE_NATIVE_COMPILE_AND_AXIOM_AUDIT_NOT_RUN",
+      "evidence": "evidence/analytic_v0211/source_reviews",
+      "receipt_validation": "NEW_SAME_TARGET_NATIVE_RECEIPT_REQUIRED"
+    },
+    "after": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.SpectralPhase.affine_injective",
+      "source_line": 54,
+      "module": "RH_HilbertLimit.SpectralPhase",
+      "source": "RH_HilbertLimit/SpectralPhase.lean",
+      "source_sha256": "e5d3e26af0da7eb222dac75252480975eb4fa46150ebb342a58c42ab20063db3",
+      "status": "USER_REPORTED_V0_2_15_AGGREGATE_RUN_PASS",
+      "evidence": "evidence/checkpoint_v0216/evidence/NATIVE_PASS_TAIL_REVIEW.json",
+      "receipt_validation": "REQUIRED_ON_USER_MACHINE_FOR_REUSE",
+      "evidence_scope": "Aggregate PASS summary only; expected selected audit coverage verified in source. Direct native declaration/audit/receipt/hash records not supplied.",
+      "source_hash_origin": "LOCAL_PACKAGE_BYTES; NOT_A_NATIVE_HASH_FROM_THE_PASTED_TAIL"
+    }
+  },
+  {
+    "name": "RH_HilbertLimit.SpectralPhase.affine_eq_iff",
+    "before": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.SpectralPhase.affine_eq_iff",
+      "source_line": 61,
+      "module": "RH_HilbertLimit.SpectralPhase",
+      "source": "RH_HilbertLimit/SpectralPhase.lean",
+      "source_sha256": "bc21fd329ecce37ce7b4808ffa565d1b0cc7507c90cbc1965b1a540756db3a80",
+      "status": "NEW_SOURCE_CANDIDATE_NATIVE_COMPILE_AND_AXIOM_AUDIT_NOT_RUN",
+      "evidence": "evidence/analytic_v0211/source_reviews",
+      "receipt_validation": "NEW_SAME_TARGET_NATIVE_RECEIPT_REQUIRED"
+    },
+    "after": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.SpectralPhase.affine_eq_iff",
+      "source_line": 61,
+      "module": "RH_HilbertLimit.SpectralPhase",
+      "source": "RH_HilbertLimit/SpectralPhase.lean",
+      "source_sha256": "e5d3e26af0da7eb222dac75252480975eb4fa46150ebb342a58c42ab20063db3",
+      "status": "USER_REPORTED_V0_2_15_AGGREGATE_RUN_PASS",
+      "evidence": "evidence/checkpoint_v0216/evidence/NATIVE_PASS_TAIL_REVIEW.json",
+      "receipt_validation": "REQUIRED_ON_USER_MACHINE_FOR_REUSE",
+      "evidence_scope": "Aggregate PASS summary only; expected selected audit coverage verified in source. Direct native declaration/audit/receipt/hash records not supplied.",
+      "source_hash_origin": "LOCAL_PACKAGE_BYTES; NOT_A_NATIVE_HASH_FROM_THE_PASTED_TAIL"
+    }
+  },
+  {
+    "name": "RH_HilbertLimit.SpectralPhase.norm_affine_lt_of_radius_lt",
+    "before": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.SpectralPhase.norm_affine_lt_of_radius_lt",
+      "source_line": 69,
+      "module": "RH_HilbertLimit.SpectralPhase",
+      "source": "RH_HilbertLimit/SpectralPhase.lean",
+      "source_sha256": "bc21fd329ecce37ce7b4808ffa565d1b0cc7507c90cbc1965b1a540756db3a80",
+      "status": "NEW_SOURCE_CANDIDATE_NATIVE_COMPILE_AND_AXIOM_AUDIT_NOT_RUN",
+      "evidence": "evidence/analytic_v0211/source_reviews",
+      "receipt_validation": "NEW_SAME_TARGET_NATIVE_RECEIPT_REQUIRED"
+    },
+    "after": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.SpectralPhase.norm_affine_lt_of_radius_lt",
+      "source_line": 70,
+      "module": "RH_HilbertLimit.SpectralPhase",
+      "source": "RH_HilbertLimit/SpectralPhase.lean",
+      "source_sha256": "e5d3e26af0da7eb222dac75252480975eb4fa46150ebb342a58c42ab20063db3",
+      "status": "USER_REPORTED_V0_2_15_AGGREGATE_RUN_PASS",
+      "evidence": "evidence/checkpoint_v0216/evidence/NATIVE_PASS_TAIL_REVIEW.json",
+      "receipt_validation": "REQUIRED_ON_USER_MACHINE_FOR_REUSE",
+      "evidence_scope": "Aggregate PASS summary only; expected selected audit coverage verified in source. Direct native declaration/audit/receipt/hash records not supplied.",
+      "source_hash_origin": "LOCAL_PACKAGE_BYTES; NOT_A_NATIVE_HASH_FROM_THE_PASTED_TAIL"
+    }
+  },
+  {
+    "name": "RH_HilbertLimit.SpectralPhase.norm_affine_lt_ellipseRadius_of_norm_lt_one",
+    "before": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.SpectralPhase.norm_affine_lt_ellipseRadius_of_norm_lt_one",
+      "source_line": 75,
+      "module": "RH_HilbertLimit.SpectralPhase",
+      "source": "RH_HilbertLimit/SpectralPhase.lean",
+      "source_sha256": "bc21fd329ecce37ce7b4808ffa565d1b0cc7507c90cbc1965b1a540756db3a80",
+      "status": "NEW_SOURCE_CANDIDATE_NATIVE_COMPILE_AND_AXIOM_AUDIT_NOT_RUN",
+      "evidence": "evidence/analytic_v0211/source_reviews",
+      "receipt_validation": "NEW_SAME_TARGET_NATIVE_RECEIPT_REQUIRED"
+    },
+    "after": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.SpectralPhase.norm_affine_lt_ellipseRadius_of_norm_lt_one",
+      "source_line": 76,
+      "module": "RH_HilbertLimit.SpectralPhase",
+      "source": "RH_HilbertLimit/SpectralPhase.lean",
+      "source_sha256": "e5d3e26af0da7eb222dac75252480975eb4fa46150ebb342a58c42ab20063db3",
+      "status": "USER_REPORTED_V0_2_15_AGGREGATE_RUN_PASS",
+      "evidence": "evidence/checkpoint_v0216/evidence/NATIVE_PASS_TAIL_REVIEW.json",
+      "receipt_validation": "REQUIRED_ON_USER_MACHINE_FOR_REUSE",
+      "evidence_scope": "Aggregate PASS summary only; expected selected audit coverage verified in source. Direct native declaration/audit/receipt/hash records not supplied.",
+      "source_hash_origin": "LOCAL_PACKAGE_BYTES; NOT_A_NATIVE_HASH_FROM_THE_PASTED_TAIL"
+    }
+  },
+  {
+    "name": "RH_HilbertLimit.SpectralPhase.exists_dominant_phase",
+    "before": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.SpectralPhase.exists_dominant_phase",
+      "source_line": 89,
+      "module": "RH_HilbertLimit.SpectralPhase",
+      "source": "RH_HilbertLimit/SpectralPhase.lean",
+      "source_sha256": "bc21fd329ecce37ce7b4808ffa565d1b0cc7507c90cbc1965b1a540756db3a80",
+      "status": "NEW_SOURCE_CANDIDATE_NATIVE_COMPILE_AND_AXIOM_AUDIT_NOT_RUN",
+      "evidence": "evidence/analytic_v0211/source_reviews",
+      "receipt_validation": "NEW_SAME_TARGET_NATIVE_RECEIPT_REQUIRED"
+    },
+    "after": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.SpectralPhase.exists_dominant_phase",
+      "source_line": 90,
+      "module": "RH_HilbertLimit.SpectralPhase",
+      "source": "RH_HilbertLimit/SpectralPhase.lean",
+      "source_sha256": "e5d3e26af0da7eb222dac75252480975eb4fa46150ebb342a58c42ab20063db3",
+      "status": "USER_REPORTED_V0_2_15_AGGREGATE_RUN_PASS",
+      "evidence": "evidence/checkpoint_v0216/evidence/NATIVE_PASS_TAIL_REVIEW.json",
+      "receipt_validation": "REQUIRED_ON_USER_MACHINE_FOR_REUSE",
+      "evidence_scope": "Aggregate PASS summary only; expected selected audit coverage verified in source. Direct native declaration/audit/receipt/hash records not supplied.",
+      "source_hash_origin": "LOCAL_PACKAGE_BYTES; NOT_A_NATIVE_HASH_FROM_THE_PASTED_TAIL"
+    }
+  },
+  {
+    "name": "RH_HilbertLimit.ActualSpectralCalibration.exists_dominant_phase",
+    "before": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.ActualSpectralCalibration.exists_dominant_phase",
+      "source_line": 110,
+      "module": "RH_HilbertLimit.SpectralPhase",
+      "source": "RH_HilbertLimit/SpectralPhase.lean",
+      "source_sha256": "bc21fd329ecce37ce7b4808ffa565d1b0cc7507c90cbc1965b1a540756db3a80",
+      "status": "NEW_SOURCE_CANDIDATE_NATIVE_COMPILE_AND_AXIOM_AUDIT_NOT_RUN",
+      "evidence": "evidence/analytic_v0211/source_reviews",
+      "receipt_validation": "NEW_SAME_TARGET_NATIVE_RECEIPT_REQUIRED"
+    },
+    "after": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.ActualSpectralCalibration.exists_dominant_phase",
+      "source_line": 111,
+      "module": "RH_HilbertLimit.SpectralPhase",
+      "source": "RH_HilbertLimit/SpectralPhase.lean",
+      "source_sha256": "e5d3e26af0da7eb222dac75252480975eb4fa46150ebb342a58c42ab20063db3",
+      "status": "USER_REPORTED_V0_2_15_AGGREGATE_RUN_PASS",
+      "evidence": "evidence/checkpoint_v0216/evidence/NATIVE_PASS_TAIL_REVIEW.json",
+      "receipt_validation": "REQUIRED_ON_USER_MACHINE_FOR_REUSE",
+      "evidence_scope": "Aggregate PASS summary only; expected selected audit coverage verified in source. Direct native declaration/audit/receipt/hash records not supplied.",
+      "source_hash_origin": "LOCAL_PACKAGE_BYTES; NOT_A_NATIVE_HASH_FROM_THE_PASTED_TAIL"
+    }
+  },
+  {
+    "name": "RH_HilbertLimit.sum_spectralTerm_mul_pow",
+    "before": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.sum_spectralTerm_mul_pow",
+      "source_line": 39,
+      "module": "RH_HilbertLimit.SpectralGenerating",
+      "source": "RH_HilbertLimit/SpectralGenerating.lean",
+      "source_sha256": "06fb12f6dba0872527cba2bcc5a10cf3029c8df73af46131db36efa372828977",
+      "status": "NEW_SOURCE_CANDIDATE_NATIVE_COMPILE_AND_AXIOM_AUDIT_NOT_RUN",
+      "evidence": "evidence/analytic_v0211/source_reviews",
+      "receipt_validation": "NEW_SAME_TARGET_NATIVE_RECEIPT_REQUIRED"
+    },
+    "after": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.sum_spectralTerm_mul_pow",
+      "source_line": 39,
+      "module": "RH_HilbertLimit.SpectralGenerating",
+      "source": "RH_HilbertLimit/SpectralGenerating.lean",
+      "source_sha256": "06fb12f6dba0872527cba2bcc5a10cf3029c8df73af46131db36efa372828977",
+      "status": "USER_REPORTED_V0_2_15_AGGREGATE_RUN_PASS",
+      "evidence": "evidence/checkpoint_v0216/evidence/NATIVE_PASS_TAIL_REVIEW.json",
+      "receipt_validation": "REQUIRED_ON_USER_MACHINE_FOR_REUSE",
+      "evidence_scope": "Aggregate PASS summary only; expected selected audit coverage verified in source. Direct native declaration/audit/receipt/hash records not supplied.",
+      "source_hash_origin": "LOCAL_PACKAGE_BYTES; NOT_A_NATIVE_HASH_FROM_THE_PASTED_TAIL"
+    }
+  },
+  {
+    "name": "RH_HilbertLimit.rowGenerating_hasSum",
+    "before": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.rowGenerating_hasSum",
+      "source_line": 57,
+      "module": "RH_HilbertLimit.SpectralGenerating",
+      "source": "RH_HilbertLimit/SpectralGenerating.lean",
+      "source_sha256": "06fb12f6dba0872527cba2bcc5a10cf3029c8df73af46131db36efa372828977",
+      "status": "NEW_SOURCE_CANDIDATE_NATIVE_COMPILE_AND_AXIOM_AUDIT_NOT_RUN",
+      "evidence": "evidence/analytic_v0211/source_reviews",
+      "receipt_validation": "NEW_SAME_TARGET_NATIVE_RECEIPT_REQUIRED"
+    },
+    "after": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.rowGenerating_hasSum",
+      "source_line": 57,
+      "module": "RH_HilbertLimit.SpectralGenerating",
+      "source": "RH_HilbertLimit/SpectralGenerating.lean",
+      "source_sha256": "06fb12f6dba0872527cba2bcc5a10cf3029c8df73af46131db36efa372828977",
+      "status": "USER_REPORTED_V0_2_15_AGGREGATE_RUN_PASS",
+      "evidence": "evidence/checkpoint_v0216/evidence/NATIVE_PASS_TAIL_REVIEW.json",
+      "receipt_validation": "REQUIRED_ON_USER_MACHINE_FOR_REUSE",
+      "evidence_scope": "Aggregate PASS summary only; expected selected audit coverage verified in source. Direct native declaration/audit/receipt/hash records not supplied.",
+      "source_hash_origin": "LOCAL_PACKAGE_BYTES; NOT_A_NATIVE_HASH_FROM_THE_PASTED_TAIL"
+    }
+  },
+  {
+    "name": "RH_HilbertLimit.rowGenerating_eq_tsum",
+    "before": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.rowGenerating_eq_tsum",
+      "source_line": 73,
+      "module": "RH_HilbertLimit.SpectralGenerating",
+      "source": "RH_HilbertLimit/SpectralGenerating.lean",
+      "source_sha256": "06fb12f6dba0872527cba2bcc5a10cf3029c8df73af46131db36efa372828977",
+      "status": "NEW_SOURCE_CANDIDATE_NATIVE_COMPILE_AND_AXIOM_AUDIT_NOT_RUN",
+      "evidence": "evidence/analytic_v0211/source_reviews",
+      "receipt_validation": "NEW_SAME_TARGET_NATIVE_RECEIPT_REQUIRED"
+    },
+    "after": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.rowGenerating_eq_tsum",
+      "source_line": 73,
+      "module": "RH_HilbertLimit.SpectralGenerating",
+      "source": "RH_HilbertLimit/SpectralGenerating.lean",
+      "source_sha256": "06fb12f6dba0872527cba2bcc5a10cf3029c8df73af46131db36efa372828977",
+      "status": "USER_REPORTED_V0_2_15_AGGREGATE_RUN_PASS",
+      "evidence": "evidence/checkpoint_v0216/evidence/NATIVE_PASS_TAIL_REVIEW.json",
+      "receipt_validation": "REQUIRED_ON_USER_MACHINE_FOR_REUSE",
+      "evidence_scope": "Aggregate PASS summary only; expected selected audit coverage verified in source. Direct native declaration/audit/receipt/hash records not supplied.",
+      "source_hash_origin": "LOCAL_PACKAGE_BYTES; NOT_A_NATIVE_HASH_FROM_THE_PASTED_TAIL"
+    }
+  },
+  {
+    "name": "RH_HilbertLimit.spectralRemainder",
+    "before": {
+      "kind": "def",
+      "name": "RH_HilbertLimit.spectralRemainder",
+      "source_line": 81,
+      "module": "RH_HilbertLimit.SpectralGenerating",
+      "source": "RH_HilbertLimit/SpectralGenerating.lean",
+      "source_sha256": "06fb12f6dba0872527cba2bcc5a10cf3029c8df73af46131db36efa372828977",
+      "status": "NEW_SOURCE_CANDIDATE_NATIVE_COMPILE_AND_AXIOM_AUDIT_NOT_RUN",
+      "evidence": "evidence/analytic_v0211/source_reviews",
+      "receipt_validation": "NEW_SAME_TARGET_NATIVE_RECEIPT_REQUIRED"
+    },
+    "after": {
+      "kind": "def",
+      "name": "RH_HilbertLimit.spectralRemainder",
+      "source_line": 81,
+      "module": "RH_HilbertLimit.SpectralGenerating",
+      "source": "RH_HilbertLimit/SpectralGenerating.lean",
+      "source_sha256": "06fb12f6dba0872527cba2bcc5a10cf3029c8df73af46131db36efa372828977",
+      "status": "USER_REPORTED_V0_2_15_AGGREGATE_RUN_PASS",
+      "evidence": "evidence/checkpoint_v0216/evidence/NATIVE_PASS_TAIL_REVIEW.json",
+      "receipt_validation": "REQUIRED_ON_USER_MACHINE_FOR_REUSE",
+      "evidence_scope": "Aggregate PASS summary only; expected selected audit coverage verified in source. Direct native declaration/audit/receipt/hash records not supplied.",
+      "source_hash_origin": "LOCAL_PACKAGE_BYTES; NOT_A_NATIVE_HASH_FROM_THE_PASTED_TAIL"
+    }
+  },
+  {
+    "name": "RH_HilbertLimit.rowGenerating_eq_sum_add_remainder",
+    "before": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.rowGenerating_eq_sum_add_remainder",
+      "source_line": 86,
+      "module": "RH_HilbertLimit.SpectralGenerating",
+      "source": "RH_HilbertLimit/SpectralGenerating.lean",
+      "source_sha256": "06fb12f6dba0872527cba2bcc5a10cf3029c8df73af46131db36efa372828977",
+      "status": "NEW_SOURCE_CANDIDATE_NATIVE_COMPILE_AND_AXIOM_AUDIT_NOT_RUN",
+      "evidence": "evidence/analytic_v0211/source_reviews",
+      "receipt_validation": "NEW_SAME_TARGET_NATIVE_RECEIPT_REQUIRED"
+    },
+    "after": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.rowGenerating_eq_sum_add_remainder",
+      "source_line": 86,
+      "module": "RH_HilbertLimit.SpectralGenerating",
+      "source": "RH_HilbertLimit/SpectralGenerating.lean",
+      "source_sha256": "06fb12f6dba0872527cba2bcc5a10cf3029c8df73af46131db36efa372828977",
+      "status": "USER_REPORTED_V0_2_15_AGGREGATE_RUN_PASS",
+      "evidence": "evidence/checkpoint_v0216/evidence/NATIVE_PASS_TAIL_REVIEW.json",
+      "receipt_validation": "REQUIRED_ON_USER_MACHINE_FOR_REUSE",
+      "evidence_scope": "Aggregate PASS summary only; expected selected audit coverage verified in source. Direct native declaration/audit/receipt/hash records not supplied.",
+      "source_hash_origin": "LOCAL_PACKAGE_BYTES; NOT_A_NATIVE_HASH_FROM_THE_PASTED_TAIL"
+    }
+  },
+  {
+    "name": "RH_HilbertLimit.norm_node_affine_pow_le",
+    "before": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.norm_node_affine_pow_le",
+      "source_line": 100,
+      "module": "RH_HilbertLimit.SpectralGenerating",
+      "source": "RH_HilbertLimit/SpectralGenerating.lean",
+      "source_sha256": "06fb12f6dba0872527cba2bcc5a10cf3029c8df73af46131db36efa372828977",
+      "status": "NEW_SOURCE_CANDIDATE_NATIVE_COMPILE_AND_AXIOM_AUDIT_NOT_RUN",
+      "evidence": "evidence/analytic_v0211/source_reviews",
+      "receipt_validation": "NEW_SAME_TARGET_NATIVE_RECEIPT_REQUIRED"
+    },
+    "after": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.norm_node_affine_pow_le",
+      "source_line": 100,
+      "module": "RH_HilbertLimit.SpectralGenerating",
+      "source": "RH_HilbertLimit/SpectralGenerating.lean",
+      "source_sha256": "06fb12f6dba0872527cba2bcc5a10cf3029c8df73af46131db36efa372828977",
+      "status": "USER_REPORTED_V0_2_15_AGGREGATE_RUN_PASS",
+      "evidence": "evidence/checkpoint_v0216/evidence/NATIVE_PASS_TAIL_REVIEW.json",
+      "receipt_validation": "REQUIRED_ON_USER_MACHINE_FOR_REUSE",
+      "evidence_scope": "Aggregate PASS summary only; expected selected audit coverage verified in source. Direct native declaration/audit/receipt/hash records not supplied.",
+      "source_hash_origin": "LOCAL_PACKAGE_BYTES; NOT_A_NATIVE_HASH_FROM_THE_PASTED_TAIL"
+    }
+  },
+  {
+    "name": "RH_HilbertLimit.spectralRemainder_summable",
+    "before": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.spectralRemainder_summable",
+      "source_line": 109,
+      "module": "RH_HilbertLimit.SpectralGenerating",
+      "source": "RH_HilbertLimit/SpectralGenerating.lean",
+      "source_sha256": "06fb12f6dba0872527cba2bcc5a10cf3029c8df73af46131db36efa372828977",
+      "status": "NEW_SOURCE_CANDIDATE_NATIVE_COMPILE_AND_AXIOM_AUDIT_NOT_RUN",
+      "evidence": "evidence/analytic_v0211/source_reviews",
+      "receipt_validation": "NEW_SAME_TARGET_NATIVE_RECEIPT_REQUIRED"
+    },
+    "after": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.spectralRemainder_summable",
+      "source_line": 109,
+      "module": "RH_HilbertLimit.SpectralGenerating",
+      "source": "RH_HilbertLimit/SpectralGenerating.lean",
+      "source_sha256": "06fb12f6dba0872527cba2bcc5a10cf3029c8df73af46131db36efa372828977",
+      "status": "USER_REPORTED_V0_2_15_AGGREGATE_RUN_PASS",
+      "evidence": "evidence/checkpoint_v0216/evidence/NATIVE_PASS_TAIL_REVIEW.json",
+      "receipt_validation": "REQUIRED_ON_USER_MACHINE_FOR_REUSE",
+      "evidence_scope": "Aggregate PASS summary only; expected selected audit coverage verified in source. Direct native declaration/audit/receipt/hash records not supplied.",
+      "source_hash_origin": "LOCAL_PACKAGE_BYTES; NOT_A_NATIVE_HASH_FROM_THE_PASTED_TAIL"
+    }
+  },
+  {
+    "name": "RH_HilbertLimit.spectralRemainder_norm_summable",
+    "before": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.spectralRemainder_norm_summable",
+      "source_line": 121,
+      "module": "RH_HilbertLimit.SpectralGenerating",
+      "source": "RH_HilbertLimit/SpectralGenerating.lean",
+      "source_sha256": "06fb12f6dba0872527cba2bcc5a10cf3029c8df73af46131db36efa372828977",
+      "status": "NEW_SOURCE_CANDIDATE_NATIVE_COMPILE_AND_AXIOM_AUDIT_NOT_RUN",
+      "evidence": "evidence/analytic_v0211/source_reviews",
+      "receipt_validation": "NEW_SAME_TARGET_NATIVE_RECEIPT_REQUIRED"
+    },
+    "after": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.spectralRemainder_norm_summable",
+      "source_line": 121,
+      "module": "RH_HilbertLimit.SpectralGenerating",
+      "source": "RH_HilbertLimit/SpectralGenerating.lean",
+      "source_sha256": "06fb12f6dba0872527cba2bcc5a10cf3029c8df73af46131db36efa372828977",
+      "status": "USER_REPORTED_V0_2_15_AGGREGATE_RUN_PASS",
+      "evidence": "evidence/checkpoint_v0216/evidence/NATIVE_PASS_TAIL_REVIEW.json",
+      "receipt_validation": "REQUIRED_ON_USER_MACHINE_FOR_REUSE",
+      "evidence_scope": "Aggregate PASS summary only; expected selected audit coverage verified in source. Direct native declaration/audit/receipt/hash records not supplied.",
+      "source_hash_origin": "LOCAL_PACKAGE_BYTES; NOT_A_NATIVE_HASH_FROM_THE_PASTED_TAIL"
+    }
+  },
+  {
+    "name": "RH_HilbertLimit.norm_spectralRemainder_le_tailMass",
+    "before": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.norm_spectralRemainder_le_tailMass",
+      "source_line": 134,
+      "module": "RH_HilbertLimit.SpectralGenerating",
+      "source": "RH_HilbertLimit/SpectralGenerating.lean",
+      "source_sha256": "06fb12f6dba0872527cba2bcc5a10cf3029c8df73af46131db36efa372828977",
+      "status": "NEW_SOURCE_CANDIDATE_NATIVE_COMPILE_AND_AXIOM_AUDIT_NOT_RUN",
+      "evidence": "evidence/analytic_v0211/source_reviews",
+      "receipt_validation": "NEW_SAME_TARGET_NATIVE_RECEIPT_REQUIRED"
+    },
+    "after": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.norm_spectralRemainder_le_tailMass",
+      "source_line": 134,
+      "module": "RH_HilbertLimit.SpectralGenerating",
+      "source": "RH_HilbertLimit/SpectralGenerating.lean",
+      "source_sha256": "06fb12f6dba0872527cba2bcc5a10cf3029c8df73af46131db36efa372828977",
+      "status": "USER_REPORTED_V0_2_15_AGGREGATE_RUN_PASS",
+      "evidence": "evidence/checkpoint_v0216/evidence/NATIVE_PASS_TAIL_REVIEW.json",
+      "receipt_validation": "REQUIRED_ON_USER_MACHINE_FOR_REUSE",
+      "evidence_scope": "Aggregate PASS summary only; expected selected audit coverage verified in source. Direct native declaration/audit/receipt/hash records not supplied.",
+      "source_hash_origin": "LOCAL_PACKAGE_BYTES; NOT_A_NATIVE_HASH_FROM_THE_PASTED_TAIL"
+    }
+  },
+  {
+    "name": "RH_HilbertLimit.norm_spectralRemainder_le",
+    "before": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.norm_spectralRemainder_le",
+      "source_line": 146,
+      "module": "RH_HilbertLimit.SpectralGenerating",
+      "source": "RH_HilbertLimit/SpectralGenerating.lean",
+      "source_sha256": "06fb12f6dba0872527cba2bcc5a10cf3029c8df73af46131db36efa372828977",
+      "status": "NEW_SOURCE_CANDIDATE_NATIVE_COMPILE_AND_AXIOM_AUDIT_NOT_RUN",
+      "evidence": "evidence/analytic_v0211/source_reviews",
+      "receipt_validation": "NEW_SAME_TARGET_NATIVE_RECEIPT_REQUIRED"
+    },
+    "after": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.norm_spectralRemainder_le",
+      "source_line": 146,
+      "module": "RH_HilbertLimit.SpectralGenerating",
+      "source": "RH_HilbertLimit/SpectralGenerating.lean",
+      "source_sha256": "06fb12f6dba0872527cba2bcc5a10cf3029c8df73af46131db36efa372828977",
+      "status": "USER_REPORTED_V0_2_15_AGGREGATE_RUN_PASS",
+      "evidence": "evidence/checkpoint_v0216/evidence/NATIVE_PASS_TAIL_REVIEW.json",
+      "receipt_validation": "REQUIRED_ON_USER_MACHINE_FOR_REUSE",
+      "evidence_scope": "Aggregate PASS summary only; expected selected audit coverage verified in source. Direct native declaration/audit/receipt/hash records not supplied.",
+      "source_hash_origin": "LOCAL_PACKAGE_BYTES; NOT_A_NATIVE_HASH_FROM_THE_PASTED_TAIL"
+    }
+  },
+  {
+    "name": "RH_HilbertLimit.ActualSpectralCalibration.rowGenerating_hasSum",
+    "before": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.ActualSpectralCalibration.rowGenerating_hasSum",
+      "source_line": 163,
+      "module": "RH_HilbertLimit.SpectralGenerating",
+      "source": "RH_HilbertLimit/SpectralGenerating.lean",
+      "source_sha256": "06fb12f6dba0872527cba2bcc5a10cf3029c8df73af46131db36efa372828977",
+      "status": "NEW_SOURCE_CANDIDATE_NATIVE_COMPILE_AND_AXIOM_AUDIT_NOT_RUN",
+      "evidence": "evidence/analytic_v0211/source_reviews",
+      "receipt_validation": "NEW_SAME_TARGET_NATIVE_RECEIPT_REQUIRED"
+    },
+    "after": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.ActualSpectralCalibration.rowGenerating_hasSum",
+      "source_line": 163,
+      "module": "RH_HilbertLimit.SpectralGenerating",
+      "source": "RH_HilbertLimit/SpectralGenerating.lean",
+      "source_sha256": "06fb12f6dba0872527cba2bcc5a10cf3029c8df73af46131db36efa372828977",
+      "status": "USER_REPORTED_V0_2_15_AGGREGATE_RUN_PASS",
+      "evidence": "evidence/checkpoint_v0216/evidence/NATIVE_PASS_TAIL_REVIEW.json",
+      "receipt_validation": "REQUIRED_ON_USER_MACHINE_FOR_REUSE",
+      "evidence_scope": "Aggregate PASS summary only; expected selected audit coverage verified in source. Direct native declaration/audit/receipt/hash records not supplied.",
+      "source_hash_origin": "LOCAL_PACKAGE_BYTES; NOT_A_NATIVE_HASH_FROM_THE_PASTED_TAIL"
+    }
+  },
+  {
+    "name": "RH_HilbertLimit.ActualSpectralCalibration.rowGenerating_eq_tsum",
+    "before": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.ActualSpectralCalibration.rowGenerating_eq_tsum",
+      "source_line": 168,
+      "module": "RH_HilbertLimit.SpectralGenerating",
+      "source": "RH_HilbertLimit/SpectralGenerating.lean",
+      "source_sha256": "06fb12f6dba0872527cba2bcc5a10cf3029c8df73af46131db36efa372828977",
+      "status": "NEW_SOURCE_CANDIDATE_NATIVE_COMPILE_AND_AXIOM_AUDIT_NOT_RUN",
+      "evidence": "evidence/analytic_v0211/source_reviews",
+      "receipt_validation": "NEW_SAME_TARGET_NATIVE_RECEIPT_REQUIRED"
+    },
+    "after": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.ActualSpectralCalibration.rowGenerating_eq_tsum",
+      "source_line": 168,
+      "module": "RH_HilbertLimit.SpectralGenerating",
+      "source": "RH_HilbertLimit/SpectralGenerating.lean",
+      "source_sha256": "06fb12f6dba0872527cba2bcc5a10cf3029c8df73af46131db36efa372828977",
+      "status": "USER_REPORTED_V0_2_15_AGGREGATE_RUN_PASS",
+      "evidence": "evidence/checkpoint_v0216/evidence/NATIVE_PASS_TAIL_REVIEW.json",
+      "receipt_validation": "REQUIRED_ON_USER_MACHINE_FOR_REUSE",
+      "evidence_scope": "Aggregate PASS summary only; expected selected audit coverage verified in source. Direct native declaration/audit/receipt/hash records not supplied.",
+      "source_hash_origin": "LOCAL_PACKAGE_BYTES; NOT_A_NATIVE_HASH_FROM_THE_PASTED_TAIL"
+    }
+  },
+  {
+    "name": "RH_HilbertLimit.ActualSpectralCalibration.rowGenerating_eq_sum_add_remainder",
+    "before": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.ActualSpectralCalibration.rowGenerating_eq_sum_add_remainder",
+      "source_line": 173,
+      "module": "RH_HilbertLimit.SpectralGenerating",
+      "source": "RH_HilbertLimit/SpectralGenerating.lean",
+      "source_sha256": "06fb12f6dba0872527cba2bcc5a10cf3029c8df73af46131db36efa372828977",
+      "status": "NEW_SOURCE_CANDIDATE_NATIVE_COMPILE_AND_AXIOM_AUDIT_NOT_RUN",
+      "evidence": "evidence/analytic_v0211/source_reviews",
+      "receipt_validation": "NEW_SAME_TARGET_NATIVE_RECEIPT_REQUIRED"
+    },
+    "after": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.ActualSpectralCalibration.rowGenerating_eq_sum_add_remainder",
+      "source_line": 173,
+      "module": "RH_HilbertLimit.SpectralGenerating",
+      "source": "RH_HilbertLimit/SpectralGenerating.lean",
+      "source_sha256": "06fb12f6dba0872527cba2bcc5a10cf3029c8df73af46131db36efa372828977",
+      "status": "USER_REPORTED_V0_2_15_AGGREGATE_RUN_PASS",
+      "evidence": "evidence/checkpoint_v0216/evidence/NATIVE_PASS_TAIL_REVIEW.json",
+      "receipt_validation": "REQUIRED_ON_USER_MACHINE_FOR_REUSE",
+      "evidence_scope": "Aggregate PASS summary only; expected selected audit coverage verified in source. Direct native declaration/audit/receipt/hash records not supplied.",
+      "source_hash_origin": "LOCAL_PACKAGE_BYTES; NOT_A_NATIVE_HASH_FROM_THE_PASTED_TAIL"
+    }
+  },
+  {
+    "name": "RH_HilbertLimit.ActualSpectralCalibration.norm_remainder_le",
+    "before": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.ActualSpectralCalibration.norm_remainder_le",
+      "source_line": 180,
+      "module": "RH_HilbertLimit.SpectralGenerating",
+      "source": "RH_HilbertLimit/SpectralGenerating.lean",
+      "source_sha256": "06fb12f6dba0872527cba2bcc5a10cf3029c8df73af46131db36efa372828977",
+      "status": "NEW_SOURCE_CANDIDATE_NATIVE_COMPILE_AND_AXIOM_AUDIT_NOT_RUN",
+      "evidence": "evidence/analytic_v0211/source_reviews",
+      "receipt_validation": "NEW_SAME_TARGET_NATIVE_RECEIPT_REQUIRED"
+    },
+    "after": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.ActualSpectralCalibration.norm_remainder_le",
+      "source_line": 180,
+      "module": "RH_HilbertLimit.SpectralGenerating",
+      "source": "RH_HilbertLimit/SpectralGenerating.lean",
+      "source_sha256": "06fb12f6dba0872527cba2bcc5a10cf3029c8df73af46131db36efa372828977",
+      "status": "USER_REPORTED_V0_2_15_AGGREGATE_RUN_PASS",
+      "evidence": "evidence/checkpoint_v0216/evidence/NATIVE_PASS_TAIL_REVIEW.json",
+      "receipt_validation": "REQUIRED_ON_USER_MACHINE_FOR_REUSE",
+      "evidence_scope": "Aggregate PASS summary only; expected selected audit coverage verified in source. Direct native declaration/audit/receipt/hash records not supplied.",
+      "source_hash_origin": "LOCAL_PACKAGE_BYTES; NOT_A_NATIVE_HASH_FROM_THE_PASTED_TAIL"
+    }
+  },
+  {
+    "name": "RH_HilbertLimit.ActualSpectralCalibration.exists_uniform_finite_remainder_bound",
+    "before": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.ActualSpectralCalibration.exists_uniform_finite_remainder_bound",
+      "source_line": 188,
+      "module": "RH_HilbertLimit.SpectralGenerating",
+      "source": "RH_HilbertLimit/SpectralGenerating.lean",
+      "source_sha256": "06fb12f6dba0872527cba2bcc5a10cf3029c8df73af46131db36efa372828977",
+      "status": "NEW_SOURCE_CANDIDATE_NATIVE_COMPILE_AND_AXIOM_AUDIT_NOT_RUN",
+      "evidence": "evidence/analytic_v0211/source_reviews",
+      "receipt_validation": "NEW_SAME_TARGET_NATIVE_RECEIPT_REQUIRED"
+    },
+    "after": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.ActualSpectralCalibration.exists_uniform_finite_remainder_bound",
+      "source_line": 188,
+      "module": "RH_HilbertLimit.SpectralGenerating",
+      "source": "RH_HilbertLimit/SpectralGenerating.lean",
+      "source_sha256": "06fb12f6dba0872527cba2bcc5a10cf3029c8df73af46131db36efa372828977",
+      "status": "USER_REPORTED_V0_2_15_AGGREGATE_RUN_PASS",
+      "evidence": "evidence/checkpoint_v0216/evidence/NATIVE_PASS_TAIL_REVIEW.json",
+      "receipt_validation": "REQUIRED_ON_USER_MACHINE_FOR_REUSE",
+      "evidence_scope": "Aggregate PASS summary only; expected selected audit coverage verified in source. Direct native declaration/audit/receipt/hash records not supplied.",
+      "source_hash_origin": "LOCAL_PACKAGE_BYTES; NOT_A_NATIVE_HASH_FROM_THE_PASTED_TAIL"
+    }
+  },
+  {
+    "name": "RH_HilbertLimit.SpectralExtraction.exists_common_strict_bound",
+    "before": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.SpectralExtraction.exists_common_strict_bound",
+      "source_line": 24,
+      "module": "RH_HilbertLimit.SpectralExtraction",
+      "source": "RH_HilbertLimit/SpectralExtraction.lean",
+      "source_sha256": "4c3381a0d090c9f27f06453797360ad765e018d2776001816bf3b91272fbdc16",
+      "status": "NEW_SOURCE_CANDIDATE_NATIVE_COMPILE_AND_AXIOM_AUDIT_NOT_RUN",
+      "evidence": "evidence/analytic_v0211/source_reviews",
+      "receipt_validation": "NEW_SAME_TARGET_NATIVE_RECEIPT_REQUIRED"
+    },
+    "after": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.SpectralExtraction.exists_common_strict_bound",
+      "source_line": 24,
+      "module": "RH_HilbertLimit.SpectralExtraction",
+      "source": "RH_HilbertLimit/SpectralExtraction.lean",
+      "source_sha256": "4c3381a0d090c9f27f06453797360ad765e018d2776001816bf3b91272fbdc16",
+      "status": "USER_REPORTED_V0_2_15_AGGREGATE_RUN_PASS",
+      "evidence": "evidence/checkpoint_v0216/evidence/NATIVE_PASS_TAIL_REVIEW.json",
+      "receipt_validation": "REQUIRED_ON_USER_MACHINE_FOR_REUSE",
+      "evidence_scope": "Aggregate PASS summary only; expected selected audit coverage verified in source. Direct native declaration/audit/receipt/hash records not supplied.",
+      "source_hash_origin": "LOCAL_PACKAGE_BYTES; NOT_A_NATIVE_HASH_FROM_THE_PASTED_TAIL"
+    }
+  },
+  {
+    "name": "RH_HilbertLimit.SpectralExtraction.groupedCoefficient",
+    "before": {
+      "kind": "def",
+      "name": "RH_HilbertLimit.SpectralExtraction.groupedCoefficient",
+      "source_line": 42,
+      "module": "RH_HilbertLimit.SpectralExtraction",
+      "source": "RH_HilbertLimit/SpectralExtraction.lean",
+      "source_sha256": "4c3381a0d090c9f27f06453797360ad765e018d2776001816bf3b91272fbdc16",
+      "status": "NEW_SOURCE_CANDIDATE_NATIVE_COMPILE_AND_AXIOM_AUDIT_NOT_RUN",
+      "evidence": "evidence/analytic_v0211/source_reviews",
+      "receipt_validation": "NEW_SAME_TARGET_NATIVE_RECEIPT_REQUIRED"
+    },
+    "after": {
+      "kind": "def",
+      "name": "RH_HilbertLimit.SpectralExtraction.groupedCoefficient",
+      "source_line": 42,
+      "module": "RH_HilbertLimit.SpectralExtraction",
+      "source": "RH_HilbertLimit/SpectralExtraction.lean",
+      "source_sha256": "4c3381a0d090c9f27f06453797360ad765e018d2776001816bf3b91272fbdc16",
+      "status": "USER_REPORTED_V0_2_15_AGGREGATE_RUN_PASS",
+      "evidence": "evidence/checkpoint_v0216/evidence/NATIVE_PASS_TAIL_REVIEW.json",
+      "receipt_validation": "REQUIRED_ON_USER_MACHINE_FOR_REUSE",
+      "evidence_scope": "Aggregate PASS summary only; expected selected audit coverage verified in source. Direct native declaration/audit/receipt/hash records not supplied.",
+      "source_hash_origin": "LOCAL_PACKAGE_BYTES; NOT_A_NATIVE_HASH_FROM_THE_PASTED_TAIL"
+    }
+  },
+  {
+    "name": "RH_HilbertLimit.SpectralExtraction.groupedCoefficient_eq_card_mul",
+    "before": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.SpectralExtraction.groupedCoefficient_eq_card_mul",
+      "source_line": 46,
+      "module": "RH_HilbertLimit.SpectralExtraction",
+      "source": "RH_HilbertLimit/SpectralExtraction.lean",
+      "source_sha256": "4c3381a0d090c9f27f06453797360ad765e018d2776001816bf3b91272fbdc16",
+      "status": "NEW_SOURCE_CANDIDATE_NATIVE_COMPILE_AND_AXIOM_AUDIT_NOT_RUN",
+      "evidence": "evidence/analytic_v0211/source_reviews",
+      "receipt_validation": "NEW_SAME_TARGET_NATIVE_RECEIPT_REQUIRED"
+    },
+    "after": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.SpectralExtraction.groupedCoefficient_eq_card_mul",
+      "source_line": 46,
+      "module": "RH_HilbertLimit.SpectralExtraction",
+      "source": "RH_HilbertLimit/SpectralExtraction.lean",
+      "source_sha256": "4c3381a0d090c9f27f06453797360ad765e018d2776001816bf3b91272fbdc16",
+      "status": "USER_REPORTED_V0_2_15_AGGREGATE_RUN_PASS",
+      "evidence": "evidence/checkpoint_v0216/evidence/NATIVE_PASS_TAIL_REVIEW.json",
+      "receipt_validation": "REQUIRED_ON_USER_MACHINE_FOR_REUSE",
+      "evidence_scope": "Aggregate PASS summary only; expected selected audit coverage verified in source. Direct native declaration/audit/receipt/hash records not supplied.",
+      "source_hash_origin": "LOCAL_PACKAGE_BYTES; NOT_A_NATIVE_HASH_FROM_THE_PASTED_TAIL"
+    }
+  },
+  {
+    "name": "RH_HilbertLimit.SpectralExtraction.groupedCoefficient_ne_zero",
+    "before": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.SpectralExtraction.groupedCoefficient_ne_zero",
+      "source_line": 60,
+      "module": "RH_HilbertLimit.SpectralExtraction",
+      "source": "RH_HilbertLimit/SpectralExtraction.lean",
+      "source_sha256": "4c3381a0d090c9f27f06453797360ad765e018d2776001816bf3b91272fbdc16",
+      "status": "NEW_SOURCE_CANDIDATE_NATIVE_COMPILE_AND_AXIOM_AUDIT_NOT_RUN",
+      "evidence": "evidence/analytic_v0211/source_reviews",
+      "receipt_validation": "NEW_SAME_TARGET_NATIVE_RECEIPT_REQUIRED"
+    },
+    "after": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.SpectralExtraction.groupedCoefficient_ne_zero",
+      "source_line": 60,
+      "module": "RH_HilbertLimit.SpectralExtraction",
+      "source": "RH_HilbertLimit/SpectralExtraction.lean",
+      "source_sha256": "4c3381a0d090c9f27f06453797360ad765e018d2776001816bf3b91272fbdc16",
+      "status": "USER_REPORTED_V0_2_15_AGGREGATE_RUN_PASS",
+      "evidence": "evidence/checkpoint_v0216/evidence/NATIVE_PASS_TAIL_REVIEW.json",
+      "receipt_validation": "REQUIRED_ON_USER_MACHINE_FOR_REUSE",
+      "evidence_scope": "Aggregate PASS summary only; expected selected audit coverage verified in source. Direct native declaration/audit/receipt/hash records not supplied.",
+      "source_hash_origin": "LOCAL_PACKAGE_BYTES; NOT_A_NATIVE_HASH_FROM_THE_PASTED_TAIL"
+    }
+  },
+  {
+    "name": "RH_HilbertLimit.SpectralExtraction.grouped_exponential_sum",
+    "before": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.SpectralExtraction.grouped_exponential_sum",
+      "source_line": 74,
+      "module": "RH_HilbertLimit.SpectralExtraction",
+      "source": "RH_HilbertLimit/SpectralExtraction.lean",
+      "source_sha256": "4c3381a0d090c9f27f06453797360ad765e018d2776001816bf3b91272fbdc16",
+      "status": "NEW_SOURCE_CANDIDATE_NATIVE_COMPILE_AND_AXIOM_AUDIT_NOT_RUN",
+      "evidence": "evidence/analytic_v0211/source_reviews",
+      "receipt_validation": "NEW_SAME_TARGET_NATIVE_RECEIPT_REQUIRED"
+    },
+    "after": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.SpectralExtraction.grouped_exponential_sum",
+      "source_line": 74,
+      "module": "RH_HilbertLimit.SpectralExtraction",
+      "source": "RH_HilbertLimit/SpectralExtraction.lean",
+      "source_sha256": "4c3381a0d090c9f27f06453797360ad765e018d2776001816bf3b91272fbdc16",
+      "status": "USER_REPORTED_V0_2_15_AGGREGATE_RUN_PASS",
+      "evidence": "evidence/checkpoint_v0216/evidence/NATIVE_PASS_TAIL_REVIEW.json",
+      "receipt_validation": "REQUIRED_ON_USER_MACHINE_FOR_REUSE",
+      "evidence_scope": "Aggregate PASS summary only; expected selected audit coverage verified in source. Direct native declaration/audit/receipt/hash records not supplied.",
+      "source_hash_origin": "LOCAL_PACKAGE_BYTES; NOT_A_NATIVE_HASH_FROM_THE_PASTED_TAIL"
+    }
+  },
+  {
+    "name": "RH_HilbertLimit.SpectralExtraction.finite_dominant_indices",
+    "before": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.SpectralExtraction.finite_dominant_indices",
+      "source_line": 94,
+      "module": "RH_HilbertLimit.SpectralExtraction",
+      "source": "RH_HilbertLimit/SpectralExtraction.lean",
+      "source_sha256": "4c3381a0d090c9f27f06453797360ad765e018d2776001816bf3b91272fbdc16",
+      "status": "NEW_SOURCE_CANDIDATE_NATIVE_COMPILE_AND_AXIOM_AUDIT_NOT_RUN",
+      "evidence": "evidence/analytic_v0211/source_reviews",
+      "receipt_validation": "NEW_SAME_TARGET_NATIVE_RECEIPT_REQUIRED"
+    },
+    "after": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.SpectralExtraction.finite_dominant_indices",
+      "source_line": 94,
+      "module": "RH_HilbertLimit.SpectralExtraction",
+      "source": "RH_HilbertLimit/SpectralExtraction.lean",
+      "source_sha256": "4c3381a0d090c9f27f06453797360ad765e018d2776001816bf3b91272fbdc16",
+      "status": "USER_REPORTED_V0_2_15_AGGREGATE_RUN_PASS",
+      "evidence": "evidence/checkpoint_v0216/evidence/NATIVE_PASS_TAIL_REVIEW.json",
+      "receipt_validation": "REQUIRED_ON_USER_MACHINE_FOR_REUSE",
+      "evidence_scope": "Aggregate PASS summary only; expected selected audit coverage verified in source. Direct native declaration/audit/receipt/hash records not supplied.",
+      "source_hash_origin": "LOCAL_PACKAGE_BYTES; NOT_A_NATIVE_HASH_FROM_THE_PASTED_TAIL"
+    }
+  },
+  {
+    "name": "RH_HilbertLimit.ActualSpectralCalibration.dominantExtraction",
+    "before": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.ActualSpectralCalibration.dominantExtraction",
+      "source_line": 138,
+      "module": "RH_HilbertLimit.SpectralExtraction",
+      "source": "RH_HilbertLimit/SpectralExtraction.lean",
+      "source_sha256": "4c3381a0d090c9f27f06453797360ad765e018d2776001816bf3b91272fbdc16",
+      "status": "NEW_SOURCE_CANDIDATE_NATIVE_COMPILE_AND_AXIOM_AUDIT_NOT_RUN",
+      "evidence": "evidence/analytic_v0211/source_reviews",
+      "receipt_validation": "NEW_SAME_TARGET_NATIVE_RECEIPT_REQUIRED"
+    },
+    "after": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.ActualSpectralCalibration.dominantExtraction",
+      "source_line": 138,
+      "module": "RH_HilbertLimit.SpectralExtraction",
+      "source": "RH_HilbertLimit/SpectralExtraction.lean",
+      "source_sha256": "4c3381a0d090c9f27f06453797360ad765e018d2776001816bf3b91272fbdc16",
+      "status": "USER_REPORTED_V0_2_15_AGGREGATE_RUN_PASS",
+      "evidence": "evidence/checkpoint_v0216/evidence/NATIVE_PASS_TAIL_REVIEW.json",
+      "receipt_validation": "REQUIRED_ON_USER_MACHINE_FOR_REUSE",
+      "evidence_scope": "Aggregate PASS summary only; expected selected audit coverage verified in source. Direct native declaration/audit/receipt/hash records not supplied.",
+      "source_hash_origin": "LOCAL_PACKAGE_BYTES; NOT_A_NATIVE_HASH_FROM_THE_PASTED_TAIL"
+    }
+  },
+  {
+    "name": "RH_HilbertLimit.actualCanonicalCalibration",
+    "before": {
+      "kind": "def",
+      "name": "RH_HilbertLimit.actualCanonicalCalibration",
+      "source_line": 25,
+      "module": "RH_HilbertLimit.AnalyticClosure",
+      "source": "RH_HilbertLimit/AnalyticClosure.lean",
+      "source_sha256": "ed440ff35623939ee3b5b7d58b0c85836d0c3e425e9db60ed95e7cb3eb465c16",
+      "status": "NEW_SOURCE_CANDIDATE_NATIVE_COMPILE_AND_AXIOM_AUDIT_NOT_RUN",
+      "evidence": "evidence/analytic_v0211/source_reviews",
+      "receipt_validation": "NEW_SAME_TARGET_NATIVE_RECEIPT_REQUIRED"
+    },
+    "after": {
+      "kind": "def",
+      "name": "RH_HilbertLimit.actualCanonicalCalibration",
+      "source_line": 25,
+      "module": "RH_HilbertLimit.AnalyticClosure",
+      "source": "RH_HilbertLimit/AnalyticClosure.lean",
+      "source_sha256": "ed440ff35623939ee3b5b7d58b0c85836d0c3e425e9db60ed95e7cb3eb465c16",
+      "status": "USER_REPORTED_V0_2_15_AGGREGATE_RUN_PASS",
+      "evidence": "evidence/checkpoint_v0216/evidence/NATIVE_PASS_TAIL_REVIEW.json",
+      "receipt_validation": "REQUIRED_ON_USER_MACHINE_FOR_REUSE",
+      "evidence_scope": "Aggregate PASS summary only; expected selected audit coverage verified in source. Direct native declaration/audit/receipt/hash records not supplied.",
+      "source_hash_origin": "LOCAL_PACKAGE_BYTES; NOT_A_NATIVE_HASH_FROM_THE_PASTED_TAIL"
+    }
+  },
+  {
+    "name": "RH_HilbertLimit.actualCanonicalDominantExtraction",
+    "before": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.actualCanonicalDominantExtraction",
+      "source_line": 29,
+      "module": "RH_HilbertLimit.AnalyticClosure",
+      "source": "RH_HilbertLimit/AnalyticClosure.lean",
+      "source_sha256": "ed440ff35623939ee3b5b7d58b0c85836d0c3e425e9db60ed95e7cb3eb465c16",
+      "status": "NEW_SOURCE_CANDIDATE_NATIVE_COMPILE_AND_AXIOM_AUDIT_NOT_RUN",
+      "evidence": "evidence/analytic_v0211/source_reviews",
+      "receipt_validation": "NEW_SAME_TARGET_NATIVE_RECEIPT_REQUIRED"
+    },
+    "after": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.actualCanonicalDominantExtraction",
+      "source_line": 29,
+      "module": "RH_HilbertLimit.AnalyticClosure",
+      "source": "RH_HilbertLimit/AnalyticClosure.lean",
+      "source_sha256": "ed440ff35623939ee3b5b7d58b0c85836d0c3e425e9db60ed95e7cb3eb465c16",
+      "status": "USER_REPORTED_V0_2_15_AGGREGATE_RUN_PASS",
+      "evidence": "evidence/checkpoint_v0216/evidence/NATIVE_PASS_TAIL_REVIEW.json",
+      "receipt_validation": "REQUIRED_ON_USER_MACHINE_FOR_REUSE",
+      "evidence_scope": "Aggregate PASS summary only; expected selected audit coverage verified in source. Direct native declaration/audit/receipt/hash records not supplied.",
+      "source_hash_origin": "LOCAL_PACKAGE_BYTES; NOT_A_NATIVE_HASH_FROM_THE_PASTED_TAIL"
+    }
+  },
+  {
+    "name": "RH_HilbertLimit.canonical_actual_root_tendsto_constructed",
+    "before": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.canonical_actual_root_tendsto_constructed",
+      "source_line": 33,
+      "module": "RH_HilbertLimit.AnalyticClosure",
+      "source": "RH_HilbertLimit/AnalyticClosure.lean",
+      "source_sha256": "ed440ff35623939ee3b5b7d58b0c85836d0c3e425e9db60ed95e7cb3eb465c16",
+      "status": "NEW_SOURCE_CANDIDATE_NATIVE_COMPILE_AND_AXIOM_AUDIT_NOT_RUN",
+      "evidence": "evidence/analytic_v0211/source_reviews",
+      "receipt_validation": "NEW_SAME_TARGET_NATIVE_RECEIPT_REQUIRED"
+    },
+    "after": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.canonical_actual_root_tendsto_constructed",
+      "source_line": 33,
+      "module": "RH_HilbertLimit.AnalyticClosure",
+      "source": "RH_HilbertLimit/AnalyticClosure.lean",
+      "source_sha256": "ed440ff35623939ee3b5b7d58b0c85836d0c3e425e9db60ed95e7cb3eb465c16",
+      "status": "USER_REPORTED_V0_2_15_AGGREGATE_RUN_PASS",
+      "evidence": "evidence/checkpoint_v0216/evidence/NATIVE_PASS_TAIL_REVIEW.json",
+      "receipt_validation": "REQUIRED_ON_USER_MACHINE_FOR_REUSE",
+      "evidence_scope": "Aggregate PASS summary only; expected selected audit coverage verified in source. Direct native declaration/audit/receipt/hash records not supplied.",
+      "source_hash_origin": "LOCAL_PACKAGE_BYTES; NOT_A_NATIVE_HASH_FROM_THE_PASTED_TAIL"
+    }
+  },
+  {
+    "name": "RH_HilbertLimit.canonical_actual_root_limit_exists",
+    "before": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.canonical_actual_root_limit_exists",
+      "source_line": 38,
+      "module": "RH_HilbertLimit.AnalyticClosure",
+      "source": "RH_HilbertLimit/AnalyticClosure.lean",
+      "source_sha256": "ed440ff35623939ee3b5b7d58b0c85836d0c3e425e9db60ed95e7cb3eb465c16",
+      "status": "NEW_SOURCE_CANDIDATE_NATIVE_COMPILE_AND_AXIOM_AUDIT_NOT_RUN",
+      "evidence": "evidence/analytic_v0211/source_reviews",
+      "receipt_validation": "NEW_SAME_TARGET_NATIVE_RECEIPT_REQUIRED"
+    },
+    "after": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.canonical_actual_root_limit_exists",
+      "source_line": 38,
+      "module": "RH_HilbertLimit.AnalyticClosure",
+      "source": "RH_HilbertLimit/AnalyticClosure.lean",
+      "source_sha256": "ed440ff35623939ee3b5b7d58b0c85836d0c3e425e9db60ed95e7cb3eb465c16",
+      "status": "USER_REPORTED_V0_2_15_AGGREGATE_RUN_PASS",
+      "evidence": "evidence/checkpoint_v0216/evidence/NATIVE_PASS_TAIL_REVIEW.json",
+      "receipt_validation": "REQUIRED_ON_USER_MACHINE_FOR_REUSE",
+      "evidence_scope": "Aggregate PASS summary only; expected selected audit coverage verified in source. Direct native declaration/audit/receipt/hash records not supplied.",
+      "source_hash_origin": "LOCAL_PACKAGE_BYTES; NOT_A_NATIVE_HASH_FROM_THE_PASTED_TAIL"
+    }
+  },
+  {
+    "name": "RH_HilbertLimit.canonical_actual_root_one_iff_nativeRH",
+    "before": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.canonical_actual_root_one_iff_nativeRH",
+      "source_line": 44,
+      "module": "RH_HilbertLimit.AnalyticClosure",
+      "source": "RH_HilbertLimit/AnalyticClosure.lean",
+      "source_sha256": "ed440ff35623939ee3b5b7d58b0c85836d0c3e425e9db60ed95e7cb3eb465c16",
+      "status": "NEW_SOURCE_CANDIDATE_NATIVE_COMPILE_AND_AXIOM_AUDIT_NOT_RUN",
+      "evidence": "evidence/analytic_v0211/source_reviews",
+      "receipt_validation": "NEW_SAME_TARGET_NATIVE_RECEIPT_REQUIRED"
+    },
+    "after": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.canonical_actual_root_one_iff_nativeRH",
+      "source_line": 44,
+      "module": "RH_HilbertLimit.AnalyticClosure",
+      "source": "RH_HilbertLimit/AnalyticClosure.lean",
+      "source_sha256": "ed440ff35623939ee3b5b7d58b0c85836d0c3e425e9db60ed95e7cb3eb465c16",
+      "status": "USER_REPORTED_V0_2_15_AGGREGATE_RUN_PASS",
+      "evidence": "evidence/checkpoint_v0216/evidence/NATIVE_PASS_TAIL_REVIEW.json",
+      "receipt_validation": "REQUIRED_ON_USER_MACHINE_FOR_REUSE",
+      "evidence_scope": "Aggregate PASS summary only; expected selected audit coverage verified in source. Direct native declaration/audit/receipt/hash records not supplied.",
+      "source_hash_origin": "LOCAL_PACKAGE_BYTES; NOT_A_NATIVE_HASH_FROM_THE_PASTED_TAIL"
+    }
+  },
+  {
+    "name": "RH_HilbertLimit.canonical_actual_subexponential_iff_nativeRH",
+    "before": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.canonical_actual_subexponential_iff_nativeRH",
+      "source_line": 49,
+      "module": "RH_HilbertLimit.AnalyticClosure",
+      "source": "RH_HilbertLimit/AnalyticClosure.lean",
+      "source_sha256": "ed440ff35623939ee3b5b7d58b0c85836d0c3e425e9db60ed95e7cb3eb465c16",
+      "status": "NEW_SOURCE_CANDIDATE_NATIVE_COMPILE_AND_AXIOM_AUDIT_NOT_RUN",
+      "evidence": "evidence/analytic_v0211/source_reviews",
+      "receipt_validation": "NEW_SAME_TARGET_NATIVE_RECEIPT_REQUIRED"
+    },
+    "after": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.canonical_actual_subexponential_iff_nativeRH",
+      "source_line": 49,
+      "module": "RH_HilbertLimit.AnalyticClosure",
+      "source": "RH_HilbertLimit/AnalyticClosure.lean",
+      "source_sha256": "ed440ff35623939ee3b5b7d58b0c85836d0c3e425e9db60ed95e7cb3eb465c16",
+      "status": "USER_REPORTED_V0_2_15_AGGREGATE_RUN_PASS",
+      "evidence": "evidence/checkpoint_v0216/evidence/NATIVE_PASS_TAIL_REVIEW.json",
+      "receipt_validation": "REQUIRED_ON_USER_MACHINE_FOR_REUSE",
+      "evidence_scope": "Aggregate PASS summary only; expected selected audit coverage verified in source. Direct native declaration/audit/receipt/hash records not supplied.",
+      "source_hash_origin": "LOCAL_PACKAGE_BYTES; NOT_A_NATIVE_HASH_FROM_THE_PASTED_TAIL"
+    }
+  },
+  {
+    "name": "RH_HilbertLimit.canonical_actual_all_variation_one_iff_nativeRH",
+    "before": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.canonical_actual_all_variation_one_iff_nativeRH",
+      "source_line": 54,
+      "module": "RH_HilbertLimit.AnalyticClosure",
+      "source": "RH_HilbertLimit/AnalyticClosure.lean",
+      "source_sha256": "ed440ff35623939ee3b5b7d58b0c85836d0c3e425e9db60ed95e7cb3eb465c16",
+      "status": "NEW_SOURCE_CANDIDATE_NATIVE_COMPILE_AND_AXIOM_AUDIT_NOT_RUN",
+      "evidence": "evidence/analytic_v0211/source_reviews",
+      "receipt_validation": "NEW_SAME_TARGET_NATIVE_RECEIPT_REQUIRED"
+    },
+    "after": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.canonical_actual_all_variation_one_iff_nativeRH",
+      "source_line": 54,
+      "module": "RH_HilbertLimit.AnalyticClosure",
+      "source": "RH_HilbertLimit/AnalyticClosure.lean",
+      "source_sha256": "ed440ff35623939ee3b5b7d58b0c85836d0c3e425e9db60ed95e7cb3eb465c16",
+      "status": "USER_REPORTED_V0_2_15_AGGREGATE_RUN_PASS",
+      "evidence": "evidence/checkpoint_v0216/evidence/NATIVE_PASS_TAIL_REVIEW.json",
+      "receipt_validation": "REQUIRED_ON_USER_MACHINE_FOR_REUSE",
+      "evidence_scope": "Aggregate PASS summary only; expected selected audit coverage verified in source. Direct native declaration/audit/receipt/hash records not supplied.",
+      "source_hash_origin": "LOCAL_PACKAGE_BYTES; NOT_A_NATIVE_HASH_FROM_THE_PASTED_TAIL"
+    }
+  },
+  {
+    "name": "RH_HilbertLimit.canonical_actual_weights_nonnegative_iff_nativeRH",
+    "before": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.canonical_actual_weights_nonnegative_iff_nativeRH",
+      "source_line": 59,
+      "module": "RH_HilbertLimit.AnalyticClosure",
+      "source": "RH_HilbertLimit/AnalyticClosure.lean",
+      "source_sha256": "ed440ff35623939ee3b5b7d58b0c85836d0c3e425e9db60ed95e7cb3eb465c16",
+      "status": "NEW_SOURCE_CANDIDATE_NATIVE_COMPILE_AND_AXIOM_AUDIT_NOT_RUN",
+      "evidence": "evidence/analytic_v0211/source_reviews",
+      "receipt_validation": "NEW_SAME_TARGET_NATIVE_RECEIPT_REQUIRED"
+    },
+    "after": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.canonical_actual_weights_nonnegative_iff_nativeRH",
+      "source_line": 59,
+      "module": "RH_HilbertLimit.AnalyticClosure",
+      "source": "RH_HilbertLimit/AnalyticClosure.lean",
+      "source_sha256": "ed440ff35623939ee3b5b7d58b0c85836d0c3e425e9db60ed95e7cb3eb465c16",
+      "status": "USER_REPORTED_V0_2_15_AGGREGATE_RUN_PASS",
+      "evidence": "evidence/checkpoint_v0216/evidence/NATIVE_PASS_TAIL_REVIEW.json",
+      "receipt_validation": "REQUIRED_ON_USER_MACHINE_FOR_REUSE",
+      "evidence_scope": "Aggregate PASS summary only; expected selected audit coverage verified in source. Direct native declaration/audit/receipt/hash records not supplied.",
+      "source_hash_origin": "LOCAL_PACKAGE_BYTES; NOT_A_NATIVE_HASH_FROM_THE_PASTED_TAIL"
+    }
+  },
+  {
+    "name": "RH_HilbertLimit.canonical_actual_natural_growth_step_iff_nativeRH_constructed",
+    "before": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.canonical_actual_natural_growth_step_iff_nativeRH_constructed",
+      "source_line": 65,
+      "module": "RH_HilbertLimit.AnalyticClosure",
+      "source": "RH_HilbertLimit/AnalyticClosure.lean",
+      "source_sha256": "ed440ff35623939ee3b5b7d58b0c85836d0c3e425e9db60ed95e7cb3eb465c16",
+      "status": "NEW_SOURCE_CANDIDATE_NATIVE_COMPILE_AND_AXIOM_AUDIT_NOT_RUN",
+      "evidence": "evidence/analytic_v0211/source_reviews",
+      "receipt_validation": "NEW_SAME_TARGET_NATIVE_RECEIPT_REQUIRED"
+    },
+    "after": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.canonical_actual_natural_growth_step_iff_nativeRH_constructed",
+      "source_line": 65,
+      "module": "RH_HilbertLimit.AnalyticClosure",
+      "source": "RH_HilbertLimit/AnalyticClosure.lean",
+      "source_sha256": "ed440ff35623939ee3b5b7d58b0c85836d0c3e425e9db60ed95e7cb3eb465c16",
+      "status": "USER_REPORTED_V0_2_15_AGGREGATE_RUN_PASS",
+      "evidence": "evidence/checkpoint_v0216/evidence/NATIVE_PASS_TAIL_REVIEW.json",
+      "receipt_validation": "REQUIRED_ON_USER_MACHINE_FOR_REUSE",
+      "evidence_scope": "Aggregate PASS summary only; expected selected audit coverage verified in source. Direct native declaration/audit/receipt/hash records not supplied.",
+      "source_hash_origin": "LOCAL_PACKAGE_BYTES; NOT_A_NATIVE_HASH_FROM_THE_PASTED_TAIL"
+    }
+  },
+  {
+    "name": "RH_HilbertLimit.canonical_actual_natural_bound_iff_nativeRH_constructed",
+    "before": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.canonical_actual_natural_bound_iff_nativeRH_constructed",
+      "source_line": 71,
+      "module": "RH_HilbertLimit.AnalyticClosure",
+      "source": "RH_HilbertLimit/AnalyticClosure.lean",
+      "source_sha256": "ed440ff35623939ee3b5b7d58b0c85836d0c3e425e9db60ed95e7cb3eb465c16",
+      "status": "NEW_SOURCE_CANDIDATE_NATIVE_COMPILE_AND_AXIOM_AUDIT_NOT_RUN",
+      "evidence": "evidence/analytic_v0211/source_reviews",
+      "receipt_validation": "NEW_SAME_TARGET_NATIVE_RECEIPT_REQUIRED"
+    },
+    "after": {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.canonical_actual_natural_bound_iff_nativeRH_constructed",
+      "source_line": 71,
+      "module": "RH_HilbertLimit.AnalyticClosure",
+      "source": "RH_HilbertLimit/AnalyticClosure.lean",
+      "source_sha256": "ed440ff35623939ee3b5b7d58b0c85836d0c3e425e9db60ed95e7cb3eb465c16",
+      "status": "USER_REPORTED_V0_2_15_AGGREGATE_RUN_PASS",
+      "evidence": "evidence/checkpoint_v0216/evidence/NATIVE_PASS_TAIL_REVIEW.json",
+      "receipt_validation": "REQUIRED_ON_USER_MACHINE_FOR_REUSE",
+      "evidence_scope": "Aggregate PASS summary only; expected selected audit coverage verified in source. Direct native declaration/audit/receipt/hash records not supplied.",
+      "source_hash_origin": "LOCAL_PACKAGE_BYTES; NOT_A_NATIVE_HASH_FROM_THE_PASTED_TAIL"
+    }
+  }
+]

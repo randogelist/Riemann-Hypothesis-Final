@@ -1,0 +1,78 @@
+{
+  "schema": "RH_V0216_REUSE_RECORD_EXECUTION_INPUTS_STATIC_REVIEW_V1",
+  "status": "PASS_STATIC_BYTE_COMPARISON",
+  "baseline_runner_sha256": "d5eb2c1f33b4fafcd0b1d366850cc860c7e73552dd739ee9cdd238559e679c86",
+  "candidate_runner_sha256": "d5eb2c1f33b4fafcd0b1d366850cc860c7e73552dd739ee9cdd238559e679c86",
+  "runner_identical": true,
+  "unchanged_package_and_runner_identity": {
+    "PACKAGE": "RH_HILBERT_LIMIT_LEAN_v0_2_16_construction",
+    "RUNNER_VERSION": "RH_HILBERT_NATIVE_RUNNER_v0_2_16_PASS_CHECKPOINT"
+  },
+  "lean_source_files_unchanged": 92,
+  "lean_manifest_sha256": "40dfc170761aa8dc4a1f12a196d818042a1821f2ff8074154afa838460f580ce",
+  "unchanged_runtime_and_execution_inputs": [
+    {
+      "path": "tools/NativeRamWarm.cs",
+      "bytes": 27815,
+      "sha256": "315d97cf6f1030c838292f5a871c5b583a682464638f139070055b2727f9d87a"
+    },
+    {
+      "path": "tools/NativeSha256.cs",
+      "bytes": 8565,
+      "sha256": "d8cd2d616ed2b7a64931fe391bd6e25b236a1c450e5b7c669df26c2974dd9f18"
+    },
+    {
+      "path": "tools/follow_active.js",
+      "bytes": 10557,
+      "sha256": "beb08b78f7c8ef53d06db9e99b266f1fb5a33cbb21d936a71dd6b1a8354f024f"
+    },
+    {
+      "path": "tools/native_runner.js",
+      "bytes": 131934,
+      "sha256": "d5eb2c1f33b4fafcd0b1d366850cc860c7e73552dd739ee9cdd238559e679c86"
+    },
+    {
+      "path": "run.cmd",
+      "bytes": 1250,
+      "sha256": "5e6c6561c370c904b13d165986f0c045c6e7732de1745744b03619cf4a4b9f16"
+    },
+    {
+      "path": "runner-version.txt",
+      "bytes": 49,
+      "sha256": "aff62163997f56d67a3ab06fb4b7ee551de5b1a3454c85721ae8e4366920c495"
+    },
+    {
+      "path": "compile-order.txt",
+      "bytes": 4185,
+      "sha256": "a9a14b3d7b989b2b16c8c9af1f10f509827cd6ff794fd2e1b3b47c737c624cde"
+    },
+    {
+      "path": "audit-targets.tsv",
+      "bytes": 32023,
+      "sha256": "d1fe5130c82c0c269159acbab6a396948df3ffd3d2f2469fb9a19f2adb10d752"
+    },
+    {
+      "path": "mathlib-imports.txt",
+      "bytes": 3525,
+      "sha256": "0c2ef006a5917ffe890cf1483b524435038824c7116ca8fe49533d4d9a4da31c"
+    },
+    {
+      "path": "final-audit.txt",
+      "bytes": 19,
+      "sha256": "ef56956fc0eac80b3c281abd27a97bd054107ef9538e73b1cedb98c113b03bc5"
+    },
+    {
+      "path": "lean-toolchain",
+      "bytes": 25,
+      "sha256": "302cd63c54178885b89e669f33b38f12f4dd7ae7e5cac537b3203e3768d8fb2b"
+    }
+  ],
+  "new_runtime_tests_run": false,
+  "no_native_or_lean_execution": true,
+  "scope": "Byte equality of every Lean source, all runner/helper sources, launcher and execution plans/settings between baseline v0.2.16 and the metadata-only reuse record.",
+  "limitations": [
+    "This comparison does not execute Windows, Lean, Lake or the runner.",
+    "The external archive name may differ while its canonical package and runner identity remain unchanged. The archive root must be verified separately by packaging.",
+    "Historical native evidence is preserved as user-reported evidence; this static check does not independently re-execute or promote it."
+  ]
+}

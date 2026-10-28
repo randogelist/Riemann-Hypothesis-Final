@@ -1,0 +1,17 @@
+{
+  "source_changes": [
+    "RH_HilbertLimit/ZeroBudgetSecondSector.lean",
+    "RH_HilbertLimit/ZeroBudgetFiveSector.lean",
+    "RH_HilbertLimit/ZeroBudgetFiveAlgebra.lean"
+  ],
+  "active_recompile_or_reaudit_candidates": [
+    "RH_HilbertLimit/ZeroBudgetSecondSector.lean",
+    "RH_HilbertLimit/ZeroBudgetSecondMoment.lean",
+    "RH_HilbertLimit/ZeroBudgetFiveSector.lean",
+    "RH_HilbertLimit/ZeroBudgetFiveAlgebra.lean",
+    "RH_HilbertLimit/ZeroBudgetFiveRows.lean",
+    "FiveRowsAudit.lean"
+  ],
+  "unaffected_active_modules": 94,
+  "reuse_requires_valid_same_target_fingerprints_and_prior_pass": true
+}

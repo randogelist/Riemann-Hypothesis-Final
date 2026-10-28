@@ -1,0 +1,32 @@
+{
+  "normalized_execution_logic_byte_identical": true,
+  "runner_sha256": "dbed48da94b3536fa4a51a5029c084373a8716e4c967f808cc5484cf4b38e5e0",
+  "baseline_runner_sha256": "d12a31ecc04af078c7b2620694e2057f67e78dfbd3c58f9215f21338c2b4cf3e",
+  "replacements": [
+    [
+      "RH_HILBERT_LIMIT_LEAN_v0_2_25_construction",
+      "RH_HILBERT_LIMIT_LEAN_v0_2_26_construction",
+      1
+    ],
+    [
+      "RH_HILBERT_NATIVE_RUNNER_v0_2_25_ZERO_BUDGET_SECOND_CHECK",
+      "RH_HILBERT_NATIVE_RUNNER_v0_2_26_ZERO_BUDGET_FIRST_FIVE",
+      1
+    ],
+    [
+      "ZERO_BUDGET_FIRST_TWO_REFINEMENTS_AUDITED_UNIVERSAL_ADMISSIBILITY_OPEN",
+      "ZERO_BUDGET_FIRST_FIVE_REFINEMENTS_AUDITED_UNIVERSAL_ADMISSIBILITY_OPEN",
+      2
+    ],
+    [
+      "INDICES_0_AND_1_ONLY",
+      "INDICES_0_THROUGH_4_ONLY",
+      2
+    ]
+  ],
+  "json_addition": "    '  \"zero_budget_first_five_cancellations\": '+quoteJSON(pass?\"DECLARATION_AUDITED\":\"NATIVE_AUDIT_PENDING\")+\",\",\n    '  \"next_requested_batch\": \"INDICES_5_THROUGH_9_AFTER_FIRST_BATCH_NATIVE_PASS\",',\n    '  \"next_batch_status\": \"NOT_INCLUDED_NOT_VERIFIED\",',\n",
+  "log_addition": "  log(\"ZERO_BUDGET_FIRST_FIVE_CANCELLATIONS=DECLARATION_AUDITED\");\n  log(\"ZERO_BUDGET_NEXT_REQUESTED_BATCH=INDICES_5_THROUGH_9_AFTER_FIRST_BATCH_NATIVE_PASS\");\n  log(\"ZERO_BUDGET_NEXT_BATCH_STATUS=NOT_INCLUDED_NOT_VERIFIED\");\n",
+  "node_syntax_exit_code": 0,
+  "runner_entrypoint_executed": false,
+  "compiler_cache_audit_lock_shutdown_policy_changed": false
+}

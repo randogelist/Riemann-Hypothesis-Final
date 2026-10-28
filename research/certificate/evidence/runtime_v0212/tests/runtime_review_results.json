@@ -1,0 +1,270 @@
+{
+  "schema": "RH_RAM_PARALLEL_NODE_VM_REVIEW_V1",
+  "scope": "Node VM with in-memory files, simulated WMI/process responses, and a fake clock; no native execution.",
+  "runner_sha256": "b11c97c591c5e200978fcfff5f37d6f6cd4b9388a464697a673174ab20c5a632",
+  "parallel_runtime_sha256": "21552e9308a6777ed88d7a83e5261723a0df7a42f156e22b332eaa0df578787a",
+  "ram_runtime_sha256": "cba92c42546cad9c8360d5c7872c2ec8a876b3e168e4f2160e1c379bd4ace258",
+  "binding": "Exact function definitions from the assembled runner, with frozen draft byte equality asserted.",
+  "runner_COM_setter_adaptations": 7,
+  "host_adaptations": [
+    "Only WSH COM env(\"NAME\") property-put syntax becomes __setEnv in Node; frozen parallel draft has exactly two setters and RAM draft zero.",
+    "The inherited mock host accepts the new entry marker but evaluates definitions only, never the WSH entry point.",
+    "FSO/ADODB, WMI, shell.Exec/Run, native stdout/artifacts, and time are simulated boundaries.",
+    "One fatal transport scenario injects rhFatalHash through freshHashSet; cache acceptance and propagation code remain actual.",
+    "Shutdown release tests invoke the actual release function only when actual parallelShutdown returns true; package entry-point execution is excluded."
+  ],
+  "passed": 22,
+  "failed": 0,
+  "cases": [
+    {
+      "name": "dag_requires_all_audits_and_verified_keys_before_dependency_release",
+      "outcome": "PASS",
+      "evidence": {
+        "compiled": 5,
+        "async_lean_calls": 10,
+        "observed_pending_during_parent_audit": true
+      }
+    },
+    {
+      "name": "fully_cached_graph_and_aggregate_launch_no_compile_audit_or_ram_process",
+      "outcome": "PASS",
+      "evidence": {
+        "ordinary_reused": 3,
+        "aggregate_reused": 1,
+        "scheduler_native_launches": 0,
+        "limitation": "Startup version/prefix queries are excluded from this scheduler assertion."
+      }
+    },
+    {
+      "name": "audit_only_cache_refresh_holds_descendants_until_new_target_acceptance",
+      "outcome": "PASS",
+      "evidence": {
+        "audit_only_calls": 1,
+        "new_compiles": 0,
+        "descendant_wait_observed": true
+      }
+    },
+    {
+      "name": "compile_exit_failure_blocks_descendants_but_independent_finishes",
+      "outcome": "PASS",
+      "evidence": {
+        "failed": 1,
+        "blocked": 1,
+        "independent_accepted": true
+      }
+    },
+    {
+      "name": "audit_exit_failure_blocks_descendants_but_independent_finishes",
+      "outcome": "PASS",
+      "evidence": {
+        "failed": 1,
+        "blocked": 1,
+        "independent_accepted": true
+      }
+    },
+    {
+      "name": "missing_exact_axiom_target_blocks_descendants_but_independent_finishes",
+      "outcome": "PASS",
+      "evidence": {
+        "failed": 1,
+        "blocked": 1,
+        "independent_accepted": true
+      }
+    },
+    {
+      "name": "unapproved_axiom_blocks_descendants_but_independent_finishes",
+      "outcome": "PASS",
+      "evidence": {
+        "failed": 1,
+        "blocked": 1,
+        "independent_accepted": true
+      }
+    },
+    {
+      "name": "live_thread_sum_including_coordinator_reserve_stays_within_budget",
+      "outcome": "PASS",
+      "evidence": {
+        "budgets": [
+          {
+            "budget": 1,
+            "worker_cap": 1,
+            "peak_live_workers": 1,
+            "peak_threads_plus_reserve": 1
+          },
+          {
+            "budget": 2,
+            "worker_cap": 1,
+            "peak_live_workers": 1,
+            "peak_threads_plus_reserve": 2
+          },
+          {
+            "budget": 4,
+            "worker_cap": 3,
+            "peak_live_workers": 3,
+            "peak_threads_plus_reserve": 4
+          },
+          {
+            "budget": 16,
+            "worker_cap": 4,
+            "peak_live_workers": 4,
+            "peak_threads_plus_reserve": 16
+          }
+        ]
+      }
+    },
+    {
+      "name": "unknown_memory_falls_back_to_serial_with_ram_warming_disabled",
+      "outcome": "PASS",
+      "evidence": {
+        "worker_cap": 1,
+        "peak_live_workers": 1,
+        "ram_budget_mb": 0
+      }
+    },
+    {
+      "name": "known_low_memory_fails_boundedly_without_first_worker_bypass",
+      "outcome": "PASS",
+      "evidence": {
+        "native_launches": 0,
+        "fake_wait_ms": 0,
+        "error_kind": "PARALLEL_RESOURCE_BLOCKED"
+      }
+    },
+    {
+      "name": "live_sidecar_budget_and_worker_reservations_gate_further_admission",
+      "outcome": "PASS",
+      "evidence": {
+        "denial_with_two_live_workers": true,
+        "new_snapshot_reopens_admission": true
+      }
+    },
+    {
+      "name": "LEAN_NUM_THREADS_restored_when_Exec_throws",
+      "outcome": "PASS",
+      "evidence": {
+        "original_env_value": "16",
+        "env_restored": true,
+        "launched_processes": 0
+      }
+    },
+    {
+      "name": "ram_candidate_plan_excludes_pending_running_unverified_and_ready_outputs",
+      "outcome": "PASS",
+      "evidence": {
+        "selected_files": 5,
+        "permitted_local_module": "Review.Done",
+        "excluded_local_states": [
+          "PENDING",
+          "RUNNING",
+          "READY",
+          "DONE_WITHOUT_KEY"
+        ]
+      }
+    },
+    {
+      "name": "ram_status_binds_exact_token_hash_pid_and_creation_time",
+      "outcome": "PASS",
+      "evidence": {
+        "valid_status_accepted": true,
+        "rejected_identity_fields": [
+          "TOKEN",
+          "REQUEST_SHA256",
+          "OWNER_PID",
+          "OWNER_START_UNIX_MS"
+        ]
+      }
+    },
+    {
+      "name": "ram_status_rejects_impossible_counts_bounds_and_residency_claims",
+      "outcome": "PASS",
+      "evidence": {
+        "rejected_mutants": [
+          "request_count",
+          "negative_count",
+          "fractional_count",
+          "too_many_files",
+          "oversized_budget",
+          "charge_exceeds_budget",
+          "held_exceeds_mapped",
+          "warm_exceeds_mapped_files",
+          "stopped_nonterminal",
+          "terminal_holds_pages",
+          "residency_claim",
+          "shared_environment_claim"
+        ],
+        "released_terminal_status_accepted": true
+      }
+    },
+    {
+      "name": "bounded_shutdown_retains_lock_for_live_worker_and_reports_unclean",
+      "outcome": "PASS",
+      "evidence": {
+        "fake_wait_ms": 30000,
+        "lock_retained": true,
+        "repeated_shutdown_waits": 0,
+        "json_shutdown_complete": false
+      }
+    },
+    {
+      "name": "unknown_worker_status_retains_lock_without_unsafe_cleanup",
+      "outcome": "PASS",
+      "evidence": {
+        "lock_retained": true,
+        "output_preserved": true,
+        "fake_wait_ms": 30000
+      }
+    },
+    {
+      "name": "finished_workers_need_safe_inventory_before_lock_release",
+      "outcome": "PASS",
+      "evidence": {
+        "unavailable_inventory_retained": true,
+        "unreadable_worker_retained": true,
+        "safe_inventory_released": true
+      }
+    },
+    {
+      "name": "only_exact_read_only_follower_script_is_excluded_from_shutdown_guard",
+      "outcome": "PASS",
+      "evidence": {
+        "exact_follower_allowed": true,
+        "observer_path_in_later_argument_not_trusted": true
+      }
+    },
+    {
+      "name": "fatal_save_hash_failure_stops_admission_and_protects_remaining_worker",
+      "outcome": "PASS",
+      "evidence": {
+        "fatal_error_propagated": true,
+        "failed_parent_not_published": true,
+        "descendant_not_launched": true,
+        "live_independent_worker_protected": true
+      }
+    },
+    {
+      "name": "generated_audit_path_collision_rejected_before_native_launch",
+      "outcome": "PASS",
+      "evidence": {
+        "colliding_generated_names_rejected": true,
+        "native_launches": 0
+      }
+    },
+    {
+      "name": "ram_selftest_and_async_launch_counters_produce_valid_JSON",
+      "outcome": "PASS",
+      "evidence": {
+        "ram_warm_launch_counter": 2,
+        "JSON_parse": "SUCCESS",
+        "finite_checker_equivalence": "OPEN",
+        "shutdown_complete": false
+      }
+    }
+  ],
+  "limitations": [
+    "No Lean proof compilation or axiom certification; simulated compiler outputs and receipts exist only in memory.",
+    "No Windows, WSH/COM, WMI, process-tree, real shell quoting, C#, memory mapping, RAM-residency, or native performance validation.",
+    "The whole WSH runner entry point, sidecar native implementation, helper build/cache lifecycle, and unrelated inherited cache suites were not executed.",
+    "Memory and fake-clock observations establish control-flow properties only, not a physical RAM ceiling or elapsed-time improvement."
+  ],
+  "source_files_unchanged": true
+}

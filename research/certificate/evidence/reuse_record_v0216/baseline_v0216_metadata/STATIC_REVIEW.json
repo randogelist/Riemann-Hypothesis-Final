@@ -1,0 +1,29 @@
+{
+  "schema": "RH_HILBERT_V0216_CHECKPOINT_REVIEW_V1",
+  "package": "RH_HILBERT_LIMIT_LEAN_v0_2_16_construction",
+  "status": "SOURCE_AND_ARCHIVE_PRESERVATION_CHECKED",
+  "lean_sources_preserved": 92,
+  "changed_proof_inputs": [],
+  "unchanged_manifest_inputs": 101,
+  "selected_axiom_targets_preserved": 370,
+  "analytic_metadata_entries_updated": 67,
+  "older_metadata_entries_unchanged": 1038,
+  "runtime_functional_changes": false,
+  "new_tests_or_native_execution": false,
+  "changed_parent_files": [
+    "DECLARATIONS.json",
+    "OPEN_OBLIGATIONS.txt",
+    "PROVENANCE.json",
+    "README.md",
+    "RUNNER_LOGIC_VALIDATION.json",
+    "RUNNER_NOTES.txt",
+    "SHA256SUMS.txt",
+    "STATIC_REVIEW.json",
+    "STATUS.json",
+    "runner-version.txt",
+    "tools/native_runner.js"
+  ],
+  "reported_parent_build": "PASS",
+  "reported_parent_run": "PASS",
+  "formal_closure": "OPEN"
+}

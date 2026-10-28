@@ -1,0 +1,33 @@
+{
+  "status": "STATIC_INVARIANTS_VERIFIED_NATIVE_AUDIT_PENDING",
+  "package": "RH_HILBERT_LIMIT_LEAN_v0_2_27_construction",
+  "preserved_lean_files": 103,
+  "changed_lean_files": [
+    "RH_HilbertLimit/ZeroBudgetSecondSector.lean",
+    "RH_HilbertLimit/ZeroBudgetFiveSector.lean",
+    "RH_HilbertLimit/ZeroBudgetFiveAlgebra.lean"
+  ],
+  "new_lean_files": 0,
+  "total_lean_files": 106,
+  "theorem_statements_definitions_assumptions_imports": "BYTE_PRESERVED",
+  "audit_targets": 463,
+  "audit_target_manifest_and_final_audit": "BYTE_PRESERVED",
+  "active_modules": 100,
+  "expected_reuse_if_matching_valid_native_cache": 94,
+  "expected_dirty_compile_or_audit_tasks": 6,
+  "source_change_invalidation_cone": [
+    "RH_HilbertLimit/ZeroBudgetSecondSector.lean",
+    "RH_HilbertLimit/ZeroBudgetSecondMoment.lean",
+    "RH_HilbertLimit/ZeroBudgetFiveSector.lean",
+    "RH_HilbertLimit/ZeroBudgetFiveAlgebra.lean",
+    "RH_HilbertLimit/ZeroBudgetFiveRows.lean",
+    "FiveRowsAudit.lean"
+  ],
+  "source_token_scan": "NO_SORRY_ADMIT_AXIOM_UNSAFE_NATIVE_DECIDE_OR_SKIP_KERNEL_IN_ACTIVE_SOURCES",
+  "runner_logic": "BYTE_PRESERVED_EXCEPT_TWO_IDENTITY_LITERALS",
+  "single_run_cmd": "BYTE_PRESERVED",
+  "native_compilation": "NOT_RUN",
+  "native_audit": "PENDING",
+  "universal_admissibility": "OPEN",
+  "unconditional_rh": "NOT_ESTABLISHED"
+}

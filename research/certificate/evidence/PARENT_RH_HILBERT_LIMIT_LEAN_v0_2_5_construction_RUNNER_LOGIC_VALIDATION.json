@@ -1,0 +1,19 @@
+{
+  "schema": "RH_HILBERT_LAUNCH_PATH_FIX_V025_STATIC_REVIEW",
+  "status": "STATIC_JS_IDENTITY_AND_CMD_ORDER_REVIEW_PASS; NATIVE_EXECUTION_PENDING",
+  "checked_at_utc": "2026-10-27T17:32:15.923475+00:00",
+  "runner_sha256": "00c97331f102c2415c9b884ee43ec47d969a20d1b32f2a583037bb5a6b8f7270",
+  "cmd_sha256": "16c597d014725a9db9d62be52b6849eaa2f493d5152b3cb66e9c37a4fea97ea4",
+  "parent_runner_sha256": "ed1d7e1250b960c277806a64d4f9c4f35adca52010089f63e0431df19776fc48",
+  "inherited_validation": "evidence/PARENT_v0_2_4_RUNNER_LOGIC_VALIDATION.json",
+  "inherited_mock_scenarios_passed": 67,
+  "inherited_mock_tests_rerun": false,
+  "js_identity": "BYTE_IDENTICAL_AFTER_PACKAGE_LABEL_NORMALIZATION",
+  "launch_fix": "Absolute directory captured before pushd; no batch self-path reevaluation after pushd.",
+  "lock_token_and_exit_code_handling": "PRESERVED",
+  "native_windows_execution": false,
+  "lean_execution": false,
+  "lake_execution": false,
+  "csharp_execution_or_compilation": false,
+  "ci_execution": false
+}

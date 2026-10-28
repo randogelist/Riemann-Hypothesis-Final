@@ -1,0 +1,15 @@
+PACKAGE=v0.2.25 construction
+MODE=A_TIER_LEAN
+TARGET=LOCAL_COMPILER
+EXPLICIT_CANDIDATE=cutoff 0, coefficient 0
+
+1. Native-compile and axiom-audit the two new modules and SecondMomentAudit.lean.
+   This package is source-only here; static checks are not a native PASS.
+2. The proposed new endpoint is cancellation index 1, without an RH premise.
+   If it passes, indices 0 and 1 are covered. Prove the unchanged universal
+   all-index cancellation condition to establish (0,0)'s admissibility.
+3. Universal propagation is OPEN. Finite rows alone do not imply it.
+4. Terminating finite-checker soundness, completeness, and equivalence to RH
+   remain OPEN. No accepted witness or unconditional RH is established.
+5. Reuse only exact same-target source/dependency/toolchain/artifact/audit
+   identities validated by the user's native runner.

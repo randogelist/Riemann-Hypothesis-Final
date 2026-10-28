@@ -1,0 +1,7 @@
+Current follow checks: 19 synthetic WSH/WMI/filesystem scenarios.
+Report: follow_mock_report_v026.json
+Harness: follow_mock_tests.js
+The native cache/lock runner is byte-preserved except its package label.
+Inherited runtime reports remain historical evidence with their original hashes.
+No native Windows, Lean, Lake, C# compiler, or CI execution occurred.
+Followed log text and observer exit are not proof certification.

@@ -1,0 +1,238 @@
+{
+  "schema": "RH_HILBERT_PERSISTENT_E_PROFILE_NODE_REVIEW_V029",
+  "runner_sha256": "c817f1cda09b76cd02570c8a8ba8553b85ead1c6e885a717087d71a79bd8ffbd",
+  "baseline_runner_sha256": "0d7b773a674a9d95261b0d3727744402b4ac1e1aafd910c3cb15a60d6397aa8a",
+  "helper_source_sha256": "d8cd2d616ed2b7a64931fe391bd6e25b236a1c450e5b7c669df26c2974dd9f18",
+  "launcher_fixture_sha256": "5e6c6561c370c904b13d165986f0c045c6e7732de1745744b03619cf4a4b9f16",
+  "node_version": "v24.22.1",
+  "method": "Actual runner functions and selected actual main guard paths in Node VM; Windows filesystem, WMI, certutil, helper and compiler responses are synthetic",
+  "native_windows_execution": false,
+  "lean_execution": false,
+  "lake_execution": false,
+  "csharp_compilation_or_execution": false,
+  "wine_execution": false,
+  "ci_execution": false,
+  "native_child_processes": 0,
+  "prior_unchanged_suites": "Not rerun; listed validation/hash/lock/compiler functions compared exactly to v0.2.8 and profile integration tested directly.",
+  "limitations": [
+    "No native E: drive, extraction, CMD/WSH, filesystem permissions or native timing validation.",
+    "Synthetic artifacts and receipts are not proof certification or native PASS evidence.",
+    "Wrong-root and same-root-owner main branches execute only against synthetic APIs and return before any simulated compiler operation."
+  ],
+  "passed": 11,
+  "failed": 0,
+  "results": [
+    {
+      "name": "profile_accepts_only_proper_normalized_workspace_descendants",
+      "status": "PASS",
+      "details": {
+        "accepted": [
+          "E:\\RH-FAST\\workspaces\\RH_HILBERT_LIMIT_LEAN_v0_2_9_construction",
+          "e:\\rh-fast\\WORKSPACES\\MixedCase",
+          "E:\\RH-FAST\\workspaces\\nested\\version",
+          "E:\\RH-FAST\\workspaces\\space ! version",
+          "E:\\RH-FAST\\workspaces\\temporary\\..\\normalized",
+          "E:\\RH-FAST\\workspaces\\RH_HILBERT_LIMIT_LEAN_v0_2_9_construction\\"
+        ],
+        "rejected": [
+          "E:\\RH-FAST\\workspaces",
+          "E:\\RH-FAST\\workspaces\\.",
+          "E:\\RH-FAST",
+          "E:\\",
+          "E:\\RH-FAST\\workspaces-old\\version",
+          "E:\\RH-FAST\\workspaces2\\version",
+          "E:\\RH-FAST\\workspace\\version",
+          "C:\\RH-FAST\\workspaces\\version",
+          "E:\\RH-FAST\\workspaces\\..\\outside",
+          "\\\\server\\share\\RH-FAST\\workspaces\\version"
+        ],
+        "rejection_has_no_filesystem_or_environment_writes": true
+      }
+    },
+    {
+      "name": "actual_main_rejects_wrong_location_before_lock_logs_or_native_host_calls",
+      "status": "PASS",
+      "details": {
+        "actual_main_guard_exercised": true,
+        "files_logs_lock_environment_unchanged": true
+      }
+    },
+    {
+      "name": "prior_override_and_existing_imports_are_retained_read_only_with_default_localappdata",
+      "status": "PASS",
+      "details": {
+        "roots": [
+          "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0",
+          "D:\\PreviousVerifiedAnchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0",
+          "C:\\Users\\Review\\AppData\\Local\\LEAN_ANCHORINGS\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0",
+          "C:\\ImportedOne\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0",
+          "F:\\ImportedTwo\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0"
+        ],
+        "prior_roots_unchanged": true,
+        "repeated_configuration_preserves_original_override": true
+      }
+    },
+    {
+      "name": "existing_E_override_case_aliases_do_not_duplicate_active_anchor_root",
+      "status": "PASS",
+      "details": {
+        "active_E_root_occurrences": 1,
+        "roots": [
+          "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0",
+          "C:\\Users\\Review\\AppData\\Local\\LEAN_ANCHORINGS\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0"
+        ]
+      }
+    },
+    {
+      "name": "profile_preserves_compiler_mathlib_jobs_and_all_compilation_audit_helper_identities",
+      "status": "PASS",
+      "details": {
+        "identities": {
+          "global": "963c66013a5c7cbdb6d050d162b3a9f7f2c354388f2869b00e59fd7066f44474",
+          "legacy": "b53943e4ab37ef9e460dd8ed0d9f4eb3aa6cc900807e75c0c84de32c518ce278",
+          "helperInput": "1d700f0bda93ef78a31e7c8d5f0b3203ebb2a7550db07d495990acd10a1e1783",
+          "modules": {
+            "Review.Base": {
+              "input": "9e6ae9e9932d09416646cfee576588e1e67f081f7f439c3f0fe9960cee116ef5",
+              "artifact": "8612a9583d3227c7782a4dbcb0685619ab03751636e7aafc79477236d59c07d2",
+              "audit": "dc7de189651d1a61071d5ba68e538b25e2a4c6685fbb3f8e742e69ddd73316f9"
+            },
+            "Review.Leaf": {
+              "input": "977703e082d2b752e47f968eda5f4feadc6c8b65de13f374e9c5eb7cdf3b1090",
+              "artifact": "f06d1f083c83af7230512b7d13ce6e7be473563812836d500a485b5bcabad9c6",
+              "audit": "5464fbfab187e02ad065b00b3c69e2506fe212eb7aadfae0ca4d5c86ba56fff4"
+            },
+            "Review.Independent": {
+              "input": "2b11a25f2f23d677b3f06c82a826e490e544fe34025d2031b9294f0e7e9e43d7",
+              "artifact": "993801f9030c27c08ab6ea05eb9f85feba500e8e1cd13f668f435d9e6809e2c5",
+              "audit": "0fba1868b27ed133a76b365e0bcf1ec644088870a306e3d1c4874981dd3f671b"
+            }
+          }
+        },
+        "compiler_and_mathlib_remain_in_place": true,
+        "jobs": 7,
+        "helper_cached_under_E": true,
+        "actual_result_json_checked": true
+      }
+    },
+    {
+      "name": "old_verified_anchors_migrate_to_E_without_compiling_then_warm_retains_work",
+      "status": "PASS",
+      "details": [
+        {
+          "prior": "default LOCALAPPDATA",
+          "migration": {
+            "compiles": 0,
+            "audits": 0,
+            "copies": 36,
+            "csc": 0
+          },
+          "repeated_warm": {
+            "compiles": 0,
+            "audits": 0,
+            "copies": 0,
+            "csc": 0
+          },
+          "old_anchor_bytes_preserved": true
+        },
+        {
+          "prior": "D:\\PreviousExplicitAnchors",
+          "migration": {
+            "compiles": 0,
+            "audits": 0,
+            "copies": 36,
+            "csc": 0
+          },
+          "repeated_warm": {
+            "compiles": 0,
+            "audits": 0,
+            "copies": 0,
+            "csc": 0
+          },
+          "old_anchor_bytes_preserved": true
+        }
+      ]
+    },
+    {
+      "name": "corrupt_imported_anchor_is_rejected_before_migration_and_source_is_left_untouched",
+      "status": "PASS",
+      "details": {
+        "corrupt_old_anchor_rejected": true,
+        "fresh_mock_compile_for_base": 1,
+        "old_anchor_not_modified": true
+      }
+    },
+    {
+      "name": "changed_source_and_transitive_dependency_invalidate_across_storage_migration",
+      "status": "PASS",
+      "details": [
+        {
+          "change": "source",
+          "fresh_mock_compiles": 2,
+          "frozen_reused": 1
+        },
+        {
+          "change": "dependency",
+          "fresh_mock_compiles": 3,
+          "frozen_reused": 0
+        }
+      ]
+    },
+    {
+      "name": "different_E_workspaces_have_independent_work_locks_and_logs_with_shared_verified_anchors",
+      "status": "PASS",
+      "details": {
+        "workspace_A": "E:\\RH-FAST\\workspaces\\VersionA",
+        "workspace_B": "E:\\RH-FAST\\workspaces\\VersionB",
+        "independent_work_lock_and_log_paths": true,
+        "shared_anchor_root": "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0",
+        "second_workspace_mock_compiles": 0
+      }
+    },
+    {
+      "name": "same_E_workspace_live_owner_and_existing_logs_survive_actual_main_attempt",
+      "status": "PASS",
+      "details": {
+        "live_owner_preserved": true,
+        "original_logs_preserved": true,
+        "actual_main_guard_exercised": true
+      }
+    },
+    {
+      "name": "unchanged_validation_hashing_lock_and_compiler_functions_match_v028_exactly",
+      "status": "PASS",
+      "details": {
+        "functions_byte_equal_after_identical_COM_host_adaptation": [
+          "selectCompiler",
+          "makeGlobalKey",
+          "moduleInput",
+          "auditKey",
+          "readAnchorCore",
+          "verifyCurrent",
+          "verifyLegacy",
+          "workingArtifactsMatch",
+          "restoreAnchor",
+          "saveAnchor",
+          "acceptRestored",
+          "processModuleBody",
+          "processModule",
+          "freshHashSet",
+          "fileHash",
+          "certutilHashSet",
+          "batchHashes",
+          "parseBatchHashes",
+          "hasherInput",
+          "prepareBatchHasher",
+          "recheckHasherInput",
+          "acquireRunnerLock",
+          "releaseRunnerLock",
+          "lockSnapshot",
+          "lockLaunchToken",
+          "identifyLockSelf"
+        ],
+        "prior_86_scenario_suites_not_rerun": true,
+        "targeted_profile_integration_executed": true
+      }
+    }
+  ]
+}

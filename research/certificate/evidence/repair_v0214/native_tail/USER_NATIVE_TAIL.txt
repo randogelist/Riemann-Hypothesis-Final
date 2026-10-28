@@ -1,0 +1,41 @@
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+E:\RH-FAST\workspaces\RH_HILBERT_LIMIT_LEAN_v0_2_13_construction\RH_HilbertLimit\CanonicalPowerSums.lean:297:28: warning: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+E:\RH-FAST\workspaces\RH_HILBERT_LIMIT_LEAN_v0_2_13_construction\RH_HilbertLimit\CanonicalPowerSums.lean:312:40: error: unsolved goals
+n : ℕ
+h :
+  HasSum (fun i => (↑actualKappa)⁻¹ ^ (n + 1) * (actualComplexScale i)⁻¹ ^ (n + 1))
+    ((↑actualKappa)⁻¹ ^ (n + 1) * actualComplexMoment n)
+⊢ (↑actualKappa ^ (n + 1))⁻¹ * ↑(actualMoment n) = ↑((actualKappa ^ (n + 1))⁻¹ * actualMoment n)
+E:\RH-FAST\workspaces\RH_HILBERT_LIMIT_LEAN_v0_2_13_construction\RH_HilbertLimit\CanonicalPowerSums.lean:314:39: warning: This simp argument is unused:
+  Complex.ofReal_div
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [actualNormalizedMoment, Complex.ofReal_pow, div_eq_mul_inv, inv_pow, mul_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+E:\RH-FAST\workspaces\RH_HILBERT_LIMIT_LEAN_v0_2_13_construction\RH_HilbertLimit\CanonicalPowerSums.lean:314:59: warning: This simp argument is unused:
+  Complex.ofReal_pow
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [actualNormalizedMoment, Complex.ofReal_div, div_eq_mul_inv, inv_pow, mul_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+
+COMPILE_FAIL=RH_HilbertLimit.CanonicalPowerSums
+MODULE_ELAPSED_MS=RH_HilbertLimit.CanonicalPowerSums|17454|COMPILE_FAILED
+PARALLEL_PROGRESS=89/89|ACTIVE=0|READY=0|LEAN_THREADS=0
+PARALLEL_PEAK_MODULE_WORKERS=1
+PARALLEL_NEW_OR_REAUDITED_MODULE_TASKS=2
+RAM_WARM=SKIPPED_NO_ELIGIBLE_DIRTY_FRONTIER
+STAGE_ELAPSED_MS=PROJECT_MODULES|79554|RETURNED
+PROJECT_BUILD=FAIL
+FAILED_STAGE=MODULE:RH_HilbertLimit.CanonicalPowerSums
+REASON=Some modules failed or were blocked. Independent modules were still attempted.
+RUN=FAIL
+SHUTDOWN_PREEXISTING_ADMITTED_UNRESOLVED_HOST=PID:36280
+RUNNER_LOCK_RETAINED=WORKER_INVENTORY_UNCERTAIN : LOCK_STATE_UNKNOWN: cannot exclude an active certutil.exe worker with unreadable command line. No lock was changed.
+Logs: E:\RH-FAST\workspaces\RH_HILBERT_LIMIT_LEAN_v0_2_13_construction\run-build.log and E:\RH-FAST\workspaces\RH_HILBERT_LIMIT_LEAN_v0_2_13_construction\run-audit.log
+
+C:\Users\Simon\Downloads>

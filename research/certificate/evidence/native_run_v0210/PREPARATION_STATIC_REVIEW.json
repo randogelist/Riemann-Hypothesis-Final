@@ -1,0 +1,31 @@
+{
+  "result": "PASS_STARTUP_EMPTY_HASH_SOURCE_AND_PACKAGE_IDENTITY_REVIEW",
+  "checked_at_utc": "2026-10-27T18:37:35.764707+00:00",
+  "runner_sha256": "eaf8ebc221f08607bd2256827e8bbafb5e5b2e2509e3e71513fe994db2d9eb97",
+  "parent_runner_sha256": "c817f1cda09b76cd02570c8a8ba8553b85ead1c6e885a717087d71a79bd8ffbd",
+  "independent_review_sha256": "e82e6cb80f51169ae51408bda7ad2b1bd16f48a034654c3b878da521403b887a",
+  "source_and_artifact_fingerprint_formulas_preserved": true,
+  "compile_and_audit_policies_preserved": true,
+  "full_strict_local_source_scan_preserved": true,
+  "lock_ownership_follower_and_E_profile_preserved": true,
+  "hash_output_change": "RECOGNIZED_INVALID_FILE_ERROR_AND_CONTENT_VERIFIED_EMPTY_FILE_ONLY",
+  "lean_source_count": 86,
+  "lean_sources_byte_preserved": 86,
+  "frozen_file_count": 95,
+  "frozen_files_byte_preserved": 95,
+  "proof_manifest_and_audit_target_changes": false,
+  "cmd_helper_observer_byte_preserved": true,
+  "targeted_mock_passes": 28,
+  "targeted_mock_failures": 0,
+  "inherited_suites_not_rerun": {
+    "runtime": 86,
+    "follower": 19,
+    "storage_profile": 11
+  },
+  "native_tests_run_by_assistant": false,
+  "recorded_user_v025_pass_evidence_byte_preserved": true,
+  "recorded_user_v029_startup_failure": true,
+  "failed_build_log_actual_emptiness_established": false,
+  "finite_checker_equivalence": "OPEN",
+  "formal_closure": "OPEN"
+}

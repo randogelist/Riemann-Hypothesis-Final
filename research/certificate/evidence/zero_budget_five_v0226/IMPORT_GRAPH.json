@@ -1,0 +1,553 @@
+{
+  "AWPIRH/XiCore.lean": [
+    "Mathlib.NumberTheory.LSeries.Nonvanishing",
+    "Mathlib.Analysis.Complex.SqrtDeriv",
+    "Mathlib.Analysis.Complex.RemovableSingularity",
+    "Mathlib.Tactic.FunProp",
+    "Mathlib.Tactic.FieldSimp",
+    "Mathlib.Tactic.NormNum",
+    "Mathlib.Tactic.Ring",
+    "Mathlib.Tactic.Linarith"
+  ],
+  "AWPIRH/ThetaEntire.lean": [
+    "AWPIRH.XiCore"
+  ],
+  "RH_HilbertLimit/Bernstein.lean": [
+    "Mathlib.RingTheory.Polynomial.Bernstein",
+    "Mathlib.Algebra.Order.BigOperators.Group.Finset",
+    "Mathlib.Data.Real.Basic",
+    "Mathlib.Analysis.Complex.Basic",
+    "Mathlib.Topology.Algebra.InfiniteSum.Ring",
+    "Mathlib.Tactic.FieldSimp",
+    "Mathlib.Tactic.Linarith",
+    "Mathlib.Tactic.LinearCombination",
+    "Mathlib.Tactic.Positivity",
+    "Mathlib.Tactic.Ring",
+    "Lean.Elab.Tactic.Omega"
+  ],
+  "RH_HilbertLimit/Growth.lean": [
+    "Mathlib.Analysis.SpecialFunctions.Pow.Real",
+    "Mathlib.Analysis.SpecialFunctions.Log.Basic",
+    "Mathlib.Analysis.SpecificLimits.Basic",
+    "Mathlib.Topology.Order.OrderClosed",
+    "Mathlib.Tactic.ByContra",
+    "Mathlib.Tactic.FieldSimp",
+    "Mathlib.Tactic.Linarith",
+    "Mathlib.Tactic.Ring",
+    "Lean.Elab.Tactic.Omega"
+  ],
+  "RH_HilbertLimit/Geometry.lean": [
+    "Mathlib.Analysis.Complex.Basic",
+    "Mathlib.Order.ConditionallyCompleteLattice.Basic",
+    "Mathlib.Tactic.NormNum",
+    "Mathlib.Tactic.Linarith",
+    "Mathlib.Tactic.Positivity",
+    "Mathlib.Tactic.Ring",
+    "Lean.Elab.Tactic.NormCast"
+  ],
+  "RH_HilbertLimit/ActualXi.lean": [
+    "AWPIRH.ThetaEntire",
+    "RH_HilbertLimit.Geometry",
+    "RH_HilbertLimit.Bernstein",
+    "Mathlib.Analysis.Calculus.IteratedDeriv.Lemmas"
+  ],
+  "RH_HilbertLimit/Spectral.lean": [
+    "RH_HilbertLimit.ActualXi",
+    "Mathlib.Analysis.Normed.Group.InfiniteSum",
+    "Mathlib.Topology.Algebra.InfiniteSum.Order",
+    "Mathlib.Tactic.GCongr"
+  ],
+  "RH_HilbertLimit/Vandermonde.lean": [
+    "RH_HilbertLimit.Growth",
+    "Mathlib.Analysis.Complex.Basic",
+    "Mathlib.LinearAlgebra.Vandermonde",
+    "Mathlib.LinearAlgebra.Matrix.NonsingularInverse"
+  ],
+  "RH_HilbertLimit/Main.lean": [
+    "RH_HilbertLimit.Spectral",
+    "RH_HilbertLimit.Vandermonde"
+  ],
+  "AngularMaster/ZeroExclusion.lean": [
+    "Mathlib.Analysis.Analytic.IsolatedZeros",
+    "Mathlib.Analysis.Complex.Basic",
+    "Mathlib.Topology.Order.DenselyOrdered",
+    "Mathlib.Tactic.Continuity",
+    "Mathlib.Tactic.FieldSimp",
+    "Mathlib.Tactic.Linarith"
+  ],
+  "RiemannHypothesis/ComplexAnalysis/GrowthRigidity.lean": [
+    "Mathlib.Analysis.Complex.Liouville"
+  ],
+  "RiemannHypothesis/ComplexAnalysis/RealPartGrowth.lean": [
+    "Mathlib.Analysis.Complex.BorelCaratheodory",
+    "RiemannHypothesis.ComplexAnalysis.GrowthRigidity"
+  ],
+  "RiemannHypothesis/ComplexAnalysis/ProximityGrowth.lean": [
+    "Mathlib.Analysis.Complex.Harmonic.Poisson",
+    "Mathlib.Analysis.Complex.ValueDistribution.FirstMainTheorem",
+    "Mathlib.Analysis.Meromorphic.Divisor",
+    "RiemannHypothesis.ComplexAnalysis.RealPartGrowth"
+  ],
+  "RiemannHypothesis/ComplexAnalysis/AntiHerglotz.lean": [
+    "Mathlib.Data.Complex.Basic",
+    "Mathlib.Analysis.Complex.Basic",
+    "Mathlib.Topology.Order.Basic",
+    "Mathlib.Tactic.Linarith",
+    "Mathlib.Tactic.Push"
+  ],
+  "RiemannHypothesis/ComplexAnalysis/LogDerivative.lean": [
+    "Mathlib.Analysis.Calculus.Deriv.Basic",
+    "Mathlib.Analysis.Complex.Basic",
+    "Mathlib.Analysis.SpecialFunctions.Trigonometric.Arctan",
+    "Mathlib.Analysis.SpecialFunctions.Trigonometric.ArctanDeriv",
+    "Mathlib.Analysis.SpecialFunctions.Log.Basic",
+    "Mathlib.Analysis.SpecialFunctions.Log.Deriv",
+    "Mathlib.Analysis.SpecialFunctions.Log.Summable",
+    "Mathlib.Analysis.SpecialFunctions.Pow.Asymptotics",
+    "Mathlib.Analysis.PSeries",
+    "Mathlib.Analysis.Real.Pi.Bounds",
+    "Mathlib.Analysis.Complex.ExponentialBounds",
+    "Mathlib.MeasureTheory.Integral.IntervalIntegral.FundThmCalculus",
+    "Mathlib.Topology.Algebra.InfiniteSum.Basic",
+    "Mathlib.Tactic.Linarith",
+    "RiemannHypothesis.ComplexAnalysis.AntiHerglotz"
+  ],
+  "RiemannHypothesis/HadamardProduct/GenusOne.lean": [
+    "Mathlib.Analysis.SpecialFunctions.Complex.Analytic",
+    "Mathlib.Analysis.Calculus.LogDeriv",
+    "Mathlib.Tactic.FieldSimp",
+    "Mathlib.Tactic.LinearCombination",
+    "RiemannHypothesis.ComplexAnalysis.LogDerivative"
+  ],
+  "RiemannHypothesis/HadamardProduct/InfiniteProducts.lean": [
+    "Mathlib.Topology.Algebra.InfiniteSum.Basic",
+    "Mathlib.Analysis.Calculus.LogDeriv",
+    "Mathlib.Tactic.FieldSimp",
+    "RiemannHypothesis.HadamardProduct.GenusOne"
+  ],
+  "RiemannHypothesis/HadamardProduct/LogDerivative.lean": [
+    "Mathlib.Analysis.Complex.LocallyUniformLimit",
+    "Mathlib.Analysis.Normed.Module.MultipliableUniformlyOn",
+    "Mathlib.Analysis.Normed.Group.InfiniteSum",
+    "Mathlib.Analysis.SpecialFunctions.Log.Summable",
+    "Mathlib.Tactic.Positivity",
+    "Mathlib.Tactic.Linarith",
+    "RiemannHypothesis.HadamardProduct.InfiniteProducts"
+  ],
+  "RiemannHypothesis/HadamardProduct/CanonicalProductGrowth.lean": [
+    "Mathlib.Topology.Algebra.InfiniteSum.Order",
+    "RiemannHypothesis.ComplexAnalysis.ProximityGrowth",
+    "RiemannHypothesis.HadamardProduct.LogDerivative"
+  ],
+  "RiemannHypothesis/HadamardProduct/DyadicZeroCount.lean": [
+    "Mathlib.Data.Nat.Log",
+    "RiemannHypothesis.HadamardProduct.LogDerivative"
+  ],
+  "RiemannHypothesis/HadamardProduct/CanonicalProductDyadicGrowth.lean": [
+    "RiemannHypothesis.HadamardProduct.CanonicalProductGrowth",
+    "RiemannHypothesis.HadamardProduct.DyadicZeroCount"
+  ],
+  "RiemannHypothesis/HadamardProduct/PairedGenusOne.lean": [
+    "RiemannHypothesis.HadamardProduct.InfiniteProducts"
+  ],
+  "RiemannHypothesis/HadamardProduct/PairedCanonicalProductGrowth.lean": [
+    "Mathlib.Topology.Algebra.InfiniteSum.Constructions",
+    "RiemannHypothesis.HadamardProduct.CanonicalProductDyadicGrowth",
+    "RiemannHypothesis.HadamardProduct.PairedGenusOne"
+  ],
+  "RiemannHypothesis/HadamardProduct/CanonicalProductDivisor.lean": [
+    "Mathlib.Analysis.Analytic.Order",
+    "Mathlib.Topology.Algebra.InfiniteSum.Group",
+    "RiemannHypothesis.HadamardProduct.LogDerivative"
+  ],
+  "RiemannHypothesis/HadamardProduct/IndexedRealZeroSign.lean": [
+    "RiemannHypothesis.ComplexAnalysis.AntiHerglotz",
+    "RiemannHypothesis.HadamardProduct.LogDerivative"
+  ],
+  "RiemannHypothesis/ComplexAnalysis/PoleProbe.lean": [
+    "Mathlib.Analysis.Complex.Basic",
+    "Mathlib.Tactic.Linarith",
+    "Mathlib.Tactic.FieldSimp",
+    "Mathlib.Tactic.Positivity",
+    "RiemannHypothesis.ComplexAnalysis.AntiHerglotz"
+  ],
+  "RiemannHypothesis/ComplexAnalysis/RealSymmetry.lean": [
+    "Mathlib.Data.Complex.Basic"
+  ],
+  "RiemannHypothesis/RealZeros/Engine.lean": [
+    "RiemannHypothesis.ComplexAnalysis.AntiHerglotz",
+    "RiemannHypothesis.ComplexAnalysis.RealSymmetry"
+  ],
+  "RiemannHypothesis/RealZeros/EntireFunctions.lean": [
+    "Mathlib.Analysis.Calculus.Deriv.Pow",
+    "Mathlib.Analysis.Calculus.Deriv.Mul",
+    "Mathlib.Analysis.Analytic.IsolatedZeros",
+    "Mathlib.Tactic.Push",
+    "RiemannHypothesis.ComplexAnalysis.AntiHerglotz",
+    "RiemannHypothesis.ComplexAnalysis.LogDerivative",
+    "RiemannHypothesis.ComplexAnalysis.PoleProbe",
+    "RiemannHypothesis.RealZeros.Engine"
+  ],
+  "RiemannHypothesis/HadamardProduct/CompletedLFunction.lean": [
+    "RiemannHypothesis.HadamardProduct.CanonicalProductDivisor",
+    "RiemannHypothesis.HadamardProduct.CanonicalProductGrowth",
+    "RiemannHypothesis.HadamardProduct.DyadicZeroCount",
+    "RiemannHypothesis.HadamardProduct.IndexedRealZeroSign",
+    "RiemannHypothesis.RealZeros.EntireFunctions"
+  ],
+  "RiemannHypothesis/Xi/Definitions.lean": [
+    "Mathlib.NumberTheory.LSeries.RiemannZeta",
+    "Mathlib.Analysis.SpecialFunctions.Gamma.Basic"
+  ],
+  "RiemannHypothesis/Xi/FunctionalEquation.lean": [
+    "Mathlib.Analysis.SpecialFunctions.Complex.Analytic",
+    "Mathlib.Analysis.MellinTransform",
+    "Mathlib.NumberTheory.LSeries.HurwitzZetaEven",
+    "RiemannHypothesis.Xi.Definitions"
+  ],
+  "RiemannHypothesis/Xi/Pullback.lean": [
+    "Mathlib.Analysis.Calculus.Deriv.Comp",
+    "Mathlib.Analysis.Calculus.Deriv.Mul",
+    "RiemannHypothesis.ComplexAnalysis.LogDerivative",
+    "RiemannHypothesis.Xi.Definitions",
+    "RiemannHypothesis.Xi.FunctionalEquation"
+  ],
+  "RiemannHypothesis/Xi/SignTargets.lean": [
+    "Mathlib.Analysis.Analytic.Uniqueness",
+    "RiemannHypothesis.ComplexAnalysis.AntiHerglotz",
+    "RiemannHypothesis.ComplexAnalysis.LogDerivative",
+    "RiemannHypothesis.RealZeros.Engine",
+    "RiemannHypothesis.RealZeros.EntireFunctions",
+    "RiemannHypothesis.Xi.Definitions",
+    "RiemannHypothesis.Xi.Pullback",
+    "RiemannHypothesis.Xi.FunctionalEquation"
+  ],
+  "RiemannHypothesis/Xi/CanonicalDivisor.lean": [
+    "Mathlib.Analysis.Analytic.IsolatedZeros",
+    "Mathlib.Analysis.Analytic.Order",
+    "Mathlib.Analysis.Meromorphic.NormalForm",
+    "Mathlib.Data.Countable.Basic",
+    "Mathlib.Data.Set.Finite.Lattice",
+    "Mathlib.Topology.Compactness.Lindelof",
+    "RiemannHypothesis.HadamardProduct.LogDerivative",
+    "RiemannHypothesis.Xi.SignTargets"
+  ],
+  "RiemannHypothesis/HadamardProduct/CanonicalProductMultiplicity.lean": [
+    "RiemannHypothesis.HadamardProduct.CanonicalProductDivisor",
+    "RiemannHypothesis.Xi.CanonicalDivisor"
+  ],
+  "RiemannHypothesis/Xi/CanonicalProductCharacteristicGrowth.lean": [
+    "RiemannHypothesis.HadamardProduct.CanonicalProductGrowth",
+    "RiemannHypothesis.HadamardProduct.CanonicalProductMultiplicity"
+  ],
+  "RiemannHypothesis/ComplexAnalysis/EvenAnalyticOrder.lean": [
+    "Mathlib.Analysis.Analytic.Order",
+    "Mathlib.Analysis.SpecialFunctions.Complex.Analytic"
+  ],
+  "RiemannHypothesis/ComplexAnalysis/EntireQuotient.lean": [
+    "Mathlib.Analysis.Complex.HasPrimitives",
+    "Mathlib.Analysis.Complex.Liouville",
+    "Mathlib.Analysis.Meromorphic.NormalForm",
+    "Mathlib.Tactic.FieldSimp",
+    "Mathlib.Tactic.FunProp",
+    "Mathlib.Tactic.LinearCombination",
+    "RiemannHypothesis.ComplexAnalysis.GrowthRigidity"
+  ],
+  "RiemannHypothesis/Xi/BacklundTuringBridge.lean": [
+    "RiemannHypothesis.Xi.CanonicalDivisor"
+  ],
+  "RiemannHypothesis/GammaCancellation/PoleSet.lean": [
+    "Mathlib.Analysis.Complex.Basic",
+    "Mathlib.Topology.Instances.Nat",
+    "Mathlib.Tactic.Ring"
+  ],
+  "RiemannHypothesis/GammaCancellation/CompletedZeta.lean": [
+    "Mathlib.NumberTheory.LSeries.RiemannZeta",
+    "Mathlib.Analysis.SpecialFunctions.Pow.Complex",
+    "Mathlib.Tactic.FieldSimp",
+    "Mathlib.Tactic.Ring",
+    "RiemannHypothesis.Xi.Definitions",
+    "RiemannHypothesis.GammaCancellation.PoleSet"
+  ],
+  "RiemannHypothesis/GammaCancellation/TextbookXi.lean": [
+    "Mathlib.Tactic.Ring",
+    "RiemannHypothesis.Xi.Definitions",
+    "RiemannHypothesis.GammaCancellation.PoleSet",
+    "RiemannHypothesis.GammaCancellation.CompletedZeta"
+  ],
+  "RiemannHypothesis/Xi/RiemannHypothesisBridge.lean": [
+    "Mathlib.Analysis.Analytic.Order",
+    "Mathlib.NumberTheory.LSeries.Nonvanishing",
+    "RiemannHypothesis.GammaCancellation.TextbookXi",
+    "RiemannHypothesis.Xi.FunctionalEquation",
+    "RiemannHypothesis.Xi.SignTargets"
+  ],
+  "RiemannHypothesis/Xi/ZetaMultiplicityBridge.lean": [
+    "RiemannHypothesis.Xi.CanonicalDivisor",
+    "RiemannHypothesis.Xi.RiemannHypothesisBridge"
+  ],
+  "RiemannHypothesis/ZeroCounting/SmoothMainTerm.lean": [
+    "Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic",
+    "Mathlib.Analysis.SpecialFunctions.Log.Basic",
+    "Mathlib.Analysis.SpecialFunctions.Log.Deriv",
+    "Mathlib.Analysis.Calculus.Deriv.Basic",
+    "Mathlib.Analysis.Calculus.Deriv.Mul",
+    "Mathlib.Analysis.Calculus.MeanValue",
+    "Mathlib.Analysis.Real.Pi.Bounds",
+    "Mathlib.Analysis.Complex.ExponentialBounds",
+    "Mathlib.Order.Filter.AtTopBot.Basic",
+    "Mathlib.Tactic.FieldSimp",
+    "Mathlib.Tactic.Linarith",
+    "Mathlib.Tactic.Positivity",
+    "RiemannHypothesis.ComplexAnalysis.AntiHerglotz",
+    "RiemannHypothesis.ComplexAnalysis.LogDerivative"
+  ],
+  "RiemannHypothesis/ZeroCounting/ZetaZeros.lean": [
+    "Mathlib.NumberTheory.LSeries.ZetaZeros",
+    "RiemannHypothesis.Xi.RiemannHypothesisBridge"
+  ],
+  "RiemannHypothesis/Reduction/BacklundCanonicalDivisor.lean": [
+    "Mathlib.Analysis.Calculus.Deriv.MeanValue",
+    "RiemannHypothesis.Xi.BacklundTuringBridge",
+    "RiemannHypothesis.Xi.RiemannHypothesisBridge",
+    "RiemannHypothesis.Xi.ZetaMultiplicityBridge",
+    "RiemannHypothesis.ZeroCounting.SmoothMainTerm",
+    "RiemannHypothesis.ZeroCounting.ZetaZeros"
+  ],
+  "RiemannHypothesis/Xi/DyadicZeroCountBridge.lean": [
+    "RiemannHypothesis.HadamardProduct.DyadicZeroCount",
+    "RiemannHypothesis.Xi.CanonicalDivisor"
+  ],
+  "RiemannHypothesis/HadamardProduct/ExponentialPrefactor.lean": [
+    "RiemannHypothesis.HadamardProduct.InfiniteProducts"
+  ],
+  "RiemannHypothesis/HadamardProduct/NatZeroData.lean": [
+    "RiemannHypothesis.HadamardProduct.LogDerivative"
+  ],
+  "RiemannHypothesis/HadamardProduct/RealZeroSign.lean": [
+    "RiemannHypothesis.ComplexAnalysis.AntiHerglotz",
+    "RiemannHypothesis.HadamardProduct.NatZeroData",
+    "RiemannHypothesis.RealZeros.EntireFunctions"
+  ],
+  "RiemannHypothesis/HadamardProduct/StrictRealZeroCriterion.lean": [
+    "RiemannHypothesis.HadamardProduct.ExponentialPrefactor",
+    "RiemannHypothesis.HadamardProduct.RealZeroSign",
+    "Mathlib.Analysis.Calculus.Deriv.Star"
+  ],
+  "RiemannHypothesis/HadamardProduct/OriginMultiplicityCriterion.lean": [
+    "Mathlib.Analysis.Analytic.Order",
+    "Mathlib.Analysis.Complex.Cardinality",
+    "RiemannHypothesis.HadamardProduct.StrictRealZeroCriterion"
+  ],
+  "RiemannHypothesis/Xi/StrictLagariasCriterion.lean": [
+    "RiemannHypothesis.HadamardProduct.OriginMultiplicityCriterion",
+    "RiemannHypothesis.Xi.RiemannHypothesisBridge"
+  ],
+  "RiemannHypothesis/Xi/HadamardLogDerivativeCriterion.lean": [
+    "Mathlib.Analysis.Real.Pi.Bounds",
+    "Mathlib.NumberTheory.LSeries.HurwitzZetaValues",
+    "RiemannHypothesis.ComplexAnalysis.GrowthRigidity",
+    "RiemannHypothesis.HadamardProduct.IndexedRealZeroSign",
+    "RiemannHypothesis.Xi.BacklundTuringBridge",
+    "RiemannHypothesis.Xi.StrictLagariasCriterion"
+  ],
+  "RiemannHypothesis/Xi/CanonicalQuotientCriterion.lean": [
+    "RiemannHypothesis.ComplexAnalysis.EntireQuotient",
+    "RiemannHypothesis.HadamardProduct.CanonicalProductMultiplicity",
+    "RiemannHypothesis.Reduction.BacklundCanonicalDivisor",
+    "RiemannHypothesis.Xi.DyadicZeroCountBridge",
+    "RiemannHypothesis.Xi.HadamardLogDerivativeCriterion"
+  ],
+  "RiemannHypothesis/Xi/CanonicalProductSymmetry.lean": [
+    "RiemannHypothesis.ComplexAnalysis.EvenAnalyticOrder",
+    "RiemannHypothesis.HadamardProduct.PairedGenusOne",
+    "RiemannHypothesis.Xi.CanonicalQuotientCriterion"
+  ],
+  "RiemannHypothesis/Xi/CanonicalQuotientLogNormGrowth.lean": [
+    "RiemannHypothesis.ComplexAnalysis.RealPartGrowth",
+    "RiemannHypothesis.Xi.CanonicalProductSymmetry"
+  ],
+  "RiemannHypothesis/Xi/CanonicalQuotientCharacteristicGrowth.lean": [
+    "RiemannHypothesis.ComplexAnalysis.ProximityGrowth",
+    "RiemannHypothesis.Xi.CanonicalQuotientLogNormGrowth"
+  ],
+  "RiemannHypothesis/ComplexAnalysis/MellinGrowth.lean": [
+    "Mathlib.Analysis.SpecialFunctions.Gaussian.GaussianIntegral",
+    "Mathlib.Analysis.MellinTransform",
+    "Mathlib.MeasureTheory.Integral.Gamma"
+  ],
+  "RiemannHypothesis/Xi/ThetaKernelMellinGrowth.lean": [
+    "Mathlib.NumberTheory.LSeries.HurwitzZetaEven",
+    "Mathlib.NumberTheory.LSeries.RiemannZeta",
+    "RiemannHypothesis.ComplexAnalysis.MellinGrowth"
+  ],
+  "RiemannHypothesis/ComplexAnalysis/FactorialDyadicGrowth.lean": [
+    "RiemannHypothesis.ComplexAnalysis.MellinGrowth"
+  ],
+  "RiemannHypothesis/Xi/JensenDyadicCountBridge.lean": [
+    "Mathlib.Analysis.Complex.JensenFormula",
+    "RiemannHypothesis.Xi.CanonicalQuotientCriterion"
+  ],
+  "RiemannHypothesis/Xi/EntireXiMellinGrowth.lean": [
+    "RiemannHypothesis.Xi.ThetaKernelMellinGrowth",
+    "RiemannHypothesis.Xi.Definitions",
+    "RiemannHypothesis.ComplexAnalysis.FactorialDyadicGrowth",
+    "RiemannHypothesis.Xi.JensenDyadicCountBridge"
+  ],
+  "RiemannHypothesis/Xi/EntireXiLogNormGrowth.lean": [
+    "Mathlib.Analysis.Complex.AbsMax",
+    "Mathlib.Analysis.SpecificLimits.Normed",
+    "RiemannHypothesis.Xi.EntireXiMellinGrowth",
+    "RiemannHypothesis.ComplexAnalysis.RealPartGrowth"
+  ],
+  "RiemannHypothesis/Xi/CanonicalQuotientThetaCharacteristicGrowth.lean": [
+    "RiemannHypothesis.Xi.CanonicalQuotientCharacteristicGrowth",
+    "RiemannHypothesis.Xi.EntireXiLogNormGrowth"
+  ],
+  "RiemannHypothesis/Xi/UnconditionalLagariasEquivalence.lean": [
+    "RiemannHypothesis.Xi.CanonicalProductCharacteristicGrowth",
+    "RiemannHypothesis.Xi.CanonicalQuotientThetaCharacteristicGrowth"
+  ],
+  "RiemannHypothesis/Xi/CompletedLFunctionInstance.lean": [
+    "RiemannHypothesis.HadamardProduct.CompletedLFunction",
+    "RiemannHypothesis.Xi.UnconditionalLagariasEquivalence"
+  ],
+  "RiemannHypothesis/Xi/CanonicalProductPairedGrowth.lean": [
+    "RiemannHypothesis.HadamardProduct.PairedCanonicalProductGrowth",
+    "RiemannHypothesis.Xi.CompletedLFunctionInstance"
+  ],
+  "AngularMaster/ActualHadamard.lean": [
+    "AWPIRH.ThetaEntire",
+    "AngularMaster.ZeroExclusion",
+    "RiemannHypothesis.Xi.CanonicalProductPairedGrowth",
+    "Mathlib.Analysis.SpecialFunctions.Log.Summable"
+  ],
+  "AngularMaster/ComplexScaleProduct.lean": [
+    "AngularMaster.ActualHadamard"
+  ],
+  "AngularMaster/ZeroGeometry.lean": [
+    "AWPIRH.ThetaEntire"
+  ],
+  "AngularMaster/QQRHGeometry.lean": [
+    "AngularMaster.ZeroGeometry"
+  ],
+  "AngularMaster/LowHeightGeometry.lean": [
+    "AngularMaster.QQRHGeometry",
+    "AngularMaster.ComplexScaleProduct"
+  ],
+  "AngularMaster/ThetaKernelExplicitBound.lean": [
+    "RiemannHypothesis.Xi.ThetaKernelMellinGrowth",
+    "Mathlib.NumberTheory.ModularForms.JacobiTheta.OneVariable",
+    "Mathlib.Analysis.Real.Pi.Bounds"
+  ],
+  "AngularMaster/ZeroFreeSeed.lean": [
+    "AngularMaster.ZeroGeometry",
+    "AngularMaster.ThetaKernelExplicitBound"
+  ],
+  "OriginTrace.lean": [
+    "AngularMaster.ComplexScaleProduct",
+    "AngularMaster.ZeroFreeSeed",
+    "Mathlib.Analysis.Calculus.LogDerivUniformlyOn",
+    "Mathlib.Analysis.Normed.Module.MultipliableUniformlyOn"
+  ],
+  "RH_HilbertLimit/GrowthStep.lean": [
+    "RH_HilbertLimit.Main"
+  ],
+  "RH_HilbertLimit/FinitePrefix.lean": [
+    "RH_HilbertLimit.Bernstein",
+    "RH_HilbertLimit.Growth",
+    "Mathlib.Tactic.NormNum"
+  ],
+  "RH_HilbertLimit/SpectralTail.lean": [
+    "RH_HilbertLimit.Geometry",
+    "RH_HilbertLimit.ActualXi",
+    "Mathlib.Analysis.Normed.Group.InfiniteSum",
+    "Mathlib.Data.Finset.Max"
+  ],
+  "RH_HilbertLimit/ActualCalibrationProgress.lean": [
+    "RH_HilbertLimit.ActualXi",
+    "OriginTrace",
+    "AngularMaster.LowHeightGeometry"
+  ],
+  "RH_HilbertLimit/ActualMomentReality.lean": [
+    "RH_HilbertLimit.ActualXi",
+    "AngularMaster.ComplexScaleProduct",
+    "Mathlib.Analysis.Calculus.Deriv.Star"
+  ],
+  "RH_HilbertLimit/CanonicalBridge.lean": [
+    "RH_HilbertLimit.ActualCalibrationProgress",
+    "RH_HilbertLimit.ActualMomentReality",
+    "RH_HilbertLimit.GrowthStep",
+    "RH_HilbertLimit.SpectralTail"
+  ],
+  "RH_HilbertLimit/CanonicalPowerSums.lean": [
+    "RH_HilbertLimit.CanonicalBridge",
+    "Mathlib.Analysis.Complex.LocallyUniformLimit",
+    "Mathlib.Analysis.Calculus.Deriv.Pow",
+    "Mathlib.Analysis.Calculus.Deriv.Inv",
+    "Mathlib.Analysis.Calculus.LogDerivUniformlyOn",
+    "Mathlib.Analysis.SpecialFunctions.Log.Summable"
+  ],
+  "RH_HilbertLimit/SpectralPhase.lean": [
+    "RH_HilbertLimit.SpectralTail"
+  ],
+  "RH_HilbertLimit/SpectralGenerating.lean": [
+    "RH_HilbertLimit.Spectral",
+    "RH_HilbertLimit.SpectralTail",
+    "Mathlib.Topology.Algebra.InfiniteSum.Group"
+  ],
+  "RH_HilbertLimit/SpectralExtraction.lean": [
+    "RH_HilbertLimit.SpectralPhase",
+    "RH_HilbertLimit.SpectralGenerating",
+    "RH_HilbertLimit.Main",
+    "Mathlib.Algebra.BigOperators.Group.Finset.Basic",
+    "Mathlib.Data.Fintype.EquivFin"
+  ],
+  "RH_HilbertLimit/AnalyticClosure.lean": [
+    "RH_HilbertLimit.CanonicalPowerSums",
+    "RH_HilbertLimit.SpectralExtraction"
+  ],
+  "RH_HilbertLimit/Cancellation.lean": [
+    "RH_HilbertLimit.Bernstein"
+  ],
+  "RH_HilbertLimit/EventualGrowth.lean": [
+    "RH_HilbertLimit.GrowthStep"
+  ],
+  "RH_HilbertLimit/ActualCancellationWitness.lean": [
+    "RH_HilbertLimit.AnalyticClosure",
+    "RH_HilbertLimit.Cancellation",
+    "RH_HilbertLimit.EventualGrowth"
+  ],
+  "RH_HilbertLimit/ZeroBudgetCandidate.lean": [
+    "RH_HilbertLimit.ActualCancellationWitness"
+  ],
+  "RH_HilbertLimit/ZeroBudgetFirstMoment.lean": [
+    "RH_HilbertLimit.ZeroBudgetCandidate"
+  ],
+  "RH_HilbertLimit/ZeroBudgetSecondSector.lean": [
+    "RH_HilbertLimit.ZeroBudgetFirstMoment",
+    "Mathlib.Analysis.SpecialFunctions.ImproperIntegrals"
+  ],
+  "RH_HilbertLimit/ZeroBudgetSecondMoment.lean": [
+    "RH_HilbertLimit.ZeroBudgetSecondSector"
+  ],
+  "RH_HilbertLimit/ZeroBudgetFiveSector.lean": [
+    "RH_HilbertLimit.ZeroBudgetSecondSector",
+    "Mathlib.Analysis.SpecialFunctions.Integrals.Basic"
+  ],
+  "RH_HilbertLimit/ZeroBudgetFiveAlgebra.lean": [
+    "RH_HilbertLimit.Geometry",
+    "Mathlib.Tactic.IntervalCases",
+    "Lean.Elab.Tactic.Omega"
+  ],
+  "RH_HilbertLimit/ZeroBudgetFiveRows.lean": [
+    "RH_HilbertLimit.ZeroBudgetFiveSector",
+    "RH_HilbertLimit.ZeroBudgetFiveAlgebra"
+  ],
+  "FiveRowsAudit.lean": [
+    "RH_HilbertLimit.ZeroBudgetFiveRows",
+    "RH_HilbertLimit.ZeroBudgetSecondMoment",
+    "RH_HilbertLimit.CanonicalBridge",
+    "RH_HilbertLimit.FinitePrefix"
+  ]
+}

@@ -1,0 +1,14 @@
+@echo off
+setlocal EnableExtensions DisableDelayedExpansion
+pushd "%~dp0"
+if errorlevel 1 exit /b 1
+if not exist "%SystemRoot%\System32\cscript.exe" (
+  echo RUN=FAIL
+  echo REASON=Windows Script Host cscript.exe is unavailable.
+  popd
+  exit /b 2
+)
+"%SystemRoot%\System32\cscript.exe" //nologo //E:JScript "tools\native_runner.js"
+set "RH_HILBERT_RUN_EXIT=%errorlevel%"
+popd
+endlocal & exit /b %RH_HILBERT_RUN_EXIT%

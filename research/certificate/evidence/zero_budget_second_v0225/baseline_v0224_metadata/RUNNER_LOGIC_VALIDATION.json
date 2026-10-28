@@ -1,0 +1,24 @@
+{
+  "schema": "RH_HILBERT_V0224_REPORTING_ONLY_REVIEW_V1",
+  "status": "STATIC_SYNTAX_AND_NORMALIZED_EXECUTION_LOGIC_IDENTITY_VERIFIED",
+  "runner_sha256": "bcb5911d6b9c6c87a8d4271948546c6632591c5bced36b3b96037a7b0a5a6104",
+  "baseline_runner_sha256": "3dd2f760861c2cad12cfae1c5e37dc38f009f6f22037dddaaaa407acad8850f5",
+  "changes": [
+    "PACKAGE",
+    "RUNNER_VERSION",
+    "two mathematical-status literals",
+    "six JSON reporting fields",
+    "six post-success log lines"
+  ],
+  "normalized_exact_raw_bytes_match": true,
+  "node_syntax_check": "PASS",
+  "whole_runner_entrypoint_executed": false,
+  "compile_cache_audit_scheduling_memory_lock_shutdown_decisions": "BYTE_PRESERVED",
+  "launcher_and_native_helpers": "BYTE_PRESERVED",
+  "new_runtime_mocks_run": false,
+  "native_or_lean_execution": false,
+  "historical_mock_report": "evidence/relative_shutdown_v0222/tests/mock_report.json",
+  "historical_mock_scope": "V0222_SYNTHETIC_HOST_20_PASS_0_FAIL; NOT_NEW_V0224_TESTS",
+  "integration_review": "evidence/zero_budget_v0224/INTEGRATION_REVIEW.json",
+  "integration_review_sha256": "dc6d86ff93b5002675ad2ebd14f6f546fadc3928c117614859dd1306c50e8177"
+}

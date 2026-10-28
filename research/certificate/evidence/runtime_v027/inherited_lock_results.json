@@ -1,0 +1,113 @@
+{
+  "harness": "RH_HILBERT_LOCK_MOCK_HOST_QA_V1",
+  "runner": "tmp/runtime_opt_v026/native_runner.js",
+  "runner_sha256": "14e084bcc689b16da6ad37b38b549dda8ca3d849c2f36a969eb5c3b92c8ef4eb",
+  "native_windows_execution": false,
+  "lean_execution": false,
+  "process_inventory": "SYNTHETIC_WMI_ONLY",
+  "proof_certification": "NONE",
+  "passed": 25,
+  "failed": 0,
+  "results": [
+    {
+      "name": "fresh_lock_publishes_complete_owner_and_releases_own_token",
+      "outcome": "PASS_MOCK_HOST"
+    },
+    {
+      "name": "active_matching_pid_and_creation_blocks_without_touching_logs",
+      "outcome": "PASS_MOCK_HOST"
+    },
+    {
+      "name": "dead_owner_recovered_with_retained_generation_record",
+      "outcome": "PASS_MOCK_HOST"
+    },
+    {
+      "name": "pid_reuse_with_different_creation_and_unrelated_process_allows_recovery",
+      "outcome": "PASS_MOCK_HOST"
+    },
+    {
+      "name": "pid_reuse_does_not_hide_a_related_active_worker",
+      "outcome": "PASS_MOCK_HOST"
+    },
+    {
+      "name": "owner_pid_with_unknown_creation_identity_blocks",
+      "outcome": "PASS_MOCK_HOST"
+    },
+    {
+      "name": "wmi_unavailable_preserves_existing_lock_and_logs",
+      "outcome": "PASS_MOCK_HOST"
+    },
+    {
+      "name": "unreadable_relevant_process_commandline_blocks_recovery",
+      "outcome": "PASS_MOCK_HOST"
+    },
+    {
+      "name": "blank_process_name_makes_inventory_unknown_and_blocks_recovery",
+      "outcome": "PASS_MOCK_HOST"
+    },
+    {
+      "name": "malformed_owner_metadata_is_preserved",
+      "outcome": "PASS_MOCK_HOST"
+    },
+    {
+      "name": "recognized_legacy_marker_recovers_only_when_no_workers_remain",
+      "outcome": "PASS_MOCK_HOST"
+    },
+    {
+      "name": "empty_legacy_lock_recovers_with_complete_absence_evidence",
+      "outcome": "PASS_MOCK_HOST"
+    },
+    {
+      "name": "initializing_legacy_owner_with_active_relative_script_is_not_reclaimed",
+      "outcome": "PASS_MOCK_HOST"
+    },
+    {
+      "name": "ambiguous_relative_legacy_runner_blocks_recovery",
+      "outcome": "PASS_MOCK_HOST"
+    },
+    {
+      "name": "absolute_runner_in_other_package_does_not_block_recovery",
+      "outcome": "PASS_MOCK_HOST"
+    },
+    {
+      "name": "later_parent_pid_reuse_within_same_millisecond_is_not_excluded",
+      "outcome": "PASS_MOCK_HOST"
+    },
+    {
+      "name": "idle_persistent_cmd_k_shell_does_not_block_recovery",
+      "outcome": "PASS_MOCK_HOST"
+    },
+    {
+      "name": "existing_deterministic_tombstone_prevents_second_reclamation",
+      "outcome": "PASS_MOCK_HOST"
+    },
+    {
+      "name": "post_rename_generation_mismatch_preserves_quarantine_without_ownership",
+      "outcome": "PASS_MOCK_HOST"
+    },
+    {
+      "name": "post_rename_mismatch_does_not_delete_newly_published_foreign_lock",
+      "outcome": "PASS_MOCK_HOST"
+    },
+    {
+      "name": "two_validated_reclaimers_cannot_remove_winners_replacement_lock",
+      "outcome": "PASS_MOCK_HOST"
+    },
+    {
+      "name": "fresh_contender_winning_publication_gap_keeps_its_lock",
+      "outcome": "PASS_MOCK_HOST"
+    },
+    {
+      "name": "cleanup_refuses_to_delete_a_changed_owner_token",
+      "outcome": "PASS_MOCK_HOST"
+    },
+    {
+      "name": "duplicate_self_token_process_identity_is_ambiguous",
+      "outcome": "PASS_MOCK_HOST"
+    },
+    {
+      "name": "missing_launch_token_is_rejected_without_lock_change",
+      "outcome": "PASS_MOCK_HOST"
+    }
+  ]
+}

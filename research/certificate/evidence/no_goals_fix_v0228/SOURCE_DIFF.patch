@@ -1,0 +1,18 @@
+--- v027/RH_HilbertLimit/ZeroBudgetSecondMoment.lean
++++ v028/RH_HilbertLimit/ZeroBudgetSecondMoment.lean
+@@ -30,7 +30,6 @@
+   have h2 : (z ^ 2).re = z.re ^ 2 - z.im ^ 2 := by
+     simp only [pow_succ, pow_zero, mul_one, one_mul, Complex.one_re,
+       Complex.one_im, Complex.mul_re, Complex.mul_im]
+-    ring
+   have h3 : (z ^ 3).re = z.re ^ 3 - 3 * z.re * z.im ^ 2 := by
+     simp only [pow_succ, pow_zero, mul_one, one_mul, Complex.one_re,
+       Complex.one_im, Complex.mul_re, Complex.mul_im]
+@@ -53,7 +52,6 @@
+   have h2 : (z ^ 2).re = z.re ^ 2 - z.im ^ 2 := by
+     simp only [pow_succ, pow_zero, mul_one, one_mul, Complex.one_re,
+       Complex.one_im, Complex.mul_re, Complex.mul_im]
+-    ring
+   have h3 : (z ^ 3).re = z.re ^ 3 - 3 * z.re * z.im ^ 2 := by
+     simp only [pow_succ, pow_zero, mul_one, one_mul, Complex.one_re,
+       Complex.one_im, Complex.mul_re, Complex.mul_im]

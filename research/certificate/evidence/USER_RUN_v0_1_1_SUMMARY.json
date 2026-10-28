@@ -1,0 +1,23 @@
+{
+  "scope": "User-supplied native Windows output from v0.1.1; no claim about v0.1.2 compilation",
+  "source": "evidence/USER_RUN_v0_1_1.txt",
+  "source_sha256": "17aa28b6e06b604687942d876680e4505d4d337c3c4bfd6d919bd0a5810c7c11",
+  "reported_runner_sha256": "f6817d4794f9b751348b3e520ca6741e04e3bf0adde876f2aaea69a46c0c33e9",
+  "reported_toolchain_fingerprint": "9accc35f783dedab9563980b5d45c280b70fbc8b1daaeadc65cdebf7cdd0f2f8",
+  "dependency_content_files": 36176,
+  "run_result": "FAIL",
+  "module_observations": {
+    "AWPIRH.XiCore": "Compilation reached generated axiom-audit stage; audit failed at its first character and imported declarations were unresolved",
+    "RH_HilbertLimit.Bernstein": "Compile error: abs_add identifier unavailable",
+    "RH_HilbertLimit.Growth": "Compile errors: explicit rpow/notation mismatch and real-valued inference for a natural-number eventual binder",
+    "RH_HilbertLimit.Geometry": "Compile errors: ambiguous nonempty witness, ordered addition API, inverse-projection simplification, multiplication-inequality API",
+    "AWPIRH.ThetaEntire": "Blocked by XiCore audit failure",
+    "RH_HilbertLimit.ActualXi": "Blocked by dependency",
+    "RH_HilbertLimit.Spectral": "Blocked by dependency",
+    "RH_HilbertLimit.Vandermonde": "Blocked by dependency",
+    "RH_HilbertLimit.Main": "Blocked by dependency"
+  },
+  "same_target_clean_axiom_receipts_supplied": false,
+  "new_tier_certification": false,
+  "elapsed_time_available": false
+}

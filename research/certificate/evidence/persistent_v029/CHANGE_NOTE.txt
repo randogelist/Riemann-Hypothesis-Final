@@ -1,0 +1,31 @@
+RH local runner persistent-storage profile for v0.2.9
+Implementation baseline: v0.2.8.
+
+This scratch patch changes only native_runner.js and this note. The release
+must preserve run.cmd, the follower observer, NativeSha256.cs, every Lean
+source, the compile/audit manifests and all semantic policies/flags.
+
+configurePersistentProfile runs before acquiring a lock or touching logs.
+It requires the normalized package root to be a proper descendant of
+E:\RH-FAST\workspaces, with a case-insensitive exact path-component boundary.
+An invalid root fails with PERSISTENT_WORKSPACE_REQUIRED and an extraction
+instruction. The profile itself creates no directories and copies no files.
+
+The first valid configuration captures the previous LEAN_ANCHORINGS_ROOT.
+The process environment then points new project/helper caches at
+E:\RH-FAST\anchors. Repeated configuration preserves the captured prior
+root. selectCache adds that prior root as a read-only verified import when
+distinct, while preserving the existing LOCALAPPDATA and explicit imports.
+
+Working objects, generated audits, locks and logs remain together beneath
+the extracted package root. Each version has its own persistent E: workspace;
+verified project/helper entries use the common E: anchor store. Existing
+cache validation and migration rules still decide every reuse. No valid
+anchor quota or automatic eviction is introduced.
+
+Lean and Mathlib remain at their existing configured cached locations.
+Compiler/DLL path fingerprints, LEAN_PATH ordering, LEAN_JOBS, semantic flags,
+hashing, audit, owned-lock and follower behavior are unchanged by this patch.
+Profile roots and retention policy are reported in logs and run-result.json.
+
+No Lean, Lake, Windows, C#, Wine or CI execution occurred in preparation.

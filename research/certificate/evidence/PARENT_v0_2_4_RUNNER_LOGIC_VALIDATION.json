@@ -1,0 +1,16 @@
+{
+  "schema": "RH_HILBERT_RUNNER_INHERITED_LOGIC_VALIDATION_V024_CAST_ONE_FIX1",
+  "status": "PACKAGE_LABEL_ONLY_STATIC_IDENTITY_PASS",
+  "checked_at_utc": "2026-10-27T17:28:54.444713+00:00",
+  "runner_sha256": "ed1d7e1250b960c277806a64d4f9c4f35adca52010089f63e0431df19776fc48",
+  "inherited_tested_runner_sha256": "90a19d878cc528220dd9d6d116c831ebfd075ec01df2086d81dd68cad130f6ba",
+  "inherited_test_report": "evidence/RUNNER_LOGIC_VALIDATION_v0_2_3.json",
+  "inherited_mock_scenarios_passed": 67,
+  "inherited_mock_scenarios_failed": 0,
+  "inherited_tests_rerun": false,
+  "normalized_runner_identity": "BYTE_IDENTICAL_AFTER_REPLACING_THE_SINGLE_PACKAGE_STRING",
+  "current_lean_execution": "NOT_RUN",
+  "current_windows_execution": "NOT_RUN",
+  "current_ci_execution": "NOT_RUN",
+  "native_evidence": "Partial user v0.2.1 log with 31 compact saves; no native receipt files or startup runner hash supplied."
+}

@@ -1,0 +1,56 @@
+{
+  "schema": "RH_HILBERT_FIRST_FIVE_SOURCE_CHECKPOINT_V1",
+  "branch": "RH_HILBERT_LIMIT / Hilbert.vector",
+  "mode": "A_TIER_LEAN",
+  "target": "LOCAL_COMPILER",
+  "checkpoint_package": "RH_HILBERT_LIMIT_LEAN_v0_2_28_SECOND_MOMENT_FIX_construction",
+  "parent_package": "RH_HILBERT_LIMIT_LEAN_v0_2_27_construction",
+  "parent_zip_sha256": "f814f2ff16b98fbcfd49363b2334571e42f69573ee5a52f0de6b8ad9beda5cfe",
+  "revision_kind": "PARTIAL_COMPILE_REPAIR_NOT_INIT",
+  "selected_candidate": {
+    "cutoff": 0,
+    "coefficient": 0
+  },
+  "new_source_sha256": {},
+  "native_execution": "NOT_RUN",
+  "native_audit": "PENDING",
+  "latest_user_native_evidence": {
+    "evidence_kind": "USER_MESSAGE_EXCERPT_NOT_ORIGINAL_LOG_BYTES",
+    "reported_package": "RH_HILBERT_LIMIT_LEAN_v0_2_27_construction",
+    "reported_build": "FAIL",
+    "reported_run": "FAIL",
+    "reported_failed_modules": [
+      "RH_HilbertLimit.ZeroBudgetFiveSector",
+      "RH_HilbertLimit.ZeroBudgetSecondMoment"
+    ],
+    "reported_blocked_module": "RH_HilbertLimit.ZeroBudgetFiveRows",
+    "diagnostics": [
+      {
+        "source": "RH_HilbertLimit/ZeroBudgetSecondMoment.lean",
+        "lines": [
+          33,
+          56
+        ],
+        "message": "No goals to be solved"
+      }
+    ],
+    "five_sector_actual_error": "NOT_INCLUDED_IN_USER_EXCERPT; SOURCE_REVIEW_FOUND_NO_DEFINITE_CAUSE",
+    "reported_shutdown": "WORKER_INVENTORY_RECHECK=CLEAR",
+    "reported_compile_tasks_attempted": 2,
+    "current_source_repair_native_status": "NOT_RUN"
+  },
+  "first_batch_indices": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "next_batch_gate": "FIRST_BATCH_USER_NATIVE_BUILD_AND_AXIOM_AUDIT_PASS",
+  "next_batch_status": "NOT_INCLUDED_NOT_VERIFIED",
+  "universal_admissibility": "OPEN",
+  "changed_source_sha256": {
+    "RH_HilbertLimit/ZeroBudgetSecondMoment.lean": "f751b4dffd88a2f40fc41f951abdcc9f5c75c5f73c57010859d9f4635a7c3a77"
+  },
+  "five_sector_diagnostic": "MISSING; SOURCE_UNCHANGED"
+}

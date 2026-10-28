@@ -1,0 +1,46 @@
+{
+  "evidence_kind": "SELECTED_FINAL_STAGES_FROM_USER_MESSAGE_UTF8_LF_TRANSCRIPTION_NOT_ORIGINAL_LOG_BYTES",
+  "reported_package": "RH_HILBERT_LIMIT_LEAN_v0_2_21_construction",
+  "reported_build": "FAIL",
+  "reported_run": "FAIL",
+  "reported_failed_stage": "WORKER_SHUTDOWN",
+  "reported_reason": "Owned workers remain live or uncertain; the workspace lock is preserved until they finish.",
+  "ordinary_module_progress": {
+    "completed": 92,
+    "total": 92,
+    "active": 0,
+    "ready": 0,
+    "lean_threads": 0
+  },
+  "reported_new_or_reaudited_module_tasks": 0,
+  "reported_peak_module_workers": 0,
+  "reported_ram_warm": "SKIPPED_NO_ELIGIBLE_DIRTY_FRONTIER",
+  "reported_final_audit": "CancellationAudit.lean",
+  "reported_final_audit_state": "FROZEN_REUSED",
+  "reported_final_audit_declarations": 394,
+  "reported_stages_ms": {
+    "PROJECT_MODULES": 58644,
+    "FINAL_AUDIT": 427,
+    "WORKER_SHUTDOWN": 548
+  },
+  "reported_final_audit_module_elapsed_ms": 343,
+  "reported_shutdown": {
+    "launch_inventory_sealed": true,
+    "launch_records": 417,
+    "snapshot_rows": 717,
+    "queued_unreadable_rows": 0,
+    "lock_retained": true,
+    "reason": "LEGACY_RELATIVE_RUNNER_WORKSPACE_UNKNOWN",
+    "offending_process_identity": null
+  },
+  "aggregate_module_summary_counts": null,
+  "aggregate_module_summary_note": "Not emitted in the supplied failed run; do not infer final aggregate counters.",
+  "explicit_per_declaration_axiom_output_in_excerpt": 0,
+  "final_audit_anchor_receipt_path": "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\dfb014b4edea4fa5\\dfdde963255fcdf198c5fc8dcb8d5ad1\\01a17f72f0e0b979\\receipt.txt",
+  "receipt_contents_inspected": false,
+  "independent_native_verification": false,
+  "source": "evidence/relative_shutdown_v0222/USER_NATIVE_V0221_SHUTDOWN_FAIL_EXCERPT.txt",
+  "source_sha256": "da785e35f7c225ad780a5d850270428b9768b38ff94fbebacd5155f596a814ad",
+  "scope": "Selected exact final-stage excerpt; preceding per-module reuse lines remain in the user message.",
+  "cause_limit": "The old log does not identify the host, its actual script argument, or whether it exited; the two repaired cases are source-level findings, not a proven diagnosis of that process."
+}

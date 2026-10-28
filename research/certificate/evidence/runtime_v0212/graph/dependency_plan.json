@@ -1,0 +1,2153 @@
+{
+  "schema": "RH_HILBERT_SOURCE_DAG_PLAN_V1",
+  "scope": "Read-only source/header graph analysis; no Lean, Lake, native Windows, C#, CI, or runtime benchmarks.",
+  "package": "RH_HILBERT_LIMIT_LEAN_v0_2_11_construction",
+  "inputs_sha256": {
+    "tools/native_runner.js": "738f7f92b68f8145a3c6b9e5b395e0c5ac95b156b6e4c5bdf2799c6d272fbb7f",
+    "run.cmd": "5e6c6561c370c904b13d165986f0c045c6e7732de1745744b03619cf4a4b9f16",
+    "compile-order.txt": "a9a14b3d7b989b2b16c8c9af1f10f509827cd6ff794fd2e1b3b47c737c624cde",
+    "final-audit.txt": "ef56956fc0eac80b3c281abd27a97bd054107ef9538e73b1cedb98c113b03bc5",
+    "audit-targets.tsv": "d1fe5130c82c0c269159acbab6a396948df3ffd3d2f2469fb9a19f2adb10d752",
+    "mathlib-imports.txt": "0c2ef006a5917ffe890cf1483b524435038824c7116ca8fe49533d4d9a4da31c"
+  },
+  "all_lean_file_count": 92,
+  "all_lean_manifest_sha256": "41923c5a055b56a8b8c6170d432f3ffe8ecabe650900f5510b8902b65b37d33c",
+  "selected_source_sha256": {
+    "AWPIRH/XiCore.lean": "6bda1a14b59a508811b9f9a8bff400ed824d86f366b2ddeecd728571be7fd9db",
+    "AWPIRH/ThetaEntire.lean": "cb1f0838f2d90a1ba30e696afd05337e721ee7cc7e021a30ec28cdf2f810533b",
+    "RH_HilbertLimit/Bernstein.lean": "e0b488ee02ec770a436348f8ebd9ff607e0480adddb23a6edc89c4272131f0b1",
+    "RH_HilbertLimit/Growth.lean": "5fce21c7df7955ab1146418865141e3f3f7d2df23a92994032bcfb7008fc87fb",
+    "RH_HilbertLimit/Geometry.lean": "87cf597061c1c297a58faeabc246af3129965b47be3f47971201628f940e1543",
+    "RH_HilbertLimit/ActualXi.lean": "d1fe6b5d5a8a3d6caf398790fe4a6b519ad0510a229c3cf88e3e20267d003322",
+    "RH_HilbertLimit/Spectral.lean": "8d6ea31f8e591db5d5ed0fb3929282b8a08cb4a4b98432115ed5958a7e742166",
+    "RH_HilbertLimit/Vandermonde.lean": "b3bdc529531308962e66e3e9d36f37321c77169b1c7c4d70295be713dbaaacfe",
+    "RH_HilbertLimit/Main.lean": "3b04858da84d6e0331228db9c020a562b6395f7dc0c5d0a54ae3c23387919081",
+    "AngularMaster/ZeroExclusion.lean": "2061f954006832ba899ab454ce08168e449b1d69c3104d5a2a3dddf201865b96",
+    "RiemannHypothesis/ComplexAnalysis/GrowthRigidity.lean": "6393cb9257fb39f5979974b9eb01a86c2b426aaa9199f310bbb021d4c015cc4e",
+    "RiemannHypothesis/ComplexAnalysis/RealPartGrowth.lean": "17f4a7906ac32639c2187ebcade312bbcf0fa91dbc1dc49bb14669aafb6a7128",
+    "RiemannHypothesis/ComplexAnalysis/ProximityGrowth.lean": "2c4130bb3afe29e94aaf339599a4aef2f50b2b68da53361ffb0755d1c0850b9d",
+    "RiemannHypothesis/ComplexAnalysis/AntiHerglotz.lean": "1792b68059adde42fba35af15461764462d9b686e4a702eae240d5db0012fa88",
+    "RiemannHypothesis/ComplexAnalysis/LogDerivative.lean": "46e6818321ea99f466740578e0b16a0ba0b8a57f8b8ae5f3fb91921c9f7ffe64",
+    "RiemannHypothesis/HadamardProduct/GenusOne.lean": "6ea6e3041c9db215831e4fd3b5825797dea27f0fb6a497aec5523f61aab5ea69",
+    "RiemannHypothesis/HadamardProduct/InfiniteProducts.lean": "0a52a01b6f1a79e490d794f470cd6096fec3ca683d5d7d7d725a91f84ad8ce48",
+    "RiemannHypothesis/HadamardProduct/LogDerivative.lean": "0f6d76241e3da7221cf486c748faf51f44a262d75a9142b207529e36caf56586",
+    "RiemannHypothesis/HadamardProduct/CanonicalProductGrowth.lean": "677a9e98c5e9a8a7073ff2b14d9c1a1af325dff5ae880ba3524aab49f1d5219a",
+    "RiemannHypothesis/HadamardProduct/DyadicZeroCount.lean": "c1a3b871311e0a4b8af3b7c8c10ba5071874db3105a6005ac176c85421148b00",
+    "RiemannHypothesis/HadamardProduct/CanonicalProductDyadicGrowth.lean": "8adf77b92fa13a212eece3131d72cac0df2e07bf364ede8a01c2843191d12c29",
+    "RiemannHypothesis/HadamardProduct/PairedGenusOne.lean": "8b5a6002231a9ed90995c4a8a252c6772114e4ff9ed78e5cded7bdc4965fe0c2",
+    "RiemannHypothesis/HadamardProduct/PairedCanonicalProductGrowth.lean": "ec5a9bcb065e2c3e286321ef0924014f97544ddb50d126895f4d7ba3a170aa24",
+    "RiemannHypothesis/HadamardProduct/CanonicalProductDivisor.lean": "7c26232ff13951e9a30df96fa8066aca71064d99790a0ff2e5343537b860f950",
+    "RiemannHypothesis/HadamardProduct/IndexedRealZeroSign.lean": "5cc725c58ee37d7e6fa286157d4e6f66d6c3ed1eab918d1700cda30ad39df26f",
+    "RiemannHypothesis/ComplexAnalysis/PoleProbe.lean": "40401afe8024afdf5feb81be0da723a25139047f8e6d209281cb387ff2abffaa",
+    "RiemannHypothesis/ComplexAnalysis/RealSymmetry.lean": "5f83e842a50fe85e7601290db5f7620244da46951ee129ac4135e8d6a07726ea",
+    "RiemannHypothesis/RealZeros/Engine.lean": "0f48d57c45672a56f354c8cacc6e017c0a6c45e4809b5f89b44c96e6819c77c7",
+    "RiemannHypothesis/RealZeros/EntireFunctions.lean": "cf7b51cbe17e56e7bc4a2674c0d122a4d42fab3b8a2b2204da5a5d6ae6ec3902",
+    "RiemannHypothesis/HadamardProduct/CompletedLFunction.lean": "25e2ea5bd1238b6c15bbafa05cfe06f4eca5dd4ea6ecdde4cc433bb8c5f699be",
+    "RiemannHypothesis/Xi/Definitions.lean": "a421e366b8a199e997d88ff8cc822b51aff637bfab17e59e19f60ab663c70280",
+    "RiemannHypothesis/Xi/FunctionalEquation.lean": "c8b22abfc9b7d193c2b7060fca2524263f606e10ab12ffc890f59ecaee5db34a",
+    "RiemannHypothesis/Xi/Pullback.lean": "8fd6242f9e252abbfa3c3b391923d44944b409bd87d05ea23ac6b050263a5b43",
+    "RiemannHypothesis/Xi/SignTargets.lean": "5408924103ee1b4bc2fa939d6de918eadb3b225dc253df60a808f40414e7d65f",
+    "RiemannHypothesis/Xi/CanonicalDivisor.lean": "7fe314d6754729e36ffcbb43978d59d8226d47e007338493ca1b6a751eb299ec",
+    "RiemannHypothesis/HadamardProduct/CanonicalProductMultiplicity.lean": "10da8fd539dee790695e73c76bc30565171aff83c5b3d72b8cfad091063b786f",
+    "RiemannHypothesis/Xi/CanonicalProductCharacteristicGrowth.lean": "173dc74a9f1dce4e868eb5cc2fbde83c6648ff4cf9c2e827a22009183f44ee86",
+    "RiemannHypothesis/ComplexAnalysis/EvenAnalyticOrder.lean": "1b40cdb7861734c5f5e13d55be65abc211cbcfcf5e1f27e8e89b9ab4a9f01659",
+    "RiemannHypothesis/ComplexAnalysis/EntireQuotient.lean": "ca9213e5608b0d63e5d3a2a5fe982ffb72bf77b815c8a0f29ce6420cd471105e",
+    "RiemannHypothesis/Xi/BacklundTuringBridge.lean": "415689e15ab1afc103378d0817d6c23137d7bacada4b85b1b33c62db14888ffc",
+    "RiemannHypothesis/GammaCancellation/PoleSet.lean": "eb5c37f7ded790b001f868fc8e6991973ae9a3ac1c74eea51e5d05746ae3eb63",
+    "RiemannHypothesis/GammaCancellation/CompletedZeta.lean": "a68c5c838f8a4b7666f4fe579908946212ea0f052d81cdb6d6d2b929f88c001b",
+    "RiemannHypothesis/GammaCancellation/TextbookXi.lean": "b08c3353a4bade05487631009f2ebbd1d993d524481274a858886105fe6059c7",
+    "RiemannHypothesis/Xi/RiemannHypothesisBridge.lean": "4dc024d08641c4e8f8da5da7ac6c67af29fae3ca2e74c249042bb5b5a0fa7c04",
+    "RiemannHypothesis/Xi/ZetaMultiplicityBridge.lean": "4ad8d6b8140d745a0e3841c700bd097064648480bcc51117363e53be9f750579",
+    "RiemannHypothesis/ZeroCounting/SmoothMainTerm.lean": "a734783488373589e5502cb01e33e3c0db9b7d5bf261030e4786249af9c94223",
+    "RiemannHypothesis/ZeroCounting/ZetaZeros.lean": "9015953ecae3abec20c23f337d005edefe60c56e183a436254b4c4a5a2a219c9",
+    "RiemannHypothesis/Reduction/BacklundCanonicalDivisor.lean": "ca04cd2aa7b38d0443f1316c3c61ce2d0c79c32256d0490cdbb743d37aaee43c",
+    "RiemannHypothesis/Xi/DyadicZeroCountBridge.lean": "a8e22bbbe7c4fdff270926860d890608c499bf1aedd93bfd6441186e40bfd622",
+    "RiemannHypothesis/HadamardProduct/ExponentialPrefactor.lean": "b567173b5bce7c312e65f755ea29757e0339e9237abe1cd3fbf6f39fe5feb024",
+    "RiemannHypothesis/HadamardProduct/NatZeroData.lean": "54ca9e5f26fd1d7e7e2e70bb63590425ecd058b6d9a6740b4d2eef5d95fd4934",
+    "RiemannHypothesis/HadamardProduct/RealZeroSign.lean": "4309deef7755b23c1f1da8aca5cec5566a2269d5ffca0eb2d61ece83abfa193e",
+    "RiemannHypothesis/HadamardProduct/StrictRealZeroCriterion.lean": "832d9b74b67b4d916d21808acb0280445e1f63cc3438a066670ae8e7f6d41028",
+    "RiemannHypothesis/HadamardProduct/OriginMultiplicityCriterion.lean": "5c304d933e1fd7ef22b80d5901153483abca28a8f81056a4467d1f9e5dfe8f0e",
+    "RiemannHypothesis/Xi/StrictLagariasCriterion.lean": "64be344e40e2ec962da464bc337df22d0f2eefd7305dd224721bb3cb8239494d",
+    "RiemannHypothesis/Xi/HadamardLogDerivativeCriterion.lean": "66f396b981d181a8eed8a62e5de61b2b98d96a670ac30a7a2c9841caa1aaf062",
+    "RiemannHypothesis/Xi/CanonicalQuotientCriterion.lean": "39a5b9d0917f4a261e0fd826c4105da87805af19c2b94c264209796eb4b7da19",
+    "RiemannHypothesis/Xi/CanonicalProductSymmetry.lean": "6940c75da42737642c461e82e62b964edd85a678eaf8773d3cae66dabee5af12",
+    "RiemannHypothesis/Xi/CanonicalQuotientLogNormGrowth.lean": "e2a7504dce7dbeb659c74c3914ad98ff819c8d2a37ff062543f5f146e3a3e2a8",
+    "RiemannHypothesis/Xi/CanonicalQuotientCharacteristicGrowth.lean": "c92a5502f4fd4a1c8f9d796ce199ca9332d2fd7fd5dddbdddbfbd8c29e00ab23",
+    "RiemannHypothesis/ComplexAnalysis/MellinGrowth.lean": "95150cb0fec21a8ffb62ef6eb59bee9d7fc9570cd4d150fdc67a49b848e7db0e",
+    "RiemannHypothesis/Xi/ThetaKernelMellinGrowth.lean": "26bbe69ddcc599a2bfcbbe378e411b03043eddc3e85ee5663cea382743d1ec9b",
+    "RiemannHypothesis/ComplexAnalysis/FactorialDyadicGrowth.lean": "4f0c560effde7259d8fa6ef52b17df85aebb39294dc71ad3bf8009769954a50c",
+    "RiemannHypothesis/Xi/JensenDyadicCountBridge.lean": "3712fa9953497863b55cfe7e260dba68d985a57706064b1bc480d78e5b337eda",
+    "RiemannHypothesis/Xi/EntireXiMellinGrowth.lean": "7e917cc060fcc9f2358526e55f02538c3e42a905b8e0b38f11fb8086bbd650d4",
+    "RiemannHypothesis/Xi/EntireXiLogNormGrowth.lean": "2be4e49647505f922cb097e3e781487fe4cbdb8e8a84024d684e640d09acac57",
+    "RiemannHypothesis/Xi/CanonicalQuotientThetaCharacteristicGrowth.lean": "398c3e9ae6a72d47a178ca1d346400ab92b946d7b145927e1739ae0e52d38662",
+    "RiemannHypothesis/Xi/UnconditionalLagariasEquivalence.lean": "d1e3f6cb7a1a6f8200fe6cb53026b004855d4953272b2875de64c4d75a619275",
+    "RiemannHypothesis/Xi/CompletedLFunctionInstance.lean": "b31ea04b198a71519a650c1da1954d242c280bdaec1742e7c1110b41ede2f576",
+    "RiemannHypothesis/Xi/CanonicalProductPairedGrowth.lean": "1c3708464031f711376c6a2727fe5e9fc85c221f05fb87b841e8f1ff92d05184",
+    "AngularMaster/ActualHadamard.lean": "99f424e8e0e87247c76b9f638850de67dcaaf7a5559e7158eeb1883efcee3664",
+    "AngularMaster/ComplexScaleProduct.lean": "2a25b446accead2b314877c8eace2764f775e8b6b8675aa9909be89f421f535d",
+    "AngularMaster/ZeroGeometry.lean": "b0812a3b5f8bdf2a162553b24fa9801aa71d3dc2227d02400f9abca0e1888bc9",
+    "AngularMaster/QQRHGeometry.lean": "f661ee3f0359af3539d30a297a23f0edc160699495725f2888bd2facaf637906",
+    "AngularMaster/LowHeightGeometry.lean": "524de1676223e39ace67404892e5ff78a69a37a77efbbe66aa8263498954a392",
+    "AngularMaster/ThetaKernelExplicitBound.lean": "9a01fbfd31a48c096eb8c27fcfd07c7fec716d7069669dfc28dd7c77c9d37122",
+    "AngularMaster/ZeroFreeSeed.lean": "4c617c74b545f1473f85c8ea59dd31818b5de9e8b5a35814d0a0e8a7ca1a3aa4",
+    "OriginTrace.lean": "01c0d483964ef1b3cff5883267eec10ad65830ac2251d8db206434e85c73bedf",
+    "RH_HilbertLimit/GrowthStep.lean": "07fa8dfc108c4dd5dabb844719d84a5b0f09c56f92960e90e085017a216839b5",
+    "RH_HilbertLimit/FinitePrefix.lean": "75a00cb4dbddd2e4537af6544e8543459aa986717a14074ab6066e41aa704c6d",
+    "RH_HilbertLimit/SpectralTail.lean": "9c382b2097f6ef5e0a37502d02742061646772f74c34848853a6344b441ffb5e",
+    "RH_HilbertLimit/ActualCalibrationProgress.lean": "8d268760cc235fdcf95ea4514aec2dbf126d90056df5e06730ee5b06bd4a275e",
+    "RH_HilbertLimit/ActualMomentReality.lean": "992ce87c48b93143e50a81c1a5318992bef251589d94494de1fafe2beb5ba34e",
+    "RH_HilbertLimit/CanonicalBridge.lean": "103d1917e0fa30b2ec50fb03217176235ebd045d65c3740eba5914f4860822fd",
+    "RH_HilbertLimit/CanonicalPowerSums.lean": "2aecbd7e10aa87c0ce726026d563d6a33caf0b99e58f824719cf5a99a6217169",
+    "RH_HilbertLimit/SpectralPhase.lean": "bc21fd329ecce37ce7b4808ffa565d1b0cc7507c90cbc1965b1a540756db3a80",
+    "RH_HilbertLimit/SpectralGenerating.lean": "06fb12f6dba0872527cba2bcc5a10cf3029c8df73af46131db36efa372828977",
+    "RH_HilbertLimit/SpectralExtraction.lean": "4c3381a0d090c9f27f06453797360ad765e018d2776001816bf3b91272fbdc16",
+    "RH_HilbertLimit/AnalyticClosure.lean": "ed440ff35623939ee3b5b7d58b0c85836d0c3e425e9db60ed95e7cb3eb465c16",
+    "AnalyticAudit.lean": "1f9993cfe9a7bf4eeb8af7bee5cdeff809ab208262dbf58979fed23d1eb6e98f"
+  },
+  "ordinary_module_count": 89,
+  "selected_final_audit": "AnalyticAudit",
+  "direct_external_imports_excluding_implicit_Init": [
+    "Lean.Elab.Tactic.NormCast",
+    "Lean.Elab.Tactic.Omega",
+    "Mathlib.Algebra.BigOperators.Group.Finset.Basic",
+    "Mathlib.Algebra.Order.BigOperators.Group.Finset",
+    "Mathlib.Analysis.Analytic.IsolatedZeros",
+    "Mathlib.Analysis.Analytic.Order",
+    "Mathlib.Analysis.Analytic.Uniqueness",
+    "Mathlib.Analysis.Calculus.Deriv.Basic",
+    "Mathlib.Analysis.Calculus.Deriv.Comp",
+    "Mathlib.Analysis.Calculus.Deriv.Inv",
+    "Mathlib.Analysis.Calculus.Deriv.MeanValue",
+    "Mathlib.Analysis.Calculus.Deriv.Mul",
+    "Mathlib.Analysis.Calculus.Deriv.Pow",
+    "Mathlib.Analysis.Calculus.Deriv.Star",
+    "Mathlib.Analysis.Calculus.IteratedDeriv.Lemmas",
+    "Mathlib.Analysis.Calculus.LogDeriv",
+    "Mathlib.Analysis.Calculus.LogDerivUniformlyOn",
+    "Mathlib.Analysis.Calculus.MeanValue",
+    "Mathlib.Analysis.Complex.AbsMax",
+    "Mathlib.Analysis.Complex.Basic",
+    "Mathlib.Analysis.Complex.BorelCaratheodory",
+    "Mathlib.Analysis.Complex.Cardinality",
+    "Mathlib.Analysis.Complex.ExponentialBounds",
+    "Mathlib.Analysis.Complex.Harmonic.Poisson",
+    "Mathlib.Analysis.Complex.HasPrimitives",
+    "Mathlib.Analysis.Complex.JensenFormula",
+    "Mathlib.Analysis.Complex.Liouville",
+    "Mathlib.Analysis.Complex.LocallyUniformLimit",
+    "Mathlib.Analysis.Complex.RemovableSingularity",
+    "Mathlib.Analysis.Complex.SqrtDeriv",
+    "Mathlib.Analysis.Complex.ValueDistribution.FirstMainTheorem",
+    "Mathlib.Analysis.MellinTransform",
+    "Mathlib.Analysis.Meromorphic.Divisor",
+    "Mathlib.Analysis.Meromorphic.NormalForm",
+    "Mathlib.Analysis.Normed.Group.InfiniteSum",
+    "Mathlib.Analysis.Normed.Module.MultipliableUniformlyOn",
+    "Mathlib.Analysis.PSeries",
+    "Mathlib.Analysis.Real.Pi.Bounds",
+    "Mathlib.Analysis.SpecialFunctions.Complex.Analytic",
+    "Mathlib.Analysis.SpecialFunctions.Gamma.Basic",
+    "Mathlib.Analysis.SpecialFunctions.Gaussian.GaussianIntegral",
+    "Mathlib.Analysis.SpecialFunctions.Log.Basic",
+    "Mathlib.Analysis.SpecialFunctions.Log.Deriv",
+    "Mathlib.Analysis.SpecialFunctions.Log.Summable",
+    "Mathlib.Analysis.SpecialFunctions.Pow.Asymptotics",
+    "Mathlib.Analysis.SpecialFunctions.Pow.Complex",
+    "Mathlib.Analysis.SpecialFunctions.Pow.Real",
+    "Mathlib.Analysis.SpecialFunctions.Trigonometric.Arctan",
+    "Mathlib.Analysis.SpecialFunctions.Trigonometric.ArctanDeriv",
+    "Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic",
+    "Mathlib.Analysis.SpecificLimits.Basic",
+    "Mathlib.Analysis.SpecificLimits.Normed",
+    "Mathlib.Data.Complex.Basic",
+    "Mathlib.Data.Countable.Basic",
+    "Mathlib.Data.Finset.Max",
+    "Mathlib.Data.Fintype.EquivFin",
+    "Mathlib.Data.Nat.Log",
+    "Mathlib.Data.Real.Basic",
+    "Mathlib.Data.Set.Finite.Lattice",
+    "Mathlib.LinearAlgebra.Matrix.NonsingularInverse",
+    "Mathlib.LinearAlgebra.Vandermonde",
+    "Mathlib.MeasureTheory.Integral.Gamma",
+    "Mathlib.MeasureTheory.Integral.IntervalIntegral.FundThmCalculus",
+    "Mathlib.NumberTheory.LSeries.HurwitzZetaEven",
+    "Mathlib.NumberTheory.LSeries.HurwitzZetaValues",
+    "Mathlib.NumberTheory.LSeries.Nonvanishing",
+    "Mathlib.NumberTheory.LSeries.RiemannZeta",
+    "Mathlib.NumberTheory.LSeries.ZetaZeros",
+    "Mathlib.NumberTheory.ModularForms.JacobiTheta.OneVariable",
+    "Mathlib.Order.ConditionallyCompleteLattice.Basic",
+    "Mathlib.Order.Filter.AtTopBot.Basic",
+    "Mathlib.RingTheory.Polynomial.Bernstein",
+    "Mathlib.Tactic.ByContra",
+    "Mathlib.Tactic.Continuity",
+    "Mathlib.Tactic.FieldSimp",
+    "Mathlib.Tactic.FunProp",
+    "Mathlib.Tactic.GCongr",
+    "Mathlib.Tactic.Linarith",
+    "Mathlib.Tactic.LinearCombination",
+    "Mathlib.Tactic.NormNum",
+    "Mathlib.Tactic.Positivity",
+    "Mathlib.Tactic.Push",
+    "Mathlib.Tactic.Ring",
+    "Mathlib.Topology.Algebra.InfiniteSum.Basic",
+    "Mathlib.Topology.Algebra.InfiniteSum.Constructions",
+    "Mathlib.Topology.Algebra.InfiniteSum.Group",
+    "Mathlib.Topology.Algebra.InfiniteSum.Order",
+    "Mathlib.Topology.Algebra.InfiniteSum.Ring",
+    "Mathlib.Topology.Compactness.Lindelof",
+    "Mathlib.Topology.Instances.Nat",
+    "Mathlib.Topology.Order.Basic",
+    "Mathlib.Topology.Order.DenselyOrdered",
+    "Mathlib.Topology.Order.OrderClosed"
+  ],
+  "validation": {
+    "selected_local_closure_complete": true,
+    "compile_order_topological": true,
+    "all_scheduled_modules_reachable_from_final_audit": true,
+    "all_input_source_files_unchanged_at_end": true
+  },
+  "model": {
+    "unit": "One module transaction (compile/restore plus required audit and acceptance). All units are assumed equal only for this model.",
+    "external_prerequisites": "Compatible externally compiled dependency artifacts are present and freshly verified before local work.",
+    "cache_hit_cost": "Set to zero only in the warm-six-node structural model; actual hashing/restoration takes time.",
+    "module_release_barrier": "Successful exact artifact identity and standard-axiom audit accepted by the parent coordinator.",
+    "timing_claims": false
+  },
+  "cold_local_graph": {
+    "nodes": 90,
+    "direct_local_edges": 158,
+    "critical_path_module_units": 27,
+    "one_critical_path": [
+      "RiemannHypothesis.ComplexAnalysis.AntiHerglotz",
+      "RiemannHypothesis.ComplexAnalysis.LogDerivative",
+      "RiemannHypothesis.HadamardProduct.GenusOne",
+      "RiemannHypothesis.HadamardProduct.InfiniteProducts",
+      "RiemannHypothesis.HadamardProduct.LogDerivative",
+      "RiemannHypothesis.HadamardProduct.NatZeroData",
+      "RiemannHypothesis.HadamardProduct.RealZeroSign",
+      "RiemannHypothesis.HadamardProduct.StrictRealZeroCriterion",
+      "RiemannHypothesis.HadamardProduct.OriginMultiplicityCriterion",
+      "RiemannHypothesis.Xi.StrictLagariasCriterion",
+      "RiemannHypothesis.Xi.HadamardLogDerivativeCriterion",
+      "RiemannHypothesis.Xi.CanonicalQuotientCriterion",
+      "RiemannHypothesis.Xi.CanonicalProductSymmetry",
+      "RiemannHypothesis.Xi.CanonicalQuotientLogNormGrowth",
+      "RiemannHypothesis.Xi.CanonicalQuotientCharacteristicGrowth",
+      "RiemannHypothesis.Xi.CanonicalQuotientThetaCharacteristicGrowth",
+      "RiemannHypothesis.Xi.UnconditionalLagariasEquivalence",
+      "RiemannHypothesis.Xi.CompletedLFunctionInstance",
+      "RiemannHypothesis.Xi.CanonicalProductPairedGrowth",
+      "AngularMaster.ActualHadamard",
+      "AngularMaster.ComplexScaleProduct",
+      "OriginTrace",
+      "RH_HilbertLimit.ActualCalibrationProgress",
+      "RH_HilbertLimit.CanonicalBridge",
+      "RH_HilbertLimit.CanonicalPowerSums",
+      "RH_HilbertLimit.AnalyticClosure",
+      "AnalyticAudit"
+    ],
+    "longest_path_count_to_selected_endpoint": 4,
+    "maximum_asap_layer": 12,
+    "asap_layers": [
+      [
+        "AWPIRH.XiCore",
+        "RH_HilbertLimit.Bernstein",
+        "RH_HilbertLimit.Growth",
+        "RH_HilbertLimit.Geometry",
+        "AngularMaster.ZeroExclusion",
+        "RiemannHypothesis.ComplexAnalysis.GrowthRigidity",
+        "RiemannHypothesis.ComplexAnalysis.AntiHerglotz",
+        "RiemannHypothesis.ComplexAnalysis.RealSymmetry",
+        "RiemannHypothesis.Xi.Definitions",
+        "RiemannHypothesis.ComplexAnalysis.EvenAnalyticOrder",
+        "RiemannHypothesis.GammaCancellation.PoleSet",
+        "RiemannHypothesis.ComplexAnalysis.MellinGrowth"
+      ],
+      [
+        "AWPIRH.ThetaEntire",
+        "RH_HilbertLimit.Vandermonde",
+        "RiemannHypothesis.ComplexAnalysis.RealPartGrowth",
+        "RiemannHypothesis.ComplexAnalysis.LogDerivative",
+        "RiemannHypothesis.ComplexAnalysis.PoleProbe",
+        "RiemannHypothesis.RealZeros.Engine",
+        "RiemannHypothesis.Xi.FunctionalEquation",
+        "RiemannHypothesis.ComplexAnalysis.EntireQuotient",
+        "RiemannHypothesis.GammaCancellation.CompletedZeta",
+        "RiemannHypothesis.Xi.ThetaKernelMellinGrowth",
+        "RiemannHypothesis.ComplexAnalysis.FactorialDyadicGrowth",
+        "RH_HilbertLimit.FinitePrefix"
+      ],
+      [
+        "RH_HilbertLimit.ActualXi",
+        "RiemannHypothesis.ComplexAnalysis.ProximityGrowth",
+        "RiemannHypothesis.HadamardProduct.GenusOne",
+        "RiemannHypothesis.RealZeros.EntireFunctions",
+        "RiemannHypothesis.Xi.Pullback",
+        "RiemannHypothesis.GammaCancellation.TextbookXi",
+        "RiemannHypothesis.ZeroCounting.SmoothMainTerm",
+        "AngularMaster.ZeroGeometry",
+        "AngularMaster.ThetaKernelExplicitBound"
+      ],
+      [
+        "RH_HilbertLimit.Spectral",
+        "RiemannHypothesis.HadamardProduct.InfiniteProducts",
+        "RiemannHypothesis.Xi.SignTargets",
+        "AngularMaster.QQRHGeometry",
+        "AngularMaster.ZeroFreeSeed",
+        "RH_HilbertLimit.SpectralTail"
+      ],
+      [
+        "RH_HilbertLimit.Main",
+        "RiemannHypothesis.HadamardProduct.LogDerivative",
+        "RiemannHypothesis.HadamardProduct.PairedGenusOne",
+        "RiemannHypothesis.Xi.RiemannHypothesisBridge",
+        "RiemannHypothesis.HadamardProduct.ExponentialPrefactor",
+        "RH_HilbertLimit.SpectralPhase",
+        "RH_HilbertLimit.SpectralGenerating"
+      ],
+      [
+        "RiemannHypothesis.HadamardProduct.CanonicalProductGrowth",
+        "RiemannHypothesis.HadamardProduct.DyadicZeroCount",
+        "RiemannHypothesis.HadamardProduct.CanonicalProductDivisor",
+        "RiemannHypothesis.HadamardProduct.IndexedRealZeroSign",
+        "RiemannHypothesis.Xi.CanonicalDivisor",
+        "RiemannHypothesis.ZeroCounting.ZetaZeros",
+        "RiemannHypothesis.HadamardProduct.NatZeroData",
+        "RH_HilbertLimit.GrowthStep",
+        "RH_HilbertLimit.SpectralExtraction"
+      ],
+      [
+        "RiemannHypothesis.HadamardProduct.CanonicalProductDyadicGrowth",
+        "RiemannHypothesis.HadamardProduct.CompletedLFunction",
+        "RiemannHypothesis.HadamardProduct.CanonicalProductMultiplicity",
+        "RiemannHypothesis.Xi.BacklundTuringBridge",
+        "RiemannHypothesis.Xi.ZetaMultiplicityBridge",
+        "RiemannHypothesis.Xi.DyadicZeroCountBridge",
+        "RiemannHypothesis.HadamardProduct.RealZeroSign"
+      ],
+      [
+        "RiemannHypothesis.HadamardProduct.PairedCanonicalProductGrowth",
+        "RiemannHypothesis.Xi.CanonicalProductCharacteristicGrowth",
+        "RiemannHypothesis.Reduction.BacklundCanonicalDivisor",
+        "RiemannHypothesis.HadamardProduct.StrictRealZeroCriterion"
+      ],
+      [
+        "RiemannHypothesis.HadamardProduct.OriginMultiplicityCriterion"
+      ],
+      [
+        "RiemannHypothesis.Xi.StrictLagariasCriterion"
+      ],
+      [
+        "RiemannHypothesis.Xi.HadamardLogDerivativeCriterion"
+      ],
+      [
+        "RiemannHypothesis.Xi.CanonicalQuotientCriterion"
+      ],
+      [
+        "RiemannHypothesis.Xi.CanonicalProductSymmetry",
+        "RiemannHypothesis.Xi.JensenDyadicCountBridge"
+      ],
+      [
+        "RiemannHypothesis.Xi.CanonicalQuotientLogNormGrowth",
+        "RiemannHypothesis.Xi.EntireXiMellinGrowth"
+      ],
+      [
+        "RiemannHypothesis.Xi.CanonicalQuotientCharacteristicGrowth",
+        "RiemannHypothesis.Xi.EntireXiLogNormGrowth"
+      ],
+      [
+        "RiemannHypothesis.Xi.CanonicalQuotientThetaCharacteristicGrowth"
+      ],
+      [
+        "RiemannHypothesis.Xi.UnconditionalLagariasEquivalence"
+      ],
+      [
+        "RiemannHypothesis.Xi.CompletedLFunctionInstance"
+      ],
+      [
+        "RiemannHypothesis.Xi.CanonicalProductPairedGrowth"
+      ],
+      [
+        "AngularMaster.ActualHadamard"
+      ],
+      [
+        "AngularMaster.ComplexScaleProduct"
+      ],
+      [
+        "AngularMaster.LowHeightGeometry",
+        "OriginTrace",
+        "RH_HilbertLimit.ActualMomentReality"
+      ],
+      [
+        "RH_HilbertLimit.ActualCalibrationProgress"
+      ],
+      [
+        "RH_HilbertLimit.CanonicalBridge"
+      ],
+      [
+        "RH_HilbertLimit.CanonicalPowerSums"
+      ],
+      [
+        "RH_HilbertLimit.AnalyticClosure"
+      ],
+      [
+        "AnalyticAudit"
+      ]
+    ],
+    "exact_antichain_width": 22,
+    "width_certificate": {
+      "antichain": [
+        "AngularMaster.ZeroExclusion",
+        "RiemannHypothesis.HadamardProduct.CanonicalProductGrowth",
+        "RiemannHypothesis.HadamardProduct.DyadicZeroCount",
+        "RiemannHypothesis.HadamardProduct.PairedGenusOne",
+        "RiemannHypothesis.HadamardProduct.CanonicalProductDivisor",
+        "RiemannHypothesis.HadamardProduct.IndexedRealZeroSign",
+        "RiemannHypothesis.ComplexAnalysis.PoleProbe",
+        "RiemannHypothesis.RealZeros.Engine",
+        "RiemannHypothesis.Xi.Pullback",
+        "RiemannHypothesis.ComplexAnalysis.EvenAnalyticOrder",
+        "RiemannHypothesis.ComplexAnalysis.EntireQuotient",
+        "RiemannHypothesis.GammaCancellation.TextbookXi",
+        "RiemannHypothesis.ZeroCounting.SmoothMainTerm",
+        "RiemannHypothesis.HadamardProduct.ExponentialPrefactor",
+        "RiemannHypothesis.HadamardProduct.NatZeroData",
+        "RiemannHypothesis.ComplexAnalysis.FactorialDyadicGrowth",
+        "AngularMaster.QQRHGeometry",
+        "AngularMaster.ZeroFreeSeed",
+        "RH_HilbertLimit.GrowthStep",
+        "RH_HilbertLimit.FinitePrefix",
+        "RH_HilbertLimit.SpectralPhase",
+        "RH_HilbertLimit.SpectralGenerating"
+      ],
+      "chain_cover": [
+        [
+          "AWPIRH.XiCore",
+          "AWPIRH.ThetaEntire",
+          "AngularMaster.ZeroGeometry",
+          "AngularMaster.QQRHGeometry"
+        ],
+        [
+          "RH_HilbertLimit.Bernstein",
+          "RH_HilbertLimit.ActualXi",
+          "RH_HilbertLimit.Spectral",
+          "RH_HilbertLimit.SpectralGenerating"
+        ],
+        [
+          "RH_HilbertLimit.Growth",
+          "RH_HilbertLimit.Vandermonde",
+          "RH_HilbertLimit.Main",
+          "RH_HilbertLimit.GrowthStep"
+        ],
+        [
+          "RH_HilbertLimit.Geometry",
+          "RH_HilbertLimit.SpectralTail",
+          "RH_HilbertLimit.SpectralPhase",
+          "RH_HilbertLimit.SpectralExtraction"
+        ],
+        [
+          "AngularMaster.ZeroExclusion",
+          "AnalyticAudit"
+        ],
+        [
+          "RiemannHypothesis.ComplexAnalysis.GrowthRigidity",
+          "RiemannHypothesis.ComplexAnalysis.RealPartGrowth",
+          "RiemannHypothesis.ComplexAnalysis.ProximityGrowth",
+          "RiemannHypothesis.HadamardProduct.CanonicalProductGrowth",
+          "RiemannHypothesis.HadamardProduct.CanonicalProductDyadicGrowth",
+          "RH_HilbertLimit.CanonicalPowerSums"
+        ],
+        [
+          "RiemannHypothesis.ComplexAnalysis.AntiHerglotz",
+          "RiemannHypothesis.ComplexAnalysis.LogDerivative",
+          "RiemannHypothesis.HadamardProduct.GenusOne",
+          "RiemannHypothesis.HadamardProduct.InfiniteProducts",
+          "RiemannHypothesis.HadamardProduct.LogDerivative",
+          "RiemannHypothesis.HadamardProduct.DyadicZeroCount",
+          "RiemannHypothesis.Xi.DyadicZeroCountBridge",
+          "AngularMaster.ActualHadamard"
+        ],
+        [
+          "RiemannHypothesis.HadamardProduct.PairedGenusOne",
+          "RiemannHypothesis.HadamardProduct.PairedCanonicalProductGrowth",
+          "RH_HilbertLimit.AnalyticClosure"
+        ],
+        [
+          "RiemannHypothesis.HadamardProduct.CanonicalProductDivisor",
+          "RiemannHypothesis.HadamardProduct.CompletedLFunction",
+          "RH_HilbertLimit.CanonicalBridge"
+        ],
+        [
+          "RiemannHypothesis.HadamardProduct.IndexedRealZeroSign",
+          "AngularMaster.LowHeightGeometry"
+        ],
+        [
+          "RiemannHypothesis.ComplexAnalysis.PoleProbe",
+          "RiemannHypothesis.Xi.RiemannHypothesisBridge",
+          "RiemannHypothesis.ZeroCounting.ZetaZeros",
+          "RiemannHypothesis.Xi.JensenDyadicCountBridge",
+          "RiemannHypothesis.Xi.EntireXiMellinGrowth"
+        ],
+        [
+          "RiemannHypothesis.ComplexAnalysis.RealSymmetry",
+          "RiemannHypothesis.RealZeros.Engine",
+          "RiemannHypothesis.RealZeros.EntireFunctions",
+          "RiemannHypothesis.Xi.BacklundTuringBridge",
+          "RiemannHypothesis.Reduction.BacklundCanonicalDivisor",
+          "RiemannHypothesis.Xi.CanonicalQuotientCriterion",
+          "RiemannHypothesis.Xi.UnconditionalLagariasEquivalence"
+        ],
+        [
+          "RiemannHypothesis.Xi.Definitions",
+          "RiemannHypothesis.Xi.FunctionalEquation",
+          "RiemannHypothesis.Xi.Pullback",
+          "RiemannHypothesis.Xi.SignTargets",
+          "RiemannHypothesis.Xi.CanonicalDivisor",
+          "RiemannHypothesis.HadamardProduct.CanonicalProductMultiplicity",
+          "RiemannHypothesis.Xi.CanonicalProductCharacteristicGrowth",
+          "RH_HilbertLimit.ActualMomentReality"
+        ],
+        [
+          "RiemannHypothesis.ComplexAnalysis.EvenAnalyticOrder",
+          "RH_HilbertLimit.ActualCalibrationProgress"
+        ],
+        [
+          "RiemannHypothesis.ComplexAnalysis.EntireQuotient",
+          "OriginTrace"
+        ],
+        [
+          "RiemannHypothesis.GammaCancellation.PoleSet",
+          "RiemannHypothesis.GammaCancellation.CompletedZeta",
+          "RiemannHypothesis.GammaCancellation.TextbookXi",
+          "RiemannHypothesis.Xi.ZetaMultiplicityBridge",
+          "AngularMaster.ComplexScaleProduct"
+        ],
+        [
+          "RiemannHypothesis.ZeroCounting.SmoothMainTerm",
+          "RiemannHypothesis.Xi.CanonicalProductSymmetry",
+          "RiemannHypothesis.Xi.CanonicalQuotientThetaCharacteristicGrowth"
+        ],
+        [
+          "RiemannHypothesis.HadamardProduct.ExponentialPrefactor",
+          "RiemannHypothesis.HadamardProduct.OriginMultiplicityCriterion",
+          "RiemannHypothesis.Xi.StrictLagariasCriterion",
+          "RiemannHypothesis.Xi.CanonicalQuotientCharacteristicGrowth",
+          "RiemannHypothesis.Xi.CompletedLFunctionInstance"
+        ],
+        [
+          "RiemannHypothesis.HadamardProduct.NatZeroData",
+          "RiemannHypothesis.HadamardProduct.RealZeroSign",
+          "RiemannHypothesis.HadamardProduct.StrictRealZeroCriterion",
+          "RiemannHypothesis.Xi.HadamardLogDerivativeCriterion",
+          "RiemannHypothesis.Xi.CanonicalQuotientLogNormGrowth",
+          "RiemannHypothesis.Xi.CanonicalProductPairedGrowth"
+        ],
+        [
+          "RiemannHypothesis.ComplexAnalysis.MellinGrowth",
+          "RiemannHypothesis.Xi.ThetaKernelMellinGrowth",
+          "AngularMaster.ThetaKernelExplicitBound",
+          "AngularMaster.ZeroFreeSeed"
+        ],
+        [
+          "RiemannHypothesis.ComplexAnalysis.FactorialDyadicGrowth",
+          "RiemannHypothesis.Xi.EntireXiLogNormGrowth"
+        ],
+        [
+          "RH_HilbertLimit.FinitePrefix"
+        ]
+      ]
+    },
+    "priority_rule": "Descending remaining critical-path length, then original compile-order position.",
+    "unit_cost_schedules": [
+      {
+        "workers": 1,
+        "unit_slots": 90
+      },
+      {
+        "workers": 2,
+        "unit_slots": 46
+      },
+      {
+        "workers": 3,
+        "unit_slots": 32
+      },
+      {
+        "workers": 4,
+        "unit_slots": 27,
+        "slots": [
+          [
+            "RiemannHypothesis.ComplexAnalysis.AntiHerglotz",
+            "RiemannHypothesis.ComplexAnalysis.RealSymmetry",
+            "RiemannHypothesis.Xi.Definitions",
+            "RiemannHypothesis.GammaCancellation.PoleSet"
+          ],
+          [
+            "RiemannHypothesis.ComplexAnalysis.LogDerivative",
+            "RiemannHypothesis.ComplexAnalysis.PoleProbe",
+            "RiemannHypothesis.RealZeros.Engine",
+            "RiemannHypothesis.Xi.FunctionalEquation"
+          ],
+          [
+            "RiemannHypothesis.HadamardProduct.GenusOne",
+            "RiemannHypothesis.RealZeros.EntireFunctions",
+            "RiemannHypothesis.Xi.Pullback",
+            "RiemannHypothesis.GammaCancellation.CompletedZeta"
+          ],
+          [
+            "RiemannHypothesis.HadamardProduct.InfiniteProducts",
+            "RiemannHypothesis.Xi.SignTargets",
+            "RiemannHypothesis.GammaCancellation.TextbookXi",
+            "RiemannHypothesis.ComplexAnalysis.GrowthRigidity"
+          ],
+          [
+            "RiemannHypothesis.HadamardProduct.LogDerivative",
+            "RiemannHypothesis.HadamardProduct.ExponentialPrefactor",
+            "RiemannHypothesis.Xi.RiemannHypothesisBridge",
+            "RiemannHypothesis.ZeroCounting.SmoothMainTerm"
+          ],
+          [
+            "RiemannHypothesis.HadamardProduct.NatZeroData",
+            "RiemannHypothesis.Xi.CanonicalDivisor",
+            "RiemannHypothesis.HadamardProduct.DyadicZeroCount",
+            "RiemannHypothesis.HadamardProduct.CanonicalProductDivisor"
+          ],
+          [
+            "RiemannHypothesis.HadamardProduct.RealZeroSign",
+            "RiemannHypothesis.HadamardProduct.IndexedRealZeroSign",
+            "RiemannHypothesis.Xi.BacklundTuringBridge",
+            "RiemannHypothesis.Xi.ZetaMultiplicityBridge"
+          ],
+          [
+            "RiemannHypothesis.HadamardProduct.StrictRealZeroCriterion",
+            "RiemannHypothesis.ZeroCounting.ZetaZeros",
+            "RiemannHypothesis.HadamardProduct.CanonicalProductMultiplicity",
+            "RiemannHypothesis.ComplexAnalysis.EntireQuotient"
+          ],
+          [
+            "RiemannHypothesis.HadamardProduct.OriginMultiplicityCriterion",
+            "RiemannHypothesis.Reduction.BacklundCanonicalDivisor",
+            "RiemannHypothesis.Xi.DyadicZeroCountBridge",
+            "RiemannHypothesis.HadamardProduct.PairedGenusOne"
+          ],
+          [
+            "RiemannHypothesis.Xi.StrictLagariasCriterion",
+            "RiemannHypothesis.ComplexAnalysis.EvenAnalyticOrder",
+            "RiemannHypothesis.ComplexAnalysis.MellinGrowth",
+            "RiemannHypothesis.ComplexAnalysis.RealPartGrowth"
+          ],
+          [
+            "RiemannHypothesis.Xi.HadamardLogDerivativeCriterion",
+            "RiemannHypothesis.Xi.ThetaKernelMellinGrowth",
+            "RiemannHypothesis.ComplexAnalysis.FactorialDyadicGrowth",
+            "RiemannHypothesis.ComplexAnalysis.ProximityGrowth"
+          ],
+          [
+            "RiemannHypothesis.Xi.CanonicalQuotientCriterion",
+            "RiemannHypothesis.HadamardProduct.CanonicalProductGrowth",
+            "AWPIRH.XiCore",
+            "RH_HilbertLimit.Bernstein"
+          ],
+          [
+            "RiemannHypothesis.Xi.CanonicalProductSymmetry",
+            "RiemannHypothesis.Xi.JensenDyadicCountBridge",
+            "RiemannHypothesis.Xi.CanonicalProductCharacteristicGrowth",
+            "RiemannHypothesis.HadamardProduct.CanonicalProductDyadicGrowth"
+          ],
+          [
+            "RiemannHypothesis.Xi.CanonicalQuotientLogNormGrowth",
+            "RiemannHypothesis.Xi.EntireXiMellinGrowth",
+            "RiemannHypothesis.HadamardProduct.CompletedLFunction",
+            "RiemannHypothesis.HadamardProduct.PairedCanonicalProductGrowth"
+          ],
+          [
+            "RiemannHypothesis.Xi.CanonicalQuotientCharacteristicGrowth",
+            "RiemannHypothesis.Xi.EntireXiLogNormGrowth",
+            "AWPIRH.ThetaEntire",
+            "RH_HilbertLimit.Geometry"
+          ],
+          [
+            "RiemannHypothesis.Xi.CanonicalQuotientThetaCharacteristicGrowth",
+            "AngularMaster.ZeroExclusion",
+            "RH_HilbertLimit.Growth",
+            "RH_HilbertLimit.ActualXi"
+          ],
+          [
+            "RiemannHypothesis.Xi.UnconditionalLagariasEquivalence",
+            "AngularMaster.ZeroGeometry",
+            "AngularMaster.ThetaKernelExplicitBound",
+            "RH_HilbertLimit.Spectral"
+          ],
+          [
+            "RiemannHypothesis.Xi.CompletedLFunctionInstance",
+            "RH_HilbertLimit.Vandermonde",
+            "AngularMaster.QQRHGeometry",
+            "AngularMaster.ZeroFreeSeed"
+          ],
+          [
+            "RiemannHypothesis.Xi.CanonicalProductPairedGrowth",
+            "RH_HilbertLimit.Main",
+            "RH_HilbertLimit.SpectralTail",
+            "RH_HilbertLimit.FinitePrefix"
+          ],
+          [
+            "AngularMaster.ActualHadamard",
+            "RH_HilbertLimit.GrowthStep",
+            "RH_HilbertLimit.SpectralPhase",
+            "RH_HilbertLimit.SpectralGenerating"
+          ],
+          [
+            "AngularMaster.ComplexScaleProduct",
+            "RH_HilbertLimit.SpectralExtraction"
+          ],
+          [
+            "AngularMaster.LowHeightGeometry",
+            "OriginTrace",
+            "RH_HilbertLimit.ActualMomentReality"
+          ],
+          [
+            "RH_HilbertLimit.ActualCalibrationProgress"
+          ],
+          [
+            "RH_HilbertLimit.CanonicalBridge"
+          ],
+          [
+            "RH_HilbertLimit.CanonicalPowerSums"
+          ],
+          [
+            "RH_HilbertLimit.AnalyticClosure"
+          ],
+          [
+            "AnalyticAudit"
+          ]
+        ]
+      },
+      {
+        "workers": 8,
+        "unit_slots": 27
+      },
+      {
+        "workers": 16,
+        "unit_slots": 27
+      }
+    ]
+  },
+  "warm_84_old_ordinary_modules_verified": {
+    "nodes": 6,
+    "direct_local_edges": 5,
+    "critical_path_module_units": 4,
+    "one_critical_path": [
+      "RH_HilbertLimit.SpectralPhase",
+      "RH_HilbertLimit.SpectralExtraction",
+      "RH_HilbertLimit.AnalyticClosure",
+      "AnalyticAudit"
+    ],
+    "longest_path_count_to_selected_endpoint": 2,
+    "maximum_asap_layer": 3,
+    "asap_layers": [
+      [
+        "RH_HilbertLimit.CanonicalPowerSums",
+        "RH_HilbertLimit.SpectralPhase",
+        "RH_HilbertLimit.SpectralGenerating"
+      ],
+      [
+        "RH_HilbertLimit.SpectralExtraction"
+      ],
+      [
+        "RH_HilbertLimit.AnalyticClosure"
+      ],
+      [
+        "AnalyticAudit"
+      ]
+    ],
+    "exact_antichain_width": 3,
+    "width_certificate": {
+      "antichain": [
+        "RH_HilbertLimit.CanonicalPowerSums",
+        "RH_HilbertLimit.SpectralPhase",
+        "RH_HilbertLimit.SpectralGenerating"
+      ],
+      "chain_cover": [
+        [
+          "RH_HilbertLimit.CanonicalPowerSums",
+          "AnalyticAudit"
+        ],
+        [
+          "RH_HilbertLimit.SpectralPhase",
+          "RH_HilbertLimit.AnalyticClosure"
+        ],
+        [
+          "RH_HilbertLimit.SpectralGenerating",
+          "RH_HilbertLimit.SpectralExtraction"
+        ]
+      ]
+    },
+    "priority_rule": "Descending remaining critical-path length, then original compile-order position.",
+    "unit_cost_schedules": [
+      {
+        "workers": 1,
+        "unit_slots": 6
+      },
+      {
+        "workers": 2,
+        "unit_slots": 4,
+        "slots": [
+          [
+            "RH_HilbertLimit.SpectralPhase",
+            "RH_HilbertLimit.SpectralGenerating"
+          ],
+          [
+            "RH_HilbertLimit.CanonicalPowerSums",
+            "RH_HilbertLimit.SpectralExtraction"
+          ],
+          [
+            "RH_HilbertLimit.AnalyticClosure"
+          ],
+          [
+            "AnalyticAudit"
+          ]
+        ]
+      },
+      {
+        "workers": 3,
+        "unit_slots": 4,
+        "slots": [
+          [
+            "RH_HilbertLimit.SpectralPhase",
+            "RH_HilbertLimit.SpectralGenerating",
+            "RH_HilbertLimit.CanonicalPowerSums"
+          ],
+          [
+            "RH_HilbertLimit.SpectralExtraction"
+          ],
+          [
+            "RH_HilbertLimit.AnalyticClosure"
+          ],
+          [
+            "AnalyticAudit"
+          ]
+        ]
+      },
+      {
+        "workers": 4,
+        "unit_slots": 4
+      },
+      {
+        "workers": 8,
+        "unit_slots": 4
+      },
+      {
+        "workers": 16,
+        "unit_slots": 4
+      }
+    ],
+    "per_module": {
+      "RH_HilbertLimit.CanonicalPowerSums": {
+        "local_dependencies": [],
+        "direct_local_dependents": [
+          "RH_HilbertLimit.AnalyticClosure"
+        ],
+        "earliest_unit_slot": 1,
+        "remaining_critical_path_units": 3,
+        "local_ancestor_count": 0,
+        "invalidation_cone": [
+          "RH_HilbertLimit.CanonicalPowerSums",
+          "RH_HilbertLimit.AnalyticClosure",
+          "AnalyticAudit"
+        ],
+        "verified_cached_prerequisites": [
+          "RH_HilbertLimit.CanonicalBridge"
+        ]
+      },
+      "RH_HilbertLimit.SpectralPhase": {
+        "local_dependencies": [],
+        "direct_local_dependents": [
+          "RH_HilbertLimit.SpectralExtraction"
+        ],
+        "earliest_unit_slot": 1,
+        "remaining_critical_path_units": 4,
+        "local_ancestor_count": 0,
+        "invalidation_cone": [
+          "RH_HilbertLimit.SpectralPhase",
+          "RH_HilbertLimit.SpectralExtraction",
+          "RH_HilbertLimit.AnalyticClosure",
+          "AnalyticAudit"
+        ],
+        "verified_cached_prerequisites": [
+          "RH_HilbertLimit.SpectralTail"
+        ]
+      },
+      "RH_HilbertLimit.SpectralGenerating": {
+        "local_dependencies": [],
+        "direct_local_dependents": [
+          "RH_HilbertLimit.SpectralExtraction"
+        ],
+        "earliest_unit_slot": 1,
+        "remaining_critical_path_units": 4,
+        "local_ancestor_count": 0,
+        "invalidation_cone": [
+          "RH_HilbertLimit.SpectralGenerating",
+          "RH_HilbertLimit.SpectralExtraction",
+          "RH_HilbertLimit.AnalyticClosure",
+          "AnalyticAudit"
+        ],
+        "verified_cached_prerequisites": [
+          "RH_HilbertLimit.Spectral",
+          "RH_HilbertLimit.SpectralTail"
+        ]
+      },
+      "RH_HilbertLimit.SpectralExtraction": {
+        "local_dependencies": [
+          "RH_HilbertLimit.SpectralPhase",
+          "RH_HilbertLimit.SpectralGenerating"
+        ],
+        "direct_local_dependents": [
+          "RH_HilbertLimit.AnalyticClosure"
+        ],
+        "earliest_unit_slot": 2,
+        "remaining_critical_path_units": 3,
+        "local_ancestor_count": 2,
+        "invalidation_cone": [
+          "RH_HilbertLimit.SpectralExtraction",
+          "RH_HilbertLimit.AnalyticClosure",
+          "AnalyticAudit"
+        ],
+        "verified_cached_prerequisites": [
+          "RH_HilbertLimit.Main"
+        ]
+      },
+      "RH_HilbertLimit.AnalyticClosure": {
+        "local_dependencies": [
+          "RH_HilbertLimit.CanonicalPowerSums",
+          "RH_HilbertLimit.SpectralExtraction"
+        ],
+        "direct_local_dependents": [
+          "AnalyticAudit"
+        ],
+        "earliest_unit_slot": 3,
+        "remaining_critical_path_units": 2,
+        "local_ancestor_count": 4,
+        "invalidation_cone": [
+          "RH_HilbertLimit.AnalyticClosure",
+          "AnalyticAudit"
+        ],
+        "verified_cached_prerequisites": []
+      },
+      "AnalyticAudit": {
+        "local_dependencies": [
+          "RH_HilbertLimit.AnalyticClosure"
+        ],
+        "direct_local_dependents": [],
+        "earliest_unit_slot": 4,
+        "remaining_critical_path_units": 1,
+        "local_ancestor_count": 5,
+        "invalidation_cone": [
+          "AnalyticAudit"
+        ],
+        "verified_cached_prerequisites": [
+          "RH_HilbertLimit.CanonicalBridge",
+          "RH_HilbertLimit.FinitePrefix"
+        ]
+      }
+    }
+  },
+  "per_module": {
+    "AWPIRH.XiCore": {
+      "local_dependencies": [],
+      "direct_local_dependents": [
+        "AWPIRH.ThetaEntire"
+      ],
+      "earliest_unit_slot": 1,
+      "remaining_critical_path_units": 10,
+      "local_ancestor_count": 0
+    },
+    "AWPIRH.ThetaEntire": {
+      "local_dependencies": [
+        "AWPIRH.XiCore"
+      ],
+      "direct_local_dependents": [
+        "RH_HilbertLimit.ActualXi",
+        "AngularMaster.ActualHadamard",
+        "AngularMaster.ZeroGeometry"
+      ],
+      "earliest_unit_slot": 2,
+      "remaining_critical_path_units": 9,
+      "local_ancestor_count": 1
+    },
+    "RH_HilbertLimit.Bernstein": {
+      "local_dependencies": [],
+      "direct_local_dependents": [
+        "RH_HilbertLimit.ActualXi",
+        "RH_HilbertLimit.FinitePrefix"
+      ],
+      "earliest_unit_slot": 1,
+      "remaining_critical_path_units": 9,
+      "local_ancestor_count": 0
+    },
+    "RH_HilbertLimit.Growth": {
+      "local_dependencies": [],
+      "direct_local_dependents": [
+        "RH_HilbertLimit.Vandermonde",
+        "RH_HilbertLimit.FinitePrefix"
+      ],
+      "earliest_unit_slot": 1,
+      "remaining_critical_path_units": 8,
+      "local_ancestor_count": 0
+    },
+    "RH_HilbertLimit.Geometry": {
+      "local_dependencies": [],
+      "direct_local_dependents": [
+        "RH_HilbertLimit.ActualXi",
+        "RH_HilbertLimit.SpectralTail"
+      ],
+      "earliest_unit_slot": 1,
+      "remaining_critical_path_units": 9,
+      "local_ancestor_count": 0
+    },
+    "RH_HilbertLimit.ActualXi": {
+      "local_dependencies": [
+        "AWPIRH.ThetaEntire",
+        "RH_HilbertLimit.Geometry",
+        "RH_HilbertLimit.Bernstein"
+      ],
+      "direct_local_dependents": [
+        "RH_HilbertLimit.Spectral",
+        "RH_HilbertLimit.SpectralTail",
+        "RH_HilbertLimit.ActualCalibrationProgress",
+        "RH_HilbertLimit.ActualMomentReality"
+      ],
+      "earliest_unit_slot": 3,
+      "remaining_critical_path_units": 8,
+      "local_ancestor_count": 4
+    },
+    "RH_HilbertLimit.Spectral": {
+      "local_dependencies": [
+        "RH_HilbertLimit.ActualXi"
+      ],
+      "direct_local_dependents": [
+        "RH_HilbertLimit.Main",
+        "RH_HilbertLimit.SpectralGenerating"
+      ],
+      "earliest_unit_slot": 4,
+      "remaining_critical_path_units": 7,
+      "local_ancestor_count": 5
+    },
+    "RH_HilbertLimit.Vandermonde": {
+      "local_dependencies": [
+        "RH_HilbertLimit.Growth"
+      ],
+      "direct_local_dependents": [
+        "RH_HilbertLimit.Main"
+      ],
+      "earliest_unit_slot": 2,
+      "remaining_critical_path_units": 7,
+      "local_ancestor_count": 1
+    },
+    "RH_HilbertLimit.Main": {
+      "local_dependencies": [
+        "RH_HilbertLimit.Spectral",
+        "RH_HilbertLimit.Vandermonde"
+      ],
+      "direct_local_dependents": [
+        "RH_HilbertLimit.GrowthStep",
+        "RH_HilbertLimit.SpectralExtraction"
+      ],
+      "earliest_unit_slot": 5,
+      "remaining_critical_path_units": 6,
+      "local_ancestor_count": 8
+    },
+    "AngularMaster.ZeroExclusion": {
+      "local_dependencies": [],
+      "direct_local_dependents": [
+        "AngularMaster.ActualHadamard"
+      ],
+      "earliest_unit_slot": 1,
+      "remaining_critical_path_units": 9,
+      "local_ancestor_count": 0
+    },
+    "RiemannHypothesis.ComplexAnalysis.GrowthRigidity": {
+      "local_dependencies": [],
+      "direct_local_dependents": [
+        "RiemannHypothesis.ComplexAnalysis.RealPartGrowth",
+        "RiemannHypothesis.ComplexAnalysis.EntireQuotient",
+        "RiemannHypothesis.Xi.HadamardLogDerivativeCriterion"
+      ],
+      "earliest_unit_slot": 1,
+      "remaining_critical_path_units": 18,
+      "local_ancestor_count": 0
+    },
+    "RiemannHypothesis.ComplexAnalysis.RealPartGrowth": {
+      "local_dependencies": [
+        "RiemannHypothesis.ComplexAnalysis.GrowthRigidity"
+      ],
+      "direct_local_dependents": [
+        "RiemannHypothesis.ComplexAnalysis.ProximityGrowth",
+        "RiemannHypothesis.Xi.CanonicalQuotientLogNormGrowth",
+        "RiemannHypothesis.Xi.EntireXiLogNormGrowth"
+      ],
+      "earliest_unit_slot": 2,
+      "remaining_critical_path_units": 15,
+      "local_ancestor_count": 1
+    },
+    "RiemannHypothesis.ComplexAnalysis.ProximityGrowth": {
+      "local_dependencies": [
+        "RiemannHypothesis.ComplexAnalysis.RealPartGrowth"
+      ],
+      "direct_local_dependents": [
+        "RiemannHypothesis.HadamardProduct.CanonicalProductGrowth",
+        "RiemannHypothesis.Xi.CanonicalQuotientCharacteristicGrowth"
+      ],
+      "earliest_unit_slot": 3,
+      "remaining_critical_path_units": 14,
+      "local_ancestor_count": 2
+    },
+    "RiemannHypothesis.ComplexAnalysis.AntiHerglotz": {
+      "local_dependencies": [],
+      "direct_local_dependents": [
+        "RiemannHypothesis.ComplexAnalysis.LogDerivative",
+        "RiemannHypothesis.HadamardProduct.IndexedRealZeroSign",
+        "RiemannHypothesis.ComplexAnalysis.PoleProbe",
+        "RiemannHypothesis.RealZeros.Engine",
+        "RiemannHypothesis.RealZeros.EntireFunctions",
+        "RiemannHypothesis.Xi.SignTargets",
+        "RiemannHypothesis.ZeroCounting.SmoothMainTerm",
+        "RiemannHypothesis.HadamardProduct.RealZeroSign"
+      ],
+      "earliest_unit_slot": 1,
+      "remaining_critical_path_units": 27,
+      "local_ancestor_count": 0
+    },
+    "RiemannHypothesis.ComplexAnalysis.LogDerivative": {
+      "local_dependencies": [
+        "RiemannHypothesis.ComplexAnalysis.AntiHerglotz"
+      ],
+      "direct_local_dependents": [
+        "RiemannHypothesis.HadamardProduct.GenusOne",
+        "RiemannHypothesis.RealZeros.EntireFunctions",
+        "RiemannHypothesis.Xi.Pullback",
+        "RiemannHypothesis.Xi.SignTargets",
+        "RiemannHypothesis.ZeroCounting.SmoothMainTerm"
+      ],
+      "earliest_unit_slot": 2,
+      "remaining_critical_path_units": 26,
+      "local_ancestor_count": 1
+    },
+    "RiemannHypothesis.HadamardProduct.GenusOne": {
+      "local_dependencies": [
+        "RiemannHypothesis.ComplexAnalysis.LogDerivative"
+      ],
+      "direct_local_dependents": [
+        "RiemannHypothesis.HadamardProduct.InfiniteProducts"
+      ],
+      "earliest_unit_slot": 3,
+      "remaining_critical_path_units": 25,
+      "local_ancestor_count": 2
+    },
+    "RiemannHypothesis.HadamardProduct.InfiniteProducts": {
+      "local_dependencies": [
+        "RiemannHypothesis.HadamardProduct.GenusOne"
+      ],
+      "direct_local_dependents": [
+        "RiemannHypothesis.HadamardProduct.LogDerivative",
+        "RiemannHypothesis.HadamardProduct.PairedGenusOne",
+        "RiemannHypothesis.HadamardProduct.ExponentialPrefactor"
+      ],
+      "earliest_unit_slot": 4,
+      "remaining_critical_path_units": 24,
+      "local_ancestor_count": 3
+    },
+    "RiemannHypothesis.HadamardProduct.LogDerivative": {
+      "local_dependencies": [
+        "RiemannHypothesis.HadamardProduct.InfiniteProducts"
+      ],
+      "direct_local_dependents": [
+        "RiemannHypothesis.HadamardProduct.CanonicalProductGrowth",
+        "RiemannHypothesis.HadamardProduct.DyadicZeroCount",
+        "RiemannHypothesis.HadamardProduct.CanonicalProductDivisor",
+        "RiemannHypothesis.HadamardProduct.IndexedRealZeroSign",
+        "RiemannHypothesis.Xi.CanonicalDivisor",
+        "RiemannHypothesis.HadamardProduct.NatZeroData"
+      ],
+      "earliest_unit_slot": 5,
+      "remaining_critical_path_units": 23,
+      "local_ancestor_count": 4
+    },
+    "RiemannHypothesis.HadamardProduct.CanonicalProductGrowth": {
+      "local_dependencies": [
+        "RiemannHypothesis.ComplexAnalysis.ProximityGrowth",
+        "RiemannHypothesis.HadamardProduct.LogDerivative"
+      ],
+      "direct_local_dependents": [
+        "RiemannHypothesis.HadamardProduct.CanonicalProductDyadicGrowth",
+        "RiemannHypothesis.HadamardProduct.CompletedLFunction",
+        "RiemannHypothesis.Xi.CanonicalProductCharacteristicGrowth"
+      ],
+      "earliest_unit_slot": 6,
+      "remaining_critical_path_units": 13,
+      "local_ancestor_count": 8
+    },
+    "RiemannHypothesis.HadamardProduct.DyadicZeroCount": {
+      "local_dependencies": [
+        "RiemannHypothesis.HadamardProduct.LogDerivative"
+      ],
+      "direct_local_dependents": [
+        "RiemannHypothesis.HadamardProduct.CanonicalProductDyadicGrowth",
+        "RiemannHypothesis.HadamardProduct.CompletedLFunction",
+        "RiemannHypothesis.Xi.DyadicZeroCountBridge"
+      ],
+      "earliest_unit_slot": 6,
+      "remaining_critical_path_units": 18,
+      "local_ancestor_count": 5
+    },
+    "RiemannHypothesis.HadamardProduct.CanonicalProductDyadicGrowth": {
+      "local_dependencies": [
+        "RiemannHypothesis.HadamardProduct.CanonicalProductGrowth",
+        "RiemannHypothesis.HadamardProduct.DyadicZeroCount"
+      ],
+      "direct_local_dependents": [
+        "RiemannHypothesis.HadamardProduct.PairedCanonicalProductGrowth"
+      ],
+      "earliest_unit_slot": 7,
+      "remaining_critical_path_units": 11,
+      "local_ancestor_count": 10
+    },
+    "RiemannHypothesis.HadamardProduct.PairedGenusOne": {
+      "local_dependencies": [
+        "RiemannHypothesis.HadamardProduct.InfiniteProducts"
+      ],
+      "direct_local_dependents": [
+        "RiemannHypothesis.HadamardProduct.PairedCanonicalProductGrowth",
+        "RiemannHypothesis.Xi.CanonicalProductSymmetry"
+      ],
+      "earliest_unit_slot": 5,
+      "remaining_critical_path_units": 16,
+      "local_ancestor_count": 4
+    },
+    "RiemannHypothesis.HadamardProduct.PairedCanonicalProductGrowth": {
+      "local_dependencies": [
+        "RiemannHypothesis.HadamardProduct.CanonicalProductDyadicGrowth",
+        "RiemannHypothesis.HadamardProduct.PairedGenusOne"
+      ],
+      "direct_local_dependents": [
+        "RiemannHypothesis.Xi.CanonicalProductPairedGrowth"
+      ],
+      "earliest_unit_slot": 8,
+      "remaining_critical_path_units": 10,
+      "local_ancestor_count": 12
+    },
+    "RiemannHypothesis.HadamardProduct.CanonicalProductDivisor": {
+      "local_dependencies": [
+        "RiemannHypothesis.HadamardProduct.LogDerivative"
+      ],
+      "direct_local_dependents": [
+        "RiemannHypothesis.HadamardProduct.CompletedLFunction",
+        "RiemannHypothesis.HadamardProduct.CanonicalProductMultiplicity"
+      ],
+      "earliest_unit_slot": 6,
+      "remaining_critical_path_units": 18,
+      "local_ancestor_count": 5
+    },
+    "RiemannHypothesis.HadamardProduct.IndexedRealZeroSign": {
+      "local_dependencies": [
+        "RiemannHypothesis.ComplexAnalysis.AntiHerglotz",
+        "RiemannHypothesis.HadamardProduct.LogDerivative"
+      ],
+      "direct_local_dependents": [
+        "RiemannHypothesis.HadamardProduct.CompletedLFunction",
+        "RiemannHypothesis.Xi.HadamardLogDerivativeCriterion"
+      ],
+      "earliest_unit_slot": 6,
+      "remaining_critical_path_units": 18,
+      "local_ancestor_count": 5
+    },
+    "RiemannHypothesis.ComplexAnalysis.PoleProbe": {
+      "local_dependencies": [
+        "RiemannHypothesis.ComplexAnalysis.AntiHerglotz"
+      ],
+      "direct_local_dependents": [
+        "RiemannHypothesis.RealZeros.EntireFunctions"
+      ],
+      "earliest_unit_slot": 2,
+      "remaining_critical_path_units": 23,
+      "local_ancestor_count": 1
+    },
+    "RiemannHypothesis.ComplexAnalysis.RealSymmetry": {
+      "local_dependencies": [],
+      "direct_local_dependents": [
+        "RiemannHypothesis.RealZeros.Engine"
+      ],
+      "earliest_unit_slot": 1,
+      "remaining_critical_path_units": 24,
+      "local_ancestor_count": 0
+    },
+    "RiemannHypothesis.RealZeros.Engine": {
+      "local_dependencies": [
+        "RiemannHypothesis.ComplexAnalysis.AntiHerglotz",
+        "RiemannHypothesis.ComplexAnalysis.RealSymmetry"
+      ],
+      "direct_local_dependents": [
+        "RiemannHypothesis.RealZeros.EntireFunctions",
+        "RiemannHypothesis.Xi.SignTargets"
+      ],
+      "earliest_unit_slot": 2,
+      "remaining_critical_path_units": 23,
+      "local_ancestor_count": 2
+    },
+    "RiemannHypothesis.RealZeros.EntireFunctions": {
+      "local_dependencies": [
+        "RiemannHypothesis.ComplexAnalysis.AntiHerglotz",
+        "RiemannHypothesis.ComplexAnalysis.LogDerivative",
+        "RiemannHypothesis.ComplexAnalysis.PoleProbe",
+        "RiemannHypothesis.RealZeros.Engine"
+      ],
+      "direct_local_dependents": [
+        "RiemannHypothesis.HadamardProduct.CompletedLFunction",
+        "RiemannHypothesis.Xi.SignTargets",
+        "RiemannHypothesis.HadamardProduct.RealZeroSign"
+      ],
+      "earliest_unit_slot": 3,
+      "remaining_critical_path_units": 22,
+      "local_ancestor_count": 5
+    },
+    "RiemannHypothesis.HadamardProduct.CompletedLFunction": {
+      "local_dependencies": [
+        "RiemannHypothesis.HadamardProduct.CanonicalProductDivisor",
+        "RiemannHypothesis.HadamardProduct.CanonicalProductGrowth",
+        "RiemannHypothesis.HadamardProduct.DyadicZeroCount",
+        "RiemannHypothesis.HadamardProduct.IndexedRealZeroSign",
+        "RiemannHypothesis.RealZeros.EntireFunctions"
+      ],
+      "direct_local_dependents": [
+        "RiemannHypothesis.Xi.CompletedLFunctionInstance"
+      ],
+      "earliest_unit_slot": 7,
+      "remaining_critical_path_units": 11,
+      "local_ancestor_count": 16
+    },
+    "RiemannHypothesis.Xi.Definitions": {
+      "local_dependencies": [],
+      "direct_local_dependents": [
+        "RiemannHypothesis.Xi.FunctionalEquation",
+        "RiemannHypothesis.Xi.Pullback",
+        "RiemannHypothesis.Xi.SignTargets",
+        "RiemannHypothesis.GammaCancellation.CompletedZeta",
+        "RiemannHypothesis.GammaCancellation.TextbookXi",
+        "RiemannHypothesis.Xi.EntireXiMellinGrowth"
+      ],
+      "earliest_unit_slot": 1,
+      "remaining_critical_path_units": 23,
+      "local_ancestor_count": 0
+    },
+    "RiemannHypothesis.Xi.FunctionalEquation": {
+      "local_dependencies": [
+        "RiemannHypothesis.Xi.Definitions"
+      ],
+      "direct_local_dependents": [
+        "RiemannHypothesis.Xi.Pullback",
+        "RiemannHypothesis.Xi.SignTargets",
+        "RiemannHypothesis.Xi.RiemannHypothesisBridge"
+      ],
+      "earliest_unit_slot": 2,
+      "remaining_critical_path_units": 22,
+      "local_ancestor_count": 1
+    },
+    "RiemannHypothesis.Xi.Pullback": {
+      "local_dependencies": [
+        "RiemannHypothesis.ComplexAnalysis.LogDerivative",
+        "RiemannHypothesis.Xi.Definitions",
+        "RiemannHypothesis.Xi.FunctionalEquation"
+      ],
+      "direct_local_dependents": [
+        "RiemannHypothesis.Xi.SignTargets"
+      ],
+      "earliest_unit_slot": 3,
+      "remaining_critical_path_units": 21,
+      "local_ancestor_count": 4
+    },
+    "RiemannHypothesis.Xi.SignTargets": {
+      "local_dependencies": [
+        "RiemannHypothesis.ComplexAnalysis.AntiHerglotz",
+        "RiemannHypothesis.ComplexAnalysis.LogDerivative",
+        "RiemannHypothesis.RealZeros.Engine",
+        "RiemannHypothesis.RealZeros.EntireFunctions",
+        "RiemannHypothesis.Xi.Definitions",
+        "RiemannHypothesis.Xi.Pullback",
+        "RiemannHypothesis.Xi.FunctionalEquation"
+      ],
+      "direct_local_dependents": [
+        "RiemannHypothesis.Xi.CanonicalDivisor",
+        "RiemannHypothesis.Xi.RiemannHypothesisBridge"
+      ],
+      "earliest_unit_slot": 4,
+      "remaining_critical_path_units": 20,
+      "local_ancestor_count": 9
+    },
+    "RiemannHypothesis.Xi.CanonicalDivisor": {
+      "local_dependencies": [
+        "RiemannHypothesis.HadamardProduct.LogDerivative",
+        "RiemannHypothesis.Xi.SignTargets"
+      ],
+      "direct_local_dependents": [
+        "RiemannHypothesis.HadamardProduct.CanonicalProductMultiplicity",
+        "RiemannHypothesis.Xi.BacklundTuringBridge",
+        "RiemannHypothesis.Xi.ZetaMultiplicityBridge",
+        "RiemannHypothesis.Xi.DyadicZeroCountBridge"
+      ],
+      "earliest_unit_slot": 6,
+      "remaining_critical_path_units": 19,
+      "local_ancestor_count": 13
+    },
+    "RiemannHypothesis.HadamardProduct.CanonicalProductMultiplicity": {
+      "local_dependencies": [
+        "RiemannHypothesis.HadamardProduct.CanonicalProductDivisor",
+        "RiemannHypothesis.Xi.CanonicalDivisor"
+      ],
+      "direct_local_dependents": [
+        "RiemannHypothesis.Xi.CanonicalProductCharacteristicGrowth",
+        "RiemannHypothesis.Xi.CanonicalQuotientCriterion"
+      ],
+      "earliest_unit_slot": 7,
+      "remaining_critical_path_units": 17,
+      "local_ancestor_count": 15
+    },
+    "RiemannHypothesis.Xi.CanonicalProductCharacteristicGrowth": {
+      "local_dependencies": [
+        "RiemannHypothesis.HadamardProduct.CanonicalProductGrowth",
+        "RiemannHypothesis.HadamardProduct.CanonicalProductMultiplicity"
+      ],
+      "direct_local_dependents": [
+        "RiemannHypothesis.Xi.UnconditionalLagariasEquivalence"
+      ],
+      "earliest_unit_slot": 8,
+      "remaining_critical_path_units": 12,
+      "local_ancestor_count": 20
+    },
+    "RiemannHypothesis.ComplexAnalysis.EvenAnalyticOrder": {
+      "local_dependencies": [],
+      "direct_local_dependents": [
+        "RiemannHypothesis.Xi.CanonicalProductSymmetry"
+      ],
+      "earliest_unit_slot": 1,
+      "remaining_critical_path_units": 16,
+      "local_ancestor_count": 0
+    },
+    "RiemannHypothesis.ComplexAnalysis.EntireQuotient": {
+      "local_dependencies": [
+        "RiemannHypothesis.ComplexAnalysis.GrowthRigidity"
+      ],
+      "direct_local_dependents": [
+        "RiemannHypothesis.Xi.CanonicalQuotientCriterion"
+      ],
+      "earliest_unit_slot": 2,
+      "remaining_critical_path_units": 17,
+      "local_ancestor_count": 1
+    },
+    "RiemannHypothesis.Xi.BacklundTuringBridge": {
+      "local_dependencies": [
+        "RiemannHypothesis.Xi.CanonicalDivisor"
+      ],
+      "direct_local_dependents": [
+        "RiemannHypothesis.Reduction.BacklundCanonicalDivisor",
+        "RiemannHypothesis.Xi.HadamardLogDerivativeCriterion"
+      ],
+      "earliest_unit_slot": 7,
+      "remaining_critical_path_units": 18,
+      "local_ancestor_count": 14
+    },
+    "RiemannHypothesis.GammaCancellation.PoleSet": {
+      "local_dependencies": [],
+      "direct_local_dependents": [
+        "RiemannHypothesis.GammaCancellation.CompletedZeta",
+        "RiemannHypothesis.GammaCancellation.TextbookXi"
+      ],
+      "earliest_unit_slot": 1,
+      "remaining_critical_path_units": 22,
+      "local_ancestor_count": 0
+    },
+    "RiemannHypothesis.GammaCancellation.CompletedZeta": {
+      "local_dependencies": [
+        "RiemannHypothesis.Xi.Definitions",
+        "RiemannHypothesis.GammaCancellation.PoleSet"
+      ],
+      "direct_local_dependents": [
+        "RiemannHypothesis.GammaCancellation.TextbookXi"
+      ],
+      "earliest_unit_slot": 2,
+      "remaining_critical_path_units": 21,
+      "local_ancestor_count": 2
+    },
+    "RiemannHypothesis.GammaCancellation.TextbookXi": {
+      "local_dependencies": [
+        "RiemannHypothesis.Xi.Definitions",
+        "RiemannHypothesis.GammaCancellation.PoleSet",
+        "RiemannHypothesis.GammaCancellation.CompletedZeta"
+      ],
+      "direct_local_dependents": [
+        "RiemannHypothesis.Xi.RiemannHypothesisBridge"
+      ],
+      "earliest_unit_slot": 3,
+      "remaining_critical_path_units": 20,
+      "local_ancestor_count": 3
+    },
+    "RiemannHypothesis.Xi.RiemannHypothesisBridge": {
+      "local_dependencies": [
+        "RiemannHypothesis.GammaCancellation.TextbookXi",
+        "RiemannHypothesis.Xi.FunctionalEquation",
+        "RiemannHypothesis.Xi.SignTargets"
+      ],
+      "direct_local_dependents": [
+        "RiemannHypothesis.Xi.ZetaMultiplicityBridge",
+        "RiemannHypothesis.ZeroCounting.ZetaZeros",
+        "RiemannHypothesis.Reduction.BacklundCanonicalDivisor",
+        "RiemannHypothesis.Xi.StrictLagariasCriterion"
+      ],
+      "earliest_unit_slot": 5,
+      "remaining_critical_path_units": 19,
+      "local_ancestor_count": 13
+    },
+    "RiemannHypothesis.Xi.ZetaMultiplicityBridge": {
+      "local_dependencies": [
+        "RiemannHypothesis.Xi.CanonicalDivisor",
+        "RiemannHypothesis.Xi.RiemannHypothesisBridge"
+      ],
+      "direct_local_dependents": [
+        "RiemannHypothesis.Reduction.BacklundCanonicalDivisor"
+      ],
+      "earliest_unit_slot": 7,
+      "remaining_critical_path_units": 18,
+      "local_ancestor_count": 18
+    },
+    "RiemannHypothesis.ZeroCounting.SmoothMainTerm": {
+      "local_dependencies": [
+        "RiemannHypothesis.ComplexAnalysis.AntiHerglotz",
+        "RiemannHypothesis.ComplexAnalysis.LogDerivative"
+      ],
+      "direct_local_dependents": [
+        "RiemannHypothesis.Reduction.BacklundCanonicalDivisor"
+      ],
+      "earliest_unit_slot": 3,
+      "remaining_critical_path_units": 18,
+      "local_ancestor_count": 2
+    },
+    "RiemannHypothesis.ZeroCounting.ZetaZeros": {
+      "local_dependencies": [
+        "RiemannHypothesis.Xi.RiemannHypothesisBridge"
+      ],
+      "direct_local_dependents": [
+        "RiemannHypothesis.Reduction.BacklundCanonicalDivisor"
+      ],
+      "earliest_unit_slot": 6,
+      "remaining_critical_path_units": 18,
+      "local_ancestor_count": 14
+    },
+    "RiemannHypothesis.Reduction.BacklundCanonicalDivisor": {
+      "local_dependencies": [
+        "RiemannHypothesis.Xi.BacklundTuringBridge",
+        "RiemannHypothesis.Xi.RiemannHypothesisBridge",
+        "RiemannHypothesis.Xi.ZetaMultiplicityBridge",
+        "RiemannHypothesis.ZeroCounting.SmoothMainTerm",
+        "RiemannHypothesis.ZeroCounting.ZetaZeros"
+      ],
+      "direct_local_dependents": [
+        "RiemannHypothesis.Xi.CanonicalQuotientCriterion"
+      ],
+      "earliest_unit_slot": 8,
+      "remaining_critical_path_units": 17,
+      "local_ancestor_count": 22
+    },
+    "RiemannHypothesis.Xi.DyadicZeroCountBridge": {
+      "local_dependencies": [
+        "RiemannHypothesis.HadamardProduct.DyadicZeroCount",
+        "RiemannHypothesis.Xi.CanonicalDivisor"
+      ],
+      "direct_local_dependents": [
+        "RiemannHypothesis.Xi.CanonicalQuotientCriterion"
+      ],
+      "earliest_unit_slot": 7,
+      "remaining_critical_path_units": 17,
+      "local_ancestor_count": 15
+    },
+    "RiemannHypothesis.HadamardProduct.ExponentialPrefactor": {
+      "local_dependencies": [
+        "RiemannHypothesis.HadamardProduct.InfiniteProducts"
+      ],
+      "direct_local_dependents": [
+        "RiemannHypothesis.HadamardProduct.StrictRealZeroCriterion"
+      ],
+      "earliest_unit_slot": 5,
+      "remaining_critical_path_units": 21,
+      "local_ancestor_count": 4
+    },
+    "RiemannHypothesis.HadamardProduct.NatZeroData": {
+      "local_dependencies": [
+        "RiemannHypothesis.HadamardProduct.LogDerivative"
+      ],
+      "direct_local_dependents": [
+        "RiemannHypothesis.HadamardProduct.RealZeroSign"
+      ],
+      "earliest_unit_slot": 6,
+      "remaining_critical_path_units": 22,
+      "local_ancestor_count": 5
+    },
+    "RiemannHypothesis.HadamardProduct.RealZeroSign": {
+      "local_dependencies": [
+        "RiemannHypothesis.ComplexAnalysis.AntiHerglotz",
+        "RiemannHypothesis.HadamardProduct.NatZeroData",
+        "RiemannHypothesis.RealZeros.EntireFunctions"
+      ],
+      "direct_local_dependents": [
+        "RiemannHypothesis.HadamardProduct.StrictRealZeroCriterion"
+      ],
+      "earliest_unit_slot": 7,
+      "remaining_critical_path_units": 21,
+      "local_ancestor_count": 10
+    },
+    "RiemannHypothesis.HadamardProduct.StrictRealZeroCriterion": {
+      "local_dependencies": [
+        "RiemannHypothesis.HadamardProduct.ExponentialPrefactor",
+        "RiemannHypothesis.HadamardProduct.RealZeroSign"
+      ],
+      "direct_local_dependents": [
+        "RiemannHypothesis.HadamardProduct.OriginMultiplicityCriterion"
+      ],
+      "earliest_unit_slot": 8,
+      "remaining_critical_path_units": 20,
+      "local_ancestor_count": 12
+    },
+    "RiemannHypothesis.HadamardProduct.OriginMultiplicityCriterion": {
+      "local_dependencies": [
+        "RiemannHypothesis.HadamardProduct.StrictRealZeroCriterion"
+      ],
+      "direct_local_dependents": [
+        "RiemannHypothesis.Xi.StrictLagariasCriterion"
+      ],
+      "earliest_unit_slot": 9,
+      "remaining_critical_path_units": 19,
+      "local_ancestor_count": 13
+    },
+    "RiemannHypothesis.Xi.StrictLagariasCriterion": {
+      "local_dependencies": [
+        "RiemannHypothesis.HadamardProduct.OriginMultiplicityCriterion",
+        "RiemannHypothesis.Xi.RiemannHypothesisBridge"
+      ],
+      "direct_local_dependents": [
+        "RiemannHypothesis.Xi.HadamardLogDerivativeCriterion"
+      ],
+      "earliest_unit_slot": 10,
+      "remaining_critical_path_units": 18,
+      "local_ancestor_count": 22
+    },
+    "RiemannHypothesis.Xi.HadamardLogDerivativeCriterion": {
+      "local_dependencies": [
+        "RiemannHypothesis.ComplexAnalysis.GrowthRigidity",
+        "RiemannHypothesis.HadamardProduct.IndexedRealZeroSign",
+        "RiemannHypothesis.Xi.BacklundTuringBridge",
+        "RiemannHypothesis.Xi.StrictLagariasCriterion"
+      ],
+      "direct_local_dependents": [
+        "RiemannHypothesis.Xi.CanonicalQuotientCriterion"
+      ],
+      "earliest_unit_slot": 11,
+      "remaining_critical_path_units": 17,
+      "local_ancestor_count": 27
+    },
+    "RiemannHypothesis.Xi.CanonicalQuotientCriterion": {
+      "local_dependencies": [
+        "RiemannHypothesis.ComplexAnalysis.EntireQuotient",
+        "RiemannHypothesis.HadamardProduct.CanonicalProductMultiplicity",
+        "RiemannHypothesis.Reduction.BacklundCanonicalDivisor",
+        "RiemannHypothesis.Xi.DyadicZeroCountBridge",
+        "RiemannHypothesis.Xi.HadamardLogDerivativeCriterion"
+      ],
+      "direct_local_dependents": [
+        "RiemannHypothesis.Xi.CanonicalProductSymmetry",
+        "RiemannHypothesis.Xi.JensenDyadicCountBridge"
+      ],
+      "earliest_unit_slot": 12,
+      "remaining_critical_path_units": 16,
+      "local_ancestor_count": 37
+    },
+    "RiemannHypothesis.Xi.CanonicalProductSymmetry": {
+      "local_dependencies": [
+        "RiemannHypothesis.ComplexAnalysis.EvenAnalyticOrder",
+        "RiemannHypothesis.HadamardProduct.PairedGenusOne",
+        "RiemannHypothesis.Xi.CanonicalQuotientCriterion"
+      ],
+      "direct_local_dependents": [
+        "RiemannHypothesis.Xi.CanonicalQuotientLogNormGrowth"
+      ],
+      "earliest_unit_slot": 13,
+      "remaining_critical_path_units": 15,
+      "local_ancestor_count": 40
+    },
+    "RiemannHypothesis.Xi.CanonicalQuotientLogNormGrowth": {
+      "local_dependencies": [
+        "RiemannHypothesis.ComplexAnalysis.RealPartGrowth",
+        "RiemannHypothesis.Xi.CanonicalProductSymmetry"
+      ],
+      "direct_local_dependents": [
+        "RiemannHypothesis.Xi.CanonicalQuotientCharacteristicGrowth"
+      ],
+      "earliest_unit_slot": 14,
+      "remaining_critical_path_units": 14,
+      "local_ancestor_count": 42
+    },
+    "RiemannHypothesis.Xi.CanonicalQuotientCharacteristicGrowth": {
+      "local_dependencies": [
+        "RiemannHypothesis.ComplexAnalysis.ProximityGrowth",
+        "RiemannHypothesis.Xi.CanonicalQuotientLogNormGrowth"
+      ],
+      "direct_local_dependents": [
+        "RiemannHypothesis.Xi.CanonicalQuotientThetaCharacteristicGrowth"
+      ],
+      "earliest_unit_slot": 15,
+      "remaining_critical_path_units": 13,
+      "local_ancestor_count": 44
+    },
+    "RiemannHypothesis.ComplexAnalysis.MellinGrowth": {
+      "local_dependencies": [],
+      "direct_local_dependents": [
+        "RiemannHypothesis.Xi.ThetaKernelMellinGrowth",
+        "RiemannHypothesis.ComplexAnalysis.FactorialDyadicGrowth"
+      ],
+      "earliest_unit_slot": 1,
+      "remaining_critical_path_units": 16,
+      "local_ancestor_count": 0
+    },
+    "RiemannHypothesis.Xi.ThetaKernelMellinGrowth": {
+      "local_dependencies": [
+        "RiemannHypothesis.ComplexAnalysis.MellinGrowth"
+      ],
+      "direct_local_dependents": [
+        "RiemannHypothesis.Xi.EntireXiMellinGrowth",
+        "AngularMaster.ThetaKernelExplicitBound"
+      ],
+      "earliest_unit_slot": 2,
+      "remaining_critical_path_units": 15,
+      "local_ancestor_count": 1
+    },
+    "RiemannHypothesis.ComplexAnalysis.FactorialDyadicGrowth": {
+      "local_dependencies": [
+        "RiemannHypothesis.ComplexAnalysis.MellinGrowth"
+      ],
+      "direct_local_dependents": [
+        "RiemannHypothesis.Xi.EntireXiMellinGrowth"
+      ],
+      "earliest_unit_slot": 2,
+      "remaining_critical_path_units": 15,
+      "local_ancestor_count": 1
+    },
+    "RiemannHypothesis.Xi.JensenDyadicCountBridge": {
+      "local_dependencies": [
+        "RiemannHypothesis.Xi.CanonicalQuotientCriterion"
+      ],
+      "direct_local_dependents": [
+        "RiemannHypothesis.Xi.EntireXiMellinGrowth"
+      ],
+      "earliest_unit_slot": 13,
+      "remaining_critical_path_units": 15,
+      "local_ancestor_count": 38
+    },
+    "RiemannHypothesis.Xi.EntireXiMellinGrowth": {
+      "local_dependencies": [
+        "RiemannHypothesis.Xi.ThetaKernelMellinGrowth",
+        "RiemannHypothesis.Xi.Definitions",
+        "RiemannHypothesis.ComplexAnalysis.FactorialDyadicGrowth",
+        "RiemannHypothesis.Xi.JensenDyadicCountBridge"
+      ],
+      "direct_local_dependents": [
+        "RiemannHypothesis.Xi.EntireXiLogNormGrowth"
+      ],
+      "earliest_unit_slot": 14,
+      "remaining_critical_path_units": 14,
+      "local_ancestor_count": 42
+    },
+    "RiemannHypothesis.Xi.EntireXiLogNormGrowth": {
+      "local_dependencies": [
+        "RiemannHypothesis.Xi.EntireXiMellinGrowth",
+        "RiemannHypothesis.ComplexAnalysis.RealPartGrowth"
+      ],
+      "direct_local_dependents": [
+        "RiemannHypothesis.Xi.CanonicalQuotientThetaCharacteristicGrowth"
+      ],
+      "earliest_unit_slot": 15,
+      "remaining_critical_path_units": 13,
+      "local_ancestor_count": 44
+    },
+    "RiemannHypothesis.Xi.CanonicalQuotientThetaCharacteristicGrowth": {
+      "local_dependencies": [
+        "RiemannHypothesis.Xi.CanonicalQuotientCharacteristicGrowth",
+        "RiemannHypothesis.Xi.EntireXiLogNormGrowth"
+      ],
+      "direct_local_dependents": [
+        "RiemannHypothesis.Xi.UnconditionalLagariasEquivalence"
+      ],
+      "earliest_unit_slot": 16,
+      "remaining_critical_path_units": 12,
+      "local_ancestor_count": 51
+    },
+    "RiemannHypothesis.Xi.UnconditionalLagariasEquivalence": {
+      "local_dependencies": [
+        "RiemannHypothesis.Xi.CanonicalProductCharacteristicGrowth",
+        "RiemannHypothesis.Xi.CanonicalQuotientThetaCharacteristicGrowth"
+      ],
+      "direct_local_dependents": [
+        "RiemannHypothesis.Xi.CompletedLFunctionInstance"
+      ],
+      "earliest_unit_slot": 17,
+      "remaining_critical_path_units": 11,
+      "local_ancestor_count": 54
+    },
+    "RiemannHypothesis.Xi.CompletedLFunctionInstance": {
+      "local_dependencies": [
+        "RiemannHypothesis.HadamardProduct.CompletedLFunction",
+        "RiemannHypothesis.Xi.UnconditionalLagariasEquivalence"
+      ],
+      "direct_local_dependents": [
+        "RiemannHypothesis.Xi.CanonicalProductPairedGrowth"
+      ],
+      "earliest_unit_slot": 18,
+      "remaining_critical_path_units": 10,
+      "local_ancestor_count": 56
+    },
+    "RiemannHypothesis.Xi.CanonicalProductPairedGrowth": {
+      "local_dependencies": [
+        "RiemannHypothesis.HadamardProduct.PairedCanonicalProductGrowth",
+        "RiemannHypothesis.Xi.CompletedLFunctionInstance"
+      ],
+      "direct_local_dependents": [
+        "AngularMaster.ActualHadamard"
+      ],
+      "earliest_unit_slot": 19,
+      "remaining_critical_path_units": 9,
+      "local_ancestor_count": 59
+    },
+    "AngularMaster.ActualHadamard": {
+      "local_dependencies": [
+        "AWPIRH.ThetaEntire",
+        "AngularMaster.ZeroExclusion",
+        "RiemannHypothesis.Xi.CanonicalProductPairedGrowth"
+      ],
+      "direct_local_dependents": [
+        "AngularMaster.ComplexScaleProduct"
+      ],
+      "earliest_unit_slot": 20,
+      "remaining_critical_path_units": 8,
+      "local_ancestor_count": 63
+    },
+    "AngularMaster.ComplexScaleProduct": {
+      "local_dependencies": [
+        "AngularMaster.ActualHadamard"
+      ],
+      "direct_local_dependents": [
+        "AngularMaster.LowHeightGeometry",
+        "OriginTrace",
+        "RH_HilbertLimit.ActualMomentReality"
+      ],
+      "earliest_unit_slot": 21,
+      "remaining_critical_path_units": 7,
+      "local_ancestor_count": 64
+    },
+    "AngularMaster.ZeroGeometry": {
+      "local_dependencies": [
+        "AWPIRH.ThetaEntire"
+      ],
+      "direct_local_dependents": [
+        "AngularMaster.QQRHGeometry",
+        "AngularMaster.ZeroFreeSeed"
+      ],
+      "earliest_unit_slot": 3,
+      "remaining_critical_path_units": 8,
+      "local_ancestor_count": 2
+    },
+    "AngularMaster.QQRHGeometry": {
+      "local_dependencies": [
+        "AngularMaster.ZeroGeometry"
+      ],
+      "direct_local_dependents": [
+        "AngularMaster.LowHeightGeometry"
+      ],
+      "earliest_unit_slot": 4,
+      "remaining_critical_path_units": 7,
+      "local_ancestor_count": 3
+    },
+    "AngularMaster.LowHeightGeometry": {
+      "local_dependencies": [
+        "AngularMaster.QQRHGeometry",
+        "AngularMaster.ComplexScaleProduct"
+      ],
+      "direct_local_dependents": [
+        "RH_HilbertLimit.ActualCalibrationProgress"
+      ],
+      "earliest_unit_slot": 22,
+      "remaining_critical_path_units": 6,
+      "local_ancestor_count": 67
+    },
+    "AngularMaster.ThetaKernelExplicitBound": {
+      "local_dependencies": [
+        "RiemannHypothesis.Xi.ThetaKernelMellinGrowth"
+      ],
+      "direct_local_dependents": [
+        "AngularMaster.ZeroFreeSeed"
+      ],
+      "earliest_unit_slot": 3,
+      "remaining_critical_path_units": 8,
+      "local_ancestor_count": 2
+    },
+    "AngularMaster.ZeroFreeSeed": {
+      "local_dependencies": [
+        "AngularMaster.ZeroGeometry",
+        "AngularMaster.ThetaKernelExplicitBound"
+      ],
+      "direct_local_dependents": [
+        "OriginTrace"
+      ],
+      "earliest_unit_slot": 4,
+      "remaining_critical_path_units": 7,
+      "local_ancestor_count": 6
+    },
+    "OriginTrace": {
+      "local_dependencies": [
+        "AngularMaster.ComplexScaleProduct",
+        "AngularMaster.ZeroFreeSeed"
+      ],
+      "direct_local_dependents": [
+        "RH_HilbertLimit.ActualCalibrationProgress"
+      ],
+      "earliest_unit_slot": 22,
+      "remaining_critical_path_units": 6,
+      "local_ancestor_count": 68
+    },
+    "RH_HilbertLimit.GrowthStep": {
+      "local_dependencies": [
+        "RH_HilbertLimit.Main"
+      ],
+      "direct_local_dependents": [
+        "RH_HilbertLimit.CanonicalBridge"
+      ],
+      "earliest_unit_slot": 6,
+      "remaining_critical_path_units": 5,
+      "local_ancestor_count": 9
+    },
+    "RH_HilbertLimit.FinitePrefix": {
+      "local_dependencies": [
+        "RH_HilbertLimit.Bernstein",
+        "RH_HilbertLimit.Growth"
+      ],
+      "direct_local_dependents": [
+        "AnalyticAudit"
+      ],
+      "earliest_unit_slot": 2,
+      "remaining_critical_path_units": 2,
+      "local_ancestor_count": 2
+    },
+    "RH_HilbertLimit.SpectralTail": {
+      "local_dependencies": [
+        "RH_HilbertLimit.Geometry",
+        "RH_HilbertLimit.ActualXi"
+      ],
+      "direct_local_dependents": [
+        "RH_HilbertLimit.CanonicalBridge",
+        "RH_HilbertLimit.SpectralPhase",
+        "RH_HilbertLimit.SpectralGenerating"
+      ],
+      "earliest_unit_slot": 4,
+      "remaining_critical_path_units": 5,
+      "local_ancestor_count": 5
+    },
+    "RH_HilbertLimit.ActualCalibrationProgress": {
+      "local_dependencies": [
+        "RH_HilbertLimit.ActualXi",
+        "OriginTrace",
+        "AngularMaster.LowHeightGeometry"
+      ],
+      "direct_local_dependents": [
+        "RH_HilbertLimit.CanonicalBridge"
+      ],
+      "earliest_unit_slot": 23,
+      "remaining_critical_path_units": 5,
+      "local_ancestor_count": 74
+    },
+    "RH_HilbertLimit.ActualMomentReality": {
+      "local_dependencies": [
+        "RH_HilbertLimit.ActualXi",
+        "AngularMaster.ComplexScaleProduct"
+      ],
+      "direct_local_dependents": [
+        "RH_HilbertLimit.CanonicalBridge"
+      ],
+      "earliest_unit_slot": 22,
+      "remaining_critical_path_units": 5,
+      "local_ancestor_count": 68
+    },
+    "RH_HilbertLimit.CanonicalBridge": {
+      "local_dependencies": [
+        "RH_HilbertLimit.ActualCalibrationProgress",
+        "RH_HilbertLimit.ActualMomentReality",
+        "RH_HilbertLimit.GrowthStep",
+        "RH_HilbertLimit.SpectralTail"
+      ],
+      "direct_local_dependents": [
+        "RH_HilbertLimit.CanonicalPowerSums",
+        "AnalyticAudit"
+      ],
+      "earliest_unit_slot": 24,
+      "remaining_critical_path_units": 4,
+      "local_ancestor_count": 82
+    },
+    "RH_HilbertLimit.CanonicalPowerSums": {
+      "local_dependencies": [
+        "RH_HilbertLimit.CanonicalBridge"
+      ],
+      "direct_local_dependents": [
+        "RH_HilbertLimit.AnalyticClosure"
+      ],
+      "earliest_unit_slot": 25,
+      "remaining_critical_path_units": 3,
+      "local_ancestor_count": 83,
+      "invalidation_cone": [
+        "RH_HilbertLimit.CanonicalPowerSums",
+        "RH_HilbertLimit.AnalyticClosure",
+        "AnalyticAudit"
+      ]
+    },
+    "RH_HilbertLimit.SpectralPhase": {
+      "local_dependencies": [
+        "RH_HilbertLimit.SpectralTail"
+      ],
+      "direct_local_dependents": [
+        "RH_HilbertLimit.SpectralExtraction"
+      ],
+      "earliest_unit_slot": 5,
+      "remaining_critical_path_units": 4,
+      "local_ancestor_count": 6,
+      "invalidation_cone": [
+        "RH_HilbertLimit.SpectralPhase",
+        "RH_HilbertLimit.SpectralExtraction",
+        "RH_HilbertLimit.AnalyticClosure",
+        "AnalyticAudit"
+      ]
+    },
+    "RH_HilbertLimit.SpectralGenerating": {
+      "local_dependencies": [
+        "RH_HilbertLimit.Spectral",
+        "RH_HilbertLimit.SpectralTail"
+      ],
+      "direct_local_dependents": [
+        "RH_HilbertLimit.SpectralExtraction"
+      ],
+      "earliest_unit_slot": 5,
+      "remaining_critical_path_units": 4,
+      "local_ancestor_count": 7,
+      "invalidation_cone": [
+        "RH_HilbertLimit.SpectralGenerating",
+        "RH_HilbertLimit.SpectralExtraction",
+        "RH_HilbertLimit.AnalyticClosure",
+        "AnalyticAudit"
+      ]
+    },
+    "RH_HilbertLimit.SpectralExtraction": {
+      "local_dependencies": [
+        "RH_HilbertLimit.SpectralPhase",
+        "RH_HilbertLimit.SpectralGenerating",
+        "RH_HilbertLimit.Main"
+      ],
+      "direct_local_dependents": [
+        "RH_HilbertLimit.AnalyticClosure"
+      ],
+      "earliest_unit_slot": 6,
+      "remaining_critical_path_units": 3,
+      "local_ancestor_count": 12,
+      "invalidation_cone": [
+        "RH_HilbertLimit.SpectralExtraction",
+        "RH_HilbertLimit.AnalyticClosure",
+        "AnalyticAudit"
+      ]
+    },
+    "RH_HilbertLimit.AnalyticClosure": {
+      "local_dependencies": [
+        "RH_HilbertLimit.CanonicalPowerSums",
+        "RH_HilbertLimit.SpectralExtraction"
+      ],
+      "direct_local_dependents": [
+        "AnalyticAudit"
+      ],
+      "earliest_unit_slot": 26,
+      "remaining_critical_path_units": 2,
+      "local_ancestor_count": 87,
+      "invalidation_cone": [
+        "RH_HilbertLimit.AnalyticClosure",
+        "AnalyticAudit"
+      ]
+    },
+    "AnalyticAudit": {
+      "local_dependencies": [
+        "RH_HilbertLimit.AnalyticClosure",
+        "RH_HilbertLimit.CanonicalBridge",
+        "RH_HilbertLimit.FinitePrefix"
+      ],
+      "direct_local_dependents": [],
+      "earliest_unit_slot": 27,
+      "remaining_critical_path_units": 1,
+      "local_ancestor_count": 89,
+      "invalidation_cone": [
+        "AnalyticAudit"
+      ]
+    }
+  },
+  "native_process_counts_from_existing_control_flow": {
+    "cold_compile_and_per_module_audit_calls": 179,
+    "warm_six_new_nodes_compile_and_audit_calls": 11,
+    "all_90_verified_reuse_compile_and_audit_calls": 0,
+    "exclusions": "Compiler/version queries, hashing, cache migration, and any audit-only refreshes; counts are conditional source deductions, not observed runs."
+  },
+  "recommendation": {
+    "total_lean_thread_budget": 16,
+    "default_max_lean_workers_with_sufficient_memory": 4,
+    "full_four_worker_threads_each": 4,
+    "two_worker_threads_each": 8,
+    "three_worker_allocation_example": [
+      6,
+      5,
+      5
+    ],
+    "single_worker_threads": 16,
+    "thread_rule": "Sum of launch-time thread reservations across all live compile/audit processes must not exceed the configured budget; no retrospective increase to a running process.",
+    "ram_policy": {
+      "status": "Suggested conservative starting policy; no process-RAM observations are available.",
+      "reserve_mib": "max(4096, ceil(0.20 * total_physical_MiB))",
+      "initial_worker_reservation_mib": 4096,
+      "planned_read_only_mapping_sidecar_reservation": "Also reserve the sidecar's announced maximum charged-page cap, conservatively even if clean file-backed pages overlap Lean mappings; the sidecar is not a residency guarantee or shared Lean environment.",
+      "admission": "Cap workers by min(4, ready work, CPU token budget, free-RAM reservations). Recheck RAM before each launch and reserve for active processes not yet at their estimated peak.",
+      "unknown_ram_fallback": "One Lean process; report that memory-based admission was unavailable.",
+      "low_ram_fallback": "Use one process when the reserve permits one; if even one cannot be admitted, wait/recheck and give an actionable resource message instead of spawning more workers.",
+      "measurement_limit": "4 GiB is an adjustable admission estimate, not a memory cap or guarantee. Native evidence is needed before tuning it downward."
+    },
+    "cache_identity": "Preserve SCHEMA, COMPILE_POLICY, AUDIT_POLICY, COMPILE_FLAGS, source hashes, local/external dependency fingerprints, and exact audit targets. Worker count, thread budget, and RAM observations are runtime provenance only."
+  },
+  "integration_requirements": [
+    "Use one coordinator and the existing workspace lock. Only compiler/audit child processes run concurrently; coordinator serializes cache verification, state acceptance, and immutable receipt commits.",
+    "Build ready queues from the actual verified local import graph, preserving compile-order position only as a deterministic tie-breaker.",
+    "Try validated anchor reuse for each ready module before occupying a Lean worker. A ready cache hit can immediately unblock its dependents.",
+    "Do not publish moduleKeys/artifactHashes at compile exit. Audit-only restores and fresh compiles release dependents only after the existing acceptance/save path succeeds.",
+    "Count compile and audit child processes in the same CPU/RAM pool. Keep generated audit source, output family, and log paths unique per module.",
+    "Failure blocks only the transitive dependents; independent ready modules remain eligible. Global hash/transport failures remain fatal.",
+    "Drain or safely account for every owned live child before releasing the workspace lock or reporting final completion. Preserve per-module failure stage and logs.",
+    "Keep the selected aggregate as a final barrier after all ordinary modules are accepted, preserving the exact 370-target audit and mathematical status reporting.",
+    "Fresh operation-scoped content verification remains mandatory; parallelism does not authorize persistent digest reuse or trusting unverified working artifacts.",
+    "Avoid unbudgeted overlap of a 16-thread hashing helper with a full 16-thread Lean pool; account for that work or perform the coordinator's hash phases at controlled boundaries."
+  ],
+  "implementation_blockers_in_current_runner": [
+    "runToFile uses synchronous shell.Run(..., true); the existing processModuleBody cannot run asynchronously as written.",
+    "processModuleBody combines cache restore, compile, audit, and receipt commit in one synchronous call; a scheduler needs explicit per-module phase records.",
+    "The main loop processes ordered modules serially, and stage is one mutable global; parallel status must retain each task's stage without weakening final error reporting.",
+    "No current RAM admission probe/reservation or compiler worker pool exists. Thread count is currently a per-process jobs value."
+  ],
+  "not_established": [
+    "Native compilation or axiom audit",
+    "Measured speedup",
+    "Per-module peak RAM",
+    "RH",
+    "Finite checker equivalence"
+  ]
+}

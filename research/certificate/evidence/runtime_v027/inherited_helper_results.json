@@ -1,0 +1,82 @@
+{
+  "kind": "SYNTHETIC_WINDOWS_HOST_HELPER_CACHE_TESTS",
+  "native_windows_execution": false,
+  "actual_csharp_compilation": false,
+  "lean_compilation": false,
+  "runner": "/workspace/scratch/f128c1434505/tmp/runtime_opt_v026/native_runner.js",
+  "runner_sha256": "14e084bcc689b16da6ad37b38b549dda8ca3d849c2f36a969eb5c3b92c8ef4eb",
+  "scenarios": [
+    {
+      "name": "cold_build_then_warm_hit_avoids_second_csc",
+      "outcome": "PASS_MOCK_HOST",
+      "mock_csc_calls": 1,
+      "mock_selftest_calls": 2
+    },
+    {
+      "name": "same_source_in_new_package_reuses_helper",
+      "outcome": "PASS_MOCK_HOST"
+    },
+    {
+      "name": "changed_source_forces_new_helper_build",
+      "outcome": "PASS_MOCK_HOST"
+    },
+    {
+      "name": "changed_csc_forces_new_helper_build",
+      "outcome": "PASS_MOCK_HOST"
+    },
+    {
+      "name": "changed_reference_forces_new_helper_build",
+      "outcome": "PASS_MOCK_HOST"
+    },
+    {
+      "name": "changed_runtime_forces_new_helper_build",
+      "outcome": "PASS_MOCK_HOST"
+    },
+    {
+      "name": "changed_new_optional_config_forces_new_helper_build",
+      "outcome": "PASS_MOCK_HOST"
+    },
+    {
+      "name": "corrupt_helper_exe_rejected_and_rebuilt",
+      "outcome": "PASS_MOCK_HOST"
+    },
+    {
+      "name": "corrupt_source_cs_rejected_and_rebuilt",
+      "outcome": "PASS_MOCK_HOST"
+    },
+    {
+      "name": "corrupt_build_log_rejected_and_rebuilt",
+      "outcome": "PASS_MOCK_HOST"
+    },
+    {
+      "name": "corrupt_selftest_log_rejected_and_rebuilt",
+      "outcome": "PASS_MOCK_HOST"
+    },
+    {
+      "name": "selftest_failure_publishes_no_entry_auto_falls_back",
+      "outcome": "PASS_MOCK_HOST"
+    },
+    {
+      "name": "selftest_failure_strict_mode_throws_without_entry",
+      "outcome": "PASS_MOCK_HOST"
+    },
+    {
+      "name": "failed_csc_build_publishes_no_cache_entry",
+      "outcome": "PASS_MOCK_HOST"
+    },
+    {
+      "name": "pending_helper_entry_is_ignored",
+      "outcome": "PASS_MOCK_HOST"
+    },
+    {
+      "name": "truncated_group_collision_requires_full_input_key",
+      "outcome": "PASS_MOCK_HOST"
+    },
+    {
+      "name": "wrong_target_and_missing_build_pass_are_not_reused",
+      "outcome": "PASS_MOCK_HOST"
+    }
+  ],
+  "passed": 17,
+  "failed": 0
+}

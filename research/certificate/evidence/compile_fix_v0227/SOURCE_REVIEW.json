@@ -1,0 +1,25 @@
+{
+  "kind": "SOURCE_REVIEW_NOT_LEAN_CERTIFICATION",
+  "package": "RH_HILBERT_LIMIT_LEAN_v0_2_27_construction",
+  "native_compilation": "NOT_RUN",
+  "native_axiom_audit": "PENDING",
+  "changed_sources": {
+    "RH_HilbertLimit/ZeroBudgetSecondSector.lean": "974506ab55be6024d536caeb824ea80cf06a86687930c33aa42f7cdef63e1f72",
+    "RH_HilbertLimit/ZeroBudgetFiveSector.lean": "c903332a3da68997b77e6ce7960fd4e149a5c46449be63a4bffaa2fe8d95115c",
+    "RH_HilbertLimit/ZeroBudgetFiveAlgebra.lean": "4f15864c2e6125a4829489659f56436d74b325e682b7058b7f746b9d3214131c"
+  },
+  "theorem_statements_and_assumptions": "UNCHANGED",
+  "changes": [
+    "Normalize all one_div occurrences before inverse-rpow rewriting.",
+    "Explicit IntegrableOn annotation retains mono_set namespace resolution in both sector modules.",
+    "Use abs_add_le, already present in preserved Cancellation and Bernstein source."
+  ],
+  "independent_reviews": {
+    "sector": "Minimal diff reviewed; no further definite source blocker identified.",
+    "algebra_rows": "Minimal algebra fix and dependent FiveRows definitions reviewed; no further definite blocker identified."
+  },
+  "scope": "CANCELLATION_INDICES_0_THROUGH_4_ONLY_PENDING_NATIVE_AUDIT",
+  "universal_admissibility": "OPEN",
+  "finite_checker_soundness": "OPEN",
+  "unconditional_rh": "NOT_ESTABLISHED"
+}

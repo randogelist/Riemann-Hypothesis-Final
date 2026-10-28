@@ -1,0 +1,13 @@
+{
+  "package": "RH_HILBERT_LIMIT_LEAN_v0_2_26_construction",
+  "parent": "RH_HILBERT_LIMIT_LEAN_v0_2_25_construction",
+  "prepared_at": "2026-10-28T00:57:12.749538+01:00",
+  "revision_kind": "ADDITIVE_PROOF_SOURCE_NOT_INIT",
+  "source_sha256": {
+    "RH_HilbertLimit/ZeroBudgetFiveSector.lean": "83f8d2c3d114f7547b539a6200483736bdd794f11c4b0fab8d21af48536104ae",
+    "RH_HilbertLimit/ZeroBudgetFiveAlgebra.lean": "8bdeabb2a04c6bb2e1e877ecca3f5ed81fd48531094cdbb301ac8d0507529158",
+    "RH_HilbertLimit/ZeroBudgetFiveRows.lean": "10981de983426495f2c2d1b3b3796def020a9750154b87f02ac02b0a91285386",
+    "FiveRowsAudit.lean": "f0874a2d67daf9f9d9875ad2e536b8a03553621f5d99f0a97c5b200666cb13df"
+  },
+  "assistant_lean_native_or_ci_execution": false
+}

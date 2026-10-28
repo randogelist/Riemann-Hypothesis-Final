@@ -1,0 +1,2066 @@
+{
+  "schema": "RH_HILBERT_NATIVE_EXCERPT_INDEPENDENT_EVIDENCE_REVIEW_V1",
+  "reviewer": "analytic_source",
+  "input": {
+    "path": "/workspace/scratch/f128c1434505/upload/Pasted text(20261027-174641).txt",
+    "sha256": "b906cdf09667e818ee7adc70507c1d8f4fcb271f4104bc47d7a2970dd4d87abb",
+    "bytes": 10704,
+    "lines": 145,
+    "kind": "User-supplied partial native Windows run output, read locally only"
+  },
+  "comparison_targets": {
+    "path": "/workspace/scratch/f128c1434505/output/RH_HILBERT_LIMIT_LEAN_v0_2_7_construction/audit-targets.tsv",
+    "sha256": "916cceaf788a772a609fc8b14fc1412e07fc6eb6ae230834a3c8ccb16d878b1f",
+    "target_count": 303,
+    "unique_target_count": 303
+  },
+  "visible_axiom_audit": {
+    "complete_record_count": 28,
+    "unique_declaration_count": 28,
+    "depends_on_axioms_marker_count": 28,
+    "axiom_free_record_count": 0,
+    "incomplete_axiom_record_count": 0,
+    "allowed_axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "observed_axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "unexpected_axioms": [],
+    "all_visible_records_have_exact_allowed_set": true,
+    "axiom_record_frequency": {
+      "propext": 28,
+      "Classical.choice": 28,
+      "Quot.sound": 28
+    },
+    "unexpected_declarations": [],
+    "duplicate_declarations": {},
+    "visible_module_counts": {
+      "RH_HilbertLimit.FinitePrefix": 6,
+      "RH_HilbertLimit.SpectralTail": 8,
+      "RH_HilbertLimit.ActualMomentReality": 7,
+      "RH_HilbertLimit.CanonicalBridge": 7
+    },
+    "visible_records_match_exact_target_list_suffix": true,
+    "first_visible_target_ordinal_1_based": 276,
+    "last_visible_target_ordinal_1_based": 303,
+    "records": [
+      {
+        "declaration": "RH_HilbertLimit.FinitePrefix.exponentialTail_rootScale_lower",
+        "module": "RH_HilbertLimit.FinitePrefix",
+        "signature_start_line": 1,
+        "axiom_report_start_line": 3,
+        "axiom_report_end_line": 5,
+        "printed_signature": "RH_HilbertLimit.FinitePrefix.exponentialTail_rootScale_lower (u : ℕ → ℝ) (K N : ℕ) (hN : K < N) :\n  2 ≤ RH_HilbertLimit.rootScale (RH_HilbertLimit.rowVariation (RH_HilbertLimit.FinitePrefix.exponentialTail u K)) N",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "RH_HilbertLimit.FinitePrefix.exponentialTail_not_rootScale_tendsto_one",
+        "module": "RH_HilbertLimit.FinitePrefix",
+        "signature_start_line": 6,
+        "axiom_report_start_line": 10,
+        "axiom_report_end_line": 12,
+        "printed_signature": "RH_HilbertLimit.FinitePrefix.exponentialTail_not_rootScale_tendsto_one (u : ℕ → ℝ) (K : ℕ) :\n  ¬Filter.Tendsto\n      (RH_HilbertLimit.rootScale (RH_HilbertLimit.rowVariation (RH_HilbertLimit.FinitePrefix.exponentialTail u K)))\n      Filter.atTop (nhds 1)",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "RH_HilbertLimit.FinitePrefix.exponentialTail_not_subexponential",
+        "module": "RH_HilbertLimit.FinitePrefix",
+        "signature_start_line": 13,
+        "axiom_report_start_line": 15,
+        "axiom_report_end_line": 17,
+        "printed_signature": "RH_HilbertLimit.FinitePrefix.exponentialTail_not_subexponential (u : ℕ → ℝ) (K : ℕ) (hzero : u 0 = 1) :\n  ¬RH_HilbertLimit.Subexponential (RH_HilbertLimit.rowVariation (RH_HilbertLimit.FinitePrefix.exponentialTail u K))",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "RH_HilbertLimit.FinitePrefix.exponentialTail_next_variation_ne_one",
+        "module": "RH_HilbertLimit.FinitePrefix",
+        "signature_start_line": 18,
+        "axiom_report_start_line": 20,
+        "axiom_report_end_line": 22,
+        "printed_signature": "RH_HilbertLimit.FinitePrefix.exponentialTail_next_variation_ne_one (u : ℕ → ℝ) (K : ℕ) :\n  RH_HilbertLimit.rowVariation (RH_HilbertLimit.FinitePrefix.exponentialTail u K) (K + 1) ≠ 1",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "RH_HilbertLimit.FinitePrefix.exponentialTail_next_negative",
+        "module": "RH_HilbertLimit.FinitePrefix",
+        "signature_start_line": 23,
+        "axiom_report_start_line": 25,
+        "axiom_report_end_line": 25,
+        "printed_signature": "RH_HilbertLimit.FinitePrefix.exponentialTail_next_negative (u : ℕ → ℝ) (K : ℕ) (hzero : u 0 = 1) :\n  ∃ j ≤ K + 1, RH_HilbertLimit.bernsteinWeight (RH_HilbertLimit.FinitePrefix.exponentialTail u K) (K + 1) j < 0",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "RH_HilbertLimit.FinitePrefix.arbitrarily_long_positive_prefix",
+        "module": "RH_HilbertLimit.FinitePrefix",
+        "signature_start_line": 26,
+        "axiom_report_start_line": 33,
+        "axiom_report_end_line": 35,
+        "printed_signature": "RH_HilbertLimit.FinitePrefix.arbitrarily_long_positive_prefix (K : ℕ) :\n  ∃ v,\n    v 0 = 1 ∧\n      (∀ n ≤ K, v n = 1) ∧\n        (∀ N ≤ K, RH_HilbertLimit.rowVariation v N = 1) ∧\n          (∀ (N : ℕ), K < N → 2 ≤ RH_HilbertLimit.rootScale (RH_HilbertLimit.rowVariation v) N) ∧\n            ¬RH_HilbertLimit.Subexponential (RH_HilbertLimit.rowVariation v)",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "RH_HilbertLimit.SpectralTail.norm_lt_outside_finite",
+        "module": "RH_HilbertLimit.SpectralTail",
+        "signature_start_line": 36,
+        "axiom_report_start_line": 38,
+        "axiom_report_end_line": 38,
+        "printed_signature": "RH_HilbertLimit.SpectralTail.norm_lt_outside_finite.{u_1} {ι : Type u_1} (q : ι → ℂ) (hq : Summable fun i => ‖q i‖)\n  (ε : ℝ) (hε : 0 < ε) : ∃ s, ∀ i ∉ s, ‖q i‖ < ε",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "RH_HilbertLimit.SpectralTail.ellipse_lt_outside_finite",
+        "module": "RH_HilbertLimit.SpectralTail",
+        "signature_start_line": 39,
+        "axiom_report_start_line": 41,
+        "axiom_report_end_line": 41,
+        "printed_signature": "RH_HilbertLimit.SpectralTail.ellipse_lt_outside_finite.{u_1} {ι : Type u_1} (q : ι → ℂ) (hq : Summable fun i => ‖q i‖)\n  (r : ℝ) (hr : 1 < r) : ∃ s, ∀ i ∉ s, RH_HilbertLimit.ellipseRadius (q i) < r",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "RH_HilbertLimit.SpectralTail.finite_ellipse_superlevel",
+        "module": "RH_HilbertLimit.SpectralTail",
+        "signature_start_line": 42,
+        "axiom_report_start_line": 44,
+        "axiom_report_end_line": 44,
+        "printed_signature": "RH_HilbertLimit.SpectralTail.finite_ellipse_superlevel.{u_1} {ι : Type u_1} (q : ι → ℂ) (hq : Summable fun i => ‖q i‖)\n  (r : ℝ) (hr : 1 < r) : {i | r ≤ RH_HilbertLimit.ellipseRadius (q i)}.Finite",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "RH_HilbertLimit.SpectralTail.affine_power_bound_outside_finite",
+        "module": "RH_HilbertLimit.SpectralTail",
+        "signature_start_line": 45,
+        "axiom_report_start_line": 48,
+        "axiom_report_end_line": 50,
+        "printed_signature": "RH_HilbertLimit.SpectralTail.affine_power_bound_outside_finite.{u_1} {ι : Type u_1} (q : ι → ℂ)\n  (hq : Summable fun i => ‖q i‖) (r : ℝ) (hr : 1 < r) (x : ℂ) (hx : ‖x‖ ≤ 1) :\n  ∃ s, ∀ (N : ℕ), ∀ i ∉ s, ‖q i * (1 + (x - 1) * q i) ^ N‖ ≤ ‖q i‖ * r ^ N",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "RH_HilbertLimit.SpectralTail.finite_tail_below_radius",
+        "module": "RH_HilbertLimit.SpectralTail",
+        "signature_start_line": 51,
+        "axiom_report_start_line": 54,
+        "axiom_report_end_line": 54,
+        "printed_signature": "RH_HilbertLimit.SpectralTail.finite_tail_below_radius.{u_1} {ι : Type u_1} (q : ι → ℂ) (hq : Summable fun i => ‖q i‖)\n  (hR : 1 < RH_HilbertLimit.spectralRadius q) :\n  ∃ r, 1 < r ∧ r < RH_HilbertLimit.spectralRadius q ∧ ∃ s, ∀ i ∉ s, RH_HilbertLimit.ellipseRadius (q i) < r",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "RH_HilbertLimit.SpectralTail.spectralRadius_attained",
+        "module": "RH_HilbertLimit.SpectralTail",
+        "signature_start_line": 55,
+        "axiom_report_start_line": 58,
+        "axiom_report_end_line": 58,
+        "printed_signature": "RH_HilbertLimit.SpectralTail.spectralRadius_attained.{u_1} {ι : Type u_1} (q : ι → ℂ) (hq : Summable fun i => ‖q i‖)\n  (hb : RH_HilbertLimit.SpectralBounded q) (hR : 1 < RH_HilbertLimit.spectralRadius q) :\n  ∃ i, RH_HilbertLimit.ellipseRadius (q i) = RH_HilbertLimit.spectralRadius q",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "RH_HilbertLimit.ActualSpectralCalibration.finite_tail_below_radius",
+        "module": "RH_HilbertLimit.SpectralTail",
+        "signature_start_line": 59,
+        "axiom_report_start_line": 62,
+        "axiom_report_end_line": 64,
+        "printed_signature": "RH_HilbertLimit.ActualSpectralCalibration.finite_tail_below_radius.{u_1} {ι : Type u_1}\n  (D : RH_HilbertLimit.ActualSpectralCalibration ι) (hR : 1 < RH_HilbertLimit.spectralRadius D.node) :\n  ∃ r, 1 < r ∧ r < RH_HilbertLimit.spectralRadius D.node ∧ ∃ s, ∀ i ∉ s, RH_HilbertLimit.ellipseRadius (D.node i) < r",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "RH_HilbertLimit.ActualSpectralCalibration.spectralRadius_attained",
+        "module": "RH_HilbertLimit.SpectralTail",
+        "signature_start_line": 65,
+        "axiom_report_start_line": 68,
+        "axiom_report_end_line": 70,
+        "printed_signature": "RH_HilbertLimit.ActualSpectralCalibration.spectralRadius_attained.{u_1} {ι : Type u_1}\n  (D : RH_HilbertLimit.ActualSpectralCalibration ι) (hR : 1 < RH_HilbertLimit.spectralRadius D.node) :\n  ∃ i, RH_HilbertLimit.ellipseRadius (D.node i) = RH_HilbertLimit.spectralRadius D.node",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "RH_HilbertLimit.deriv_conj_of_schwarz",
+        "module": "RH_HilbertLimit.ActualMomentReality",
+        "signature_start_line": 71,
+        "axiom_report_start_line": 73,
+        "axiom_report_end_line": 73,
+        "printed_signature": "RH_HilbertLimit.deriv_conj_of_schwarz {f : ℂ → ℂ} (hf : ∀ (z : ℂ), f ((starRingEnd ℂ) z) = (starRingEnd ℂ) (f z))\n  (z : ℂ) : deriv f ((starRingEnd ℂ) z) = (starRingEnd ℂ) (deriv f z)",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "RH_HilbertLimit.iteratedDeriv_conj_of_schwarz",
+        "module": "RH_HilbertLimit.ActualMomentReality",
+        "signature_start_line": 74,
+        "axiom_report_start_line": 77,
+        "axiom_report_end_line": 77,
+        "printed_signature": "RH_HilbertLimit.iteratedDeriv_conj_of_schwarz {f : ℂ → ℂ}\n  (hf : ∀ (z : ℂ), f ((starRingEnd ℂ) z) = (starRingEnd ℂ) (f z)) (n : ℕ) (z : ℂ) :\n  iteratedDeriv n f ((starRingEnd ℂ) z) = (starRingEnd ℂ) (iteratedDeriv n f z)",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "RH_HilbertLimit.actualLogDerivative_conj",
+        "module": "RH_HilbertLimit.ActualMomentReality",
+        "signature_start_line": 78,
+        "axiom_report_start_line": 80,
+        "axiom_report_end_line": 80,
+        "printed_signature": "RH_HilbertLimit.actualLogDerivative_conj (z : ℂ) :\n  RH_HilbertLimit.actualLogDerivative ((starRingEnd ℂ) z) = (starRingEnd ℂ) (RH_HilbertLimit.actualLogDerivative z)",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "RH_HilbertLimit.actualLogDerivative_iteratedDeriv_conj",
+        "module": "RH_HilbertLimit.ActualMomentReality",
+        "signature_start_line": 81,
+        "axiom_report_start_line": 84,
+        "axiom_report_end_line": 84,
+        "printed_signature": "RH_HilbertLimit.actualLogDerivative_iteratedDeriv_conj (n : ℕ) (z : ℂ) :\n  iteratedDeriv n RH_HilbertLimit.actualLogDerivative ((starRingEnd ℂ) z) =\n    (starRingEnd ℂ) (iteratedDeriv n RH_HilbertLimit.actualLogDerivative z)",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "RH_HilbertLimit.actualComplexMoment_conj",
+        "module": "RH_HilbertLimit.ActualMomentReality",
+        "signature_start_line": 85,
+        "axiom_report_start_line": 87,
+        "axiom_report_end_line": 87,
+        "printed_signature": "RH_HilbertLimit.actualComplexMoment_conj (n : ℕ) :\n  (starRingEnd ℂ) (RH_HilbertLimit.actualComplexMoment n) = RH_HilbertLimit.actualComplexMoment n",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "RH_HilbertLimit.actualComplexMoment_im_eq_zero",
+        "module": "RH_HilbertLimit.ActualMomentReality",
+        "signature_start_line": 88,
+        "axiom_report_start_line": 89,
+        "axiom_report_end_line": 89,
+        "printed_signature": "RH_HilbertLimit.actualComplexMoment_im_eq_zero (n : ℕ) : (RH_HilbertLimit.actualComplexMoment n).im = 0",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "RH_HilbertLimit.actualComplexMoment_eq_ofReal_actualMoment",
+        "module": "RH_HilbertLimit.ActualMomentReality",
+        "signature_start_line": 90,
+        "axiom_report_start_line": 92,
+        "axiom_report_end_line": 92,
+        "printed_signature": "RH_HilbertLimit.actualComplexMoment_eq_ofReal_actualMoment (n : ℕ) :\n  RH_HilbertLimit.actualComplexMoment n = ↑(RH_HilbertLimit.actualMoment n)",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "RH_HilbertLimit.canonicalNode_mass_one",
+        "module": "RH_HilbertLimit.CanonicalBridge",
+        "signature_start_line": 93,
+        "axiom_report_start_line": 94,
+        "axiom_report_end_line": 94,
+        "printed_signature": "RH_HilbertLimit.canonicalNode_mass_one : HasSum RH_HilbertLimit.canonicalNode 1",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "RH_HilbertLimit.canonicalNode_power_sum_zero",
+        "module": "RH_HilbertLimit.CanonicalBridge",
+        "signature_start_line": 95,
+        "axiom_report_start_line": 97,
+        "axiom_report_end_line": 97,
+        "printed_signature": "RH_HilbertLimit.canonicalNode_power_sum_zero :\n  HasSum (fun i => RH_HilbertLimit.canonicalNode i ^ (0 + 1)) ↑(RH_HilbertLimit.actualNormalizedMoment 0)",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "RH_HilbertLimit.CanonicalPowerSums",
+        "module": "RH_HilbertLimit.CanonicalBridge",
+        "signature_start_line": 98,
+        "axiom_report_start_line": 99,
+        "axiom_report_end_line": 99,
+        "printed_signature": "RH_HilbertLimit.CanonicalPowerSums : Prop",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "RH_HilbertLimit.canonicalCalibration",
+        "module": "RH_HilbertLimit.CanonicalBridge",
+        "signature_start_line": 100,
+        "axiom_report_start_line": 102,
+        "axiom_report_end_line": 102,
+        "printed_signature": "RH_HilbertLimit.canonicalCalibration (hpower : RH_HilbertLimit.CanonicalPowerSums) :\n  RH_HilbertLimit.ActualSpectralCalibration AngularMaster.ActualPairIndex",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "RH_HilbertLimit.canonical_actual_root_tendsto",
+        "module": "RH_HilbertLimit.CanonicalBridge",
+        "signature_start_line": 103,
+        "axiom_report_start_line": 107,
+        "axiom_report_end_line": 107,
+        "printed_signature": "RH_HilbertLimit.canonical_actual_root_tendsto (hpower : RH_HilbertLimit.CanonicalPowerSums)\n  (hExtract : RH_HilbertLimit.DominantExtraction (RH_HilbertLimit.canonicalCalibration hpower)) :\n  Filter.Tendsto (RH_HilbertLimit.rootScale RH_HilbertLimit.actualVariation) Filter.atTop\n    (nhds (RH_HilbertLimit.spectralRadius RH_HilbertLimit.canonicalNode))",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "RH_HilbertLimit.canonical_actual_natural_growth_step_iff_nativeRH",
+        "module": "RH_HilbertLimit.CanonicalBridge",
+        "signature_start_line": 108,
+        "axiom_report_start_line": 111,
+        "axiom_report_end_line": 113,
+        "printed_signature": "RH_HilbertLimit.canonical_actual_natural_growth_step_iff_nativeRH (hpower : RH_HilbertLimit.CanonicalPowerSums)\n  (hExtract : RH_HilbertLimit.DominantExtraction (RH_HilbertLimit.canonicalCalibration hpower)) :\n  (∃ K, RH_HilbertLimit.NaturalGrowthStep RH_HilbertLimit.actualVariation K) ↔ RiemannHypothesis",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "RH_HilbertLimit.canonical_actual_natural_bound_iff_nativeRH",
+        "module": "RH_HilbertLimit.CanonicalBridge",
+        "signature_start_line": 114,
+        "axiom_report_start_line": 117,
+        "axiom_report_end_line": 117,
+        "printed_signature": "RH_HilbertLimit.canonical_actual_natural_bound_iff_nativeRH (hpower : RH_HilbertLimit.CanonicalPowerSums)\n  (hExtract : RH_HilbertLimit.DominantExtraction (RH_HilbertLimit.canonicalCalibration hpower)) :\n  (∃ B, ∀ (n : ℕ), RH_HilbertLimit.actualVariation n ≤ ↑B) ↔ RiemannHypothesis",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ]
+  },
+  "coverage_limits": {
+    "reported_final_audit_declarations": 303,
+    "individually_visible_matching_records": 28,
+    "expected_records_not_visible_count": 275,
+    "expected_records_not_visible": [
+      {
+        "module": "AWPIRH.XiCore",
+        "declaration": "AWPIRH.xi_differentiable",
+        "tsv_line": 2
+      },
+      {
+        "module": "AWPIRH.XiCore",
+        "declaration": "AWPIRH.xi_reflection",
+        "tsv_line": 3
+      },
+      {
+        "module": "AWPIRH.XiCore",
+        "declaration": "AWPIRH.centeredXi_differentiable",
+        "tsv_line": 4
+      },
+      {
+        "module": "AWPIRH.XiCore",
+        "declaration": "AWPIRH.centeredXi_even",
+        "tsv_line": 5
+      },
+      {
+        "module": "AWPIRH.XiCore",
+        "declaration": "AWPIRH.nontrivialZero_ne_zero",
+        "tsv_line": 6
+      },
+      {
+        "module": "AWPIRH.XiCore",
+        "declaration": "AWPIRH.gammaR_ne_zero_of_nontrivialZero",
+        "tsv_line": 7
+      },
+      {
+        "module": "AWPIRH.XiCore",
+        "declaration": "AWPIRH.completedZeta_zero_of_nontrivialZero",
+        "tsv_line": 8
+      },
+      {
+        "module": "AWPIRH.XiCore",
+        "declaration": "AWPIRH.xi_eq_completed",
+        "tsv_line": 9
+      },
+      {
+        "module": "AWPIRH.XiCore",
+        "declaration": "AWPIRH.xi_zero_of_nontrivialZero",
+        "tsv_line": 10
+      },
+      {
+        "module": "AWPIRH.XiCore",
+        "declaration": "AWPIRH.xi_ne_zero_of_one_le_re",
+        "tsv_line": 11
+      },
+      {
+        "module": "AWPIRH.XiCore",
+        "declaration": "AWPIRH.complex_sqrt_sq",
+        "tsv_line": 12
+      },
+      {
+        "module": "AWPIRH.XiCore",
+        "declaration": "AWPIRH.theta_square",
+        "tsv_line": 13
+      },
+      {
+        "module": "AWPIRH.XiCore",
+        "declaration": "AWPIRH.theta_one",
+        "tsv_line": 14
+      },
+      {
+        "module": "AWPIRH.XiCore",
+        "declaration": "AWPIRH.theta_one_ne_zero",
+        "tsv_line": 15
+      },
+      {
+        "module": "AWPIRH.XiCore",
+        "declaration": "AWPIRH.theta_zero_of_nontrivialZero",
+        "tsv_line": 16
+      },
+      {
+        "module": "AWPIRH.ThetaEntire",
+        "declaration": "AWPIRH.sqrt_differentiableAt_one",
+        "tsv_line": 17
+      },
+      {
+        "module": "AWPIRH.ThetaEntire",
+        "declaration": "AWPIRH.sqrt_continuousAt_zero",
+        "tsv_line": 18
+      },
+      {
+        "module": "AWPIRH.ThetaEntire",
+        "declaration": "AWPIRH.normalizedSqrt_sq",
+        "tsv_line": 19
+      },
+      {
+        "module": "AWPIRH.ThetaEntire",
+        "declaration": "AWPIRH.normalizedSqrt_differentiableAt",
+        "tsv_line": 20
+      },
+      {
+        "module": "AWPIRH.ThetaEntire",
+        "declaration": "AWPIRH.theta_eq_normalizedSqrt",
+        "tsv_line": 21
+      },
+      {
+        "module": "AWPIRH.ThetaEntire",
+        "declaration": "AWPIRH.theta_differentiableAt_of_ne_zero",
+        "tsv_line": 22
+      },
+      {
+        "module": "AWPIRH.ThetaEntire",
+        "declaration": "AWPIRH.theta_continuousAt_zero",
+        "tsv_line": 23
+      },
+      {
+        "module": "AWPIRH.ThetaEntire",
+        "declaration": "AWPIRH.theta_analyticAt_zero",
+        "tsv_line": 24
+      },
+      {
+        "module": "AWPIRH.ThetaEntire",
+        "declaration": "AWPIRH.theta_differentiable",
+        "tsv_line": 25
+      },
+      {
+        "module": "AWPIRH.ThetaEntire",
+        "declaration": "AWPIRH.theta_analyticAt",
+        "tsv_line": 26
+      },
+      {
+        "module": "AWPIRH.ThetaEntire",
+        "declaration": "AWPIRH.theta_entire",
+        "tsv_line": 27
+      },
+      {
+        "module": "AWPIRH.ThetaEntire",
+        "declaration": "AWPIRH.theta_continuous",
+        "tsv_line": 28
+      },
+      {
+        "module": "RH_HilbertLimit.Bernstein",
+        "declaration": "RH_HilbertLimit.momentFunctional_monomial",
+        "tsv_line": 29
+      },
+      {
+        "module": "RH_HilbertLimit.Bernstein",
+        "declaration": "RH_HilbertLimit.momentFunctional_one",
+        "tsv_line": 30
+      },
+      {
+        "module": "RH_HilbertLimit.Bernstein",
+        "declaration": "RH_HilbertLimit.momentFunctional_C_mul",
+        "tsv_line": 31
+      },
+      {
+        "module": "RH_HilbertLimit.Bernstein",
+        "declaration": "RH_HilbertLimit.bernsteinPolynomial_expansion",
+        "tsv_line": 32
+      },
+      {
+        "module": "RH_HilbertLimit.Bernstein",
+        "declaration": "RH_HilbertLimit.momentFunctional_bernsteinPolynomial",
+        "tsv_line": 33
+      },
+      {
+        "module": "RH_HilbertLimit.Bernstein",
+        "declaration": "RH_HilbertLimit.polynomial_moment_hasSum",
+        "tsv_line": 34
+      },
+      {
+        "module": "RH_HilbertLimit.Bernstein",
+        "declaration": "RH_HilbertLimit.bernsteinWeight_hasSum",
+        "tsv_line": 35
+      },
+      {
+        "module": "RH_HilbertLimit.Bernstein",
+        "declaration": "RH_HilbertLimit.bernsteinWeight_zero_zero",
+        "tsv_line": 36
+      },
+      {
+        "module": "RH_HilbertLimit.Bernstein",
+        "declaration": "RH_HilbertLimit.rowVariation_zero",
+        "tsv_line": 37
+      },
+      {
+        "module": "RH_HilbertLimit.Bernstein",
+        "declaration": "RH_HilbertLimit.sum_bernsteinWeight_eq",
+        "tsv_line": 38
+      },
+      {
+        "module": "RH_HilbertLimit.Bernstein",
+        "declaration": "RH_HilbertLimit.sum_bernsteinWeight_eq_one",
+        "tsv_line": 39
+      },
+      {
+        "module": "RH_HilbertLimit.Bernstein",
+        "declaration": "RH_HilbertLimit.rowVariation_nonneg",
+        "tsv_line": 40
+      },
+      {
+        "module": "RH_HilbertLimit.Bernstein",
+        "declaration": "RH_HilbertLimit.one_le_rowVariation",
+        "tsv_line": 41
+      },
+      {
+        "module": "RH_HilbertLimit.Bernstein",
+        "declaration": "RH_HilbertLimit.rowVariation_eq_one_iff",
+        "tsv_line": 42
+      },
+      {
+        "module": "RH_HilbertLimit.Bernstein",
+        "declaration": "RH_HilbertLimit.bernsteinWeight_coarsening",
+        "tsv_line": 43
+      },
+      {
+        "module": "RH_HilbertLimit.Bernstein",
+        "declaration": "RH_HilbertLimit.rowVariation_le_succ",
+        "tsv_line": 44
+      },
+      {
+        "module": "RH_HilbertLimit.Bernstein",
+        "declaration": "RH_HilbertLimit.rowVariation_monotone",
+        "tsv_line": 45
+      },
+      {
+        "module": "RH_HilbertLimit.Bernstein",
+        "declaration": "RH_HilbertLimit.all_rowVariation_eq_one_iff",
+        "tsv_line": 46
+      },
+      {
+        "module": "RH_HilbertLimit.Growth",
+        "declaration": "RH_HilbertLimit.rootScale_eq_exp_logScale",
+        "tsv_line": 47
+      },
+      {
+        "module": "RH_HilbertLimit.Growth",
+        "declaration": "RH_HilbertLimit.log_rootScale_eq_logScale",
+        "tsv_line": 48
+      },
+      {
+        "module": "RH_HilbertLimit.Growth",
+        "declaration": "RH_HilbertLimit.logScale_tendsto_iff_rootScale_tendsto",
+        "tsv_line": 49
+      },
+      {
+        "module": "RH_HilbertLimit.Growth",
+        "declaration": "RH_HilbertLimit.logScale_zero_iff_rootScale_one",
+        "tsv_line": 50
+      },
+      {
+        "module": "RH_HilbertLimit.Growth",
+        "declaration": "RH_HilbertLimit.eventually_pos_of_geometric_lower",
+        "tsv_line": 51
+      },
+      {
+        "module": "RH_HilbertLimit.Growth",
+        "declaration": "RH_HilbertLimit.geometric_sandwich_log_tendsto",
+        "tsv_line": 52
+      },
+      {
+        "module": "RH_HilbertLimit.Growth",
+        "declaration": "RH_HilbertLimit.geometric_sandwich_root_tendsto",
+        "tsv_line": 53
+      },
+      {
+        "module": "RH_HilbertLimit.Growth",
+        "declaration": "RH_HilbertLimit.block_lower_to_eventual_lower",
+        "tsv_line": 54
+      },
+      {
+        "module": "RH_HilbertLimit.Growth",
+        "declaration": "RH_HilbertLimit.root_tendsto_of_monotone_block_bounds",
+        "tsv_line": 55
+      },
+      {
+        "module": "RH_HilbertLimit.Growth",
+        "declaration": "RH_HilbertLimit.subexponential_of_eventual_exp_upper",
+        "tsv_line": 56
+      },
+      {
+        "module": "RH_HilbertLimit.Growth",
+        "declaration": "RH_HilbertLimit.subexponential_of_logScale_tendsto_zero",
+        "tsv_line": 57
+      },
+      {
+        "module": "RH_HilbertLimit.Growth",
+        "declaration": "RH_HilbertLimit.log_limit_nonpos_of_subexponential",
+        "tsv_line": 58
+      },
+      {
+        "module": "RH_HilbertLimit.Growth",
+        "declaration": "RH_HilbertLimit.logScale_tendsto_zero_of_subexponential",
+        "tsv_line": 59
+      },
+      {
+        "module": "RH_HilbertLimit.Growth",
+        "declaration": "RH_HilbertLimit.subexponential_iff_logScale_zero",
+        "tsv_line": 60
+      },
+      {
+        "module": "RH_HilbertLimit.Growth",
+        "declaration": "RH_HilbertLimit.subexponential_iff_rootScale_one",
+        "tsv_line": 61
+      },
+      {
+        "module": "RH_HilbertLimit.Growth",
+        "declaration": "RH_HilbertLimit.rate_le_one_of_subexponential",
+        "tsv_line": 62
+      },
+      {
+        "module": "RH_HilbertLimit.Growth",
+        "declaration": "RH_HilbertLimit.geometric_rate_eq_one_iff_subexponential",
+        "tsv_line": 63
+      },
+      {
+        "module": "RH_HilbertLimit.Growth",
+        "declaration": "RH_HilbertLimit.geometric_root_one_iff_rate_one",
+        "tsv_line": 64
+      },
+      {
+        "module": "RH_HilbertLimit.Growth",
+        "declaration": "RH_HilbertLimit.geometric_root_one_iff_subexponential",
+        "tsv_line": 65
+      },
+      {
+        "module": "RH_HilbertLimit.Geometry",
+        "declaration": "RH_HilbertLimit.one_le_ellipseRadius",
+        "tsv_line": 66
+      },
+      {
+        "module": "RH_HilbertLimit.Geometry",
+        "declaration": "RH_HilbertLimit.ellipseRadius_eq_one_iff",
+        "tsv_line": 67
+      },
+      {
+        "module": "RH_HilbertLimit.Geometry",
+        "declaration": "RH_HilbertLimit.ellipseRadius_le_one_iff",
+        "tsv_line": 68
+      },
+      {
+        "module": "RH_HilbertLimit.Geometry",
+        "declaration": "RH_HilbertLimit.one_lt_ellipseRadius_iff",
+        "tsv_line": 69
+      },
+      {
+        "module": "RH_HilbertLimit.Geometry",
+        "declaration": "RH_HilbertLimit.spectralBounded_of_norm_bound",
+        "tsv_line": 70
+      },
+      {
+        "module": "RH_HilbertLimit.Geometry",
+        "declaration": "RH_HilbertLimit.one_le_spectralRadius",
+        "tsv_line": 71
+      },
+      {
+        "module": "RH_HilbertLimit.Geometry",
+        "declaration": "RH_HilbertLimit.ellipseRadius_le_spectralRadius",
+        "tsv_line": 72
+      },
+      {
+        "module": "RH_HilbertLimit.Geometry",
+        "declaration": "RH_HilbertLimit.spectralRadius_eq_sSup_range",
+        "tsv_line": 73
+      },
+      {
+        "module": "RH_HilbertLimit.Geometry",
+        "declaration": "RH_HilbertLimit.spectralRadius_eq_one_iff",
+        "tsv_line": 74
+      },
+      {
+        "module": "RH_HilbertLimit.Geometry",
+        "declaration": "RH_HilbertLimit.one_lt_spectralRadius_of_node",
+        "tsv_line": 75
+      },
+      {
+        "module": "RH_HilbertLimit.Geometry",
+        "declaration": "RH_HilbertLimit.norm_affine_le_ellipseRadius",
+        "tsv_line": 76
+      },
+      {
+        "module": "RH_HilbertLimit.Geometry",
+        "declaration": "RH_HilbertLimit.rootOfNode_nonpositive_iff",
+        "tsv_line": 77
+      },
+      {
+        "module": "RH_HilbertLimit.Geometry",
+        "declaration": "RH_HilbertLimit.square_nonpositive_iff_re_zero",
+        "tsv_line": 78
+      },
+      {
+        "module": "RH_HilbertLimit.ActualXi",
+        "declaration": "RH_HilbertLimit.xi_zero_iff_nontrivialZero",
+        "tsv_line": 79
+      },
+      {
+        "module": "RH_HilbertLimit.ActualXi",
+        "declaration": "RH_HilbertLimit.nativeRH_iff_xiZerosCritical",
+        "tsv_line": 80
+      },
+      {
+        "module": "RH_HilbertLimit.ActualXi",
+        "declaration": "RH_HilbertLimit.nativeRH_iff_thetaZerosNonpositive",
+        "tsv_line": 81
+      },
+      {
+        "module": "RH_HilbertLimit.ActualXi",
+        "declaration": "RH_HilbertLimit.actualNormalizedMoment_zero",
+        "tsv_line": 82
+      },
+      {
+        "module": "RH_HilbertLimit.ActualXi",
+        "declaration": "RH_HilbertLimit.ActualSpectralCalibration.complexMoment_eq_real",
+        "tsv_line": 83
+      },
+      {
+        "module": "RH_HilbertLimit.ActualXi",
+        "declaration": "RH_HilbertLimit.ActualSpectralCalibration.mass_one",
+        "tsv_line": 84
+      },
+      {
+        "module": "RH_HilbertLimit.ActualXi",
+        "declaration": "RH_HilbertLimit.ActualSpectralCalibration.re_mass_one",
+        "tsv_line": 85
+      },
+      {
+        "module": "RH_HilbertLimit.ActualXi",
+        "declaration": "RH_HilbertLimit.ActualSpectralCalibration.norm_node_le_total",
+        "tsv_line": 86
+      },
+      {
+        "module": "RH_HilbertLimit.ActualXi",
+        "declaration": "RH_HilbertLimit.ActualSpectralCalibration.bounded",
+        "tsv_line": 87
+      },
+      {
+        "module": "RH_HilbertLimit.ActualXi",
+        "declaration": "RH_HilbertLimit.ActualSpectralCalibration.nodes_nonnegative_iff_nativeRH",
+        "tsv_line": 88
+      },
+      {
+        "module": "RH_HilbertLimit.ActualXi",
+        "declaration": "RH_HilbertLimit.ActualSpectralCalibration.nodes_segment_iff_nativeRH",
+        "tsv_line": 89
+      },
+      {
+        "module": "RH_HilbertLimit.ActualXi",
+        "declaration": "RH_HilbertLimit.ActualSpectralCalibration.radius_one_iff_nativeRH",
+        "tsv_line": 90
+      },
+      {
+        "module": "RH_HilbertLimit.Spectral",
+        "declaration": "RH_HilbertLimit.norm_spectralTerm",
+        "tsv_line": 91
+      },
+      {
+        "module": "RH_HilbertLimit.Spectral",
+        "declaration": "RH_HilbertLimit.sum_norm_spectralTerm",
+        "tsv_line": 92
+      },
+      {
+        "module": "RH_HilbertLimit.Spectral",
+        "declaration": "RH_HilbertLimit.norm_spectralTerm_le",
+        "tsv_line": 93
+      },
+      {
+        "module": "RH_HilbertLimit.Spectral",
+        "declaration": "RH_HilbertLimit.spectralTerm_re_nonneg",
+        "tsv_line": 94
+      },
+      {
+        "module": "RH_HilbertLimit.Spectral",
+        "declaration": "RH_HilbertLimit.norm_rowGenerating_le",
+        "tsv_line": 95
+      },
+      {
+        "module": "RH_HilbertLimit.Spectral",
+        "declaration": "RH_HilbertLimit.ActualSpectralCalibration.weight_hasSum",
+        "tsv_line": 96
+      },
+      {
+        "module": "RH_HilbertLimit.Spectral",
+        "declaration": "RH_HilbertLimit.ActualSpectralCalibration.variation_one_le",
+        "tsv_line": 97
+      },
+      {
+        "module": "RH_HilbertLimit.Spectral",
+        "declaration": "RH_HilbertLimit.ActualSpectralCalibration.variation_monotone",
+        "tsv_line": 98
+      },
+      {
+        "module": "RH_HilbertLimit.Spectral",
+        "declaration": "RH_HilbertLimit.ActualSpectralCalibration.term_norm_summable",
+        "tsv_line": 99
+      },
+      {
+        "module": "RH_HilbertLimit.Spectral",
+        "declaration": "RH_HilbertLimit.ActualSpectralCalibration.variation_upper",
+        "tsv_line": 100
+      },
+      {
+        "module": "RH_HilbertLimit.Spectral",
+        "declaration": "RH_HilbertLimit.ActualSpectralCalibration.total_norm_pos",
+        "tsv_line": 101
+      },
+      {
+        "module": "RH_HilbertLimit.Spectral",
+        "declaration": "RH_HilbertLimit.ActualSpectralCalibration.weights_nonneg_of_nativeRH",
+        "tsv_line": 102
+      },
+      {
+        "module": "RH_HilbertLimit.Spectral",
+        "declaration": "RH_HilbertLimit.ActualSpectralCalibration.variation_eq_one_of_nativeRH",
+        "tsv_line": 103
+      },
+      {
+        "module": "RH_HilbertLimit.Spectral",
+        "declaration": "RH_HilbertLimit.ActualSpectralCalibration.variation_eq_one_of_radius_one",
+        "tsv_line": 104
+      },
+      {
+        "module": "RH_HilbertLimit.Vandermonde",
+        "declaration": "RH_HilbertLimit.inverseRowControl_pos",
+        "tsv_line": 105
+      },
+      {
+        "module": "RH_HilbertLimit.Vandermonde",
+        "declaration": "RH_HilbertLimit.recoveryConstant_pos",
+        "tsv_line": 106
+      },
+      {
+        "module": "RH_HilbertLimit.Vandermonde",
+        "declaration": "RH_HilbertLimit.finiteBlockMatrix_det_ne_zero",
+        "tsv_line": 107
+      },
+      {
+        "module": "RH_HilbertLimit.Vandermonde",
+        "declaration": "RH_HilbertLimit.finiteExponential_block_mulVec",
+        "tsv_line": 108
+      },
+      {
+        "module": "RH_HilbertLimit.Vandermonde",
+        "declaration": "RH_HilbertLimit.finite_exponential_recovery",
+        "tsv_line": 109
+      },
+      {
+        "module": "RH_HilbertLimit.Vandermonde",
+        "declaration": "RH_HilbertLimit.coefficient_norm_le_block_bound",
+        "tsv_line": 110
+      },
+      {
+        "module": "RH_HilbertLimit.Vandermonde",
+        "declaration": "RH_HilbertLimit.recoveryConstant_mul_pow_le_block_bound",
+        "tsv_line": 111
+      },
+      {
+        "module": "RH_HilbertLimit.Vandermonde",
+        "declaration": "RH_HilbertLimit.finite_exponential_shifted_lower",
+        "tsv_line": 112
+      },
+      {
+        "module": "RH_HilbertLimit.Vandermonde",
+        "declaration": "RH_HilbertLimit.absorb_subdominant_tail",
+        "tsv_line": 113
+      },
+      {
+        "module": "RH_HilbertLimit.Vandermonde",
+        "declaration": "RH_HilbertLimit.finite_tail_preliminary_lower",
+        "tsv_line": 114
+      },
+      {
+        "module": "RH_HilbertLimit.Vandermonde",
+        "declaration": "RH_HilbertLimit.finite_tail_block_lower",
+        "tsv_line": 115
+      },
+      {
+        "module": "RH_HilbertLimit.Vandermonde",
+        "declaration": "RH_HilbertLimit.root_tendsto_of_finite_dominant_tail",
+        "tsv_line": 116
+      },
+      {
+        "module": "RH_HilbertLimit.Main",
+        "declaration": "RH_HilbertLimit.DominantTailData.envelope",
+        "tsv_line": 117
+      },
+      {
+        "module": "RH_HilbertLimit.Main",
+        "declaration": "RH_HilbertLimit.actual_root_tendsto_of_dominant_tail",
+        "tsv_line": 118
+      },
+      {
+        "module": "RH_HilbertLimit.Main",
+        "declaration": "RH_HilbertLimit.actual_root_tendsto_of_analytic_inputs",
+        "tsv_line": 119
+      },
+      {
+        "module": "RH_HilbertLimit.Main",
+        "declaration": "RH_HilbertLimit.exists_actual_root_limit_of_analytic_inputs",
+        "tsv_line": 120
+      },
+      {
+        "module": "RH_HilbertLimit.Main",
+        "declaration": "RH_HilbertLimit.actual_root_one_iff_nativeRH_of_analytic_inputs",
+        "tsv_line": 121
+      },
+      {
+        "module": "RH_HilbertLimit.Main",
+        "declaration": "RH_HilbertLimit.actual_subexponential_iff_nativeRH_of_analytic_inputs",
+        "tsv_line": 122
+      },
+      {
+        "module": "RH_HilbertLimit.Main",
+        "declaration": "RH_HilbertLimit.actual_logScale_zero_iff_nativeRH_of_analytic_inputs",
+        "tsv_line": 123
+      },
+      {
+        "module": "RH_HilbertLimit.Main",
+        "declaration": "RH_HilbertLimit.actual_all_variation_one_iff_nativeRH_of_analytic_inputs",
+        "tsv_line": 124
+      },
+      {
+        "module": "RH_HilbertLimit.Main",
+        "declaration": "RH_HilbertLimit.actual_weights_nonnegative_iff_nativeRH_of_analytic_inputs",
+        "tsv_line": 125
+      },
+      {
+        "module": "RH_HilbertLimit.Main",
+        "declaration": "RH_HilbertLimit.actual_bounded_variation_iff_nativeRH_of_analytic_inputs",
+        "tsv_line": 126
+      },
+      {
+        "module": "RH_HilbertLimit.Main",
+        "declaration": "RH_HilbertLimit.nativeRH_of_actual_subexponential_bound",
+        "tsv_line": 127
+      },
+      {
+        "module": "AngularMaster.ZeroExclusion",
+        "declaration": "AngularMaster.entire_eq_zero_of_zero_arc",
+        "tsv_line": 128
+      },
+      {
+        "module": "AngularMaster.ZeroExclusion",
+        "declaration": "AngularMaster.circlePoint_norm_re_div",
+        "tsv_line": 129
+      },
+      {
+        "module": "RiemannHypothesis.ComplexAnalysis.GrowthRigidity",
+        "declaration": "OverflowResidueRH.differentiable_eq_affine_of_subquadraticNormGrowth",
+        "tsv_line": 130
+      },
+      {
+        "module": "RiemannHypothesis.ComplexAnalysis.RealPartGrowth",
+        "declaration": "OverflowResidueRH.eq_exp_affine_of_subquadraticLogNormGrowthAtInfinity",
+        "tsv_line": 131
+      },
+      {
+        "module": "RiemannHypothesis.ComplexAnalysis.ProximityGrowth",
+        "declaration": "OverflowResidueRH.hasSubquadraticProximityGrowthAtInfinity_of_characteristic_factors",
+        "tsv_line": 132
+      },
+      {
+        "module": "RiemannHypothesis.ComplexAnalysis.AntiHerglotz",
+        "declaration": "OverflowResidueRH.AntiHerglotzUHP.of_eventual_pointwise_tendsto_UHP",
+        "tsv_line": 133
+      },
+      {
+        "module": "RiemannHypothesis.ComplexAnalysis.LogDerivative",
+        "declaration": "OverflowResidueRH.summable_of_nonneg_fiber_tsum_le",
+        "tsv_line": 134
+      },
+      {
+        "module": "RiemannHypothesis.ComplexAnalysis.LogDerivative",
+        "declaration": "OverflowResidueRH.arctan_div_lower_rational",
+        "tsv_line": 135
+      },
+      {
+        "module": "RiemannHypothesis.HadamardProduct.GenusOne",
+        "declaration": "OverflowResidueRH.hadamardGenus1Factor_self_eq_zero",
+        "tsv_line": 136
+      },
+      {
+        "module": "RiemannHypothesis.HadamardProduct.InfiniteProducts",
+        "declaration": "OverflowResidueRH.infiniteHadamardProduct_eq_zero_at_zeroLoc",
+        "tsv_line": 137
+      },
+      {
+        "module": "RiemannHypothesis.HadamardProduct.LogDerivative",
+        "declaration": "OverflowResidueRH.HadamardZeroInvSqSummability.infiniteProduct_ne_zero",
+        "tsv_line": 138
+      },
+      {
+        "module": "RiemannHypothesis.HadamardProduct.CanonicalProductGrowth",
+        "declaration": "OverflowResidueRH.monomial_hasSubquadraticLogNormGrowthAtInfinity",
+        "tsv_line": 139
+      },
+      {
+        "module": "RiemannHypothesis.HadamardProduct.DyadicZeroCount",
+        "declaration": "OverflowResidueRH.HadamardZeroDyadicCumulativeCountData.toHadamardZeroInvSqSummability",
+        "tsv_line": 140
+      },
+      {
+        "module": "RiemannHypothesis.HadamardProduct.CanonicalProductDyadicGrowth",
+        "declaration": "OverflowResidueRH.HadamardZeroDyadicCumulativeCountData.log_norm_infiniteHadamardProduct_le_logSq",
+        "tsv_line": 141
+      },
+      {
+        "module": "RiemannHypothesis.HadamardProduct.PairedGenusOne",
+        "declaration": "OverflowResidueRH.infiniteHadamardProduct_even_of_neg_equiv",
+        "tsv_line": 142
+      },
+      {
+        "module": "RiemannHypothesis.HadamardProduct.PairedCanonicalProductGrowth",
+        "declaration": "OverflowResidueRH.HadamardZeroDyadicCumulativeCountData.log_norm_pairedQuadraticProduct_le_rLogR",
+        "tsv_line": 143
+      },
+      {
+        "module": "RiemannHypothesis.HadamardProduct.CanonicalProductDivisor",
+        "declaration": "OverflowResidueRH.logDerivativeResponse_infiniteHadamardProduct_eq_tsum_indexed",
+        "tsv_line": 144
+      },
+      {
+        "module": "RiemannHypothesis.HadamardProduct.IndexedRealZeroSign",
+        "declaration": "OverflowResidueRH.hadamardRegularizedLogDerivSeries_im_neg_of_real_indexed",
+        "tsv_line": 145
+      },
+      {
+        "module": "RiemannHypothesis.ComplexAnalysis.PoleProbe",
+        "declaration": "OverflowResidueRH.continuousAt_implies_probe_nonzero",
+        "tsv_line": 146
+      },
+      {
+        "module": "RiemannHypothesis.ComplexAnalysis.RealSymmetry",
+        "declaration": "OverflowResidueRH.complex_star_im",
+        "tsv_line": 147
+      },
+      {
+        "module": "RiemannHypothesis.RealZeros.Engine",
+        "declaration": "OverflowResidueRH.AntiHerglotzReflectionData.zeros_real",
+        "tsv_line": 148
+      },
+      {
+        "module": "RiemannHypothesis.RealZeros.EntireFunctions",
+        "declaration": "OverflowResidueRH.entire_function_roots_real_of_analytic_nontrivial",
+        "tsv_line": 149
+      },
+      {
+        "module": "RiemannHypothesis.HadamardProduct.CompletedLFunction",
+        "declaration": "OverflowResidueRH.CompletedLFunctionHadamardData.onlyRealZeros_iff_strictAntiHerglotz",
+        "tsv_line": 150
+      },
+      {
+        "module": "RiemannHypothesis.Xi.Definitions",
+        "declaration": "OverflowResidueRH.critical_shift_star",
+        "tsv_line": 151
+      },
+      {
+        "module": "RiemannHypothesis.Xi.FunctionalEquation",
+        "declaration": "OverflowResidueRH.EntireXi.schwarzReflection_holds",
+        "tsv_line": 152
+      },
+      {
+        "module": "RiemannHypothesis.Xi.Pullback",
+        "declaration": "OverflowResidueRH.EntireXiPullback_logDeriv_chain_rule",
+        "tsv_line": 153
+      },
+      {
+        "module": "RiemannHypothesis.Xi.SignTargets",
+        "declaration": "OverflowResidueRH.EntireXiPullback.zeros_real_of_sign",
+        "tsv_line": 154
+      },
+      {
+        "module": "RiemannHypothesis.Xi.CanonicalDivisor",
+        "declaration": "OverflowResidueRH.entireXiPullbackZeroOccurrenceLoc_ne_zero",
+        "tsv_line": 155
+      },
+      {
+        "module": "RiemannHypothesis.Xi.CanonicalDivisor",
+        "declaration": "OverflowResidueRH.entireXiPullbackZeroOccurrenceLoc_is_zero",
+        "tsv_line": 156
+      },
+      {
+        "module": "RiemannHypothesis.Xi.CanonicalDivisor",
+        "declaration": "OverflowResidueRH.entireXiPullbackZeroOccurrenceLoc_exhaustive",
+        "tsv_line": 157
+      },
+      {
+        "module": "RiemannHypothesis.Xi.CanonicalDivisor",
+        "declaration": "OverflowResidueRH.exists_entireXiPullbackZeroOccurrenceLoc_iff",
+        "tsv_line": 158
+      },
+      {
+        "module": "RiemannHypothesis.Xi.CanonicalDivisor",
+        "declaration": "OverflowResidueRH.EntireXiPullbackCanonicalZeroDistribution.toHadamardZeroInvSqSummability",
+        "tsv_line": 159
+      },
+      {
+        "module": "RiemannHypothesis.HadamardProduct.CanonicalProductMultiplicity",
+        "declaration": "OverflowResidueRH.entireXiPullbackCanonicalProduct_analyticOrderAt",
+        "tsv_line": 160
+      },
+      {
+        "module": "RiemannHypothesis.Xi.CanonicalProductCharacteristicGrowth",
+        "declaration": "OverflowResidueRH.entireXiPullbackCanonicalProduct_characteristic_subquadraticAtInfinity",
+        "tsv_line": 161
+      },
+      {
+        "module": "RiemannHypothesis.ComplexAnalysis.EvenAnalyticOrder",
+        "declaration": "OverflowResidueRH.analyticOrderNatAt_zero_even_of_even",
+        "tsv_line": 162
+      },
+      {
+        "module": "RiemannHypothesis.ComplexAnalysis.EntireQuotient",
+        "declaration": "OverflowResidueRH.exists_differentiable_log_entireQuotientCompletion",
+        "tsv_line": 163
+      },
+      {
+        "module": "RiemannHypothesis.Xi.BacklundTuringBridge",
+        "declaration": "OverflowResidueRH.EntireXiPullbackBacklundTuringShellBound.toCanonicalZeroDistribution",
+        "tsv_line": 164
+      },
+      {
+        "module": "RiemannHypothesis.GammaCancellation.PoleSet",
+        "declaration": "OverflowResidueRH.gammaPoleAvoidingNeighborhoodSource",
+        "tsv_line": 165
+      },
+      {
+        "module": "RiemannHypothesis.GammaCancellation.CompletedZeta",
+        "declaration": "OverflowResidueRH.xi_completedZeta_correction_algebra",
+        "tsv_line": 166
+      },
+      {
+        "module": "RiemannHypothesis.GammaCancellation.TextbookXi",
+        "declaration": "OverflowResidueRH.rawCompletedXiCorrectness",
+        "tsv_line": 167
+      },
+      {
+        "module": "RiemannHypothesis.Xi.RiemannHypothesisBridge",
+        "declaration": "OverflowResidueRH.entireXiPullback_zero_im_abs_lt_half",
+        "tsv_line": 168
+      },
+      {
+        "module": "RiemannHypothesis.Xi.RiemannHypothesisBridge",
+        "declaration": "OverflowResidueRH.riemannHypothesis_iff_entireXiPullback_zeros_real",
+        "tsv_line": 169
+      },
+      {
+        "module": "RiemannHypothesis.Xi.RiemannHypothesisBridge",
+        "declaration": "OverflowResidueRH.riemannHypothesis_of_entireXi_leftHalfPlaneLogDerivSign",
+        "tsv_line": 170
+      },
+      {
+        "module": "RiemannHypothesis.Xi.ZetaMultiplicityBridge",
+        "declaration": "OverflowResidueRH.entireXiPullbackZeroOccurrence_fiber_natCard_eq_riemannZeta_order",
+        "tsv_line": 171
+      },
+      {
+        "module": "RiemannHypothesis.ZeroCounting.SmoothMainTerm",
+        "declaration": "OverflowResidueRH.zeroDensityRho_10_ge_259_div_3586",
+        "tsv_line": 172
+      },
+      {
+        "module": "RiemannHypothesis.ZeroCounting.ZetaZeros",
+        "declaration": "OverflowResidueRH.zetaWeightedZeroCountUpToHeight_eq_zero_of_nonpos",
+        "tsv_line": 173
+      },
+      {
+        "module": "RiemannHypothesis.Reduction.BacklundCanonicalDivisor",
+        "declaration": "OverflowResidueRH.ZetaBacklundTuringRemainderBound.toCanonicalZeroDistribution",
+        "tsv_line": 174
+      },
+      {
+        "module": "RiemannHypothesis.Xi.DyadicZeroCountBridge",
+        "declaration": "OverflowResidueRH.EntireXiPullbackDyadicCumulativeCountData.toCanonicalZeroDistribution",
+        "tsv_line": 175
+      },
+      {
+        "module": "RiemannHypothesis.HadamardProduct.ExponentialPrefactor",
+        "declaration": "OverflowResidueRH.expAffineHadamardPullbackZeroContribution_eq_expanded",
+        "tsv_line": 176
+      },
+      {
+        "module": "RiemannHypothesis.HadamardProduct.NatZeroData",
+        "declaration": "OverflowResidueRH.NatHadamardZeroInvSqData.toHadamardZeroInvSqSummability",
+        "tsv_line": 177
+      },
+      {
+        "module": "RiemannHypothesis.HadamardProduct.RealZeroSign",
+        "declaration": "OverflowResidueRH.infiniteHadamardProduct_strictAntiHerglotz_iff_zero_sequence_real",
+        "tsv_line": 178
+      },
+      {
+        "module": "RiemannHypothesis.HadamardProduct.StrictRealZeroCriterion",
+        "declaration": "OverflowResidueRH.expAffineGenusOneProduct_strictAntiHerglotz_iff_zeros_real_of_schwarz",
+        "tsv_line": 179
+      },
+      {
+        "module": "RiemannHypothesis.HadamardProduct.OriginMultiplicityCriterion",
+        "declaration": "OverflowResidueRH.expAffineGenusOneProductWithOriginMultiplicity_strictAntiHerglotz_iff_zeros_real_of_schwarz",
+        "tsv_line": 180
+      },
+      {
+        "module": "RiemannHypothesis.Xi.StrictLagariasCriterion",
+        "declaration": "OverflowResidueRH.riemannHypothesis_iff_entireXi_lagariasPositivity",
+        "tsv_line": 181
+      },
+      {
+        "module": "RiemannHypothesis.Xi.HadamardLogDerivativeCriterion",
+        "declaration": "OverflowResidueRH.EntireXiPullbackCanonicalHadamardLogDerivativeData.b_eq_zero",
+        "tsv_line": 182
+      },
+      {
+        "module": "RiemannHypothesis.Xi.HadamardLogDerivativeCriterion",
+        "declaration": "OverflowResidueRH.EntireXiPullbackCanonicalHadamardLogDerivativeData.support_nonempty",
+        "tsv_line": 183
+      },
+      {
+        "module": "RiemannHypothesis.Xi.HadamardLogDerivativeCriterion",
+        "declaration": "OverflowResidueRH.riemannHypothesis_iff_entireXi_lagariasPositivity_of_canonicalRemainderData",
+        "tsv_line": 184
+      },
+      {
+        "module": "RiemannHypothesis.Xi.CanonicalQuotientCriterion",
+        "declaration": "OverflowResidueRH.riemannHypothesis_iff_entireXi_lagariasPositivity_of_dyadicCount_explicitLogGrowth",
+        "tsv_line": 185
+      },
+      {
+        "module": "RiemannHypothesis.Xi.CanonicalProductSymmetry",
+        "declaration": "OverflowResidueRH.entireXiPullbackCanonicalQuotientLog_neg",
+        "tsv_line": 186
+      },
+      {
+        "module": "RiemannHypothesis.Xi.CanonicalQuotientLogNormGrowth",
+        "declaration": "OverflowResidueRH.riemannHypothesis_iff_entireXi_lagariasPositivity_of_dyadicCount_and_quotientMaxGrowth",
+        "tsv_line": 187
+      },
+      {
+        "module": "RiemannHypothesis.Xi.CanonicalQuotientCharacteristicGrowth",
+        "declaration": "OverflowResidueRH.riemannHypothesis_iff_lagarias_of_dyadicCount_xiLogNorm_productCharacteristic",
+        "tsv_line": 188
+      },
+      {
+        "module": "RiemannHypothesis.ComplexAnalysis.MellinGrowth",
+        "declaration": "OverflowResidueRH.MellinTwoSidedExponentialDecay.norm_mellin_le_factorial",
+        "tsv_line": 189
+      },
+      {
+        "module": "RiemannHypothesis.Xi.ThetaKernelMellinGrowth",
+        "declaration": "OverflowResidueRH.hurwitzThetaMellinKernel_convergent",
+        "tsv_line": 190
+      },
+      {
+        "module": "RiemannHypothesis.ComplexAnalysis.FactorialDyadicGrowth",
+        "declaration": "OverflowResidueRH.exists_factorialDyadic_orderOne_bound",
+        "tsv_line": 191
+      },
+      {
+        "module": "RiemannHypothesis.Xi.JensenDyadicCountBridge",
+        "declaration": "OverflowResidueRH.riemannHypothesis_iff_entireXi_lagariasPositivity_of_subquadraticBoundaryLog_explicit",
+        "tsv_line": 192
+      },
+      {
+        "module": "RiemannHypothesis.Xi.EntireXiMellinGrowth",
+        "declaration": "OverflowResidueRH.norm_entireXiPullback_le_factorial_of_norm_le_nat",
+        "tsv_line": 193
+      },
+      {
+        "module": "RiemannHypothesis.Xi.EntireXiMellinGrowth",
+        "declaration": "OverflowResidueRH.entireXiPullbackThetaDyadicBoundaryGrowthData",
+        "tsv_line": 194
+      },
+      {
+        "module": "RiemannHypothesis.Xi.EntireXiMellinGrowth",
+        "declaration": "OverflowResidueRH.entireXiPullbackCanonicalZeroDistributionFromTheta",
+        "tsv_line": 195
+      },
+      {
+        "module": "RiemannHypothesis.Xi.EntireXiLogNormGrowth",
+        "declaration": "OverflowResidueRH.entireXiPullback_hasSubquadraticLogNormGrowthAtInfinity",
+        "tsv_line": 196
+      },
+      {
+        "module": "RiemannHypothesis.Xi.CanonicalQuotientThetaCharacteristicGrowth",
+        "declaration": "OverflowResidueRH.entireXiPullback_exists_constant_factorization_of_theta_productCharacteristic",
+        "tsv_line": 197
+      },
+      {
+        "module": "RiemannHypothesis.Xi.UnconditionalLagariasEquivalence",
+        "declaration": "OverflowResidueRH.entireXiPullbackCanonicalQuotientLogNormGrowthDataUnconditional",
+        "tsv_line": 198
+      },
+      {
+        "module": "RiemannHypothesis.Xi.UnconditionalLagariasEquivalence",
+        "declaration": "OverflowResidueRH.entireXiPullbackCanonicalHadamardLogDerivativeDataUnconditional",
+        "tsv_line": 199
+      },
+      {
+        "module": "RiemannHypothesis.Xi.UnconditionalLagariasEquivalence",
+        "declaration": "OverflowResidueRH.entireXiPullback_exists_constant_factorization_unconditional",
+        "tsv_line": 200
+      },
+      {
+        "module": "RiemannHypothesis.Xi.UnconditionalLagariasEquivalence",
+        "declaration": "OverflowResidueRH.entireXiPullback_logDerivative_canonicalExpansion_unconditional",
+        "tsv_line": 201
+      },
+      {
+        "module": "RiemannHypothesis.Xi.UnconditionalLagariasEquivalence",
+        "declaration": "OverflowResidueRH.riemannHypothesis_iff_entireXi_lagariasPositivity_unconditional",
+        "tsv_line": 202
+      },
+      {
+        "module": "RiemannHypothesis.Xi.CompletedLFunctionInstance",
+        "declaration": "OverflowResidueRH.entireXiPullback_onlyRealZeros_iff_strictAntiHerglotz_generic",
+        "tsv_line": 203
+      },
+      {
+        "module": "RiemannHypothesis.Xi.CanonicalProductPairedGrowth",
+        "declaration": "OverflowResidueRH.entireXiPullbackZeroOccurrenceNegationPairingData",
+        "tsv_line": 204
+      },
+      {
+        "module": "RiemannHypothesis.Xi.CanonicalProductPairedGrowth",
+        "declaration": "OverflowResidueRH.entireXiPullbackInfiniteHadamardProduct_eq_pairedQuadraticProduct",
+        "tsv_line": 205
+      },
+      {
+        "module": "RiemannHypothesis.Xi.CanonicalProductPairedGrowth",
+        "declaration": "OverflowResidueRH.entireXiPullbackNonzeroCanonicalProduct_norm_le_exp_rLogR",
+        "tsv_line": 206
+      },
+      {
+        "module": "AngularMaster.ActualHadamard",
+        "declaration": "AngularMaster.external_entireRiemannXi_eq_actual_xi",
+        "tsv_line": 207
+      },
+      {
+        "module": "AngularMaster.ActualHadamard",
+        "declaration": "AngularMaster.actual_theta_eq_external_pullback",
+        "tsv_line": 208
+      },
+      {
+        "module": "AngularMaster.ActualHadamard",
+        "declaration": "AngularMaster.external_pullback_eq_actual_theta",
+        "tsv_line": 209
+      },
+      {
+        "module": "AngularMaster.ActualHadamard",
+        "declaration": "AngularMaster.transformed_quadratic_factor",
+        "tsv_line": 210
+      },
+      {
+        "module": "AngularMaster.ActualHadamard",
+        "declaration": "AngularMaster.transformed_root_norm_sq",
+        "tsv_line": 211
+      },
+      {
+        "module": "AngularMaster.ActualHadamard",
+        "declaration": "AngularMaster.actualPairZero_ne_zero",
+        "tsv_line": 212
+      },
+      {
+        "module": "AngularMaster.ActualHadamard",
+        "declaration": "AngularMaster.actualZeroScale_inv_summable",
+        "tsv_line": 213
+      },
+      {
+        "module": "AngularMaster.ActualHadamard",
+        "declaration": "AngularMaster.circlePoint_norm",
+        "tsv_line": 214
+      },
+      {
+        "module": "AngularMaster.ComplexScaleProduct",
+        "declaration": "AngularMaster.actualComplexScale_ne_zero",
+        "tsv_line": 215
+      },
+      {
+        "module": "AngularMaster.ComplexScaleProduct",
+        "declaration": "AngularMaster.norm_actualComplexScale",
+        "tsv_line": 216
+      },
+      {
+        "module": "AngularMaster.ComplexScaleProduct",
+        "declaration": "AngularMaster.actualComplexScale_inv_norm_summable",
+        "tsv_line": 217
+      },
+      {
+        "module": "AngularMaster.ComplexScaleProduct",
+        "declaration": "AngularMaster.actualComplexScale_norm_inv_summable",
+        "tsv_line": 218
+      },
+      {
+        "module": "AngularMaster.ComplexScaleProduct",
+        "declaration": "AngularMaster.actual_complexScaleProduct_multipliable",
+        "tsv_line": 219
+      },
+      {
+        "module": "AngularMaster.ComplexScaleProduct",
+        "declaration": "AngularMaster.actual_theta_complex_factorization",
+        "tsv_line": 220
+      },
+      {
+        "module": "AngularMaster.ComplexScaleProduct",
+        "declaration": "AngularMaster.actual_theta_neg_complexScale_zero",
+        "tsv_line": 221
+      },
+      {
+        "module": "AngularMaster.ComplexScaleProduct",
+        "declaration": "AngularMaster.actual_xi_conj",
+        "tsv_line": 222
+      },
+      {
+        "module": "AngularMaster.ComplexScaleProduct",
+        "declaration": "AngularMaster.actual_theta_conj",
+        "tsv_line": 223
+      },
+      {
+        "module": "AngularMaster.ComplexScaleProduct",
+        "declaration": "AngularMaster.actual_theta_norm_conj",
+        "tsv_line": 224
+      },
+      {
+        "module": "AngularMaster.ComplexScaleProduct",
+        "declaration": "AngularMaster.actual_theta_normSq_conj",
+        "tsv_line": 225
+      },
+      {
+        "module": "AngularMaster.ZeroGeometry",
+        "declaration": "AngularMaster.theta_zero_conj",
+        "tsv_line": 226
+      },
+      {
+        "module": "AngularMaster.QQRHGeometry",
+        "declaration": "AngularMaster.QQRH_of_theta_sector_nonvanishing",
+        "tsv_line": 227
+      },
+      {
+        "module": "AngularMaster.LowHeightGeometry",
+        "declaration": "AngularMaster.square_angle_le_cutoff_of_le_abs_im",
+        "tsv_line": 228
+      },
+      {
+        "module": "AngularMaster.LowHeightGeometry",
+        "declaration": "AngularMaster.theta_zero_angle_le_neg_three_fifths_of_height",
+        "tsv_line": 229
+      },
+      {
+        "module": "AngularMaster.LowHeightGeometry",
+        "declaration": "AngularMaster.actualComplexScale_sector_of_zero_height",
+        "tsv_line": 230
+      },
+      {
+        "module": "AngularMaster.ThetaKernelExplicitBound",
+        "declaration": "AngularMaster.hurwitzThetaMellinKernel_explicit_upper_bound",
+        "tsv_line": 231
+      },
+      {
+        "module": "AngularMaster.ZeroFreeSeed",
+        "declaration": "AngularMaster.norm_mul_sub_one_le_two",
+        "tsv_line": 232
+      },
+      {
+        "module": "AngularMaster.ZeroFreeSeed",
+        "declaration": "AngularMaster.actual_xi_ne_zero_of_low_height",
+        "tsv_line": 233
+      },
+      {
+        "module": "AngularMaster.ZeroFreeSeed",
+        "declaration": "AngularMaster.actual_xi_zero_one_lt_abs_im",
+        "tsv_line": 234
+      },
+      {
+        "module": "OriginTrace",
+        "declaration": "AngularMaster.affineProduct_hasProdLocallyUniformlyOn_origin",
+        "tsv_line": 235
+      },
+      {
+        "module": "OriginTrace",
+        "declaration": "AngularMaster.logDeriv_affineProduct_zero",
+        "tsv_line": 236
+      },
+      {
+        "module": "OriginTrace",
+        "declaration": "AngularMaster.actual_theta_zero_ne_zero",
+        "tsv_line": 237
+      },
+      {
+        "module": "OriginTrace",
+        "declaration": "AngularMaster.actual_originMultiplicity_eq_zero",
+        "tsv_line": 238
+      },
+      {
+        "module": "OriginTrace",
+        "declaration": "AngularMaster.actual_theta_normalized_complex_factorization",
+        "tsv_line": 239
+      },
+      {
+        "module": "OriginTrace",
+        "declaration": "AngularMaster.actual_theta_origin_logDeriv_eq_tsum",
+        "tsv_line": 240
+      },
+      {
+        "module": "OriginTrace",
+        "declaration": "AngularMaster.actualComplexScale_inv_re_summable",
+        "tsv_line": 241
+      },
+      {
+        "module": "OriginTrace",
+        "declaration": "AngularMaster.actual_theta_origin_real_trace",
+        "tsv_line": 242
+      },
+      {
+        "module": "RH_HilbertLimit.ActualCalibrationProgress",
+        "declaration": "RH_HilbertLimit.actualComplexMoment_zero_eq_canonical_trace",
+        "tsv_line": 243
+      },
+      {
+        "module": "RH_HilbertLimit.ActualCalibrationProgress",
+        "declaration": "RH_HilbertLimit.actualKappa_eq_canonical_trace",
+        "tsv_line": 244
+      },
+      {
+        "module": "RH_HilbertLimit.ActualCalibrationProgress",
+        "declaration": "RH_HilbertLimit.actualPairIndex_nonempty",
+        "tsv_line": 245
+      },
+      {
+        "module": "RH_HilbertLimit.ActualCalibrationProgress",
+        "declaration": "RH_HilbertLimit.actualInverseScale_re_pos",
+        "tsv_line": 246
+      },
+      {
+        "module": "RH_HilbertLimit.ActualCalibrationProgress",
+        "declaration": "RH_HilbertLimit.actualKappa_pos",
+        "tsv_line": 247
+      },
+      {
+        "module": "RH_HilbertLimit.ActualCalibrationProgress",
+        "declaration": "RH_HilbertLimit.actualTheta_zero_has_canonical_scale",
+        "tsv_line": 248
+      },
+      {
+        "module": "RH_HilbertLimit.ActualCalibrationProgress",
+        "declaration": "RH_HilbertLimit.canonicalNode",
+        "tsv_line": 249
+      },
+      {
+        "module": "RH_HilbertLimit.ActualCalibrationProgress",
+        "declaration": "RH_HilbertLimit.canonicalNode_ne_zero",
+        "tsv_line": 250
+      },
+      {
+        "module": "RH_HilbertLimit.ActualCalibrationProgress",
+        "declaration": "RH_HilbertLimit.canonicalNode_eq_inverseScale_mul",
+        "tsv_line": 251
+      },
+      {
+        "module": "RH_HilbertLimit.ActualCalibrationProgress",
+        "declaration": "RH_HilbertLimit.canonicalNode_norm_summable",
+        "tsv_line": 252
+      },
+      {
+        "module": "RH_HilbertLimit.ActualCalibrationProgress",
+        "declaration": "RH_HilbertLimit.canonicalNode_root_eq",
+        "tsv_line": 253
+      },
+      {
+        "module": "RH_HilbertLimit.ActualCalibrationProgress",
+        "declaration": "RH_HilbertLimit.canonicalNode_root_zero",
+        "tsv_line": 254
+      },
+      {
+        "module": "RH_HilbertLimit.ActualCalibrationProgress",
+        "declaration": "RH_HilbertLimit.canonicalNode_covers",
+        "tsv_line": 255
+      },
+      {
+        "module": "RH_HilbertLimit.ActualCalibrationProgress",
+        "declaration": "RH_HilbertLimit.canonicalCalibration_of_moment_identities",
+        "tsv_line": 256
+      },
+      {
+        "module": "RH_HilbertLimit.GrowthStep",
+        "declaration": "RH_HilbertLimit.NaturalGrowthStep",
+        "tsv_line": 257
+      },
+      {
+        "module": "RH_HilbertLimit.GrowthStep",
+        "declaration": "RH_HilbertLimit.exp_bound_of_eventual_mul_step",
+        "tsv_line": 258
+      },
+      {
+        "module": "RH_HilbertLimit.GrowthStep",
+        "declaration": "RH_HilbertLimit.subexponential_of_eventual_mul_steps",
+        "tsv_line": 259
+      },
+      {
+        "module": "RH_HilbertLimit.GrowthStep",
+        "declaration": "RH_HilbertLimit.subexponential_of_natural_growth_step",
+        "tsv_line": 260
+      },
+      {
+        "module": "RH_HilbertLimit.GrowthStep",
+        "declaration": "RH_HilbertLimit.actual_growth_step_zero_of_nativeRH",
+        "tsv_line": 261
+      },
+      {
+        "module": "RH_HilbertLimit.GrowthStep",
+        "declaration": "RH_HilbertLimit.actual_exists_natural_growth_step_iff_nativeRH_of_analytic_inputs",
+        "tsv_line": 262
+      },
+      {
+        "module": "RH_HilbertLimit.GrowthStep",
+        "declaration": "RH_HilbertLimit.actual_exists_natural_bound_iff_nativeRH_of_analytic_inputs",
+        "tsv_line": 263
+      },
+      {
+        "module": "RH_HilbertLimit.FinitePrefix",
+        "declaration": "RH_HilbertLimit.FinitePrefix.bernsteinWeight_congr_prefix",
+        "tsv_line": 264
+      },
+      {
+        "module": "RH_HilbertLimit.FinitePrefix",
+        "declaration": "RH_HilbertLimit.FinitePrefix.rowVariation_congr_prefix",
+        "tsv_line": 265
+      },
+      {
+        "module": "RH_HilbertLimit.FinitePrefix",
+        "declaration": "RH_HilbertLimit.FinitePrefix.bernsteinWeight_diagonal",
+        "tsv_line": 266
+      },
+      {
+        "module": "RH_HilbertLimit.FinitePrefix",
+        "declaration": "RH_HilbertLimit.FinitePrefix.abs_weight_le_rowVariation",
+        "tsv_line": 267
+      },
+      {
+        "module": "RH_HilbertLimit.FinitePrefix",
+        "declaration": "RH_HilbertLimit.FinitePrefix.abs_moment_le_rowVariation",
+        "tsv_line": 268
+      },
+      {
+        "module": "RH_HilbertLimit.FinitePrefix",
+        "declaration": "RH_HilbertLimit.FinitePrefix.bernsteinWeight_constant_one_nonneg",
+        "tsv_line": 269
+      },
+      {
+        "module": "RH_HilbertLimit.FinitePrefix",
+        "declaration": "RH_HilbertLimit.FinitePrefix.rowVariation_constant_one",
+        "tsv_line": 270
+      },
+      {
+        "module": "RH_HilbertLimit.FinitePrefix",
+        "declaration": "RH_HilbertLimit.FinitePrefix.exponentialTail",
+        "tsv_line": 271
+      },
+      {
+        "module": "RH_HilbertLimit.FinitePrefix",
+        "declaration": "RH_HilbertLimit.FinitePrefix.exponentialTail_agrees",
+        "tsv_line": 272
+      },
+      {
+        "module": "RH_HilbertLimit.FinitePrefix",
+        "declaration": "RH_HilbertLimit.FinitePrefix.exponentialTail_zero",
+        "tsv_line": 273
+      },
+      {
+        "module": "RH_HilbertLimit.FinitePrefix",
+        "declaration": "RH_HilbertLimit.FinitePrefix.exponentialTail_rowVariation_agrees",
+        "tsv_line": 274
+      },
+      {
+        "module": "RH_HilbertLimit.FinitePrefix",
+        "declaration": "RH_HilbertLimit.FinitePrefix.exponentialTail_rootScale_agrees",
+        "tsv_line": 275
+      },
+      {
+        "module": "RH_HilbertLimit.FinitePrefix",
+        "declaration": "RH_HilbertLimit.FinitePrefix.exponentialTail_variation_lower",
+        "tsv_line": 276
+      }
+    ],
+    "truncation": "The excerpt begins with the declaration that is target 276 of the current 303-entry list. The 28 complete records form targets 276 through 303; records for targets 1 through 275 are absent from this supplied excerpt.",
+    "interpretation": "FINAL_AUDIT_DECLARATIONS=303 is a visible runner-reported total, not 303 independently visible axiom records. Missing earlier records do not by themselves indicate an audit failure."
+  },
+  "reported_run_summary": {
+    "markers": {
+      "ANCHOR_SAVE_LAYOUT": "COMPACT_V1",
+      "ANCHOR_SAVED": "C:\\Users\\Simon\\AppData\\Local\\LEAN_ANCHORINGS\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\6c336235f91ff235\\fb7f637d29669dd8db5a7f925b5521d7\\01a17e7870e01d0f\\receipt.txt",
+      "COMPILE_AND_AXIOM_AUDIT_PASS": "EquivalenceAudit",
+      "FINAL_AUDIT_DECLARATIONS": "303",
+      "AXIOM_AUDIT": "PASS_STANDARD_LOGICAL_AXIOMS_ONLY",
+      "SORRYAX": "NONE",
+      "MATHEMATICAL_STATUS": "CONDITIONAL_PARTIAL",
+      "ACTUAL_SPECTRAL_CALIBRATION": "OPEN",
+      "DOMINANT_EXTRACTION": "OPEN",
+      "UNCONDITIONAL_ACTUAL_LIMIT": "NOT_CERTIFIED",
+      "ACTUAL_SUBEXPONENTIAL_BOUND": "OPEN",
+      "UNCONDITIONAL_RH": "NOT_ESTABLISHED",
+      "FINITE_ACCEPTED_WITNESS": "NOT_ESTABLISHED",
+      "FINITE_CHECKER_EQUIVALENCE": "OPEN",
+      "COMPILED_MODULES": "3",
+      "FROZEN_REUSED_MODULES": "82",
+      "AUDIT_ONLY_MODULES": "0",
+      "LEGACY_MIGRATED_MODULES": "0",
+      "PROJECT_BUILD": "PASS",
+      "RUN": "PASS",
+      "WORKING_ARTIFACT_MODULES_RETAINED": "0",
+      "RESTORED_ARTIFACT_FILES": "82",
+      "ANCHOR_HISTORY_SCANS": "3",
+      "COMPACT_ANCHORS_SAVED": "3"
+    },
+    "marker_lines": {
+      "ANCHOR_SAVE_LAYOUT": 119,
+      "ANCHOR_SAVED": 120,
+      "COMPILE_AND_AXIOM_AUDIT_PASS": 121,
+      "FINAL_AUDIT_DECLARATIONS": 122,
+      "AXIOM_AUDIT": 123,
+      "SORRYAX": 124,
+      "MATHEMATICAL_STATUS": 125,
+      "ACTUAL_SPECTRAL_CALIBRATION": 126,
+      "DOMINANT_EXTRACTION": 127,
+      "UNCONDITIONAL_ACTUAL_LIMIT": 128,
+      "ACTUAL_SUBEXPONENTIAL_BOUND": 129,
+      "UNCONDITIONAL_RH": 130,
+      "FINITE_ACCEPTED_WITNESS": 131,
+      "FINITE_CHECKER_EQUIVALENCE": 132,
+      "COMPILED_MODULES": 133,
+      "FROZEN_REUSED_MODULES": 134,
+      "AUDIT_ONLY_MODULES": 135,
+      "LEGACY_MIGRATED_MODULES": 136,
+      "PROJECT_BUILD": 137,
+      "RUN": 138,
+      "WORKING_ARTIFACT_MODULES_RETAINED": 139,
+      "RESTORED_ARTIFACT_FILES": 140,
+      "ANCHOR_HISTORY_SCANS": 141,
+      "COMPACT_ANCHORS_SAVED": 142
+    },
+    "compiled_modules": 3,
+    "frozen_reused_modules": 82,
+    "compiled_plus_reused_reported_total": 85,
+    "interpretation": "The excerpt reports native project/build/axiom PASS and 3 compiled plus 82 reused modules. Earlier module records and cache verification receipts are not present for independent checking.",
+    "package_path_evidence": {
+      "line": 143,
+      "text": "Logs: C:\\Users\\Simon\\Downloads\\RH_HILBERT_LIMIT_LEAN_v0_2_5_construction\\run-build.log and C:\\Users\\Simon\\Downloads\\RH_HILBERT_LIMIT_LEAN_v0_2_5_construction\\run-audit.log",
+      "package_directory_label": "RH_HILBERT_LIMIT_LEAN_v0_2_5_construction",
+      "startup_package_field_visible": false,
+      "startup_runner_field_visible": false,
+      "interpretation": "The final log paths name a v0.2.5 directory. This is not an independently verified runner/source version; no startup PACKAGE/RUNNER fingerprint is shown."
+    },
+    "anchor_receipt_path_reported": "C:\\Users\\Simon\\AppData\\Local\\LEAN_ANCHORINGS\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\6c336235f91ff235\\fb7f637d29669dd8db5a7f925b5521d7\\01a17e7870e01d0f\\receipt.txt",
+    "anchor_receipt_contents_available": false
+  },
+  "directly_visible_canonical_endpoints": [
+    {
+      "declaration": "RH_HilbertLimit.canonicalNode_mass_one",
+      "module": "RH_HilbertLimit.CanonicalBridge",
+      "signature_start_line": 93,
+      "axiom_report_start_line": 94,
+      "axiom_report_end_line": 94,
+      "printed_signature": "RH_HilbertLimit.canonicalNode_mass_one : HasSum RH_HilbertLimit.canonicalNode 1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "RH_HilbertLimit.canonicalNode_power_sum_zero",
+      "module": "RH_HilbertLimit.CanonicalBridge",
+      "signature_start_line": 95,
+      "axiom_report_start_line": 97,
+      "axiom_report_end_line": 97,
+      "printed_signature": "RH_HilbertLimit.canonicalNode_power_sum_zero :\n  HasSum (fun i => RH_HilbertLimit.canonicalNode i ^ (0 + 1)) ↑(RH_HilbertLimit.actualNormalizedMoment 0)",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "RH_HilbertLimit.CanonicalPowerSums",
+      "module": "RH_HilbertLimit.CanonicalBridge",
+      "signature_start_line": 98,
+      "axiom_report_start_line": 99,
+      "axiom_report_end_line": 99,
+      "printed_signature": "RH_HilbertLimit.CanonicalPowerSums : Prop",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "RH_HilbertLimit.canonicalCalibration",
+      "module": "RH_HilbertLimit.CanonicalBridge",
+      "signature_start_line": 100,
+      "axiom_report_start_line": 102,
+      "axiom_report_end_line": 102,
+      "printed_signature": "RH_HilbertLimit.canonicalCalibration (hpower : RH_HilbertLimit.CanonicalPowerSums) :\n  RH_HilbertLimit.ActualSpectralCalibration AngularMaster.ActualPairIndex",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "RH_HilbertLimit.canonical_actual_root_tendsto",
+      "module": "RH_HilbertLimit.CanonicalBridge",
+      "signature_start_line": 103,
+      "axiom_report_start_line": 107,
+      "axiom_report_end_line": 107,
+      "printed_signature": "RH_HilbertLimit.canonical_actual_root_tendsto (hpower : RH_HilbertLimit.CanonicalPowerSums)\n  (hExtract : RH_HilbertLimit.DominantExtraction (RH_HilbertLimit.canonicalCalibration hpower)) :\n  Filter.Tendsto (RH_HilbertLimit.rootScale RH_HilbertLimit.actualVariation) Filter.atTop\n    (nhds (RH_HilbertLimit.spectralRadius RH_HilbertLimit.canonicalNode))",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "RH_HilbertLimit.canonical_actual_natural_growth_step_iff_nativeRH",
+      "module": "RH_HilbertLimit.CanonicalBridge",
+      "signature_start_line": 108,
+      "axiom_report_start_line": 111,
+      "axiom_report_end_line": 113,
+      "printed_signature": "RH_HilbertLimit.canonical_actual_natural_growth_step_iff_nativeRH (hpower : RH_HilbertLimit.CanonicalPowerSums)\n  (hExtract : RH_HilbertLimit.DominantExtraction (RH_HilbertLimit.canonicalCalibration hpower)) :\n  (∃ K, RH_HilbertLimit.NaturalGrowthStep RH_HilbertLimit.actualVariation K) ↔ RiemannHypothesis",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "RH_HilbertLimit.canonical_actual_natural_bound_iff_nativeRH",
+      "module": "RH_HilbertLimit.CanonicalBridge",
+      "signature_start_line": 114,
+      "axiom_report_start_line": 117,
+      "axiom_report_end_line": 117,
+      "printed_signature": "RH_HilbertLimit.canonical_actual_natural_bound_iff_nativeRH (hpower : RH_HilbertLimit.CanonicalPowerSums)\n  (hExtract : RH_HilbertLimit.DominantExtraction (RH_HilbertLimit.canonicalCalibration hpower)) :\n  (∃ B, ∀ (n : ℕ), RH_HilbertLimit.actualVariation n ≤ ↑B) ↔ RiemannHypothesis",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  ],
+  "visible_unconditional_reality_endpoints": [
+    "RH_HilbertLimit.actualComplexMoment_conj",
+    "RH_HilbertLimit.actualComplexMoment_im_eq_zero",
+    "RH_HilbertLimit.actualComplexMoment_eq_ofReal_actualMoment"
+  ],
+  "mathematical_scope": {
+    "canonical_mass": "canonicalNode_mass_one and canonicalNode_power_sum_zero are printed without analytic premises.",
+    "power_sum_definition_is_not_a_proof": "CanonicalPowerSums : Prop is a definition/type entry. Printing its axiom dependencies does not supply a proof of its universal identities.",
+    "calibration_constructor": "canonicalCalibration explicitly takes hpower : CanonicalPowerSums.",
+    "canonical_endpoint_premises": [
+      "hpower : RH_HilbertLimit.CanonicalPowerSums",
+      "hExtract : RH_HilbertLimit.DominantExtraction (RH_HilbertLimit.canonicalCalibration hpower)"
+    ],
+    "conditional_endpoint_count": 3,
+    "canonical_endpoint_conclusions": [
+      "The actual root-scale sequence tends to spectralRadius canonicalNode.",
+      "Existence of a natural K satisfying NaturalGrowthStep actualVariation K is equivalent to RiemannHypothesis.",
+      "Existence of a natural B bounding actualVariation at every natural index is equivalent to RiemannHypothesis."
+    ],
+    "current_source_interpretation": "CanonicalPowerSums universally quantifies power-sum identities over n. DominantExtraction assumes a finite dominant expansion with a uniform all-N tail bound when spectral radius exceeds 1. NaturalGrowthStep universally quantifies its inequality over n. The natural K/B parameters do not make these universal predicates terminating Boolean checkers.",
+    "finite_checker_equivalence": "OPEN",
+    "finite_accepted_witness": "NOT_ESTABLISHED",
+    "unconditional_rh": "NOT_ESTABLISHED",
+    "new_derivation_performed": false
+  },
+  "current_source_context_only": [
+    {
+      "path": "/workspace/scratch/f128c1434505/output/RH_HILBERT_LIMIT_LEAN_v0_2_7_construction/RH_HilbertLimit/CanonicalBridge.lean",
+      "sha256": "103d1917e0fa30b2ec50fb03217176235ebd045d65c3740eba5914f4860822fd",
+      "purpose": "Interpretation of current source definitions only; not identity verification of the uploaded native run.",
+      "excerpts": [
+        {
+          "start_line": 54,
+          "end_line": 65,
+          "text": "/-- The remaining analytic calibration obligation.  This is an explicit\nuniversal identity, not finite raw data and not a computable checker. -/\ndef CanonicalPowerSums : Prop :=\n  ∀ n : ℕ, HasSum\n    (fun i : AngularMaster.ActualPairIndex => canonicalNode i ^ (n + 1))\n    (actualNormalizedMoment n : ℂ)\n\n/-- All calibration fields except the displayed power-sum identities are\nfilled by source proofs about the actual xi function. -/\ndef canonicalCalibration (hpower : CanonicalPowerSums) :\n    ActualSpectralCalibration AngularMaster.ActualPairIndex :=\n  canonicalCalibration_of_moment_identities actualComplexMoment_im_eq_zero hpower"
+        },
+        {
+          "start_line": 69,
+          "end_line": 91,
+          "text": "theorem canonical_actual_root_tendsto\n    (hpower : CanonicalPowerSums)\n    (hExtract : DominantExtraction (canonicalCalibration hpower)) :\n    Tendsto (rootScale actualVariation) atTop (𝓝 (spectralRadius canonicalNode)) := by\n  exact actual_root_tendsto_of_analytic_inputs (canonicalCalibration hpower) hExtract\n\n/-- Semantic natural-parameter criterion.  Its admissibility remains\nall-order; it is not the requested finite-checker equivalence. -/\ntheorem canonical_actual_natural_growth_step_iff_nativeRH\n    (hpower : CanonicalPowerSums)\n    (hExtract : DominantExtraction (canonicalCalibration hpower)) :\n    (∃ K : ℕ, NaturalGrowthStep actualVariation K) ↔ _root_.RiemannHypothesis :=\n  actual_exists_natural_growth_step_iff_nativeRH_of_analytic_inputs\n    (canonicalCalibration hpower) hExtract\n\n/-- A natural bound exists under RH, while the universally quantified\nverification of that bound remains an analytic obligation. -/\ntheorem canonical_actual_natural_bound_iff_nativeRH\n    (hpower : CanonicalPowerSums)\n    (hExtract : DominantExtraction (canonicalCalibration hpower)) :\n    (∃ B : ℕ, ∀ n : ℕ, actualVariation n ≤ (B : ℝ)) ↔ _root_.RiemannHypothesis :=\n  actual_exists_natural_bound_iff_nativeRH_of_analytic_inputs\n    (canonicalCalibration hpower) hExtract"
+        }
+      ]
+    },
+    {
+      "path": "/workspace/scratch/f128c1434505/output/RH_HILBERT_LIMIT_LEAN_v0_2_7_construction/RH_HilbertLimit/GrowthStep.lean",
+      "sha256": "07fa8dfc108c4dd5dabb844719d84a5b0f09c56f92960e90e085017a216839b5",
+      "purpose": "Interpretation of current source definitions only; not identity verification of the uploaded native run.",
+      "excerpts": [
+        {
+          "start_line": 27,
+          "end_line": 31,
+          "text": "/-- A bound on every successive increment.  The number `K` is finite raw\ndata, but this predicate is an infinite mathematical obligation, not a Bool\nchecker and not a finite certificate. -/\ndef NaturalGrowthStep (V : ℕ → ℝ) (K : ℕ) : Prop :=\n  ∀ n : ℕ, ((n : ℝ) + 1) * (V (n + 1) - V n) ≤ (K : ℝ) * V n"
+        }
+      ]
+    },
+    {
+      "path": "/workspace/scratch/f128c1434505/output/RH_HILBERT_LIMIT_LEAN_v0_2_7_construction/RH_HilbertLimit/Main.lean",
+      "sha256": "3b04858da84d6e0331228db9c020a562b6395f7dc0c5d0a54ae3c23387919081",
+      "purpose": "Interpretation of current source definitions only; not identity verification of the uploaded native run.",
+      "excerpts": [
+        {
+          "start_line": 30,
+          "end_line": 55,
+          "text": "/-- A finite dominant exponential part and its strictly smaller tail.\nThis is analytic proof data, not a finite raw-data certificate. -/\nstructure DominantTailData {ι : Type*} (D : ActualSpectralCalibration ι) where\n  width : ℕ\n  rate : Fin width → ℂ\n  coefficient : Fin width → ℂ\n  distinguished : Fin width\n  rates_injective : Function.Injective rate\n  coefficient_ne_zero : coefficient distinguished ≠ 0\n  rates_radius : ∀ i, ‖rate i‖ = spectralRadius D.node\n  phase : ℂ\n  phase_norm : ‖phase‖ ≤ 1\n  tail : ℕ → ℂ\n  tailConstant : ℝ\n  tailRate : ℝ\n  tailConstant_nonneg : 0 ≤ tailConstant\n  tailRate_one_le : 1 ≤ tailRate\n  tailRate_lt : tailRate < spectralRadius D.node\n  expansion : ∀ N,\n    rowGenerating actualNormalizedMoment N phase =\n      finiteExponentialSum rate coefficient N + tail N\n  tail_bound : ∀ N, ‖tail N‖ ≤ tailConstant * tailRate ^ N\n\n/-- The infinite-spectrum extraction obligation, needed only in the case R>1. -/\ndef DominantExtraction {ι : Type*} (D : ActualSpectralCalibration ι) : Prop :=\n  1 < spectralRadius D.node → Nonempty (DominantTailData D)"
+        }
+      ]
+    }
+  ],
+  "conclusions": [
+    "All 28 individually visible complete axiom-report records match current expected target names and contain only the three permitted standard logical axioms.",
+    "The supplied excerpt reports successful final compilation/audit and RUN=PASS; it does not expose all 303 records or the earlier receipt-validation chain.",
+    "The canonical root and RH-equivalence signatures visibly retain both remaining analytic premises.",
+    "The evidence does not independently bind this reported native run to the current v0.2.7 optimized runner or current source bytes.",
+    "Formal finite raw-witness / terminating-checker equivalence and unconditional RH remain open in the displayed evidence."
+  ],
+  "inconsistencies_found": [],
+  "evidence_not_available": [
+    "Complete startup output",
+    "Native compiler identity/fingerprint output",
+    "Native runner/source/dependency fingerprint manifests",
+    "Contents of saved native anchor receipts",
+    "Earlier 275 final-audit records",
+    "Full records for 3 compiled and 82 reused modules",
+    "Independent execution reproducing the uploaded run"
+  ],
+  "review_execution_limits": {
+    "read_only_inputs": true,
+    "source_or_output_edits": false,
+    "only_written_file": "/workspace/scratch/f128c1434505/tmp/native_pass_v028/independent_evidence_review.json",
+    "not_executed": [
+      "Lean",
+      "Lake",
+      "native Windows runner",
+      "C#",
+      "CI"
+    ],
+    "not_claimed": [
+      "Independent native rerun",
+      "Native success of the v0.2.7 optimized runner",
+      "Unconditional RH",
+      "A finite accepted witness or terminating-checker equivalence"
+    ]
+  }
+}

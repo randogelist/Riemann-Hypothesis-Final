@@ -1,0 +1,60 @@
+{
+  "schema": "RH_V0214_TEST_USAGE_V1",
+  "command": "node focused_review.js --package-root /absolute/package --report /absolute/output/mock_report.json",
+  "scope": "Node VM/in-memory host only; not Lean, native Windows, or performance verification.",
+  "status": "PASS",
+  "passed": 15,
+  "failed": 0,
+  "runner_sha256": "828af9d989ae820ad43784839a2d140fe3f7495a55c7e43e66df3e1d145bbb02",
+  "shutdown_retry_sha256": "32dd483658af0764a1e123973e4a2928eeb50bee2fb3f2e6e86230bf43eee925",
+  "old_v0213_scenarios_rerun": false,
+  "old_host_reused": true,
+  "whole_wsh_entry_point_executed": false,
+  "COM_setter_adaptations": 7,
+  "harness_files": {
+    "mock_host.js": {
+      "bytes": 13674,
+      "sha256": "525da25dd590b785537bf6885a43df1e56462870a545cd9692159f4ced53e590"
+    },
+    "runtime_host.js": {
+      "bytes": 11382,
+      "sha256": "3805fac27c8bfefb147d475d960befd8e1859bade4cad677058d50a01da0c2d7"
+    },
+    "candidate_sources.js": {
+      "bytes": 6724,
+      "sha256": "92ddba93bcb792dc369b0774e38b8d5cebd20f1af68dc3628780452e52aa5eb8"
+    },
+    "shutdown_retry_source.js": {
+      "bytes": 2727,
+      "sha256": "be0eb2e438e44bd6c99a6cb250ef6a6c0308377f915bb6894a9f20114e410d5f"
+    },
+    "focused_review.js": {
+      "bytes": 15443,
+      "sha256": "d05a247d91ad59e2cd9478de2425ffa8f2a4713c5642534562e1f7747b4a10ba"
+    }
+  },
+  "simulated_boundaries": [
+    "Windows filesystem",
+    "WMI process and memory snapshots",
+    "certutil SHA output",
+    "compiler and audit process results",
+    "clock and sleeps",
+    "receipts and lock filesystem records"
+  ],
+  "checked_real_function_bodies": [
+    "acquireRunnerLock",
+    "assertNoLockWorkers",
+    "unreadableLockWorkerError",
+    "parallelAssertShutdownInventory",
+    "parallelShutdownInventory",
+    "parallelShutdown",
+    "releaseRunnerLock",
+    "parallelLiveProcesses",
+    "processModulesParallel",
+    "parallelMemoryAllowsLaunch",
+    "parallelTrySerialFallback",
+    "processModuleBody",
+    "finalAudit"
+  ],
+  "native_proof_and_axiom_status": "NOT_RUN_HERE"
+}

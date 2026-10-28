@@ -1,0 +1,59 @@
+{
+  "review": "READ_ONLY_ENDPOINT_REUSE_EVIDENCE",
+  "evidence_class": "USER_REPORTED_NATIVE_REUSE_PASS",
+  "transcript": {
+    "path": "/workspace/scratch/f128c1434505/tmp/reuse_record_v0216/evidence/USER_NATIVE_REUSE_TAIL.txt",
+    "sha256": "d4c7ca9f9d6b20e4d0085f7c3cbdd2105957263746b2bb0bb6668bdb81d07f15",
+    "bytes": 2014,
+    "kind": "User-message transcription; not independently obtained native log bytes."
+  },
+  "baseline_endpoint_checklist": {
+    "path": "/workspace/scratch/f128c1434505/output/RH_HILBERT_LIMIT_LEAN_v0_2_16_construction/CHECKPOINT.json",
+    "sha256": "fbeece4958dbd0c64586961369f96d103e37ffb57bef26e10853dd355459f565",
+    "declaration_count": 10,
+    "selected_audit": "AnalyticAudit.lean",
+    "axiom_targets": 370
+  },
+  "directly_reported": {
+    "FINAL_AUDIT_START": "AnalyticAudit.lean",
+    "FROZEN_REUSE": "AnalyticAudit",
+    "FINAL_AUDIT_DECLARATIONS": "370",
+    "AXIOM_AUDIT": "PASS_STANDARD_LOGICAL_AXIOMS_ONLY",
+    "SORRYAX": "NONE",
+    "MATHEMATICAL_STATUS": "ANALYTIC_CRITERIA_AUDITED_FINITE_CHECKER_OPEN",
+    "CANONICAL_POWER_SUMS": "EXACT_CONSTRUCTION_AUDITED",
+    "ACTUAL_SPECTRAL_CALIBRATION": "EXACT_CONSTRUCTION_AUDITED",
+    "DOMINANT_EXTRACTION": "EXACT_CONSTRUCTION_AUDITED",
+    "UNCONDITIONAL_ACTUAL_LIMIT": "ROOT_SCALE_LIMIT_DECLARATION_AUDITED",
+    "ORDINARY_LIMIT_SEQUENCE": "rootScale actualVariation",
+    "ACTUAL_SUBEXPONENTIAL_BOUND": "OPEN",
+    "UNCONDITIONAL_RH": "NOT_ESTABLISHED",
+    "FINITE_ACCEPTED_WITNESS": "NOT_ESTABLISHED",
+    "FINITE_CHECKER_EQUIVALENCE": "OPEN",
+    "FORMAL_CLOSURE": "OPEN",
+    "COMPILED_MODULES": "0",
+    "FROZEN_REUSED_MODULES": "90",
+    "AUDIT_ONLY_MODULES": "0",
+    "PROJECT_BUILD": "PASS",
+    "RUN": "PASS"
+  },
+  "matches_checklist_audit_and_target_count": true,
+  "matches_prior_conditional_warm_count_prediction": true,
+  "warm_counts_are_now_user_reported_observed": true,
+  "audit_interpretation": "The excerpt explicitly reports accepted frozen reuse of AnalyticAudit, 370 final targets, standard-logical-axiom PASS and no sorryAx. It reports 90 reused modules, zero compiled modules and zero audit-only modules. This is reported reuse of recorded audits; it is not evidence of a fresh recompilation of the declarations.",
+  "reported_receipt_path": "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\306d31ec023b7765\\efe6a0ea0d5554bca15985613c6d0eb2\\01a17f23ecf728ce\\receipt.txt",
+  "independent_native_receipt_content_inspection": false,
+  "independent_native_type_or_per_declaration_axiom_inspection": false,
+  "independent_native_source_artifact_toolchain_hash_verification": false,
+  "frozen_endpoint_policy": {
+    "exact_statements": "Preserve all ten exact endpoint declarations in the baseline CHECKPOINT.json and all Lean-source bytes unchanged.",
+    "ordinary_limit": "The audited sequence is rootScale actualVariation; its source statement identifies the limit as spectralRadius canonicalNode, without claiming that this value is one.",
+    "analytic_equivalences": "The source checklist retains root-limit-one, subexponential, all-variation-one, nonnegative-weight and all-order natural-parameter equivalences to actual RH.",
+    "finite_checker_equivalence": "OPEN",
+    "formal_closure": "OPEN",
+    "finite_raw_checker_distinction": "Finite B or K with an all-order admissibility condition does not by itself give a terminating raw-witness checker. No checker-equivalence statement or accepted finite witness is newly supplied by this run.",
+    "unconditional_rh": "NOT_ESTABLISHED"
+  },
+  "changes_made_by_this_review": "Only this JSON evidence review was written. No Lean source, runtime source, proof statement or policy was changed.",
+  "native_or_test_execution": "NONE"
+}

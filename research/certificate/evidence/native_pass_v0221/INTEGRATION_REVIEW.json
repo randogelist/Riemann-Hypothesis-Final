@@ -1,0 +1,299 @@
+{
+  "schema": "RH_V0221_NATIVE_PASS_CHECKPOINT_INDEPENDENT_STATIC_REVIEW_V1",
+  "status": "STATIC_INTEGRATION_REVIEW_ONLY",
+  "reviewer": "/root/regression_review",
+  "baseline": "output/RH_HILBERT_LIMIT_LEAN_v0_2_20_construction",
+  "candidate": "output/RH_HILBERT_LIMIT_LEAN_v0_2_21_construction",
+  "package_files_edited": false,
+  "executions": {
+    "Lean": false,
+    "Lake": false,
+    "native_runner": false,
+    "Windows": false,
+    "WSH": false,
+    "CSharp": false,
+    "CI": false,
+    "mocks": false
+  },
+  "checks": {
+    "all_96_lean_sources_byte_identical": true,
+    "no_mathematical_source_invalidation": true,
+    "all_build_audit_dependency_manifests_byte_identical": true,
+    "active_plan_92_ordinary_plus_selected_aggregate": true,
+    "active_local_topology_and_import_membership_valid": true,
+    "394_exact_aggregate_check_and_axiom_targets": true,
+    "runner_changes_only_two_identity_constants": true,
+    "launcher_and_native_helpers_byte_identical": true,
+    "inventory_1129_identity_and_order_preserved": true,
+    "exactly_394_selected_inventory_records_updated": true,
+    "735_unselected_inventory_records_exact_object_bytes_preserved": true,
+    "selected_record_hashes_status_and_evidence_valid": true,
+    "explicit14_vs_aggregate380_scope_separation_correct": true,
+    "user_message_transcript_and_native_evidence_fields_consistent": true,
+    "frozen_source_manifest_exact": true,
+    "semantic_endpoint_signatures_and_universal_obligation_preserved": true,
+    "finite_checker_formal_closure_and_unconditional_RH_not_promoted": true,
+    "future_93_reuse_0_compile_counts_explicitly_conditional": true,
+    "no_assistant_native_execution_or_receipt_verification_claimed": true
+  },
+  "all_listed_static_checks_satisfied": true,
+  "blockers": [],
+  "sources": {
+    "baseline_count": 96,
+    "candidate_count": 96,
+    "changed": [],
+    "added": [],
+    "missing": [],
+    "evidence_subtree_excluded": true,
+    "reviewed_hashes": {
+      "RH_HilbertLimit/ActualCancellationWitness.lean": "0daeeb9fab456f2d399cc95cfda2b94c55f03d2c403b92d3a18579a0a7d622d6",
+      "RH_HilbertLimit/Cancellation.lean": "985602ead4c4b3581b6aef194a36da6ca1f78defbeaaadf328e0cf97749b9528",
+      "RH_HilbertLimit/EventualGrowth.lean": "f846d1a1b897542c460783a9ab5702ff1b713e5788fe149034d1ead5f0d178c0",
+      "CancellationAudit.lean": "2da7bb304576e2a592de29e8781685b621c28ffe794a85ae65fa50e1bcdc5891"
+    }
+  },
+  "manifests": [
+    {
+      "path": "compile-order.txt",
+      "bytes_equal": true,
+      "sha256": "c9fa315ade1df77f184f323175e1ec96cf53e5b6c054ef441ba78ce4591f974b"
+    },
+    {
+      "path": "audit-targets.tsv",
+      "bytes_equal": true,
+      "sha256": "b34e9fb2e855e03ab8e68d66883a3534bdd225aa77c6e1a02d21eccbcb1c4c9a"
+    },
+    {
+      "path": "final-audit.txt",
+      "bytes_equal": true,
+      "sha256": "b4f96eed934280134dda30493f695a985527438f4ec6511930b68368b616fdbf"
+    },
+    {
+      "path": "mathlib-imports.txt",
+      "bytes_equal": true,
+      "sha256": "0c2ef006a5917ffe890cf1483b524435038824c7116ca8fe49533d4d9a4da31c"
+    },
+    {
+      "path": "lean-toolchain",
+      "bytes_equal": true,
+      "sha256": "302cd63c54178885b89e669f33b38f12f4dd7ae7e5cac537b3203e3768d8fb2b"
+    }
+  ],
+  "plan": {
+    "ordinary_modules": 92,
+    "selected_aggregate": "CancellationAudit.lean",
+    "active_modules": 93,
+    "source_change_invalidation_cone": [],
+    "local_topology_violations": [],
+    "unscheduled_local_imports": [],
+    "eligible_reuse_if_all_matching_anchors_validate": 93,
+    "source_driven_compilations": 0,
+    "future_counts_observed": false
+  },
+  "runner": {
+    "old_sha256": "51deb1dacb580c48b5451df975521b69b5848c93d4198d19d80edbfdf2982d3b",
+    "new_sha256": "5362c7e1550711b7604682836aa220c429916c73761f5cef7a7014bebd11f81a",
+    "comparison": "Exact raw bytes after two enumerated identity constant replacements; no newline normalization.",
+    "replacements": [
+      {
+        "baseline": "var PACKAGE = \"RH_HILBERT_LIMIT_LEAN_v0_2_20_construction\";",
+        "candidate": "var PACKAGE = \"RH_HILBERT_LIMIT_LEAN_v0_2_21_construction\";",
+        "count": 1
+      },
+      {
+        "baseline": "var RUNNER_VERSION = \"RH_HILBERT_NATIVE_RUNNER_v0_2_20_ZERO_BUDGET_CAST\";",
+        "candidate": "var RUNNER_VERSION = \"RH_HILBERT_NATIVE_RUNNER_v0_2_21_SEMANTIC_PASS_CHECKPOINT\";",
+        "count": 1
+      }
+    ],
+    "runtime_algorithm_changes": false,
+    "run_cmd_sha256": "5e6c6561c370c904b13d165986f0c045c6e7732de1745744b03619cf4a4b9f16",
+    "helper_changed": [],
+    "helper_added": [],
+    "helper_missing": []
+  },
+  "inventory": {
+    "count": 1129,
+    "selected_records_updated": 394,
+    "unselected_records_byte_preserved": 735,
+    "selected_evidence_scopes": {
+      "USER_REPORTED_SELECTED_AGGREGATE_AUDIT": 380,
+      "EXPLICIT_USER_AXIOM_OUTPUT": 14
+    },
+    "selected_record_issues": [],
+    "sha256": "e2e0169ab779090455ded647f1f8aec26168b40befbf1d2465cb8235b19fdee3",
+    "scope_limit": "The reported aggregate audit applies to 394 selected targets, not to all 1129 inventory entries. The 735 nonselected entries retain their prior metadata exactly."
+  },
+  "evidence": {
+    "source": "evidence/native_pass_v0221/USER_NATIVE_V0220_PASS_TAIL.txt",
+    "sha256": "a3c8671ca646ca1e0fc601a0b952a2cbb3f1a0c95a1b8dd5fa89b2df44bf53d6",
+    "bytes": 6087,
+    "kind": "USER_MESSAGE_UTF8_LF_TRANSCRIPTION_NOT_ORIGINAL_NATIVE_LOG_BYTES",
+    "original_native_log_bytes_available": false,
+    "first_line": "'RH_HilbertLimit.subexponential_of_eventual_natural_growth_step' depends on axioms: [propext,",
+    "explicit_axiom_count": 14,
+    "explicit_axioms": {
+      "RH_HilbertLimit.subexponential_of_eventual_natural_growth_step": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "RH_HilbertLimit.subexponential_of_exists_eventual_natural_growth_step": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "RH_HilbertLimit.CancellationBudget": [],
+      "RH_HilbertLimit.CancellationBudget.Admissible": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "RH_HilbertLimit.cancellationBudget_admissible_iff_eventual_growth_step": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "RH_HilbertLimit.actual_subexponential_of_admissible_cancellationBudget": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "RH_HilbertLimit.nativeRH_of_admissible_cancellationBudget": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "RH_HilbertLimit.nativeRH_of_exists_admissible_cancellationBudget": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "RH_HilbertLimit.zero_cancellationBudget_admissible_of_nativeRH": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "RH_HilbertLimit.exists_admissible_cancellationBudget_iff_nativeRH": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "RH_HilbertLimit.nativeRH_of_exists_eventual_cancellation_bound": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "RH_HilbertLimit.CancellationBudget.LocalFlux": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "RH_HilbertLimit.cancellationBudget_admissible_of_local_flux": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "RH_HilbertLimit.nativeRH_of_exists_local_cancellation_flux": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "checks": {
+      "package_copy_matches_local_message_transcription": true,
+      "digest_and_bytes_match": true,
+      "exact_14_distinct_axiom_lists": true,
+      "axiom_lists_match_metadata": true,
+      "no_nonstandard_explicit_axioms": true,
+      "12_ActualCancellationWitness_publics_have_explicit_lists": true,
+      "overall_and_aggregate_pass_visible": true,
+      "audit_394_standard_and_no_sorry_markers_match": true,
+      "module_and_stage_times_match": true,
+      "reported_counts_match": true,
+      "logical_launches_match_and_sum": true,
+      "hash_totals_match_and_set_sum": true,
+      "receipt_path_matches": true,
+      "shutdown_clear_marker_matches": true,
+      "current_evidence_records_consistent": true,
+      "mathematical_open_markers_match": true
+    },
+    "reported_selected_aggregate_count": 394,
+    "reported_counts": {
+      "COMPILED_MODULES": 2,
+      "FROZEN_REUSED_MODULES": 91,
+      "AUDIT_ONLY_MODULES": 0,
+      "LEGACY_MIGRATED_MODULES": 0,
+      "WORKING_ARTIFACT_MODULES_RETAINED": 0,
+      "RESTORED_ARTIFACT_FILES": 91,
+      "ANCHOR_HISTORY_SCANS": 2,
+      "COMPACT_ANCHORS_SAVED": 2,
+      "COMBINED_WORKING_DIGESTS_CONSUMED": 0
+    },
+    "reported_stages_ms": {
+      "FINAL_AUDIT": 10036,
+      "WORKER_SHUTDOWN": 1044
+    },
+    "reported_logical_tool_launches": {
+      "certutil": 413,
+      "csc": 0,
+      "helper": 2,
+      "lean": 5,
+      "other": 0,
+      "ram_warm": 0,
+      "total": 420
+    },
+    "reported_hash_phase_totals": {
+      "batch_sets": 1,
+      "certutil_sets": 189,
+      "elapsed_ms": 41473,
+      "failed_sets": 0,
+      "files": 37524,
+      "sets": 190
+    },
+    "receipt_scope": "Receipt path only. No receipt content, source/dependency/toolchain fingerprint, native artifact or machine state was independently verified.",
+    "timing_scope": "The final audit and shutdown stage durations and hash-phase aggregate are reported. Hash aggregate 41473 ms is not whole-run wall time; no new v0.2.21 run or speedup was measured.",
+    "signature_scope": "Fourteen explicit axiom outputs are present. The first declaration signature preceding the opening axiom output is absent; the requested forward and equivalence signatures are both present.",
+    "shutdown_scope": "CLEAR is explicitly reported after one full inventory and no exact worker queries. No explicit lock deletion or ownership of the preexisting host is inferred."
+  },
+  "semantic_claim": {
+    "forward": "(exists W : CancellationBudget, W.Admissible) -> _root_.RiemannHypothesis",
+    "equivalence": "(exists W : CancellationBudget, W.Admissible) <-> _root_.RiemannHypothesis",
+    "basis": "Source-byte preservation plus user-supplied endpoint signatures/axiom output and reported aggregate PASS. This review itself is not a native execution.",
+    "admissibility": "For every n >= cutoff, rowCancellation actualNormalizedMoment n <= (coefficient : Real) * actualVariation n.",
+    "finite_data": "Two naturals; data existence alone is not the full hypothesis.",
+    "raw_finite_checker": "OPEN",
+    "finite_checker_soundness": "OPEN",
+    "finite_checker_completeness": "OPEN",
+    "finite_checker_equivalence": "OPEN",
+    "formal_closure": "OPEN",
+    "accepted_finite_witness": null,
+    "unconditional_RH": "NOT_ESTABLISHED"
+  },
+  "metadata_review": {
+    "read": [
+      "STATUS.json",
+      "CHECKPOINT.json",
+      "README.md",
+      "OPEN_OBLIGATIONS.txt",
+      "DECLARATIONS.json",
+      "evidence/native_pass_v0221/USER_REPORTED_NATIVE_PASS.json",
+      "evidence/native_pass_v0221/EXPLICIT_USER_AXIOM_OUTPUT.json",
+      "evidence/native_pass_v0221/SEMANTIC_ENDPOINT_REVIEW.json",
+      "evidence/native_pass_v0221/FROZEN_SOURCE_MANIFEST.json"
+    ],
+    "excluded_pending_regeneration": [
+      "STATIC_REVIEW.json",
+      "PROVENANCE.json",
+      "RUNNER_LOGIC_VALIDATION.json",
+      "SHA256SUMS.txt"
+    ],
+    "conclusion": "Current metadata accurately records the reported v0.2.20 semantic milestone without treating all inventory entries as selected targets, inventing unavailable axiom lists, claiming independent receipt validation, or closing the finite-checker goal."
+  },
+  "limitations": [
+    "No Lean, native runner/compiler, C#, Lake, CI or mocks were executed.",
+    "The user-message transcription is not an original native log file.",
+    "No new source or native proof was created by this evidence-only checkpoint.",
+    "Excluded metadata and final archive checks remain the packaging step."
+  ]
+}

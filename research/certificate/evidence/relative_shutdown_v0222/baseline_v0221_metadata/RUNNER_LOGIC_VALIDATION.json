@@ -1,0 +1,20 @@
+{
+  "schema": "RH_HILBERT_V0221_RUNTIME_IDENTITY_REVIEW_V1",
+  "status": "STATIC_ONLY_NO_NEW_NATIVE_OR_RUNTIME_EXECUTION",
+  "runner_sha256": "5362c7e1550711b7604682836aa220c429916c73761f5cef7a7014bebd11f81a",
+  "baseline_runner_sha256": "51deb1dacb580c48b5451df975521b69b5848c93d4198d19d80edbfdf2982d3b",
+  "changes": "TWO_PACKAGE_AND_VERSION_CONSTANTS_ONLY",
+  "normalized_exact_raw_byte_comparison": "MATCH",
+  "node_syntax_check": "PASSED; NO_RUNNER_OR_WINDOWS_API_EXECUTION",
+  "cache_compile_flags_scheduling_hashing_locks_shutdown": "EXACT_BASELINE_LOGIC_PRESERVED",
+  "launcher_and_native_helpers": "EXACT_BYTES_PRESERVED",
+  "prior_native_evidence": "USER_SUPPLIED_V0_2_20_RUN_PASS",
+  "candidate_native_execution": "NOT_PERFORMED",
+  "lean_execution": false,
+  "lake_execution": false,
+  "ci_execution": false,
+  "new_axiom_audit_execution": false,
+  "new_runtime_mock_execution": false,
+  "integration_review": "evidence/native_pass_v0221/INTEGRATION_REVIEW.json",
+  "integration_review_sha256": "55b68e56f988fdd1e58cfa8bdd905c78b5ea8a8317f60204299d619d1765b5f0"
+}

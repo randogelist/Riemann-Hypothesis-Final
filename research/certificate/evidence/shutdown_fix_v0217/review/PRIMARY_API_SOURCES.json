@@ -1,0 +1,20 @@
+{
+  "scope": "Primary documentation for the new process revalidation boundary; not native execution evidence.",
+  "sources": [
+    {
+      "title": "Win32_Process class",
+      "url": "https://learn.microsoft.com/en-us/windows/win32/cimwin32prov/win32-process",
+      "source_kind": "Microsoft Windows documentation",
+      "facts_used": "Process IDs can be reused after termination. CreationDate identifies when the process began. ParentProcessId alone does not establish a continuing parent identity. CommandLine is the process start command where available.",
+      "retrieval": "Public source checked in this turn; not a local Windows probe."
+    },
+    {
+      "title": "SWbemServices.ExecQuery method",
+      "url": "https://learn.microsoft.com/en-us/windows/win32/wmisdk/swbemservices-execquery",
+      "source_kind": "Microsoft Windows documentation",
+      "facts_used": "ExecQuery returns a collection that must be enumerated. A query can legitimately return an empty result set; query/access/enumeration errors are separate failures. Flags 16 and 32 select return-immediately and forward-only behavior.",
+      "retrieval": "Public source checked in this turn; not a local WMI execution."
+    }
+  ],
+  "design_inference": "A fully completed targeted query can distinguish absence from a still-present unreadable row. A returned process must match the original full creation identity before its refreshed command is used. This is a read-only validation strategy, not an atomic OS process snapshot."
+}

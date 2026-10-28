@@ -1,0 +1,132 @@
+{
+  "schema": "RH_EMPTY_FILE_HASH_NODE_REVIEW_V1",
+  "scope": "Node VM and in-memory Windows host only; all certutil, csc and helper responses simulated",
+  "runner_sha256": "eaf8ebc221f08607bd2256827e8bbafb5e5b2e2509e3e71513fe994db2d9eb97",
+  "baseline_sha256": "c817f1cda09b76cd02570c8a8ba8553b85ead1c6e885a717087d71a79bd8ffbd",
+  "passed": 16,
+  "failed": 0,
+  "tests": [
+    {
+      "name": "recognition_requires_nonzero_finite_numeric_code_or_exact_certutil_diagnostic",
+      "status": "PASS",
+      "details": {
+        "accepted_numeric_forms": 3,
+        "diagnostic_label_and_tokens_required_for_other_nonzero_codes": true
+      }
+    },
+    {
+      "name": "fileHash_recovers_only_after_binary_empty_read_and_pre_post_size_checks",
+      "status": "PASS",
+      "details": {
+        "numeric_exit_forms": 3,
+        "expected_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "name": "certutilHashSet_mixed_empty_and_nonempty_results_complete_exactly",
+      "status": "PASS",
+      "details": {
+        "files": 3,
+        "independently_verified_empty_files": 2
+      }
+    },
+    {
+      "name": "BOM_only_whitespace_and_nonempty_files_never_recover",
+      "status": "PASS",
+      "details": {
+        "rejected_nonempty_byte_patterns": 5
+      }
+    },
+    {
+      "name": "false_zero_metadata_cannot_hide_nonempty_binary_bytes",
+      "status": "PASS",
+      "details": {
+        "metadata_was_zero": true,
+        "actual_binary_nonempty_rejected": true
+      }
+    },
+    {
+      "name": "unreadable_binary_stream_fails_and_closes",
+      "status": "PASS",
+      "details": {
+        "close_after_load_failure": true
+      }
+    },
+    {
+      "name": "growth_after_binary_snapshot_is_rejected_by_second_metadata_read",
+      "status": "PASS",
+      "details": {
+        "post_read_growth_rejected": true
+      }
+    },
+    {
+      "name": "nonzero_or_invalid_binary_Size_Position_or_EOS_rejected",
+      "status": "PASS",
+      "details": {
+        "rejected_stream_states": 7
+      }
+    },
+    {
+      "name": "unrecognized_errors_and_malformed_success_never_probe_empty_file",
+      "status": "PASS",
+      "details": {
+        "rejected_error_or_output_forms": 5
+      }
+    },
+    {
+      "name": "missing_file_and_metadata_access_failure_are_fatal",
+      "status": "PASS",
+      "details": {
+        "missing_and_inaccessible_rejected": true
+      }
+    },
+    {
+      "name": "fresh_calls_never_reuse_an_old_empty_digest",
+      "status": "PASS",
+      "details": {
+        "three_calls": true,
+        "new_binary_stream_for_each_empty_recovery": true
+      }
+    },
+    {
+      "name": "certutil_hash_set_failure_does_not_commit_partial_global_hashes",
+      "status": "PASS",
+      "details": {
+        "no_partial_commit": true
+      }
+    },
+    {
+      "name": "actual_prepareBatchHasher_empty_build_log_saves_and_warm_reuses",
+      "status": "PASS",
+      "details": {
+        "cold_synthetic_csc_calls": 1,
+        "warm_synthetic_csc_calls": 0,
+        "cold_state": "BUILT_AND_SAVED",
+        "warm_state": "HIT",
+        "empty_log_receipt_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "name": "baseline_reproduces_empty_build_log_failure_at_receipt_hash",
+      "status": "PASS",
+      "details": {
+        "baseline_failed_after_synthetic_helper_build": true,
+        "committed_receipts": 0
+      }
+    },
+    {
+      "name": "helper_build_nonempty_log_invalid_file_error_fails_without_receipt",
+      "status": "PASS",
+      "details": {
+        "no_false_empty_receipt": true
+      }
+    },
+    {
+      "name": "warm_helper_cache_nonempty_tampering_stays_fatal",
+      "status": "PASS",
+      "details": {
+        "tampered_nonempty_log_rejected_before_rebuild": true
+      }
+    }
+  ]
+}

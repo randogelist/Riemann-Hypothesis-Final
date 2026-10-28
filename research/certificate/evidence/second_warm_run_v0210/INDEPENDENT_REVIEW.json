@@ -1,0 +1,217 @@
+{
+  "schema": "RH_HILBERT_SECOND_WARM_RUN_EVIDENCE_REVIEW_V1",
+  "reviewer": "hyperbolic_family",
+  "status": "FIVE_COMPLETE_RECEIPT_PATHS_MATCH_PRIOR_SAVES",
+  "inputs": {
+    "second_message_transcription": {
+      "path": "/workspace/scratch/f128c1434505/tmp/proof_progress_v0211/USER_SECOND_WARM_RUN_MESSAGE.txt",
+      "sha256": "aec5d5606a9cf9f08efcee9db4d00c34c27654e9245e353975cf6deb2f270d5a",
+      "bytes": 3298,
+      "lines": 55,
+      "origin": "Saved transcription of the user message; no claim of byte identity to the native canonical log."
+    },
+    "prior_native_run_tail": {
+      "path": "/workspace/scratch/f128c1434505/output/RH_HILBERT_LIMIT_LEAN_v0_2_10_WARM_CACHE_PASS_construction/evidence/native_run_v0210/USER_RUN_PASS.txt",
+      "sha256": "7db5fbc1ad77ffe0c17be8fc7bbb4de12a0f2f585c204662de4b8a3717c8e432",
+      "bytes": 18707,
+      "lines": 207,
+      "matches_archived_summary_sha256": true
+    }
+  },
+  "visible_counts": {
+    "second_receipts": 5,
+    "second_frozen_reuse": 5,
+    "second_working_retained": 5,
+    "second_anchor_hash_phases": 5,
+    "prior_anchor_saved_paths": 18,
+    "prior_visible_frozen_reuse": 18
+  },
+  "receipt_comparisons": [
+    {
+      "module": "RH_HilbertLimit.SpectralTail",
+      "second_line": 3,
+      "receipt_path": "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\dce44f38e301ce87\\5564a73f9b5e780bb50128b304cd11e3\\01a17eaba656c181\\receipt.txt",
+      "complete_compact_E_path": true,
+      "exact_prior_anchor_saved_matches": [
+        {
+          "line": 137,
+          "module": "RH_HilbertLimit.SpectralTail"
+        }
+      ],
+      "unique_exact_match": true,
+      "module_names_match": true,
+      "module_hash_prefix": "dce44f38e301ce87",
+      "module_hash_prefix_matches_sha256_name": true,
+      "input_key_prefix": "5564a73f9b5e780bb50128b304cd11e3",
+      "entry_tag": "01a17eaba656c181"
+    },
+    {
+      "module": "RH_HilbertLimit.ActualCalibrationProgress",
+      "second_line": 8,
+      "receipt_path": "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\b96a29859eecc947\\ec2a960ca66e0319c38fa7047c4efc15\\01a17eaba8f460da\\receipt.txt",
+      "complete_compact_E_path": true,
+      "exact_prior_anchor_saved_matches": [
+        {
+          "line": 147,
+          "module": "RH_HilbertLimit.ActualCalibrationProgress"
+        }
+      ],
+      "unique_exact_match": true,
+      "module_names_match": true,
+      "module_hash_prefix": "b96a29859eecc947",
+      "module_hash_prefix_matches_sha256_name": true,
+      "input_key_prefix": "ec2a960ca66e0319c38fa7047c4efc15",
+      "entry_tag": "01a17eaba8f460da"
+    },
+    {
+      "module": "RH_HilbertLimit.ActualMomentReality",
+      "second_line": 13,
+      "receipt_path": "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\93fc514e58db55d9\\590803a0fe178cb6038187afb0cdfdcd\\01a17eabab7c82a4\\receipt.txt",
+      "complete_compact_E_path": true,
+      "exact_prior_anchor_saved_matches": [
+        {
+          "line": 157,
+          "module": "RH_HilbertLimit.ActualMomentReality"
+        }
+      ],
+      "unique_exact_match": true,
+      "module_names_match": true,
+      "module_hash_prefix": "93fc514e58db55d9",
+      "module_hash_prefix_matches_sha256_name": true,
+      "input_key_prefix": "590803a0fe178cb6038187afb0cdfdcd",
+      "entry_tag": "01a17eabab7c82a4"
+    },
+    {
+      "module": "RH_HilbertLimit.CanonicalBridge",
+      "second_line": 18,
+      "receipt_path": "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\52e47af6a403a560\\f7590e7eee15dd85fc697f30c176c9ab\\01a17eabae30109b\\receipt.txt",
+      "complete_compact_E_path": true,
+      "exact_prior_anchor_saved_matches": [
+        {
+          "line": 167,
+          "module": "RH_HilbertLimit.CanonicalBridge"
+        }
+      ],
+      "unique_exact_match": true,
+      "module_names_match": true,
+      "module_hash_prefix": "52e47af6a403a560",
+      "module_hash_prefix_matches_sha256_name": true,
+      "input_key_prefix": "f7590e7eee15dd85fc697f30c176c9ab",
+      "entry_tag": "01a17eabae30109b"
+    },
+    {
+      "module": "EquivalenceAudit",
+      "second_line": 25,
+      "receipt_path": "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\6c336235f91ff235\\fb7f637d29669dd8db5a7f925b5521d7\\01a17eabb1d357c4\\receipt.txt",
+      "complete_compact_E_path": true,
+      "exact_prior_anchor_saved_matches": [
+        {
+          "line": 179,
+          "module": "EquivalenceAudit"
+        }
+      ],
+      "unique_exact_match": true,
+      "module_names_match": true,
+      "module_hash_prefix": "6c336235f91ff235",
+      "module_hash_prefix_matches_sha256_name": true,
+      "input_key_prefix": "fb7f637d29669dd8db5a7f925b5521d7",
+      "entry_tag": "01a17eabb1d357c4"
+    }
+  ],
+  "marker_counts": {
+    "ACTUAL_SPECTRAL_CALIBRATION": 1,
+    "ACTUAL_SUBEXPONENTIAL_BOUND": 1,
+    "ANCHOR_HISTORY_SCANS": 1,
+    "AUDIT_ONLY_MODULES": 1,
+    "AXIOM_AUDIT": 1,
+    "COMBINED_WORKING_DIGESTS_CONSUMED": 1,
+    "COMPACT_ANCHORS_SAVED": 1,
+    "COMPILED_MODULES": 1,
+    "DOMINANT_EXTRACTION": 1,
+    "FINAL_AUDIT_DECLARATIONS": 1,
+    "FINAL_AUDIT_START": 1,
+    "FINITE_ACCEPTED_WITNESS": 1,
+    "FINITE_CHECKER_EQUIVALENCE": 1,
+    "FROZEN_REUSE": 5,
+    "FROZEN_REUSED_MODULES": 1,
+    "HASH_PHASE": 5,
+    "HASH_PHASE_TOTALS": 1,
+    "LEGACY_MIGRATED_MODULES": 1,
+    "LOGICAL_TOOL_LAUNCHES": 1,
+    "MATHEMATICAL_STATUS": 1,
+    "MODULE_ELAPSED_MS": 5,
+    "PROJECT_BUILD": 1,
+    "RESTORED_ARTIFACT_FILES": 1,
+    "RUN": 1,
+    "SORRYAX": 1,
+    "SOURCE_ANCHOR_RECEIPT": 5,
+    "STAGE_ELAPSED_MS": 1,
+    "STAGE_START": 1,
+    "UNCONDITIONAL_ACTUAL_LIMIT": 1,
+    "UNCONDITIONAL_RH": 1,
+    "WORKING_ARTIFACTS_RETAINED": 5,
+    "WORKING_ARTIFACT_MODULES_RETAINED": 1
+  },
+  "reported_summary": {
+    "FINAL_AUDIT_DECLARATIONS": "303",
+    "AXIOM_AUDIT": "PASS_STANDARD_LOGICAL_AXIOMS_ONLY",
+    "SORRYAX": "NONE",
+    "MATHEMATICAL_STATUS": "CONDITIONAL_PARTIAL",
+    "ACTUAL_SPECTRAL_CALIBRATION": "OPEN",
+    "DOMINANT_EXTRACTION": "OPEN",
+    "UNCONDITIONAL_ACTUAL_LIMIT": "NOT_CERTIFIED",
+    "ACTUAL_SUBEXPONENTIAL_BOUND": "OPEN",
+    "UNCONDITIONAL_RH": "NOT_ESTABLISHED",
+    "FINITE_ACCEPTED_WITNESS": "NOT_ESTABLISHED",
+    "FINITE_CHECKER_EQUIVALENCE": "OPEN",
+    "COMPILED_MODULES": "0",
+    "FROZEN_REUSED_MODULES": "85",
+    "AUDIT_ONLY_MODULES": "0",
+    "LEGACY_MIGRATED_MODULES": "0",
+    "PROJECT_BUILD": "PASS",
+    "RUN": "PASS",
+    "WORKING_ARTIFACT_MODULES_RETAINED": "85",
+    "RESTORED_ARTIFACT_FILES": "0",
+    "ANCHOR_HISTORY_SCANS": "0",
+    "COMPACT_ANCHORS_SAVED": "0",
+    "COMBINED_WORKING_DIGESTS_CONSUMED": "85"
+  },
+  "reported_logical_tool_launches": {
+    "certutil": 381,
+    "csc": 0,
+    "helper": 2,
+    "lean": 2,
+    "other": 0,
+    "total": 385
+  },
+  "logical_launch_total_arithmetic_matches": true,
+  "reported_hash_phase_totals": {
+    "batch_sets": 1,
+    "certutil_sets": 88,
+    "elapsed_ms": 37781,
+    "failed_sets": 0,
+    "files": 37484,
+    "sets": 89
+  },
+  "hash_phase_set_arithmetic_matches": true,
+  "prior_reported_hash_elapsed_ms": 46682,
+  "second_reported_hash_elapsed_ms": 37781,
+  "reported_final_audit_stage": "FINAL_AUDIT|406|RETURNED",
+  "evidence_boundary": {
+    "reported_workspace": "E:\\RH-FAST\\workspaces\\RH_HILBERT_LIMIT_LEAN_v0_2_10_construction",
+    "workspace_basis": "Final Logs paths; startup package/runner/fingerprint headers are absent.",
+    "visible_receipts_vs_summary": "Five complete receipt records are visible. The footer reports 85 frozen reuses and 85 retained working-artifact modules; this excerpt does not show all 85 individual records.",
+    "warm_reuse_supported": "The five source paths exactly match earlier E: anchor saves. The reported second run retained all 85 working-artifact modules with zero restores, zero new anchors, zero history scans, and zero project compilations.",
+    "native_receipt_contents_available": false,
+    "full_source_dependency_artifact_hashes_available": false,
+    "locator_hash_note": "The 16-hex module directory matches SHA256(module name) prefix. The 32-hex input directory is a truncated storage key; exact path equality does not independently verify full receipt or artifact hashes.",
+    "new_proof_certification": false,
+    "proof_scope": "Only the old v0.2.10 workspace is identified. No new SpectralPhase/SpectralGenerating/SpectralExtraction/CanonicalPowerSums proof or new final audit is certified by these markers.",
+    "audit_scope": "The excerpt reports a frozen aggregate audit of 303 declarations; no direct per-declaration axiom output or receipt contents are included.",
+    "timing_scope": "37781 ms and the prior 46682 ms are cumulative hash-phase elapsed totals, not whole runtime. They do not establish an end-to-end speedup; file totals include repeated hashing across phases.",
+    "logical_launch_scope": "Counts are runner logical launches, not total operating-system processes. Two Lean launches are consistent with compiler version/prefix queries, not two proof builds.",
+    "native_byte_identity": "SHA256 values above bind these saved evidence files only. The second file is a transcription; startup source/toolchain hashes and native receipts are not supplied."
+  },
+  "issues": [],
+  "review_execution": "Read-only text parsing and byte hashing; no tests, Lean/Lake/native/C#/Wine/CI execution and no source edits."
+}

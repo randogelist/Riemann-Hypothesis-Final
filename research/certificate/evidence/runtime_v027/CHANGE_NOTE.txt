@@ -1,0 +1,45 @@
+RH local runner runtime batching candidate for v0.2.7
+Runner implementation baseline: v0.2.5, carried forward with the separately
+prepared v0.2.6 follower-mode launcher and observer by release assembly.
+Preparation: source and mocked-host review only; no native execution.
+
+Changed only native_runner.js in this scratch directory.
+This patch does not edit Lean sources, run.cmd, NativeSha256.cs or manifests.
+Release assembly must preserve the latest v0.2.6 launcher and observer.
+
+freshHashSet(paths, purpose, forceCertutil) returns an invocation-local map.
+It never registers cache/helper paths in startup hashFiles or fileHashes.
+The validated hashing helper is retained once per run; sets of at least six
+files use its existing protocol. Smaller sets and independent helper-trust
+phases use bounded parallel certutil. Every batch has a unique short token.
+The three post-execution helper/source/request guards remain independent
+certutil checks; the request is also hashed before helper execution.
+
+Current-V2 anchor validation can include the exact working artifact family
+in the same fresh batch. The resulting working digest record belongs to one
+restore-candidate scope, is consumed before use, and is then invalidated.
+Legacy verification never receives or stores such a working record.
+Restored destinations are hashed after copying. New anchor saves hash source
+artifacts before copying and staged artifacts/source/audit after copying.
+
+Missing/corrupt pre-existing cache entries remain candidate misses. Failed
+executed hash transports, malformed result manifests, and changed helper or
+request guards carry rhFatalHash and escape all candidate/fallback catches.
+AUTO preparation fallback remains available if the helper is unavailable or
+fails its preparation self-test; no file hashes from that helper are used.
+BATCH remains strict. Actual file-hash transport/protocol/guard failures are
+fatal and cannot trigger a trusted fallback.
+
+Helper bootstrap retains its independent source/compiler/reference/runtime
+fingerprints and separate self-test launch. Input checks are parallelized.
+External dependency selection stops at the first existing artifact in the
+unchanged LEAN_PATH order; missing source at that choice remains an error.
+
+Result/log diagnostics report stage, module and hash-phase elapsed values,
+hash-set counts, and logical tool launch counts. These count requested tool
+invocations, not all OS processes or child workers. No speedup is asserted.
+
+Read-only exact comparisons confirm 28 fingerprint/audit/import/lock function
+bodies and 11 policy/schema/lock constants match v0.2.5 byte-for-byte.
+Node syntax checking succeeded. Focused mocked-host results and independent
+static review are maintained separately by their assigned reviewers.

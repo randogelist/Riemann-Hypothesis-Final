@@ -1,0 +1,56 @@
+{
+  "schema": "RH_HILBERT_V0214_LOCK_IMPLEMENTATION_REVIEW_V1",
+  "reviewer": "lock_review",
+  "review_kind": "STATIC_READ_ONLY_SOURCE_AND_EXACT_FUNCTION_COMPARISON",
+  "baseline_runner_sha256": "f6726db78ef9b532b24e2c09092e44e1e7f855c5eb84a6873c1dc519ef13803f",
+  "candidate_runner_sha256": "828af9d989ae820ad43784839a2d140fe3f7495a55c7e43e66df3e1d145bbb02",
+  "candidate_snippet_sha256": "32dd483658af0764a1e123973e4a2928eeb50bee2fb3f2e6e86230bf43eee925",
+  "status": "NO_CONCRETE_FINDING",
+  "findings": [],
+  "observed_behavior": {
+    "maximum_attempts": 6,
+    "sleep_between_attempts_ms": 200,
+    "maximum_scheduled_sleeps_ms": 1000,
+    "hard_wall_clock_bound": false,
+    "only_structured_unreadable_worker_error_retried": true,
+    "same_current_inventory_used_for_self_identity_and_guard": true,
+    "exact_owner_metadata_checked_on_every_attempt": true,
+    "owned_worker_status_checked_before_and_after_guard_success": true,
+    "original_full_worker_guard_executed_every_attempt": true,
+    "persistent_ambiguity_retains_lock": true,
+    "new_pid_or_process_name_exemptions": false,
+    "process_kills_added": false,
+    "unknown_worker_diagnostics_exclude_command_line": true,
+    "original_unreadable_error_text_preserved": true
+  },
+  "exact_function_text_preserved": [
+    "acquireRunnerLock",
+    "quarantineStaleLock",
+    "releaseRunnerLock",
+    "queryLockProcesses",
+    "lockSnapshotAt",
+    "identifyLockSelf",
+    "parallelShutdownInventory",
+    "parallelLiveProcesses",
+    "parallelIsFreshAdmittedRelativeHost",
+    "captureFreshAdmittedRelativeHosts",
+    "moduleInput",
+    "checkAxioms",
+    "restoreAnchor",
+    "saveAnchor",
+    "finalAudit"
+  ],
+  "bounded_existing_function_changes": {
+    "assertNoLockWorkers": "One throw substitution preserving unreadable-worker rejection semantics and exact message, adding structured metadata.",
+    "parallelShutdown": "One full-guard invocation replaced by the bounded owned-shutdown wrapper. Prior live-worker drain and uncertainty retention remain."
+  },
+  "limitations": [
+    "The supplied user tail does not establish the certutil process identity, whether it had exited, or why its command was unreadable.",
+    "This change can resolve a transient inventory rejection; a persistent unreadable worker intentionally retains the lock.",
+    "The prior retained v0.2.13 lock is not deleted or recovered by this change.",
+    "Static review does not verify native COM/WMI behavior or native Lean compilation."
+  ],
+  "native_execution": "NOT_RUN",
+  "lean_execution": "NOT_RUN",
+  "mock_execution_by_this_reviewer": "NOT_RUN_SEPARATE_TEST_AGENT_OWNS_RUNTIME_MOCKS"
+}

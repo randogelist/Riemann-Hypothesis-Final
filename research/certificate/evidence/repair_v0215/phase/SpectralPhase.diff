@@ -1,0 +1,21 @@
+--- v0.2.14/RH_HilbertLimit/SpectralPhase.lean
++++ v0.2.15/RH_HilbertLimit/SpectralPhase.lean
+@@ -61,7 +61,8 @@
+ theorem affine_eq_iff {x q r : ℂ} (hx : x ≠ 1) :
+     1 + (x - 1) * q = 1 + (x - 1) * r ↔ q = r := by
+   constructor
+-  · exact affine_injective hx
++  · intro hqr
++    exact affine_injective hx hqr
+   · intro hqr
+     rw [hqr]
+ 
+@@ -80,7 +81,7 @@
+     _ ≤ ‖1 - q‖ + ‖x * q‖ := norm_add_le _ _
+     _ = ‖1 - q‖ + ‖x‖ * ‖q‖ := by rw [norm_mul]
+     _ < ‖1 - q‖ + 1 * ‖q‖ :=
+-      add_lt_add_left (mul_lt_mul_of_pos_right hx (norm_pos_iff.mpr hq)) _
++      add_lt_add_right (mul_lt_mul_of_pos_right hx (norm_pos_iff.mpr hq)) _
+     _ = ellipseRadius q := by dsimp [ellipseRadius]; ring
+ 
+ /-- Summability and the existing boundedness premise supply a node and a

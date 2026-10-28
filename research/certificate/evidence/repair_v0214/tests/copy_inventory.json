@@ -1,0 +1,47 @@
+{
+  "schema": "RH_V0214_FROZEN_TEST_FILES_V1",
+  "scope": "All test support/report files; this inventory excludes itself.",
+  "portable_invocation_from_tmp_matches": true,
+  "files": [
+    {
+      "path": "candidate_sources.js",
+      "bytes": 6724,
+      "sha256": "92ddba93bcb792dc369b0774e38b8d5cebd20f1af68dc3628780452e52aa5eb8"
+    },
+    {
+      "path": "focused_review.js",
+      "bytes": 15443,
+      "sha256": "d05a247d91ad59e2cd9478de2425ffa8f2a4713c5642534562e1f7747b4a10ba"
+    },
+    {
+      "path": "mock_host.js",
+      "bytes": 13674,
+      "sha256": "525da25dd590b785537bf6885a43df1e56462870a545cd9692159f4ced53e590"
+    },
+    {
+      "path": "mock_report.json",
+      "bytes": 6338,
+      "sha256": "a2112e27d4099a491373d91ad05ddb3e481cab998600cf6567553c69c8546994"
+    },
+    {
+      "path": "regression_plan.json",
+      "bytes": 2047,
+      "sha256": "d320ac11ae8c12fec118433422c261f6c04a981813b42685c98d518b4b99ca86"
+    },
+    {
+      "path": "runtime_host.js",
+      "bytes": 11382,
+      "sha256": "3805fac27c8bfefb147d475d960befd8e1859bade4cad677058d50a01da0c2d7"
+    },
+    {
+      "path": "shutdown_retry_source.js",
+      "bytes": 2727,
+      "sha256": "be0eb2e438e44bd6c99a6cb250ef6a6c0308377f915bb6894a9f20114e410d5f"
+    },
+    {
+      "path": "test_usage.json",
+      "bytes": 2048,
+      "sha256": "9b87cd545a25bb3c173783b072140c0e30112c5fd82e590d3a3075bda4b1408c"
+    }
+  ]
+}

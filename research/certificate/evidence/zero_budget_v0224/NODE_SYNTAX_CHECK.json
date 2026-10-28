@@ -1,0 +1,8 @@
+{
+  "command": "node --check output/RH_HILBERT_LIMIT_LEAN_v0_2_24_construction/tools/native_runner.js",
+  "exit_code": 0,
+  "runner_sha256": "bcb5911d6b9c6c87a8d4271948546c6632591c5bced36b3b96037a7b0a5a6104",
+  "scope": "JAVASCRIPT_SYNTAX_ONLY",
+  "whole_runner_entrypoint_executed": false,
+  "lean_or_native_execution": false
+}

@@ -1,0 +1,24 @@
+{
+  "schema": "RH_HILBERT_V0215_INDEPENDENT_CANONICAL_REVIEW_V1",
+  "reviewer": "lock_review",
+  "review_kind": "READ_ONLY_STATIC_PROOF_REVIEW",
+  "candidate_sha256": "55e10b78e84bb2ec7cfbd693e5275f46b4ada256bda0530ccb4c0e80337e65de",
+  "baseline_sha256": "6dac0ba1d627eae6c5a70d0bb2dbdc52f0fa6474e3984d34a2d53feb48fb2160",
+  "status": "NO_CONCRETE_FINDING",
+  "findings": [],
+  "scalar_review": {
+    "quotient": "zero_mul and zero_sub normalize the numerator; neg_div and reverse pow_two give -(b^2/d^2); div_pow puts the negative resolvent square in the same form.",
+    "power": "Nat.add_sub_cancel reduces the exponent to n; pow_add expands n+2; mul_neg, neg_mul, and mul_assoc normalize both sides to -(c*(r^n*r^2)).",
+    "matching_derivative_facts": "Typed scalar equations match the fun_div and fun_pow derivative shapes recorded in the supplied native-diagnostic review; rw rewrites the scalar in the existing derivative fact, avoiding convert-generated function congruence obligations.",
+    "function_agreement": "The quotient function and resolvent b i are definitionally equal by resolvent; the power function is already the same lambda."
+  },
+  "all_declaration_headers_preserved": true,
+  "imports_preserved": true,
+  "canonicalNode_power_sum_and_following_bytes_preserved": true,
+  "new_assumptions_or_placeholders": false,
+  "scope": "Only the two reported derivative proof bodies were reviewed; no optional broader scan or runtime tests.",
+  "native_execution": "NOT_RUN",
+  "lean_execution": "NOT_RUN",
+  "axiom_audit": "NOT_RUN",
+  "limitations": "Static algebra and source-shape review cannot certify Lean elaboration; native compilation and audit remain required."
+}

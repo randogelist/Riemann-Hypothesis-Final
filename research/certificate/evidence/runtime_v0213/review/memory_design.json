@@ -1,0 +1,100 @@
+{
+  "schema": "RH_HILBERT_ADAPTIVE_MEMORY_DESIGN_REVIEW_V1",
+  "date": "2026-10-27",
+  "status": "AGREED_DESIGN_SOURCE_REVIEW_ONLY",
+  "baseline": {
+    "path": "output/RH_HILBERT_LIMIT_LEAN_v0_2_12_construction/tools/native_runner.js",
+    "bytes": 122898,
+    "sha256": "b11c97c591c5e200978fcfff5f37d6f6cd4b9388a464697a673174ab20c5a632"
+  },
+  "user_excerpt": {
+    "path": "upload/Pasted text(20261027-200359).txt",
+    "bytes": 25112,
+    "sha256": "fe90ee4f2db2f779539b422cd6884ed16482dc860a3b9048c447885785faa541"
+  },
+  "notes": {
+    "path": "tmp/ram_parallel_v0213/review/memory_design.md",
+    "bytes": 9650,
+    "sha256": "4df274ed5df655731fa98105c2285d4c85bb43c77ffeab14616b2b9d87d5d903"
+  },
+  "observed": {
+    "free_mb": 5479,
+    "required_mb": 10476,
+    "live_workers": 0,
+    "progress": "85/89",
+    "ready": 2,
+    "excerpt_lines": [
+      244,
+      248
+    ]
+  },
+  "evidence_limit": "User-supplied tail omits initialization and does not separately establish total RAM, selected reserve, warmer state or whole-run process counts.",
+  "diagnosis": "Configuration clamps selected workers to at least one even when no job fits preferred reserve. The later admission check rejects known low memory. This is resource policy, not a theorem elaboration error.",
+  "agreed_design": {
+    "preferred_reserve": "Keep separately; do not overwrite the normal policy.",
+    "serial_fallback_floor_mb": 1024,
+    "explicit_reserve": "Preserve explicit RH_SYSTEM_RESERVE_MB as minimum floor.",
+    "worker_estimate": "Unchanged RH_WORKER_MEMORY_MB; default4096.",
+    "eligibility": "No active Lean tasks; warmer absent or confirmed exited; forced fresh valid memory snapshot.",
+    "warmer_stop_wait_ms": 5000,
+    "warmer_stop_scope": "RAM-only helper; do not call whole-run parallelShutdown or discard tracked ownership.",
+    "admission": "freshFreeMB >= effectiveSerialFloorMB + configuredWorkerEstimateMB",
+    "on_admission": "Set workers1 and future warming cap0; no promotion during this invocation.",
+    "on_insufficient_or_uncertain_resources": "Bounded resource failure; no Lean launch; retain lock policy for live/unknown owned processes.",
+    "active_worker_accounting": "Unchanged conservative reservations.",
+    "final_audit": "Apply serial admission immediately before required compile/re-audit, after accepted frozen reuse can return.",
+    "all_cached_run": "Do not fail during configuration solely for insufficient launch memory when no actual Lean launch is required."
+  },
+  "default_example": {
+    "worker_estimate_mb": 4096,
+    "host_floor_mb": 1024,
+    "threshold_mb": 5120,
+    "reported_free_mb": 5479,
+    "estimated_free_after_worker_mb": 1383,
+    "margin_above_floor_mb": 359
+  },
+  "pitfalls": [
+    "Do not set live warm reservation to zero until the owned helper is confirmed exited.",
+    "Do not add HELD_BYTES to free memory after unmapping; obtain a fresh OS snapshot.",
+    "Do not invoke parallelShutdown midrun: its shutdownComplete/shutdownClean fields could bypass final draining.",
+    "Do not turn a failed refresh after known memory pressure into the existing unknown-memory serial permission.",
+    "Do not admit a second worker in the same loop after serial degradation.",
+    "Free memory already reflects resident live usage; retaining full live-worker/warm estimates is conservative double accounting, intentionally unchanged for this patch.",
+    "A worker allowance is an estimate, not a process memory cap; snapshot volatility prevents a guarantee against allocation failure.",
+    "Compile-to-audit retains one logical task reservation; cache-only final reuse must not require launch memory."
+  ],
+  "focused_scenarios_proposed_not_run": [
+    "5479/defaults/idle/no warmer => one serial launch",
+    "5120/defaults => admit;5119/defaults => fail without launch",
+    "active worker => no adaptive fallback",
+    "warm exit confirmed then fresh snapshot => reevaluate",
+    "warm exit unknown/live => no release credit and preserve ownership",
+    "cached high memory then fresh low => deny",
+    "known pressure then WMI refresh failure => deny fallback",
+    "explicit8192worker or4096host reserve preserved",
+    "all cache hits => no unnecessary memory error",
+    "dirty final audit => serial admission; reusable final audit => no gate"
+  ],
+  "sources": [
+    {
+      "url": "https://learn.microsoft.com/en-us/windows/win32/cimwin32prov/win32-operatingsystem",
+      "retrieval_ref": "turn44view0",
+      "supports": "FreePhysicalMemory is currently unused available physical memory in kilobytes."
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/windows/win32/api/sysinfoapi/nf-sysinfoapi-globalmemorystatusex",
+      "retrieval_ref": "turn44view1",
+      "supports": "Memory availability snapshots are volatile; not resource reservations."
+    }
+  ],
+  "validation": {
+    "runner_edits": "NONE",
+    "lean_edits": "NONE",
+    "helper_edits": "NONE",
+    "local_lean": "NOT_RUN",
+    "native_windows": "NOT_RUN",
+    "csharp": "NOT_RUN",
+    "ci": "NOT_RUN",
+    "mock_tests": "NOT_RUN_DESIGN_ONLY"
+  }
+}

@@ -1,0 +1,53 @@
+--- v0_2_26/RH_HilbertLimit/ZeroBudgetSecondSector.lean
++++ v0_2_27/RH_HilbertLimit/ZeroBudgetSecondSector.lean
+@@ -114,7 +114,8 @@
+       rw [mul_left_comm, ← Real.rpow_add hypos]
+       norm_num
+     _ = (1 / 6 : ℝ) * x ^ (3 / 2 : ℝ) := by
+-      rw [one_div, Real.inv_rpow hx.le, ← Real.rpow_neg hx.le]
++      simp only [one_div]
++      rw [Real.inv_rpow hx.le, ← Real.rpow_neg hx.le]
+       norm_num
+ 
+ /-- Keeping the actual two integration domains improves the strip bound. -/
+@@ -124,7 +125,7 @@
+   let F : ℝ → ℂ := fun x => (x : ℂ) ^ (s / 2 - 1) • hurwitzThetaMellinKernel x
+   have hF_int : IntegrableOn F (Ioi 0) := by
+     simpa only [F, MellinConvergent] using hurwitzThetaMellinKernel_convergent (s / 2)
+-  have hFnorm_full := hF_int.norm
++  have hFnorm_full : IntegrableOn (fun x : ℝ => ‖F x‖) (Ioi 0) := hF_int.norm
+   have hFnorm (x : ℝ) (hx : 0 < x) :
+       ‖F x‖ = x ^ (s.re / 2 - 1) * ‖hurwitzThetaMellinKernel x‖ := by
+     dsimp [F]
+--- v0_2_26/RH_HilbertLimit/ZeroBudgetFiveSector.lean
++++ v0_2_27/RH_HilbertLimit/ZeroBudgetFiveSector.lean
+@@ -109,7 +109,8 @@
+       rw [mul_left_comm, ← Real.rpow_add hypos]
+       norm_num
+     _ = (2 / 19 : ℝ) * x ^ (5 / 2 : ℝ) := by
+-      rw [one_div, Real.inv_rpow hx.le, ← Real.rpow_neg hx.le]
++      simp only [one_div]
++      rw [Real.inv_rpow hx.le, ← Real.rpow_neg hx.le]
+       norm_num
+ 
+ /-- A rational strip estimate strong enough for the finite fifth row. -/
+@@ -119,7 +120,7 @@
+   let F : ℝ → ℂ := fun x => (x : ℂ) ^ (s / 2 - 1) • hurwitzThetaMellinKernel x
+   have hF_int : IntegrableOn F (Ioi 0) := by
+     simpa only [F, MellinConvergent] using hurwitzThetaMellinKernel_convergent (s / 2)
+-  have hFnorm_full := hF_int.norm
++  have hFnorm_full : IntegrableOn (fun x : ℝ => ‖F x‖) (Ioi 0) := hF_int.norm
+   have hFnorm (x : ℝ) (hx : 0 < x) :
+       ‖F x‖ = x ^ (s.re / 2 - 1) * ‖hurwitzThetaMellinKernel x‖ := by
+     dsimp [F]
+--- v0_2_26/RH_HilbertLimit/ZeroBudgetFiveAlgebra.lean
++++ v0_2_27/RH_HilbertLimit/ZeroBudgetFiveAlgebra.lean
+@@ -45,7 +45,7 @@
+     rw [Complex.mul_im]
+     calc
+       |z.re * w.im + z.im * w.re| ≤
+-          |z.re * w.im| + |z.im * w.re| := abs_add _ _
++          |z.re * w.im| + |z.im * w.re| := abs_add_le _ _
+       _ = z.re * |w.im| + |z.im| * w.re := by
+         rw [abs_mul, abs_mul, abs_of_nonneg hz.1, abs_of_nonneg hw.1]
+       _ ≤ z.re * (t * w.re) + (s * z.re) * w.re :=

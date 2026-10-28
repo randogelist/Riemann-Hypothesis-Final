@@ -1,0 +1,32 @@
+{
+  "schema": "RH_HILBERT_USER_STARTUP_SLOWNESS_REPORT_V1",
+  "evidence_type": "TRANSCRIPTION_OF_USER_MESSAGE_WITH_PARTIAL_NATIVE_CONSOLE_OUTPUT",
+  "raw_file": "evidence/USER_SLOW_STARTUP_REPORT_v029.txt",
+  "raw_sha256": "e61a200f34734aa169135d57f96be69d4d00d629208b6456ddceefe149e789b2",
+  "bytes": 853,
+  "package_context": "RH_HILBERT_LIMIT_LEAN_v0_2_9_construction",
+  "package_identity_basis": "Immediately follows delivery of v0.2.9; excerpt has no PACKAGE/RUNNER header or runner fingerprint.",
+  "reported_compiler": "Lean 4.33.0 x86_64-w64-windows-gnu commit d8b18978322de05a8f3dba51ef03cf5461676c17 Release",
+  "reported_stage_elapsed_ms": {
+    "COMPILER": 271,
+    "MATHLIB_REQUIREMENTS": 1518,
+    "MATHLIB_CACHE": 231
+  },
+  "reported_mathlib_cache": "READY",
+  "reported_anchor_root": "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0",
+  "reported_lean_jobs": 16,
+  "reported_project_cache": "READ_WRITE",
+  "reported_layout": "COMPACT_V1",
+  "user_observation": "This point is slow",
+  "next_stage_from_reviewed_v029_source": "DEPENDENCY_GRAPH / loadPlan",
+  "dependency_graph_elapsed_ms": null,
+  "hashing_started_in_excerpt": false,
+  "compile_started_in_excerpt": false,
+  "project_build_pass_in_excerpt": false,
+  "axiom_audit_pass_in_excerpt": false,
+  "complete_run_result_in_excerpt": false,
+  "native_cache_receipts_supplied": false,
+  "native_speedup_established": false,
+  "actual_bottleneck_profiling": "NOT_SUPPLIED; redundant graph work identified by source review",
+  "no_promotion_of_partial_log": "Cache selection reached; no new proof PASS or completed graph/fingerprint evidence."
+}

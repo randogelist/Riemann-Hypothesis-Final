@@ -1,0 +1,310 @@
+{
+  "schema": "RH_HILBERT_LOCAL_FAST_RUNNER_NODE_MOCK_REVIEW_V021",
+  "status": "PASS",
+  "runner_path": "tmp/fast_local_runner_v021/native_runner.js",
+  "runner_sha256": "025b0775e0b609127db1d2c9e570258cb4b604a0174836de1f5d6973594b9f15",
+  "previous_v020_runner_sha256": "fab2212ff37c7972cc51d0e3cb305f9096c33652dd636fb15fc8d2bc9ebfe7ce",
+  "fixture_v010_runner_sha256": "413a421e81441f7161af501612bf9555e4e60d588d83f162eb2fda295834d020",
+  "user_path_evidence_sha256": "fd448abd28e63ff18b86add6bb16bd469fa632438e5d339810433bcc1330e74b",
+  "node_version": "v24.22.1",
+  "checked_at_utc": "2026-10-27T16:54:18.701Z",
+  "method": "Actual runner helper definitions evaluated in Node VM with the existing in-memory Windows mock host",
+  "scope": "Compact anchors, unchanged full receipt validation, fresh-hash working retention, exact-key-first selection, old-layout/import/legacy compatibility, and path preflight",
+  "lean_execution": "NOT_RUN",
+  "lake_execution": "NOT_RUN",
+  "windows_execution": "NOT_RUN",
+  "ci_execution": "NOT_RUN",
+  "native_compiler_invocations": 0,
+  "native_certutil_invocations": 0,
+  "child_process_invocations": 0,
+  "csharp_compiler_invocations": 0,
+  "native_csharp_runtime_invocations": 0,
+  "host_adaptations": [
+    "Existing v012 COM env assignment adaptation and in-memory ActiveX host",
+    "Synthetic compiler responses create a five-member artifact family",
+    "Chronological host clocks advance one simulated second per runner invocation",
+    "FS copy/delete/directory enumeration and real Node SHA256 observations are recorded"
+  ],
+  "limitations": [
+    "No Windows Script Host/CMD/path operation or native compiler is executed",
+    "No supplied Lean proof is compiled or checked",
+    "Mock receipts and artifacts exist only in the in-memory fixture and are not native PASS evidence",
+    "Path tests check the runner guards and actual path lengths, not Windows filesystem compatibility"
+  ],
+  "passed": 14,
+  "failed": 0,
+  "tests": [
+    {
+      "name": "compact_receipts_preserve_full_module_input_and_audit_identities",
+      "status": "PASS",
+      "details": {
+        "modules": 3,
+        "compact_saved": 3,
+        "full_identity_bits": 256,
+        "schema_unchanged": true
+      }
+    },
+    {
+      "name": "warm_hit_retains_all_working_files_with_fresh_hashes_zero_compile_zero_copy",
+      "status": "PASS",
+      "details": {
+        "working_artifacts_freshly_hashed": 15,
+        "compilations": 0,
+        "audits": 0,
+        "copies": 0,
+        "working_modules_retained": 3,
+        "restored_artifact_files": 0,
+        "history_scans": 0
+      }
+    },
+    {
+      "name": "missing_changed_extra_or_renamed_working_family_is_restored",
+      "status": "PASS",
+      "details": {
+        "cases": [
+          {
+            "variant": "missing_olean",
+            "counts": {
+              "compilations": 0,
+              "audits": 0,
+              "copies": 5,
+              "working_modules_retained": 0,
+              "restored_artifact_files": 5,
+              "history_scans": 0
+            }
+          },
+          {
+            "variant": "missing_sidecar",
+            "counts": {
+              "compilations": 0,
+              "audits": 0,
+              "copies": 5,
+              "working_modules_retained": 0,
+              "restored_artifact_files": 5,
+              "history_scans": 0
+            }
+          },
+          {
+            "variant": "changed_sidecar",
+            "counts": {
+              "compilations": 0,
+              "audits": 0,
+              "copies": 5,
+              "working_modules_retained": 0,
+              "restored_artifact_files": 5,
+              "history_scans": 0
+            }
+          },
+          {
+            "variant": "extra_family_member",
+            "counts": {
+              "compilations": 0,
+              "audits": 0,
+              "copies": 5,
+              "working_modules_retained": 0,
+              "restored_artifact_files": 5,
+              "history_scans": 0
+            }
+          },
+          {
+            "variant": "renamed_same_count",
+            "counts": {
+              "compilations": 0,
+              "audits": 0,
+              "copies": 5,
+              "working_modules_retained": 0,
+              "restored_artifact_files": 5,
+              "history_scans": 0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "valid_working_bytes_cannot_bypass_bad_anchor_identity_pass_or_audit",
+      "status": "PASS",
+      "details": {
+        "cases": [
+          {
+            "variant": "cached_artifact_tamper",
+            "frozen_reuse_rejected": true,
+            "simulated_compilations": 1
+          },
+          {
+            "variant": "wrong_target",
+            "frozen_reuse_rejected": true,
+            "simulated_compilations": 1
+          },
+          {
+            "variant": "wrong_module",
+            "frozen_reuse_rejected": true,
+            "simulated_compilations": 1
+          },
+          {
+            "variant": "build_pass_zero",
+            "frozen_reuse_rejected": true,
+            "simulated_compilations": 1
+          },
+          {
+            "variant": "audit_pass_zero",
+            "frozen_reuse_rejected": true,
+            "simulated_compilations": 1
+          },
+          {
+            "variant": "missing_audit",
+            "frozen_reuse_rejected": true,
+            "simulated_compilations": 1
+          },
+          {
+            "variant": "unclean_audit_rehashed",
+            "frozen_reuse_rejected": true,
+            "simulated_compilations": 1
+          },
+          {
+            "variant": "wrong_audit_key",
+            "frozen_reuse_rejected": true,
+            "simulated_compilations": 1
+          }
+        ]
+      }
+    },
+    {
+      "name": "truncated_input_locator_never_substitutes_for_full_receipt_identity",
+      "status": "PASS",
+      "details": {
+        "same_32_hex_locator": true,
+        "different_full_key_rejected": true
+      }
+    },
+    {
+      "name": "restored_destination_corruption_is_rejected_before_reuse",
+      "status": "PASS",
+      "details": {
+        "injected_copies": 1,
+        "fresh_simulated_compilation": true,
+        "rejected_before_frozen_reuse": true
+      }
+    },
+    {
+      "name": "expanded_audit_reuses_objects_then_next_run_selects_refreshed_receipt",
+      "status": "PASS",
+      "details": {
+        "refresh": {
+          "compilations": 0,
+          "audits": 1,
+          "copies": 7,
+          "working_modules_retained": 3,
+          "restored_artifact_files": 0,
+          "history_scans": 0
+        },
+        "next_run": {
+          "compilations": 0,
+          "audits": 0,
+          "copies": 0,
+          "working_modules_retained": 3,
+          "restored_artifact_files": 0,
+          "history_scans": 0
+        },
+        "refreshed_receipt_not_shadowed_by_older_audit": true
+      }
+    },
+    {
+      "name": "failed_expanded_audit_does_not_accept_retained_work_or_new_receipt",
+      "status": "PASS",
+      "details": {
+        "simulated_compilations": 0,
+        "simulated_audits": 1,
+        "accepted_key": false,
+        "old_receipt_unchanged": true
+      }
+    },
+    {
+      "name": "exact_compact_hit_never_enumerates_module_history",
+      "status": "PASS",
+      "details": {
+        "exact_hits": 3,
+        "history_enumerations": 0
+      }
+    },
+    {
+      "name": "old_v2_long_layout_remains_readable_and_retains_matching_work",
+      "status": "PASS",
+      "details": {
+        "unchanged_v2_build_identity": true,
+        "compilations": 0,
+        "audits": 0,
+        "copies": 0,
+        "working_modules_retained": 3,
+        "restored_artifact_files": 0,
+        "history_scans": 0
+      }
+    },
+    {
+      "name": "pinned_v010_legacy_history_fallback_and_dependency_validation_remain_available",
+      "status": "PASS",
+      "details": {
+        "legacy_migrated": 3,
+        "compilations": 0,
+        "audits": 0,
+        "copies": 21,
+        "working_modules_retained": 3,
+        "restored_artifact_files": 0,
+        "history_scans": 3
+      }
+    },
+    {
+      "name": "explicit_import_root_supports_old_v2_and_pinned_legacy_layouts",
+      "status": "PASS",
+      "details": {
+        "cases": [
+          {
+            "layout": "v020",
+            "counts": {
+              "compilations": 0,
+              "audits": 0,
+              "copies": 21,
+              "working_modules_retained": 3,
+              "restored_artifact_files": 0,
+              "history_scans": 0
+            }
+          },
+          {
+            "layout": "v010",
+            "counts": {
+              "compilations": 0,
+              "audits": 0,
+              "copies": 21,
+              "working_modules_retained": 3,
+              "restored_artifact_files": 0,
+              "history_scans": 3
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "compact_path_preflight_covers_all_actual_modules_under_logged_windows_root",
+      "status": "PASS",
+      "details": {
+        "actual_module_count": 84,
+        "logged_anchor_root": "C:\\Users\\Simon\\AppData\\Local\\LEAN_ANCHORINGS\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0",
+        "longest_module": "RiemannHypothesis.Xi.CanonicalQuotientThetaCharacteristicGrowth",
+        "longest_staged_artifact_characters": 232,
+        "longest_staged_artifact": "C:\\Users\\Simon\\AppData\\Local\\LEAN_ANCHORINGS\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\0615d78875262086\\aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\\bbbbbbbbbbbbbbbb.pending\\artifacts\\CanonicalQuotientThetaCharacteristicGrowth.olean.private",
+        "prior_layout_same_module_characters": 329,
+        "checked_path_count": 2100,
+        "native_path_operations": "NOT_RUN"
+      }
+    },
+    {
+      "name": "overlong_anchor_root_and_staging_paths_fail_clearly_before_anchor_write",
+      "status": "PASS",
+      "details": {
+        "startup_root_rejected_before_mkdir": true,
+        "staging_rejected_before_pending_write": true,
+        "directory_limit_exclusive": 248,
+        "file_limit_exclusive": 260
+      }
+    }
+  ]
+}

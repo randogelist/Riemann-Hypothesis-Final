@@ -1,0 +1,120 @@
+{
+  "schema": "RH_HILBERT_ANALYTIC_CLOSURE_SOURCE_REVIEW_V1",
+  "reviewer": "analytic_source",
+  "review_mode": "BOUNDED_READ_ONLY_SOURCE_REVIEW",
+  "candidate_hashes": {
+    "tmp/proof_progress_v0211/AnalyticClosure.lean": "ed440ff35623939ee3b5b7d58b0c85836d0c3e425e9db60ed95e7cb3eb465c16",
+    "tmp/proof_progress_v0211/CanonicalPowerSums.lean": "2aecbd7e10aa87c0ce726026d563d6a33caf0b99e58f824719cf5a99a6217169",
+    "tmp/proof_progress_v0211/SpectralExtraction.lean": "4c3381a0d090c9f27f06453797360ad765e018d2776001816bf3b91272fbdc16"
+  },
+  "baseline_signature_source_hashes": {
+    "RH_HilbertLimit/CanonicalBridge.lean": "103d1917e0fa30b2ec50fb03217176235ebd045d65c3740eba5914f4860822fd",
+    "RH_HilbertLimit/ActualCalibrationProgress.lean": "8d268760cc235fdcf95ea4514aec2dbf126d90056df5e06730ee5b06bd4a275e",
+    "RH_HilbertLimit/ActualXi.lean": "d1fe6b5d5a8a3d6caf398790fe4a6b519ad0510a229c3cf88e3e20267d003322",
+    "RH_HilbertLimit/Main.lean": "3b04858da84d6e0331228db9c020a562b6395f7dc0c5d0a54ae3c23387919081",
+    "RH_HilbertLimit/GrowthStep.lean": "07fa8dfc108c4dd5dabb844719d84a5b0f09c56f92960e90e085017a216839b5",
+    "RH_HilbertLimit/Growth.lean": "5fce21c7df7955ab1146418865141e3f3f7d2df23a92994032bcfb7008fc87fb"
+  },
+  "leaf_lines": 76,
+  "public_declarations": [
+    {
+      "kind": "def",
+      "name": "RH_HilbertLimit.actualCanonicalCalibration"
+    },
+    {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.actualCanonicalDominantExtraction"
+    },
+    {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.canonical_actual_root_tendsto_constructed"
+    },
+    {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.canonical_actual_root_limit_exists"
+    },
+    {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.canonical_actual_root_one_iff_nativeRH"
+    },
+    {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.canonical_actual_subexponential_iff_nativeRH"
+    },
+    {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.canonical_actual_all_variation_one_iff_nativeRH"
+    },
+    {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.canonical_actual_weights_nonnegative_iff_nativeRH"
+    },
+    {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.canonical_actual_natural_growth_step_iff_nativeRH_constructed"
+    },
+    {
+      "kind": "theorem",
+      "name": "RH_HilbertLimit.canonical_actual_natural_bound_iff_nativeRH_constructed"
+    }
+  ],
+  "findings": [],
+  "conclusion": "No concrete signature, definitional-equality, or mathematical-claim error found in the closure leaf.",
+  "signature_checks": [
+    {
+      "declaration": "actualCanonicalCalibration",
+      "result": "canonicalCalibration accepts exactly CanonicalPowerSums; canonicalPowerSums supplies it without a new actual premise."
+    },
+    {
+      "declaration": "actualCanonicalDominantExtraction",
+      "result": "ActualSpectralCalibration.dominantExtraction takes the calibration D and returns DominantExtraction D, with no additional input hypothesis."
+    },
+    {
+      "declaration": "canonical_actual_root_tendsto_constructed",
+      "result": "The Main theorem concludes the spectral radius of D.node. actualCanonicalCalibration.node reduces through the two constructors to canonicalNode; the frozen CanonicalBridge already uses the same node-field reduction."
+    },
+    {
+      "declaration": "canonical_actual_root_limit_exists",
+      "result": "Exactly matches the existing existential R >= 1 ordinary-limit theorem after supplying D and extraction."
+    },
+    {
+      "declarations": [
+        "canonical_actual_root_one_iff_nativeRH",
+        "canonical_actual_subexponential_iff_nativeRH",
+        "canonical_actual_all_variation_one_iff_nativeRH",
+        "canonical_actual_weights_nonnegative_iff_nativeRH"
+      ],
+      "result": "Each conclusion exactly matches the corresponding existing Main theorem, with both analytic inputs concretely supplied."
+    },
+    {
+      "declarations": [
+        "canonical_actual_natural_growth_step_iff_nativeRH_constructed",
+        "canonical_actual_natural_bound_iff_nativeRH_constructed"
+      ],
+      "result": "Each conclusion exactly matches the existing GrowthStep theorem, with both analytic inputs concretely supplied."
+    }
+  ],
+  "endpoint_analytic_hypotheses": [],
+  "finite_checker_boundary": {
+    "NaturalGrowthStep": "Still defined by a universal inequality over every n : Nat.",
+    "natural_bound": "Still exists B : Nat, forall n : Nat, actualVariation n <= B.",
+    "Subexponential": "Still forall epsilon > 0, exists C > 0, forall n, the exponential bound holds.",
+    "finite_raw_checker_constructed": false,
+    "terminating_actual_RH_checker_constructed": false,
+    "finite_checker_completeness_proved": false,
+    "leaf_documentation_accurate": true,
+    "RH_asserted_unconditionally": false
+  },
+  "validation_limits": {
+    "local_Lean_executed": false,
+    "local_Lake_executed": false,
+    "native_Windows_executed": false,
+    "CSharp_executed": false,
+    "CI_executed": false,
+    "tests_executed": false,
+    "source_edits": false,
+    "native_compile_status": "PENDING_FOR_NEW_MODULES",
+    "new_axiom_audit_status": "NOT_RUN",
+    "review_scope": "Exact leaf interfaces and stated mathematical boundaries; this review does not replace compilation or repeat a full independent proof audit of the two implementation modules."
+  }
+}

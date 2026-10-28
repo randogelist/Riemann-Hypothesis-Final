@@ -1,0 +1,57 @@
+{
+  "scope": "User-supplied partial native Windows v0.1.3 console log; independent receipt files and full axiom output were not supplied",
+  "source": "evidence/USER_RUN_v0_1_3_EXCERPT.txt",
+  "source_representation": "UTF-8 transcription of user message with LF line endings; starts partway through dependency hashing",
+  "source_sha256": "b53c878dd3f6dc6e3dfb1b64f439802775b046a980ea0c40de98b16dd9912e37",
+  "package_reported": "RH_HILBERT_LIMIT_LEAN_v0_1_3_construction",
+  "target_reported": "LOCAL_COMPILER",
+  "run_result": "FAIL",
+  "reported_runner_sha256": "d4d211a3949835ec8d6f94e2d439e8945be9dcd9edcce82d4de9821470fb8a27",
+  "reported_toolchain_fingerprint": "9accc35f783dedab9563980b5d45c280b70fbc8b1daaeadc65cdebf7cdd0f2f8",
+  "reported_frozen_reuse": [
+    "AWPIRH.XiCore",
+    "AWPIRH.ThetaEntire",
+    "RH_HilbertLimit.Bernstein",
+    "RH_HilbertLimit.Growth",
+    "RH_HilbertLimit.Geometry",
+    "RH_HilbertLimit.Vandermonde"
+  ],
+  "reported_new_compile_and_axiom_audit_pass": [
+    "RH_HilbertLimit.ActualXi"
+  ],
+  "reported_dependency_content_files": 36176,
+  "reported_batch_sha256_elapsed_ms": 3134,
+  "timing_scope": "Batch helper hashing/result publication phase only; not full startup, project build or a comparative speedup benchmark",
+  "reported_compile_failure": {
+    "module": "RH_HilbertLimit.Spectral",
+    "errors": [
+      {
+        "line": 47,
+        "column": 4,
+        "reason": "Unresolved norm summand in Finset.single_le_sum"
+      },
+      {
+        "line": 125,
+        "column": 2,
+        "reason": "actualVariation not exposed as a finite sum for Finset.sum_le_sum"
+      }
+    ]
+  },
+  "reported_blocked": [
+    "RH_HilbertLimit.Main"
+  ],
+  "reported_pass_or_reuse_source_sha256": {
+    "AWPIRH.XiCore": "6bda1a14b59a508811b9f9a8bff400ed824d86f366b2ddeecd728571be7fd9db",
+    "AWPIRH.ThetaEntire": "cb1f0838f2d90a1ba30e696afd05337e721ee7cc7e021a30ec28cdf2f810533b",
+    "RH_HilbertLimit.Bernstein": "e0b488ee02ec770a436348f8ebd9ff607e0480adddb23a6edc89c4272131f0b1",
+    "RH_HilbertLimit.Growth": "5fce21c7df7955ab1146418865141e3f3f7d2df23a92994032bcfb7008fc87fb",
+    "RH_HilbertLimit.Geometry": "87cf597061c1c297a58faeabc246af3129965b47be3f47971201628f940e1543",
+    "RH_HilbertLimit.Vandermonde": "b3bdc529531308962e66e3e9d36f37321c77169b1c7c4d70295be713dbaaacfe",
+    "RH_HilbertLimit.ActualXi": "d1fe6b5d5a8a3d6caf398790fe4a6b519ad0510a229c3cf88e3e20267d003322"
+  },
+  "full_build_log_supplied": false,
+  "full_axiom_audit_output_supplied": false,
+  "receipt_files_supplied": false,
+  "cached_artifacts_supplied": false,
+  "reuse_rule": "The runner revalidates same-target receipts and all source/dependency/toolchain/artifact content fingerprints before reuse"
+}

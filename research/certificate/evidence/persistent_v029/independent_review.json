@@ -1,0 +1,135 @@
+{
+  "schema": "RH_HILBERT_PERSISTENT_PROFILE_INDEPENDENT_SOURCE_REVIEW_V1",
+  "reviewer": "analytic_source",
+  "review_status": "NO_CONCRETE_BLOCKER_FOUND_IN_BOUNDED_SOURCE_REVIEW",
+  "candidate_file": "/workspace/scratch/f128c1434505/tmp/fast_store_v029/native_runner.js",
+  "candidate_sha256": "c817f1cda09b76cd02570c8a8ba8553b85ead1c6e885a717087d71a79bd8ffbd",
+  "baseline_file": "/workspace/scratch/f128c1434505/output/RH_HILBERT_LIMIT_LEAN_v0_2_8_construction/tools/native_runner.js",
+  "baseline_sha256": "0d7b773a674a9d95261b0d3727744402b4ac1e1aafd910c3cb15a60d6397aa8a",
+  "scope": "Read-only comparison of the v0.2.9 E:\\RH-FAST persistent profile candidate against v0.2.8. No installation manager, shared mutable work directory, native execution, or proof changes were reviewed or introduced.",
+  "findings": [],
+  "checks": {
+    "prelock_failure": {
+      "status": "SOURCE_REVIEW_OK",
+      "function_line": 59,
+      "detail": "configurePersistentProfile is called before acquireRunnerLock and before log writes or helper mkdir. Its operations are path normalization/comparison, environment reads/writes and in-memory assignments; it performs no filesystem write. Invalid location throws before environment override. Existing top-level catch and releaseRunnerLock do not write package files when lockHeld is false."
+    },
+    "proper_descendant_boundary": {
+      "status": "SOURCE_REVIEW_OK",
+      "required_ancestor": "E:\\RH-FAST\\workspaces",
+      "detail": "Normalized lowercase workspace key must begin with normalized lowercase ancestor plus a backslash. Bare workspaces root and sibling prefixes such as workspaces-other do not match. A trailing separator is removed by existing norm; path comparison is case-insensitive. This is lexical normalized Windows path validation, not a new filesystem-junction resolver."
+    },
+    "profile_idempotence": {
+      "status": "SOURCE_REVIEW_OK",
+      "detail": "Each call validates location again. Prior LEAN_ANCHORINGS_ROOT is captured only once, before process-environment override, so repeated configuration does not replace the captured prior root with the new E: root."
+    },
+    "new_anchor_location": {
+      "status": "SOURCE_REVIEW_OK",
+      "base": "E:\\RH-FAST\\anchors",
+      "detail": "The process environment selects the new persistent anchor base. Existing selectCache creates the established project/target/toolchain subtree there. Existing helper caches remain below the same anchor root through shortCacheGroup."
+    },
+    "prior_anchor_locations": {
+      "status": "SOURCE_REVIEW_OK",
+      "function_line": 742,
+      "detail": "The captured prior custom root is added through existing addAnchorRoot as an import source when distinct from the new base. Existing LOCALAPPDATA, singular explicit import, and plural explicit import discovery remains. Current destination anchorRoot stays on E:, so old roots are not changed into save destinations. Existing import validation and copied-receipt acceptance are unchanged."
+    },
+    "workspace_isolation_and_locks": {
+      "status": "SOURCE_REVIEW_OK",
+      "detail": "root, work=root\\.native-build, helper directory, lock path, lock owner schema, worker detection, stale-lock quarantine and release logic are unchanged. Separate extracted package roots retain separate mutable workspaces and their own corresponding locks; no mutable output directory is shared across package roots."
+    },
+    "compiler_mathlib_flags": {
+      "status": "SOURCE_REVIEW_OK",
+      "detail": "Compiler/Mathlib discovery, LEAN_PATH order, thread settings, compile arguments and helper compiler flags are unchanged. No relocation or new memory/semantic flags were added."
+    },
+    "fingerprints_receipts_audits": {
+      "status": "SOURCE_REVIEW_OK",
+      "detail": "All hashing, working-snapshot consumption, source/dependency/toolchain key formulas, receipt policies, restore/save checks, and axiom-audit functions are byte-identical. Runner/package version labels change provenance as expected without changing semantic build keys."
+    },
+    "follower": {
+      "status": "SOURCE_REVIEW_OK_WITH_SCOPE_LIMIT",
+      "detail": "Candidate does not alter source-root-bound locks or log paths, so the existing follower contract is preserved. The final packaged follower/CMD byte identity remains a packaging check; no v0.2.9 output tree existed when this review was written."
+    },
+    "storage_retention_metadata": {
+      "status": "SOURCE_REVIEW_OK",
+      "detail": "New log/result fields describe the fixed storage/workspace/anchor roots and no automatic eviction of valid anchors. The candidate introduces no eviction, copy, mirroring, installer or cleanup operation."
+    },
+    "wsh_syntax": {
+      "status": "SOURCE_REVIEW_ONLY",
+      "detail": "New code uses the existing ES3/JScript var/function/string style; no new modern JavaScript syntax or API requirement was found."
+    }
+  },
+  "textual_comparison": {
+    "added_functions": [
+      "configurePersistentProfile"
+    ],
+    "changed_existing_functions": [
+      "result",
+      "selectCache"
+    ],
+    "removed_functions": [],
+    "byte_identical_existing_function_count": 104,
+    "constant_equality": {
+      "SCHEMA": true,
+      "CACHE_LAYOUT": true,
+      "HELPER_SCHEMA": true,
+      "COMPILE_POLICY": true,
+      "AUDIT_POLICY": true,
+      "COMPILE_FLAGS": true,
+      "LEGACY_SCHEMA": true,
+      "LEGACY_RUNNER_SHA": true,
+      "LEGACY_CMD_SHA": true,
+      "TARGET": true
+    },
+    "other_changes": "Two package/runner labels, four profile globals, prelock profile call, and diagnostic log/result metadata.",
+    "unchanged_protected_functions": [
+      "identifyLockSelf",
+      "formatLockOwner",
+      "lockSnapshotAt",
+      "assertNoLockWorkers",
+      "quarantineStaleLock",
+      "acquireRunnerLock",
+      "releaseRunnerLock",
+      "makeGlobalKey",
+      "moduleInput",
+      "externalKey",
+      "auditKey",
+      "checkAxioms",
+      "freshHashSet",
+      "prepareBatchHasher",
+      "readAnchorCore",
+      "verifyLegacy",
+      "verifyCurrent",
+      "workingArtifactsMatch",
+      "restoreAnchor",
+      "saveAnchor",
+      "processModuleBody",
+      "selectCompiler",
+      "loadPlan"
+    ]
+  },
+  "baseline_auxiliary_files": {
+    "tools/NativeSha256.cs": "d8cd2d616ed2b7a64931fe391bd6e25b236a1c450e5b7c669df26c2974dd9f18",
+    "tools/follow_active.js": "beb08b78f7c8ef53d06db9e99b266f1fb5a33cbb21d936a71dd6b1a8354f024f",
+    "run.cmd": "5e6c6561c370c904b13d165986f0c045c6e7732de1745744b03619cf4a4b9f16"
+  },
+  "baseline_lean_file_count": 86,
+  "package_scope_limit": "The reviewed candidate is native_runner.js only. No v0.2.9 assembled output directory existed at review time; C# helper, follower, CMD and all 86 Lean file byte preservation must be confirmed in the parent packaging comparison. This review made no edits to those files or to output/.",
+  "assumptions": [
+    "The user extraction command places the new package in its own versioned workspace directory beneath E:\\RH-FAST\\workspaces.",
+    "The existing compiler and Mathlib cache remain at their current locations.",
+    "Existing cache acceptance continues to rely on fresh fingerprints and same-target receipts, not directory existence."
+  ],
+  "execution_limits": {
+    "source_only": true,
+    "not_executed": [
+      "Lean",
+      "Lake",
+      "Windows native runner",
+      "C# compiler or helper",
+      "CI",
+      "mock host tests by this reviewer"
+    ],
+    "no_performance_claim": true,
+    "only_written_file": "/workspace/scratch/f128c1434505/tmp/fast_store_v029/review/independent_review.json"
+  }
+}

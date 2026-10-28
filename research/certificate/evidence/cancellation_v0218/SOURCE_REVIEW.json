@@ -1,0 +1,119 @@
+{
+  "schema": "RH_CANCELLATION_V0218_INDEPENDENT_SOURCE_REVIEW_V1",
+  "status": "SOURCE_REVIEW_ONLY",
+  "reviewer": "/root/regression_review",
+  "scope": {
+    "task": "Independent static mathematical and likely Lean elaboration review of three prepared modules.",
+    "root": "/workspace/scratch/f128c1434505",
+    "source_files_edited": false,
+    "native_lean_executed": false,
+    "lake_executed": false,
+    "native_windows_tools_executed": false,
+    "ci_executed": false,
+    "axiom_audit_executed": false,
+    "runtime_tests_executed": false,
+    "proof_status": "NATIVE_COMPILATION_AND_AXIOM_AUDIT_PENDING",
+    "dependency_scope": "Relevant definitions and endpoint signatures inspected in the listed baseline dependencies; the entire imported proof chain was not independently re-proved or executed."
+  },
+  "reviewed_sources": [
+    {
+      "path": "tmp/cancellation_v0218/proof/Cancellation.lean",
+      "sha256": "53c9c4ab1733ec4f20190826dcb74d47b18dcd1942b78bb06b319178419311c6",
+      "explicit_public_declarations": 9,
+      "private_helpers": 2
+    },
+    {
+      "path": "tmp/cancellation_v0218/proof/EventualGrowth.lean",
+      "sha256": "f846d1a1b897542c460783a9ab5702ff1b713e5788fe149034d1ead5f0d178c0",
+      "explicit_public_declarations": 3,
+      "private_helpers": 0
+    },
+    {
+      "path": "tmp/cancellation_v0218/proof/ActualCancellationWitness.lean",
+      "sha256": "e8281816a7dc16ca30dfe0009df97ea201c5259f0a137f41ca768f6da3c8c6f8",
+      "explicit_public_declarations": 12,
+      "private_helpers": 0
+    }
+  ],
+  "inspected_dependencies": [
+    {
+      "path": "output/RH_HILBERT_LIMIT_LEAN_v0_2_17_construction/RH_HilbertLimit/AnalyticClosure.lean",
+      "sha256": "ed440ff35623939ee3b5b7d58b0c85836d0c3e425e9db60ed95e7cb3eb465c16"
+    },
+    {
+      "path": "output/RH_HILBERT_LIMIT_LEAN_v0_2_17_construction/RH_HilbertLimit/ActualXi.lean",
+      "sha256": "d1fe6b5d5a8a3d6caf398790fe4a6b519ad0510a229c3cf88e3e20267d003322"
+    },
+    {
+      "path": "output/RH_HILBERT_LIMIT_LEAN_v0_2_17_construction/RH_HilbertLimit/Bernstein.lean",
+      "sha256": "e0b488ee02ec770a436348f8ebd9ff607e0480adddb23a6edc89c4272131f0b1"
+    },
+    {
+      "path": "output/RH_HILBERT_LIMIT_LEAN_v0_2_17_construction/RH_HilbertLimit/GrowthStep.lean",
+      "sha256": "07fa8dfc108c4dd5dabb844719d84a5b0f09c56f92960e90e085017a216839b5"
+    }
+  ],
+  "exact_hypotheses": {
+    "finite_data": "CancellationBudget contains exactly cutoff : Nat and coefficient : Nat; neither a proof nor RH is a structure field.",
+    "admissibility": "For every n : Nat with cutoff <= n, rowCancellation actualNormalizedMoment n <= (coefficient : Real) * actualVariation n.",
+    "forward_endpoint": "(exists W : CancellationBudget, W.Admissible) -> _root_.RiemannHypothesis.",
+    "expanded_forward_endpoint": "(exists N K : Nat, forall n : Nat, N <= n -> rowCancellation actualNormalizedMoment n <= (K : Real) * actualVariation n) -> _root_.RiemannHypothesis.",
+    "converse": "RH supplies the data cutoff = 0, coefficient = 0 using the imported all-variation-one criterion; admissibility is established from RH, not independently supplied.",
+    "semantic_equivalence": "(exists W : CancellationBudget, W.Admissible) <-> _root_.RiemannHypothesis.",
+    "extra_analytic_inputs_at_endpoint": "None in the displayed signatures. AnalyticClosure provides constructed calibration and dominant extraction through imported declarations.",
+    "local_flux_endpoint": "Existential W and unrestricted H : Nat -> Nat -> Real, together with all-order local and boundary inequalities, imply RH. H is not represented as finite raw certificate data."
+  },
+  "mathematical_review": [
+    {
+      "subject": "Literal adjacent cancellation",
+      "finding": "rowCancellation is defined as a finite sum of weighted triangle defects, then proved equal to (n+1) * (rowVariation u (n+1) - rowVariation u n). It is not defined to be the desired RH conclusion or the variation increment.",
+      "reasoning": "Coarsening clears the positive common denominator; each interior next-row coefficient receives total weight n+1, and both endpoint coefficients also receive n+1."
+    },
+    {
+      "subject": "Nonnegativity and local flux",
+      "finding": "In-range coefficients are nonnegative; the triangle inequality gives nonnegative defects. The local-flux bound sums the actual finite row and telescopes H(j+1)-H(j); the displayed boundary inequality controls the residual.",
+      "reasoning": "No sign hypothesis on the auxiliary function H or real coefficient K is needed for this finite-row summation theorem."
+    },
+    {
+      "subject": "Eventual growth",
+      "finding": "For every epsilon > 0, choose M > K/epsilon and begin at max(N,M). Nonnegativity of V permits multiplication of inequalities and yields V(n+1) <= (1+epsilon)*V(n) <= exp(epsilon)*V(n).",
+      "reasoning": "The existing exp_bound_of_eventual_mul_step absorbs the finite prefix. The conclusion is the existing global Subexponential predicate."
+    },
+    {
+      "subject": "Actual RH transfer",
+      "finding": "The bridge specializes the generic identity and eventual-growth theorem to literal actualNormalizedMoment/actualVariation and applies the imported subexponential iff native RH endpoint.",
+      "reasoning": "The forward source contains no RH hypothesis or extra analytic input parameter; its universal admissibility obligation remains explicit."
+    }
+  ],
+  "likely_elaboration_review": {
+    "definite_failure_identified": false,
+    "compilation_inference": "NOT_TESTED",
+    "observations": [
+      "The root replaced the initially implicit cutoff/coefficient apply step with an exact application explicitly naming V, N and K; the review hash binds that updated source.",
+      "actualVariation reduces definitionally to rowVariation actualNormalizedMoment, and actualWeight to bernsteinWeight actualNormalizedMoment. These aliases justify exact/change uses in the budget and local-flux bridge.",
+      "rowCancellation_eq has the exact real-cast normal form used by the bridge. The zero-budget change reduces structure projections and the actualVariation alias.",
+      "The private weighted-row summation uses Finset.sum_range_succ and Finset.sum_range_succ' in the same argument pattern already present in baseline Bernstein.",
+      "The denominator-clearing transitivity has the correct orientation: (n+1)*weight = weight*(n+1) = numerator.",
+      "The remaining proof scripts use ordinary finite-sum rewriting, ring, positivity, omega, linarith and exact applications; static inspection cannot establish their elaboration or kernel acceptance."
+    ]
+  },
+  "audit_inventory_notes": {
+    "explicit_public_declarations": 24,
+    "generated_structure_declarations": "Constructor, recursor and projections are not included in the explicit-public count; this count is not a claim to enumerate every generated Lean declaration.",
+    "old_targets_to_preserve": 370,
+    "expected_target_total_if_all_24_added": 394,
+    "aggregate_audit_inspected": false,
+    "no_new_source_axiom_or_placeholder_observed": true,
+    "note": "Absence of observed placeholders is a source observation only, not a native axioms result."
+  },
+  "anti_overclaim_gates": [
+    "No concrete admissible cancellation budget is supplied.",
+    "No Bool checker, finite raw-certificate encoding, actual-source certificate identity, checker soundness theorem or checker completeness theorem is supplied.",
+    "The natural data are finite, while validity remains an all-order mathematical predicate.",
+    "The local-flux endpoint adds an unrestricted function and universal inequalities; it is not itself a finite-computation witness.",
+    "Semantic equivalence must not be promoted to the user's finite-checker formal-closure endpoint.",
+    "Unconditional RH and finite accepted witness existence remain unestablished.",
+    "Native compilation and exact aggregate axiom audit remain required before reporting these new declarations as Lean checked."
+  ],
+  "conclusion": "No definite mathematical or elaboration defect was identified in the reviewed source. This is a bounded source review only; it does not certify compilation, axiom audit, a finite accepted witness or the finite-checker equivalence."
+}

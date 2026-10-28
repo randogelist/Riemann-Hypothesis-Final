@@ -1,0 +1,71 @@
+{
+  "schema": "RH_V0217_PORTABLE_FOCUSED_TEST_USAGE_V1",
+  "candidate_command": "node candidate/focused_review.js --package-root /absolute/v0.2.17/package --expected-runner-sha256 3d9233a9dd98ecd6549860716c338d11f5aedb44d9146b0835941d3b171e030c --report /absolute/output/candidate_report.json",
+  "baseline_command": "node baseline_shutdown_observation.js --package-root /absolute/v0.2.16/package --report /absolute/output/baseline_report.json",
+  "runner_dependency_on_Node": false,
+  "candidate_status": "PASS",
+  "candidate_passed": 16,
+  "candidate_failed": 0,
+  "candidate_runner_sha256": "3d9233a9dd98ecd6549860716c338d11f5aedb44d9146b0835941d3b171e030c",
+  "candidate_report_sha256": "f62d97084c6f7daa4266f3c2d4d9442af8f906bed1ce1158547f22a0abdab134",
+  "baseline_report_sha256": "9b22a2c3c14a01bbd067028b6e0eb264f97b2e789e03dc3fcf4b060c1e9d5af5",
+  "portable_from_tmp_reports_byte_identical": true,
+  "actual_runner_bodies_used": true,
+  "whole_WSH_entry_point_executed": false,
+  "native_runToFile_original_function_restored_in_candidate_host": true,
+  "simulated_boundaries": [
+    "WScript Shell.Run",
+    "WScript Shell.Exec",
+    "WMI full and targeted process queries",
+    "Windows in-memory filesystem",
+    "process handles and status",
+    "clock/sleeps",
+    "compiler/audit output generation"
+  ],
+  "host_adaptations": [
+    "Seven inherited WSH COM property-put expressions are adapted to explicit environment setters for Node VM parsing.",
+    "Candidate host restores the actual runner runToFile function and simulates results at raw shell.Run; asynchronous process completion writes simulated outputs directly without a nested fake launch.",
+    "WMI boundary can return success, absence, matching/mismatched identities, duplicate rows, query errors or partial enumeration errors."
+  ],
+  "source_bindings": {
+    "baseline_host/candidate_sources.js": {
+      "bytes": 6724,
+      "sha256": "92ddba93bcb792dc369b0774e38b8d5cebd20f1af68dc3628780452e52aa5eb8"
+    },
+    "baseline_host/mock_host.js": {
+      "bytes": 13674,
+      "sha256": "525da25dd590b785537bf6885a43df1e56462870a545cd9692159f4ced53e590"
+    },
+    "baseline_host/runtime_host.js": {
+      "bytes": 11382,
+      "sha256": "3805fac27c8bfefb147d475d960befd8e1859bade4cad677058d50a01da0c2d7"
+    },
+    "baseline_shutdown_observation.js": {
+      "bytes": 4597,
+      "sha256": "1e65534096e54879ec2f7fbcd1c3c9de2a2732c49f67d7c1c1455d3166353c48"
+    },
+    "candidate/candidate_sources.js": {
+      "bytes": 6724,
+      "sha256": "92ddba93bcb792dc369b0774e38b8d5cebd20f1af68dc3628780452e52aa5eb8"
+    },
+    "candidate/focused_review.js": {
+      "bytes": 18508,
+      "sha256": "d58eccbecf54d2677a21f499cc1cafac630fe685fd66bfedf817226097511dba"
+    },
+    "candidate/mock_host.js": {
+      "bytes": 14379,
+      "sha256": "06cb5ada2df8abbf19477d374996a9c0c7e10b49f55bad5a0bbd3cfe9e1b835a"
+    },
+    "candidate/runtime_host.js": {
+      "bytes": 11903,
+      "sha256": "a516a5882dcb9ffb43277916bebc710ac8a873213962f0b201a55bd4a74b5d30"
+    }
+  },
+  "limits": [
+    "No native Windows, WSH/COM, WMI, Lean/Lake, C#, Wine or CI execution occurred.",
+    "All process identities, WMI responses, compiler/audit outcomes, files, receipts, hashes and time are simulated in memory.",
+    "Only rows from the initial complete census are revisited. These tests do not assert a global stop-the-world Windows process census or identify unreadable processes as foreign.",
+    "Six rounds/64 rows bound targeted worker queries and scheduled sleeps; no hard wall-clock bound is implied for WMI calls.",
+    "The current native user failure remains evidence; these mocked cases do not certify the new runner on Windows or promote the mathematical endpoint."
+  ]
+}

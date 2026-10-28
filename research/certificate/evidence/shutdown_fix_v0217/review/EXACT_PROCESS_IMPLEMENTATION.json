@@ -1,0 +1,75 @@
+{
+  "schema": "RH_HILBERT_V0217_EXACT_PROCESS_RECHECK_IMPLEMENTATION_REVIEW_V1",
+  "author_and_reviewer": "lock_review",
+  "review_kind": "AUTHOR_STATIC_REVIEW_AND_EXACT_FUNCTION_COMPARISON",
+  "baseline_runner_sha256": "d5eb2c1f33b4fafcd0b1d366850cc860c7e73552dd739ee9cdd238559e679c86",
+  "candidate_runner_sha256": "3d9233a9dd98ecd6549860716c338d11f5aedb44d9146b0835941d3b171e030c",
+  "status": "STATIC_CHECKS_PASS_NATIVE_PENDING",
+  "source_change_scope": "Only tools/native_runner.js in candidate package; review artifacts are separate.",
+  "launch_ledger": {
+    "registered_before_raw_shell_call": true,
+    "sync_shell_Run_waitOnReturn": true,
+    "sync_valid_numeric_exit_is_returned": true,
+    "returned_async_handles_retained": true,
+    "async_completed_status": 1,
+    "other_statuses": "0 active; every other value or getter exception uncertain",
+    "launch_exception": "record remains LAUNCH_UNCERTAIN",
+    "ledger_owner_bound": true,
+    "sealed_before_shutdown_drain": true,
+    "sealed_launch_routes_reject_before_shell_call": true,
+    "raw_shell_Run_occurrences": 1,
+    "raw_shell_Exec_occurrences": 1
+  },
+  "shutdown_query_limits": {
+    "complete_machine_inventory_queries_max": 1,
+    "initial_unreadable_worker_rows_max": 64,
+    "rounds_max": 6,
+    "targeted_worker_queries_per_round_max": 64,
+    "targeted_worker_queries_total_max": 384,
+    "targeted_self_queries_total_max": 12,
+    "scheduled_sleep_between_rounds_ms": 200,
+    "scheduled_sleep_total_max_ms": 1000,
+    "existing_owned_worker_drain_ms": 30000,
+    "hard_wall_clock_bound": false,
+    "runtime_note": "WMI/COM enumeration and status calls have no hard deadline imposed by this JScript wrapper."
+  },
+  "exact_row_rules": {
+    "successful_empty_enumeration": "retire only that original snapshot row",
+    "readable_same_identity": "full original guard evaluates refreshed command",
+    "identity_required": [
+      "PID",
+      "complete CreationDate",
+      "lowercase executable Name",
+      "ParentProcessId"
+    ],
+    "identity_change_or_reuse": "fail and preserve lock",
+    "duplicate_malformed_failed_query": "fail; never infer absence",
+    "persistent_unreadable": "retry same row identities within bounds; preserve lock on exhaustion",
+    "all_original_rows_retained_until_guard_except_confirmed_absent": true,
+    "existing_follower_and_exact_preexisting_host_filters": "unchanged",
+    "new_child_or_parent_based_exemption": false,
+    "process_termination": false
+  },
+  "ownership_checks": {
+    "initial_generation_retained": true,
+    "exact_owner_text_and_generation_pre_post": true,
+    "targeted_same_self_PID_creation_name_parent_script_token_pre_post": true,
+    "tracked_own_launches_pre_post": true,
+    "strict_stale_recovery_unchanged": true
+  },
+  "verification": {
+    "node_syntax_check": "PASS",
+    "protected_function_comparison": "PASS",
+    "native_runtime": "NOT_RUN",
+    "lean": "NOT_RUN",
+    "axiom_audit": "NOT_RUN",
+    "ci": "NOT_RUN",
+    "runtime_mocks": "Separate regression_review agent owns tests; no result asserted here."
+  },
+  "limitations": [
+    "A process inventory is a time-dependent observation, not an atomic operating-system process snapshot.",
+    "The sealed ledger closes this runner's native launch routes and verifies returned process statuses; it is not a Windows Job Object or a general descendant-containment mechanism.",
+    "Live unreadable processes are never declared unrelated or ignored by parent identity.",
+    "The old retained v0.2.16 lock is not removed by this package; a new versioned workspace is used."
+  ]
+}

@@ -1,0 +1,217 @@
+{
+  "schema": "RH_V0217_FOCUSED_NODE_VM_REVIEW_V1",
+  "status": "PASS",
+  "scope": "NODE_VM_SYNTHETIC_HOST_ONLY",
+  "runner_sha256": "3d9233a9dd98ecd6549860716c338d11f5aedb44d9146b0835941d3b171e030c",
+  "passed": 16,
+  "failed": 0,
+  "cases": [
+    {
+      "name": "expired_initial_row_does_not_chase_new_unreadable_children",
+      "outcome": "PASS",
+      "evidence": {
+        "full_inventories": 1,
+        "exact_initial_worker_queries": 1,
+        "new_worker_pid_chased": false,
+        "expired_rows": 1,
+        "added_native_launches": 0,
+        "fake_wait_ms": 0
+      }
+    },
+    {
+      "name": "absence_resolution_does_not_require_an_admitted_parent",
+      "outcome": "PASS",
+      "evidence": {
+        "unrelated_parent_not_used_as_evidence": true,
+        "absence_from_successful_exact_query_required": true
+      }
+    },
+    {
+      "name": "matching_readable_row_reenters_original_guard",
+      "outcome": "PASS",
+      "evidence": {
+        "outcomes": [
+          {
+            "binding": "current_root",
+            "clean": false,
+            "readable_rows": 1
+          },
+          {
+            "binding": "outside_root",
+            "clean": true,
+            "readable_rows": 1
+          }
+        ]
+      }
+    },
+    {
+      "name": "persistent_unreadable_same_identity_retains_lock_with_finite_budget",
+      "outcome": "PASS",
+      "evidence": {
+        "full_inventories": 1,
+        "worker_queries": 6,
+        "self_queries": 12,
+        "fake_scheduled_sleep_ms": 1000,
+        "parent_admission_exempted_child": false,
+        "lock_retained": true
+      }
+    },
+    {
+      "name": "targeted_failure_malformed_rows_and_identity_reuse_never_mean_absent",
+      "outcome": "PASS",
+      "evidence": {
+        "retained_cases": [
+          "query_throws",
+          "duplicate_rows",
+          "partial_enumeration_throws",
+          "wrong_pid",
+          "new_creation_same_pid",
+          "changed_name",
+          "changed_parent",
+          "missing_creation",
+          "invalid_parent"
+        ],
+        "assumed_absences": 0
+      }
+    },
+    {
+      "name": "invalid_initial_identity_and_more_than_64_rows_fail_closed",
+      "outcome": "PASS",
+      "evidence": {
+        "retained_cases": [
+          "missing_creation",
+          "invalid_parent",
+          "row_budget_65"
+        ],
+        "worker_queries_before_rejection": 0
+      }
+    },
+    {
+      "name": "64_persistent_rows_bound_exact_worker_queries_to_384",
+      "outcome": "PASS",
+      "evidence": {
+        "full_inventories": 1,
+        "worker_queries": 384,
+        "self_queries": 12,
+        "fake_scheduled_sleep_ms": 1000
+      }
+    },
+    {
+      "name": "initial_full_inventory_failure_is_not_a_successful_empty_census",
+      "outcome": "PASS",
+      "evidence": {
+        "full_inventory_failed": true,
+        "lock_retained": true
+      }
+    },
+    {
+      "name": "lock_text_and_generation_changes_during_revalidation_are_preserved",
+      "outcome": "PASS",
+      "evidence": {
+        "cases": [
+          {
+            "mode": "owner_text",
+            "lock_retained": true
+          },
+          {
+            "mode": "generation_same_text",
+            "lock_retained": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "self_target_query_requires_exact_identity_before_and_after_workers",
+      "outcome": "PASS",
+      "evidence": {
+        "retained_identity_variants": [
+          "absent_initial",
+          "creation_changed_initial",
+          "parent_changed_post",
+          "command_unreadable_post",
+          "complete_inventory_changed_self"
+        ]
+      }
+    },
+    {
+      "name": "new_owned_worker_during_exact_query_blocks_cleanup",
+      "outcome": "PASS",
+      "evidence": {
+        "post_query_owned_worker_guard": true,
+        "lock_retained": true
+      }
+    },
+    {
+      "name": "all_three_actual_launch_routes_register_before_call_and_obey_seal",
+      "outcome": "PASS",
+      "evidence": {
+        "actual_launch_routes_exercised": [
+          "SYNC_RUN",
+          "certutil",
+          "lean"
+        ],
+        "registered_before_raw_call": true,
+        "post_seal_raw_calls": 0
+      }
+    },
+    {
+      "name": "throwing_or_invalid_launches_remain_in_owned_uncertainty_ledger",
+      "outcome": "PASS",
+      "evidence": {
+        "uncertain_launch_cases": [
+          "run_throws",
+          "run_invalid_code",
+          "exec_throws",
+          "exec_missing_handle"
+        ],
+        "fake_owned_drain_ms_per_case": 30000,
+        "inventory_not_reached": true
+      }
+    },
+    {
+      "name": "retained_handle_status_is_conservative_and_owner_bound",
+      "outcome": "PASS",
+      "evidence": {
+        "uncertain_status_cases": [
+          "running",
+          "invalid",
+          "throwing"
+        ],
+        "only_numeric_status_1_finishes_async": true,
+        "changed_owner_record_blocked": true
+      }
+    },
+    {
+      "name": "stale_and_legacy_lock_acquisition_do_not_use_targeted_shutdown_resolution",
+      "outcome": "PASS",
+      "evidence": {
+        "stale_recovery_targeted_queries": 0,
+        "old_locks_preserved": true
+      }
+    },
+    {
+      "name": "mock_cached_pipeline_and_final_audit_reuse_complete_before_sealed_cleanup",
+      "outcome": "PASS",
+      "evidence": {
+        "simulated_ordinary_plus_aggregate_reused": 2,
+        "extra_final_compiler_calls": 0,
+        "cleanup_extra_native_launches": 0,
+        "all_launch_records_finished": true
+      }
+    }
+  ],
+  "host": {
+    "actual_runner_function_definitions": true,
+    "actual_runToFile_restored": true,
+    "raw_shell_Run_Exec_substituted": true,
+    "whole_wsh_entry_point_executed": false,
+    "COM_setter_adaptations": 7
+  },
+  "limitations": [
+    "No native Windows, WSH/COM, WMI, Lean/Lake, C#, Wine or CI execution occurred.",
+    "All process identities, WMI responses, compiler/audit outcomes, files, receipts, hashes and time are simulated in memory.",
+    "Only rows from the initial complete census are revisited. These tests do not assert a global stop-the-world Windows process census or identify unreadable processes as foreign.",
+    "Six rounds/64 rows bound targeted worker queries and scheduled sleeps; no hard wall-clock bound is implied for WMI calls.",
+    "The current native user failure remains evidence; these mocked cases do not certify the new runner on Windows or promote the mathematical endpoint."
+  ]
+}

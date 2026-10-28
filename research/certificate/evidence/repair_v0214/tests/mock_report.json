@@ -1,0 +1,200 @@
+{
+  "schema": "RH_V0214_FOCUSED_NODE_VM_REVIEW_V1",
+  "status": "PASS",
+  "scope": "NODE_VM_SYNTHETIC_HOST_ONLY",
+  "runner_sha256": "828af9d989ae820ad43784839a2d140fe3f7495a55c7e43e66df3e1d145bbb02",
+  "shutdown_retry_sha256": "32dd483658af0764a1e123973e4a2928eeb50bee2fb3f2e6e86230bf43eee925",
+  "native_tail_sha256": "867466f9b20067e9abb5a9a4c1f3f8458d6fad0a95387ab859f0a189749e5c1b",
+  "unchanged_memory_fallback_sha256": "2e7606215fe234f04da2e18ba0930253dff388fb2a5bdf08272ecd44786fe673",
+  "unchanged_admitted_relative_hosts_sha256": "e8b0ae365d74c416881ba9333ab58e396f83c1f7d69f10dc7d7f9b05165b0a4a",
+  "passed": 15,
+  "failed": 0,
+  "cases": [
+    {
+      "name": "already_clear_owned_shutdown_uses_one_inventory_without_waiting",
+      "outcome": "PASS",
+      "evidence": {
+        "inventory_queries": 1,
+        "fake_wait_ms": 0,
+        "lock_released": true
+      }
+    },
+    {
+      "name": "transient_unreadable_certutil_requires_fresh_guard_success_before_release",
+      "outcome": "PASS",
+      "evidence": {
+        "fresh_inventory_queries": 2,
+        "fake_wait_ms": 200,
+        "lock_released_after_guard_pass": true,
+        "build_failure_preserved": true
+      }
+    },
+    {
+      "name": "persistent_unreadable_certutil_retains_lock_after_six_attempts",
+      "outcome": "PASS",
+      "evidence": {
+        "fresh_inventory_queries": 6,
+        "fake_wait_ms": 1000,
+        "lock_retained": true,
+        "same_owner_record": true
+      }
+    },
+    {
+      "name": "readable_current_root_worker_after_uncertainty_blocks_immediately",
+      "outcome": "PASS",
+      "evidence": {
+        "fake_wait_ms": 200,
+        "current_root_worker_retained": true,
+        "untagged_active_error_retried": false
+      }
+    },
+    {
+      "name": "whole_fresh_inventory_catches_new_blocker_after_old_pid_disappears",
+      "outcome": "PASS",
+      "evidence": {
+        "old_pid_disappeared": true,
+        "new_pid": 7300,
+        "new_current_root_worker_blocks": true
+      }
+    },
+    {
+      "name": "pid_reuse_with_new_creation_and_unreadable_command_remains_unknown",
+      "outcome": "PASS",
+      "evidence": {
+        "same_pid_new_creation_remains_guarded": true,
+        "fake_wait_ms": 1000
+      }
+    },
+    {
+      "name": "inventory_failure_is_not_retryable_or_a_clean_shutdown",
+      "outcome": "PASS",
+      "evidence": {
+        "cases": [
+          {
+            "failure_timing": "initial",
+            "fake_wait_ms": 0,
+            "lock_retained": true
+          },
+          {
+            "failure_timing": "after_unreadable",
+            "fake_wait_ms": 200,
+            "lock_retained": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "changed_lock_owner_during_retry_is_preserved_and_stops_immediately",
+      "outcome": "PASS",
+      "evidence": {
+        "changed_owner_preserved": true,
+        "fake_wait_ms": 200,
+        "clean_snapshot_did_not_override_owner_guard": true
+      }
+    },
+    {
+      "name": "missing_or_changed_self_identity_prevents_shutdown_release",
+      "outcome": "PASS",
+      "evidence": {
+        "cases": [
+          {
+            "self_identity": "missing",
+            "fake_wait_ms": 0,
+            "lock_retained": true
+          },
+          {
+            "self_identity": "changed_creation",
+            "fake_wait_ms": 0,
+            "lock_retained": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "existing_admitted_relative_host_and_transient_certutil_are_checked_together",
+      "outcome": "PASS",
+      "evidence": {
+        "same_owner_exact_relative_host_preserved": true,
+        "transient_worker_still_required_recheck": true
+      }
+    },
+    {
+      "name": "stale_and_legacy_recovery_never_use_shutdown_retry",
+      "outcome": "PASS",
+      "evidence": {
+        "cases": [
+          {
+            "lock_schema": "owned",
+            "immediate_rejection": true,
+            "recovery_count": 0
+          },
+          {
+            "lock_schema": "legacy_empty",
+            "immediate_rejection": true,
+            "recovery_count": 0
+          }
+        ]
+      }
+    },
+    {
+      "name": "live_or_unknown_owned_process_still_uses_original_drain_and_retains_lock",
+      "outcome": "PASS",
+      "evidence": {
+        "cases": [
+          {
+            "owned_state": "live",
+            "fake_drain_ms": 30000,
+            "shutdown_inventory_not_reached": true,
+            "lock_retained": true
+          },
+          {
+            "owned_state": "unknown",
+            "fake_drain_ms": 30000,
+            "shutdown_inventory_not_reached": true,
+            "lock_retained": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "owned_worker_appearing_during_inventory_prevents_release",
+      "outcome": "PASS",
+      "evidence": {
+        "post_inventory_owned_worker_check": true,
+        "clean_external_inventory_not_sufficient": true
+      }
+    },
+    {
+      "name": "memory_serial_fallback_and_final_audit_barriers_remain_effective",
+      "outcome": "PASS",
+      "evidence": {
+        "idle_fallback_workers": 1,
+        "serial_required_mib": 5120,
+        "dirty_final_denied_at_5119": true
+      }
+    },
+    {
+      "name": "verified_final_cache_reuse_does_not_require_new_memory_or_compile",
+      "outcome": "PASS",
+      "evidence": {
+        "verified_final_reused": true,
+        "added_compiler_calls": 0,
+        "added_memory_queries": 0
+      }
+    }
+  ],
+  "host": {
+    "basis": "Reused v0.2.13 in-memory host support; prior 15-case suite was not rerun.",
+    "assembled_COM_setter_adaptations": 7,
+    "entry_point_executed": false,
+    "actual_runner_function_definitions": true
+  },
+  "limitations": [
+    "No native Windows, WSH/COM, WMI, process tree, C#, Lean/Lake, CI, memory mapping, or performance execution.",
+    "Compiler outputs, receipts, process identities, RAM readings, and time are simulated in memory.",
+    "WMI API calls have no real-time completion guarantee; 1000 ms refers to bounded scheduled mock sleeps only.",
+    "The supplied native user run remains FAIL. These tests do not certify the Lean repair, mathematical endpoint or finite checker equivalence.",
+    "A persistent unreadable worker is retained as unknown; no test treats it as known unrelated or as a safe hash-only command."
+  ],
+  "runner_sources_unmodified": true
+}

@@ -1,0 +1,20 @@
+--- RH_HILBERT_LIMIT_LEAN_v0_2_4_construction/run.cmd
++++ RH_HILBERT_LIMIT_LEAN_v0_2_5_construction/run.cmd
+@@ -1,6 +1,7 @@
+ @echo off
+ setlocal EnableExtensions DisableDelayedExpansion
+-pushd "%~dp0"
++for %%I in ("%~dp0.") do set "RH_HILBERT_PACKAGE_ROOT=%%~fI"
++pushd "%RH_HILBERT_PACKAGE_ROOT%"
+ if errorlevel 1 exit /b 1
+ if not exist "%SystemRoot%\System32\cscript.exe" (
+   echo RUN=FAIL
+@@ -9,7 +10,7 @@
+   exit /b 2
+ )
+ set "RH_HILBERT_LOCK_TOKEN=%RANDOM%-%RANDOM%-%RANDOM%-%RANDOM%"
+-"%SystemRoot%\System32\cscript.exe" //nologo //E:JScript "%~dp0tools\native_runner.js" "--runner-token=%RH_HILBERT_LOCK_TOKEN%"
++"%SystemRoot%\System32\cscript.exe" //nologo //E:JScript "%RH_HILBERT_PACKAGE_ROOT%\tools\native_runner.js" "--runner-token=%RH_HILBERT_LOCK_TOKEN%"
+ set "RH_HILBERT_RUN_EXIT=%errorlevel%"
+ popd
+ endlocal & exit /b %RH_HILBERT_RUN_EXIT%

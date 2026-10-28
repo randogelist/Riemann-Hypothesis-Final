@@ -1,0 +1,35 @@
+--- v0.2.14/RH_HilbertLimit/CanonicalPowerSums.lean
++++ v0.2.15/RH_HilbertLimit/CanonicalPowerSums.lean
+@@ -163,9 +163,13 @@
+   have hd : HasDerivAt (fun w : ℂ => 1 + w * b i) (b i) z := by
+     simpa using ((hasDerivAt_id z).mul_const (b i)).const_add 1
+   have hne := denominator_ne_zero hb hz i
+-  unfold resolvent
+-  convert (hasDerivAt_const z (b i)).fun_div hd hne using 1 <;>
+-    field_simp [hne] <;> ring
++  have h := (hasDerivAt_const z (b i)).fun_div hd hne
++  have hscalar :
++      ((0 : ℂ) * (1 + z * b i) - b i * b i) / (1 + z * b i) ^ 2 =
++        -((resolvent b i z) ^ 2) := by
++    simp only [resolvent, zero_mul, zero_sub, neg_div, div_pow, ← pow_two]
++  rw [hscalar] at h
++  exact h
+ 
+ theorem hasDerivAt_resolvent_pow {b : ι → ℂ}
+     (hb : Summable (fun i => ‖b i‖)) (n : ℕ) {z : ℂ}
+@@ -173,8 +177,13 @@
+     HasDerivAt (fun w : ℂ => resolvent b i w ^ (n + 1))
+       (-((n + 1 : ℕ) : ℂ) * resolvent b i z ^ (n + 2)) z := by
+   have h := (hasDerivAt_resolvent hb hz i).fun_pow (n + 1)
+-  convert h using 1 <;>
+-    simp only [Nat.add_sub_cancel, pow_succ, pow_zero] <;> ring
++  have hscalar :
++      ((n + 1 : ℕ) : ℂ) * resolvent b i z ^ (n + 1 - 1) *
++          (-((resolvent b i z) ^ 2)) =
++        -((n + 1 : ℕ) : ℂ) * resolvent b i z ^ (n + 2) := by
++    simp only [Nat.add_sub_cancel, pow_add, mul_neg, neg_mul, mul_assoc]
++  rw [hscalar] at h
++  exact h
+ 
+ /-- The derivative recurrence is obtained from Mathlib's holomorphic M-test. -/
+ theorem deriv_resolventSeries {b : ι → ℂ}

@@ -1,0 +1,25 @@
+{
+  "scope": "SOURCE_PROVENANCE_ONLY_NOT_TEST_RESULTS",
+  "host_dependencies": [
+    {
+      "file": "mock_host.js",
+      "copied_from": "/workspace/scratch/f128c1434505/tmp/shutdown_fix_v0217/tests/candidate/mock_host.js",
+      "sha256": "06cb5ada2df8abbf19477d374996a9c0c7e10b49f55bad5a0bbd3cfe9e1b835a",
+      "bytes": 14379
+    },
+    {
+      "file": "runtime_host.js",
+      "copied_from": "/workspace/scratch/f128c1434505/tmp/shutdown_fix_v0217/tests/candidate/runtime_host.js",
+      "sha256": "a516a5882dcb9ffb43277916bebc710ac8a873213962f0b201a55bd4a74b5d30",
+      "bytes": 11903
+    },
+    {
+      "file": "candidate_sources.js",
+      "copied_from": "/workspace/scratch/f128c1434505/tmp/shutdown_fix_v0217/tests/candidate/candidate_sources.js",
+      "sha256": "92ddba93bcb792dc369b0774e38b8d5cebd20f1af68dc3628780452e52aa5eb8",
+      "bytes": 6724
+    }
+  ],
+  "old_reports_copied": false,
+  "native_execution": false
+}

@@ -1,0 +1,60 @@
+PACKAGE=RH_HILBERT_LIMIT_LEAN_v0_2_12_construction
+RUNNER=RH_HILBERT_NATIVE_RUNNER_v0_2_12_RAM_PARALLEL
+TARGET=LOCAL_COMPILER
+MODE=A_TIER_LEAN
+REQUIRED_COMPILER=Native Windows Lean 4.33.0
+PREPARATION_STATUS=RUNTIME_SOURCE_AND_MOCK_REVIEW_ONLY; NATIVE_RUN_PENDING
+MATHEMATICAL_ENDPOINT=V0_2_11_BYTE_IDENTICAL
+LEAN_SOURCE_FILES_PRESERVED=92
+NEW_PROOF_MODULES=0
+ORDINARY_MODULES=89
+SELECTED_FINAL_AUDIT=AnalyticAudit.lean
+FINAL_AUDIT_TARGETS=370
+CACHE_IDENTITY_AND_AUDIT_ACCEPTANCE=PRESERVED
+LEAN_JOBS_DEFAULT=16
+RH_MODULE_WORKERS_DEFAULT=4
+RH_WORKER_MEMORY_MB_DEFAULT=4096
+RH_SYSTEM_RESERVE_MB_DEFAULT=4096_OR_20_PERCENT_PHYSICAL_RAM
+RH_RAM_WARM_DEFAULT=AUTO
+RH_RAM_WARM_MB_DEFAULT=8192
+RH_RAM_WARM_MB_MAX=65536
+RAM_RESIDENCY=OS_MANAGED_NOT_GUARANTEED
+LEAN_ENVIRONMENT=NOT_SHARED
+FINAL_AUDIT=SERIAL_AFTER_ALL_ORDINARY_MODULES
+WORKER_DRAIN_LOOP_MS=30000
+LIVE_OR_UNCERTAIN_WORKERS=RETAIN_WORKSPACE_LOCK
+FORMAL_CLOSURE=OPEN
+FINITE_CHECKER_EQUIVALENCE=OPEN
+UNCONDITIONAL_RH=NOT_ESTABLISHED
+PERSISTENT_WORKSPACE=E:\RH-FAST\workspaces\RH_HILBERT_LIMIT_LEAN_v0_2_12_construction
+SHARED_ANCHORS=E:\RH-FAST\anchors\RH_HILBERT_LIMIT\LOCAL_COMPILER\lean-4.33.0
+
+The expected first run can reuse the 84 old ordinary modules from validated
+shared anchors, then compile five inherited analytic candidates and the
+aggregate. If these are already validly cached, they can also be reused.
+All reuse is decided by the existing fresh-content and same-target audits.
+New versioned workspaces may first restore artifacts before retaining them.
+
+After the old imports are accepted, CanonicalPowerSums, SpectralPhase and
+SpectralGenerating can run together. Extraction waits for both spectral
+modules; AnalyticClosure joins extraction and power sums. AnalyticAudit runs
+last. Each dependent waits for its imports' completed audit and acceptance.
+
+AUTO warming is attempted only for a dirty ordinary-module frontier of two
+or more jobs and only with an available RAM budget. Fully cached runs skip
+it. Set RH_RAM_WARM=OFF to compare parallel runs without the warmer.
+Set RH_MODULE_WORKERS=1 as well for serial admission in this new runner.
+
+A Lean thread budget is not a limit on every Windows thread/process. When
+parallel workers are configured, one thread token is reserved and the
+remaining 15 default tokens are divided among Lean tasks. Final audit uses 16.
+Memory admission estimates are conservative, not hard memory limits.
+
+The optional read-only x64 warmer uses the existing .NET Framework csc.
+It does not install anything, change compiler flags, or authorize cache reuse.
+The SHA256 helper source and proof cache acceptance functions are unchanged.
+Hashing can already warm the file cache; performance must be measured locally.
+
+No Lean/Lake/native Windows/C# compilation, Wine, or CI was run by the assistant.
+Node mocks do not exercise COM, WMI, real process trees, native page mapping,
+compiler behavior or native speed. See README and runtime evidence for scope.

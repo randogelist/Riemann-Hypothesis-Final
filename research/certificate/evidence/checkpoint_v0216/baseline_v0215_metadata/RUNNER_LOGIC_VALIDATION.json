@@ -1,0 +1,17 @@
+{
+  "schema": "RH_HILBERT_V0215_RUNTIME_PRESERVATION_V1",
+  "status": "EXACT_FUNCTIONAL_CODE_PRESERVATION; NATIVE_PENDING",
+  "runner_sha256": "302d970e3d2ed04bfcaaeaa8fcefd15d24e4d0fe03d4dfe59095b94afa1ec680",
+  "baseline_runner_sha256": "828af9d989ae820ad43784839a2d140fe3f7495a55c7e43e66df3e1d145bbb02",
+  "runtime_review": "evidence/repair_v0215/evidence/RUNTIME_IDENTITY_ONLY_REVIEW.json",
+  "runtime_review_sha256": "1c5d4695380b68096c2f25e95ae440118a863efba14e68deded24eb1d92979f4",
+  "functional_runner_and_helper_changes": false,
+  "new_runtime_tests_run": false,
+  "prior_mock_evidence": "evidence/repair_v0214/tests/mock_report.json; HISTORICAL_V0214_SOURCE_BINDING",
+  "user_native_control_flow": "v0.2.14 serial fallback and inventory CLEAR4 reported; overall build FAIL",
+  "native_windows_execution": false,
+  "lean_or_lake_execution": false,
+  "csharp_execution_or_compilation": false,
+  "ci_execution": false,
+  "performance_measurement": "NOT_RUN"
+}

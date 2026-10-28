@@ -1,0 +1,47 @@
+{
+  "schema": "RH_HILBERT_V0215_SOURCE_REPAIR_REVIEW_V1",
+  "status": "STATIC_PRESERVATION_PASS; NATIVE_PENDING",
+  "package": "RH_HILBERT_LIMIT_LEAN_v0_2_15_construction",
+  "lean_sources_total": 92,
+  "lean_sources_byte_preserved": 90,
+  "changed_lean_sources": [
+    "RH_HilbertLimit/CanonicalPowerSums.lean",
+    "RH_HilbertLimit/SpectralPhase.lean"
+  ],
+  "exact_declaration_headers_preserved": 35,
+  "proof_bodies_changed": 4,
+  "new_assumptions_or_axioms": false,
+  "source_change_invalidation_cone": [
+    "AnalyticAudit",
+    "RH_HilbertLimit.AnalyticClosure",
+    "RH_HilbertLimit.CanonicalPowerSums",
+    "RH_HilbertLimit.SpectralExtraction",
+    "RH_HilbertLimit.SpectralPhase"
+  ],
+  "selected_axiom_targets_preserved": 370,
+  "unchanged_manifest_inputs": 100,
+  "runtime_functional_changes": false,
+  "new_tests_executed": false,
+  "proof_reviews": [
+    "evidence/repair_v0215/canonical/proof_review.json",
+    "evidence/repair_v0215/phase/STATIC_REVIEW.json",
+    "evidence/repair_v0215/phase/independent_canonical_review.json"
+  ],
+  "changed_parent_files": [
+    "OPEN_OBLIGATIONS.txt",
+    "PROVENANCE.json",
+    "README.md",
+    "RH_HilbertLimit/CanonicalPowerSums.lean",
+    "RH_HilbertLimit/SpectralPhase.lean",
+    "RUNNER_LOGIC_VALIDATION.json",
+    "RUNNER_NOTES.txt",
+    "SHA256SUMS.txt",
+    "STATIC_REVIEW.json",
+    "STATUS.json",
+    "runner-version.txt",
+    "tools/native_runner.js"
+  ],
+  "native_verification": "NOT_RUN",
+  "formal_closure": "OPEN",
+  "finite_checker_equivalence": "OPEN"
+}

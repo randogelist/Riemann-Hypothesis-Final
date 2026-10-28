@@ -1,0 +1,119 @@
+{
+  "schema": "RH_RUNNER_PORTABLE_NODE_VALIDATION_V1",
+  "candidate_sha256": "eaf8ebc221f08607bd2256827e8bbafb5e5b2e2509e3e71513fe994db2d9eb97",
+  "baseline_sha256": "c817f1cda09b76cd02570c8a8ba8553b85ead1c6e885a717087d71a79bd8ffbd",
+  "reports": [
+    {
+      "path": "graph_results.json",
+      "sha256": "502dfc8e693b75b2987aa4bb81f9c0103fdeaff1e002f99b705a4a6191a70291",
+      "passed": 12,
+      "failed": 0,
+      "runner_sha256": "eaf8ebc221f08607bd2256827e8bbafb5e5b2e2509e3e71513fe994db2d9eb97"
+    },
+    {
+      "path": "empty_file_results.json",
+      "sha256": "b51ae4906c4d16cba7708dea7c6ec255dc4dfa04f0ee6e7adb6934a5ffbf079c",
+      "passed": 16,
+      "failed": 0,
+      "runner_sha256": "eaf8ebc221f08607bd2256827e8bbafb5e5b2e2509e3e71513fe994db2d9eb97"
+    }
+  ],
+  "total_passed": 28,
+  "total_failed": 0,
+  "suite_counts": {
+    "graph": {
+      "passed": 12,
+      "failed": 0
+    },
+    "empty_file_hash": {
+      "passed": 16,
+      "failed": 0
+    }
+  },
+  "operation_counts_path": "operation_counts.json",
+  "copy_files": [
+    {
+      "path": "README.txt",
+      "sha256": "a98de4e6aa36a5fe55aa07548d5dcea444d93a19a9274e0239c0515b9eabf02b",
+      "bytes": 3416
+    },
+    {
+      "path": "binary_host_adapter.js",
+      "sha256": "7568d8f9f48e9a7576127faafa0c5742c532697f067a3068102b61df8b90800f",
+      "bytes": 2638
+    },
+    {
+      "path": "empty_file_results.json",
+      "sha256": "b51ae4906c4d16cba7708dea7c6ec255dc4dfa04f0ee6e7adb6934a5ffbf079c",
+      "bytes": 3843
+    },
+    {
+      "path": "empty_file_review.js",
+      "sha256": "47a276d9884ff4d8efff002bac2c4ad5e0ad0deda0ce137b2a19514330e5081d",
+      "bytes": 12999
+    },
+    {
+      "path": "fixtures/NativeSha256.cs.txt",
+      "sha256": "d8cd2d616ed2b7a64931fe391bd6e25b236a1c450e5b7c669df26c2974dd9f18",
+      "bytes": 8565
+    },
+    {
+      "path": "fixtures/baseline_native_runner.js.txt",
+      "sha256": "c817f1cda09b76cd02570c8a8ba8553b85ead1c6e885a717087d71a79bd8ffbd",
+      "bytes": 82508
+    },
+    {
+      "path": "fixtures/baseline_run.cmd.txt",
+      "sha256": "5e6c6561c370c904b13d165986f0c045c6e7732de1745744b03619cf4a4b9f16",
+      "bytes": 1250
+    },
+    {
+      "path": "fixtures/project_sources.json",
+      "sha256": "9f1527f3618834aaeff591d80b9a0fa0a8b72e705f4e8e7784a4edc62dba7d32",
+      "bytes": 15693
+    },
+    {
+      "path": "graph_results.json",
+      "sha256": "502dfc8e693b75b2987aa4bb81f9c0103fdeaff1e002f99b705a4a6191a70291",
+      "bytes": 6369
+    },
+    {
+      "path": "graph_review.js",
+      "sha256": "7775e56b59888a574f0c33188b8cc673afc72ef947c127476730be3e0a25be44",
+      "bytes": 15919
+    },
+    {
+      "path": "mock_host.js",
+      "sha256": "4028eb36105d4fb59facd32cdc0fb7502a98112cafa850e98998d7af101f0b06",
+      "bytes": 13437
+    },
+    {
+      "path": "operation_counts.json",
+      "sha256": "d8aa60ac54f92890d8c2446fe61e1c5aeb7ed37581d41ead4b160960c3318235",
+      "bytes": 1739
+    },
+    {
+      "path": "runtime_host.js",
+      "sha256": "04bbe337cfd78da17d692aa80b26d1d9585ad43ba237ddeca618d49d85e55a2e",
+      "bytes": 4553
+    }
+  ],
+  "compatibility_adaptations": [
+    "The inherited mock_host.js and runtime_host.js are copied unchanged; WSH COM environment property-put syntax is adapted only inside the Node VM.",
+    "binary_host_adapter.js adds byte-backed ADODB Type=1 Size/Position/EOS/Close observations and metadata hooks.",
+    "Synthetic certutil/csc/helper responses are injected at host/native boundaries; actual runner hash transport, result parsing, cache validators, helper input identity and helper preparation functions execute.",
+    "Initial static-check inventory referenced nonexistent legacyModuleInput; test was corrected to actual verifyLegacy. No candidate code changed."
+  ],
+  "native_limitations": [
+    "No Lean, Lake, native Windows, C# compiler/runtime, Wine or CI execution.",
+    "No runtime wall-clock speedup claim; counts apply to a specified synthetic fixture.",
+    "Synthetic helper and compiler output is never represented as authentic native PASS evidence.",
+    "All 86 project source bytes were read/hash-checked for parser comparison only; no proof compilation performed."
+  ],
+  "inherited_tests_not_rerun": {
+    "runtime_cache_cases": 86,
+    "observer_cases": 19,
+    "storage_profile_cases": 11,
+    "reason": "Unchanged algorithms are covered by the bounded byte-for-byte function comparison; changed graph and empty-hash paths receive the 28 focused cases."
+  }
+}

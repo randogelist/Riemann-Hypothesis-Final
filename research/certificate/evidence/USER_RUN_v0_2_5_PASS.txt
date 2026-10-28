@@ -1,0 +1,145 @@
+RH_HilbertLimit.FinitePrefix.exponentialTail_rootScale_lower (u : ℕ → ℝ) (K N : ℕ) (hN : K < N) :
+  2 ≤ RH_HilbertLimit.rootScale (RH_HilbertLimit.rowVariation (RH_HilbertLimit.FinitePrefix.exponentialTail u K)) N
+'RH_HilbertLimit.FinitePrefix.exponentialTail_rootScale_lower' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+RH_HilbertLimit.FinitePrefix.exponentialTail_not_rootScale_tendsto_one (u : ℕ → ℝ) (K : ℕ) :
+  ¬Filter.Tendsto
+      (RH_HilbertLimit.rootScale (RH_HilbertLimit.rowVariation (RH_HilbertLimit.FinitePrefix.exponentialTail u K)))
+      Filter.atTop (nhds 1)
+'RH_HilbertLimit.FinitePrefix.exponentialTail_not_rootScale_tendsto_one' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+RH_HilbertLimit.FinitePrefix.exponentialTail_not_subexponential (u : ℕ → ℝ) (K : ℕ) (hzero : u 0 = 1) :
+  ¬RH_HilbertLimit.Subexponential (RH_HilbertLimit.rowVariation (RH_HilbertLimit.FinitePrefix.exponentialTail u K))
+'RH_HilbertLimit.FinitePrefix.exponentialTail_not_subexponential' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+RH_HilbertLimit.FinitePrefix.exponentialTail_next_variation_ne_one (u : ℕ → ℝ) (K : ℕ) :
+  RH_HilbertLimit.rowVariation (RH_HilbertLimit.FinitePrefix.exponentialTail u K) (K + 1) ≠ 1
+'RH_HilbertLimit.FinitePrefix.exponentialTail_next_variation_ne_one' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+RH_HilbertLimit.FinitePrefix.exponentialTail_next_negative (u : ℕ → ℝ) (K : ℕ) (hzero : u 0 = 1) :
+  ∃ j ≤ K + 1, RH_HilbertLimit.bernsteinWeight (RH_HilbertLimit.FinitePrefix.exponentialTail u K) (K + 1) j < 0
+'RH_HilbertLimit.FinitePrefix.exponentialTail_next_negative' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.FinitePrefix.arbitrarily_long_positive_prefix (K : ℕ) :
+  ∃ v,
+    v 0 = 1 ∧
+      (∀ n ≤ K, v n = 1) ∧
+        (∀ N ≤ K, RH_HilbertLimit.rowVariation v N = 1) ∧
+          (∀ (N : ℕ), K < N → 2 ≤ RH_HilbertLimit.rootScale (RH_HilbertLimit.rowVariation v) N) ∧
+            ¬RH_HilbertLimit.Subexponential (RH_HilbertLimit.rowVariation v)
+'RH_HilbertLimit.FinitePrefix.arbitrarily_long_positive_prefix' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+RH_HilbertLimit.SpectralTail.norm_lt_outside_finite.{u_1} {ι : Type u_1} (q : ι → ℂ) (hq : Summable fun i => ‖q i‖)
+  (ε : ℝ) (hε : 0 < ε) : ∃ s, ∀ i ∉ s, ‖q i‖ < ε
+'RH_HilbertLimit.SpectralTail.norm_lt_outside_finite' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.SpectralTail.ellipse_lt_outside_finite.{u_1} {ι : Type u_1} (q : ι → ℂ) (hq : Summable fun i => ‖q i‖)
+  (r : ℝ) (hr : 1 < r) : ∃ s, ∀ i ∉ s, RH_HilbertLimit.ellipseRadius (q i) < r
+'RH_HilbertLimit.SpectralTail.ellipse_lt_outside_finite' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.SpectralTail.finite_ellipse_superlevel.{u_1} {ι : Type u_1} (q : ι → ℂ) (hq : Summable fun i => ‖q i‖)
+  (r : ℝ) (hr : 1 < r) : {i | r ≤ RH_HilbertLimit.ellipseRadius (q i)}.Finite
+'RH_HilbertLimit.SpectralTail.finite_ellipse_superlevel' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.SpectralTail.affine_power_bound_outside_finite.{u_1} {ι : Type u_1} (q : ι → ℂ)
+  (hq : Summable fun i => ‖q i‖) (r : ℝ) (hr : 1 < r) (x : ℂ) (hx : ‖x‖ ≤ 1) :
+  ∃ s, ∀ (N : ℕ), ∀ i ∉ s, ‖q i * (1 + (x - 1) * q i) ^ N‖ ≤ ‖q i‖ * r ^ N
+'RH_HilbertLimit.SpectralTail.affine_power_bound_outside_finite' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+RH_HilbertLimit.SpectralTail.finite_tail_below_radius.{u_1} {ι : Type u_1} (q : ι → ℂ) (hq : Summable fun i => ‖q i‖)
+  (hR : 1 < RH_HilbertLimit.spectralRadius q) :
+  ∃ r, 1 < r ∧ r < RH_HilbertLimit.spectralRadius q ∧ ∃ s, ∀ i ∉ s, RH_HilbertLimit.ellipseRadius (q i) < r
+'RH_HilbertLimit.SpectralTail.finite_tail_below_radius' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.SpectralTail.spectralRadius_attained.{u_1} {ι : Type u_1} (q : ι → ℂ) (hq : Summable fun i => ‖q i‖)
+  (hb : RH_HilbertLimit.SpectralBounded q) (hR : 1 < RH_HilbertLimit.spectralRadius q) :
+  ∃ i, RH_HilbertLimit.ellipseRadius (q i) = RH_HilbertLimit.spectralRadius q
+'RH_HilbertLimit.SpectralTail.spectralRadius_attained' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.ActualSpectralCalibration.finite_tail_below_radius.{u_1} {ι : Type u_1}
+  (D : RH_HilbertLimit.ActualSpectralCalibration ι) (hR : 1 < RH_HilbertLimit.spectralRadius D.node) :
+  ∃ r, 1 < r ∧ r < RH_HilbertLimit.spectralRadius D.node ∧ ∃ s, ∀ i ∉ s, RH_HilbertLimit.ellipseRadius (D.node i) < r
+'RH_HilbertLimit.ActualSpectralCalibration.finite_tail_below_radius' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+RH_HilbertLimit.ActualSpectralCalibration.spectralRadius_attained.{u_1} {ι : Type u_1}
+  (D : RH_HilbertLimit.ActualSpectralCalibration ι) (hR : 1 < RH_HilbertLimit.spectralRadius D.node) :
+  ∃ i, RH_HilbertLimit.ellipseRadius (D.node i) = RH_HilbertLimit.spectralRadius D.node
+'RH_HilbertLimit.ActualSpectralCalibration.spectralRadius_attained' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+RH_HilbertLimit.deriv_conj_of_schwarz {f : ℂ → ℂ} (hf : ∀ (z : ℂ), f ((starRingEnd ℂ) z) = (starRingEnd ℂ) (f z))
+  (z : ℂ) : deriv f ((starRingEnd ℂ) z) = (starRingEnd ℂ) (deriv f z)
+'RH_HilbertLimit.deriv_conj_of_schwarz' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.iteratedDeriv_conj_of_schwarz {f : ℂ → ℂ}
+  (hf : ∀ (z : ℂ), f ((starRingEnd ℂ) z) = (starRingEnd ℂ) (f z)) (n : ℕ) (z : ℂ) :
+  iteratedDeriv n f ((starRingEnd ℂ) z) = (starRingEnd ℂ) (iteratedDeriv n f z)
+'RH_HilbertLimit.iteratedDeriv_conj_of_schwarz' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.actualLogDerivative_conj (z : ℂ) :
+  RH_HilbertLimit.actualLogDerivative ((starRingEnd ℂ) z) = (starRingEnd ℂ) (RH_HilbertLimit.actualLogDerivative z)
+'RH_HilbertLimit.actualLogDerivative_conj' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.actualLogDerivative_iteratedDeriv_conj (n : ℕ) (z : ℂ) :
+  iteratedDeriv n RH_HilbertLimit.actualLogDerivative ((starRingEnd ℂ) z) =
+    (starRingEnd ℂ) (iteratedDeriv n RH_HilbertLimit.actualLogDerivative z)
+'RH_HilbertLimit.actualLogDerivative_iteratedDeriv_conj' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.actualComplexMoment_conj (n : ℕ) :
+  (starRingEnd ℂ) (RH_HilbertLimit.actualComplexMoment n) = RH_HilbertLimit.actualComplexMoment n
+'RH_HilbertLimit.actualComplexMoment_conj' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.actualComplexMoment_im_eq_zero (n : ℕ) : (RH_HilbertLimit.actualComplexMoment n).im = 0
+'RH_HilbertLimit.actualComplexMoment_im_eq_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.actualComplexMoment_eq_ofReal_actualMoment (n : ℕ) :
+  RH_HilbertLimit.actualComplexMoment n = ↑(RH_HilbertLimit.actualMoment n)
+'RH_HilbertLimit.actualComplexMoment_eq_ofReal_actualMoment' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.canonicalNode_mass_one : HasSum RH_HilbertLimit.canonicalNode 1
+'RH_HilbertLimit.canonicalNode_mass_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.canonicalNode_power_sum_zero :
+  HasSum (fun i => RH_HilbertLimit.canonicalNode i ^ (0 + 1)) ↑(RH_HilbertLimit.actualNormalizedMoment 0)
+'RH_HilbertLimit.canonicalNode_power_sum_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.CanonicalPowerSums : Prop
+'RH_HilbertLimit.CanonicalPowerSums' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.canonicalCalibration (hpower : RH_HilbertLimit.CanonicalPowerSums) :
+  RH_HilbertLimit.ActualSpectralCalibration AngularMaster.ActualPairIndex
+'RH_HilbertLimit.canonicalCalibration' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.canonical_actual_root_tendsto (hpower : RH_HilbertLimit.CanonicalPowerSums)
+  (hExtract : RH_HilbertLimit.DominantExtraction (RH_HilbertLimit.canonicalCalibration hpower)) :
+  Filter.Tendsto (RH_HilbertLimit.rootScale RH_HilbertLimit.actualVariation) Filter.atTop
+    (nhds (RH_HilbertLimit.spectralRadius RH_HilbertLimit.canonicalNode))
+'RH_HilbertLimit.canonical_actual_root_tendsto' depends on axioms: [propext, Classical.choice, Quot.sound]
+RH_HilbertLimit.canonical_actual_natural_growth_step_iff_nativeRH (hpower : RH_HilbertLimit.CanonicalPowerSums)
+  (hExtract : RH_HilbertLimit.DominantExtraction (RH_HilbertLimit.canonicalCalibration hpower)) :
+  (∃ K, RH_HilbertLimit.NaturalGrowthStep RH_HilbertLimit.actualVariation K) ↔ RiemannHypothesis
+'RH_HilbertLimit.canonical_actual_natural_growth_step_iff_nativeRH' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+RH_HilbertLimit.canonical_actual_natural_bound_iff_nativeRH (hpower : RH_HilbertLimit.CanonicalPowerSums)
+  (hExtract : RH_HilbertLimit.DominantExtraction (RH_HilbertLimit.canonicalCalibration hpower)) :
+  (∃ B, ∀ (n : ℕ), RH_HilbertLimit.actualVariation n ≤ ↑B) ↔ RiemannHypothesis
+'RH_HilbertLimit.canonical_actual_natural_bound_iff_nativeRH' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+ANCHOR_SAVE_LAYOUT=COMPACT_V1
+ANCHOR_SAVED=C:\Users\Simon\AppData\Local\LEAN_ANCHORINGS\RH_HILBERT_LIMIT\LOCAL_COMPILER\lean-4.33.0\c\6c336235f91ff235\fb7f637d29669dd8db5a7f925b5521d7\01a17e7870e01d0f\receipt.txt
+COMPILE_AND_AXIOM_AUDIT_PASS=EquivalenceAudit
+FINAL_AUDIT_DECLARATIONS=303
+AXIOM_AUDIT=PASS_STANDARD_LOGICAL_AXIOMS_ONLY
+SORRYAX=NONE
+MATHEMATICAL_STATUS=CONDITIONAL_PARTIAL
+ACTUAL_SPECTRAL_CALIBRATION=OPEN
+DOMINANT_EXTRACTION=OPEN
+UNCONDITIONAL_ACTUAL_LIMIT=NOT_CERTIFIED
+ACTUAL_SUBEXPONENTIAL_BOUND=OPEN
+UNCONDITIONAL_RH=NOT_ESTABLISHED
+FINITE_ACCEPTED_WITNESS=NOT_ESTABLISHED
+FINITE_CHECKER_EQUIVALENCE=OPEN
+COMPILED_MODULES=3
+FROZEN_REUSED_MODULES=82
+AUDIT_ONLY_MODULES=0
+LEGACY_MIGRATED_MODULES=0
+PROJECT_BUILD=PASS
+RUN=PASS
+WORKING_ARTIFACT_MODULES_RETAINED=0
+RESTORED_ARTIFACT_FILES=82
+ANCHOR_HISTORY_SCANS=3
+COMPACT_ANCHORS_SAVED=3
+Logs: C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_2_5_construction\run-build.log and C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_2_5_construction\run-audit.log
+
+C:\Users\Simon\Downloads>

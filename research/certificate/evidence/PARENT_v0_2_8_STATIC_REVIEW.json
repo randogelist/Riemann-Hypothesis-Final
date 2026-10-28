@@ -1,0 +1,28 @@
+{
+  "result": "PASS_EVIDENCE_AND_SOURCE_IDENTITY_REVIEW",
+  "checked_at_utc": "2026-10-27T18:05:56.827641+00:00",
+  "runner_sha256": "0d7b773a674a9d95261b0d3727744402b4ac1e1aafd910c3cb15a60d6397aa8a",
+  "parent_runner_sha256": "14e084bcc689b16da6ad37b38b549dda8ca3d849c2f36a969eb5c3b92c8ef4eb",
+  "package_label_only": true,
+  "normalized_runner_byte_identical": true,
+  "lean_source_count": 86,
+  "lean_sources_byte_preserved": 86,
+  "prepared_v025_lean_sources_byte_preserved": 86,
+  "proof_manifest_and_audit_target_changes": false,
+  "cmd_helper_observer_and_runner_version_byte_preserved": true,
+  "reported_user_native_project_and_audit_pass": true,
+  "reported_final_audit_targets": 303,
+  "direct_visible_records_checked": 28,
+  "direct_records_exact_target_suffix": [
+    276,
+    303
+  ],
+  "disallowed_visible_axioms": [],
+  "native_receipt_or_source_fingerprint_binding_supplied": false,
+  "inherited_runtime_mock_passes": 86,
+  "inherited_follower_mock_passes": 19,
+  "mock_tests_rerun": false,
+  "native_tests_run_by_assistant": false,
+  "finite_checker_equivalence": "OPEN",
+  "formal_closure": "OPEN"
+}

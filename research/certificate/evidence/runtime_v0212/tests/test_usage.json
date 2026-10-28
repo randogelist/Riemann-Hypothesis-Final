@@ -1,0 +1,18 @@
+{
+  "title": "Portable Node VM review of the RAM/parallel runner",
+  "execution_scope": "Synthetic host only; no Windows, COM, WMI, Lean, Lake, C#, memory mapping, CI, or native commands.",
+  "entry": "runtime_review.js",
+  "command_from_any_directory": "node \"PATH_TO_THIS_EVIDENCE_DIRECTORY/runtime_review.js\" --package-root \"PATH_TO_EXTRACTED_PACKAGE\" --report \"PATH_TO_NEW_REVIEW_REPORT.json\"",
+  "required_files": [
+    "runtime_review.js",
+    "runtime_host.js",
+    "mock_host.js",
+    "draft_sources.js"
+  ],
+  "inputs": "The assembled package tools/native_runner.js must contain the exact frozen parallel and RAM source strings embedded in draft_sources.js.",
+  "output": "A new JSON report containing source SHA256 bindings and 22 scoped synthetic-host results.",
+  "windows_launcher": "The package run.cmd must not call Node or these tests; they are optional development evidence only.",
+  "host_adaptations": "Seven assembled-runner COM environment setter expressions become __setEnv calls in the Node VM. Two are in the parallel draft, none in the RAM draft. The WSH entry point is not evaluated.",
+  "native_evidence": "A PASS here means only that these simulated state-transition scenarios passed. It does not establish native compilation, Windows behavior, physical RAM bounds, residency, or speed.",
+  "previous_suites": "Unrelated inherited cache/helper/lock suites were not rerun."
+}

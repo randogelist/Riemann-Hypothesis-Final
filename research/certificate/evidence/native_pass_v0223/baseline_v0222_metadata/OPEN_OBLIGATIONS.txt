@@ -1,0 +1,36 @@
+PACKAGE=v0.2.22 construction
+MODE=A_TIER_LEAN
+TARGET=LOCAL_COMPILER
+
+RECORDED_NATIVE_MILESTONE:
+The supplied v0.2.20 run reports standard-axiom-audited forward and reverse
+semantic transfers: (exists W : CancellationBudget, W.Admissible) iff actual RH.
+The endpoint signatures and axiom lists are explicitly printed. All96 Lean
+source files are frozen. No mathematical edit is made in this runtime repair.
+
+1. Derive an actual-source invariant that makes an effectively checkable finite
+   certificate imply the universally quantified cancellation budget.
+   The existing local-flux adapter retains its all-order inequalities.
+
+2. Implement a terminating finite raw checker and prove its soundness for
+   actual xi/zeta. The semantic Admissible predicate is not such a checker.
+
+3. Prove completeness for the full scoped goal:
+   (exists W : FiniteWitness, check W = true) iff RiemannHypothesis.
+   Obtaining an accepted witness is not required to prove the equivalence.
+
+4. Finite-checker soundness/equivalence and formal closure remain OPEN.
+   Actual subexponential growth, an unconditional admissible budget, an
+   accepted finite witness and unconditional RH are not established.
+
+5. Reuse requires exact same-target source/dependency/toolchain/artifact and
+   prior-audit verification on the user's native machine. The supplied tail
+   contains receipt paths, not their contents. All93 active modules are
+   eligible for reuse only when that validation succeeds.
+
+6. No native/Lean/Lake/compiler/CI execution was performed here.
+
+7. v0.2.21 completed its reused proof/audit stages but failed at shutdown.
+   v0.2.22 changes only runtime classification and bounded revalidation.
+   Twenty simulated-host tests pass; native Windows validation is still
+   required. Persistent unresolved relative hosts continue to retain locks.

@@ -1,0 +1,253 @@
+--- v0.2.12/native_runner.js
++++ v0.2.13/native_runner.js
+@@ -5,8 +5,8 @@
+ var shell = new ActiveXObject("WScript.Shell");
+ var env = shell.Environment("PROCESS");
+ var root = fso.GetAbsolutePathName(".");
+-var PACKAGE = "RH_HILBERT_LIMIT_LEAN_v0_2_12_construction";
+-var RUNNER_VERSION = "RH_HILBERT_NATIVE_RUNNER_v0_2_12_RAM_PARALLEL";
++var PACKAGE = "RH_HILBERT_LIMIT_LEAN_v0_2_13_construction";
++var RUNNER_VERSION = "RH_HILBERT_NATIVE_RUNNER_v0_2_13_MEMORY_FALLBACK";
+ var SCHEMA = "RH_HILBERT_LOCAL_ANCHOR_V2";
+ var CACHE_LAYOUT = "COMPACT_V1";
+ var HELPER_SCHEMA = "RH_HILBERT_SHA256_HELPER_CACHE_V1";
+@@ -43,6 +43,7 @@
+ var LOCK_SCHEMA = "RH_HILBERT_RUN_LOCK_V1";
+ var lockOwnerText = "", lockSelf = null, lockEvents = [], lockRecovered = 0;
+ var lockEverHeld = false;
++var lockAdmittedRelativeHosts = [], lockAdmittedRelativeOwner = "";
+ var activeHasher = null, hashBackendMode = "AUTO", hashBatchSerial = 0, workingDigestConsumed = 0;
+ var HASH_BATCH_MIN_FILES = 6;
+ var directLaunchCounts = {certutil:0,helper:0,csc:0,lean:0,ram_warm:0,other:0,total:0};
+@@ -299,6 +300,7 @@
+     var owned=lockSnapshot();
+     if(!owned||owned.text!==lockOwnerText)error("LOCK_STATE_UNKNOWN: new ownership could not be verified.");
+     lockHeld=true;lockEverHeld=true;lockEvents.push("RUNNER_LOCK=OWNED_PID_"+lockSelf.pid);
++    captureFreshAdmittedRelativeHosts(processes,snapshot,lockSelf);
+   }finally{
+     if(directory(pending)&&exists(pending+"\\owner.txt")&&read(pending+"\\owner.txt")===lockOwnerText){try{fso.DeleteFolder(pending,true);}catch(stagingError){}}
+   }
+@@ -1281,7 +1283,8 @@
+   orderIndex:{}, peak:0, launches:0, lastProgress:0, memory:null, memoryReadAt:0,
+   workerMemoryMB:4096, reserveMB:4096, ramCapMB:0, ramMode:"AUTO", ramAttempted:false,
+   ram:null, ramStatus:"NOT_NEEDED", ramExitCode:null, shutdownKeepLock:false, shutdownComplete:false, shutdownClean:false,
+-  memoryDenial:""};
++  memoryDenial:"", preferredReserveMB:4096, minimumReserveMB:1024, memoryPressureSeen:false,
++  memoryFallback:false, ramDisabledForMemory:false};
+ var RAM_HELPER_SCHEMA = "RH_HILBERT_RAM_HELPER_CACHE_V1";
+ 
+ function parallelIntegerSetting(name,fallback,min,max) {
+@@ -1308,6 +1311,7 @@
+   var memory=parallelMemorySnapshot(true),requested=parallelIntegerSetting("RH_MODULE_WORKERS",4,1,16);
+   parallelRuntime.workerMemoryMB=parallelIntegerSetting("RH_WORKER_MEMORY_MB",4096,512,131072);
+   parallelRuntime.reserveMB=parallelIntegerSetting("RH_SYSTEM_RESERVE_MB",4096,1024,131072);
++  parallelRuntime.minimumReserveMB=trim(env("RH_SYSTEM_RESERVE_MB")||"")?parallelRuntime.reserveMB:1024;
+   var mode=trim(env("RH_RAM_WARM")||"AUTO").toUpperCase();
+   if(mode!=="AUTO"&&mode!=="ON"&&mode!=="OFF")error("RH_RAM_WARM must be AUTO, ON or OFF.");
+   parallelRuntime.ramMode=mode;
+@@ -1317,6 +1321,7 @@
+     parallelRuntime.ramCapMB=mode==="OFF"?0:Math.max(0,Math.min(cap,Math.floor(memory.freeMB/4),memory.freeMB-parallelRuntime.reserveMB-parallelRuntime.workerMemoryMB));
+     memoryWorkers=Math.max(1,Math.floor((memory.freeMB-parallelRuntime.reserveMB-parallelRuntime.ramCapMB)/parallelRuntime.workerMemoryMB));
+   }else{parallelRuntime.ramCapMB=0;log("MEMORY_ADMISSION=UNKNOWN_SERIAL_FALLBACK");}
++  parallelRuntime.preferredReserveMB=parallelRuntime.reserveMB;
+   parallelRuntime.workers=Math.max(1,Math.min(requested,jobs>1?jobs-1:1,memoryWorkers));
+   if(jobs===1)parallelRuntime.workers=1;
+   parallelRuntime.configured=true;
+@@ -1325,6 +1330,7 @@
+   log("PARALLEL_COORDINATOR_THREAD_RESERVE="+(parallelRuntime.workers>1?1:0));
+   log("WORKER_MEMORY_ADMISSION_MB="+parallelRuntime.workerMemoryMB);
+   log("SYSTEM_MEMORY_RESERVE_MB="+parallelRuntime.reserveMB);
++  log("SERIAL_MEMORY_MINIMUM_RESERVE_MB="+parallelRuntime.minimumReserveMB);
+   log("RAM_WARM_MODE="+mode);log("RAM_WARM_BUDGET_MB="+parallelRuntime.ramCapMB);
+   log("RAM_WARM_RESIDENCY=OS_MANAGED_NOT_GUARANTEED");
+   if(memory)log("MEMORY_SNAPSHOT_MB=TOTAL:"+memory.totalMB+"|FREE:"+memory.freeMB);
+@@ -1456,13 +1462,69 @@
+   ready.sort(function(a,b){return parallelRuntime.rank[b.name]-parallelRuntime.rank[a.name]||parallelRuntime.orderIndex[a.name]-parallelRuntime.orderIndex[b.name];});
+   return ready;
+ }
++/* Adaptive admission affects scheduling only, never proof/cache acceptance. */
++function parallelStopRamForMemory() {
++  var ram=parallelRuntime.ram;
++  if(!ram)return true;
++  try{
++    if(ram.proc.Status!==0){parallelReportRamCompletion();return true;}
++    log("RAM_WARM_RELEASE_FOR_MEMORY=REQUESTED");
++    write(ram.stop,ram.token+"\n");
++    var started=new Date().getTime();
++    while(ram.proc.Status===0&&elapsedSince(started)<5000)WScript.Sleep(100);
++    if(ram.proc.Status===0){
++      parallelRuntime.memoryDenial="RAM_WARM_RELEASE_UNCONFIRMED|WAIT_MS=5000";
++      return false;
++    }
++    parallelReportRamCompletion();
++    log("RAM_WARM_RELEASE_FOR_MEMORY=EXIT_CONFIRMED");
++    return true;
++  }catch(ramReleaseError){
++    parallelRuntime.memoryDenial="RAM_WARM_RELEASE_UNCERTAIN : "+ramReleaseError.message;
++    return false;
++  }
++}
++function parallelTrySerialFallback() {
++  // Only an idle coordinator may change the active invocation to serial mode.
++  if(parallelRuntime.active.length)return false;
++  parallelRuntime.memoryPressureSeen=true;
++  if(!parallelStopRamForMemory())return false;
++  // Do not credit mapped bytes as newly free RAM. Observe the OS after exit.
++  var memory=parallelMemorySnapshot(true);
++  if(!memory){parallelRuntime.memoryDenial="MEMORY_REFRESH_UNKNOWN_AFTER_PRESSURE";return false;}
++  var required=parallelRuntime.minimumReserveMB+parallelRuntime.workerMemoryMB;
++  if(memory.freeMB<required){
++    parallelRuntime.memoryDenial="FREE_MB="+memory.freeMB+"|REQUIRED_MB="+required+
++      "|LIVE_WORKERS=0|POLICY=SERIAL_MINIMUM";
++    return false;
++  }
++  parallelRuntime.workers=1;
++  parallelRuntime.reserveMB=parallelRuntime.minimumReserveMB;
++  parallelRuntime.ramCapMB=0;
++  parallelRuntime.ramDisabledForMemory=true;
++  if(!parallelRuntime.ram)parallelRuntime.ramStatus="DISABLED_FOR_MEMORY_ADMISSION";
++  if(!parallelRuntime.memoryFallback){
++    log("PARALLEL_MEMORY_FALLBACK=SERIAL_UNTIL_EXIT");
++    log("PARALLEL_MODULE_WORKERS_EFFECTIVE=1");
++    log("SYSTEM_MEMORY_RESERVE_EFFECTIVE_MB="+parallelRuntime.reserveMB);
++    log("SERIAL_ADMISSION_MB=FREE:"+memory.freeMB+"|REQUIRED:"+required+
++      "|WORKER:"+parallelRuntime.workerMemoryMB+"|RESERVE:"+parallelRuntime.reserveMB);
++    log("RAM_WARM_FUTURE_BUDGET_MB=0");
++  }
++  parallelRuntime.memoryFallback=true;
++  parallelRuntime.memoryDenial="";
++  return true;
++}
+ function parallelMemoryAllowsLaunch() {
+-  // Reserve every live worker's allowance, including launches not yet
+-  // reflected in the bounded-age WMI snapshot. Repeated denials stay throttled.
++  // Live-worker accounting remains conservative, including recent launches
++  // whose allocations may not yet appear in the bounded-age WMI snapshot.
+   var memory=parallelMemorySnapshot(false),live=parallelRuntime.active.length;
+   if(!memory){
++    if(parallelRuntime.memoryPressureSeen){
++      parallelRuntime.memoryDenial="MEMORY_UNKNOWN_AFTER_KNOWN_PRESSURE";return false;
++    }
+     parallelRuntime.memoryDenial=live?"MEMORY_UNKNOWN_WITH_ACTIVE_WORKERS":"";
+-    return live===0; // Preserve the original serial fallback only when RAM is unknown.
++    return live===0;
+   }
+   var warmReserve=0;
+   if(parallelRuntime.ram){
+@@ -1470,10 +1532,20 @@
+     catch(unknownWarmMemory){warmReserve=parallelRuntime.ramCapMB;}
+   }
+   var required=parallelRuntime.reserveMB+warmReserve+(live+1)*parallelRuntime.workerMemoryMB;
+-  parallelRuntime.memoryDenial=memory.freeMB>=required?"":
+-    "FREE_MB="+memory.freeMB+"|REQUIRED_MB="+required+"|LIVE_WORKERS="+live;
+-  return !parallelRuntime.memoryDenial;
+-}
++  if(memory.freeMB>=required){parallelRuntime.memoryDenial="";return true;}
++  parallelRuntime.memoryPressureSeen=true;
++  parallelRuntime.memoryDenial="FREE_MB="+memory.freeMB+"|REQUIRED_MB="+required+"|LIVE_WORKERS="+live;
++  if(live)return false;
++  return parallelTrySerialFallback();
++}
++function parallelRequireFinalAuditMemory() {
++  if(parallelRuntime.active.length)error("FINAL_AUDIT_BARRIER_BROKEN: ordinary workers remain active.");
++  if(!parallelMemoryAllowsLaunch()){
++    stage="RESOURCE_ADMISSION:FINAL_AUDIT";
++    error("PARALLEL_RESOURCE_BLOCKED: "+parallelRuntime.memoryDenial);
++  }
++}
++
+ function parallelThreadShare(readyCount) {
+   var reserve=parallelRuntime.workers>1?1:0,remaining=jobs-reserve-parallelActiveThreads();
+   var slots=Math.min(parallelRuntime.workers-parallelRuntime.active.length,readyCount);
+@@ -1507,9 +1579,58 @@
+   if(!/^(?:[A-Za-z]:[\\/]|\\\\)/.test(script))return false;
+   return keyPath(script)===keyPath(root+"\\tools\\follow_active.js");
+ }
++/* Same-owner fresh-lock admission snapshot. Not used for stale recovery. */
++function lockActualRelativeRunner(process) {
++  if((process.name!=="cscript.exe"&&process.name!=="wscript.exe")||!process.command)return false;
++  var tokens=String(process.command).match(/"[^"\r\n]*"|[^\s"]+/g);
++  if(!tokens||tokens.length<2)return false;
++  var index=1;
++  while(index<tokens.length&&/^\/\//.test(tokens[index]))index++;
++  if(index>=tokens.length)return false;
++  var script=tokens[index];
++  if(script.charAt(0)==='"'&&script.charAt(script.length-1)==='"')script=script.slice(1,-1);
++  if(/^(?:[A-Za-z]:[\\/]|\\\\)/.test(script))return false;
++  return /(?:^|[\\/])native_runner\.js$/i.test(script);
++}
++function lockCreatedNoLater(process,owner) {
++  if(!validProcessCreation(process.created)||!validProcessCreation(owner.created))return false;
++  var a=processCreationMillis(process.created),b=processCreationMillis(owner.created);
++  return a<b||(a===b&&Number(process.created.slice(18,21))<=Number(owner.created.slice(18,21)));
++}
++function captureFreshAdmittedRelativeHosts(processes,snapshot,self) {
++  lockAdmittedRelativeHosts=[];
++  lockAdmittedRelativeOwner="";
++  if(snapshot||!lockHeld)return;
++  var needle=keyPath(root)+"\\";
++  for(var i=0;i<processes.length;i++){
++    var p=processes[i];
++    if(p.pid===self.pid||p.parent===self.pid||!lockActualRelativeRunner(p)||!lockCreatedNoLater(p,self))continue;
++    // An absolute workspace reference is never covered by this exception.
++    if(p.command.replace(/\//g,"\\").toLowerCase().indexOf(needle)>=0)continue;
++    lockAdmittedRelativeHosts.push({pid:p.pid,created:p.created,command:p.command});
++  }
++  lockAdmittedRelativeOwner=lockOwnerText;
++  lockEvents.push("RUNNER_PREEXISTING_ADMITTED_UNRESOLVED_HOSTS="+lockAdmittedRelativeHosts.length);
++}
++function parallelIsFreshAdmittedRelativeHost(process) {
++  if(!lockHeld||!lockAdmittedRelativeOwner||lockAdmittedRelativeOwner!==lockOwnerText)return false;
++  if(process.pid===lockSelf.pid||process.parent===lockSelf.pid||!lockActualRelativeRunner(process))return false;
++  // This same absolute-root guard also remains in assertNoLockWorkers.
++  var command=process.command.replace(/\//g,"\\").toLowerCase();
++  if(command.indexOf(keyPath(root)+"\\")>=0)return false;
++  for(var i=0;i<lockAdmittedRelativeHosts.length;i++){
++    var admitted=lockAdmittedRelativeHosts[i];
++    if(process.pid===admitted.pid&&process.created===admitted.created&&process.command===admitted.command){
++      diagnosticLog("SHUTDOWN_PREEXISTING_ADMITTED_UNRESOLVED_HOST=PID:"+process.pid);
++      return true;
++    }
++  }
++  return false;
++}
++
+ function parallelShutdownInventory() {
+   var processes=queryLockProcesses(),guarded=[];
+-  for(var i=0;i<processes.length;i++)if(!parallelIsReadOnlyFollower(processes[i]))guarded.push(processes[i]);
++  for(var i=0;i<processes.length;i++)if(!parallelIsReadOnlyFollower(processes[i])&&!parallelIsFreshAdmittedRelativeHost(processes[i]))guarded.push(processes[i]);
+   return guarded;
+ }
+ function parallelReportRamCompletion() {
+@@ -1602,9 +1723,9 @@
+       log("PARALLEL_PROGRESS="+completed+"/"+ordered.length+"|ACTIVE="+parallelRuntime.active.length+"|READY="+ready.length+"|LEAN_THREADS="+parallelActiveThreads());
+       parallelRuntime.lastProgress=now;
+     }
+-    if(completed<ordered.length&&!progress&&!parallelRuntime.active.length){
+-      if(ready.length&&parallelRuntime.memoryDenial)error("PARALLEL_RESOURCE_BLOCKED: "+parallelRuntime.memoryDenial);
+-      error("PARALLEL_SCHEDULER_STALLED: no running or dependency-ready module.");
++    if(completed<ordered.length&&!parallelRuntime.active.length){
++      if(ready.length&&parallelRuntime.memoryDenial){stage="RESOURCE_ADMISSION";error("PARALLEL_RESOURCE_BLOCKED: "+parallelRuntime.memoryDenial);}
++      if(!progress)error("PARALLEL_SCHEDULER_STALLED: no running or dependency-ready module.");
+     }
+     if(!progress&&parallelRuntime.active.length)WScript.Sleep(100);
+   }
+@@ -1796,6 +1917,7 @@
+   }
+   var input=moduleInput(name),restored=restoreAnchor(name,input);
+   if(restored&&!restored.needsAudit){acceptRestored(name,input,restored);return;}
++  if(isFinalAudit)parallelRequireFinalAuditMemory();
+   var output=restored?restored.output:clearOutputs(name);mkdir(fso.GetParentFolderName(output));
+   var compileLog=helpers+"\\"+name+".compile.log",auditSource=root+"\\RunnerAudit\\"+name.replace(/\./g,"_")+".lean",auditLog=helpers+"\\"+name+".audit.log";
+   requireShortPath(output,"Working Lean artifact path");requireShortPath(compileLog,"Compile log path");
+@@ -1872,6 +1994,10 @@
+     '  "combined_working_digests_consumed": '+workingDigestConsumed+",",'  "runtime_elapsed_ms": '+elapsedSince(runtimeStarted)+",",
+     '  "parallel_module_workers": '+parallelRuntime.workers+",",'  "parallel_peak_module_workers": '+parallelRuntime.peak+",",
+     '  "lean_total_thread_budget": '+jobs+",",'  "ram_warm_status": '+quoteJSON(parallelRuntime.ramStatus)+",",
++    '  "memory_serial_fallback": '+(parallelRuntime.memoryFallback?"true":"false")+",",
++    '  "memory_preferred_reserve_mib": '+parallelRuntime.preferredReserveMB+",",'  "memory_effective_reserve_mib": '+parallelRuntime.reserveMB+",",
++    '  "ram_disabled_for_memory": '+(parallelRuntime.ramDisabledForMemory?"true":"false")+",",
++    '  "preexisting_admitted_unresolved_hosts": '+lockAdmittedRelativeHosts.length+",",
+     '  "ram_warm_exit_code": '+(parallelRuntime.ramExitCode===null?"null":String(parallelRuntime.ramExitCode))+",",
+     '  "ram_warm_residency": "OS_MANAGED_NOT_GUARANTEED",','  "owned_worker_shutdown_complete": '+(parallelRuntime.shutdownClean?"true":"false")+",",
+     '  "logical_tool_launches": '+numericMapJSON(directLaunchCounts)+",",'  "hash_phase_totals": '+numericMapJSON(hashPhaseTotals)+",",

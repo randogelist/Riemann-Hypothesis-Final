@@ -1,0 +1,30 @@
+{
+  "schema": "RH_HILBERT_RAM_PARALLEL_VALIDATION_V1",
+  "status": "STATIC_REVIEW_AND_BOUNDED_NODE_MOCKS_PASS; NATIVE_PENDING",
+  "runner_sha256": "b11c97c591c5e200978fcfff5f37d6f6cd4b9388a464697a673174ab20c5a632",
+  "parallel_runtime_sha256": "21552e9308a6777ed88d7a83e5261723a0df7a42f156e22b332eaa0df578787a",
+  "ram_runtime_sha256": "cba92c42546cad9c8360d5c7872c2ec8a876b3e168e4f2160e1c379bd4ace258",
+  "ram_helper_source_sha256": "315d97cf6f1030c838292f5a871c5b583a682464638f139070055b2727f9d87a",
+  "protected_functions_byte_preserved": [
+    "moduleInput",
+    "checkAxioms",
+    "readAnchorCore",
+    "workingArtifactsMatch",
+    "restoreAnchor",
+    "saveAnchor",
+    "acceptRestored",
+    "processModuleBody",
+    "finalAudit"
+  ],
+  "proof_cache_schema_and_compile_audit_policies": "BYTE_PRESERVED",
+  "dependency_audit_and_final_barriers": "SOURCE_CHECK_PASS",
+  "mock_report": "evidence/runtime_v0212/tests/mock_report.json",
+  "mock_report_sha256": "df71b5a956a358eab00fa677a4f343ff9c008bebb0877e173d1a18acca20c18c",
+  "javascript_syntax": "PASS",
+  "native_windows_execution": false,
+  "csharp_compilation_or_execution": false,
+  "lean_or_lake_execution": false,
+  "ci_execution": false,
+  "performance_measurement": "NOT_RUN",
+  "limits": "Node host simulations do not establish COM/WMI/process-tree, native C#, Lean elaboration, residency, or speed."
+}

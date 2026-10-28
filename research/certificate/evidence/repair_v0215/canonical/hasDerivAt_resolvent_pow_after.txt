@@ -1,0 +1,8 @@
+  have h := (hasDerivAt_resolvent hb hz i).fun_pow (n + 1)
+  have hscalar :
+      ((n + 1 : ℕ) : ℂ) * resolvent b i z ^ (n + 1 - 1) *
+          (-((resolvent b i z) ^ 2)) =
+        -((n + 1 : ℕ) : ℂ) * resolvent b i z ^ (n + 2) := by
+    simp only [Nat.add_sub_cancel, pow_add, mul_neg, neg_mul, mul_assoc]
+  rw [hscalar] at h
+  exact h

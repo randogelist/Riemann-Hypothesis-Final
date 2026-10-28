@@ -1,0 +1,636 @@
+--- v0.2.11/native_runner.js
++++ v0.2.12/native_runner.js
+@@ -5,8 +5,8 @@
+ var shell = new ActiveXObject("WScript.Shell");
+ var env = shell.Environment("PROCESS");
+ var root = fso.GetAbsolutePathName(".");
+-var PACKAGE = "RH_HILBERT_LIMIT_LEAN_v0_2_11_construction";
+-var RUNNER_VERSION = "RH_HILBERT_NATIVE_RUNNER_v0_2_11";
++var PACKAGE = "RH_HILBERT_LIMIT_LEAN_v0_2_12_construction";
++var RUNNER_VERSION = "RH_HILBERT_NATIVE_RUNNER_v0_2_12_RAM_PARALLEL";
+ var SCHEMA = "RH_HILBERT_LOCAL_ANCHOR_V2";
+ var CACHE_LAYOUT = "COMPACT_V1";
+ var HELPER_SCHEMA = "RH_HILBERT_SHA256_HELPER_CACHE_V1";
+@@ -45,7 +45,7 @@
+ var lockEverHeld = false;
+ var activeHasher = null, hashBackendMode = "AUTO", hashBatchSerial = 0, workingDigestConsumed = 0;
+ var HASH_BATCH_MIN_FILES = 6;
+-var directLaunchCounts = {certutil:0,helper:0,csc:0,lean:0,other:0,total:0};
++var directLaunchCounts = {certutil:0,helper:0,csc:0,lean:0,ram_warm:0,other:0,total:0};
+ var hashPhaseRecords = [], stagePhaseRecords = [], modulePhaseRecords = [];
+ var hashPhaseTotals = {sets:0,files:0,batch_sets:0,certutil_sets:0,elapsed_ms:0,failed_sets:0};
+ var runtimeStarted = new Date().getTime();
+@@ -140,6 +140,7 @@
+ function invokeNative(exe,args,output) {
+   var leaf=fso.GetFileName(exe).toLowerCase(),kind="other";
+   if(leaf==="lean.exe")kind="lean";
++  else if(leaf==="ramwarm.exe")kind="ram_warm";
+   else if(leaf==="csc.exe")kind="csc";
+   else if(leaf==="helper.exe"||/^sha256-.*\.exe$/.test(leaf))kind="helper";
+   directLaunchCounts[kind]++;directLaunchCounts.total++;
+@@ -243,7 +244,7 @@
+   }
+   for(var i=0;i<processes.length;i++){
+     var p=processes[i];if(excluded[processIdentity(p)])continue;
+-    var relevant=/^(?:cscript|wscript|cmd|lean|csc|certutil|helper)\.exe$/.test(p.name)||/^sha256-.*\.exe$/.test(p.name);
++    var relevant=/^(?:cscript|wscript|cmd|lean|csc|certutil|helper|ramwarm)\.exe$/.test(p.name)||/^sha256-.*\.exe$/.test(p.name);
+     if(!relevant)continue;
+     if(!p.command){if(snapshot)error("LOCK_STATE_UNKNOWN: cannot exclude an active "+p.name+" worker with unreadable command line. No lock was changed.");continue;}
+     var command=p.command.replace(/\//g,"\\").toLowerCase();
+@@ -385,7 +386,7 @@
+   return shell.Exec(quote(certutil)+" -hashfile "+quote(path)+" SHA256");
+ }
+ function certutilHashSet(todo,requested,purpose) {
+-  var active=[],cursor=0,done=0,lastReport=0,out={},failure="",limit=Math.min(jobs,16);
++  var active=[],cursor=0,done=0,lastReport=0,out={},failure="",limit=resourceHashJobs();
+   while((cursor<todo.length&&!failure)||active.length){
+     while(!failure&&cursor<todo.length&&active.length<limit){
+       var key=todo[cursor++],p=requested[key];
+@@ -579,7 +580,7 @@
+       if(!path||/[\x00-\x1f|]/.test(path))error("Unsupported or missing path in hash request.");
+       requestRows.push(i+"|"+path);
+     }
+-    write(request,requestRows.join("\n")+"\n");var requestSHA=fileHash(request),workers=Math.min(jobs,16);
++    write(request,requestRows.join("\n")+"\n");var requestSHA=fileHash(request),workers=resourceHashJobs();
+     if(purpose==="DEPENDENCIES")log("DEPENDENCY_HASH_MODE=SHA256_CONTENT_BATCH_"+workers);
+     log("HASH_PROGRESS_LOG="+purpose+"|"+output);
+     /* The validated helper is reused; request/result maps are fresh for each phase. */
+@@ -1275,6 +1276,519 @@
+   append(auditLogPath,"FROZEN_AUDIT="+name+"\r\n"+restored.auditText+"\r\n");
+   reused++;audited+=auditTargets[name].length;log("FROZEN_REUSE="+name);
+ }
++/* Dependency-aware native coordinator. Source preparation only; not run on Windows here. */
++var parallelRuntime = {configured:false, workers:1, active:[], tasks:{}, states:{}, rank:{},
++  orderIndex:{}, peak:0, launches:0, lastProgress:0, memory:null, memoryReadAt:0,
++  workerMemoryMB:4096, reserveMB:4096, ramCapMB:0, ramMode:"AUTO", ramAttempted:false,
++  ram:null, ramStatus:"NOT_NEEDED", ramExitCode:null, shutdownKeepLock:false, shutdownComplete:false, shutdownClean:false,
++  memoryDenial:""};
++var RAM_HELPER_SCHEMA = "RH_HILBERT_RAM_HELPER_CACHE_V1";
++
++function parallelIntegerSetting(name,fallback,min,max) {
++  var raw=trim(env(name)||"");if(!raw)return fallback;
++  if(!/^[0-9]+$/.test(raw))error(name+" must be an integer.");
++  var value=Number(raw);if(!(value>=min&&value<=max&&Math.floor(value)===value))error(name+" must be between "+min+" and "+max+".");
++  return value;
++}
++function parallelMemorySnapshot(force) {
++  var now=new Date().getTime();
++  if(!force&&parallelRuntime.memoryReadAt&&now-parallelRuntime.memoryReadAt<2000)return parallelRuntime.memory;
++  parallelRuntime.memoryReadAt=now;
++  try{
++    var service=GetObject("winmgmts:{impersonationLevel=impersonate}!\\\\.\\root\\cimv2");
++    var records=new Enumerator(service.ExecQuery("SELECT TotalVisibleMemorySize, FreePhysicalMemory FROM Win32_OperatingSystem","WQL",48));
++    if(records.atEnd())throw new Error("No operating-system memory record.");
++    var record=records.item(),total=Math.floor(Number(record.TotalVisibleMemorySize)/1024),free=Math.floor(Number(record.FreePhysicalMemory)/1024);
++    if(!(total>0&&free>=0&&free<=total&&isFinite(total)))throw new Error("Invalid memory counters.");
++    parallelRuntime.memory={totalMB:total,freeMB:free};
++  }catch(memoryError){parallelRuntime.memory=null;}
++  return parallelRuntime.memory;
++}
++function configureParallelRuntime() {
++  var memory=parallelMemorySnapshot(true),requested=parallelIntegerSetting("RH_MODULE_WORKERS",4,1,16);
++  parallelRuntime.workerMemoryMB=parallelIntegerSetting("RH_WORKER_MEMORY_MB",4096,512,131072);
++  parallelRuntime.reserveMB=parallelIntegerSetting("RH_SYSTEM_RESERVE_MB",4096,1024,131072);
++  var mode=trim(env("RH_RAM_WARM")||"AUTO").toUpperCase();
++  if(mode!=="AUTO"&&mode!=="ON"&&mode!=="OFF")error("RH_RAM_WARM must be AUTO, ON or OFF.");
++  parallelRuntime.ramMode=mode;
++  var cap=parallelIntegerSetting("RH_RAM_WARM_MB",8192,0,65536),memoryWorkers=1;
++  if(memory){
++    parallelRuntime.reserveMB=Math.max(parallelRuntime.reserveMB,Math.ceil(memory.totalMB/5));
++    parallelRuntime.ramCapMB=mode==="OFF"?0:Math.max(0,Math.min(cap,Math.floor(memory.freeMB/4),memory.freeMB-parallelRuntime.reserveMB-parallelRuntime.workerMemoryMB));
++    memoryWorkers=Math.max(1,Math.floor((memory.freeMB-parallelRuntime.reserveMB-parallelRuntime.ramCapMB)/parallelRuntime.workerMemoryMB));
++  }else{parallelRuntime.ramCapMB=0;log("MEMORY_ADMISSION=UNKNOWN_SERIAL_FALLBACK");}
++  parallelRuntime.workers=Math.max(1,Math.min(requested,jobs>1?jobs-1:1,memoryWorkers));
++  if(jobs===1)parallelRuntime.workers=1;
++  parallelRuntime.configured=true;
++  log("PARALLEL_MODULE_WORKERS="+parallelRuntime.workers);
++  log("LEAN_TOTAL_THREAD_BUDGET="+jobs);
++  log("PARALLEL_COORDINATOR_THREAD_RESERVE="+(parallelRuntime.workers>1?1:0));
++  log("WORKER_MEMORY_ADMISSION_MB="+parallelRuntime.workerMemoryMB);
++  log("SYSTEM_MEMORY_RESERVE_MB="+parallelRuntime.reserveMB);
++  log("RAM_WARM_MODE="+mode);log("RAM_WARM_BUDGET_MB="+parallelRuntime.ramCapMB);
++  log("RAM_WARM_RESIDENCY=OS_MANAGED_NOT_GUARANTEED");
++  if(memory)log("MEMORY_SNAPSHOT_MB=TOTAL:"+memory.totalMB+"|FREE:"+memory.freeMB);
++  var pathOwners={};
++  for(var i=0;i<ordered.length;i++){
++    var name=ordered[i];parallelRuntime.states[name]="PENDING";parallelRuntime.orderIndex[name]=i;parallelRuntime.rank[name]=1;
++    var owned=[work+"\\"+name.replace(/\./g,"\\")+".olean",helpers+"\\"+name+".compile.log",
++      helpers+"\\"+name+".audit.log",root+"\\RunnerAudit\\"+name.replace(/\./g,"_")+".lean"];
++    for(var pi=0;pi<owned.length;pi++){
++      var pathKey=keyPath(owned[pi]);
++      if(pathOwners.hasOwnProperty(pathKey)&&pathOwners[pathKey]!==name)
++        error("PARALLEL_OUTPUT_PATH_COLLISION: "+name+" and "+pathOwners[pathKey]+" share "+owned[pi]);
++      pathOwners[pathKey]=name;
++    }
++  }
++  // Every selected audit dependency lies behind the ordinary-module barrier.
++  for(i=ordered.length-1;i>=0;i--){
++    name=ordered[i];var deps=modules[name].imports;
++    for(var j=0;j<deps.length;j++)if(modules[deps[j]].local&&parallelRuntime.rank.hasOwnProperty(deps[j]))
++      parallelRuntime.rank[deps[j]]=Math.max(parallelRuntime.rank[deps[j]],parallelRuntime.rank[name]+1);
++  }
++  var rows=[];
++  for(i=0;i<ordered.length;i++){
++    name=ordered[i];var local=[];deps=modules[name].imports;
++    for(j=0;j<deps.length;j++)if(modules[deps[j]].local)local.push(deps[j]);
++    var quoted=[];for(j=0;j<local.length;j++)quoted.push(quoteJSON(local[j]));
++    rows.push('{"module":'+quoteJSON(name)+',"priority_depth":'+parallelRuntime.rank[name]+',"local_imports":['+quoted.join(",")+']}');
++  }
++  write(root+"\\run-parallel-plan.json",'{"schema":"RH_PARALLEL_PLAN_V1","workers":'+parallelRuntime.workers+
++    ',"total_thread_budget":'+jobs+',"worker_memory_admission_mb":'+parallelRuntime.workerMemoryMB+
++    ',"ram_warm_budget_mb":'+parallelRuntime.ramCapMB+',"final_audit_barrier":'+quoteJSON(finalAuditName)+',"modules":['+rows.join(",")+']}\n');
++}
++function parallelActiveThreads() {
++  var used=0;for(var i=0;i<parallelRuntime.active.length;i++)used+=parallelRuntime.active[i].threads;return used;
++}
++function resourceHashJobs() {
++  return Math.max(1,Math.min(16,jobs-parallelActiveThreads()));
++}
++function parallelDependencyState(name) {
++  var deps=modules[name].imports,waiting=false;
++  for(var i=0;i<deps.length;i++)if(modules[deps[i]].local){
++    var state=parallelRuntime.states[deps[i]];
++    if(state==="FAILED"||state==="BLOCKED")return {ready:false,failed:deps[i]};
++    if(state!=="DONE"||!moduleKeys[deps[i]]||!artifactHashes[deps[i]])waiting=true;
++  }
++  return {ready:!waiting,failed:""};
++}
++function parallelRecord(name,started,outcome) {
++  var ms=elapsedSince(started);modulePhaseRecords.push({name:name,elapsed_ms:ms,outcome:outcome});
++  diagnosticLog("MODULE_ELAPSED_MS="+name+"|"+ms+"|"+outcome);
++}
++function parallelPrepare(name) {
++  var started=new Date().getTime(),n=modules[name],input=moduleInput(name),restored=restoreAnchor(name,input);
++  if(restored&&!restored.needsAudit){
++    acceptRestored(name,input,restored);parallelRuntime.states[name]="DONE";
++    parallelRecord(name,started,buildStates[name]);return null;
++  }
++  var output=restored?restored.output:clearOutputs(name);mkdir(fso.GetParentFolderName(output));
++  var task={name:name,started:started,input:input,restored:restored,output:output,threads:0,proc:null,
++    phase:restored?"AUDIT":"COMPILE",compileLog:helpers+"\\"+name+".compile.log",
++    auditSource:root+"\\RunnerAudit\\"+name.replace(/\./g,"_")+".lean",auditLog:helpers+"\\"+name+".audit.log"};
++  requireShortPath(output,"Working Lean artifact path");requireShortPath(task.compileLog,"Compile log path");
++  requireShortPath(task.auditSource,"Generated audit source path");requireShortPath(task.auditLog,"Audit log path");
++  parallelRuntime.tasks[name]=task;parallelRuntime.states[name]="READY";
++  if(restored){auditOnly++;log("AUDIT_ONLY_START="+name);}
++  return task;
++}
++function startNativeAsync(exe,args,output,threads,kind) {
++  var command=quote(exe);for(var i=0;i<args.length;i++)command+=" "+quote(args[i]);
++  command+=" > "+quote(output)+" 2>&1";
++  var previousThreads=String(env("LEAN_NUM_THREADS")||"");
++  if(threads)env("LEAN_NUM_THREADS")=String(threads);
++  try{
++    var process=shell.Exec(quote(comspec)+' /d /v:off /s /c "'+command+'"');
++    if(!directLaunchCounts.hasOwnProperty(kind))directLaunchCounts[kind]=0;
++    directLaunchCounts[kind]++;directLaunchCounts.total++;return process;
++  }finally{if(threads)env("LEAN_NUM_THREADS")=previousThreads;}
++}
++function parallelStartPhase(task) {
++  stage="MODULE:"+task.name;
++  var args;
++  if(task.phase==="COMPILE"){
++    log("COMPILE_START="+task.name);
++    args=["-j"+task.threads,"-o",task.output,modules[task.name].source];
++    task.proc=startNativeAsync(compiler,args,task.compileLog,task.threads,"lean");
++  }else{
++    var audit="import "+task.name+"\n";
++    for(var i=0;i<auditTargets[task.name].length;i++)audit+="#check "+auditTargets[task.name][i]+"\n#print axioms "+auditTargets[task.name][i]+"\n";
++    writeAscii(task.auditSource,audit);log("AXIOM_AUDIT_START="+task.name);
++    task.proc=startNativeAsync(compiler,["-j"+task.threads,task.auditSource],task.auditLog,task.threads,"lean");
++  }
++  log("PARALLEL_WORKER="+task.name+"|PHASE="+task.phase+"|THREADS="+task.threads+"|SHELL_PID="+task.proc.ProcessID);
++}
++function parallelFail(task,state,message) {
++  clearOutputs(task.name);buildStates[task.name]=state;parallelRuntime.states[task.name]="FAILED";failed++;
++  if(message)log(message);
++  parallelRecord(task.name,task.started,state);
++}
++function parallelAdvance(task) {
++  if(task.proc.Status===0)return false;
++  stage="MODULE:"+task.name;
++  var rc=task.proc.ExitCode;
++  if(task.phase==="COMPILE"){
++    var compileContents=exists(task.compileLog)?read(task.compileLog):"";
++    if(compileContents)log(compileContents);
++    if(rc!==0){parallelFail(task,"COMPILE_FAILED","COMPILE_FAIL="+task.name);return true;}
++    if(/sorryAx/.test(compileContents)){parallelFail(task,"AUDIT_FAILED","AXIOM_AUDIT_FAIL="+task.name+" : Compiler reported sorryAx.");return true;}
++    if(!exists(task.output)){parallelFail(task,"COMPILE_FAILED","COMPILE_FAIL="+task.name+" : Missing output artifact.");return true;}
++    task.phase="AUDIT";parallelStartPhase(task);return false;
++  }
++  var auditText=exists(task.auditLog)?read(task.auditLog):"";
++  if(rc!==0){if(auditText)log(auditText);parallelFail(task,"AUDIT_COMPILE_FAILED","AXIOM_AUDIT_FAIL="+task.name);return true;}
++  try{checkAxioms(auditText,auditTargets[task.name]);}
++  catch(auditError){parallelFail(task,"AUDIT_FAILED","AXIOM_AUDIT_FAIL="+task.name+" : "+auditError.message);return true;}
++  // The coordinator alone can accept an audit, publish an anchor, and release dependents.
++  append(auditLogPath,"MODULE="+task.name+"\r\n"+auditText+"\r\n");
++  saveAnchor(task.name,task.input,task.auditLog,task.output,task.restored?task.restored.receipt:"");
++  audited+=auditTargets[task.name].length;
++  if(task.restored){
++    reused++;buildStates[task.name]="FROZEN_REUSED_REAUDITED";
++    if(task.restored.legacy){migrated++;log("LEGACY_ANCHOR_MIGRATED="+task.name);}
++    log("AUDIT_ONLY_PASS="+task.name);
++  }else{compiled++;buildStates[task.name]="COMPILED_AUDITED";log("COMPILE_AND_AXIOM_AUDIT_PASS="+task.name);}
++  parallelRuntime.states[task.name]="DONE";parallelRecord(task.name,task.started,buildStates[task.name]);return true;
++}
++function parallelReadyTasks() {
++  var ready=[];
++  for(var i=0;i<ordered.length;i++)if(parallelRuntime.states[ordered[i]]==="READY")ready.push(parallelRuntime.tasks[ordered[i]]);
++  ready.sort(function(a,b){return parallelRuntime.rank[b.name]-parallelRuntime.rank[a.name]||parallelRuntime.orderIndex[a.name]-parallelRuntime.orderIndex[b.name];});
++  return ready;
++}
++function parallelMemoryAllowsLaunch() {
++  // Reserve every live worker's allowance, including launches not yet
++  // reflected in the bounded-age WMI snapshot. Repeated denials stay throttled.
++  var memory=parallelMemorySnapshot(false),live=parallelRuntime.active.length;
++  if(!memory){
++    parallelRuntime.memoryDenial=live?"MEMORY_UNKNOWN_WITH_ACTIVE_WORKERS":"";
++    return live===0; // Preserve the original serial fallback only when RAM is unknown.
++  }
++  var warmReserve=0;
++  if(parallelRuntime.ram){
++    try{if(parallelRuntime.ram.proc.Status===0)warmReserve=parallelRuntime.ramCapMB;}
++    catch(unknownWarmMemory){warmReserve=parallelRuntime.ramCapMB;}
++  }
++  var required=parallelRuntime.reserveMB+warmReserve+(live+1)*parallelRuntime.workerMemoryMB;
++  parallelRuntime.memoryDenial=memory.freeMB>=required?"":
++    "FREE_MB="+memory.freeMB+"|REQUIRED_MB="+required+"|LIVE_WORKERS="+live;
++  return !parallelRuntime.memoryDenial;
++}
++function parallelThreadShare(readyCount) {
++  var reserve=parallelRuntime.workers>1?1:0,remaining=jobs-reserve-parallelActiveThreads();
++  var slots=Math.min(parallelRuntime.workers-parallelRuntime.active.length,readyCount);
++  if(slots<=0||remaining<1)return 0;
++  return Math.max(1,Math.floor(remaining/slots));
++}
++function parallelLiveProcesses() {
++  var live=[];
++  for(var i=0;i<parallelRuntime.active.length;i++){
++    var t=parallelRuntime.active[i];
++    try{if(t.proc&&t.proc.Status===0)live.push(t.name+":"+t.phase+":"+t.proc.ProcessID);}
++    catch(unknownWorker){live.push(t.name+":STATUS_UNKNOWN");}
++  }
++  if(parallelRuntime.ram){
++    try{if(parallelRuntime.ram.proc.Status===0)live.push("RAM_WARM:"+parallelRuntime.ram.proc.ProcessID);}
++    catch(unknownRam){live.push("RAM_WARM:STATUS_UNKNOWN");}
++  }
++  return live;
++}
++function parallelIsReadOnlyFollower(process) {
++  if((process.name!=="cscript.exe"&&process.name!=="wscript.exe")||!process.command)return false;
++  // Recognize the script argument itself, not an arbitrary later argument
++  // that happens to contain the observer's path. Unknown commands stay guarded.
++  var tokens=String(process.command).match(/"[^"\r\n]*"|[^\s"]+/g);
++  if(!tokens||tokens.length<2)return false;
++  var index=1;
++  while(index<tokens.length&&/^\/\//.test(tokens[index]))index++;
++  if(index>=tokens.length)return false;
++  var script=tokens[index];
++  if(script.charAt(0)==='"'&&script.charAt(script.length-1)==='"')script=script.slice(1,-1);
++  if(!/^(?:[A-Za-z]:[\\/]|\\\\)/.test(script))return false;
++  return keyPath(script)===keyPath(root+"\\tools\\follow_active.js");
++}
++function parallelShutdownInventory() {
++  var processes=queryLockProcesses(),guarded=[];
++  for(var i=0;i<processes.length;i++)if(!parallelIsReadOnlyFollower(processes[i]))guarded.push(processes[i]);
++  return guarded;
++}
++function parallelReportRamCompletion() {
++  var ram=parallelRuntime.ram;if(!ram)return;
++  var exited=false,known=false,status=null,statusError="";
++  try{
++    exited=ram.proc.Status!==0;known=true;
++    if(exited){
++      var code=Number(ram.proc.ExitCode);
++      if(!isFinite(code)||Math.floor(code)!==code)error("Invalid RAM helper shell exit code.");
++      parallelRuntime.ramExitCode=code;
++    }
++  }catch(processError){known=false;statusError=processError.message;}
++  try{status=readRamWarmStatus(ram);}
++  catch(readStatusError){statusError=readStatusError.message;}
++  if(!known)parallelRuntime.ramStatus="PROCESS_STATUS_UNKNOWN";
++  else if(!exited)parallelRuntime.ramStatus=status?"ACTIVE_"+status.STATE:"ACTIVE_WITHOUT_VERIFIED_STATUS";
++  else if(parallelRuntime.ramExitCode===3)parallelRuntime.ramStatus="EXITED_LEASE_TIMEOUT";
++  else if(parallelRuntime.ramExitCode!==0)parallelRuntime.ramStatus="EXITED_NONZERO";
++  else if(!status)parallelRuntime.ramStatus=statusError?"EXITED_WITH_UNVERIFIED_STATUS":"EXITED_WITHOUT_STATUS";
++  else if(status.TERMINAL!=="1")parallelRuntime.ramStatus="EXITED_WITH_STALE_NONTERMINAL_STATUS";
++  else parallelRuntime.ramStatus="EXITED_"+status.STATE;
++  diagnosticLog("RAM_WARM_FINAL_STATE="+parallelRuntime.ramStatus);
++  if(parallelRuntime.ramExitCode!==null)diagnosticLog("RAM_WARM_EXIT_CODE="+parallelRuntime.ramExitCode);
++  if(status)diagnosticLog("RAM_WARM_LAST_VERIFIED_STATUS="+status.STATE+"|TERMINAL="+status.TERMINAL+
++    "|HELD_BYTES_AT_STATUS="+status.HELD_BYTES+"|CURRENT_RESIDENCY=NOT_INFERRED");
++  if(statusError)diagnosticLog("RAM_WARM_FINAL_STATUS_DETAIL="+statusError);
++}
++function parallelShutdown() {
++  if(parallelRuntime.shutdownComplete)return parallelRuntime.shutdownClean;
++  if(!lockHeld){parallelRuntime.shutdownComplete=true;parallelRuntime.shutdownClean=true;return true;}
++  if(parallelRuntime.ram){
++    try{write(parallelRuntime.ram.stop,parallelRuntime.ram.token+"\n");}
++    catch(stopError){diagnosticLog("RAM_WARM_STOP_REQUEST_FAILED="+stopError.message);}
++  }
++  var started=new Date().getTime(),last=0,live=parallelLiveProcesses();
++  while(live.length&&elapsedSince(started)<30000){
++    if(elapsedSince(started)-last>=5000){last=elapsedSince(started);diagnosticLog("WORKER_DRAIN="+live.join(","));}
++    WScript.Sleep(100);live=parallelLiveProcesses();
++  }
++  parallelReportRamCompletion();
++  if(live.length){
++    parallelRuntime.shutdownKeepLock=true;
++    parallelRuntime.shutdownComplete=true;parallelRuntime.shutdownClean=false;
++    diagnosticLog("RUNNER_LOCK_RETAINED=LIVE_OR_UNCERTAIN_OWNED_WORKERS");
++    diagnosticLog("WORKERS_STILL_ACTIVE="+live.join(","));
++    return false;
++  }
++  try{assertNoLockWorkers(parallelShutdownInventory(),{owner:null},lockSelf);}
++  catch(workerInventoryError){
++    parallelRuntime.shutdownKeepLock=true;
++    parallelRuntime.shutdownComplete=true;parallelRuntime.shutdownClean=false;
++    diagnosticLog("RUNNER_LOCK_RETAINED=WORKER_INVENTORY_UNCERTAIN : "+workerInventoryError.message);return false;
++  }
++  parallelRuntime.shutdownComplete=true;parallelRuntime.shutdownClean=true;return true;
++}
++function processModulesParallel() {
++  configureParallelRuntime();
++  var completed=0;
++  while(completed<ordered.length){
++    var progress=false;
++    for(var ai=parallelRuntime.active.length-1;ai>=0;ai--){
++      if(parallelAdvance(parallelRuntime.active[ai])){parallelRuntime.active.splice(ai,1);progress=true;}
++    }
++    // Topological iteration permits any frozen descendants to become ready immediately.
++    for(var i=0;i<ordered.length;i++){
++      var name=ordered[i];if(parallelRuntime.states[name]!=="PENDING")continue;
++      var dep=parallelDependencyState(name);
++      if(dep.failed){
++        clearOutputs(name);buildStates[name]="BLOCKED_DEPENDENCY";parallelRuntime.states[name]="BLOCKED";blocked++;
++        log("MODULE_BLOCKED="+name+" DEPENDENCY="+dep.failed);progress=true;
++      }else if(dep.ready){stage="MODULE:"+name;parallelPrepare(name);progress=true;}
++    }
++    var ready=parallelReadyTasks();
++    maybeStartRamWarm(ready);
++    while(ready.length&&parallelRuntime.active.length<parallelRuntime.workers&&parallelMemoryAllowsLaunch()){
++      var threads=parallelThreadShare(ready.length);if(!threads)break;
++      var task=ready.shift();task.threads=threads;parallelRuntime.states[task.name]="RUNNING";
++      // Track before launch so a partial failure cannot release the package lock prematurely.
++      parallelRuntime.active.push(task);parallelStartPhase(task);
++      parallelRuntime.launches++;parallelRuntime.peak=Math.max(parallelRuntime.peak,parallelRuntime.active.length);progress=true;
++    }
++    completed=0;
++    for(i=0;i<ordered.length;i++){
++      var state=parallelRuntime.states[ordered[i]];
++      if(state==="DONE"||state==="FAILED"||state==="BLOCKED")completed++;
++    }
++    var now=new Date().getTime();
++    if(now-parallelRuntime.lastProgress>=5000||completed===ordered.length){
++      log("PARALLEL_PROGRESS="+completed+"/"+ordered.length+"|ACTIVE="+parallelRuntime.active.length+"|READY="+ready.length+"|LEAN_THREADS="+parallelActiveThreads());
++      parallelRuntime.lastProgress=now;
++    }
++    if(completed<ordered.length&&!progress&&!parallelRuntime.active.length){
++      if(ready.length&&parallelRuntime.memoryDenial)error("PARALLEL_RESOURCE_BLOCKED: "+parallelRuntime.memoryDenial);
++      error("PARALLEL_SCHEDULER_STALLED: no running or dependency-ready module.");
++    }
++    if(!progress&&parallelRuntime.active.length)WScript.Sleep(100);
++  }
++  log("PARALLEL_PEAK_MODULE_WORKERS="+parallelRuntime.peak);
++  log("PARALLEL_NEW_OR_REAUDITED_MODULE_TASKS="+parallelRuntime.launches);
++  if(!parallelRuntime.ramAttempted)log("RAM_WARM=SKIPPED_NO_ELIGIBLE_DIRTY_FRONTIER");
++}
++
++/* Optional read-only compiled-import warmer. It is never a proof-validation cache. */
++function ramHelperInput(source,csc) {
++  var input=hasherInput(source,csc);
++  input.manifest=input.manifest.replace(HELPER_SCHEMA,RAM_HELPER_SCHEMA).replace("/platform:anycpu","/platform:x64");
++  input.key=textHash(input.manifest);return input;
++}
++function ramSelfTest(exe,output) {
++  if(invokeNative(exe,["--self-test"],output)!==0||!exists(output)||trim(read(output))!=="RAM_WARM_SELF_TEST=PASS")
++    error("RAM warmer self-test failed.");
++}
++function prepareRamWarmer() {
++  var framework=env("SystemRoot")+"\\Microsoft.NET\\",candidates=[framework+"Framework64\\v4.0.30319\\csc.exe",framework+"Framework\\v4.0.30319\\csc.exe"],csc="";
++  for(var i=0;i<candidates.length;i++)if(exists(candidates[i])){csc=candidates[i];break;}
++  if(!csc){log("RAM_WARM_FALLBACK=EXISTING_NET_FRAMEWORK_CSC_UNAVAILABLE");return null;}
++  var source=root+"\\tools\\NativeRamWarm.cs",input=ramHelperInput(source,csc);
++  var parent=shortCacheGroup("ramwarmers",input.key),entries=subfolders(parent).reverse();
++  for(i=0;i<entries.length;i++){
++    var folder=entries[i];if(/\.pending$/.test(folder)||!exists(folder+"\\receipt.txt"))continue;
++    try{
++      var r=parseReceipt(read(folder+"\\receipt.txt")),exe=folder+"\\ramwarm.exe";
++      if(r.SCHEMA!==RAM_HELPER_SCHEMA||r.TARGET!==TARGET||r.INPUT_SHA256!==input.key||r.SOURCE_SHA256!==input.sourceSHA||r.BUILD_PASS!=="1"||r.SELF_TEST_PASS!=="1")error("RAM helper cache identity mismatch.");
++      var checked=freshHashSet([folder+"\\source.cs",exe,folder+"\\build.log",folder+"\\selftest.log"],"RAM_HELPER_CACHE",true);
++      if(read(folder+"\\input.txt")!==input.manifest||checked[keyPath(folder+"\\source.cs")]!==input.sourceSHA||
++        checked[keyPath(exe)]!==r.EXE_SHA256||checked[keyPath(folder+"\\build.log")]!==r.BUILD_LOG_SHA256||
++        checked[keyPath(folder+"\\selftest.log")]!==r.SELF_TEST_LOG_SHA256||trim(read(folder+"\\selftest.log"))!=="RAM_WARM_SELF_TEST=PASS")error("RAM helper cached content mismatch.");
++      ramSelfTest(exe,helpers+"\\ram-selftest-"+runTag+".log");recheckHasherInput(input);
++      if(fileHash(exe)!==r.EXE_SHA256)fatalHashError("RAM helper changed during validation.");
++      log("RAM_WARM_HELPER_CACHE=HIT");return {exe:exe,exeSHA:r.EXE_SHA256,source:source,sourceSHA:input.sourceSHA};
++    }catch(cacheError){if(isFatalHashError(cacheError))throw cacheError;log("RAM_WARM_HELPER_REJECTED="+folder+" : "+cacheError.message);}
++  }
++  var dest=parent+"\\"+compactToken("ram-helper"),temp=dest+".pending";
++  try{
++    requireShortPath(temp+"\\selftest.log","RAM helper cache path");
++    if(directory(dest)||directory(temp))error("RAM helper cache collision.");mkdir(temp);
++    var helper=temp+"\\ramwarm.exe",sourceCopy=temp+"\\source.cs",compileLog=temp+"\\build.log",testLog=temp+"\\selftest.log";
++    fso.CopyFile(source,sourceCopy,false);
++    if(fileHash(sourceCopy)!==input.sourceSHA)error("RAM helper source copy mismatch.");
++    var args=["/nologo","/noconfig","/target:exe","/optimize+","/platform:x64",
++      "/reference:"+input.dir+"\\System.dll","/reference:"+input.dir+"\\System.Core.dll","/out:"+helper,sourceCopy];
++    log("RAM_WARM_HELPER_BUILD=EXISTING_NET_FRAMEWORK_CSC");
++    if(invokeNative(csc,args,compileLog)!==0||!exists(helper)){
++      if(exists(compileLog))log(read(compileLog));error("RAM helper compilation failed.");
++    }
++    var helperSHA=fileHash(helper);ramSelfTest(helper,testLog);recheckHasherInput(input);
++    if(fileHash(sourceCopy)!==input.sourceSHA||fileHash(helper)!==helperSHA)fatalHashError("RAM helper content changed during validation.");
++    write(temp+"\\input.txt",input.manifest);
++    write(temp+"\\receipt.txt","SCHEMA="+RAM_HELPER_SCHEMA+"\nTARGET="+TARGET+"\nINPUT_SHA256="+input.key+
++      "\nSOURCE_SHA256="+input.sourceSHA+"\nEXE_SHA256="+helperSHA+"\nBUILD_LOG_SHA256="+fileHash(compileLog)+
++      "\nSELF_TEST_LOG_SHA256="+fileHash(testLog)+"\nBUILD_PASS=1\nSELF_TEST_PASS=1\nTIME_UTC="+stamp()+"\n");
++    fso.MoveFolder(temp,dest);log("RAM_WARM_HELPER_CACHE=BUILT_AND_SAVED");
++    return {exe:dest+"\\ramwarm.exe",exeSHA:helperSHA,source:source,sourceSHA:input.sourceSHA};
++  }catch(buildError){
++    if(directory(temp)){try{fso.DeleteFolder(temp,true);}catch(cleanupError){}}
++    if(isFatalHashError(buildError))throw buildError;
++    log("RAM_WARM_FALLBACK="+buildError.message);return null;
++  }
++}
++function ramCandidatePlan(ready) {
++  var frequency={},visited={},rootIndex=0;
++  function visit(name) {
++    var key="$"+name;
++    if(visited[key]===rootIndex)return;visited[key]=rootIndex;
++    frequency[name]=(frequency[name]||0)+1;
++    var n=modules[name];
++    for(var j=0;j<n.imports.length;j++)visit(n.imports[j]);
++  }
++  for(var i=0;i<ready.length;i++){
++    rootIndex=i+1;var deps=modules[ready[i].name].imports;
++    for(var j=0;j<deps.length;j++)visit(deps[j]);
++  }
++  var names=keys(frequency),files=[],seen={};
++  for(i=0;i<names.length;i++){
++    var name=names[i],n=modules[name],family;
++    // Only accepted local dependencies are mapped. No queued/running module output can enter.
++    if(n.local){if(!moduleKeys[name]||parallelRuntime.states[name]!=="DONE")continue;family=artifactFamily(work+"\\"+name.replace(/\./g,"\\")+".olean");}
++    else family=n.artifacts;
++    for(j=0;j<family.length;j++){
++      var path=family[j],key=keyPath(path);
++      if(seen[key]||!/(?:\.olean(?:\..*)?|\.ir)$/i.test(path))continue;
++      seen[key]=true;
++      var size=Number(fso.GetFile(path).Size);if(!(size>0&&isFinite(size)))continue;
++      files.push({module:name,path:norm(path),bytes:size,frequency:frequency[name],local:n.local});
++    }
++  }
++  files.sort(function(a,b){return (b.local?1:0)-(a.local?1:0)||b.frequency-a.frequency||(a.module<b.module?-1:a.module>b.module?1:a.path<b.path?-1:a.path>b.path?1:0);});
++  var selected=[],charged=0,budget=parallelRuntime.ramCapMB*1048576;
++  for(i=0;i<files.length&&selected.length<4096;i++){
++    var charge=Math.ceil(files[i].bytes/4096)*4096;
++    if(charge>budget-charged)continue;
++    selected.push(files[i]);charged+=charge;
++  }
++  var rows=["module|shared_ready_jobs|bytes|source_kind|path"];
++  for(i=0;i<selected.length;i++)rows.push(selected[i].module+"|"+selected[i].frequency+"|"+selected[i].bytes+"|"+(selected[i].local?"AUDITED_LOCAL_IMPORT":"FINGERPRINTED_EXTERNAL_IMPORT")+"|"+selected[i].path);
++  write(root+"\\run-ram-plan.tsv",rows.join("\n")+"\n");
++  log("RAM_WARM_CANDIDATE_FILES="+files.length);log("RAM_WARM_SELECTED_FILES="+selected.length);
++  log("RAM_WARM_SELECTED_CHARGED_BYTES="+charged);
++  return selected;
++}
++function ramStatusInteger(status,name,maximum) {
++  var raw=status[name];
++  if(typeof raw!=="string"||!/^(?:0|[1-9][0-9]*)$/.test(raw))error("Invalid RAM status integer: "+name);
++  var value=Number(raw);
++  if(!isFinite(value)||Math.floor(value)!==value||value>maximum)error("Out-of-range RAM status integer: "+name);
++  return value;
++}
++function readRamWarmStatus(ram) {
++  if(!exists(ram.status))return null;
++  var status=parseReceipt(read(ram.status));
++  if(status.SCHEMA!=="RH_HILBERT_RAM_STATUS_V1"||status.TOKEN!==ram.token||status.REQUEST_SHA256!==ram.requestSHA||
++    status.OWNER_PID!==String(lockSelf.pid)||status.OWNER_START_UNIX_MS!==String(processCreationMillis(lockSelf.created)))
++    error("RAM warmer status does not match this exact request and owner.");
++  if(!/^(INITIALIZING|READY|PARTIAL|STOPPED)$/.test(status.STATE||"")||!/^[01]$/.test(status.TERMINAL||""))error("Malformed RAM warmer status.");
++  var count=ramStatusInteger(status,"REQUEST_FILES",ram.requestCount);
++  if(count!==ram.requestCount)error("RAM warmer request count does not match.");
++  var countFields=["PROCESSED_FILES","MAPPED_FILES","WARMED_FILES","SKIPPED_FILES","HELD_FILES"];
++  for(var i=0;i<countFields.length;i++)ramStatusInteger(status,countFields[i],count);
++  var budget=ramStatusInteger(status,"BUDGET_BYTES",ram.budgetBytes);
++  var charged=ramStatusInteger(status,"CHARGED_BYTES",budget);
++  var mapped=ramStatusInteger(status,"MAPPED_BYTES",charged);
++  var held=ramStatusInteger(status,"HELD_BYTES",mapped);
++  if(Number(status.HELD_FILES)>Number(status.MAPPED_FILES)||Number(status.WARMED_FILES)>Number(status.MAPPED_FILES))
++    error("Inconsistent RAM warmer file counts.");
++  if((status.STATE==="INITIALIZING"&&status.TERMINAL!=="0")||
++    (status.STATE==="STOPPED"&&status.TERMINAL!=="1")||
++    (status.TERMINAL==="1"&&(held!==0||Number(status.HELD_FILES)!==0)))
++    error("Inconsistent RAM warmer lifecycle status.");
++  if(status.MODE!=="WARM_MAPPED_FILE_CACHE"||status.RESIDENCY!=="NOT_GUARANTEED"||status.LEAN_ENVIRONMENT!=="NOT_SHARED")
++    error("Unsupported RAM warmer status semantics.");
++  return status;
++}
++function maybeStartRamWarm(ready) {
++  if(parallelRuntime.ramAttempted||parallelRuntime.ramMode==="OFF"||parallelRuntime.ramCapMB<=0||!ready.length)return;
++  if(parallelRuntime.ramMode==="AUTO"&&ready.length<2)return;
++  // Prepare once, before any Lean workers: no hidden C# build competing with Lean.
++  if(parallelRuntime.active.length)return;
++  parallelRuntime.ramAttempted=true;
++  try{
++    var selected=ramCandidatePlan(ready);if(!selected.length){parallelRuntime.ramStatus="NO_ELIGIBLE_IMPORTS";return;}
++    var helper=prepareRamWarmer();if(!helper){parallelRuntime.ramStatus="HELPER_UNAVAILABLE";return;}
++    var token=compactToken("ram-warm"),base=helpers+"\\ram-"+token;
++    var ram={token:token,request:base+".request.tsv",status:base+".status.txt",stop:base+".stop",log:base+".log",proc:null,
++      requestCount:selected.length,budgetBytes:parallelRuntime.ramCapMB*1048576};
++    requireShortPath(ram.status+".pending","RAM status path");
++    if(exists(ram.request)||exists(ram.status)||exists(ram.stop))error("RAM request path collision.");
++    var rows=["RH_HILBERT_RAM_REQUEST_V1|"+token+"|"+selected.length];
++    for(var i=0;i<selected.length;i++){
++      if(/[\x00-\x1f|]/.test(selected[i].path))error("Unsupported RAM path.");
++      rows.push(i+"|"+selected[i].path);
++    }
++    write(ram.request,rows.join("\n")+"\n");ram.requestSHA=fileHash(ram.request);
++    if(fileHash(helper.exe)!==helper.exeSHA||fileHash(helper.source)!==helper.sourceSHA)fatalHashError("RAM helper source or executable changed before launch.");
++    var args=["--warm",ram.request,ram.status,ram.stop,String(lockSelf.pid),String(processCreationMillis(lockSelf.created)),token,String(parallelRuntime.ramCapMB)];
++    ram.proc=startNativeAsync(helper.exe,args,ram.log,0,"ram_warm");parallelRuntime.ram=ram;parallelRuntime.ramStatus="STARTED";
++    log("RAM_WARM_LOG="+ram.log);log("RAM_WARM_STATUS_FILE="+ram.status);
++    var started=new Date().getTime(),status=null;
++    while(elapsedSince(started)<5000){
++      status=readRamWarmStatus(ram);
++      if(status&&(status.STATE==="READY"||status.STATE==="PARTIAL"||status.STATE==="STOPPED"))break;
++      if(ram.proc.Status!==0)break;WScript.Sleep(50);
++    }
++    status=readRamWarmStatus(ram);
++    if(status){
++      parallelRuntime.ramStatus=status.STATE;
++      log("RAM_WARM_STATE="+status.STATE+"|MAPPED_FILES="+(status.MAPPED_FILES||"0")+"|HELD_BYTES="+(status.HELD_BYTES||"0"));
++    }else{parallelRuntime.ramStatus=ram.proc.Status===0?"BACKGROUND_INITIALIZING":"EXITED_WITHOUT_STATUS";log("RAM_WARM_STATE="+parallelRuntime.ramStatus);}
++    if(ram.proc.Status!==0&&ram.proc.ExitCode!==0){
++      log("RAM_WARM_FALLBACK=HELPER_RUNTIME_UNAVAILABLE");if(exists(ram.log))log(read(ram.log));
++    }
++  }catch(warmError){
++    if(isFatalHashError(warmError))throw warmError;
++    parallelRuntime.ramStatus="DISABLED_AFTER_ERROR";log("RAM_WARM_FALLBACK="+warmError.message);
++    if(parallelRuntime.ram){try{write(parallelRuntime.ram.stop,parallelRuntime.ram.token+"\n");}catch(stopError){}}
++  }
++}
++
++
+ function processModuleBody(name,isFinalAudit) {
+   var n=modules[name],i;
+   for(i=0;i<n.imports.length;i++)if(modules[n.imports[i]].local&&!moduleKeys[n.imports[i]]){
+@@ -1353,16 +1867,20 @@
+     '  "hash_helper_cache": '+quoteJSON(helperCacheState)+",",
+     '  "lock_policy": "PID_CREATION_AND_PERMANENT_QUARANTINE_V1",','  "stale_locks_recovered": '+lockRecovered+",",
+     '  "compiled": '+compiled+",",'  "frozen_reused": '+reused+",",'  "audit_only": '+auditOnly+",",'  "legacy_migrated": '+migrated+",",'  "failed": '+failed+",",'  "blocked": '+blocked+",",
+-    '  "runner_profile": "LOCAL_FAST_CACHED",','  "cache_validation": "FRESH_CONTENT_HASHES_SAME_TARGET_AUDIT",','  "anchor_write_layout": "COMPACT_V1",',
++    '  "runner_profile": "LOCAL_FAST_CACHED_RAM_PARALLEL",','  "cache_validation": "FRESH_CONTENT_HASHES_SAME_TARGET_AUDIT",','  "anchor_write_layout": "COMPACT_V1",',
+     '  "working_artifact_modules_retained": '+workingRetained+",",'  "restored_artifact_files": '+restoredArtifactFiles+",",'  "anchor_history_scans": '+anchorHistoryScans+",",'  "compact_anchors_saved": '+compactAnchorsSaved+",",
+     '  "combined_working_digests_consumed": '+workingDigestConsumed+",",'  "runtime_elapsed_ms": '+elapsedSince(runtimeStarted)+",",
++    '  "parallel_module_workers": '+parallelRuntime.workers+",",'  "parallel_peak_module_workers": '+parallelRuntime.peak+",",
++    '  "lean_total_thread_budget": '+jobs+",",'  "ram_warm_status": '+quoteJSON(parallelRuntime.ramStatus)+",",
++    '  "ram_warm_exit_code": '+(parallelRuntime.ramExitCode===null?"null":String(parallelRuntime.ramExitCode))+",",
++    '  "ram_warm_residency": "OS_MANAGED_NOT_GUARANTEED",','  "owned_worker_shutdown_complete": '+(parallelRuntime.shutdownClean?"true":"false")+",",
+     '  "logical_tool_launches": '+numericMapJSON(directLaunchCounts)+",",'  "hash_phase_totals": '+numericMapJSON(hashPhaseTotals)+",",
+     '  "stage_timings": '+phaseRecordsJSON(stagePhaseRecords)+",",'  "module_timings": '+phaseRecordsJSON(modulePhaseRecords)+",",'  "hash_timings": '+phaseRecordsJSON(hashPhaseRecords)+",",
+     '  "audited_declarations_with_module_multiplicity": '+audited+",",'  "time_utc": '+quoteJSON(stamp())+",",'  "message": '+quoteJSON(message)+",",'  "modules": {'];
+   var names=keys(buildStates);for(var i=0;i<names.length;i++)lines.push("    "+quoteJSON(names[i])+": "+quoteJSON(buildStates[names[i]])+(i+1<names.length?",":""));
+   lines.push("  }","}");write(root+"\\run-result.json",lines.join("\r\n")+"\r\n");
+ }
+-var exitCode=1;
++var exitCode=1, runFailureMessage="";
+ try{
+   stage="PERSISTENT_PROFILE";configurePersistentProfile();
+   stage="RUNNER_LOCK";acquireRunnerLock();
+@@ -1374,14 +1892,15 @@
+   log("PERSISTENT_STORAGE_ROOT="+persistentStorageRoot);log("PERSISTENT_WORKSPACE="+persistentWorkspace);
+   log("PERSISTENT_PROJECT_CACHE="+persistentProjectCache);log("CACHE_RETENTION=VALID_ANCHORS_NO_QUOTA_NO_AUTOMATIC_EVICTION");
+   log("RUNNER_LOCK_POLICY=PID_CREATION_AND_PERMANENT_QUARANTINE_V1");
+-  log("RUNNER_PROFILE=LOCAL_FAST_CACHED");log("CACHE_VALIDATION=FRESH_CONTENT_HASHES_SAME_TARGET_AUDIT");log("ANCHOR_WRITE_LAYOUT=COMPACT_V1");
++  log("RUNNER_PROFILE=LOCAL_FAST_CACHED_RAM_PARALLEL");log("CACHE_VALIDATION=FRESH_CONTENT_HASHES_SAME_TARGET_AUDIT");log("ANCHOR_WRITE_LAYOUT=COMPACT_V1");
+   log("NETWORK=NOT_USED");log("LAKE=NOT_USED");log("PYTHON=NOT_USED");log("POWERSHELL=NOT_USED");log("WSL=NOT_USED");
+   timedStage("COMPILER",selectCompiler);timedStage("MATHLIB_REQUIREMENTS",loadMathlibRequirements);
+   timedStage("MATHLIB_CACHE",selectCache);timedStage("DEPENDENCY_GRAPH",loadPlan);
+   timedStage("CONTENT_FINGERPRINTS",function(){parallelHashes();makeGlobalKey();});
+-  for(var mi=0;mi<ordered.length;mi++){stage="MODULE:"+ordered[mi];processModule(ordered[mi]);}
++  timedStage("PROJECT_MODULES",processModulesParallel);
+   if(failed||blocked)error("Some modules failed or were blocked. Independent modules were still attempted.");
+   timedStage("FINAL_AUDIT",finalAudit);
++  if(!timedStage("WORKER_SHUTDOWN",parallelShutdown))error("Owned workers remain live or uncertain; the workspace lock is preserved until they finish.");
+   log("AXIOM_AUDIT=PASS_STANDARD_LOGICAL_AXIOMS_ONLY");log("SORRYAX=NONE");
+   log("MATHEMATICAL_STATUS=ANALYTIC_CRITERIA_AUDITED_FINITE_CHECKER_OPEN");
+   log("CANONICAL_POWER_SUMS=EXACT_CONSTRUCTION_AUDITED");log("ACTUAL_SPECTRAL_CALIBRATION=EXACT_CONSTRUCTION_AUDITED");
+@@ -1394,9 +1913,15 @@
+   log("COMBINED_WORKING_DIGESTS_CONSUMED="+workingDigestConsumed);log("LOGICAL_TOOL_LAUNCHES="+numericMapJSON(directLaunchCounts));log("HASH_PHASE_TOTALS="+numericMapJSON(hashPhaseTotals));
+   result(true,"Exact supplied declarations compiled and passed their recorded axiom audits; theorem hypotheses remain explicit.");exitCode=0;
+ }catch(e){
+-  if(lockHeld){try{log("PROJECT_BUILD=FAIL");log("FAILED_STAGE="+stage);log("REASON="+e.message);log("RUN=FAIL");result(false,e.message);}catch(ignore){WScript.Echo("RUN=FAIL : "+e.message);}}
++  runFailureMessage=e.message;
++  if(lockHeld){try{log("PROJECT_BUILD=FAIL");log("FAILED_STAGE="+stage);log("REASON="+e.message);log("RUN=FAIL");}catch(ignore){WScript.Echo("RUN=FAIL : "+e.message);}}
+   else WScript.Echo("RUN=FAIL : "+e.message);
+ }
+-releaseRunnerLock();
++if(lockHeld){
++  var shutdownClean=false;
++  try{shutdownClean=parallelShutdown();}catch(shutdownError){diagnosticLog("RUNNER_LOCK_RETAINED=SHUTDOWN_UNCERTAIN : "+shutdownError.message);}
++  if(exitCode!==0){try{result(false,runFailureMessage||"Native run failed.");}catch(resultError){WScript.Echo("RESULT_WRITE_FAILED="+resultError.message);}}
++  if(shutdownClean)releaseRunnerLock();
++}
+ WScript.Echo((lockEverHeld?"Logs: ":"Existing logs were not overwritten: ")+logPath+" and "+auditLogPath);
+ WScript.Quit(exitCode);

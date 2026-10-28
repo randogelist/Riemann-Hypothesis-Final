@@ -1,0 +1,60 @@
+{
+  "schema": "RH_SPECTRAL_CROSS_REVIEW_V1",
+  "reviewer": "moment_induction",
+  "method": "Independent static source and pinned Mathlib v4.33.0 API review only.",
+  "native_compilation_performed": false,
+  "lean_or_lake_invoked": false,
+  "tests_executed": false,
+  "baseline_modified": false,
+  "reviewed_files": [
+    {
+      "path": "SpectralGenerating.lean",
+      "sha256": "06fb12f6dba0872527cba2bcc5a10cf3029c8df73af46131db36efa372828977",
+      "bytes": 9369
+    },
+    {
+      "path": "SpectralPhase.lean",
+      "sha256": "bc21fd329ecce37ce7b4808ffa565d1b0cc7507c90cbc1965b1a540756db3a80",
+      "bytes": 5318
+    },
+    {
+      "path": "SpectralExtraction.lean",
+      "sha256": "4c3381a0d090c9f27f06453797360ad765e018d2776001816bf3b91272fbdc16",
+      "bytes": 8971
+    }
+  ],
+  "change": {
+    "file": "SpectralGenerating.lean",
+    "theorem": "RH_HilbertLimit.rowGenerating_hasSum",
+    "scope": "Proof body only; statements and parameters unchanged.",
+    "description": "After unfold rowGenerating, replace higher-order exact hasSum_sum application with apply hasSum_sum; intro j hj; simpa only [spectralTerm] using the existing calibrated HasSum multiplied by x^j."
+  },
+  "phase_checks": [
+    "exists_norm_mul_eq_self provides a * norm(1-q) = 1-q; exists_norm_eq_mul_self provides norm(q) = b*q. The rw sequence yields the required affine alignment.",
+    "norm_of_nonneg applies to norm(1-q)+norm(q); its result equals ellipseRadius q by commutativity. q=0 and q=1 are covered by the inspected unconditional APIs.",
+    "At ellipse radius greater than one, phase=1 contradicts the maximizing norm; cancellation by x-1 therefore establishes affine injectivity.",
+    "Dominant phase specialization retains explicit calibration and radius>1 premises and obtains attainment from SpectralTail."
+  ],
+  "integration_checks": [
+    "D.rowGenerating_eq_sum_add_remainder H N x has the exact finite-head-plus-complement shape used by expansion.",
+    "D.norm_remainder_le H x r (zero_le_one.trans hr1) hr N matches the root generic complement affine-factor bound.",
+    "The tail field spectralRemainder D.node H x has type Nat -> Complex and does not require finite spectral support.",
+    "Finite exceptional localization, maximum membership, filtered nondominant strict bounds, and common finite max bound have consistent inequality directions.",
+    "Repeated identical nodes group into a positive natural multiplicity times a nonzero complex node, so the distinguished grouped coefficient cannot vanish.",
+    "Finset.equivFin, Fintype.sum_equiv, Finset.sum_finset_coe and Finset.sum_fiberwise_of_maps_to signatures agree with the inspected pinned reference files."
+  ],
+  "concrete_errors_found": [],
+  "residual_limitations": [
+    "All three candidate modules still require the user native Lean 4.33.0 compilation and axiom audit.",
+    "Definitional reductions through local lets, Finset coe/subtypes and finiteExponentialSum have been reviewed but not elaborated by Lean here.",
+    "The existing ActualSpectralCalibration premise remains; this review does not establish its analytic power-sum input, RH, or a finite terminating-checker witness."
+  ],
+  "pinned_sources": [
+    "https://github.com/leanprover-community/mathlib4/blob/v4.33.0/Mathlib/Analysis/Complex/Basic.lean",
+    "https://github.com/leanprover-community/mathlib4/blob/v4.33.0/Mathlib/Analysis/Complex/Norm.lean",
+    "https://github.com/leanprover-community/mathlib4/blob/v4.33.0/Mathlib/Topology/Algebra/InfiniteSum/Group.lean",
+    "https://github.com/leanprover-community/mathlib4/blob/v4.33.0/Mathlib/Algebra/BigOperators/Group/Finset/Basic.lean",
+    "https://github.com/leanprover-community/mathlib4/blob/v4.33.0/Mathlib/Algebra/BigOperators/Group/Finset/Defs.lean",
+    "https://github.com/leanprover-community/mathlib4/blob/v4.33.0/Mathlib/Data/Fintype/EquivFin.lean"
+  ]
+}

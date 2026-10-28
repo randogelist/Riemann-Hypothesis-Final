@@ -1,0 +1,22 @@
+{
+  "kind": "EXACT_RATIONAL_ARITHMETIC_ONLY_NOT_LEAN_PROOF",
+  "slopes": [
+    "0",
+    "1/4",
+    "8/15",
+    "47/52",
+    "240/161",
+    "1121/404",
+    "4888/495"
+  ],
+  "slope_recurrences": "ALL_SIX_CHECKED",
+  "exp_3_degree_8_lower": "89641/4480",
+  "upper_integral_bound": "4/95",
+  "lower_integral_bound": "1/19",
+  "completed_bound": "9/190",
+  "zero_free_height": "17/4",
+  "xi_product_bound": "549/608",
+  "angle_real_fraction": "285/293",
+  "quarter_cone_margin_verified": true,
+  "lean_executed": false
+}

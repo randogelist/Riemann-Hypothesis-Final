@@ -1,0 +1,29 @@
+PACKAGE=v0.2.19 construction
+MODE=A_TIER_LEAN
+TARGET=LOCAL_COMPILER
+
+1. Compile and axiom-audit the repaired Cancellation, then its dependent
+   ActualCancellationWitness and CancellationAudit, on native Windows Lean
+   4.33.0. EventualGrowth is source-frozen after the supplied module PASS;
+   reuse still requires the runner's exact identity and receipt validation.
+
+2. The forward source theorem assumes an admissible CancellationBudget.
+   Admissibility remains an explicit universal condition after a finite cutoff.
+   The hypothetical witness has not been obtained, and the blocked forward
+   and reverse declarations still await successful native compilation/audit.
+
+3. Derive an actual-source invariant that makes a finite arithmetic certificate
+   imply the universal cancellation budget. The local-flux adapter assumes
+   its displayed local and boundary inequalities at every required order.
+
+4. Implement a terminating finite raw checker and prove soundness, then
+   completeness for (exists W : FiniteWitness, check W = true) iff RH.
+   Obtaining a witness is not required for proving these implications.
+
+5. Finite-checker soundness/equivalence and formal closure remain OPEN.
+   Actual subexponential growth, an unconditional admissible budget, an
+   accepted finite witness and unconditional RH are not established.
+
+6. No native/Lean/Lake/compiler/CI execution was performed during this repair.
+   Existing cache validation, worker-lock policy and other workspaces remain
+   unchanged.

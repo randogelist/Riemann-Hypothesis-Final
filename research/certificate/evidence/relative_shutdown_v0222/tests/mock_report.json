@@ -1,0 +1,223 @@
+{
+  "schema": "RH_V0222_RELATIVE_SHUTDOWN_NODE_VM_REVIEW_V1",
+  "status": "PASS",
+  "scope": "NODE_VM_SYNTHETIC_HOST_ONLY",
+  "runner_sha256": "8fc5a81e3802a52e3ec12fa2c94177a42b59b202a83b66c9609ea1356889e907",
+  "passed": 20,
+  "failed": 0,
+  "cases": [
+    {
+      "name": "new_relative_host_confirmed_absent_from_exact_query_clears",
+      "outcome": "PASS",
+      "evidence": {
+        "full_inventories": 2,
+        "exact_worker_queries": 1,
+        "scheduled_sleep_ms": 0,
+        "lock_released_after_verified_absence_and_fresh_barrier": true
+      }
+    },
+    {
+      "name": "persistent_new_relative_host_retains_lock_after_six_exact_checks",
+      "outcome": "PASS",
+      "evidence": {
+        "full_inventories": 1,
+        "exact_worker_queries": 6,
+        "exact_self_queries": 12,
+        "scheduled_sleep_ms": 1000,
+        "persistent_host_not_exempted": true
+      }
+    },
+    {
+      "name": "relative_row_command_changes_do_not_become_foreign_process_exemptions",
+      "outcome": "PASS",
+      "evidence": {
+        "retained_command_change_variants": [
+          "different_relative_script",
+          "absolute_other_workspace",
+          "absolute_current_workspace",
+          "became_unreadable"
+        ],
+        "assumed_absences": 0
+      }
+    },
+    {
+      "name": "relative_row_identity_reuse_or_incomplete_exact_queries_fail_closed",
+      "outcome": "PASS",
+      "evidence": {
+        "retained_variants": [
+          "query_throws",
+          "duplicate_rows",
+          "partial_enumeration_throws",
+          "wrong_pid",
+          "pid_recycled_new_creation",
+          "changed_name",
+          "changed_parent",
+          "missing_creation",
+          "invalid_parent"
+        ],
+        "incomplete_query_is_never_absence": true
+      }
+    },
+    {
+      "name": "readable_current_root_workers_are_never_expired_by_relative_host_recheck",
+      "outcome": "PASS",
+      "evidence": {
+        "retained_current_root_variants": [
+          "relative_runner_with_current_root_argument",
+          "absolute_current_root_runner",
+          "readable_current_root_lean"
+        ],
+        "absence_query_cannot_bypass_initial_current_root_guard": true
+      }
+    },
+    {
+      "name": "unreadable_to_relative_to_absent_continues_original_row_recheck",
+      "outcome": "PASS",
+      "evidence": {
+        "full_inventories": 2,
+        "worker_queries": 2,
+        "scheduled_sleep_ms": 200,
+        "transition_remained_pending_until_confirmed_absence_and_barrier": true
+      }
+    },
+    {
+      "name": "unreadable_to_persistent_relative_is_not_treated_as_resolved",
+      "outcome": "PASS",
+      "evidence": {
+        "worker_queries": 6,
+        "persistent_relative_transition_still_blocks": true
+      }
+    },
+    {
+      "name": "unreadable_to_relative_then_command_change_retains_lock",
+      "outcome": "PASS",
+      "evidence": {
+        "worker_queries": 2,
+        "newly_observed_relative_command_bound_for_later_rechecks": true
+      }
+    },
+    {
+      "name": "fresh_lock_preexisting_admitted_host_exemption_remains_exact",
+      "outcome": "PASS",
+      "evidence": {
+        "unchanged_admitted_host_queries": 0,
+        "current_root_command_change_not_exempt": true
+      }
+    },
+    {
+      "name": "stale_and_legacy_acquisition_do_not_use_shutdown_relative_rechecks",
+      "outcome": "PASS",
+      "evidence": {
+        "stale_recovery_exact_queries": 0,
+        "prior_locks_preserved": true
+      }
+    },
+    {
+      "name": "fresh_barrier_rejects_a_new_relative_host_without_a_second_relative_wait",
+      "outcome": "PASS",
+      "evidence": {
+        "full_inventories": 2,
+        "initial_rows_queried": 2,
+        "later_relative_pid_rejected_without_exact_wait": true
+      }
+    },
+    {
+      "name": "fresh_barrier_rejects_a_current_root_child_created_before_relative_parent_exit",
+      "outcome": "PASS",
+      "evidence": {
+        "full_inventories": 2,
+        "vanished_parent_worker_queries": 1,
+        "late_current_root_child_blocked": true
+      }
+    },
+    {
+      "name": "fresh_barrier_unreadable_worker_uses_bounded_exact_query_without_third_census",
+      "outcome": "PASS",
+      "evidence": {
+        "full_inventories": 2,
+        "exact_worker_queries": 2,
+        "shared_attempt_budget_preserved": true
+      }
+    },
+    {
+      "name": "fresh_barrier_reappearance_of_previously_absent_identity_retains_lock",
+      "outcome": "PASS",
+      "evidence": {
+        "full_inventories": 2,
+        "reappeared_identity_not_reclassified_as_new_safe_row": true
+      }
+    },
+    {
+      "name": "shared_64_row_budget_is_not_reset_for_fresh_barrier_unreadable_rows",
+      "outcome": "PASS",
+      "evidence": {
+        "initial_rows": 64,
+        "additional_barrier_row_rejected_before_query": true,
+        "full_inventories": 2
+      }
+    },
+    {
+      "name": "simple_script_parser_distinguishes_actual_script_from_later_argument_text",
+      "outcome": "PASS",
+      "evidence": {
+        "actual_script_token_used": true,
+        "later_runner_text_not_misclassified": true,
+        "no_unverified_relative_discharge": true
+      }
+    },
+    {
+      "name": "unsupported_or_malformed_script_syntax_preserves_conservative_legacy_guard",
+      "outcome": "PASS",
+      "evidence": {
+        "conservative_fallback_cases": [
+          "unsupported_switch",
+          "mixed_quoted_token",
+          "mismatched_host_name"
+        ],
+        "malformed_tokens_never_assumed_foreign": true
+      }
+    },
+    {
+      "name": "drive_relative_native_runner_script_remains_ambiguous",
+      "outcome": "PASS",
+      "evidence": {
+        "drive_relative_scripts": [
+          "C:native_runner.js",
+          "c:NATIVE_RUNNER.JS"
+        ],
+        "no_absolute_or_foreign_workspace_assumption": true
+      }
+    },
+    {
+      "name": "lock_owner_change_during_relative_absence_query_blocks_cleanup",
+      "outcome": "PASS",
+      "evidence": {
+        "post_query_exact_owner_guard_preserved": true,
+        "changed_owner_lock_not_deleted": true
+      }
+    },
+    {
+      "name": "combined_relative_and_unreadable_row_budget_is_bounded",
+      "outcome": "PASS",
+      "evidence": {
+        "initial_ambiguous_rows": 65,
+        "row_budget_rejected_before_worker_queries": true
+      }
+    }
+  ],
+  "binding": {
+    "actual_assembled_runner_function_definitions": true,
+    "actual_runToFile_preserved": true,
+    "raw_shell_and_WMI_boundaries_simulated": true,
+    "whole_WSH_entry_point_executed": false,
+    "COM_setter_adaptations": 7
+  },
+  "limitations": [
+    "No Lean, Lake, Windows, WSH/COM, native WMI, C#, Wine or CI execution occurred.",
+    "All process rows, native command outcomes, locks, clocks, receipts and compiler files are synthetic in memory.",
+    "A vanished unresolved relative host requires one fresh barrier inventory; new unresolved relative hosts at that barrier do not get another relative-host wait.",
+    "The at-most-two inventories are not an atomic Windows process census; no global process stability is asserted.",
+    "Bounded attempts and scheduled sleeps do not impose a hard wall-clock limit on real WMI calls.",
+    "The scenarios provide runtime-logic regression evidence, not a native runner PASS or mathematical proof certification."
+  ]
+}

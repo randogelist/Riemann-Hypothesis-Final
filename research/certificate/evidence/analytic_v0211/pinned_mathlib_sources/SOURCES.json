@@ -1,0 +1,114 @@
+[
+  {
+    "file": "reference__Mathlib__Analysis__Calculus__Deriv__Basic.lean.txt",
+    "sha256": "25a141aa96a09a24c9b5dd4b26bc805e1138b7d497358230e25fe2ae476bd89b",
+    "pinned_ref": "v4.33.0",
+    "source_url": "https://github.com/leanprover-community/mathlib4/blob/v4.33.0/Mathlib/Analysis/Calculus/Deriv/Basic.lean",
+    "role": "Read-only API review evidence; not imported by this package"
+  },
+  {
+    "file": "reference__Mathlib__Analysis__Calculus__Deriv__Inv.lean.txt",
+    "sha256": "56a829d955be804bbf1adeeddf8051671e187baff974d722fd2d7594c5442fef",
+    "pinned_ref": "v4.33.0",
+    "source_url": "https://github.com/leanprover-community/mathlib4/blob/v4.33.0/Mathlib/Analysis/Calculus/Deriv/Inv.lean",
+    "role": "Read-only API review evidence; not imported by this package"
+  },
+  {
+    "file": "reference__Mathlib__Analysis__Calculus__Deriv__Mul.lean.txt",
+    "sha256": "c1ef567846f88755bb2c9af6f4fac13773e54675f85e4c639d412ae1e855d363",
+    "pinned_ref": "v4.33.0",
+    "source_url": "https://github.com/leanprover-community/mathlib4/blob/v4.33.0/Mathlib/Analysis/Calculus/Deriv/Mul.lean",
+    "role": "Read-only API review evidence; not imported by this package"
+  },
+  {
+    "file": "reference__Mathlib__Analysis__Calculus__Deriv__Pow.lean.txt",
+    "sha256": "ae5a1450b3edbc14d44cadaabf3444fe6d2f1b1a52fc34e82871405f5d7a7829",
+    "pinned_ref": "v4.33.0",
+    "source_url": "https://github.com/leanprover-community/mathlib4/blob/v4.33.0/Mathlib/Analysis/Calculus/Deriv/Pow.lean",
+    "role": "Read-only API review evidence; not imported by this package"
+  },
+  {
+    "file": "reference__Mathlib__Analysis__Calculus__IteratedDeriv__Defs.lean.txt",
+    "sha256": "dcc086c2ae5ed79e192efb44cf7fb4a7eadeb0a94bb6e1261f75fc58740675b2",
+    "pinned_ref": "v4.33.0",
+    "source_url": "https://github.com/leanprover-community/mathlib4/blob/v4.33.0/Mathlib/Analysis/Calculus/IteratedDeriv/Defs.lean",
+    "role": "Read-only API review evidence; not imported by this package"
+  },
+  {
+    "file": "reference__Mathlib__Analysis__Calculus__IteratedDeriv__Lemmas.lean.txt",
+    "sha256": "341eebe3d95c336513dbc55c65b12b177d9b7a51bd0a377dd10339d0178078d5",
+    "pinned_ref": "v4.33.0",
+    "source_url": "https://github.com/leanprover-community/mathlib4/blob/v4.33.0/Mathlib/Analysis/Calculus/IteratedDeriv/Lemmas.lean",
+    "role": "Read-only API review evidence; not imported by this package"
+  },
+  {
+    "file": "reference__Mathlib__Analysis__Calculus__LogDerivUniformlyOn.lean.txt",
+    "sha256": "f8ed1283c276ae4aaa20eb214dc7a7d0849ecdf8087902f7ef0b3b79dcb39a62",
+    "pinned_ref": "v4.33.0",
+    "source_url": "https://github.com/leanprover-community/mathlib4/blob/v4.33.0/Mathlib/Analysis/Calculus/LogDerivUniformlyOn.lean",
+    "role": "Read-only API review evidence; not imported by this package"
+  },
+  {
+    "file": "reference__Mathlib__Analysis__Calculus__UniformLimitsDeriv.lean.txt",
+    "sha256": "48d74b4ebbe7b3012128f7088a48567b72af1ef0631d3d978e369ec0ab5c45d5",
+    "pinned_ref": "v4.33.0",
+    "source_url": "https://github.com/leanprover-community/mathlib4/blob/v4.33.0/Mathlib/Analysis/Calculus/UniformLimitsDeriv.lean",
+    "role": "Read-only API review evidence; not imported by this package"
+  },
+  {
+    "file": "reference__Mathlib__Analysis__Complex__LocallyUniformLimit.lean.txt",
+    "sha256": "768cbfb10df0e8c1b440c01573969c53859932cae7ff0e65500d3c72eccf635a",
+    "pinned_ref": "v4.33.0",
+    "source_url": "https://github.com/leanprover-community/mathlib4/blob/v4.33.0/Mathlib/Analysis/Complex/LocallyUniformLimit.lean",
+    "role": "Read-only API review evidence; not imported by this package"
+  },
+  {
+    "file": "reference__Mathlib__Analysis__Normed__Group__FunctionSeries.lean.txt",
+    "sha256": "5344e2ce9dd2dcbcbdf7624e7fa200bf8355a438888be37262d1bc89f784332c",
+    "pinned_ref": "v4.33.0",
+    "source_url": "https://github.com/leanprover-community/mathlib4/blob/v4.33.0/Mathlib/Analysis/Normed/Group/FunctionSeries.lean",
+    "role": "Read-only API review evidence; not imported by this package"
+  },
+  {
+    "file": "reference__Mathlib__Analysis__Normed__Module__MultipliableUniformlyOn.lean.txt",
+    "sha256": "55041bbd5db455f73a7b3b66435fa449fc501541a1ad344f94f314ede0cd2f75",
+    "pinned_ref": "v4.33.0",
+    "source_url": "https://github.com/leanprover-community/mathlib4/blob/v4.33.0/Mathlib/Analysis/Normed/Module/MultipliableUniformlyOn.lean",
+    "role": "Read-only API review evidence; not imported by this package"
+  },
+  {
+    "file": "reference__Mathlib__Analysis__SpecialFunctions__Log__Summable.lean.txt",
+    "sha256": "8cd8a4c8e38e1295ee614780aea29203f708d0c6cd959911570733cceb5bdf41",
+    "pinned_ref": "v4.33.0",
+    "source_url": "https://github.com/leanprover-community/mathlib4/blob/v4.33.0/Mathlib/Analysis/SpecialFunctions/Log/Summable.lean",
+    "role": "Read-only API review evidence; not imported by this package"
+  },
+  {
+    "file": "root_reference__FinsetBasic.lean.txt",
+    "sha256": "1305c143ee5528281992dc083faa3c881c2e7c0f3d09b127de4f58987182d1f2",
+    "pinned_ref": "v4.33.0",
+    "source_url": "https://github.com/leanprover-community/mathlib4/blob/v4.33.0/Mathlib/Algebra/BigOperators/Group/Finset/Basic.lean",
+    "role": "Read-only API review evidence; not imported by this package"
+  },
+  {
+    "file": "root_reference__FinsetDefs.lean.txt",
+    "sha256": "2f39541f66288cb9ae9f77d97fd3656825a1dd1a4b5ca6a156f938d8fa1678a8",
+    "pinned_ref": "v4.33.0",
+    "source_url": "https://github.com/leanprover-community/mathlib4/blob/v4.33.0/Mathlib/Algebra/BigOperators/Group/Finset/Defs.lean",
+    "role": "Read-only API review evidence; not imported by this package"
+  },
+  {
+    "file": "root_reference__FintypeBigOperators.lean.txt",
+    "sha256": "bfa35992c02f47d7c78a5425ea3c4eecba0ad54de1b5752db565b37de11148c0",
+    "pinned_ref": "v4.33.0",
+    "source_url": "https://github.com/leanprover-community/mathlib4/blob/v4.33.0/Mathlib/Data/Fintype/BigOperators.lean",
+    "role": "Read-only API review evidence; not imported by this package"
+  },
+  {
+    "file": "root_reference__FintypeEquivFin.lean.txt",
+    "sha256": "2df4d785c723a7cf6ce60790a545497250b63f52ecd7bdd5039fa5ea3537acb8",
+    "pinned_ref": "v4.33.0",
+    "source_url": "https://github.com/leanprover-community/mathlib4/blob/v4.33.0/Mathlib/Data/Fintype/EquivFin.lean",
+    "role": "Read-only API review evidence; not imported by this package"
+  }
+]

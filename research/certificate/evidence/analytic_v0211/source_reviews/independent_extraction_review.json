@@ -1,0 +1,63 @@
+{
+  "review": "independent static mathematical and Lean-source review",
+  "reviewer": "hyperbolic_family",
+  "status": "STATIC_REVIEW_NO_CONCRETE_BLOCKER",
+  "source": "tmp/proof_progress_v0211/SpectralExtraction.lean",
+  "source_sha256": "4c3381a0d090c9f27f06453797360ad765e018d2776001816bf3b91272fbdc16",
+  "reviewed_declarations": [
+    "RH_HilbertLimit.SpectralExtraction.exists_common_strict_bound",
+    "RH_HilbertLimit.SpectralExtraction.groupedCoefficient_eq_card_mul",
+    "RH_HilbertLimit.SpectralExtraction.groupedCoefficient_ne_zero",
+    "RH_HilbertLimit.SpectralExtraction.grouped_exponential_sum",
+    "RH_HilbertLimit.SpectralExtraction.finite_dominant_indices",
+    "RH_HilbertLimit.ActualSpectralCalibration.dominantExtraction"
+  ],
+  "supporting_definition": "RH_HilbertLimit.SpectralExtraction.groupedCoefficient",
+  "mathematical_scope": {
+    "input": "An existing ActualSpectralCalibration D; no additional analytic input.",
+    "output": "DominantExtraction D; the R > 1 premise is internal to this existing definition.",
+    "finite_support_assumed": false,
+    "distinct_original_nodes_assumed": false,
+    "calibration_existence_established_here": false
+  },
+  "checks": [
+    {
+      "area": "finite complement gap",
+      "finding": "The finite exceptional set bounds all outside ellipse radii by a < R. Its strict nondominant subset admits a common r < R with a <= r. The union of those two complements is the complement of the maximal affine head."
+    },
+    {
+      "area": "nonempty maximal head",
+      "finding": "The phase-attaining node cannot lie outside the exceptional set. Filtering equality retains it; every excluded node has affine norm <= r < R."
+    },
+    {
+      "area": "duplicate-node coefficient",
+      "finding": "A fiber coefficient equals its natural cardinality cast to C times the node. Image membership makes the cardinality positive; D.node_ne_zero prevents cancellation to zero."
+    },
+    {
+      "area": "rate injectivity",
+      "finding": "The chosen phase differs from one, so the affine map is injective. Finset.image removes equal node values, and equivFin provides an injective enumeration."
+    },
+    {
+      "area": "finite enumeration and regrouping",
+      "finding": "Pinned equivFin, Fintype.sum_equiv, Finset.sum_finset_coe, and sum_fiberwise_of_maps_to orientations match the proof. Coercions and local lets are definitionally aligned."
+    },
+    {
+      "area": "exact expansion",
+      "finding": "The finite exponential sum is exactly the grouped finite head. The supplied generating split gives this head plus the full subtype-complement remainder, without dropping any indices."
+    },
+    {
+      "area": "uniform tail estimate",
+      "finding": "The constructed r satisfies 1 <= r < R. The existing total norm mass bounds the complement uniformly by mass * r^N, matching DominantTailData fields."
+    }
+  ],
+  "context_sha256": {
+    "SpectralPhase.lean": "bc21fd329ecce37ce7b4808ffa565d1b0cc7507c90cbc1965b1a540756db3a80",
+    "SpectralGenerating.lean": "06fb12f6dba0872527cba2bcc5a10cf3029c8df73af46131db36efa372828977"
+  },
+  "api_evidence": "Pinned Mathlib v4.33.0 snippets and source identifiers under root_reference; baseline Main/Vandermonde and current SpectralGenerating source signatures.",
+  "issues": [],
+  "source_edits": false,
+  "lean_compilation": "NOT_RUN",
+  "native_execution": "NOT_RUN",
+  "qualification": "Static review does not certify Lean elaboration or native kernel acceptance."
+}

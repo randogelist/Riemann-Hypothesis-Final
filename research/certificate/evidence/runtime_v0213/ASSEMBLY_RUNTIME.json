@@ -1,0 +1,10 @@
+{
+  "package": "RH_HILBERT_LIMIT_LEAN_v0_2_13_construction",
+  "runner_sha256": "f6726db78ef9b532b24e2c09092e44e1e7f855c5eb84a6873c1dc519ef13803f",
+  "lean_sources_byte_preserved": 92,
+  "frozen_inputs": 103,
+  "edit_sites": 16,
+  "javascript_syntax": "PASS",
+  "native_execution": "NOT_RUN",
+  "mathematical_endpoint": "UNCHANGED"
+}

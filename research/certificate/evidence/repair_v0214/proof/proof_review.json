@@ -1,0 +1,39 @@
+{
+  "review": "CANONICAL_POWER_SUMS_CAST_NORMALIZATION",
+  "native_lean_execution": "NOT_RUN",
+  "proof_validation": "STATIC_SOURCE_REVIEW_ONLY",
+  "baseline_file": "/workspace/scratch/f128c1434505/output/RH_HILBERT_LIMIT_LEAN_v0_2_13_construction/RH_HilbertLimit/CanonicalPowerSums.lean",
+  "baseline_sha256": "2aecbd7e10aa87c0ce726026d563d6a33caf0b99e58f824719cf5a99a6217169",
+  "candidate_sha256": "6dac0ba1d627eae6c5a70d0bb2dbdc52f0fa6474e3984d34a2d53feb48fb2160",
+  "edit_scope": "Only the three-line proof body of local htarget in canonicalNode_power_sum.",
+  "theorem_statements_preserved": true,
+  "imports_preserved": true,
+  "assumptions_preserved": true,
+  "new_axioms_or_sorry": false,
+  "diagnosis": "The recursive simplifier normalizes the real quotient underneath Complex.ofReal into a product before the outer quotient cast rule is applied; the restricted simp set lacks the product/inverse cast rules needed for the remaining expression.",
+  "repair": "Use ordered rw steps to push the quotient and power casts into Complex first; then normalize inverse power and quotient and discharge exactly by multiplication commutativity.",
+  "rewrites": [
+    "actualComplexMoment_eq_ofReal_actualMoment",
+    "actualNormalizedMoment",
+    "Complex.ofReal_div",
+    "Complex.ofReal_pow",
+    "inv_pow",
+    "div_eq_mul_inv"
+  ],
+  "remaining_goal": "((actualKappa : Complex) ^ (n + 1))\u207b\u00b9 * (actualMoment n : Complex) = (actualMoment n : Complex) * ((actualKappa : Complex) ^ (n + 1))\u207b\u00b9",
+  "closing_term": "mul_comm _ _",
+  "nonzero_premise_required": false,
+  "primary_source": {
+    "repository": "leanprover-community/mathlib4",
+    "ref": "v4.33.0",
+    "path": "Mathlib/Data/Complex/Basic.lean",
+    "blob_sha": "05d0f1c424d5d04e267109290b2ad0ae657b6f00",
+    "url": "https://github.com/leanprover-community/mathlib4/blob/v4.33.0/Mathlib/Data/Complex/Basic.lean",
+    "verified_declarations": [
+      "Complex.ofReal_div",
+      "Complex.ofReal_pow"
+    ]
+  },
+  "nearby_review": "Read actualNormalizedMoment, actualComplexMoment_eq_ofReal_actualMoment, canonicalNode_eq_inverseScale_mul, and the final power-sum proof block. No additional definite nearby defect identified; unused ring warnings left unchanged.",
+  "native_next_step": "Compile and audit CanonicalPowerSums and its dependent modules on the user native Windows runner; this static review does not certify compilation or any RH endpoint."
+}

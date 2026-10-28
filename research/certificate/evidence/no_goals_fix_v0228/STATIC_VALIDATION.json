@@ -1,0 +1,28 @@
+{
+  "status": "STATIC_INTEGRITY_VERIFIED_PARTIAL_REPAIR_NATIVE_AUDIT_PENDING",
+  "package": "RH_HILBERT_LIMIT_LEAN_v0_2_28_SECOND_MOMENT_FIX_construction",
+  "preserved_lean_files": 105,
+  "changed_lean_files": [
+    "RH_HilbertLimit/ZeroBudgetSecondMoment.lean"
+  ],
+  "total_lean_files": 106,
+  "audit_targets": 463,
+  "audit_manifest_and_final_audit": "BYTE_PRESERVED",
+  "active_modules": 100,
+  "source_change_invalidation_cone": [
+    "RH_HilbertLimit/ZeroBudgetSecondMoment.lean",
+    "FiveRowsAudit.lean"
+  ],
+  "pending_due_source_change_or_parent_failure": [
+    "RH_HilbertLimit/ZeroBudgetSecondMoment.lean",
+    "RH_HilbertLimit/ZeroBudgetFiveSector.lean",
+    "RH_HilbertLimit/ZeroBudgetFiveRows.lean",
+    "FiveRowsAudit.lean"
+  ],
+  "five_sector": "UNRESOLVED_DIAGNOSTIC_MISSING_SOURCE_UNCHANGED",
+  "native_compilation": "NOT_RUN",
+  "native_audit": "PENDING",
+  "source_token_scan": "NO_SORRY_ADMIT_AXIOM_UNSAFE_NATIVE_DECIDE_OR_SKIP_KERNEL",
+  "universal_admissibility": "OPEN",
+  "unconditional_rh": "NOT_ESTABLISHED"
+}

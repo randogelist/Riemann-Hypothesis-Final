@@ -1,0 +1,22 @@
+{
+  "schema": "RH_HILBERT_V0217_ROOT_SOURCE_REVIEW_V1",
+  "review_kind": "INDEPENDENT_READING_OF_COMPLETE_RUNNER_DIFF_AND_CALL_SITES",
+  "baseline_runner_sha256": "d5eb2c1f33b4fafcd0b1d366850cc860c7e73552dd739ee9cdd238559e679c86",
+  "candidate_runner_sha256": "3d9233a9dd98ecd6549860716c338d11f5aedb44d9146b0835941d3b171e030c",
+  "result": "NO_BLOCKING_SOURCE_ISSUE_FOUND; TARGETED_MOCKS_AND_USER_NATIVE_RUN_REMAIN_SEPARATE",
+  "checked": [
+    "All three previous direct native launch routes now enter an owner-bound record before the raw shell call. A seal rejects later native launches.",
+    "Synchronous waited returns and retained asynchronous process objects are accounted. A launch exception, live process, invalid completion status or owner mismatch remains uncertain.",
+    "The shutdown process query enumerates its full result set, distinguishes an empty successful result from an exception, and rejects duplicate or malformed rows.",
+    "PID, full CreationDate, executable name and parent must match a refreshed row. PID reuse is not treated as the old process's exit for acceptance.",
+    "The original current-workspace worker guard is applied after row revalidation. No admission exemption passes from a preexisting host to its children.",
+    "Exact owner text and lock generation, exact self PID/creation/name/parent/script/token, and own launch completion are checked around each round.",
+    "Acquisition, stale-lock quarantine, release, proof cache acceptance, mathematical source inputs and axiom policy stay unchanged."
+  ],
+  "scope_limits": [
+    "Process queries are time-dependent observations, not atomic OS snapshots or descendant containment.",
+    "Native Windows WSH/WMI semantics are not executed by this source review.",
+    "No elapsed-time speedup or future native PASS is asserted."
+  ],
+  "local_lean_or_native_execution": false
+}

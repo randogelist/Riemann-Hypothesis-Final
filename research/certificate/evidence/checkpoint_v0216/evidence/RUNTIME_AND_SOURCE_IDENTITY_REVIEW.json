@@ -1,0 +1,49 @@
+{
+  "schema": "RH_V0216_RUNTIME_IDENTITY_ONLY_STATIC_REVIEW_V1",
+  "status": "PASS_STATIC_BYTE_COMPARISON",
+  "baseline_runner_sha256": "302d970e3d2ed04bfcaaeaa8fcefd15d24e4d0fe03d4dfe59095b94afa1ec680",
+  "candidate_runner_sha256": "d5eb2c1f33b4fafcd0b1d366850cc860c7e73552dd739ee9cdd238559e679c86",
+  "normalised_runner_sha256": "1f30864c6955bcf36bb5a41b7c8b177a48272d8663bac479caa31910ec806e1e",
+  "changed_identity_literals": {
+    "baseline": {
+      "PACKAGE": "RH_HILBERT_LIMIT_LEAN_v0_2_15_construction",
+      "RUNNER_VERSION": "RH_HILBERT_NATIVE_RUNNER_v0_2_15_PROOF_REPAIR"
+    },
+    "candidate": {
+      "PACKAGE": "RH_HILBERT_LIMIT_LEAN_v0_2_16_construction",
+      "RUNNER_VERSION": "RH_HILBERT_NATIVE_RUNNER_v0_2_16_PASS_CHECKPOINT"
+    }
+  },
+  "lean_source_files_unchanged": 92,
+  "lean_manifest_sha256": "40dfc170761aa8dc4a1f12a196d818042a1821f2ff8074154afa838460f580ce",
+  "all_other_runner_bytes_unchanged": true,
+  "unchanged_runtime_files": [
+    {
+      "path": "tools/NativeRamWarm.cs",
+      "bytes": 27815,
+      "sha256": "315d97cf6f1030c838292f5a871c5b583a682464638f139070055b2727f9d87a"
+    },
+    {
+      "path": "tools/NativeSha256.cs",
+      "bytes": 8565,
+      "sha256": "d8cd2d616ed2b7a64931fe391bd6e25b236a1c450e5b7c669df26c2974dd9f18"
+    },
+    {
+      "path": "tools/follow_active.js",
+      "bytes": 10557,
+      "sha256": "beb08b78f7c8ef53d06db9e99b266f1fb5a33cbb21d936a71dd6b1a8354f024f"
+    },
+    {
+      "path": "run.cmd",
+      "bytes": 1250,
+      "sha256": "5e6c6561c370c904b13d165986f0c045c6e7732de1745744b03619cf4a4b9f16"
+    }
+  ],
+  "new_runtime_tests_run": false,
+  "reason_no_new_runtime_mocks": "Functional code is byte-identical after replacing the two package/version identity literals. Prior test evidence remains historical and is not relabeled as a v0.2.16 execution.",
+  "no_native_or_lean_execution": true,
+  "limitations": [
+    "This is a static byte comparison, not native Windows runtime verification.",
+    "No new proof/axiom or runtime PASS is established for the candidate package."
+  ]
+}

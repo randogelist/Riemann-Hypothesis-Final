@@ -1,0 +1,48 @@
+{
+  "review_type": "INDEPENDENT_STATIC_MATHEMATICAL_AND_SOURCE_REVIEW",
+  "reviewed_source": "RH_HilbertLimit/ZeroBudgetFiveSector.lean",
+  "sha256": "83f8d2c3d114f7547b539a6200483736bdd794f11c4b0fab8d21af48536104ae",
+  "blockers": [],
+  "fixes": [
+    {
+      "location": "final canonicalNode_four_abs_im_le_re simplification",
+      "change": "Added mul_zero and add_zero to explicit simplifier rules before abs_mul",
+      "reason": "Real scalar multiplication produces an imaginary component with a trailing +0"
+    }
+  ],
+  "exact_arithmetic": {
+    "exp_three_series_0_through_8": "89641/4480",
+    "upper_integral_bound": "4/95",
+    "lower_integral_bound": "1/19",
+    "completed_zeta_bound": "9/190",
+    "norm_zero_exclusion_factor": "549/608",
+    "zero_angle_cutoff": "-285/293",
+    "four_cone_square_margin": "7241/85849"
+  },
+  "reviewed_chain": [
+    "cubic theta envelope and theta inversion",
+    "Mellin bounds on Ioi1 and Ioc0_1",
+    "actual xi zero-free height17/4",
+    "theta zero angle cutoff",
+    "positive scalar inverse transport to canonical nodes"
+  ],
+  "api_checks": {
+    "pinned_mathlib_files_for_new_integral_apis": "NOT_AVAILABLE_IN_PACKAGE",
+    "official_current_docs_shape_checked": [
+      "Continuous.integrableOn_Icc",
+      "intervalIntegral.integral_of_le",
+      "integral_id"
+    ],
+    "urls": [
+      "https://leanprover-community.github.io/mathlib4_docs/Mathlib/Analysis/SpecialFunctions/Integrals/Basic.html",
+      "https://leanprover-community.github.io/mathlib4_docs/Mathlib/MeasureTheory/Integral/IntervalIntegral/Basic.html",
+      "https://leanprover-community.github.io/mathlib4_docs/Mathlib/MeasureTheory/Function/LocallyIntegrable.html"
+    ],
+    "compatible_target_elaboration_verified": false
+  },
+  "lean_compilation": false,
+  "native_compiler_execution": false,
+  "axiom_audit_execution": false,
+  "rh_assumption_added": false,
+  "remaining_validation": "NATIVE_WINDOWS_LEAN_4_33_0_COMPILATION_AND_AXIOM_AUDIT"
+}

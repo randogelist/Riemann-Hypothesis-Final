@@ -1,0 +1,223 @@
+AXIOM_AUDIT_START=RiemannHypothesis.HadamardProduct.RealZeroSign
+ANCHOR_SAVE_LAYOUT=COMPACT_V1
+ANCHOR_SAVED=C:\Users\Simon\AppData\Local\LEAN_ANCHORINGS\RH_HILBERT_LIMIT\LOCAL_COMPILER\lean-4.33.0\c\a7b509483c633f8f\acba077f0dcbf2014bfaf5468951ddac\01a17e58bd5071d2\receipt.txt
+COMPILE_AND_AXIOM_AUDIT_PASS=RiemannHypothesis.HadamardProduct.RealZeroSign
+COMPILE_START=RiemannHypothesis.HadamardProduct.StrictRealZeroCriterion
+AXIOM_AUDIT_START=RiemannHypothesis.HadamardProduct.StrictRealZeroCriterion
+ANCHOR_SAVE_LAYOUT=COMPACT_V1
+ANCHOR_SAVED=C:\Users\Simon\AppData\Local\LEAN_ANCHORINGS\RH_HILBERT_LIMIT\LOCAL_COMPILER\lean-4.33.0\c\3e1e93377dddae8f\a6e9fdc53a7aa39e2493700c9ad4b529\01a17e58fd1133d2\receipt.txt
+COMPILE_AND_AXIOM_AUDIT_PASS=RiemannHypothesis.HadamardProduct.StrictRealZeroCriterion
+COMPILE_START=RiemannHypothesis.HadamardProduct.OriginMultiplicityCriterion
+AXIOM_AUDIT_START=RiemannHypothesis.HadamardProduct.OriginMultiplicityCriterion
+ANCHOR_SAVE_LAYOUT=COMPACT_V1
+ANCHOR_SAVED=C:\Users\Simon\AppData\Local\LEAN_ANCHORINGS\RH_HILBERT_LIMIT\LOCAL_COMPILER\lean-4.33.0\c\17bb5d533422324b\db23169ea4b7e762a3007334bb550de8\01a17e593f3e6d6a\receipt.txt
+COMPILE_AND_AXIOM_AUDIT_PASS=RiemannHypothesis.HadamardProduct.OriginMultiplicityCriterion
+COMPILE_START=RiemannHypothesis.Xi.StrictLagariasCriterion
+AXIOM_AUDIT_START=RiemannHypothesis.Xi.StrictLagariasCriterion
+ANCHOR_SAVE_LAYOUT=COMPACT_V1
+ANCHOR_SAVED=C:\Users\Simon\AppData\Local\LEAN_ANCHORINGS\RH_HILBERT_LIMIT\LOCAL_COMPILER\lean-4.33.0\c\76501720a406eb22\e143da7a7d10ef4b55ec508f1afc119e\01a17e5987496080\receipt.txt
+COMPILE_AND_AXIOM_AUDIT_PASS=RiemannHypothesis.Xi.StrictLagariasCriterion
+COMPILE_START=RiemannHypothesis.Xi.HadamardLogDerivativeCriterion
+C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_2_1_construction\RiemannHypothesis\Xi\HadamardLogDerivativeCriterion.lean:208:4: warning: Try this:
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_2_1_construction\RiemannHypothesis\Xi\HadamardLogDerivativeCriterion.lean:407:2: warning: Try this:
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+
+AXIOM_AUDIT_START=RiemannHypothesis.Xi.HadamardLogDerivativeCriterion
+ANCHOR_SAVE_LAYOUT=COMPACT_V1
+ANCHOR_SAVED=C:\Users\Simon\AppData\Local\LEAN_ANCHORINGS\RH_HILBERT_LIMIT\LOCAL_COMPILER\lean-4.33.0\c\05be10f1ee2bcc19\1567a2c3ed696e8f99208f8b7e6bd86a\01a17e59d22fb18f\receipt.txt
+COMPILE_AND_AXIOM_AUDIT_PASS=RiemannHypothesis.Xi.HadamardLogDerivativeCriterion
+COMPILE_START=RiemannHypothesis.Xi.CanonicalQuotientCriterion
+AXIOM_AUDIT_START=RiemannHypothesis.Xi.CanonicalQuotientCriterion
+ANCHOR_SAVE_LAYOUT=COMPACT_V1
+ANCHOR_SAVED=C:\Users\Simon\AppData\Local\LEAN_ANCHORINGS\RH_HILBERT_LIMIT\LOCAL_COMPILER\lean-4.33.0\c\59659557d4f5d3b9\7785cfa720bbd4a39b8bb66aafc092a3\01a17e5a181c8a40\receipt.txt
+COMPILE_AND_AXIOM_AUDIT_PASS=RiemannHypothesis.Xi.CanonicalQuotientCriterion
+COMPILE_START=RiemannHypothesis.Xi.CanonicalProductSymmetry
+AXIOM_AUDIT_START=RiemannHypothesis.Xi.CanonicalProductSymmetry
+ANCHOR_SAVE_LAYOUT=COMPACT_V1
+ANCHOR_SAVED=C:\Users\Simon\AppData\Local\LEAN_ANCHORINGS\RH_HILBERT_LIMIT\LOCAL_COMPILER\lean-4.33.0\c\267602b3af2f235f\c5777c904a87897fae457143823782c6\01a17e5a616ed96f\receipt.txt
+COMPILE_AND_AXIOM_AUDIT_PASS=RiemannHypothesis.Xi.CanonicalProductSymmetry
+COMPILE_START=RiemannHypothesis.Xi.CanonicalQuotientLogNormGrowth
+AXIOM_AUDIT_START=RiemannHypothesis.Xi.CanonicalQuotientLogNormGrowth
+ANCHOR_SAVE_LAYOUT=COMPACT_V1
+ANCHOR_SAVED=C:\Users\Simon\AppData\Local\LEAN_ANCHORINGS\RH_HILBERT_LIMIT\LOCAL_COMPILER\lean-4.33.0\c\3d14f939e843d162\e18c0ee5a5aa534ad7119d22c654fea4\01a17e5aad2613c8\receipt.txt
+COMPILE_AND_AXIOM_AUDIT_PASS=RiemannHypothesis.Xi.CanonicalQuotientLogNormGrowth
+COMPILE_START=RiemannHypothesis.Xi.CanonicalQuotientCharacteristicGrowth
+AXIOM_AUDIT_START=RiemannHypothesis.Xi.CanonicalQuotientCharacteristicGrowth
+ANCHOR_SAVE_LAYOUT=COMPACT_V1
+ANCHOR_SAVED=C:\Users\Simon\AppData\Local\LEAN_ANCHORINGS\RH_HILBERT_LIMIT\LOCAL_COMPILER\lean-4.33.0\c\cfe1146cb2c63dbe\ff6bb5c2e13aef45b6c81a514f0427de\01a17e5aef836b13\receipt.txt
+COMPILE_AND_AXIOM_AUDIT_PASS=RiemannHypothesis.Xi.CanonicalQuotientCharacteristicGrowth
+COMPILE_START=RiemannHypothesis.ComplexAnalysis.MellinGrowth
+AXIOM_AUDIT_START=RiemannHypothesis.ComplexAnalysis.MellinGrowth
+ANCHOR_SAVE_LAYOUT=COMPACT_V1
+ANCHOR_SAVED=C:\Users\Simon\AppData\Local\LEAN_ANCHORINGS\RH_HILBERT_LIMIT\LOCAL_COMPILER\lean-4.33.0\c\30f5ea578d5f8172\5e2789cd10c715b6ac2b68677a2f754d\01a17e5b2e6c92ca\receipt.txt
+COMPILE_AND_AXIOM_AUDIT_PASS=RiemannHypothesis.ComplexAnalysis.MellinGrowth
+COMPILE_START=RiemannHypothesis.Xi.ThetaKernelMellinGrowth
+AXIOM_AUDIT_START=RiemannHypothesis.Xi.ThetaKernelMellinGrowth
+ANCHOR_SAVE_LAYOUT=COMPACT_V1
+ANCHOR_SAVED=C:\Users\Simon\AppData\Local\LEAN_ANCHORINGS\RH_HILBERT_LIMIT\LOCAL_COMPILER\lean-4.33.0\c\aba910e16bcf054b\5237bf2018331c098a298f640a5fd1e4\01a17e5b6ea2799a\receipt.txt
+COMPILE_AND_AXIOM_AUDIT_PASS=RiemannHypothesis.Xi.ThetaKernelMellinGrowth
+COMPILE_START=RiemannHypothesis.ComplexAnalysis.FactorialDyadicGrowth
+AXIOM_AUDIT_START=RiemannHypothesis.ComplexAnalysis.FactorialDyadicGrowth
+ANCHOR_SAVE_LAYOUT=COMPACT_V1
+ANCHOR_SAVED=C:\Users\Simon\AppData\Local\LEAN_ANCHORINGS\RH_HILBERT_LIMIT\LOCAL_COMPILER\lean-4.33.0\c\64b54ed9e9873153\7955182df7b57a7b83e80ed7dfcc5028\01a17e5bad3ee4ad\receipt.txt
+COMPILE_AND_AXIOM_AUDIT_PASS=RiemannHypothesis.ComplexAnalysis.FactorialDyadicGrowth
+COMPILE_START=RiemannHypothesis.Xi.JensenDyadicCountBridge
+C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_2_1_construction\RiemannHypothesis\Xi\JensenDyadicCountBridge.lean:102:2: warning: Try this:
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+
+AXIOM_AUDIT_START=RiemannHypothesis.Xi.JensenDyadicCountBridge
+ANCHOR_SAVE_LAYOUT=COMPACT_V1
+ANCHOR_SAVED=C:\Users\Simon\AppData\Local\LEAN_ANCHORINGS\RH_HILBERT_LIMIT\LOCAL_COMPILER\lean-4.33.0\c\aa8765b157cb566d\648725ba1a6af47ef9e7525b27dc09ce\01a17e5bf86cdc18\receipt.txt
+COMPILE_AND_AXIOM_AUDIT_PASS=RiemannHypothesis.Xi.JensenDyadicCountBridge
+COMPILE_START=RiemannHypothesis.Xi.EntireXiMellinGrowth
+C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_2_1_construction\RiemannHypothesis\Xi\EntireXiMellinGrowth.lean:22:5: warning: Ambiguous namespace `Real`: it is interpreted as `_root_.OverflowResidueRH.Real` because this `open` occurs inside `namespace OverflowResidueRH`, while `_root_.Real` is silently not opened. Specify the namespace unambiguously, e.g. `_root_.OverflowResidueRH.Real`. The warning can sometimes also be addressed by moving the `open` outside of the surrounding `namespace`.
+
+Note: This linter can be disabled with `set_option linter.ambiguousOpen false`
+C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_2_1_construction\RiemannHypothesis\Xi\EntireXiMellinGrowth.lean:251:0: warning: Definition `entireXiPullbackCanonicalZeroDistributionFromTheta` is a proposition; use `theorem` instead of `def`
+
+Note: This linter can be disabled with `set_option linter.defProp false`
+
+AXIOM_AUDIT_START=RiemannHypothesis.Xi.EntireXiMellinGrowth
+ANCHOR_SAVE_LAYOUT=COMPACT_V1
+ANCHOR_SAVED=C:\Users\Simon\AppData\Local\LEAN_ANCHORINGS\RH_HILBERT_LIMIT\LOCAL_COMPILER\lean-4.33.0\c\ea3ad60fd8602b66\55fd53f428aecdf2e7d6099ed9e04704\01a17e5c42275606\receipt.txt
+COMPILE_AND_AXIOM_AUDIT_PASS=RiemannHypothesis.Xi.EntireXiMellinGrowth
+COMPILE_START=RiemannHypothesis.Xi.EntireXiLogNormGrowth
+AXIOM_AUDIT_START=RiemannHypothesis.Xi.EntireXiLogNormGrowth
+ANCHOR_SAVE_LAYOUT=COMPACT_V1
+ANCHOR_SAVED=C:\Users\Simon\AppData\Local\LEAN_ANCHORINGS\RH_HILBERT_LIMIT\LOCAL_COMPILER\lean-4.33.0\c\2f22c427bce6b115\622552a7546afbe7f694ccacd8bf4138\01a17e5c894ccca3\receipt.txt
+COMPILE_AND_AXIOM_AUDIT_PASS=RiemannHypothesis.Xi.EntireXiLogNormGrowth
+COMPILE_START=RiemannHypothesis.Xi.CanonicalQuotientThetaCharacteristicGrowth
+AXIOM_AUDIT_START=RiemannHypothesis.Xi.CanonicalQuotientThetaCharacteristicGrowth
+ANCHOR_SAVE_LAYOUT=COMPACT_V1
+ANCHOR_SAVED=C:\Users\Simon\AppData\Local\LEAN_ANCHORINGS\RH_HILBERT_LIMIT\LOCAL_COMPILER\lean-4.33.0\c\0615d78875262086\531f7a7b3c608d91b8215978d5e2f1e7\01a17e5cd2912787\receipt.txt
+COMPILE_AND_AXIOM_AUDIT_PASS=RiemannHypothesis.Xi.CanonicalQuotientThetaCharacteristicGrowth
+COMPILE_START=RiemannHypothesis.Xi.UnconditionalLagariasEquivalence
+AXIOM_AUDIT_START=RiemannHypothesis.Xi.UnconditionalLagariasEquivalence
+ANCHOR_SAVE_LAYOUT=COMPACT_V1
+ANCHOR_SAVED=C:\Users\Simon\AppData\Local\LEAN_ANCHORINGS\RH_HILBERT_LIMIT\LOCAL_COMPILER\lean-4.33.0\c\40f21c3794d7cd2e\d9cead516a36a9468396d5dd2eb32f42\01a17e5d0e7cc975\receipt.txt
+COMPILE_AND_AXIOM_AUDIT_PASS=RiemannHypothesis.Xi.UnconditionalLagariasEquivalence
+COMPILE_START=RiemannHypothesis.Xi.CompletedLFunctionInstance
+AXIOM_AUDIT_START=RiemannHypothesis.Xi.CompletedLFunctionInstance
+ANCHOR_SAVE_LAYOUT=COMPACT_V1
+ANCHOR_SAVED=C:\Users\Simon\AppData\Local\LEAN_ANCHORINGS\RH_HILBERT_LIMIT\LOCAL_COMPILER\lean-4.33.0\c\15389568fb8f23ac\bc4bd2616c0996a4963dd097e4510c95\01a17e5d4d474125\receipt.txt
+COMPILE_AND_AXIOM_AUDIT_PASS=RiemannHypothesis.Xi.CompletedLFunctionInstance
+COMPILE_START=RiemannHypothesis.Xi.CanonicalProductPairedGrowth
+AXIOM_AUDIT_START=RiemannHypothesis.Xi.CanonicalProductPairedGrowth
+ANCHOR_SAVE_LAYOUT=COMPACT_V1
+ANCHOR_SAVED=C:\Users\Simon\AppData\Local\LEAN_ANCHORINGS\RH_HILBERT_LIMIT\LOCAL_COMPILER\lean-4.33.0\c\eab7eaa876857e59\0c992ed1e72fd091599af49059dd1aea\01a17e5d8f6682c6\receipt.txt
+COMPILE_AND_AXIOM_AUDIT_PASS=RiemannHypothesis.Xi.CanonicalProductPairedGrowth
+COMPILE_START=AngularMaster.ActualHadamard
+AXIOM_AUDIT_START=AngularMaster.ActualHadamard
+ANCHOR_SAVE_LAYOUT=COMPACT_V1
+ANCHOR_SAVED=C:\Users\Simon\AppData\Local\LEAN_ANCHORINGS\RH_HILBERT_LIMIT\LOCAL_COMPILER\lean-4.33.0\c\0bf2fd0379c9a014\2bc14b03d9aa18fc04bf0af1fc8ef7db\01a17e5dd66963cb\receipt.txt
+COMPILE_AND_AXIOM_AUDIT_PASS=AngularMaster.ActualHadamard
+COMPILE_START=AngularMaster.ComplexScaleProduct
+AXIOM_AUDIT_START=AngularMaster.ComplexScaleProduct
+ANCHOR_SAVE_LAYOUT=COMPACT_V1
+ANCHOR_SAVED=C:\Users\Simon\AppData\Local\LEAN_ANCHORINGS\RH_HILBERT_LIMIT\LOCAL_COMPILER\lean-4.33.0\c\8a892a19d68417b7\2c826276f2d5d5a28b273480ee570757\01a17e5e0f44aaed\receipt.txt
+COMPILE_AND_AXIOM_AUDIT_PASS=AngularMaster.ComplexScaleProduct
+COMPILE_START=AngularMaster.ZeroGeometry
+C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_2_1_construction\AngularMaster\ZeroGeometry.lean:39:8: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+
+AXIOM_AUDIT_START=AngularMaster.ZeroGeometry
+ANCHOR_SAVE_LAYOUT=COMPACT_V1
+ANCHOR_SAVED=C:\Users\Simon\AppData\Local\LEAN_ANCHORINGS\RH_HILBERT_LIMIT\LOCAL_COMPILER\lean-4.33.0\c\7279654f4fa726c4\aee262883c8c5ed58d6a4e75fefd0eeb\01a17e5e4e49baa5\receipt.txt
+COMPILE_AND_AXIOM_AUDIT_PASS=AngularMaster.ZeroGeometry
+COMPILE_START=AngularMaster.QQRHGeometry
+C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_2_1_construction\AngularMaster\QQRHGeometry.lean:54:4: warning: Try `simp at hwedge` instead of `simpa using hwedge`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+
+AXIOM_AUDIT_START=AngularMaster.QQRHGeometry
+ANCHOR_SAVE_LAYOUT=COMPACT_V1
+ANCHOR_SAVED=C:\Users\Simon\AppData\Local\LEAN_ANCHORINGS\RH_HILBERT_LIMIT\LOCAL_COMPILER\lean-4.33.0\c\d7648884855fc7e1\77ef971aa7a867c0e6251bde2ea54b9c\01a17e5e931023ac\receipt.txt
+COMPILE_AND_AXIOM_AUDIT_PASS=AngularMaster.QQRHGeometry
+COMPILE_START=AngularMaster.LowHeightGeometry
+AXIOM_AUDIT_START=AngularMaster.LowHeightGeometry
+ANCHOR_SAVE_LAYOUT=COMPACT_V1
+ANCHOR_SAVED=C:\Users\Simon\AppData\Local\LEAN_ANCHORINGS\RH_HILBERT_LIMIT\LOCAL_COMPILER\lean-4.33.0\c\d140b18fdccef532\4a411d74f2f34fd5e8a9dba1d6f1ad59\01a17e5eda290e34\receipt.txt
+COMPILE_AND_AXIOM_AUDIT_PASS=AngularMaster.LowHeightGeometry
+COMPILE_START=AngularMaster.ThetaKernelExplicitBound
+AXIOM_AUDIT_START=AngularMaster.ThetaKernelExplicitBound
+ANCHOR_SAVE_LAYOUT=COMPACT_V1
+ANCHOR_SAVED=C:\Users\Simon\AppData\Local\LEAN_ANCHORINGS\RH_HILBERT_LIMIT\LOCAL_COMPILER\lean-4.33.0\c\8ec56becf1e847d0\1345e92f16287ab175b8fb4e45373937\01a17e5f1cf8da8d\receipt.txt
+COMPILE_AND_AXIOM_AUDIT_PASS=AngularMaster.ThetaKernelExplicitBound
+COMPILE_START=AngularMaster.ZeroFreeSeed
+AXIOM_AUDIT_START=AngularMaster.ZeroFreeSeed
+ANCHOR_SAVE_LAYOUT=COMPACT_V1
+ANCHOR_SAVED=C:\Users\Simon\AppData\Local\LEAN_ANCHORINGS\RH_HILBERT_LIMIT\LOCAL_COMPILER\lean-4.33.0\c\334d3f3c3e432d90\06a9dace047f95848109fe8e90662844\01a17e5f63924c58\receipt.txt
+COMPILE_AND_AXIOM_AUDIT_PASS=AngularMaster.ZeroFreeSeed
+COMPILE_START=OriginTrace
+AXIOM_AUDIT_START=OriginTrace
+ANCHOR_SAVE_LAYOUT=COMPACT_V1
+ANCHOR_SAVED=C:\Users\Simon\AppData\Local\LEAN_ANCHORINGS\RH_HILBERT_LIMIT\LOCAL_COMPILER\lean-4.33.0\c\c06015cc761fc48a\fd0908e8903b3e58ca2b220e59152774\01a17e5fb45f1e68\receipt.txt
+COMPILE_AND_AXIOM_AUDIT_PASS=OriginTrace
+COMPILE_START=RH_HilbertLimit.GrowthStep
+C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_2_1_construction\RH_HilbertLimit\GrowthStep.lean:155:4: error: 'change' tactic failed, pattern
+  actualVariation n ≤ 1
+is not definitionally equal to target
+  actualVariation n ≤ ↑1
+
+COMPILE_FAIL=RH_HilbertLimit.GrowthStep
+COMPILE_START=RH_HilbertLimit.FinitePrefix
+AXIOM_AUDIT_START=RH_HilbertLimit.FinitePrefix
+ANCHOR_SAVE_LAYOUT=COMPACT_V1
+ANCHOR_SAVED=C:\Users\Simon\AppData\Local\LEAN_ANCHORINGS\RH_HILBERT_LIMIT\LOCAL_COMPILER\lean-4.33.0\c\0e52a585e1fe1674\f461b755c93df0c6dd5f11f2d6ae91a7\01a17e600b5bf9ff\receipt.txt
+COMPILE_AND_AXIOM_AUDIT_PASS=RH_HilbertLimit.FinitePrefix
+COMPILE_START=RH_HilbertLimit.SpectralTail
+AXIOM_AUDIT_START=RH_HilbertLimit.SpectralTail
+ANCHOR_SAVE_LAYOUT=COMPACT_V1
+ANCHOR_SAVED=C:\Users\Simon\AppData\Local\LEAN_ANCHORINGS\RH_HILBERT_LIMIT\LOCAL_COMPILER\lean-4.33.0\c\dce44f38e301ce87\5564a73f9b5e780bb50128b304cd11e3\01a17e605278bb26\receipt.txt
+COMPILE_AND_AXIOM_AUDIT_PASS=RH_HilbertLimit.SpectralTail
+COMPILE_START=RH_HilbertLimit.ActualCalibrationProgress
+C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_2_1_construction\RH_HilbertLimit\ActualCalibrationProgress.lean:133:26: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_2_1_construction\RH_HilbertLimit\ActualCalibrationProgress.lean:133:26: warning: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_2_1_construction\RH_HilbertLimit\ActualCalibrationProgress.lean:149:28: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_2_1_construction\RH_HilbertLimit\ActualCalibrationProgress.lean:149:28: warning: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+
+AXIOM_AUDIT_START=RH_HilbertLimit.ActualCalibrationProgress
+ANCHOR_SAVE_LAYOUT=COMPACT_V1
+ANCHOR_SAVED=C:\Users\Simon\AppData\Local\LEAN_ANCHORINGS\RH_HILBERT_LIMIT\LOCAL_COMPILER\lean-4.33.0\c\b96a29859eecc947\ec2a960ca66e0319c38fa7047c4efc15\01a17e609c0a53bc\receipt.txt
+COMPILE_AND_AXIOM_AUDIT_PASS=RH_HilbertLimit.ActualCalibrationProgress
+COMPILE_START=RH_HilbertLimit.ActualMomentReality
+AXIOM_AUDIT_START=RH_HilbertLimit.ActualMomentReality
+ANCHOR_SAVE_LAYOUT=COMPACT_V1
+ANCHOR_SAVED=C:\Users\Simon\AppData\Local\LEAN_ANCHORINGS\RH_HILBERT_LIMIT\LOCAL_COMPILER\lean-4.33.0\c\93fc514e58db55d9\590803a0fe178cb6038187afb0cdfdcd\01a17e60e56e7aeb\receipt.txt
+COMPILE_AND_AXIOM_AUDIT_PASS=RH_HilbertLimit.ActualMomentReality
+MODULE_BLOCKED=RH_HilbertLimit.CanonicalBridge DEPENDENCY=RH_HilbertLimit.GrowthStep
+PROJECT_BUILD=FAIL
+FAILED_STAGE=MODULE:RH_HilbertLimit.CanonicalBridge
+REASON=Some modules failed or were blocked. Independent modules were still attempted.
+RUN=FAIL
+Logs: C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_2_1_construction\run-build.log and C:\Users\Simon\Downloads\RH_HILBERT_LIMIT_LEAN_v0_2_1_construction\run-audit.log
+
+C:\Users\Simon\Downloads>

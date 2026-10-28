@@ -1,0 +1,31 @@
+{
+  "package": "RH_HILBERT_LIMIT_LEAN_v0_2_16_construction",
+  "delivery_filename": "RH_HILBERT_LIMIT_LEAN_v0_2_16_REUSE_RECORD_construction.zip",
+  "prepared_at": "2026-10-27T22:07:48.682703+01:00",
+  "mode": "A_TIER_LEAN",
+  "target": "LOCAL_COMPILER",
+  "parent_package": "RH_HILBERT_LIMIT_LEAN_v0_2_16_construction",
+  "parent_zip_sha256": "f041746f97af01435d93d40388c33fa53e69aaa41096599b58edd72f300cc620",
+  "parent_library_file_id": "libfile_48346676be6481919f67e8f904a3bd73",
+  "parent_library_version": 18,
+  "scope": "Record explicit user-reported warm reuse/audit PASS while preserving all source/runtime bytes and the same canonical workspace.",
+  "runner_sha256": "d5eb2c1f33b4fafcd0b1d366850cc860c7e73552dd739ee9cdd238559e679c86",
+  "lean_sources_byte_preserved": 92,
+  "user_reuse_transcript_sha256": "d4c7ca9f9d6b20e4d0085f7c3cbdd2105957263746b2bb0bb6668bdb81d07f15",
+  "new_native_or_lean_execution": false,
+  "new_runtime_tests": false,
+  "direct_native_receipt_inspection": false,
+  "evidence_sha256": {
+    "ASSEMBLY.json": "e57ad652854fc8279aa253ed2bda62fb758ed8262cdb78a7fd4de51c836df451",
+    "DECLARATION_EVIDENCE_DELTA.json": "ef93183cffdb1a1075e3038a9f4f94b1df7ede6549878ca68c5c400d6a718ce8",
+    "PRESERVED_PRIOR_EVIDENCE.json": "eb7fe2dc29420ef4d7cc8228509f354b05de18778c837ccd9f4be42725a6bc95",
+    "USER_REPORTED_NATIVE_REUSE.json": "7fdd26a22f79efae6030c4f73d0da9e37ec9acbc6de4f35f46d01b6a09c61413",
+    "assemble.py": "8135673fe6347dbb8a80162a2277339859cfcb52758a7c642fd580138103c511",
+    "evidence/NATIVE_REUSE_TAIL_REVIEW.json": "165ce20ce2d7d45d6a195efb64f30a309acf08bc635bec3d9dc967ade33a58ca",
+    "evidence/UNCHANGED_EXECUTION_INPUTS_REVIEW.json": "c571b7ea155ad69969b219994531d8b238150d374b8e3aaa8e256fbc3b9cd778",
+    "evidence/USER_NATIVE_REUSE_TAIL.txt": "d4c7ca9f9d6b20e4d0085f7c3cbdd2105957263746b2bb0bb6668bdb81d07f15",
+    "evidence/verify_unchanged_execution_inputs.py": "22b5b7931cdfc4f47e8f32f24273d49c8b417d46194f556df5858e4c840b93ae",
+    "package.py": "367008468ab67c2fabde1ab1524b79a847389b47015853d7ecb088cdc106d16f",
+    "review/ENDPOINT_REUSE_EVIDENCE.json": "f056ba3adb5263437c1dfc59360e63eb167a92c586ed73b3f58c6a2d8d1e3337"
+  }
+}

@@ -1,0 +1,408 @@
+{
+  "schema": "RH_CANCELLATION_V0219_INDEPENDENT_STATIC_INTEGRATION_REVIEW_V1",
+  "status": "STATIC_INTEGRATION_REVIEW_ONLY",
+  "reviewer": "/root/regression_review",
+  "baseline": "output/RH_HILBERT_LIMIT_LEAN_v0_2_18_construction",
+  "candidate": "output/RH_HILBERT_LIMIT_LEAN_v0_2_19_construction",
+  "package_files_edited": false,
+  "executions": {
+    "Lean": false,
+    "Lake": false,
+    "native_runner": false,
+    "WSH": false,
+    "Windows_tools": false,
+    "CSharp": false,
+    "CI": false,
+    "mocks": false
+  },
+  "checks": {
+    "exactly_one_permitted_lean_source_changed": true,
+    "only_explicit_rowVariation_unfold_edit": true,
+    "other_95_lean_sources_byte_frozen": true,
+    "EventualGrowth_source_byte_frozen": true,
+    "all_build_audit_dependency_manifests_byte_unchanged": true,
+    "plan_92_ordinary_plus_selected_audit": true,
+    "active_local_topology_and_import_membership_valid": true,
+    "exact_three_module_dependency_invalidation_cone": true,
+    "conditional_reuse_and_compile_counts_correct": true,
+    "runner_changes_only_two_identity_constants": true,
+    "launcher_and_native_helpers_byte_unchanged": true,
+    "394_exact_aggregate_check_and_axiom_targets": true,
+    "inventory_1129_entries_identity_and_order_preserved": true,
+    "inventory_changes_only_nine_Cancellation_and_three_EventualGrowth": true,
+    "changed_inventory_source_hashes_and_evidence_paths_valid": true,
+    "frozen_source_manifest_exact": true,
+    "native_evidence_records_match_transcribed_tail": true,
+    "finite_checker_and_formal_closure_remain_open": true,
+    "new_proof_native_verification_not_claimed": true
+  },
+  "all_listed_static_checks_satisfied": true,
+  "source_change": {
+    "path": "RH_HilbertLimit/Cancellation.lean",
+    "old_sha256": "53c9c4ab1733ec4f20190826dcb74d47b18dcd1942b78bb06b319178419311c6",
+    "new_sha256": "985602ead4c4b3581b6aef194a36da6ca1f78defbeaaadf328e0cf97749b9528",
+    "old_fragment": "      rw [Finset.sum_add_distrib, \u2190 Finset.mul_sum, sum_forward_differences]\n",
+    "new_fragment": "      rw [rowVariation, Finset.sum_add_distrib, \u2190 Finset.mul_sum,\n        sum_forward_differences]\n",
+    "exact_allowed_edit_only": true,
+    "changed_declaration_body": "RH_HilbertLimit.rowCancellation_le_of_local_flux",
+    "mathematical_review": "The reported remaining equality differs only by rowVariation being folded on the right. The explicit unfold exposes its finite sum before the existing distribution, factorization and telescoping rewrites. The theorem statement, definitions and hypotheses are unchanged. This is source reasoning, not a claim that Lean accepted the repair."
+  },
+  "source_inventory": {
+    "baseline_files": 96,
+    "candidate_files": 96,
+    "changed": [
+      "RH_HilbertLimit/Cancellation.lean"
+    ],
+    "added": [],
+    "missing": [],
+    "evidence_subtree_excluded": true,
+    "EventualGrowth_sha256": "f846d1a1b897542c460783a9ab5702ff1b713e5788fe149034d1ead5f0d178c0",
+    "ActualCancellationWitness_sha256": "e8281816a7dc16ca30dfe0009df97ea201c5259f0a137f41ca768f6da3c8c6f8",
+    "CancellationAudit_sha256": "2da7bb304576e2a592de29e8781685b621c28ffe794a85ae65fa50e1bcdc5891"
+  },
+  "manifests": [
+    {
+      "path": "compile-order.txt",
+      "bytes_equal": true,
+      "sha256": "c9fa315ade1df77f184f323175e1ec96cf53e5b6c054ef441ba78ce4591f974b"
+    },
+    {
+      "path": "audit-targets.tsv",
+      "bytes_equal": true,
+      "sha256": "b34e9fb2e855e03ab8e68d66883a3534bdd225aa77c6e1a02d21eccbcb1c4c9a"
+    },
+    {
+      "path": "final-audit.txt",
+      "bytes_equal": true,
+      "sha256": "b4f96eed934280134dda30493f695a985527438f4ec6511930b68368b616fdbf"
+    },
+    {
+      "path": "mathlib-imports.txt",
+      "bytes_equal": true,
+      "sha256": "0c2ef006a5917ffe890cf1483b524435038824c7116ca8fe49533d4d9a4da31c"
+    },
+    {
+      "path": "lean-toolchain",
+      "bytes_equal": true,
+      "sha256": "302cd63c54178885b89e669f33b38f12f4dd7ae7e5cac537b3203e3768d8fb2b"
+    }
+  ],
+  "active_graph": {
+    "ordinary_count": 92,
+    "active_count": 93,
+    "selected_aggregate": "CancellationAudit.lean",
+    "local_topology_violations": [],
+    "unscheduled_local_imports": [],
+    "source_change_invalidation_cone": [
+      "RH_HilbertLimit/Cancellation.lean",
+      "RH_HilbertLimit/ActualCancellationWitness.lean",
+      "CancellationAudit.lean"
+    ],
+    "conditional_eligible_reuse": 90,
+    "conditional_compilation_count": 3,
+    "counts_observed": false,
+    "conditions": "Same target, source/dependency identity, compiler/toolchain, artifact and audit evidence must validate. Missing or invalid anchors can require further compilation. Package and runner version identity are provenance, not part of the ordinary module input key."
+  },
+  "runner": {
+    "old_sha256": "e27b634a8625a35d05ede552b3089232097ffdbcbb020ddb881d5b2f34904ccd",
+    "new_sha256": "06288a26630f1abfb888053ac60e4ec7e57e4a1b30ae738ddc05b7ecdb4ee1a6",
+    "raw_byte_comparison": "Exact comparison after two enumerated constant replacements; no newline normalization.",
+    "identity_replacements": [
+      {
+        "baseline_literal": "var PACKAGE = \"RH_HILBERT_LIMIT_LEAN_v0_2_18_construction\";",
+        "candidate_literal": "var PACKAGE = \"RH_HILBERT_LIMIT_LEAN_v0_2_19_construction\";",
+        "occurrences": 1
+      },
+      {
+        "baseline_literal": "var RUNNER_VERSION = \"RH_HILBERT_NATIVE_RUNNER_v0_2_18_SEMANTIC_CANCELLATION\";",
+        "candidate_literal": "var RUNNER_VERSION = \"RH_HILBERT_NATIVE_RUNNER_v0_2_19_ROW_VARIATION_UNFOLD\";",
+        "occurrences": 1
+      }
+    ],
+    "only_identity_changes": true,
+    "policy_review": "makeGlobalKey and moduleInput are unchanged. Source, dependency, compiler/toolchain, semantic flags, artifact and audit validation remain active. No scheduling, hashing, memory or worker-lock algorithm change is present.",
+    "version_file_sha256": "4c712a5b930aeab7293d3c690b43ad325b94b4cb896aa3b92a2c3d80c7e6c1ab"
+  },
+  "launcher_and_helpers": {
+    "run_cmd_sha256": "5e6c6561c370c904b13d165986f0c045c6e7732de1745744b03619cf4a4b9f16",
+    "helper_file_count": 3,
+    "helper_changed": [],
+    "helper_added": [],
+    "helper_missing": []
+  },
+  "audit": {
+    "target_count": 394,
+    "check_count": 394,
+    "print_axioms_count": 394,
+    "aggregate_byte_preserved": true,
+    "actual_native_axiom_records_inspected": false
+  },
+  "declaration_inventory": {
+    "count": 1129,
+    "unchanged_records": 1117,
+    "changed_by_module": {
+      "RH_HilbertLimit.Cancellation": 9,
+      "RH_HilbertLimit.EventualGrowth": 3
+    },
+    "changes": [
+      {
+        "module": "RH_HilbertLimit.Cancellation",
+        "name": "RH_HilbertLimit.cancellationDefect",
+        "changed_keys": [
+          "evidence",
+          "receipt_validation",
+          "source_sha256",
+          "status"
+        ]
+      },
+      {
+        "module": "RH_HilbertLimit.Cancellation",
+        "name": "RH_HilbertLimit.rowCancellation",
+        "changed_keys": [
+          "evidence",
+          "receipt_validation",
+          "source_sha256",
+          "status"
+        ]
+      },
+      {
+        "module": "RH_HilbertLimit.Cancellation",
+        "name": "RH_HilbertLimit.bernsteinWeight_coarsening_scaled",
+        "changed_keys": [
+          "evidence",
+          "receipt_validation",
+          "source_sha256",
+          "status"
+        ]
+      },
+      {
+        "module": "RH_HilbertLimit.Cancellation",
+        "name": "RH_HilbertLimit.cancellationDefect_nonneg",
+        "changed_keys": [
+          "evidence",
+          "receipt_validation",
+          "source_sha256",
+          "status"
+        ]
+      },
+      {
+        "module": "RH_HilbertLimit.Cancellation",
+        "name": "RH_HilbertLimit.rowCancellation_eq",
+        "changed_keys": [
+          "evidence",
+          "receipt_validation",
+          "source_sha256",
+          "status"
+        ]
+      },
+      {
+        "module": "RH_HilbertLimit.Cancellation",
+        "name": "RH_HilbertLimit.rowCancellation_nonneg",
+        "changed_keys": [
+          "evidence",
+          "receipt_validation",
+          "source_sha256",
+          "status"
+        ]
+      },
+      {
+        "module": "RH_HilbertLimit.Cancellation",
+        "name": "RH_HilbertLimit.rowCancellation_eq_zero_of_rowVariation_eq",
+        "changed_keys": [
+          "evidence",
+          "receipt_validation",
+          "source_sha256",
+          "status"
+        ]
+      },
+      {
+        "module": "RH_HilbertLimit.Cancellation",
+        "name": "RH_HilbertLimit.rowCancellation_eq_zero_of_rowVariation_constant",
+        "changed_keys": [
+          "evidence",
+          "receipt_validation",
+          "source_sha256",
+          "status"
+        ]
+      },
+      {
+        "module": "RH_HilbertLimit.Cancellation",
+        "name": "RH_HilbertLimit.rowCancellation_le_of_local_flux",
+        "changed_keys": [
+          "evidence",
+          "receipt_validation",
+          "source_sha256",
+          "status"
+        ]
+      },
+      {
+        "module": "RH_HilbertLimit.EventualGrowth",
+        "name": "RH_HilbertLimit.EventualNaturalGrowthStep",
+        "changed_keys": [
+          "evidence",
+          "receipt_validation",
+          "status"
+        ]
+      },
+      {
+        "module": "RH_HilbertLimit.EventualGrowth",
+        "name": "RH_HilbertLimit.subexponential_of_eventual_natural_growth_step",
+        "changed_keys": [
+          "evidence",
+          "receipt_validation",
+          "status"
+        ]
+      },
+      {
+        "module": "RH_HilbertLimit.EventualGrowth",
+        "name": "RH_HilbertLimit.subexponential_of_exists_eventual_natural_growth_step",
+        "changed_keys": [
+          "evidence",
+          "receipt_validation",
+          "status"
+        ]
+      }
+    ],
+    "changed_record_integrity": [
+      {
+        "name": "RH_HilbertLimit.cancellationDefect",
+        "source_sha_matches": true,
+        "evidence_exists": true,
+        "status": "NATIVE_AUDIT_PENDING_AFTER_PROOF_REPAIR"
+      },
+      {
+        "name": "RH_HilbertLimit.rowCancellation",
+        "source_sha_matches": true,
+        "evidence_exists": true,
+        "status": "NATIVE_AUDIT_PENDING_AFTER_PROOF_REPAIR"
+      },
+      {
+        "name": "RH_HilbertLimit.bernsteinWeight_coarsening_scaled",
+        "source_sha_matches": true,
+        "evidence_exists": true,
+        "status": "NATIVE_AUDIT_PENDING_AFTER_PROOF_REPAIR"
+      },
+      {
+        "name": "RH_HilbertLimit.cancellationDefect_nonneg",
+        "source_sha_matches": true,
+        "evidence_exists": true,
+        "status": "NATIVE_AUDIT_PENDING_AFTER_PROOF_REPAIR"
+      },
+      {
+        "name": "RH_HilbertLimit.rowCancellation_eq",
+        "source_sha_matches": true,
+        "evidence_exists": true,
+        "status": "NATIVE_AUDIT_PENDING_AFTER_PROOF_REPAIR"
+      },
+      {
+        "name": "RH_HilbertLimit.rowCancellation_nonneg",
+        "source_sha_matches": true,
+        "evidence_exists": true,
+        "status": "NATIVE_AUDIT_PENDING_AFTER_PROOF_REPAIR"
+      },
+      {
+        "name": "RH_HilbertLimit.rowCancellation_eq_zero_of_rowVariation_eq",
+        "source_sha_matches": true,
+        "evidence_exists": true,
+        "status": "NATIVE_AUDIT_PENDING_AFTER_PROOF_REPAIR"
+      },
+      {
+        "name": "RH_HilbertLimit.rowCancellation_eq_zero_of_rowVariation_constant",
+        "source_sha_matches": true,
+        "evidence_exists": true,
+        "status": "NATIVE_AUDIT_PENDING_AFTER_PROOF_REPAIR"
+      },
+      {
+        "name": "RH_HilbertLimit.rowCancellation_le_of_local_flux",
+        "source_sha_matches": true,
+        "evidence_exists": true,
+        "status": "NATIVE_AUDIT_PENDING_AFTER_PROOF_REPAIR"
+      },
+      {
+        "name": "RH_HilbertLimit.EventualNaturalGrowthStep",
+        "source_sha_matches": true,
+        "evidence_exists": true,
+        "status": "USER_REPORTED_V0_2_18_COMPILED_AXIOM_AUDIT_PASS_SOURCE_UNCHANGED"
+      },
+      {
+        "name": "RH_HilbertLimit.subexponential_of_eventual_natural_growth_step",
+        "source_sha_matches": true,
+        "evidence_exists": true,
+        "status": "USER_REPORTED_V0_2_18_COMPILED_AXIOM_AUDIT_PASS_SOURCE_UNCHANGED"
+      },
+      {
+        "name": "RH_HilbertLimit.subexponential_of_exists_eventual_natural_growth_step",
+        "source_sha_matches": true,
+        "evidence_exists": true,
+        "status": "USER_REPORTED_V0_2_18_COMPILED_AXIOM_AUDIT_PASS_SOURCE_UNCHANGED"
+      }
+    ],
+    "sha256": "910f47c691d1c71f828e00b7c0924a035ae5ac05d62da8a208990178fa13930b"
+  },
+  "evidence_review": {
+    "kind": "USER_MESSAGE_UTF8_LF_TRANSCRIPTION_NOT_ORIGINAL_NATIVE_LOG_BYTES",
+    "source": "evidence/cancellation_fix_v0219/USER_NATIVE_V0218_FAIL_TAIL.txt",
+    "sha256": "5b8022f73f1b1c4725afa2ae61c864a99d1727a6d558a884e4e9ed8c2ce033b9",
+    "checks": {
+      "eventual_growth_compile_and_audit_pass_marker_visible": true,
+      "eventual_growth_elapsed_matches": true,
+      "cancellation_failure_visible": true,
+      "bridge_dependency_block_visible": true,
+      "project_and_run_failure_visible": true,
+      "failed_stage_label_preserved": true,
+      "project_module_stage_elapsed_matches": true,
+      "receipt_path_matches_transcript": true,
+      "evidence_digest_matches": true,
+      "shutdown_clear_marker_matches": true,
+      "clipped_first_line_preserved": true,
+      "status_checkpoint_and_evidence_record_equal": true,
+      "source_byte_equality_reported_correctly": true
+    },
+    "reported_module_pass": "RH_HilbertLimit.EventualGrowth",
+    "reported_whole_run": "FAIL",
+    "reported_failed_module": "RH_HilbertLimit.Cancellation",
+    "stage_label_interpretation": "The generic stage variable is updated at module prepare/compile/audit operations. In this visible serial tail, EventualGrowth is the last attempted module and has an explicit module PASS; the final failed-stage label does not override the earlier Cancellation failure.",
+    "receipt_scope": "Path only; receipt contents, native input fingerprints and per-declaration axiom output are not supplied. Byte preservation is checked against the delivered source, not against independently inspected native receipt contents.",
+    "completion_scope": "92/92 is a terminal progress counter including failure and dependency blocking, not proof of successful compilation of all modules.",
+    "shutdown_scope": "The transcript explicitly reports one full inventory and clear worker inventory; no forced lock deletion is inferred.",
+    "timing_scope": "22161 ms is the reported EventualGrowth module elapsed value; 76267 ms is the project-module stage. Neither is a measured v0.2.19 runtime or a new speedup result."
+  },
+  "mathematical_status": {
+    "formal_closure": "OPEN",
+    "finite_raw_format": "OPEN",
+    "terminating_actual_rh_checker": "OPEN",
+    "finite_checker_soundness": "OPEN",
+    "finite_checker_completeness": "OPEN",
+    "finite_checker_equivalence": "OPEN",
+    "unconditional_rh": "NOT_ESTABLISHED",
+    "semantic_cancellation_witness_forward": "SOURCE_PREPARED_NATIVE_AUDIT_PENDING",
+    "semantic_cancellation_witness_equivalence": "SOURCE_PREPARED_NATIVE_AUDIT_PENDING"
+  },
+  "metadata_review": {
+    "files_read": [
+      "STATUS.json",
+      "CHECKPOINT.json",
+      "README.md",
+      "OPEN_OBLIGATIONS.txt",
+      "RUNNER_NOTES.txt",
+      "DECLARATIONS.json",
+      "evidence/cancellation_fix_v0219/SOURCE_REPAIR_REVIEW.json",
+      "evidence/cancellation_fix_v0219/USER_REPORTED_NATIVE_RESULT.json",
+      "evidence/cancellation_fix_v0219/FROZEN_SOURCE_MANIFEST.json",
+      "evidence/cancellation_fix_v0219/ASSEMBLY.json"
+    ],
+    "excluded_pending_regeneration": [
+      "STATIC_REVIEW.json",
+      "PROVENANCE.json",
+      "RUNNER_LOGIC_VALIDATION.json",
+      "SHA256SUMS.txt"
+    ],
+    "conclusion": "Reviewed current metadata preserves the reported partial native result and the pending repair distinction. It does not promote semantic all-order admissibility to a terminating finite checker or claim unconditional RH."
+  },
+  "limitations": [
+    "No new source was compiled or kernel checked.",
+    "No native receipt, artifact, compiler identity or direct axiom output was independently inspected.",
+    "This is not a final archive integrity check; excluded metadata and SHA manifest will be regenerated by packaging."
+  ],
+  "blockers": []
+}

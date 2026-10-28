@@ -1,0 +1,436 @@
+{
+  "package": "RH_HILBERT_LIMIT_LEAN_v0_2_21_construction",
+  "version": "0.2.21",
+  "suffix": "construction",
+  "mode": "A_TIER_LEAN",
+  "target": "LOCAL_COMPILER",
+  "branch": "RH_HILBERT_LIMIT / Hilbert.vector",
+  "revision_scope": "EVIDENCE_ONLY_NATIVE_PASS_CHECKPOINT; ALL_PROOF_SOURCES_FROZEN",
+  "requested_goal": "(exists W : FiniteWitness, check W = true) iff _root_.RiemannHypothesis",
+  "requested_forward_goal": "(exists W : FiniteWitness, check W = true) -> _root_.RiemannHypothesis",
+  "prepared_source_forward_goal": "(exists W : CancellationBudget, W.Admissible) -> _root_.RiemannHypothesis",
+  "semantic_cancellation_witness_forward": "USER_SUPPLIED_NATIVE_DECLARATION_AND_AXIOM_AUDIT_PASS_SOURCE_UNCHANGED",
+  "semantic_cancellation_witness_equivalence": "USER_SUPPLIED_NATIVE_DECLARATION_AND_AXIOM_AUDIT_PASS_SOURCE_UNCHANGED",
+  "goal_limitation": "ADMISSIBILITY_IS_AN_EXPLICIT_ALL_ORDER_PREDICATE; NO_BOOL_CHECKER",
+  "formal_closure": "OPEN",
+  "obtained_witness_required_for_formal_closure": false,
+  "finite_raw_format": "OPEN",
+  "terminating_actual_rh_checker": "OPEN",
+  "finite_checker_soundness": "OPEN",
+  "finite_checker_completeness": "OPEN",
+  "finite_checker_equivalence": "OPEN",
+  "accepted_finite_witness": null,
+  "unconditional_rh": "NOT_ESTABLISHED",
+  "actual_subexponential_bound": "OPEN",
+  "ordinary_limit_sequence": "rootScale actualVariation",
+  "root_limit_value_one": "NOT_ESTABLISHED; PRIOR_ANALYTIC_EQUIVALENCE_PRESERVED",
+  "unrooted_variation_limit": "NOT_ASSERTED",
+  "analytic_equivalence_status": "USER_REPORTED_V0_2_20_SELECTED_AGGREGATE_AUDIT_PASS_SOURCE_UNCHANGED",
+  "analytic_source_sha256": {
+    "RH_HilbertLimit/CanonicalPowerSums.lean": "55e10b78e84bb2ec7cfbd693e5275f46b4ada256bda0530ccb4c0e80337e65de",
+    "RH_HilbertLimit/SpectralPhase.lean": "e5d3e26af0da7eb222dac75252480975eb4fa46150ebb342a58c42ab20063db3",
+    "RH_HilbertLimit/SpectralGenerating.lean": "06fb12f6dba0872527cba2bcc5a10cf3029c8df73af46131db36efa372828977",
+    "RH_HilbertLimit/SpectralExtraction.lean": "4c3381a0d090c9f27f06453797360ad765e018d2776001816bf3b91272fbdc16",
+    "RH_HilbertLimit/AnalyticClosure.lean": "ed440ff35623939ee3b5b7d58b0c85836d0c3e425e9db60ed95e7cb3eb465c16"
+  },
+  "latest_user_native_evidence": {
+    "evidence_kind": "USER_MESSAGE_UTF8_LF_TRANSCRIPTION_NOT_ORIGINAL_NATIVE_LOG_BYTES",
+    "reported_package": "RH_HILBERT_LIMIT_LEAN_v0_2_20_construction",
+    "reported_build": "PASS",
+    "reported_run": "PASS",
+    "reported_final_audit": "CancellationAudit.lean",
+    "reported_final_audit_declarations": 394,
+    "explicitly_printed_axiom_declarations": 14,
+    "explicit_axioms": {
+      "RH_HilbertLimit.subexponential_of_eventual_natural_growth_step": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "RH_HilbertLimit.subexponential_of_exists_eventual_natural_growth_step": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "RH_HilbertLimit.CancellationBudget": [],
+      "RH_HilbertLimit.CancellationBudget.Admissible": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "RH_HilbertLimit.cancellationBudget_admissible_iff_eventual_growth_step": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "RH_HilbertLimit.actual_subexponential_of_admissible_cancellationBudget": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "RH_HilbertLimit.nativeRH_of_admissible_cancellationBudget": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "RH_HilbertLimit.nativeRH_of_exists_admissible_cancellationBudget": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "RH_HilbertLimit.zero_cancellationBudget_admissible_of_nativeRH": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "RH_HilbertLimit.exists_admissible_cancellationBudget_iff_nativeRH": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "RH_HilbertLimit.nativeRH_of_exists_eventual_cancellation_bound": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "RH_HilbertLimit.CancellationBudget.LocalFlux": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "RH_HilbertLimit.cancellationBudget_admissible_of_local_flux": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "RH_HilbertLimit.nativeRH_of_exists_local_cancellation_flux": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "reported_axiom_audit": "PASS_STANDARD_LOGICAL_AXIOMS_ONLY",
+    "reported_sorryax": "NONE",
+    "reported_final_audit_module_elapsed_ms": 9914,
+    "reported_stages": {
+      "FINAL_AUDIT": 10036,
+      "WORKER_SHUTDOWN": 1044
+    },
+    "reported_counts": {
+      "COMPILED_MODULES": 2,
+      "FROZEN_REUSED_MODULES": 91,
+      "AUDIT_ONLY_MODULES": 0,
+      "LEGACY_MIGRATED_MODULES": 0,
+      "WORKING_ARTIFACT_MODULES_RETAINED": 0,
+      "RESTORED_ARTIFACT_FILES": 91,
+      "ANCHOR_HISTORY_SCANS": 2,
+      "COMPACT_ANCHORS_SAVED": 2,
+      "COMBINED_WORKING_DIGESTS_CONSUMED": 0
+    },
+    "reported_logical_tool_launches": {
+      "certutil": 413,
+      "csc": 0,
+      "helper": 2,
+      "lean": 5,
+      "other": 0,
+      "ram_warm": 0,
+      "total": 420
+    },
+    "reported_hash_phase_totals": {
+      "batch_sets": 1,
+      "certutil_sets": 189,
+      "elapsed_ms": 41473,
+      "failed_sets": 0,
+      "files": 37524,
+      "sets": 190
+    },
+    "reported_shutdown": {
+      "clear": true,
+      "attempts": 1,
+      "full_inventories": 1,
+      "exact_worker_queries": 0
+    },
+    "reported_mathematical_status": "ANALYTIC_AND_SEMANTIC_CANCELLATION_AUDITED_FINITE_CHECKER_OPEN",
+    "reported_semantic_forward": "DECLARATION_AUDITED",
+    "reported_semantic_equivalence": "DECLARATION_AUDITED",
+    "reported_formal_closure": "OPEN",
+    "reported_finite_checker_soundness": "OPEN",
+    "reported_finite_checker_equivalence": "OPEN",
+    "reported_accepted_finite_witness": "NOT_ESTABLISHED",
+    "reported_unconditional_rh": "NOT_ESTABLISHED",
+    "reported_anchor_receipt_path": "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\dfb014b4edea4fa5\\dfdde963255fcdf198c5fc8dcb8d5ad1\\01a17f72f0e0b979\\receipt.txt",
+    "source": "evidence/native_pass_v0221/USER_NATIVE_V0220_PASS_TAIL.txt",
+    "source_sha256": "a3c8671ca646ca1e0fc601a0b952a2cbb3f1a0c95a1b8dd5fa89b2df44bf53d6",
+    "source_bytes": 6087,
+    "first_marker": "AXIOM_OUTPUT_TAIL_STARTS_WITHOUT_THE_PRECEDING_DECLARATION_SIGNATURE",
+    "direct_native_receipt_contents": "NOT_SUPPLIED; PATH_ONLY",
+    "native_source_dependency_toolchain_and_artifact_fingerprints": "NOT_SUPPLIED_IN_EXCERPT",
+    "independent_native_verification": "NOT_PERFORMED",
+    "aggregate_coverage_scope": "394_SELECTED_TARGETS; 14_EXPLICIT_AXIOM_LISTS_IN_THIS_TAIL",
+    "reuse_requirement": "EXACT_SAME_TARGET_SOURCE_DEPENDENCIES_TOOLCHAIN_ARTIFACTS_AND_PRIOR_AUDIT_PASS_VALIDATION",
+    "timing_scope": "REPORTED_STAGES_AND_HASH_AGGREGATES_ONLY; NO_WHOLE_RUN_WALL_TIME"
+  },
+  "latest_user_successful_full_native_evidence": {
+    "evidence_kind": "USER_MESSAGE_UTF8_LF_TRANSCRIPTION_NOT_ORIGINAL_NATIVE_LOG_BYTES",
+    "reported_package": "RH_HILBERT_LIMIT_LEAN_v0_2_20_construction",
+    "reported_build": "PASS",
+    "reported_run": "PASS",
+    "reported_final_audit": "CancellationAudit.lean",
+    "reported_final_audit_declarations": 394,
+    "explicitly_printed_axiom_declarations": 14,
+    "explicit_axioms": {
+      "RH_HilbertLimit.subexponential_of_eventual_natural_growth_step": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "RH_HilbertLimit.subexponential_of_exists_eventual_natural_growth_step": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "RH_HilbertLimit.CancellationBudget": [],
+      "RH_HilbertLimit.CancellationBudget.Admissible": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "RH_HilbertLimit.cancellationBudget_admissible_iff_eventual_growth_step": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "RH_HilbertLimit.actual_subexponential_of_admissible_cancellationBudget": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "RH_HilbertLimit.nativeRH_of_admissible_cancellationBudget": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "RH_HilbertLimit.nativeRH_of_exists_admissible_cancellationBudget": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "RH_HilbertLimit.zero_cancellationBudget_admissible_of_nativeRH": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "RH_HilbertLimit.exists_admissible_cancellationBudget_iff_nativeRH": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "RH_HilbertLimit.nativeRH_of_exists_eventual_cancellation_bound": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "RH_HilbertLimit.CancellationBudget.LocalFlux": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "RH_HilbertLimit.cancellationBudget_admissible_of_local_flux": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "RH_HilbertLimit.nativeRH_of_exists_local_cancellation_flux": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "reported_axiom_audit": "PASS_STANDARD_LOGICAL_AXIOMS_ONLY",
+    "reported_sorryax": "NONE",
+    "reported_final_audit_module_elapsed_ms": 9914,
+    "reported_stages": {
+      "FINAL_AUDIT": 10036,
+      "WORKER_SHUTDOWN": 1044
+    },
+    "reported_counts": {
+      "COMPILED_MODULES": 2,
+      "FROZEN_REUSED_MODULES": 91,
+      "AUDIT_ONLY_MODULES": 0,
+      "LEGACY_MIGRATED_MODULES": 0,
+      "WORKING_ARTIFACT_MODULES_RETAINED": 0,
+      "RESTORED_ARTIFACT_FILES": 91,
+      "ANCHOR_HISTORY_SCANS": 2,
+      "COMPACT_ANCHORS_SAVED": 2,
+      "COMBINED_WORKING_DIGESTS_CONSUMED": 0
+    },
+    "reported_logical_tool_launches": {
+      "certutil": 413,
+      "csc": 0,
+      "helper": 2,
+      "lean": 5,
+      "other": 0,
+      "ram_warm": 0,
+      "total": 420
+    },
+    "reported_hash_phase_totals": {
+      "batch_sets": 1,
+      "certutil_sets": 189,
+      "elapsed_ms": 41473,
+      "failed_sets": 0,
+      "files": 37524,
+      "sets": 190
+    },
+    "reported_shutdown": {
+      "clear": true,
+      "attempts": 1,
+      "full_inventories": 1,
+      "exact_worker_queries": 0
+    },
+    "reported_mathematical_status": "ANALYTIC_AND_SEMANTIC_CANCELLATION_AUDITED_FINITE_CHECKER_OPEN",
+    "reported_semantic_forward": "DECLARATION_AUDITED",
+    "reported_semantic_equivalence": "DECLARATION_AUDITED",
+    "reported_formal_closure": "OPEN",
+    "reported_finite_checker_soundness": "OPEN",
+    "reported_finite_checker_equivalence": "OPEN",
+    "reported_accepted_finite_witness": "NOT_ESTABLISHED",
+    "reported_unconditional_rh": "NOT_ESTABLISHED",
+    "reported_anchor_receipt_path": "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\dfb014b4edea4fa5\\dfdde963255fcdf198c5fc8dcb8d5ad1\\01a17f72f0e0b979\\receipt.txt",
+    "source": "evidence/native_pass_v0221/USER_NATIVE_V0220_PASS_TAIL.txt",
+    "source_sha256": "a3c8671ca646ca1e0fc601a0b952a2cbb3f1a0c95a1b8dd5fa89b2df44bf53d6",
+    "source_bytes": 6087,
+    "first_marker": "AXIOM_OUTPUT_TAIL_STARTS_WITHOUT_THE_PRECEDING_DECLARATION_SIGNATURE",
+    "direct_native_receipt_contents": "NOT_SUPPLIED; PATH_ONLY",
+    "native_source_dependency_toolchain_and_artifact_fingerprints": "NOT_SUPPLIED_IN_EXCERPT",
+    "independent_native_verification": "NOT_PERFORMED",
+    "aggregate_coverage_scope": "394_SELECTED_TARGETS; 14_EXPLICIT_AXIOM_LISTS_IN_THIS_TAIL",
+    "reuse_requirement": "EXACT_SAME_TARGET_SOURCE_DEPENDENCIES_TOOLCHAIN_ARTIFACTS_AND_PRIOR_AUDIT_PASS_VALIDATION",
+    "timing_scope": "REPORTED_STAGES_AND_HASH_AGGREGATES_ONLY; NO_WHOLE_RUN_WALL_TIME"
+  },
+  "eventual_growth_status": "USER_REPORTED_V0_2_18_MODULE_PASS_AND_V0_2_20_AGGREGATE_AUDIT_PASS_SOURCE_FROZEN",
+  "new_lean_build": "NOT_RUN_BY_ASSISTANT",
+  "new_axiom_audit": "NOT_RUN_BY_ASSISTANT",
+  "local_lean_executed": false,
+  "lake_executed": false,
+  "ci_executed": false,
+  "native_windows_execution_by_assistant": false,
+  "csharp_execution_or_compilation": false,
+  "lean_toolchain": "leanprover/lean4:v4.33.0",
+  "changed_lean_source_files": [],
+  "added_lean_source_files": [],
+  "changed_proof_bodies": [],
+  "theorem_statements_preserved": true,
+  "assumptions_preserved": true,
+  "old_lean_files_byte_preserved": 96,
+  "total_lean_source_files": 96,
+  "ordered_source_modules": 92,
+  "selected_final_audit": "CancellationAudit.lean",
+  "active_modules_including_final_audit": 93,
+  "selected_axiom_audit_declarations": 394,
+  "declaration_inventory_entries": 1129,
+  "new_public_declarations": 0,
+  "direct_mathlib_requirements": 91,
+  "added_direct_mathlib_requirements": [],
+  "source_change_invalidation_cone": [],
+  "first_run_expected_reuse": "All 93 active modules eligible if every matching same-target anchor validates.",
+  "first_run_expected_compilation": "None from source changes. Invalid or missing anchors still rebuild or fail.",
+  "expected_counts_are_observed": false,
+  "working_artifact_retention_next_run": "A new v0.2.21 workspace may restore validated shared anchors; later runs may retain validated working artifacts.",
+  "runtime_logic_change": "NONE; TWO_PACKAGE_AND_VERSION_CONSTANTS_ONLY",
+  "cache_implementation": "SOURCE_DEPENDENCY_TOOLCHAIN_ARTIFACT_AND_AUDIT_IDENTITY_CHECKS_PRESERVED",
+  "runtime_profile": "LOCAL_FAST_CACHED_RAM_PARALLEL",
+  "new_runtime_mocks_run": false,
+  "measured_runtime_speedup_claimed": false,
+  "native_validation": "USER_SUPPLIED_V0_2_20_FULL_RUN_PASS_AND_EXPLICIT_ENDPOINT_AXIOMS; V0_2_21_NOT_RUN",
+  "delivery_filename": "RH_HILBERT_LIMIT_LEAN_v0_2_21_construction.zip",
+  "canonical_archive_root": "RH_HILBERT_LIMIT_LEAN_v0_2_21_construction",
+  "new_version_workspace": "E:\\RH-FAST\\workspaces\\RH_HILBERT_LIMIT_LEAN_v0_2_21_construction",
+  "earlier_status_archive": "evidence/native_pass_v0221/baseline_v0220_metadata/STATUS.json",
+  "checkpoint_file": "CHECKPOINT.json",
+  "parallel_module_workers_default": 4,
+  "lean_total_thread_budget_default": 16,
+  "parallel_lean_thread_reserve_when_multiple_workers": 1,
+  "worker_memory_admission_mib_default": 4096,
+  "system_reserve": "PREFERRED_MAX(4096 MiB,20% PHYSICAL_RAM); IDLE_SERIAL_FLOOR_1024 MiB_OR_EXPLICIT_SETTING",
+  "ram_warm_default": "AUTO; AT_LEAST_TWO_READY_DIRTY_ORDINARY_MODULES",
+  "ram_warm_cap_mib_default": 8192,
+  "ram_warm_cap_mib_max": 65536,
+  "ram_warm_capacity": "REDUCED_AGAINST_AVAILABLE_RAM; NO_RESIDENCY_GUARANTEE",
+  "ram_warm_scope": "READ_ONLY_COMPILED_IMPORT_FILES; NO_SHARED_LEAN_ENVIRONMENT",
+  "module_admission": "AUDITED_DONE_DEPENDENCIES_PLUS_MEMORY_AND_THREAD_BUDGETS",
+  "serial_fallback_threshold_mib_default": 5120,
+  "serial_fallback_worker_estimate_mib_default": 4096,
+  "serial_fallback_host_floor_mib_default": 1024,
+  "serial_fallback_after_known_pressure": "REQUIRES_FRESH_VALID_MEMORY_AND_NO_LIVE_WARMER",
+  "relative_runner_shutdown_exception": "FRESH_SAME_OWNER_EXACT_PREEXISTING_ADMITTED_IDENTITY_ONLY",
+  "stale_lock_recovery": "UNCHANGED; NO_FORCED_RECOVERY_OR_DELETION",
+  "shutdown_inventory_recheck": {
+    "strategy": "ONE_COMPLETE_INVENTORY_PLUS_BOUNDED_TARGETED_REVALIDATION_OF_ITS_UNREADABLE_ROWS",
+    "absence_rule": "COMPLETE_SUCCESSFUL_TARGETED_QUERY_RETURNS_NO_ROW",
+    "readable_row_rule": "MATCH_PID_FULL_CREATION_NAME_AND_PARENT_THEN_REENTER_EXISTING_WORKSPACE_GUARD",
+    "persistent_uncertainty_or_identity_change": "RETAIN_LOCK",
+    "preexisting_parent_exemption_extended_to_children": false,
+    "own_launch_boundary": "SEALED_BEFORE_SHUTDOWN; EVERY_NATIVE_LAUNCH_RECORDED_AND_COMPLETION_CHECKED",
+    "owner_and_self_checks": "EXACT_BEFORE_AND_AFTER; NO_BROAD_SECOND_CENSUS",
+    "stale_lock_acquisition_and_recovery": "UNCHANGED",
+    "scope": "COOPERATIVE_WORKSPACE_LOCK_AND_PROCESS_OBSERVATIONS; NOT_AN_ATOMIC_OS_PROCESS_SNAPSHOT",
+    "query_and_wait_limits": {
+      "complete_machine_inventory_queries_max": 1,
+      "initial_unreadable_worker_rows_max": 64,
+      "rounds_max": 6,
+      "targeted_worker_queries_per_round_max": 64,
+      "targeted_worker_queries_total_max": 384,
+      "targeted_self_queries_total_max": 12,
+      "scheduled_sleep_between_rounds_ms": 200,
+      "scheduled_sleep_total_max_ms": 1000,
+      "existing_owned_worker_drain_ms": 30000,
+      "hard_wall_clock_bound": false,
+      "runtime_note": "WMI/COM enumeration and status calls have no hard deadline imposed by this JScript wrapper."
+    }
+  },
+  "old_retained_lock_policy": "OTHER_WORKSPACES_UNTOUCHED; EXISTING_LOCK_PROTOCOL_PRESERVED",
+  "cancellation_status": "USER_REPORTED_V0_2_19_MODULE_PASS_AND_V0_2_20_AGGREGATE_AUDIT_PASS_SOURCE_FROZEN",
+  "previous_user_native_evidence": {
+    "evidence_kind": "UPLOADED_TEXT_FILE_EXACT_BYTES; USER_SUPPLIED_NATIVE_LOG_TAIL",
+    "reported_package": "RH_HILBERT_LIMIT_LEAN_v0_2_19_construction",
+    "reported_build": "FAIL",
+    "reported_run": "FAIL",
+    "visible_failed_module": "RH_HilbertLimit.ActualCancellationWitness",
+    "reported_failed_stage_label": "MODULE:RH_HilbertLimit.ActualCancellationWitness",
+    "reported_diagnostic": "ActualCancellationWitness.lean:87:2 change tactic fails on real zero versus the cast natural-number coefficient.",
+    "reported_failed_module_elapsed_ms": 8121,
+    "reported_passed_module": "RH_HilbertLimit.Cancellation",
+    "reported_passed_module_elapsed_ms": 12312,
+    "passed_module_source_in_delivered_package_sha256": "985602ead4c4b3581b6aef194a36da6ca1f78defbeaaadf328e0cf97749b9528",
+    "passed_module_source_in_candidate_is_byte_identical": true,
+    "reported_anchor_receipt_path": "E:\\RH-FAST\\anchors\\RH_HILBERT_LIMIT\\LOCAL_COMPILER\\lean-4.33.0\\c\\cb56a71ccd3692f7\\2b9d54be7d58009ec11f7c69d3598f1c\\01a17f6a89b06275\\receipt.txt",
+    "eventual_growth": "EXPLICIT_FROZEN_REUSE_IN_SUPPLIED_TAIL",
+    "visible_frozen_reuse_markers": 16,
+    "aggregate_module_counts": "NOT_SUPPLIED; VISIBLE_TAIL_COUNT_IS_NOT_THE_FULL_PROJECT_COUNT",
+    "reported_project_modules_elapsed_ms": 80375,
+    "reported_peak_module_workers": 1,
+    "reported_new_or_reaudited_module_tasks": 2,
+    "reported_shutdown": {
+      "clear": true,
+      "attempts": 1,
+      "full_inventories": 1,
+      "exact_worker_queries": 2
+    },
+    "final_audit": "NOT_REACHED_AFTER_PROJECT_MODULE_FAILURE",
+    "source": "evidence/zero_budget_fix_v0220/USER_NATIVE_V0219_FAIL_TAIL.txt",
+    "source_sha256": "b67440bcce9903c20caadacf47d824450ab020d538a8187febf4f0a174c3c6f0",
+    "source_bytes": 11988,
+    "original_uploaded_filename": "Pasted text(20261027-221151).txt",
+    "first_marker": "CLIPPED_PREFIX_ILD_ARTIFACT_RESTORED_PRESERVED_WITHOUT_RECONSTRUCTION",
+    "original_file_bytes_preserved": true,
+    "direct_native_receipt_contents": "NOT_SUPPLIED; PATH_ONLY",
+    "native_source_dependency_toolchain_and_artifact_fingerprints": "NOT_SUPPLIED_IN_EXCERPT",
+    "direct_per_declaration_axiom_output": "NOT_SUPPLIED; MODULE_PASS_MARKER_ONLY",
+    "independent_native_verification": "NOT_PERFORMED",
+    "reuse_requirement": "NATIVE_RUNNER_REVALIDATES_SAME_TARGET_SOURCE_DEPENDENCIES_TOOLCHAIN_ARTIFACTS_AND_AUDIT"
+  },
+  "actual_cancellation_witness_status": "USER_REPORTED_V0_2_20_NATIVE_PASS_WITH_12_EXPLICIT_DECLARATION_AXIOM_OUTPUTS",
+  "selected_inventory_records_updated": 394,
+  "unselected_inventory_records_preserved": 735,
+  "explicit_axiom_outputs_in_latest_tail": 14
+}
